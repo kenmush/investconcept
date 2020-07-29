@@ -1,0 +1,43 @@
+
+.navbar.bg-untapped {
+    background-color: $untapped-bg !important;
+}
+.highlights {
+    color: #B0D2E3;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+.highlights-text {
+    padding-top: 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #DBDCDC;
+}
+
+.untapped-heading {
+    color: #565C59;
+    text-align: center;
+    font: Bold 20px/26px Roboto;
+}
+.untapped-subtitle {
+    color: #565C5980;
+    text-align: center;
+    font: Bold 16px/21px Roboto;
+}
+.btn-untapped {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: 0.2rem 0.71rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    color: #565C59;
+    font-weight: bold;
+    background-color: $untapped-font-color;
+    border-color: $untapped-font-color;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
