@@ -9,6 +9,8 @@ Route::get('/', function () {
 
 Route::view('motorbike','motorbike');
 
+Route::view('myassets','myassets');
+
 Route::view('signin','login');
 
 Auth::routes();

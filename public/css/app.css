@@ -1,55 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
-.navbar.bg-untapped {
-  background-color: #565C59 !important;
-}
-
-.highlights {
-  color: #B0D2E3;
-  font-weight: bold;
-  font-size: 16px;
-  text-align: left;
-  padding: 0;
-  margin: 0;
-}
-
-.highlights-text {
-  padding-top: 0;
-  font-weight: bold;
-  font-size: 16px;
-  color: #DBDCDC;
-}
-
-.untapped-heading {
-  color: #565C59;
-  text-align: center;
-  font: Bold 20px/26px Roboto;
-}
-
-.untapped-subtitle {
-  color: #565C5980;
-  text-align: center;
-  font: Bold 16px/21px Roboto;
-}
-
-.btn-untapped {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  padding: 0.2rem 0.71rem;
-  font-size: 0.9rem;
-  border-radius: 10px;
-  color: #565C59;
-  font-weight: bold;
-  background-color: #b0d2e3;
-  border-color: #b0d2e3;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -10976,5 +10926,95 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+.navbar.bg-untapped {
+  background-color: #565C59 !important;
+}
+
+.highlights {
+  color: #B0D2E3;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.highlights-text {
+  padding-top: 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: #DBDCDC;
+}
+
+.untapped-heading {
+  color: #565C59;
+  text-align: center;
+  font: Bold 20px/26px Roboto;
+}
+
+.untapped-subtitle {
+  color: #565C5980;
+  text-align: center;
+  font: Bold 16px/21px Roboto;
+}
+
+.btn-untapped {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0.2rem 0.71rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  color: #565C59;
+  font-weight: bold;
+  background-color: #b0d2e3;
+  border-color: #b0d2e3;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.table-header-untapped {
+  color: white;
+  font: Bold 16px/24px Roboto;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid transparent;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid transparent;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid transparent;
+}
+
+.table tbody > tr {
+  background-color: whitesmoke;
+  border-collapse: separate;
+  border-radius: 10px;
+  color: #565C59;
+  padding-top: 10px;
+  font: Bold 16px/24px Roboto;
+  margin-bottom: 10px;
 }
 

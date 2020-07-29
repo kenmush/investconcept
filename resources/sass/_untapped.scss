@@ -2,6 +2,7 @@
 .navbar.bg-untapped {
     background-color: $untapped-bg !important;
 }
+
 .highlights {
     color: #B0D2E3;
     font-weight: bold;
@@ -10,6 +11,7 @@
     padding: 0;
     margin: 0;
 }
+
 .highlights-text {
     padding-top: 0;
     font-weight: bold;
@@ -22,11 +24,13 @@
     text-align: center;
     font: Bold 20px/26px Roboto;
 }
+
 .untapped-subtitle {
     color: #565C5980;
     text-align: center;
     font: Bold 16px/21px Roboto;
 }
+
 .btn-untapped {
     display: inline-block;
     text-align: center;
@@ -40,4 +44,45 @@
     background-color: $untapped-font-color;
     border-color: $untapped-font-color;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.table-header-untapped {
+    color: white;
+    font: Bold 16px/24px Roboto;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: $spacer;
+    color: $table-color;
+    background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+
+    th,
+    td {
+        padding: $table-cell-padding;
+        vertical-align: top;
+        border-top: $table-border-width solid transparent;
+    }
+
+    thead th {
+        vertical-align: bottom;
+        border-bottom: (2 * $table-border-width) solid transparent;
+    }
+
+    tbody + tbody {
+        border-top: (2 * $table-border-width) solid transparent;
+    }
+
+    tbody > tr {
+        background-color: whitesmoke;
+        border-collapse: separate;
+        border-radius: 10px;
+        color: #565C59;
+        padding-top: 10px;
+        font: Bold 16px/24px Roboto;
+        margin-bottom: 10px;
+    }
 }
