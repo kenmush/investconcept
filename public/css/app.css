@@ -10986,7 +10986,7 @@ a.text-dark:focus {
 .table {
   border-collapse: separate;
   border-spacing: 0 15px;
-  border-radius: 10px;
+  overflow: hidden;
   width: 100%;
   margin-bottom: 1rem;
   color: #212529;
@@ -11009,9 +11009,9 @@ a.text-dark:focus {
 }
 
 .table tbody > tr {
-  background-color: whitesmoke;
-  border-collapse: separate;
+  box-shadow: 0 13px 26px #0000001A;
   border-radius: 10px;
+  background-color: white;
   color: #565C59;
   padding-top: 10px;
   font: Bold 16px/24px Roboto;

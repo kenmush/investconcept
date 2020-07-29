@@ -57,6 +57,28 @@
                     <td>18 Months</td>
                     <td></td>
                 </tr>
+                <tr>
+                    <td scope="row">
+                        <img src="{{ asset('untapped/rawmeter.svg') }}" alt="">
+                    </td>
+                    <td>Raw Water ATM</td>
+                    <td>0</td>
+                    <td>3000$</td>
+                    <td>5%</td>
+                    <td>36 Months</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td scope="row">
+                        <img src="{{ asset('untapped/irrigation.svg') }}" alt="">
+                    </td>
+                    <td>Mobile Irrigation</td>
+                    <td>0</td>
+                    <td>1000$</td>
+                    <td>10%</td>
+                    <td>18 Months</td>
+                    <td></td>
+                </tr>
                 </tbody>
             </table>
         </div>
