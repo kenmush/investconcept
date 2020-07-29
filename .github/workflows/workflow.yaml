@@ -1,0 +1,52 @@
+name: insurance Workflow
+
+on: [push]
+
+jobs:
+#  build:
+#
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - uses: actions/checkout@v1
+#      - name: Copy ENV Laravel Configuration for CI
+#        run: php -r "copy('.env.ci', '.env');"
+#      - name: Install Dependencies (PHP vendors)
+#        run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+#
+#      - name: Create database directory
+#        run: mkdir -p database
+#
+#      - name: Create database
+#        run: touch database/database.sqlite
+#
+#      - name: Generate key
+#        run: php artisan key:generate
+#
+#      - name: Create DB and schemas
+#        run: |
+#          php artisan migrate
+#      - name: Execute tests (Unit and Feature tests) via PHPUnit
+#        run: vendor/bin/phpunit
+
+  deploy:
+    name: CD Pipeline PRD
+#    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: ls -a via ssh
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd /var/www/html/insurance
+            sudo git stash
+            sudo git pull origin master
+            sudo composer install --optimize-autoloader --no-dev
+            sudo npm install
+            sudo npm run prod
+            sudo php artisan config:cache
+            sudo php artisan queue:restart
+          host: ${{ secrets.HOST }}
+          user: ubuntu
+          key: ${{ secrets.PRIVATE_KEY}}
+
