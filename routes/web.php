@@ -13,6 +13,8 @@ Route::view('myassets','myassets');
 
 Route::view('signin','login');
 
+Route::view('userprofile','userprofile');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
