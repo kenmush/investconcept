@@ -13,6 +13,8 @@ Route::view('smartmeter','smartmeter');
 
 Route::view('raw-water-atm','rawwateratm');
 
+Route::view('mobile-irrigation','mobileirrigation');
+
 Route::view('myassets','myassets');
 
 Route::view('userprofile','userprofile');
