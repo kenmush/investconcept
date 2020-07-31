@@ -9,6 +9,10 @@ Route::get('/', function () {
 
 Route::view('motorbike','motorbike');
 
+Route::view('smartmeter','smartmeter');
+
+Route::view('raw-water-atm','rawwateratm');
+
 Route::view('myassets','myassets');
 
 Route::view('userprofile','userprofile');
