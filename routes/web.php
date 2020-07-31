@@ -11,10 +11,10 @@ Route::view('motorbike','motorbike');
 
 Route::view('myassets','myassets');
 
-Route::view('signin','login');
-
 Route::view('userprofile','userprofile');
 
-Auth::routes();
+Route::view('signin','login');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();

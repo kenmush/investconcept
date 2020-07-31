@@ -50,7 +50,20 @@
     color: white;
     font: Bold 16px/24px Roboto;
 }
+tr td:first-child {
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
 
+}
+
+tr td:last-child {
+    -moz-border-radius-topright: 20px;
+    -moz-border-radius-bottomright: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+}
 .table {
     border-collapse: separate;
     border-spacing: 0 15px;

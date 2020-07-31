@@ -20,10 +20,9 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="padding-top: 53px">
-
+        <div class="row" style="padding-top: 13px">
             <table class="table">
-                <thead>
+                <thead style="padding-bottom: 0;margin-bottom: 0">
                 <tr class="table-header-untapped">
                     <th></th>
                     <th>Asset Name</th>
