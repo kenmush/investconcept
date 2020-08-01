@@ -5,10 +5,12 @@
     <div class="row h-100 justify-content-center align-items-center">
         <div class="col-md-4">
             <div class="card" style="border-radius: 16px">
-                <div class="card-body">
+                <div class="card-body shadow-lg">
                     <form>
-                        <input type="text" placeholder="Name,Email">
-                        <input type="text" placeholder="Password">
+                        <input type="text" class="untapped-form" placeholder="Name,Email">
+                        <input type="text" class="untapped-form pt-4" placeholder="Password">
+
+                        <button class="login-button">Submit</button>
                     </form>
 {{--                    <div style="width: 56px; height: 56px;--}}
 {{--                    border-radius: 20px;--}}

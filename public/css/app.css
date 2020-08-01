@@ -11032,3 +11032,30 @@ tr td:last-child {
   margin-bottom: 10px;
 }
 
+.untapped-form {
+  display: block;
+  width: 100%;
+  font: Bold 16px/24px Roboto;
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  line-height: 1.6;
+  color: #A2A2A2;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid #A2A2A2;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.login-button {
+  position: relative;
+  top: 30px;
+  right: -290px;
+  background: #f9f9f9;
+}
+

@@ -27,9 +27,9 @@
     <div class="row">
         <div class="col-md-8 offset-2 text-center">
             <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
-            <p style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">
-                A BETTER FUTURE THROUGH ENTREPRENEURSHIP
-            </p>
+{{--            <p style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">--}}
+{{--                A BETTER FUTURE THROUGH ENTREPRENEURSHIP--}}
+{{--            </p>--}}
         </div>
         <div class="col-md-2 pt-4 float-right">
             <button class="btn-untapped"> Contact Us</button>
