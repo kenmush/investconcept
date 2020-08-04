@@ -8,10 +8,26 @@ namespace App {
     use Illuminate\Database\Eloquent\Relations\MorphToMany;
     use Illuminate\Notifications\DatabaseNotification;
     use Illuminate\Support\Carbon;
+    use LaravelIdea\Helper\App\_MotorbikeCollection;
+    use LaravelIdea\Helper\App\_MotorbikeQueryBuilder;
     use LaravelIdea\Helper\App\_UserCollection;
     use LaravelIdea\Helper\App\_UserQueryBuilder;
     use LaravelIdea\Helper\Illuminate\Notifications\_DatabaseNotificationCollection;
     use LaravelIdea\Helper\Illuminate\Notifications\_DatabaseNotificationQueryBuilder;
+
+    /**
+     * @property int $id
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @method _MotorbikeQueryBuilder newModelQuery()
+     * @method _MotorbikeQueryBuilder newQuery()
+     * @method static _MotorbikeQueryBuilder query()
+     * @method static _MotorbikeCollection|Motorbike[] all()
+     * @mixin _MotorbikeQueryBuilder
+     */
+    class Motorbike extends Model
+    {
+    }
 
     /**
      * @property int $id
@@ -72,16 +88,16 @@ namespace LaravelIdea\Helper {
      * @method $this when($value, callable $callback, callable|null $default = null)
      * @see \Illuminate\Database\Query\Builder::whereIn
      * @method $this whereIn(string $column, $values, string $boolean = 'and', bool $not = false)
-     * @see \Illuminate\Database\Query\Builder::orWhereExists
-     * @method $this orWhereExists(\Closure $callback, bool $not = false)
      * @see \Illuminate\Database\Query\Builder::whereJsonLength
      * @method $this whereJsonLength(string $column, $operator, $value = null, string $boolean = 'and')
+     * @see \Illuminate\Database\Query\Builder::orWhereExists
+     * @method $this orWhereExists(\Closure $callback, bool $not = false)
      * @see \Illuminate\Database\Query\Builder::orWhereNotIn
      * @method $this orWhereNotIn(string $column, $values)
-     * @see \Illuminate\Database\Query\Builder::selectRaw
-     * @method $this selectRaw(string $expression, array $bindings = [])
      * @see \Illuminate\Database\Query\Builder::truncate
      * @method $this truncate()
+     * @see \Illuminate\Database\Query\Builder::selectRaw
+     * @method $this selectRaw(string $expression, array $bindings = [])
      * @see \Illuminate\Database\Query\Builder::insertOrIgnore
      * @method $this insertOrIgnore(array $values)
      * @see \Illuminate\Database\Query\Builder::lock
@@ -102,10 +118,10 @@ namespace LaravelIdea\Helper {
      * @method $this joinWhere(string $table, \Closure|string $first, string $operator, string $second, string $type = 'inner')
      * @see \Illuminate\Database\Query\Builder::orWhereJsonContains
      * @method $this orWhereJsonContains(string $column, $value)
-     * @see \Illuminate\Database\Query\Builder::raw
-     * @method $this raw($value)
      * @see \Illuminate\Database\Query\Builder::orderBy
      * @method $this orderBy(\Closure|\Illuminate\Database\Query\Builder|Expression|string $column, string $direction = 'asc')
+     * @see \Illuminate\Database\Query\Builder::raw
+     * @method $this raw($value)
      * @see \Illuminate\Database\Query\Builder::orWhereRowValues
      * @method $this orWhereRowValues(array $columns, string $operator, array $values)
      * @see \Illuminate\Database\Concerns\BuildsQueries::each
@@ -118,10 +134,10 @@ namespace LaravelIdea\Helper {
      * @method $this whereRowValues(array $columns, string $operator, array $values, string $boolean = 'and')
      * @see \Illuminate\Database\Query\Builder::useWritePdo
      * @method $this useWritePdo()
-     * @see \Illuminate\Database\Query\Builder::orWhereIntegerInRaw
-     * @method $this orWhereIntegerInRaw(string $column, array|Arrayable $values)
      * @see \Illuminate\Database\Query\Builder::orWhereNotExists
      * @method $this orWhereNotExists(\Closure $callback)
+     * @see \Illuminate\Database\Query\Builder::orWhereIntegerInRaw
+     * @method $this orWhereIntegerInRaw(string $column, array|Arrayable $values)
      * @see \Illuminate\Database\Query\Builder::orWhereIn
      * @method $this orWhereIn(string $column, $values)
      * @see \Illuminate\Database\Query\Builder::newQuery
@@ -132,30 +148,30 @@ namespace LaravelIdea\Helper {
      * @method $this crossJoin(string $table, \Closure|null|string $first = null, null|string $operator = null, null|string $second = null)
      * @see \Illuminate\Database\Query\Builder::orderByDesc
      * @method $this orderByDesc(string $column)
-     * @see \Illuminate\Database\Query\Builder::orWhereNotNull
-     * @method $this orWhereNotNull(string $column)
      * @see \Illuminate\Database\Query\Builder::average
      * @method $this average(string $column)
+     * @see \Illuminate\Database\Query\Builder::orWhereNotNull
+     * @method $this orWhereNotNull(string $column)
      * @see \Illuminate\Database\Query\Builder::existsOr
      * @method $this existsOr(\Closure $callback)
      * @see \Illuminate\Database\Query\Builder::getProcessor
      * @method $this getProcessor()
      * @see \Illuminate\Database\Query\Builder::increment
      * @method $this increment(string $column, float|int $amount = 1, array $extra = [])
-     * @see \Illuminate\Database\Query\Builder::sum
-     * @method $this sum(string $column)
      * @see \Illuminate\Database\Query\Builder::skip
      * @method $this skip(int $value)
+     * @see \Illuminate\Database\Query\Builder::sum
+     * @method $this sum(string $column)
      * @see \Illuminate\Database\Query\Builder::havingRaw
      * @method $this havingRaw(string $sql, array $bindings = [], string $boolean = 'and')
      * @see \Illuminate\Database\Query\Builder::leftJoinWhere
      * @method $this leftJoinWhere(string $table, \Closure|string $first, string $operator, string $second)
      * @see \Illuminate\Database\Query\Builder::doesntExistOr
      * @method $this doesntExistOr(\Closure $callback)
-     * @see \Illuminate\Database\Query\Builder::orWhereColumn
-     * @method $this orWhereColumn(array|string $first, null|string $operator = null, null|string $second = null)
      * @see \Illuminate\Database\Query\Builder::getRawBindings
      * @method $this getRawBindings()
+     * @see \Illuminate\Database\Query\Builder::orWhereColumn
+     * @method $this orWhereColumn(array|string $first, null|string $operator = null, null|string $second = null)
      * @see \Illuminate\Database\Query\Builder::min
      * @method $this min(string $column)
      * @see \Illuminate\Support\Traits\Macroable::hasMacro
@@ -182,10 +198,10 @@ namespace LaravelIdea\Helper {
      * @method $this forNestedWhere()
      * @see \Illuminate\Database\Query\Builder::insertUsing
      * @method $this insertUsing(array $columns, \Closure|\Illuminate\Database\Query\Builder|string $query)
-     * @see \Illuminate\Database\Query\Builder::max
-     * @method $this max(string $column)
      * @see \Illuminate\Database\Query\Builder::rightJoinWhere
      * @method $this rightJoinWhere(string $table, \Closure|string $first, string $operator, string $second)
+     * @see \Illuminate\Database\Query\Builder::max
+     * @method $this max(string $column)
      * @see \Illuminate\Database\Query\Builder::whereExists
      * @method $this whereExists(\Closure $callback, string $boolean = 'and', bool $not = false)
      * @see \Illuminate\Database\Query\Builder::inRandomOrder
@@ -220,22 +236,22 @@ namespace LaravelIdea\Helper {
      * @method $this exists()
      * @see \Illuminate\Support\Traits\Macroable::macroCall
      * @method $this macroCall(string $method, array $parameters)
-     * @see \Illuminate\Database\Query\Builder::selectSub
-     * @method $this selectSub(\Closure|string $query, string $as)
      * @see \Illuminate\Database\Query\Builder::pluck
      * @method $this pluck(string $column, null|string $key = null)
+     * @see \Illuminate\Database\Query\Builder::selectSub
+     * @method $this selectSub(\Closure|string $query, string $as)
      * @see \Illuminate\Database\Concerns\BuildsQueries::first
      * @method $this first(array|string $columns = ['*'])
      * @see \Illuminate\Database\Query\Builder::dd
      * @method $this dd()
      * @see \Illuminate\Database\Query\Builder::whereColumn
      * @method $this whereColumn(array|string $first, null|string $operator = null, null|string $second = null, null|string $boolean = 'and')
-     * @see \Illuminate\Database\Query\Builder::prepareValueAndOperator
-     * @method $this prepareValueAndOperator(string $value, string $operator, bool $useDefault = false)
-     * @see \Illuminate\Database\Query\Builder::whereNull
-     * @method $this whereNull(array|string $columns, string $boolean = 'and', bool $not = false)
      * @see \Illuminate\Database\Query\Builder::numericAggregate
      * @method $this numericAggregate(string $function, array $columns = ['*'])
+     * @see \Illuminate\Database\Query\Builder::whereNull
+     * @method $this whereNull(array|string $columns, string $boolean = 'and', bool $not = false)
+     * @see \Illuminate\Database\Query\Builder::prepareValueAndOperator
+     * @method $this prepareValueAndOperator(string $value, string $operator, bool $useDefault = false)
      * @see \Illuminate\Database\Query\Builder::whereNotBetween
      * @method $this whereNotBetween(string $column, array $values, string $boolean = 'and')
      * @see \Illuminate\Database\Query\Builder::getConnection
@@ -244,18 +260,18 @@ namespace LaravelIdea\Helper {
      * @method $this mergeBindings(\Illuminate\Database\Query\Builder $query)
      * @see \Illuminate\Database\Query\Builder::whereIntegerNotInRaw
      * @method $this whereIntegerNotInRaw(string $column, array|Arrayable $values, string $boolean = 'and')
-     * @see \Illuminate\Database\Query\Builder::orWhereRaw
-     * @method $this orWhereRaw(string $sql, $bindings = [])
      * @see \Illuminate\Database\Query\Builder::orWhereJsonDoesntContain
      * @method $this orWhereJsonDoesntContain(string $column, $value)
+     * @see \Illuminate\Database\Query\Builder::orWhereRaw
+     * @method $this orWhereRaw(string $sql, $bindings = [])
      * @see \Illuminate\Database\Query\Builder::leftJoinSub
      * @method $this leftJoinSub(\Closure|\Illuminate\Database\Query\Builder|string $query, string $as, \Closure|string $first, null|string $operator = null, null|string $second = null)
      * @see \Illuminate\Database\Query\Builder::find
      * @method $this find(int|string $id, array $columns = ['*'])
-     * @see \Illuminate\Database\Query\Builder::whereJsonContains
-     * @method $this whereJsonContains(string $column, $value, string $boolean = 'and', bool $not = false)
      * @see \Illuminate\Database\Query\Builder::limit
      * @method $this limit(int $value)
+     * @see \Illuminate\Database\Query\Builder::whereJsonContains
+     * @method $this whereJsonContains(string $column, $value, string $boolean = 'and', bool $not = false)
      * @see \Illuminate\Database\Query\Builder::from
      * @method $this from(\Closure|\Illuminate\Database\Query\Builder|string $table, null|string $as = null)
      * @see \Illuminate\Database\Query\Builder::insertGetId
@@ -270,10 +286,10 @@ namespace LaravelIdea\Helper {
      * @method $this orderByRaw(string $sql, array $bindings = [])
      * @see \Illuminate\Database\Concerns\BuildsQueries::tap
      * @method $this tap(callable $callback)
-     * @see \Illuminate\Database\Query\Builder::doesntExist
-     * @method $this doesntExist()
      * @see \Illuminate\Database\Query\Builder::simplePaginate
      * @method $this simplePaginate(int $perPage = 15, array $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @see \Illuminate\Database\Query\Builder::doesntExist
+     * @method $this doesntExist()
      * @see \Illuminate\Database\Query\Builder::offset
      * @method $this offset(int $value)
      * @see \Illuminate\Database\Query\Builder::orWhereMonth
@@ -298,32 +314,32 @@ namespace LaravelIdea\Helper {
      * @method $this cursor()
      * @see \Illuminate\Database\Query\Builder::cloneWithout
      * @method $this cloneWithout(array $properties)
-     * @see \Illuminate\Database\Query\Builder::fromSub
-     * @method $this fromSub(\Closure|\Illuminate\Database\Query\Builder|string $query, string $as)
      * @see \Illuminate\Database\Query\Builder::rightJoin
      * @method $this rightJoin(string $table, \Closure|string $first, null|string $operator = null, null|string $second = null)
+     * @see \Illuminate\Database\Query\Builder::fromSub
+     * @method $this fromSub(\Closure|\Illuminate\Database\Query\Builder|string $query, string $as)
      * @see \Illuminate\Database\Query\Builder::leftJoin
      * @method $this leftJoin(string $table, \Closure|string $first, null|string $operator = null, null|string $second = null)
-     * @see \Illuminate\Database\Query\Builder::update
-     * @method $this update(array $values)
      * @see \Illuminate\Database\Query\Builder::insert
      * @method $this insert(array $values)
      * @see \Illuminate\Database\Query\Builder::distinct
      * @method $this distinct()
+     * @see \Illuminate\Database\Query\Builder::update
+     * @method $this update(array $values)
      * @see \Illuminate\Database\Concerns\BuildsQueries::chunk
      * @method $this chunk(int $count, callable $callback)
      * @see \Illuminate\Database\Query\Builder::reorder
      * @method $this reorder(null|string $column = null, string $direction = 'asc')
      * @see \Illuminate\Database\Query\Builder::whereYear
      * @method $this whereYear(string $column, string $operator, \DateTimeInterface|int|null|string $value = null, string $boolean = 'and')
-     * @see \Illuminate\Database\Query\Builder::getCountForPagination
-     * @method $this getCountForPagination(array $columns = ['*'])
      * @see \Illuminate\Database\Query\Builder::delete
      * @method $this delete($id = null)
-     * @see \Illuminate\Database\Query\Builder::orWhereIntegerNotInRaw
-     * @method $this orWhereIntegerNotInRaw(string $column, array|Arrayable $values)
+     * @see \Illuminate\Database\Query\Builder::getCountForPagination
+     * @method $this getCountForPagination(array $columns = ['*'])
      * @see \Illuminate\Database\Query\Builder::groupByRaw
      * @method $this groupByRaw(string $sql, array $bindings = [])
+     * @see \Illuminate\Database\Query\Builder::orWhereIntegerNotInRaw
+     * @method $this orWhereIntegerNotInRaw(string $column, array|Arrayable $values)
      * @see \Illuminate\Database\Query\Builder::aggregate
      * @method $this aggregate(string $function, array $columns = ['*'])
      * @see \Illuminate\Database\Query\Builder::orWhereDate
@@ -338,10 +354,10 @@ namespace LaravelIdea\Helper {
      * @method $this lockForUpdate()
      * @see \Illuminate\Database\Concerns\BuildsQueries::eachById
      * @method $this eachById(callable $callback, int $count = 1000, null|string $column = null, null|string $alias = null)
-     * @see \Illuminate\Database\Query\Builder::implode
-     * @method $this implode(string $column, string $glue = '')
      * @see \Illuminate\Database\Query\Builder::dump
      * @method $this dump()
+     * @see \Illuminate\Database\Query\Builder::implode
+     * @method $this implode(string $column, string $glue = '')
      * @see \Illuminate\Database\Query\Builder::value
      * @method $this value(string $column)
      * @see \Illuminate\Database\Query\Builder::cloneWithoutBindings
@@ -366,10 +382,10 @@ namespace LaravelIdea\Helper {
      * @method $this orWhereTime(string $column, string $operator, \DateTimeInterface|null|string $value = null)
      * @see \Illuminate\Database\Query\Builder::orWhereBetween
      * @method $this orWhereBetween(string $column, array $values)
-     * @see \Illuminate\Database\Query\Builder::orWhere
-     * @method $this orWhere(array|\Closure|string $column, $operator = null, $value = null)
      * @see \Illuminate\Database\Query\Builder::dynamicWhere
      * @method $this dynamicWhere(string $method, array $parameters)
+     * @see \Illuminate\Database\Query\Builder::orWhere
+     * @method $this orWhere(array|\Closure|string $column, $operator = null, $value = null)
      */
     class _BaseBuilder extends Builder
     {
@@ -401,11 +417,108 @@ namespace LaravelIdea\Helper {
 }
 namespace LaravelIdea\Helper\App {
 
+    use App\Motorbike;
     use App\User;
     use Illuminate\Contracts\Support\Arrayable;
     use Illuminate\Notifications\Notification;
     use LaravelIdea\Helper\_BaseBuilder;
     use LaravelIdea\Helper\_BaseCollection;
+
+    /**
+     * @method Motorbike shift()
+     * @method Motorbike pop()
+     * @method Motorbike get($key, $default = null)
+     * @method Motorbike pull($key, $default = null)
+     * @method Motorbike first(callable $callback = null, $default = null)
+     * @method Motorbike firstWhere(string $key, $operator = null, $value = null)
+     * @method Motorbike[] all()
+     * @method Motorbike last(callable $callback = null, $default = null)
+     * @property-read _MotorbikeCollectionProxy $keyBy
+     * @property-read _MotorbikeCollectionProxy $max
+     * @property-read _MotorbikeCollectionProxy $partition
+     * @property-read _MotorbikeCollectionProxy $average
+     * @property-read _MotorbikeCollectionProxy $flatMap
+     * @property-read _MotorbikeCollectionProxy $each
+     * @property-read _MotorbikeCollectionProxy $some
+     * @property-read _MotorbikeCollectionProxy $map
+     * @property-read _MotorbikeCollectionProxy $sortByDesc
+     * @property-read _MotorbikeCollectionProxy $filter
+     * @property-read _MotorbikeCollectionProxy $avg
+     * @property-read _MotorbikeCollectionProxy $unique
+     * @property-read _MotorbikeCollectionProxy $first
+     * @property-read _MotorbikeCollectionProxy $min
+     * @property-read _MotorbikeCollectionProxy $groupBy
+     * @property-read _MotorbikeCollectionProxy $reject
+     * @property-read _MotorbikeCollectionProxy $sortBy
+     * @property-read _MotorbikeCollectionProxy $contains
+     * @property-read _MotorbikeCollectionProxy $sum
+     * @property-read _MotorbikeCollectionProxy $until
+     * @property-read _MotorbikeCollectionProxy $every
+     */
+    class _MotorbikeCollection extends _BaseCollection
+    {
+        /**
+         * @param  int  $size
+         * @return Motorbike[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+
+    /**
+     * @property _MotorbikeCollection|mixed $id
+     * @property _MotorbikeCollection|mixed $created_at
+     * @property _MotorbikeCollection|mixed $updated_at
+     * @see \Illuminate\Database\Eloquent\Model::update
+     * @method _MotorbikeCollection update(array $attributes = [], array $options = [])
+     * @see \Illuminate\Database\Eloquent\Model::save
+     * @method _MotorbikeCollection save(array $options = [])
+     * @see \Illuminate\Database\Eloquent\Model::increment
+     * @method _MotorbikeCollection increment(string $column, float|int $amount = 1, array $extra = [])
+     * @see \Illuminate\Database\Eloquent\Model::decrement
+     * @method _MotorbikeCollection decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @see \Illuminate\Database\Eloquent\Concerns\HasTimestamps::touch
+     * @method _MotorbikeCollection touch()
+     * @see \Illuminate\Database\Eloquent\Model::fill
+     * @method _MotorbikeCollection fill(array $attributes)
+     * @see \Illuminate\Database\Eloquent\Model::delete
+     * @method _MotorbikeCollection delete()
+     */
+    class _MotorbikeCollectionProxy
+    {
+    }
+
+    /**
+     * @method _MotorbikeQueryBuilder whereId($value)
+     * @method _MotorbikeQueryBuilder whereCreatedAt($value)
+     * @method _MotorbikeQueryBuilder whereUpdatedAt($value)
+     * @method Motorbike create(array $attributes = [])
+     * @method _MotorbikeCollection|Motorbike[] cursor()
+     * @method Motorbike|null find($id, array $columns = ['*'])
+     * @method _MotorbikeCollection|Motorbike[] findMany(array|Arrayable $ids, array $columns = ['*'])
+     * @method Motorbike findOrFail($id, array $columns = ['*'])
+     * @method _MotorbikeCollection|Motorbike[] findOrNew($id, array $columns = ['*'])
+     * @method Motorbike first(array|string $columns = ['*'])
+     * @method Motorbike firstOr(array|\Closure $columns = ['*'], \Closure $callback = null)
+     * @method Motorbike firstOrCreate(array $attributes, array $values = [])
+     * @method Motorbike firstOrFail(array $columns = ['*'])
+     * @method Motorbike firstOrNew(array $attributes = [], array $values = [])
+     * @method Motorbike firstWhere(array|\Closure|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method Motorbike forceCreate(array $attributes)
+     * @method _MotorbikeCollection|Motorbike[] fromQuery(string $query, array $bindings = [])
+     * @method _MotorbikeCollection|Motorbike[] get(array|string $columns = ['*'])
+     * @method Motorbike getModel()
+     * @method Motorbike[] getModels(array|string $columns = ['*'])
+     * @method _MotorbikeCollection|Motorbike[] hydrate(array $items)
+     * @method Motorbike make(array $attributes = [])
+     * @method Motorbike newModelInstance(array $attributes = [])
+     * @method Motorbike updateOrCreate(array $attributes, array $values = [])
+     */
+    class _MotorbikeQueryBuilder extends _BaseBuilder
+    {
+    }
 
     /**
      * @method User shift()
@@ -459,46 +572,50 @@ namespace LaravelIdea\Helper\App {
      * @property _UserCollection|mixed $remember_token
      * @property _UserCollection|mixed $created_at
      * @property _UserCollection|mixed $updated_at
-     * @see \Illuminate\Notifications\RoutesNotifications::routeNotificationFor
-     * @method _UserCollection routeNotificationFor(string $driver, Notification|null $notification = null)
      * @see \Illuminate\Notifications\RoutesNotifications::notifyNow
      * @method _UserCollection notifyNow($instance, array $channels = null)
      * @see \Illuminate\Notifications\RoutesNotifications::notify
      * @method _UserCollection notify($instance)
-     * @see \Illuminate\Notifications\HasDatabaseNotifications::unreadNotifications
-     * @method _UserCollection unreadNotifications()
+     * @see \Illuminate\Notifications\RoutesNotifications::routeNotificationFor
+     * @method _UserCollection routeNotificationFor(string $driver, Notification|null $notification = null)
      * @see \Illuminate\Notifications\HasDatabaseNotifications::readNotifications
      * @method _UserCollection readNotifications()
-     * @see \Illuminate\Auth\MustVerifyEmail::hasVerifiedEmail
-     * @method _UserCollection hasVerifiedEmail()
-     * @see \Illuminate\Auth\MustVerifyEmail::getEmailForVerification
-     * @method _UserCollection getEmailForVerification()
+     * @see \Illuminate\Notifications\HasDatabaseNotifications::unreadNotifications
+     * @method _UserCollection unreadNotifications()
      * @see \Illuminate\Auth\MustVerifyEmail::sendEmailVerificationNotification
      * @method _UserCollection sendEmailVerificationNotification()
+     * @see \Illuminate\Auth\MustVerifyEmail::getEmailForVerification
+     * @method _UserCollection getEmailForVerification()
      * @see \Illuminate\Auth\MustVerifyEmail::markEmailAsVerified
      * @method _UserCollection markEmailAsVerified()
-     * @see \Illuminate\Auth\Authenticatable::setRememberToken
-     * @method _UserCollection setRememberToken(string $value)
+     * @see \Illuminate\Auth\MustVerifyEmail::hasVerifiedEmail
+     * @method _UserCollection hasVerifiedEmail()
      * @see \Illuminate\Auth\Authenticatable::getRememberTokenName
      * @method _UserCollection getRememberTokenName()
-     * @see \Illuminate\Auth\Authenticatable::getAuthIdentifierName
-     * @method _UserCollection getAuthIdentifierName()
      * @see \Illuminate\Auth\Authenticatable::getAuthPassword
      * @method _UserCollection getAuthPassword()
-     * @see \Illuminate\Auth\Authenticatable::getRememberToken
-     * @method _UserCollection getRememberToken()
      * @see \Illuminate\Auth\Authenticatable::getAuthIdentifier
      * @method _UserCollection getAuthIdentifier()
-     * @see \Illuminate\Foundation\Auth\Access\Authorizable::cannot
-     * @method _UserCollection cannot(iterable|string $abilities, array $arguments = [])
+     * @see \Illuminate\Auth\Authenticatable::getRememberToken
+     * @method _UserCollection getRememberToken()
+     * @see \Illuminate\Auth\Authenticatable::setRememberToken
+     * @method _UserCollection setRememberToken(string $value)
+     * @see \Illuminate\Auth\Authenticatable::getAuthIdentifierName
+     * @method _UserCollection getAuthIdentifierName()
      * @see \Illuminate\Foundation\Auth\Access\Authorizable::can
      * @method _UserCollection can(iterable|string $abilities, array $arguments = [])
      * @see \Illuminate\Foundation\Auth\Access\Authorizable::cant
      * @method _UserCollection cant(iterable|string $abilities, array $arguments = [])
-     * @see \Illuminate\Auth\Passwords\CanResetPassword::getEmailForPasswordReset
-     * @method _UserCollection getEmailForPasswordReset()
+     * @see \Illuminate\Foundation\Auth\Access\Authorizable::cannot
+     * @method _UserCollection cannot(iterable|string $abilities, array $arguments = [])
      * @see \Illuminate\Auth\Passwords\CanResetPassword::sendPasswordResetNotification
      * @method _UserCollection sendPasswordResetNotification(string $token)
+     * @see \Illuminate\Auth\Passwords\CanResetPassword::getEmailForPasswordReset
+     * @method _UserCollection getEmailForPasswordReset()
+     * @see \App\User::newQuery
+     * @method _UserCollection newQuery()
+     * @see \App\User::newModelQuery
+     * @method _UserCollection newModelQuery()
      * @see \Illuminate\Database\Eloquent\Model::update
      * @method _UserCollection update(array $attributes = [], array $options = [])
      * @see \Illuminate\Database\Eloquent\Model::save
@@ -605,16 +722,20 @@ namespace LaravelIdea\Helper\Illuminate\Notifications {
 
     /**
      * @property _DatabaseNotificationCollection|mixed $notifiable
+     * @see \Illuminate\Notifications\DatabaseNotification::newQuery
+     * @method _DatabaseNotificationCollection newQuery()
+     * @see \Illuminate\Notifications\DatabaseNotification::newModelQuery
+     * @method _DatabaseNotificationCollection newModelQuery()
      * @see \Illuminate\Notifications\DatabaseNotification::markAsRead
      * @method _DatabaseNotificationCollection markAsRead()
-     * @see \Illuminate\Notifications\DatabaseNotification::newCollection
-     * @method _DatabaseNotificationCollection newCollection(array $models = [])
-     * @see \Illuminate\Notifications\DatabaseNotification::unread
-     * @method _DatabaseNotificationCollection unread()
      * @see \Illuminate\Notifications\DatabaseNotification::read
      * @method _DatabaseNotificationCollection read()
+     * @see \Illuminate\Notifications\DatabaseNotification::newCollection
+     * @method _DatabaseNotificationCollection newCollection(array $models = [])
      * @see \Illuminate\Notifications\DatabaseNotification::markAsUnread
      * @method _DatabaseNotificationCollection markAsUnread()
+     * @see \Illuminate\Notifications\DatabaseNotification::unread
+     * @method _DatabaseNotificationCollection unread()
      * @see \Illuminate\Database\Eloquent\Model::update
      * @method _DatabaseNotificationCollection update(array $attributes = [], array $options = [])
      * @see \Illuminate\Database\Eloquent\Model::save

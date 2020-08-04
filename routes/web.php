@@ -7,17 +7,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('motorbike', 'motorbike');
+Route::group(['prefix' => 'assets','middleware' => 'auth'], function () {
 
-Route::view('smartmeter', 'smartmeter');
+    Route::resource('motorbike','MotorbikeController');
 
-Route::view('raw-water-atm', 'rawwateratm');
+    Route::resource('smartmeter','SmartMeterController');
 
-Route::view('mobile-irrigation', 'mobileirrigation');
+    Route::resource('raw-water-atm','RawWateratmController');
 
-Route::view('myassets', 'myassets');
+    Route::resource('mobile-irrigation','MobileIrrigationController');
 
-Route::view('userprofile', 'userprofile');
+    Route::resource('user-profile','UserController');
+
+    Route::resource('myassets','AssetsController');
+});
 
 Route::view('signin', 'login');
 
