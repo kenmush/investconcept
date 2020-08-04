@@ -16,7 +16,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet'/>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -24,19 +24,27 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<div id="app">
+<div id="app" class="container-fluid">
 
     <div class="row">
-        <div class="col-md-8 offset-2 text-center">
+        <div class="col-md-7 offset-2 text-center">
             <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
-{{--            <p style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">--}}
-{{--                A BETTER FUTURE THROUGH ENTREPRENEURSHIP--}}
-{{--            </p>--}}
+            @if(request()->segment(1) === 'signin')
+                <p style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">
+                    A BETTER FUTURE THROUGH ENTREPRENEURSHIP
+                </p>
+            @endif
         </div>
-        <div class="col-md-2 pt-4 float-right">
+        <div class="col-md-3 pt-4 float-right">
             <button class="btn-untapped"> Contact Us</button>
             <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">|</span>
-            <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline"> Login</span>
+            @guest()
+                <a href="{{ route('login') }}" style="color: #DBDCDC" class="font-weight-bold align-items-baseline">
+                    Login</a>
+            @else()
+                <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline"> {{ auth()->user()->name }}
+                </span>
+            @endguest
         </div>
     </div>
 

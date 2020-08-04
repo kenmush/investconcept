@@ -2,24 +2,25 @@
 
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('/', function () {
+
     return view('welcome');
-});
 
-Route::group(['prefix' => 'assets','middleware' => 'auth'], function () {
+})->middleware('auth');
 
-    Route::resource('motorbike','MotorbikeController');
+Route::group(['prefix' => 'assets', 'middleware' => 'auth'], function () {
 
-    Route::resource('smartmeter','SmartMeterController');
+    Route::resource('motorbike', 'MotorbikeController');
 
-    Route::resource('raw-water-atm','RawWateratmController');
+    Route::resource('smartmeter', 'SmartMeterController');
 
-    Route::resource('mobile-irrigation','MobileIrrigationController');
+    Route::resource('raw-water-atm', 'RawWateratmController');
 
-    Route::resource('user-profile','UserController');
+    Route::resource('mobile-irrigation', 'MobileIrrigationController');
 
-    Route::resource('myassets','AssetsController');
+    Route::resource('user-profile', 'UserController');
+
+    Route::resource('myassets', 'AssetsController');
 });
 
 Route::view('signin', 'login');

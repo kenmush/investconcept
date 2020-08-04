@@ -1,26 +1,28 @@
 @extends('layouts.untapped')
 
 @section('content')
-<div class="container h-100" style="height: 100vh">
-    <div class="row h-100 justify-content-center align-items-center">
-        <div class="col-md-4">
-            <div class="card" style="border-radius: 16px">
-                <div class="card-body shadow-lg">
-                    <form>
-                        <input type="text" class="untapped-form" placeholder="Name,Email">
-                        <input type="text" class="untapped-form pt-4" placeholder="Password">
+    <div class="container h-100" style="height: 100vh">
+        <div class="row h-100 justify-content-center align-items-center mb-6">
+            <h3 style="font: Bold 50px/66px Roboto;color: #DBDCDC;text-align: left;">Login</h3>
+        </div>
 
-                        <button class="login-button">Submit</button>
-                    </form>
-{{--                    <div style="width: 56px; height: 56px;--}}
-{{--                    border-radius: 20px;--}}
-{{--                    background-color: #b0d2e3; opacity: 1;"--}}
-{{--                    >--}}
-{{--                        <i class="fa fa-arrow-left text-black-50 align-content-center"></i>--}}
-{{--                    </div>--}}
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-md-4">
+                <div class="card" style="border-radius: 16px">
+                    <div class="card-body shadow-lg">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+                            <input type="text" class="untapped-form" placeholder="Email">
+                            <input type="text" class="untapped-form " placeholder="Password" style="margin-top: 19px">
+
+                            <button class="login-button">
+                                <img src="{{ asset('untapped/keyboardarrow.svg') }}" alt="">
+                                <i class="fa fa-arrow-circle-left fa-3x"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection

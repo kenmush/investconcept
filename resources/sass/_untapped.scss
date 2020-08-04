@@ -123,8 +123,40 @@ tr td:last-child {
 }
 
 .login-button {
+    border-radius: 10px;
     position: relative;
-    top: 30px;
+    top: 40px;
     right: -290px;
-    background: #f9f9f9;
+    background: #B0D2E3;
+}
+button {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+button:hover {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+button:active {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+button:focus {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+
+}
+input::placeholder{
+ color: #A2A2A2;
+}
+input{
+    outline: none;
+
+    & :focus,:active,:hover {
+        outline: none
+    }
 }

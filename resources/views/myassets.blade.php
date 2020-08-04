@@ -8,14 +8,17 @@
                     <p style="font: Bold 50px/66px Roboto;color: #DBDCDC;">My assets</p>
                 </div>
                 <div class="col-md-8">
-                    <div class="row">
-                        <p class="align-bottom" style="font: Bold 20px/26px Roboto; color: #DBDCDC;">
+                    <div class="row align-bottom">
+                        <a href="#" class="align-bottom" style="font: Bold 20px/26px Roboto; color: #DBDCDC;">
                             Maps
-                        </p>
-                        <p class="align-bottom pl-4" style="font: Bold 20px/26px Roboto; color: #DBDCDC;">
-                            <span style="background: #B0D2E399 0 0 no-repeat padding-box;">List</span>
-
-                        </p>
+                        </a>
+                        <a href="#" class="align-bottom pl-4" style="font: Bold 20px/26px Roboto; color: #DBDCDC;">
+                            List
+                            <span
+                                style="position: absolute;top: 15px;width:50px;height: 15px;z-index: 999; margin-left:-40px;
+                                background: 0 0 no-repeat padding-box padding-box rgba(176, 210, 227, 0.6);">
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
