@@ -10,10 +10,19 @@
             <div class="col-md-4">
                 <div class="card" style="border-radius: 16px">
                     <div class="card-body shadow-lg">
+
+                        @if($errors->has('email') || $errors->has('password'))
+                            <div class="alert alert-danger" role="alert">
+                                <strong>Wrong credentials</strong>
+                            </div>
+                        @endif
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-                            <input type="text" class="untapped-form" placeholder="Email">
-                            <input type="text" class="untapped-form " placeholder="Password" style="margin-top: 19px">
+                            <input required name="email" type="text" class="untapped-form" placeholder="Email">
+                            <input required name="password" type="password" class="untapped-form "
+                                   placeholder="Password"
+                                   style="margin-top:
+                            19px">
 
                             <button class="login-button">
                                 <img src="{{ asset('untapped/keyboardarrow.svg') }}" alt="">
