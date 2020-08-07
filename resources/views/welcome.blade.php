@@ -40,8 +40,8 @@
         <div style="position:relative;width:100%;height: 549px;background: white;border-radius: 20px;margin-bottom:61px"
              id="map">
             <div class="shadow" style="z-index:100;position: absolute;margin-left:26px;margin-top:36px;height: 160px;
-            width:20rem;">
-                <div class="card">
+            width:20rem;border-radius: 1.7rem">
+                <div class="card" style="border-radius: 1.7rem">
                     <div class="card-body">
                         <!--Label: Type, Attributes:type -->
                         <div class="form-group">
@@ -50,6 +50,21 @@
                                     aria-describedby="type-help"
                                     required>
                                 <option value="type">Type</option>
+                                @foreach(\App\Asset::all() as $type)
+                                    <option value="type">{{$type->type }}</option>
+                                @endforeach
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Country</label>
+                            <select type="text" class="form-control form-control-sm" id="type"
+                                    aria-describedby="type-help"
+                                    required>
+                                <option value="type">-- Select Country --</option>
+                                @foreach(\App\Country::all() as $country)
+                                    <option value="type">{{ $country->name }}</option>
+                                @endforeach
                             </select>
 
                         </div>
@@ -58,16 +73,9 @@
                             <select type="text" class="form-control form-control-sm" id="type"
                                     aria-describedby="type-help"
                                     required>
-                                <option value="type">Kenya</option>
-                            </select>
-
-                        </div>
-                        <div class="form-group">
-                            <label for="type">Type</label>
-                            <select type="text" class="form-control form-control-sm" id="type"
-                                    aria-describedby="type-help"
-                                    required>
-                                <option value="type">Return 10%</option>
+                                @foreach(\App\ReturnType::all() as $returnType)
+                                <option value="type">{{ $returnType->type }}</option>
+                                @endforeach
                             </select>
 
                         </div>
@@ -82,7 +90,7 @@
         </div>
         <div class="row" style="margin-top: 74px">
             <div class="col-12"
-                style="z-index:10;margin-left:-30px;margin-top:-25px;font: Bold 40px Roboto;color: #DBDCDC !important;">
+                 style="z-index:10;margin-left:-30px;margin-top:-25px;font: Bold 40px Roboto;color: #DBDCDC !important;">
                 Mission
             </div>
             <div class="col-12">
@@ -100,6 +108,77 @@
                     <img class="pl-5" src="{{ asset('untapped/motorbiked.svg') }}" alt="">
                 </div>
             </div>
+        </div>
+        <div class="row" style="margin-top: 74px">
+
+            <div class="col-12">
+                <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row" style="padding-top: 13px">
+                        <table class="table">
+                            <thead style="padding-bottom: 0;margin-bottom: 0">
+                            <tr class="table-header-untapped">
+                                <th></th>
+                                <th>Asset Name</th>
+                                <th>Numbers</th>
+                                <th>Ticket</th>
+                                <th>Return</th>
+                                <th>Duration</th>
+                                <th>Social Gain</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <img src="{{ asset('untapped/twowheeler.svg') }}" alt="">
+                                </td>
+                                <td>Motorbike</td>
+                                <td>10</td>
+                                <td>1000$</td>
+                                <td>10%</td>
+                                <td>24 Months</td>
+                                <td>20000$</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <img src="{{ asset('untapped/smartmeter.svg') }}" alt="">
+                                </td>
+                                <td>Smart Meter</td>
+                                <td>0</td>
+                                <td>200$</td>
+                                <td>8%</td>
+                                <td>18 Months</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <img src="{{ asset('untapped/rawmeter.svg') }}" alt="">
+                                </td>
+                                <td>Raw Water ATM</td>
+                                <td>0</td>
+                                <td>3000$</td>
+                                <td>5%</td>
+                                <td>36 Months</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <img src="{{ asset('untapped/irrigation.svg') }}" alt="">
+                                </td>
+                                <td>Mobile Irrigation</td>
+                                <td>0</td>
+                                <td>1000$</td>
+                                <td>10%</td>
+                                <td>18 Months</td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
     </div>
 </div>

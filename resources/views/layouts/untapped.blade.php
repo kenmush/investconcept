@@ -27,7 +27,7 @@
 <div id="app" class="container-fluid">
 
     <div class="row">
-        <div class="col-md-7 offset-2 text-center">
+        <div class="col-md-7  text-center">
             <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
             @if(request()->segment(1) === 'signin')
                 <p style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">
@@ -35,15 +35,23 @@
                 </p>
             @endif
         </div>
-        <div class="col-md-3 pt-4 float-right">
+        <div class="col-md-5 pt-4 float-right">
             <button class="btn-untapped"> Contact Us</button>
             <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">|</span>
             @guest()
                 <a href="{{ route('login') }}" style="color: #DBDCDC" class="font-weight-bold align-items-baseline">
                     Login</a>
             @else()
-                <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline"> {{ auth()->user()->name }}
-                </span>
+                <div class="dropdown" style="color: #DBDCDC">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ auth()->user()->name }}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <a href="{{ route('myassets.index') }}" class="dropdown-item" type="button">My Assets</a>
+                        <a href="{{ route('myassets.index') }}" class="dropdown-item" type="button">My Portfolio</a>
+                        <a href="{{ route('user-profile.index') }}" class="dropdown-item" type="button">User Profile</a>
+                    </div>
+                </div>
             @endguest
         </div>
     </div>

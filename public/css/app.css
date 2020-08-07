@@ -11110,3 +11110,9 @@ input :hover {
   outline: none;
 }
 
+.landing-page-text {
+  font: Bold 20px/26px Roboto;
+  color: #DBDCDC;
+  opacity: 1;
+}
+

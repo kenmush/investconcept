@@ -2,11 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/landing', function () {
+    return view('landing');
+});
 Route::get('/', function () {
 
-    return view('welcome');
+    return view('landing');
 
-})->middleware('auth');
+});
 
 Route::group(['prefix' => 'assets', 'middleware' => 'auth'], function () {
 

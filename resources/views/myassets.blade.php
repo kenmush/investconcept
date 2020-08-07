@@ -11,22 +11,23 @@
                     <div class="row align-bottom">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a  class="nav-link align-bottom"
-                                    style="font: Bold 20px/26px Roboto; color: #DBDCDC;"
-                                    data-toggle="tab" href="#home" role="tab"
-                                    aria-controls="home" aria-selected="true">
+                                <a class="nav-link align-bottom"
+                                   style="font: Bold 20px/26px Roboto; color: #DBDCDC;"
+                                   data-toggle="tab" href="#home" role="tab"
+                                   aria-controls="home" aria-selected="true">
                                     Maps
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link active align-bottom pl-4" style="font: Bold 20px/26px Roboto; color:
                         #DBDCDC;"
-                                   data-toggle="tab" href="#profile" role="tab" aria-controls="home" aria-selected="true">
+                                   data-toggle="tab" href="#profile" role="tab" aria-controls="home"
+                                   aria-selected="true">
                                     List
-{{--                                    <span--}}
-{{--                                        style="position: absolute;top: 15px;width:50px;height: 15px;z-index: 999; margin-left:-40px;--}}
-{{--                                background: 0 0 no-repeat padding-box padding-box rgba(176, 210, 227, 0.6);">--}}
-                            </span>
+                                    {{--                                    <span--}}
+                                    {{--                                        style="position: absolute;top: 15px;width:50px;height: 15px;z-index: 999; margin-left:-40px;--}}
+                                    {{--                                background: 0 0 no-repeat padding-box padding-box rgba(176, 210, 227, 0.6);">--}}
+                                    </span>
                                 </a>
                             </li>
                         </ul>
@@ -39,46 +40,76 @@
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade " id="home" role="tabpanel"
                  aria-labelledby="home-tab">
-                <div class="container">
-                    <div
-                        style="position:relative;width:100%;height: 549px;background: white;border-radius: 20px;margin-bottom:61px"
-                        id="map">
-                        <div class="shadow" style="z-index:100;position: absolute;margin-left:26px;margin-top:36px;height: 160px;
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div
+                                style="position:relative;width:100%;height: 549px;background: white;border-radius: 20px;margin-bottom:61px"
+                                id="map">
+                                <div class="shadow" style="z-index:100;position: absolute;margin-left:26px;margin-top:36px;height: 160px;
             width:20rem;">
-                            <div class="card">
-                                <div class="card-body">
-                                    <!--Label: Type, Attributes:type -->
-                                    <div class="form-group">
-                                        <label for="type">Type</label>
-                                        <select type="text" class="form-control form-control-sm" id="type"
-                                                aria-describedby="type-help"
-                                                required>
-                                            <option value="type">Type</option>
-                                        </select>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <!--Label: Type, Attributes:type -->
+                                            <div class="form-group">
+                                                <label for="type">Type</label>
+                                                <select type="text" class="form-control form-control-sm" id="type"
+                                                        aria-describedby="type-help"
+                                                        required>
+                                                    <option value="type">Type</option>
+                                                </select>
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="type">Type</label>
-                                        <select type="text" class="form-control form-control-sm" id="type"
-                                                aria-describedby="type-help"
-                                                required>
-                                            <option value="type">Kenya</option>
-                                        </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="type">Type</label>
+                                                <select type="text" class="form-control form-control-sm" id="type"
+                                                        aria-describedby="type-help"
+                                                        required>
+                                                    <option value="type">Kenya</option>
+                                                </select>
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="type">Type</label>
-                                        <select type="text" class="form-control form-control-sm" id="type"
-                                                aria-describedby="type-help"
-                                                required>
-                                            <option value="type">Return 10%</option>
-                                        </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="type">Type</label>
+                                                <select type="text" class="form-control form-control-sm" id="type"
+                                                        aria-describedby="type-help"
+                                                        required>
+                                                    <option value="type">Return 10%</option>
+                                                </select>
 
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-2">
+                            <div class="card shadow" style="height: 549px;margin-left: -50px">
+                                <div class="card-body">
+                                    <div style="border-top: 57px">
+                                        <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Asset</h3>
+                                        <p style="font: Bold 20px/24px Roboto;color: #565C59;">Motorbike</p>
+                                    </div>
+                                    <div style="border-top: 57px">
+                                        <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Country</h3>
+                                        <p style="font: Bold 20px/24px Roboto;color: #565C59;">Kenya</p>
+                                    </div>
+                                    <div style="border-top: 57px">
+                                        <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Return</h3>
+                                        <p style="font: Bold 20px/24px Roboto;color: #565C59;">10%</p>
+                                    </div>
+                                    <div style="border-top: 57px">
+                                        <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Innovator</h3>
+                                        <p style="font: Bold 20px/24px Roboto;color: #565C59;">Joroh</p>
+                                        <img class=" rounded-circle" src="{{ asset('untapped/joroh.png') }}"
+                                             height="75px" width="75px">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
