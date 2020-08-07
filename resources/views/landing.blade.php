@@ -35,12 +35,12 @@
             <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">|</span>
             <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">Login</span>
         </div>
-        <div class="flex d-flex text-center justify-content-center align-content-center">
-            <p class="text-center"
-               style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">
-                A BETTER FUTURE THROUGH ENTREPRENEURSHIP
-            </p>
-        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <p class="text-center"
+           style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">
+            A BETTER FUTURE THROUGH ENTREPRENEURSHIP
+        </p>
     </div>
 
     <div>
