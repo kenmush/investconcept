@@ -48,7 +48,7 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                         <a href="{{ route('myassets.index') }}" class="dropdown-item" type="button">My Assets</a>
-                        <a href="{{ route('myassets.index') }}" class="dropdown-item" type="button">My Portfolio</a>
+                        <a href="{{ route('portfolio.index') }}" class="dropdown-item" type="button">My Portfolio</a>
                         <a href="{{ route('user-profile.index') }}" class="dropdown-item" type="button">User Profile</a>
                     </div>
                 </div>

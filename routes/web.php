@@ -24,6 +24,8 @@ Route::group(['prefix' => 'assets', 'middleware' => 'auth'], function () {
     Route::resource('user-profile', 'UserController');
 
     Route::resource('myassets', 'AssetsController');
+
+    Route::resource('portfolio', 'PortfolioController');
 });
 
 Route::view('signin', 'login');
