@@ -67,7 +67,7 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card" style="border-radius: 1rem">
                             <img class="card-img-top" src="{{ asset('untapped/joroh.png') }}" alt="Card image cap">
                             <div class="card-body text-center">
                                 <h4 class=" untapped-heading">Joroh</h4>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card" style="border-radius: 1rem">
                             <img class="card-img-top" src="{{ asset('untapped/meridia.png') }}" alt="Card image cap">
                             <div class="card-body text-center">
                                 <h4 class=" untapped-heading">Meridia</h4>
@@ -85,7 +85,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card" style="border-radius: 1rem">
                             <img class="card-img-top" src="{{ asset('untapped/jamari.png') }}" alt="Card image cap">
                             <div class="card-body text-center">
                                 <h4 class=" untapped-heading">Jamari</h4>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card">
+                        <div class="card" style="border-radius: 1rem">
                             <img class="card-img-top" src="{{ asset('untapped/sarah.png') }}" alt="Card image cap">
                             <div class="card-body text-center">
                                 <h4 class=" untapped-heading">Sarah</h4>
