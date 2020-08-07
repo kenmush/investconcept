@@ -61,7 +61,9 @@
                     <td scope="row">
                         <img src="{{ asset('untapped/twowheeler.svg') }}" alt="">
                     </td>
-                    <td>Motorbike</td>
+                    <td>
+                        <a href="{{ route('motorbike.index') }}">Motorbike</a>
+                    </td>
                     <td>10</td>
                     <td>1000$</td>
                     <td>10%</td>
@@ -72,7 +74,9 @@
                     <td scope="row">
                         <img src="{{ asset('untapped/smartmeter.svg') }}" alt="">
                     </td>
-                    <td>Smart Meter</td>
+                    <td>
+                        <a href="{{ route('smartmeter.index') }}">Smart Meter</a>
+                    </td>
                     <td>0</td>
                     <td>200$</td>
                     <td>8%</td>
@@ -83,7 +87,9 @@
                     <td scope="row">
                         <img src="{{ asset('untapped/rawmeter.svg') }}" alt="">
                     </td>
-                    <td>Raw Water ATM</td>
+                    <td>
+                        <a href="{{ route('raw-water-atm.index') }}">Raw Water ATM</a>
+                    </td>
                     <td>0</td>
                     <td>3000$</td>
                     <td>5%</td>
@@ -94,7 +100,9 @@
                     <td scope="row">
                         <img src="{{ asset('untapped/irrigation.svg') }}" alt="">
                     </td>
-                    <td>Mobile Irrigation</td>
+                    <td>
+                        <a href="{{ route('mobile-irrigation.index') }}">Mobile Irrigation</a>
+                    </td>
                     <td>0</td>
                     <td>1000$</td>
                     <td>10%</td>
