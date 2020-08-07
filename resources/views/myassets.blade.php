@@ -43,52 +43,55 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-10">
-                            <div
-                                style="position:relative;width:100%;height: 549px;background: white;border-radius: 20px;margin-bottom:61px"
-                                id="map">
-                                <div class="shadow" style="z-index:100;position: absolute;margin-left:26px;margin-top:36px;height: 160px;
+                            <div class="shadow" style="z-index:9999 ;position: absolute;margin-top:80px;
+                            margin-left:26px;height:
+                            160px;
             width:20rem;">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <!--Label: Type, Attributes:type -->
-                                            <div class="form-group">
-{{--                                                <label for="type">Type</label>--}}
-                                                <select type="text" class="form-control form-control-sm" id="type"
-                                                        aria-describedby="type-help"
-                                                        required>
-                                                    <option value="type">Type</option>
-                                                    @foreach(\App\Asset::all() as $type)
-                                                        <option value="type">{{$type->type }}</option>
-                                                    @endforeach
-                                                </select>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!--Label: Type, Attributes:type -->
+                                        <div class="form-group">
+                                            {{--                                                <label for="type">Type</label>--}}
+                                            <select type="text" class="form-control form-control-sm" id="type"
+                                                    aria-describedby="type-help"
+                                                    required>
+                                                <option value="type">Type</option>
+                                                @foreach(\App\Asset::all() as $type)
+                                                    <option value="type">{{$type->type }}</option>
+                                                @endforeach
+                                            </select>
 
-                                            </div>
-                                            <div class="form-group">
-{{--                                                <label for="type">Country</label>--}}
-                                                <select type="text" class="form-control form-control-sm" id="type"
-                                                        aria-describedby="type-help"
-                                                        required>
-                                                    <option value="type">-- Select Country --</option>
-                                                    @foreach(\App\Country::all() as $country)
-                                                        <option value="type">{{ $country->name }}</option>
-                                                    @endforeach
-                                                </select>
+                                        </div>
+                                        <div class="form-group">
+                                            {{--                                                <label for="type">Country</label>--}}
+                                            <select type="text" class="form-control form-control-sm" id="type"
+                                                    aria-describedby="type-help"
+                                                    required>
+                                                <option value="type">-- Select Country --</option>
+                                                @foreach(\App\Country::all() as $country)
+                                                    <option value="type">{{ $country->name }}</option>
+                                                @endforeach
+                                            </select>
 
-                                            </div>
-                                            <div class="form-group">
-{{--                                                <label for="type">Type</label>--}}
-                                                <select type="text" class="form-control form-control-sm" id="type"
-                                                        aria-describedby="type-help"
-                                                        required>
-                                                    @foreach(\App\ReturnType::all() as $returnType)
-                                                        <option value="type">{{ $returnType->type }}</option>
-                                                    @endforeach
-                                                </select>
+                                        </div>
+                                        <div class="form-group">
+                                            {{--                                                <label for="type">Type</label>--}}
+                                            <select type="text" class="form-control form-control-sm" id="type"
+                                                    aria-describedby="type-help"
+                                                    required>
+                                                @foreach(\App\ReturnType::all() as $returnType)
+                                                    <option value="type">{{ $returnType->type }}</option>
+                                                @endforeach
+                                            </select>
 
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div
+                                style="width:100%;height: 549px;background: white;border-radius: 20px;margin-bottom:61px"
+                                id="map">
+
                             </div>
                         </div>
                         <div class="col-md-2">
