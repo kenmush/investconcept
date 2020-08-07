@@ -10,6 +10,11 @@ Route::get('/', function () {
     return view('landing');
 
 });
+Route::get('/contactus', function () {
+
+    return view('contactus');
+
+})->name('contactus');
 
 Route::group(['prefix' => 'assets', 'middleware' => 'auth'], function () {
 

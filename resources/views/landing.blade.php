@@ -26,14 +26,20 @@
 <div class="">
 
     <div class="row">
-        <div class="col-md-8 offset-2 text-center">
+        <div class="col-md-6 offset-2 text-center">
             <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
         </div>
-        <div class="col-md-2 pt-4 float-right">
-            <button class="btn-untapped"> Contact Us</button>
+        <div class="col-md-4 pt-4 float-right">
+            <a href="{{ route('contactus') }}" class="btn-untapped"> Contact Us</a>
             <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">About Us</span>
             <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">|</span>
-            <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">Login</span>
+            @guest()
+            <a href="{{ route('login') }}">  <span style="color: #DBDCDC" class="font-weight-bold
+            align-items-baseline">Login</span></a>
+            @else
+                <a href="{{ route('home') }}">  <span style="color: #DBDCDC" class="font-weight-bold
+            align-items-baseline">My Dashboard</span></a>
+            @endguest
         </div>
     </div>
     <div class="d-flex justify-content-center">
@@ -292,6 +298,15 @@
                         <div>
                             <div class="card shadow rounded-full" style="border-radius: 1rem">
                                 <div class="card-body">
+                                    <form method="POST" action="{{ route('login') }}">
+                                        @csrf
+                                        <input required name="email" type="text" class="untapped-form"
+                                               placeholder="Email">
+                                        <button class="login-button">
+                                            <img src="{{ asset('untapped/keyboardarrow.svg') }}" alt="">
+                                            <i class="fa fa-arrow-circle-left fa-3x"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
