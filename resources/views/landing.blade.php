@@ -45,13 +45,11 @@
 
     <div>
         <div class="container">
-            <div class="row">
+            <div class="row" style="position:relative;">
                 <img style="border-radius: 30px; z-index: 90; height:497px;"
                      src="{{ asset('untapped/videoimage.png') }}" alt="">
-                <img style="position: absolute;z-index: 96;top:0;right:0"
-                     src="{{ asset('untapped/overlaycirle.svg')  }}"
-                     alt="">
-
+                <img style="position: absolute;top:25%;z-index: 96;right:50%"
+                     src="{{ asset('untapped/overlaycirle.svg')  }}">
             </div>
             <div class="row"
                  style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC;">
@@ -277,10 +275,10 @@
                         <div style="font: Bold 20px/26px Roboto;color: #FFFFFF;">
                             <p>USA:</p>
                             <p>353 Sacramento St., Suite 1800 San Francisco, CA 94111</p>
-                           <p> Kenya: </p>
+                            <p> Kenya: </p>
                             <p>iHub, Senteu Plaza,
                                 Kilimani Nairobi, Kenya</p>
-                           <p> Mali:</p>
+                            <p> Mali:</p>
                             <p>
                                 Hamdallay AC 2000, Avenue Cheick Zayed Immeuble ABK2, # 102
                                 Bamako, Mali​
@@ -293,20 +291,20 @@
                         <h4 style="font: Bold 70px/92px Roboto;color: #999C9A">Newsletter</h4>
                         <div>
                             <div class="card shadow rounded-full" style="border-radius: 1rem">
-                              <div class="card-body">
-                              </div>
+                                <div class="card-body">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 float-right">
                         <div class="row float-right pt-3">
-                           <div>
-                               <img src="{{ asset('untapped/facebook.svg') }}" alt="">
-                               <img src="{{ asset('untapped/linkedin.png') }}" style="padding-left: 1rem" alt="">
-                           </div>
-                           <div class="col-12 pt-6 float-right" style="margin-top: 2rem">
-                               <p style="font: Bold 16px/18px Roboto;color: #FFFFFF;">info@untapped-inc.com</p>
-                           </div>
+                            <div>
+                                <img src="{{ asset('untapped/facebook.svg') }}" alt="">
+                                <img src="{{ asset('untapped/linkedin.png') }}" style="padding-left: 1rem" alt="">
+                            </div>
+                            <div class="col-12 pt-6 float-right" style="margin-top: 2rem">
+                                <p style="font: Bold 16px/18px Roboto;color: #FFFFFF;">info@untapped-inc.com</p>
+                            </div>
 
                         </div>
 
