@@ -83,7 +83,7 @@
                     <img style="position:absolute;left: 40px;bottom:250px" src="{{ asset('untapped/mission.svg') }}"
                          alt="">
                     <div class="container ">
-                        <h4 style="font: Bold 70px/92px Roboto;color: #565C59;padding-bottom: 16px">Our Mission</h4>
+                        <h4 style="font: Bold 70px/92px Roboto;color: #989C9B;padding-bottom: 16px">Our Mission</h4>
                         <div class="text-center col-md-8 offset-2">
                             <p style="color: #565C59;font: Bold 20px/26px Roboto;">
                                 Untapped’s mission is to help entrepreneurs in frontier markets solve everyday problems
@@ -119,20 +119,23 @@
             </div>
 
             <div class="container">
-                <h4 style="font: Bold 70px/92px Roboto;color: #FFFFFF;">Our impact</h4>
-<div class="col-md-8 offset-2">
-    <div class="row d-flex justify-content-center text-center"
-         style="font: Bold 20px/26px Roboto; color: #FFFFFF;">
-        <p class="landing-page-text">We have supported entrepreneurs and projects through East Africa, West
-            Africa, and the Caribbean (Haiti), supporting over 500 entrepreneurs and small businesses.</p>
-        <p class="landing-page-text">
-            They
-            generate over $2 million in incremental revenue each year for local communities while delivering
-            essential services to over 200,000 people
-        </p>
-    </div>
+                <h4 style="font: Bold 70px/92px Roboto;color: #ABAEAC;padding-bottom: 2rem">Our impact</h4>
+                <div class="col-md-8 offset-2">
+                    <div class="row d-flex justify-content-center text-center"
+                         style="font: Bold 20px/26px Roboto; color: #FFFFFF;">
+                        <p class="landing-page-text">We have supported entrepreneurs and projects through East Africa,
+                            West
+                            Africa, and the Caribbean (Haiti), supporting over 500 entrepreneurs and small
+                            businesses.</p>
+                        <p class="landing-page-text">
+                            They
+                            generate over $2 million in incremental revenue each year for local communities while
+                            delivering
+                            essential services to over 200,000 people
+                        </p>
+                    </div>
 
-</div>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -150,7 +153,7 @@
                          alt="">
 
                     <div class="container ">
-                        <h4 style="font: Bold 70px/92px Roboto;color: #565C59;padding-bottom: 16px">In the Press</h4>
+                        <h4 style="font: Bold 70px/92px Roboto;color: #989C9B;padding-bottom: 16px">In the Press</h4>
                         <div class="row">
                             <div class="col-md-2">
                                 <img src="{{ asset('untapped/disruptafrica.png') }}" alt="">
@@ -216,6 +219,47 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="row" style="margin-top: 4rem">
+                            <div class="col-md-2">
+                                <img src="{{ asset('untapped/ifc.png') }}" alt="">
+                            </div>
+                            <div class="col-md-10 mt-8">
+                                <h4 style="color: #565C59;font: Bold 20px/26px Roboto;">IFC HELPS DLOHAITI
+                                    PROVIDE ACCESS TO SAFE WATER FOR UNDERSERVED HAITIAN COMMUNITIES</h4>
+                                <p style="color: #565C59;font: semi-condensed 20px/26px Roboto;"> Read about how the
+                                    IFC, a member of the World Bank Group and one of dloHaiti’s investors is helping the
+                                    company build a network of kiosks to provide underserved Haitian communities with
+                                    access to affordable, safe drinking water while also creating job opportunities. See
+                                    the press release here.</p>
+
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 4rem">
+                            <div class="col-md-2">
+                                <img src="{{ asset('untapped/washfunders.svg') }}" alt="">
+                            </div>
+                            <div class="col-md-10 mt-8">
+                                <h4 style="color: #565C59;font: Bold 20px/26px Roboto;"> CEO JIM CHU GUEST BLOGS FOR
+                                    WASHFUNDERS.ORG ON ENTREPRENEURSHIP AND AID</h4>
+                                <p style="color: #565C59;font: semi-condensed 20px/26px Roboto;">
+                                    Jim Chu, CEO
+                                    of dloHaiti, had the opportunity to do a guest blog for the Foundation Center’s
+                                    WASHfunders.org, a group established to inspire donors to support WASH initiatives
+                                    worldwide.
+                                </p>
+                                <p style="color: #565C59;font: semi-condensed 20px/26px Roboto;">His post was the most
+                                    trafficked post in 2013 at WASHfunders.org.</p>
+                                <p style="color: #565C59;font: semi-condensed 20px/26px Roboto;">In the
+                                    piece, Jim discusses the importance of sustainable water and sanitation
+                                    infrastructure, as well as the benefits of using a market-driven approach in
+                                    addressing the world’s water challenges.</p>
+                                <p style="color: #565C59;font: semi-condensed 20px/26px Roboto;"> Read more about how
+                                    dloHaiti is Putting the
+                                    Entrepreneur into WASH.</p>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div style="background-image: url({{ asset('untapped/btmcrner.jpg') }});
@@ -223,6 +267,50 @@
                     margin-top: -3px;
                     background-repeat: no-repeat;
                     height: 108px;">
+                </div>
+            </div>
+            <div class="container" style="padding-top: 3rem">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4 style="font: Bold 70px/92px Roboto;color: #999C9A">Address</h4>
+
+                        <div style="font: Bold 20px/26px Roboto;color: #FFFFFF;">
+                            <p>USA:</p>
+                            <p>353 Sacramento St., Suite 1800 San Francisco, CA 94111</p>
+                           <p> Kenya: </p>
+                            <p>iHub, Senteu Plaza,
+                                Kilimani Nairobi, Kenya</p>
+                           <p> Mali:</p>
+                            <p>
+                                Hamdallay AC 2000, Avenue Cheick Zayed Immeuble ABK2, # 102
+                                Bamako, Mali​
+                            </p>
+                            <p>Haiti:​</p>
+                            <p>177, rue Faubert (Complexe Tropical) Pétionville, Ouest, Haiti 6140</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 style="font: Bold 70px/92px Roboto;color: #999C9A">Newsletter</h4>
+                        <div>
+                            <div class="card shadow rounded-full" style="border-radius: 1rem">
+                              <div class="card-body">
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 float-right">
+                        <div class="row float-right pt-3">
+                           <div>
+                               <img src="{{ asset('untapped/facebook.svg') }}" alt="">
+                               <img src="{{ asset('untapped/linkedin.png') }}" style="padding-left: 1rem" alt="">
+                           </div>
+                           <div class="col-12 pt-6 float-right" style="margin-top: 2rem">
+                               <p style="font: Bold 16px/18px Roboto;color: #FFFFFF;">info@untapped-inc.com</p>
+                           </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
