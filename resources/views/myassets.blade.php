@@ -27,7 +27,7 @@
                                     {{--                                    <span--}}
                                     {{--                                        style="position: absolute;top: 15px;width:50px;height: 15px;z-index: 999; margin-left:-40px;--}}
                                     {{--                                background: 0 0 no-repeat padding-box padding-box rgba(176, 210, 227, 0.6);">--}}
-                                    </span>
+{{--                                    </span>--}}
                                 </a>
                             </li>
                         </ul>
@@ -52,29 +52,37 @@
                                         <div class="card-body">
                                             <!--Label: Type, Attributes:type -->
                                             <div class="form-group">
-                                                <label for="type">Type</label>
+{{--                                                <label for="type">Type</label>--}}
                                                 <select type="text" class="form-control form-control-sm" id="type"
                                                         aria-describedby="type-help"
                                                         required>
                                                     <option value="type">Type</option>
+                                                    @foreach(\App\Asset::all() as $type)
+                                                        <option value="type">{{$type->type }}</option>
+                                                    @endforeach
                                                 </select>
 
                                             </div>
                                             <div class="form-group">
-                                                <label for="type">Type</label>
+{{--                                                <label for="type">Country</label>--}}
                                                 <select type="text" class="form-control form-control-sm" id="type"
                                                         aria-describedby="type-help"
                                                         required>
-                                                    <option value="type">Kenya</option>
+                                                    <option value="type">-- Select Country --</option>
+                                                    @foreach(\App\Country::all() as $country)
+                                                        <option value="type">{{ $country->name }}</option>
+                                                    @endforeach
                                                 </select>
 
                                             </div>
                                             <div class="form-group">
-                                                <label for="type">Type</label>
+{{--                                                <label for="type">Type</label>--}}
                                                 <select type="text" class="form-control form-control-sm" id="type"
                                                         aria-describedby="type-help"
                                                         required>
-                                                    <option value="type">Return 10%</option>
+                                                    @foreach(\App\ReturnType::all() as $returnType)
+                                                        <option value="type">{{ $returnType->type }}</option>
+                                                    @endforeach
                                                 </select>
 
                                             </div>
