@@ -30,7 +30,9 @@
 
     <div class="row">
         <div class="col-md-7 text-center">
-            <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
+            <a href="/">
+                <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
+            </a>
             @if(request()->segment(1) === 'signin')
                 <p style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">
                     A BETTER FUTURE THROUGH ENTREPRENEURSHIP
@@ -46,14 +48,17 @@
                         Login</a>
                 @else()
                     <div class="dropdown pl-3" style="color: #DBDCDC">
-                        <a class=" dropdown-toggle" type="button" id="dropdownMenu2"
+                        <a class=" dropdown-toggle font-weight-bolder" type="button" id="dropdownMenu2"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ auth()->user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <a href="{{ route('myassets.index') }}" class="dropdown-item" type="button">My Assets</a>
-                            <a href="{{ route('portfolio.index') }}" class="dropdown-item" type="button">My
+                            <a href="{{ route('myassets.index') }}" class="font-weight-bolder dropdown-item" type="button">My
+                                Assets</a>
+                            <a href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item" type="button">My
                                 Portfolio</a>
+                            <a href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item" type="button">
+                                Logout</a>
                             {{--                        <a href="{{ route('user-profile.index') }}" class="dropdown-item" type="button">User Profile</a>--}}
                         </div>
                     </div>

@@ -87,9 +87,9 @@ tr td:last-child {
     border-spacing: 0 15px;
     overflow: hidden;
     width: 100%;
-    margin-bottom: $spacer;
-    color: $table-color;
-    background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+    //margin-bottom: $spacer;
+    //color: $table-color;
+    //background-color: $table-bg; // Reset for nesting within parents with `background-color`.
 
     th,
     td {
@@ -180,4 +180,24 @@ input{
     font: Bold 20px/26px Roboto;
     color: #565C59;
     opacity: 1;
+}
+
+.form-control {
+    border-bottom: solid #565C59 2px;
+    border-right: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    &:focus {
+        outline: none !important;
+        box-shadow: 0 0 0 0 #565C59;
+    }
+}
+
+a {
+    color: #565C59;
+
+    &:hover {
+        color: darken(#565C59,0.3);
+        text-decoration: underline;
+    }
 }

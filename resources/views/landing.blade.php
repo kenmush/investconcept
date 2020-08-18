@@ -26,7 +26,7 @@
 <div class="">
 
     <div class="row">
-        <div class="col-md-6 offset-2 text-center">
+        <div class="col-md-8 text-center justify-content-center">
             <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
         </div>
         <div class="col-md-4 pt-4 float-right">

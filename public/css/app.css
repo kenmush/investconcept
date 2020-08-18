@@ -11002,8 +11002,6 @@ tr td:last-child {
   border-spacing: 0 15px;
   overflow: hidden;
   width: 100%;
-  margin-bottom: 1rem;
-  color: #212529;
 }
 
 .table th,
@@ -11112,7 +11110,28 @@ input :hover {
 
 .landing-page-text {
   font: Bold 20px/26px Roboto;
-  color: #DBDCDC;
+  color: #565C59;
   opacity: 1;
+}
+
+.form-control {
+  border-bottom: solid #565C59 2px;
+  border-right: transparent;
+  border-top: transparent;
+  border-left: transparent;
+}
+
+.form-control:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 0 #565C59;
+}
+
+a {
+  color: #565C59;
+}
+
+a:hover {
+  color: #555b58;
+  text-decoration: underline;
 }
 
