@@ -29,17 +29,17 @@
 <div id="app" class="container-fluid">
 
     <div class="row">
-        <div class="col-md-7 text-center">
+        <div class="col-md-7 offset-2 text-center">
             <a href="/">
                 <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
             </a>
-            @if(request()->segment(1) === 'signin')
+
                 <p style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">
                     A BETTER FUTURE THROUGH ENTREPRENEURSHIP
                 </p>
-            @endif
+
         </div>
-        <div class="col-md-5 pt-4 float-right">
+        <div class="col-md-3 pt-2 float-right">
             <div class="row">
                 <button class="btn-untapped mr-3"> Contact Us</button>
                 <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">|</span>
@@ -57,8 +57,14 @@
                                 Assets</a>
                             <a href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item" type="button">My
                                 Portfolio</a>
-                            <a href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item" type="button">
+                            <a href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item"
+                               type="button" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                                 Logout</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                             {{--                        <a href="{{ route('user-profile.index') }}" class="dropdown-item" type="button">User Profile</a>--}}
                         </div>
                     </div>
