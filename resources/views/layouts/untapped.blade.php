@@ -41,7 +41,7 @@
         </div>
         <div class="col-md-3 pt-2 float-right">
             <div class="row">
-                <button class="btn-untapped mr-3"> Contact Us</button>
+                <a href="{{ route('contactus') }}" class="btn-untapped mr-3"> Contact Us</a>
                 <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">|</span>
                 @guest()
                     <a href="{{ route('login') }}" style="color: #DBDCDC" class="font-weight-bold align-items-baseline">

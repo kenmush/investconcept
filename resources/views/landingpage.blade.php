@@ -153,11 +153,12 @@
                             <tr class="table-header-untapped">
                                 <th></th>
                                 <th>Asset Name</th>
-                                <th>Numbers</th>
+                                <th>User</th>
+                                <th>Operator</th>
+                                <th>Use Case</th>
                                 <th>Ticket</th>
                                 <th>Return</th>
                                 <th>Duration</th>
-                                <th>Social Gain</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -165,45 +166,57 @@
                                 <td scope="row">
                                     <img src="{{ asset('untapped/twowheeler.svg') }}" alt="">
                                 </td>
-                                <td>Motorbike</td>
-                                <td>10</td>
-                                <td>1000$</td>
+                                <td>
+                                    <a href="{{ route('motorbike.index') }}">Motorbike</a>
+                                </td>
+                                <td>Moto-taxi</td>
+                                <td>Ride Hailing</td>
+                                <td>Transport passenger goods</td>
+                                <td>100$</td>
                                 <td>10%</td>
-                                <td>24 Months</td>
-                                <td>20000$</td>
+                                <td>24 months</td>
                             </tr>
                             <tr>
                                 <td scope="row">
                                     <img src="{{ asset('untapped/smartmeter.svg') }}" alt="">
                                 </td>
-                                <td>Smart Meter</td>
-                                <td>0</td>
+                                <td>
+                                    <a href="{{ route('smartmeter.index') }}">Smart Meter</a>
+                                </td>
+                                <td>Low income households</td>
+                                <td>Water Services</td>
+                                <td>Bring running water access</td>
                                 <td>200$</td>
                                 <td>8%</td>
-                                <td>18 Months</td>
-                                <td></td>
+                                <td>18 months</td>
                             </tr>
                             <tr>
                                 <td scope="row">
                                     <img src="{{ asset('untapped/rawmeter.svg') }}" alt="">
                                 </td>
-                                <td>Raw Water ATM</td>
-                                <td>0</td>
+                                <td>
+                                    <a href="{{ route('raw-water-atm.index') }}">Raw Water ATM</a>
+                                </td>
+                                <td>Low income households</td>
                                 <td>3000$</td>
-                                <td>5%</td>
-                                <td>36 Months</td>
-                                <td></td>
+                                <td>Water Services</td>
+                                <td>Communal water kiosks</td>
+                                <td>3000$</td>
+                                <td>36 months</td>
                             </tr>
                             <tr>
                                 <td scope="row">
                                     <img src="{{ asset('untapped/irrigation.svg') }}" alt="">
                                 </td>
-                                <td>Mobile Irrigation</td>
-                                <td>0</td>
+                                <td>
+                                    <a href="{{ route('mobile-irrigation.index') }}">Mobile Irrigation</a>
+                                </td>
+                                <td>Farmers</td>
+                                <td>Extension Farming</td>
+                                <td>Irrigate, Increase harvest</td>
                                 <td>1000$</td>
                                 <td>10%</td>
-                                <td>18 Months</td>
-                                <td></td>
+                                <td>18 months</td>
                             </tr>
                             </tbody>
                         </table>
