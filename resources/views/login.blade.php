@@ -18,7 +18,7 @@
                         @endif
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-                            <input required name="email" type="text" class="untapped-form" placeholder="Email">
+                            <input required name="email" type="text" class="untapped-form" placeholder="Name, Email">
                             <input required name="password" type="password" class="untapped-form "
                                    placeholder="Password"
                                    style="margin-top:

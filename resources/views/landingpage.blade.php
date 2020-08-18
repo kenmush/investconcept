@@ -32,7 +32,7 @@
                 A BETTER FUTURE THROUGH ENTREPRENEURSHIP
             </p>
         </div>
-        <div class="col-md-2 pt-4 float-right">
+        <div class="col-md-2 pt-4 ">
             <button class="btn-untapped"> Contact Us</button>
             <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">|</span>
             @guest()
