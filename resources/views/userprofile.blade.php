@@ -4,14 +4,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12" style="
-                width: 158px;
-                height: 92px;
-                background: transparent url({{ asset('untapped/faceprofile.svg') }}) 0 0 no-repeat padding-box;
-                opacity: 1;">
+                    width: 158px;
+                    height: 92px;
+                    background: transparent url({{ asset('untapped/faceprofile.svg') }}) 0 0 no-repeat padding-box;
+                    opacity: 1;">
             </div>
             <div
-                style="z-index:10;margin-left:-30px;margin-top:-25px;font: Bold 40px Roboto;color: #DBDCDC !important;">
-                Joroh
+                    style="z-index:10;margin-left:-30px;margin-top:-25px;font: Bold 40px Roboto;color: #DBDCDC !important;">
+                {{ ucfirst($name) }}
             </div>
         </div>
         <div class="row" style="padding-top: 53px">
@@ -54,33 +54,40 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top" src="{{ asset('untapped/joroh.png') }}" alt="Card image cap">
-                            <div class="card-body text-center">
-                                <h4 class=" untapped-heading">Kadirm</h4>
-                                <p class="untapped-subtitle">Kenya</p>
+                        <a href="{{ route('user-profile.show',['Kadirm']) }}">
+                            <div class="card">
+                                <img class="card-img-top" src="{{ asset('untapped/joroh.png') }}" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h4 class=" untapped-heading">Kadirm</h4>
+                                    <p class="untapped-subtitle">Kenya</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top" src="{{ asset('untapped/meridia.png') }}" alt="Card image cap">
-                            <div class="card-body text-center">
-                                <h4 class=" untapped-heading">Meridia</h4>
-                                <p class="untapped-subtitle">Ghana</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img class="card-img-top" src="{{ asset('untapped/jamari.png') }}" alt="Card image cap">
-                            <div class="card-body text-center">
-                                <h4 class=" untapped-heading">Jamari</h4>
-                                <p class="untapped-subtitle">Kenya</p>
-                            </div>
-                        </div>
-                    </div>
+                        <a href="{{ route('user-profile.show',['Meridia']) }}">
 
+                            <div class="card">
+                                <img class="card-img-top" src="{{ asset('untapped/meridia.png') }}"
+                                     alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h4 class=" untapped-heading">Meridia</h4>
+                                    <p class="untapped-subtitle">Ghana</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{ route('user-profile.show',['Jamari']) }}">
+                            <div class="card">
+                                <img class="card-img-top" src="{{ asset('untapped/jamari.png') }}" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h4 class=" untapped-heading">Jamari</h4>
+                                    <p class="untapped-subtitle">Kenya</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

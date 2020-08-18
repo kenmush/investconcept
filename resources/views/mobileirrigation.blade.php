@@ -4,13 +4,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12" style="
-                width: 158px;
-                height: 92px;
-                background: transparent url({{ asset('untapped/mobileirrigation.svg') }}) 0 0 no-repeat padding-box;
-                opacity: 1;">
+                    width: 158px;
+                    height: 92px;
+                    background: transparent url({{ asset('untapped/mobileirrigation.svg') }}) 0 0 no-repeat padding-box;
+                    opacity: 1;">
             </div>
             <div
-                style="z-index:10;margin-left:-30px;margin-top:-25px;font: Bold 40px Roboto;color: #DBDCDC !important;">
+                    style="z-index:10;margin-left:-30px;margin-top:-25px;font: Bold 40px Roboto;color: #DBDCDC !important;">
                 Mobile Irrigation
             </div>
         </div>
@@ -68,31 +68,37 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="card" style="border-radius: 1rem">
-                            <img class="card-img-top" src="{{ asset('untapped/wawira.png') }}" alt="Card image cap">
-                            <div class="card-body text-center">
-                                <h4 class=" untapped-heading">Wawira</h4>
-                                <p class="untapped-subtitle">Kenya</p>
+                        <a href="{{ route('user-profile.show',['Wawira']) }}">
+                            <div class="card shadow shadow-outline shadow-lg" style="border-radius: 1rem">
+                                <img class="card-img-top" src="{{ asset('untapped/wawira.png') }}" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h4 class=" untapped-heading">Wawira</h4>
+                                    <p class="untapped-subtitle">Kenya</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-3">
-                        <div class="card" style="border-radius: 1rem">
-                            <img class="card-img-top" src="{{ asset('untapped/kerubo.png') }}" alt="Card image cap">
-                            <div class="card-body text-center">
-                                <h4 class=" untapped-heading">Kerubo</h4>
-                                <p class="untapped-subtitle">Ghana</p>
+                        <a href="{{ route('user-profile.show',['Kerubo']) }}">
+                            <div class="card shadow shadow-outline shadow-lg" style="border-radius: 1rem">
+                                <img class="card-img-top" src="{{ asset('untapped/kerubo.png') }}" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h4 class=" untapped-heading">Kerubo</h4>
+                                    <p class="untapped-subtitle">Ghana</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-3">
-                        <div class="card" style="border-radius: 1rem">
-                            <img class="card-img-top" src="{{ asset('untapped/rehema.png') }}" alt="Card image cap">
-                            <div class="card-body text-center">
-                                <h4 class=" untapped-heading">Rehema</h4>
-                                <p class="untapped-subtitle">Kenya</p>
+                        <a href="{{ route('user-profile.show',['Rehema']) }}">
+                            <div class="card shadow shadow-outline shadow-lg" style="border-radius: 1rem">
+                                <img class="card-img-top" src="{{ asset('untapped/rehema.png') }}" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h4 class=" untapped-heading">Rehema</h4>
+                                    <p class="untapped-subtitle">Kenya</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

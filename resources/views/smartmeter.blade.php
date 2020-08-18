@@ -4,13 +4,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12" style="
-                width: 158px;
-                height: 92px;
-                background: transparent url({{ asset('untapped/smartmeterheader.svg') }}) 0 0 no-repeat padding-box;
-                opacity: 1;">
+                    width: 158px;
+                    height: 92px;
+                    background: transparent url({{ asset('untapped/smartmeterheader.svg') }}) 0 0 no-repeat padding-box;
+                    opacity: 1;">
             </div>
             <div
-                style="z-index:10;margin-left:-30px;margin-top:-25px;font: Bold 40px Roboto;color: #DBDCDC !important;">
+                    style="z-index:10;margin-left:-30px;margin-top:-25px;font: Bold 40px Roboto;color: #DBDCDC !important;">
                 Smart Meter
             </div>
         </div>
@@ -65,31 +65,38 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="card" style="border-radius: 1rem">
-                            <img class="card-img-top" src="{{ asset('untapped/akinyi.png') }}" alt="Card image cap">
-                            <div class="card-body text-center">
-                                <h4 class=" untapped-heading">Akinyi</h4>
-                                <p class="untapped-subtitle">Kenya</p>
+                        <a href="{{ route('user-profile.show',['Akinyi']) }}">
+                            <div class="card" style="border-radius: 1rem">
+                                <img class="card-img-top" src="{{ asset('untapped/akinyi.png') }}" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h4 class=" untapped-heading">Akinyi</h4>
+                                    <p class="untapped-subtitle">Kenya</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-3">
-                        <div class="card" style="border-radius: 1rem">
-                            <img class="card-img-top" src="{{ asset('untapped/zawadi.png') }}" alt="Card image cap">
-                            <div class="card-body text-center">
-                                <h4 class=" untapped-heading">Zawadi</h4>
-                                <p class="untapped-subtitle">Ghana</p>
+                        <a href="{{ route('user-profile.show',['Zawadi']) }}">
+                            <div class="card" style="border-radius: 1rem">
+                                <img class="card-img-top" src="{{ asset('untapped/zawadi.png') }}" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h4 class=" untapped-heading">Zawadi</h4>
+                                    <p class="untapped-subtitle">Ghana</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-3">
-                        <div class="card" style="border-radius: 1rem">
-                            <img class="card-img-top" src="{{ asset('untapped/chepkirui.png') }}" alt="Card image cap">
-                            <div class="card-body text-center">
-                                <h4 class=" untapped-heading">Chepkirui</h4>
-                                <p class="untapped-subtitle">Kenya</p>
+                        <a href="{{ route('user-profile.show',['Chepkirui']) }}">
+                            <div class="card" style="border-radius: 1rem">
+                                <img class="card-img-top" src="{{ asset('untapped/chepkirui.png') }}"
+                                     alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h4 class=" untapped-heading">Chepkirui</h4>
+                                    <p class="untapped-subtitle">Kenya</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
