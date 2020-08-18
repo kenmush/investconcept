@@ -7,7 +7,7 @@ Route::get('/landing', function () {
 });
 Route::get('/', function () {
 
-    return view('landing');
+    return view('landingpage');
 
 });
 Route::get('/contactus', function () {
