@@ -19,8 +19,7 @@
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link active align-bottom pl-4" style="font: Bold 20px/26px Roboto; color:
-                        #DBDCDC;"
+                                <a class="nav-link active align-bottom pl-4" style="font: Bold 20px/26px Roboto;"
                                    data-toggle="tab" href="#profile" role="tab" aria-controls="home"
                                    aria-selected="true">
                                     List
