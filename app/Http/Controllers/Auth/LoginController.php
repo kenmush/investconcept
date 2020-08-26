@@ -4,7 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\Services\Investor;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -41,5 +45,29 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         return view('login');
+    }
+
+    protected function attemptLogin(Request $request)
+    {
+        $data = [
+                'username' => $request->email,
+                'password' => $request->password
+        ];
+
+        try {
+            $userFromAPI = (new Investor())->investorLogin($data);
+           $user = User::firstOrCreate(
+                    ['email' => $userFromAPI['email']],
+                    [
+                            'password' => bcrypt($request->password),
+                            'name'     => $userFromAPI['firstName'].' '.$userFromAPI['middleName'].' '.$userFromAPI['lastName']
+                    ]
+            );
+            Auth::loginUsingId($user->id);
+        } catch (\Exception $exception) {
+            dd($exception->getMessage());
+        }
+
+
     }
 }
