@@ -56,7 +56,7 @@ class LoginController extends Controller
 
         try {
             $userFromAPI = (new Investor())->investorLogin($data);
-           $user = User::firstOrCreate(
+            $user = User::firstOrCreate(
                     ['email' => $userFromAPI['email']],
                     [
                             'password' => bcrypt($request->password),
@@ -65,9 +65,7 @@ class LoginController extends Controller
             );
             Auth::loginUsingId($user->id);
         } catch (\Exception $exception) {
-            dd($exception->getMessage());
+            $this->sendFailedLoginResponse($request);
         }
-
-
     }
 }
