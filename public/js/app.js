@@ -1959,24 +1959,35 @@ var map = '';
     getAssetCoordinates: function getAssetCoordinates() {
       var _this = this;
 
-      console.log(this.categoryId);
+      var points = [];
+      var Self = this;
       axios.get("/api/getAllAssets/".concat(this.categoryId)).then(function (resp) {
         _this.assets = resp.data;
-        var points = [];
-        resp.data.map(function (datareturned) {
+        var ds = Object.keys(resp.data).map(function (datareturned, index) {
           points.push({
             'type': 'Feature',
             'geometry': {
               'type': 'Point',
-              'coordinates': [datareturned.latitude, datareturned.longitude]
+              'coordinates': [Self.assets[datareturned].longitude, Self.assets[datareturned].latitude]
             },
             'properties': {
-              'title': datareturned.brand
+              'title': Self.assets[datareturned].brand
             }
           });
         });
-        console.log();
-        map.loadImage('https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png', function (error, image) {
+        var image = 'http://localhost:3000/untapped/twowheeler.png';
+
+        if (_this.categoryId === 1) {
+          image = 'http://localhost:3000/untapped/twowheeler.png';
+        }
+
+        var images = map.listImages();
+        Object.keys(images).forEach(function (showimage) {
+          if (map.hasImage(images[showimage])) {
+            map.removeImage(images[showimage]);
+          }
+        });
+        map.loadImage(image, function (error, image) {
           if (error) throw error;
           map.addImage('custom-marker', image);
           map.addSource('points', {
@@ -2001,7 +2012,9 @@ var map = '';
             }
           });
         });
-      })["catch"](function (err) {});
+      })["catch"](function (err) {
+        console.log(err);
+      });
     }
   },
   mounted: function mounted() {
@@ -2009,8 +2022,8 @@ var map = '';
     map = new mapboxgl.Map({
       container: 'maps',
       style: 'mapbox://styles/mapbox/light-v10',
-      center: [-96, 37.8],
-      zoom: 3
+      center: [-2.522805, 27.039787],
+      zoom: 2
     });
   },
   created: function created() {}

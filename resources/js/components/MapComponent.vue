@@ -47,28 +47,41 @@ export default {
   },
   methods: {
     getAssetCoordinates() {
-      console.log(this.categoryId)
+      let points = [];
+      let Self = this;
       axios.get(`/api/getAllAssets/${this.categoryId}`).then(resp => {
         this.assets = resp.data;
-        let points = [];
-        resp.data.map(function (datareturned) {
+
+        let ds = Object.keys(resp.data).map(function (datareturned, index) {
           points.push({
             'type': 'Feature',
             'geometry': {
               'type': 'Point',
               'coordinates': [
-                datareturned.latitude,
-                datareturned.longitude
+                Self.assets[datareturned].longitude,
+                Self.assets[datareturned].latitude
               ]
             },
             'properties': {
-              'title': datareturned.brand
+              'title': Self.assets[datareturned].brand
             }
           })
         });
-        console.log()
+
+        let image = 'http://localhost:3000/untapped/twowheeler.png';
+        if (this.categoryId === 1) {
+          image = 'http://localhost:3000/untapped/twowheeler.png'
+        }
+
+        let images = map.listImages()
+        Object.keys(images).forEach(function (showimage) {
+          if (map.hasImage(images[showimage])) {
+            map.removeImage(images[showimage])
+          }
+        });
+
         map.loadImage(
-            'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+            image,
             function (error, image) {
               if (error) throw error;
               map.addImage('custom-marker', image);
@@ -76,7 +89,8 @@ export default {
                 'type': 'geojson',
                 'data': {
                   'type': 'FeatureCollection',
-                  'features': points                }
+                  'features': points
+                }
               });
 
 // Add a symbol layer
@@ -99,7 +113,7 @@ export default {
             }
         );
       }).catch(err => {
-
+        console.log(err)
       });
     }
   },
@@ -108,8 +122,8 @@ export default {
     map = new mapboxgl.Map({
       container: 'maps',
       style: 'mapbox://styles/mapbox/light-v10',
-      center: [-96, 37.8],
-      zoom: 3
+      center: [-2.522805, 27.039787],
+      zoom: 2
     });
 
   },
