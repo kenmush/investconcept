@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('getAllAssets/{categoryId?}', function ($categoryId = 1) {
+    $response = (new Investor())->getAssetsbyCategory();
+    return collect($response)->where('category', $categoryId);
 });

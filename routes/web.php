@@ -6,8 +6,12 @@ Route::get('/landing', function () {
     return view('landing');
 });
 Route::get('/', function () {
-
-    return view('landingpage');
+    $assets = (new \App\Services\Investor())->getAssetCategories();
+    return view('landingpage',
+            [
+                    'assets' => collect($assets)->toArray()
+            ]
+    );
 
 });
 Route::get('/contactus', function () {

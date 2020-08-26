@@ -58,13 +58,11 @@
                         </div>
                         <div class="form-group">
                             <label for="type">Country</label>
-                            <select type="text" class="form-control form-control-sm" id="type"
+                            <select type="text" disabled class="form-control form-control-sm" id="type"
                                     aria-describedby="type-help"
                                     required>
-                                <option value="type">-- Select Country --</option>
-                                @foreach(\App\Country::all() as $country)
-                                    <option value="type">{{ $country->name }}</option>
-                                @endforeach
+                                <option value="type">Kenya</option>
+
                             </select>
 
                         </div>

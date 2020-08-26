@@ -23,8 +23,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<div class="container-fluid">
-
+<div class="container-fluid" id="app">
     <div class="row">
         <div class="col-md-8 offset-2 text-center">
             <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
@@ -66,56 +65,7 @@
 
     <div class="container-fluid">
         <div class="col-md-12">
-            <div class="shadow" style="z-index:9999 ;position: absolute;margin-top:80px;
-                            margin-left:26px;height:
-                            160px;
-            width:20rem;">
-                <div class="card">
-                    <div class="card-body">
-                        <!--Label: Type, Attributes:type -->
-                        <div class="form-group">
-                            {{--                                                <label for="type">Type</label>--}}
-                            <select type="text" class="form-control form-control-sm" id="type"
-                                    aria-describedby="type-help"
-                                    required>
-                                <option value="type">Type</option>
-                                @foreach(\App\Asset::all() as $type)
-                                    <option value="type">{{$type->type }}</option>
-                                @endforeach
-                            </select>
-
-                        </div>
-                        <div class="form-group">
-                            {{--                                                <label for="type">Country</label>--}}
-                            <select type="text" class="form-control form-control-sm" id="type"
-                                    aria-describedby="type-help"
-                                    required>
-                                <option value="type">-- Select Country --</option>
-                                @foreach(\App\Country::all() as $country)
-                                    <option value="type">{{ $country->name }}</option>
-                                @endforeach
-                            </select>
-
-                        </div>
-                        <div class="form-group">
-                            {{--                                                <label for="type">Type</label>--}}
-                            <select type="text" class="form-control form-control-sm" id="type"
-                                    aria-describedby="type-help"
-                                    required>
-                                @foreach(\App\ReturnType::all() as $returnType)
-                                    <option value="type">{{ $returnType->type }}</option>
-                                @endforeach
-                            </select>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div
-                    style="width:100%;height: 549px;background: white;border-radius: 20px;margin-bottom:61px"
-                    id="map">
-
-            </div>
+            <map-component :categories='@json($assets)'></map-component>
         </div>
     </div>
     <div class="container">
@@ -229,13 +179,13 @@
         </div>
     </div>
 </div>
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+{{--<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>--}}
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoibXV0aXN5YSIsImEiOiJja2JsN21kejExNjd5MnNvNThyYmNybTNhIn0.BmObv_gTFqLmuc-VObwKYw';
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10'
-    });
+    // mapboxgl.accessToken = 'pk.eyJ1IjoibXV0aXN5YSIsImEiOiJja2JsN21kejExNjd5MnNvNThyYmNybTNhIn0.BmObv_gTFqLmuc-VObwKYw';
+    // var map = new mapboxgl.Map({
+    //     container: 'map',
+    //     style: 'mapbox://styles/mapbox/light-v10'
+    // });
 </script>
 </body>
 </html>

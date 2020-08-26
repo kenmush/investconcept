@@ -17,11 +17,9 @@ class Investor
                 "password" => $data['password']
         ]);
     }
-    public function addAsset()
+    public function getAssetsbyCategory()
     {
-        return $this->request('POST','portal/asset/creation/',[
-
-        ]);
+        return $this->request('GET','portal/asset/creation/');
     }
     public function getAssetCategories()
     {
