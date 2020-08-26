@@ -1981,14 +1981,19 @@ var map = '';
           image = 'http://localhost:3000/untapped/twowheeler.png';
         }
 
-        var images = map.listImages();
-        Object.keys(images).forEach(function (showimage) {
-          if (map.hasImage(images[showimage])) {
-            map.removeImage(images[showimage]);
-          }
-        });
+        if (_this.categoryId === 2) {
+          image = 'http://localhost:3000/untapped/smartmeter.png';
+        }
+
+        console.log(image);
+        if (map.getLayer('points')) map.removeLayer('points');
+        if (map.getSource('points')) map.removeSource('points');
+        if (map.hasImage('custom-marker')) map.removeImage('custom-marker');
         map.loadImage(image, function (error, image) {
-          if (error) throw error;
+          if (error) {
+            throw error;
+          }
+
           map.addImage('custom-marker', image);
           map.addSource('points', {
             'type': 'geojson',
@@ -2013,6 +2018,7 @@ var map = '';
           });
         });
       })["catch"](function (err) {
+        console.log("a");
         console.log(err);
       });
     }

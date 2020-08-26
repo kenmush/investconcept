@@ -72,18 +72,20 @@ export default {
         if (this.categoryId === 1) {
           image = 'http://localhost:3000/untapped/twowheeler.png'
         }
-
-        let images = map.listImages()
-        Object.keys(images).forEach(function (showimage) {
-          if (map.hasImage(images[showimage])) {
-            map.removeImage(images[showimage])
-          }
-        });
+        if (this.categoryId === 2) {
+          image = 'http://localhost:3000/untapped/smartmeter.png'
+        }
+        console.log(image)
+        if (map.getLayer('points')) map.removeLayer('points');
+        if (map.getSource('points')) map.removeSource('points');
+        if (map.hasImage('custom-marker')) map.removeImage('custom-marker');
 
         map.loadImage(
             image,
             function (error, image) {
-              if (error) throw error;
+              if (error) {
+                throw error;
+              }
               map.addImage('custom-marker', image);
               map.addSource('points', {
                 'type': 'geojson',
@@ -113,6 +115,7 @@ export default {
             }
         );
       }).catch(err => {
+        console.log(`a`)
         console.log(err)
       });
     }
