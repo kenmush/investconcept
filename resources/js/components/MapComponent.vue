@@ -47,6 +47,7 @@ export default {
   },
   methods: {
     getAssetCoordinates() {
+      let url = process.env.MIX_APP_URL;
       let points = [];
       let Self = this;
       axios.get(`/api/getAllAssets/${this.categoryId}`).then(resp => {
@@ -68,12 +69,18 @@ export default {
           })
         });
 
-        let image = 'http://localhost:3000/untapped/twowheeler.png';
+        let image = `${url}/untapped/twowheeler.png`;
         if (this.categoryId === 1) {
-          image = 'http://localhost:3000/untapped/twowheeler.png'
+          image = `${url}/untapped/twowheeler.png`
+        }
+        if (this.categoryId === 3) {
+          image = `${url}/untapped/rawmeter.png`
+        }
+        if (this.categoryId === 4) {
+          image = `${url}/untapped/irrigationmapicon.png`
         }
         if (this.categoryId === 2) {
-          image = 'http://localhost:3000/untapped/smartmeter.png'
+          image = `${url}/untapped/smartmeter.png`
         }
         console.log(image)
         if (map.getLayer('points')) map.removeLayer('points');

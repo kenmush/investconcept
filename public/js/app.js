@@ -1959,6 +1959,7 @@ var map = '';
     getAssetCoordinates: function getAssetCoordinates() {
       var _this = this;
 
+      var url = "http://localhost:3000";
       var points = [];
       var Self = this;
       axios.get("/api/getAllAssets/".concat(this.categoryId)).then(function (resp) {
@@ -1975,14 +1976,22 @@ var map = '';
             }
           });
         });
-        var image = 'http://localhost:3000/untapped/twowheeler.png';
+        var image = "".concat(url, "/untapped/twowheeler.png");
 
         if (_this.categoryId === 1) {
-          image = 'http://localhost:3000/untapped/twowheeler.png';
+          image = "".concat(url, "/untapped/twowheeler.png");
+        }
+
+        if (_this.categoryId === 3) {
+          image = "".concat(url, "/untapped/rawmeter.png");
+        }
+
+        if (_this.categoryId === 4) {
+          image = "".concat(url, "/untapped/irrigationmapicon.png");
         }
 
         if (_this.categoryId === 2) {
-          image = 'http://localhost:3000/untapped/smartmeter.png';
+          image = "".concat(url, "/untapped/smartmeter.png");
         }
 
         console.log(image);

@@ -15,8 +15,8 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
     <!-- Styles -->
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet"
@@ -34,9 +34,9 @@
                 <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
             </a>
 
-                <p style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">
-                    A BETTER FUTURE THROUGH ENTREPRENEURSHIP
-                </p>
+            <p style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">
+                A BETTER FUTURE THROUGH ENTREPRENEURSHIP
+            </p>
 
         </div>
         <div class="col-md-3 pt-2 float-right">
@@ -47,17 +47,19 @@
                     <a href="{{ route('login') }}" style="color: #DBDCDC" class="font-weight-bold align-items-baseline">
                         Login</a>
                 @else()
-                    <div class="dropdown pl-3" style="color: #DBDCDC">
+                    <div class="dropdown pl-3" style="color: grey">
                         <a class=" dropdown-toggle font-weight-bolder" type="button" id="dropdownMenu2"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ auth()->user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <a href="{{ route('myassets.index') }}" class="font-weight-bolder dropdown-item" type="button">My
+                            <a style="color: grey" href="{{ route('myassets.index') }}" class="font-weight-bolder dropdown-item"
+                               type="button">My
                                 Assets</a>
-                            <a href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item" type="button">My
+                            <a style="color: grey" href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item"
+                               type="button">My
                                 Portfolio</a>
-                            <a href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item"
+                            <a style="color: grey"  class="font-weight-bolder dropdown-item"
                                type="button" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -80,7 +82,7 @@
 <script src="{{ asset('js/app.js') }}" defer></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlfzb8gc99EhL-TVPGjZLhw84nzt85KEc&callback=initMap"
-       async defer></script>
+        async defer></script>
 
 <script>
     function initMap() {
@@ -120,7 +122,7 @@
                 position: location,
                 map: map
             });
-            Event.$emit('updateCoordinates',location.toString());
+            Event.$emit('updateCoordinates', location.toString());
             google.maps.event.addListener(addMarker, 'dblclick', function () {
                 addMarker.setMap(null);
                 i = 1;
