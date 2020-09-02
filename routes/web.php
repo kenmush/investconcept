@@ -1,12 +1,13 @@
 <?php
 
+use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/landing', function () {
     return view('landing');
 });
 Route::get('/', function () {
-    $assets = (new \App\Services\Investor())->getAssetCategories();
+    $assets = (new Investor())->getAssetCategories();
     return view('landingpage',
             [
                     'assets' => collect($assets)->toArray()

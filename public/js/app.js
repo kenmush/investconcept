@@ -1939,6 +1939,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var mapboxgl = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ "./node_modules/mapbox-gl/dist/mapbox-gl.js");
 
 var map = '';
@@ -1946,7 +1973,10 @@ var map = '';
   data: function data() {
     return {
       categoryId: '',
-      assets: ''
+      errors: '',
+      country: '',
+      assets: '',
+      loading: false
     };
   },
   props: {
@@ -1959,6 +1989,7 @@ var map = '';
     getAssetCoordinates: function getAssetCoordinates() {
       var _this = this;
 
+      this.loading = true;
       var url = "http://localhost:3000";
       var points = [];
       var Self = this;
@@ -2026,9 +2057,9 @@ var map = '';
             }
           });
         });
+        _this.loading = false;
       })["catch"](function (err) {
-        console.log("a");
-        console.log(err);
+        _this.loading = false;
       });
     }
   },
@@ -2040,6 +2071,7 @@ var map = '';
       center: [-2.522805, 27.039787],
       zoom: 2
     });
+    map.resize();
   },
   created: function created() {}
 });
@@ -37705,9 +37737,11 @@ var render = function() {
       },
       [
         _c("div", { staticClass: "card" }, [
+          _vm._m(0),
+          _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "type" } }, [_vm._v("Type")]),
+              _vm._m(1),
               _vm._v(" "),
               _c(
                 "select",
@@ -37756,7 +37790,128 @@ var render = function() {
                   })
                 ],
                 2
-              )
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group mt-3" }, [
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.country,
+                        expression: "country"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: [
+                      _vm.errors.country ? "is-invalid" : "",
+                      !_vm.errors.country && Object.keys(_vm.errors).length > 1
+                        ? "is-valid"
+                        : ""
+                    ],
+                    attrs: {
+                      type: "text",
+                      id: "country",
+                      "aria-describedby": "country-help",
+                      required: ""
+                    },
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.country = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      }
+                    }
+                  },
+                  [
+                    _c("option", { attrs: { value: "Kenya", selected: "" } }, [
+                      _vm._v("Kenya")
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _vm.errors.country
+                  ? _c("div", { staticClass: "invalid-feedback" }, [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(_vm.errors.country.toString()) +
+                          "\n            "
+                      )
+                    ])
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group" }, [
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.returns,
+                        expression: "returns"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: [
+                      _vm.errors.returns ? "is-invalid" : "",
+                      !_vm.errors.returns && Object.keys(_vm.errors).length > 1
+                        ? "is-valid"
+                        : ""
+                    ],
+                    attrs: {
+                      type: "text",
+                      id: "returns",
+                      "aria-describedby": "returns-help",
+                      placeholder: "Returns",
+                      required: ""
+                    },
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.returns = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "option",
+                      { attrs: { value: "returns", selected: "" } },
+                      [_vm._v("10% Return")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _vm.errors.returns
+                  ? _c("div", { staticClass: "invalid-feedback" }, [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(_vm.errors.returns.toString()) +
+                          "\n            "
+                      )
+                    ])
+                  : _vm._e()
+              ])
             ])
           ])
         ])
@@ -37775,7 +37930,25 @@ var render = function() {
     })
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-title" }, [
+      _c("i", { staticClass: "fa fa-spinner fa-spin" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "type" } }, [
+      _vm._v("Type "),
+      _c("i", { staticClass: "fa fa-spinner fa-spin" })
+    ])
+  }
+]
 render._withStripped = true
 
 

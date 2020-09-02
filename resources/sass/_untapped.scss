@@ -214,7 +214,7 @@ a {
 
         border: $nav-tabs-border-width solid transparent;
         @include border-top-radius($nav-tabs-border-radius);
-        color: #dbdcdc;
+        color: #dbdcdc !important;
         @include hover-focus() {
             border-color: transparent;
         }

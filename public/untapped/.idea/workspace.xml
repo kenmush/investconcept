@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="539e6f23-32b7-4ca8-8f0f-939bf29c07d3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../app/Http/Controllers/AssetsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../app/Http/Controllers/AssetsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/js/components/MapComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/js/components/MapComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/sass/_untapped.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/sass/_untapped.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/views/landingpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/views/landingpage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/views/myassets.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/views/myassets.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../routes/web.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1goPuy6DjE5yloGopYOybkIi08w" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../livewire" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="539e6f23-32b7-4ca8-8f0f-939bf29c07d3" name="Default Changelist" comment="" />
+      <created>1598778197687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598778197687</updated>
+      <workItem from="1598778198986" duration="39000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1598778236877">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1598778236877" />
+  </component>
+</project>

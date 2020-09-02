@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\Investor;
 use Illuminate\Http\Request;
 
 class AssetsController extends Controller
@@ -13,7 +14,11 @@ class AssetsController extends Controller
      */
     public function index()
     {
-        return view('myassets');
+        $assets = (new Investor())->getAssetCategories();
+
+        return view('myassets',[
+                'assets' => collect($assets)->toArray()
+        ]);
     }
 
     /**
