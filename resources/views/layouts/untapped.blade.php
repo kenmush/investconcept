@@ -6,7 +6,9 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    @auth()
+        <meta name="user_id" content="{{ auth()->user()->id }}">
+    @endauth
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
@@ -53,13 +55,15 @@
                             {{ auth()->user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <a style="color: grey" href="{{ route('myassets.index') }}" class="font-weight-bolder dropdown-item"
+                            <a style="color: grey" href="{{ route('myassets.index') }}"
+                               class="font-weight-bolder dropdown-item"
                                type="button">My
                                 Assets</a>
-                            <a style="color: grey" href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item"
+                            <a style="color: grey" href="{{ route('portfolio.index') }}"
+                               class="font-weight-bolder dropdown-item"
                                type="button">My
                                 Portfolio</a>
-                            <a style="color: grey"  class="font-weight-bolder dropdown-item"
+                            <a style="color: grey" class="font-weight-bolder dropdown-item"
                                type="button" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

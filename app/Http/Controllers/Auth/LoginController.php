@@ -56,11 +56,14 @@ class LoginController extends Controller
 
         try {
             $userFromAPI = (new Investor())->investorLogin($data);
+
             $user = User::firstOrCreate(
                     ['email' => $userFromAPI['email']],
                     [
                             'password' => bcrypt($request->password),
-                            'name'     => $userFromAPI['firstName'].' '.$userFromAPI['middleName'].' '.$userFromAPI['lastName']
+                            'name'     => $userFromAPI['firstName'].' '.$userFromAPI['middleName'].' '.$userFromAPI['lastName'],
+                            'api_id' => $userFromAPI['id'],
+
                     ]
             );
             Auth::loginUsingId($user->id);

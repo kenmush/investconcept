@@ -12,30 +12,25 @@ class Investor
 
     public function investorLogin($data)
     {
-        return $this->request('POST','portal/investor/login/', [
+        return $this->request('POST', 'portal/investor/login/', [
                 "username" => $data['username'],
                 "password" => $data['password']
         ]);
     }
+
     public function getAssetsbyCategory()
     {
-        return $this->request('GET','portal/asset/creation/');
+        return $this->request('GET', 'portal/asset/creation/');
     }
+
+    public function getUserAssets($user)
+    {
+        return $this->request('GET', 'portal/investor/portfolio/'.$user);
+    }
+
     public function getAssetCategories()
     {
-        return $this->request('GET','portal/asset/category/creation/');
-    }
-    protected function request($method, $path, array $parameters = [])
-    {
-        $response = (new Client)->{$method}($this->path.ltrim($path, '/'), [
-                'headers' => [
-                        'Authorization' => "Bearer ".'X-Mutisya',
-                        'Content-Type'  => 'application/json',
-                ],
-                'json'    => $parameters,
-        ]);
-
-        return json_decode((string) $response->getBody(), true);
+        return $this->request('GET', 'portal/asset/category/creation/');
     }
 
     public function registerInvestor($data)
@@ -51,5 +46,18 @@ class Investor
                 'organization' => $data['organization'],
                 'password'     => $data['password'],
         ]);
+    }
+
+    protected function request($method, $path, array $parameters = [])
+    {
+        $response = (new Client)->{$method}($this->path.ltrim($path, '/'), [
+                'headers' => [
+                        'Authorization' => "Bearer ".'X-Mutisya',
+                        'Content-Type'  => 'application/json',
+                ],
+                'json'    => $parameters,
+        ]);
+
+        return json_decode((string) $response->getBody(), true);
     }
 }
