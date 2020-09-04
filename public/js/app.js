@@ -1941,13 +1941,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AssetList",
   data: function data() {
@@ -2048,6 +2041,7 @@ var map = '';
       categoryId: '',
       errors: '',
       country: '',
+      returns: '',
       assets: '',
       loading: false
     };
@@ -2063,7 +2057,7 @@ var map = '';
       var _this = this;
 
       this.loading = true;
-      var url = "http://ec2-54-88-144-24.compute-1.amazonaws.com";
+      var url = "http://localhost:3000";
       var points = [];
       var Self = this;
       axios.get("/api/getAllAssets/".concat(this.categoryId)).then(function (resp) {
@@ -2145,6 +2139,263 @@ var map = '';
       zoom: 2
     });
     map.resize();
+  },
+  created: function created() {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponentWithDetails.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapComponentWithDetails.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var mapboxgl = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ "./node_modules/mapbox-gl/dist/mapbox-gl.js");
+
+var map = '';
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      categoryId: '',
+      errors: '',
+      returns: '',
+      country: '',
+      assets: '',
+      loading: false,
+      description: '',
+      revenue: '',
+      category: ''
+    };
+  },
+  props: {
+    categories: {
+      type: Object | Array,
+      "default": {}
+    }
+  },
+  methods: {
+    getAssetCoordinates: function getAssetCoordinates() {
+      var _this = this;
+
+      this.loading = true;
+      var url = "http://localhost:3000";
+      var points = [];
+      var Self = this;
+      axios.get("/api/getAllAssets/".concat(this.categoryId)).then(function (resp) {
+        _this.assets = resp.data;
+        var ds = Object.keys(resp.data).map(function (datareturned, index) {
+          console.log(Self.assets[datareturned]);
+          points.push({
+            'type': 'Feature',
+            'geometry': {
+              'type': 'Point',
+              'coordinates': [Self.assets[datareturned].longitude, Self.assets[datareturned].latitude]
+            },
+            'properties': {
+              'title': Self.assets[datareturned].brand,
+              'revenue': Self.assets[datareturned].revenue_returned
+            }
+          });
+        });
+        var image = "".concat(url, "/untapped/twowheeler.png");
+
+        if (_this.categoryId === 1) {
+          image = "".concat(url, "/untapped/twowheeler.png");
+        }
+
+        if (_this.categoryId === 3) {
+          image = "".concat(url, "/untapped/rawmeter.png");
+        }
+
+        if (_this.categoryId === 4) {
+          image = "".concat(url, "/untapped/irrigationmapicon.png");
+        }
+
+        if (_this.categoryId === 2) {
+          image = "".concat(url, "/untapped/smartmeter.png");
+        }
+
+        console.log(image);
+        if (map.getLayer('points')) map.removeLayer('points');
+        if (map.getSource('points')) map.removeSource('points');
+        if (map.hasImage('custom-marker')) map.removeImage('custom-marker');
+        map.loadImage(image, function (error, image) {
+          if (error) {
+            throw error;
+          }
+
+          map.addImage('custom-marker', image);
+          map.addSource('points', {
+            'type': 'geojson',
+            'data': {
+              'type': 'FeatureCollection',
+              'features': points
+            }
+          });
+          map.addLayer({
+            'id': 'points',
+            'type': 'symbol',
+            'source': 'points',
+            'layout': {
+              'icon-image': 'custom-marker',
+              // get the title name from the source's "title" property
+              'text-field': ['get', 'title'],
+              'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+              'text-offset': [0, 1.25],
+              'text-anchor': 'top'
+            }
+          });
+          map.on('click', 'points', function (e) {
+            var category = '';
+
+            if (Self.categoryId === 1) {
+              category = "MotorBike";
+            }
+
+            if (Self.categoryId === 3) {
+              category = "Smart Water Meter";
+            }
+
+            if (Self.categoryId === 4) {
+              category = "Irrigation";
+            }
+
+            if (Self.categoryId === 2) {
+              category = "Smart Water Meter";
+            }
+
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.title;
+            var revenue = e.features[0].properties.revenue;
+
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+              coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            Self.description = description;
+            Self.category = category;
+            Self.revenue = revenue;
+          }); // Change the cursor to a pointer when the mouse is over the places layer.
+
+          map.on('mouseenter', 'places', function () {
+            map.getCanvas().style.cursor = 'pointer';
+          }); // Change it back to a pointer when it leaves.
+
+          map.on('mouseleave', 'places', function () {
+            map.getCanvas().style.cursor = '';
+          });
+        });
+        _this.loading = false;
+      })["catch"](function (err) {
+        _this.loading = false;
+      });
+    }
+  },
+  mounted: function mounted() {
+    mapboxgl.accessToken = 'pk.eyJ1IjoibXV0aXN5YSIsImEiOiJja2JsN21kejExNjd5MnNvNThyYmNybTNhIn0.BmObv_gTFqLmuc-VObwKYw';
+    map = new mapboxgl.Map({
+      container: 'newmap',
+      style: 'mapbox://styles/mapbox/light-v10',
+      center: [-2.522805, 27.039787],
+      zoom: 2
+    });
+    var biggerSmaller;
+    map.on('load', function () {
+      var mapCanvas = document.getElementsByClassName('mapboxgl-canvas')[0];
+      var mapDiv = document.getElementById('newmap');
+      mapDiv.style.width = '100%';
+      mapCanvas.style.width = '100%';
+      mapCanvas.style.height = '100%';
+      mapDiv.style.height = '100%';
+      map.resize();
+    });
   },
   created: function created() {}
 });
@@ -37814,6 +38065,8 @@ var render = function() {
           _vm._v(" "),
           _c("td", [_vm._v(_vm._s(asset.ticket) + " $")]),
           _vm._v(" "),
+          _c("td"),
+          _vm._v(" "),
           _c("td", [_vm._v(_vm._s(asset.return_percentage) + "%")]),
           _vm._v(" "),
           _c("td", [_vm._v(_vm._s(asset.duration) + " Months")]),
@@ -37841,13 +38094,15 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("th", [_vm._v("Numbers")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Ticket")]),
+          _c("th", [_vm._v("Total Invested")]),
+          _vm._v(" "),
+          _c("th", [_vm._v("Balance")]),
           _vm._v(" "),
           _c("th", [_vm._v("Return")]),
           _vm._v(" "),
           _c("th", [_vm._v("Duration")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Social Gain")])
+          _c("th", [_vm._v("Social Impact")])
         ])
       ]
     )
@@ -38106,6 +38361,372 @@ var staticRenderFns = [
     return _c("label", { attrs: { for: "type" } }, [
       _vm._v("Type "),
       _c("i", { staticClass: "fa fa-spinner fa-spin" })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponentWithDetails.vue?vue&type=template&id=3ff8a6c0&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapComponentWithDetails.vue?vue&type=template&id=3ff8a6c0& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "row", staticStyle: { "padding-top": "13px" } },
+    [
+      _c("div", { staticClass: "col-md-10" }, [
+        _c(
+          "div",
+          {
+            staticClass: "shadow",
+            staticStyle: {
+              "z-index": "9999",
+              position: "absolute",
+              "margin-top": "80px",
+              "margin-left": "26px",
+              height: "160px",
+              width: "20rem"
+            }
+          },
+          [
+            _c("div", { staticClass: "card" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.categoryId,
+                          expression: "categoryId"
+                        }
+                      ],
+                      staticClass: "form-control form-control-sm",
+                      attrs: {
+                        type: "text",
+                        id: "type",
+                        "aria-describedby": "type-help",
+                        required: ""
+                      },
+                      on: {
+                        change: [
+                          function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.categoryId = $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          },
+                          _vm.getAssetCoordinates
+                        ]
+                      }
+                    },
+                    [
+                      _c("option", { attrs: { value: "type" } }, [
+                        _vm._v("Type")
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.categories, function(type) {
+                        return _c("option", { domProps: { value: type.id } }, [
+                          _vm._v(_vm._s(type["categoryName"]))
+                        ])
+                      })
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group mt-3" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.country,
+                            expression: "country"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        class: [
+                          _vm.errors.country ? "is-invalid" : "",
+                          !_vm.errors.country &&
+                          Object.keys(_vm.errors).length > 1
+                            ? "is-valid"
+                            : ""
+                        ],
+                        attrs: {
+                          type: "text",
+                          id: "country",
+                          "aria-describedby": "country-help",
+                          required: ""
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.country = $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          }
+                        }
+                      },
+                      [
+                        _c(
+                          "option",
+                          { attrs: { value: "Kenya", selected: "" } },
+                          [_vm._v("Kenya")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm.errors.country
+                      ? _c("div", { staticClass: "invalid-feedback" }, [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.country.toString()) +
+                              "\n              "
+                          )
+                        ])
+                      : _vm._e()
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.returns,
+                            expression: "returns"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        class: [
+                          _vm.errors.returns ? "is-invalid" : "",
+                          !_vm.errors.returns &&
+                          Object.keys(_vm.errors).length > 1
+                            ? "is-valid"
+                            : ""
+                        ],
+                        attrs: {
+                          type: "text",
+                          id: "returns",
+                          "aria-describedby": "returns-help",
+                          placeholder: "Returns",
+                          required: ""
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.returns = $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          }
+                        }
+                      },
+                      [
+                        _c(
+                          "option",
+                          { attrs: { value: "returns", selected: "" } },
+                          [_vm._v("10% Return")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm.errors.returns
+                      ? _c("div", { staticClass: "invalid-feedback" }, [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.returns.toString()) +
+                              "\n              "
+                          )
+                        ])
+                      : _vm._e()
+                  ])
+                ])
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", {
+          staticStyle: {
+            width: "100%",
+            height: "549px",
+            background: "white",
+            "border-radius": "20px",
+            "margin-bottom": "61px"
+          },
+          attrs: { id: "newmap" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-2" }, [
+        _c(
+          "div",
+          {
+            staticClass: "card shadow",
+            staticStyle: { "margin-left": "-50px" }
+          },
+          [
+            _c("div", { staticClass: "card-body" }, [
+              _c("div", [
+                _c("div", { staticStyle: { "border-top": "57px" } }, [
+                  _c(
+                    "h3",
+                    {
+                      staticStyle: {
+                        font: "Bold 16px/24px Roboto",
+                        color: "#A2A2A2"
+                      }
+                    },
+                    [_vm._v("Asset")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    {
+                      staticStyle: {
+                        font: "Bold 20px/24px Roboto",
+                        color: "#565C59"
+                      }
+                    },
+                    [
+                      _vm._v(
+                        _vm._s(_vm.category) + " — " + _vm._s(_vm.description)
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._m(2),
+                _vm._v(" "),
+                _c("div", { staticStyle: { "border-top": "57px" } }, [
+                  _c(
+                    "h3",
+                    {
+                      staticStyle: {
+                        font: "Bold 16px/24px Roboto",
+                        color: "#A2A2A2"
+                      }
+                    },
+                    [_vm._v("Return")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    {
+                      staticStyle: {
+                        font: "Bold 20px/24px Roboto",
+                        color: "#565C59"
+                      }
+                    },
+                    [_vm._v(_vm._s(_vm.revenue) + "%")]
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._m(3)
+              ])
+            ])
+          ]
+        )
+      ])
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-title" }, [
+      _c("i", { staticClass: "fa fa-spinner fa-spin" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "type" } }, [
+      _vm._v("Type "),
+      _c("i", { staticClass: "fa fa-spinner fa-spin" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticStyle: { "border-top": "57px" } }, [
+      _c(
+        "h3",
+        { staticStyle: { font: "Bold 16px/24px Roboto", color: "#A2A2A2" } },
+        [_vm._v("Country")]
+      ),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticStyle: { font: "Bold 20px/24px Roboto", color: "#565C59" } },
+        [_vm._v("Kenya")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticStyle: { "border-top": "57px" } }, [
+      _c(
+        "h3",
+        { staticStyle: { font: "Bold 16px/24px Roboto", color: "#A2A2A2" } },
+        [_vm._v("Innovator")]
+      ),
+      _vm._v(" "),
+      _c("p", {
+        staticStyle: { font: "Bold 20px/24px Roboto", color: "#565C59" }
+      })
     ])
   }
 ]
@@ -50303,6 +50924,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('map-component', __webpack_require__(/*! ./components/MapComponent.vue */ "./resources/js/components/MapComponent.vue")["default"]);
+Vue.component('map-component-with-details', __webpack_require__(/*! ./components/MapComponentWithDetails.vue */ "./resources/js/components/MapComponentWithDetails.vue")["default"]);
 Vue.component('asset-list', __webpack_require__(/*! ./components/AssetList.vue */ "./resources/js/components/AssetList.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -50494,6 +51116,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponent_vue_vue_type_template_id_2f302b28___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponent_vue_vue_type_template_id_2f302b28___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/MapComponentWithDetails.vue":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/MapComponentWithDetails.vue ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MapComponentWithDetails_vue_vue_type_template_id_3ff8a6c0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MapComponentWithDetails.vue?vue&type=template&id=3ff8a6c0& */ "./resources/js/components/MapComponentWithDetails.vue?vue&type=template&id=3ff8a6c0&");
+/* harmony import */ var _MapComponentWithDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapComponentWithDetails.vue?vue&type=script&lang=js& */ "./resources/js/components/MapComponentWithDetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MapComponentWithDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MapComponentWithDetails_vue_vue_type_template_id_3ff8a6c0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MapComponentWithDetails_vue_vue_type_template_id_3ff8a6c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/MapComponentWithDetails.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/MapComponentWithDetails.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/MapComponentWithDetails.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponentWithDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./MapComponentWithDetails.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponentWithDetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponentWithDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/MapComponentWithDetails.vue?vue&type=template&id=3ff8a6c0&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/components/MapComponentWithDetails.vue?vue&type=template&id=3ff8a6c0& ***!
+  \********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponentWithDetails_vue_vue_type_template_id_3ff8a6c0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./MapComponentWithDetails.vue?vue&type=template&id=3ff8a6c0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponentWithDetails.vue?vue&type=template&id=3ff8a6c0&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponentWithDetails_vue_vue_type_template_id_3ff8a6c0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponentWithDetails_vue_vue_type_template_id_3ff8a6c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -25,13 +25,13 @@
 <body>
 <div class="container-fluid" id="app">
     <div class="row">
-        <div class="col-md-6 offset-2 text-center">
+        <div class="col-md-8 offset-2 text-center">
             <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
             <p style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #DBDCDC; opacity: 1;">
                 A BETTER FUTURE THROUGH ENTREPRENEURSHIP
             </p>
         </div>
-        <div class="col-md-4 pt-4">
+        <div class="col-md-2 pt-4">
             <button class="btn-untapped"> Contact Us</button>
             <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">|</span>
             @guest()

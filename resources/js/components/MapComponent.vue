@@ -65,6 +65,7 @@ export default {
       categoryId: '',
       errors: '',
       country: '',
+      returns: '',
       assets: '',
       loading: false
     }

@@ -5,22 +5,14 @@
       <th></th>
       <th>Asset Name</th>
       <th>Numbers</th>
-      <th>Ticket</th>
+      <th>Total Invested</th>
+      <th>Balance</th>
       <th>Return</th>
       <th>Duration</th>
-      <th>Social Gain</th>
+      <th>Social Impact</th>
     </tr>
     </thead>
     <tbody>
-<!--    Numbers: 1-->
-<!--    categoryName: "Mobile Irrigation"-->
-<!--    details: "Data was found"-->
-<!--    duration: 12-->
-<!--    id: 4-->
-<!--    image: "/media/assets/categories/2020/08/09/Irrigation.png"-->
-<!--    return_percentage: 10-->
-<!--    socialGain: 0-->
-<!--    ticket: 1000-->
     <tr v-for="asset in assets">
       <td scope="row">
         <img src="" alt="">
@@ -30,6 +22,7 @@
       </td>
       <td>{{ asset.Numbers }}</td>
       <td>{{ asset.ticket }} $</td>
+      <td></td>
       <td>{{ asset.return_percentage }}%</td>
       <td>{{ asset.duration }} Months</td>
       <td>{{ asset.socialGain }}</td>

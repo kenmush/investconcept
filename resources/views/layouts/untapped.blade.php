@@ -85,72 +85,72 @@
 </div>
 <script src="{{ asset('js/app.js') }}" defer></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlfzb8gc99EhL-TVPGjZLhw84nzt85KEc&callback=initMap"
-        async defer></script>
+{{--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlfzb8gc99EhL-TVPGjZLhw84nzt85KEc&callback=initMap"--}}
+{{--        async defer></script>--}}
 
-<script>
-    function initMap() {
+{{--<script>--}}
+{{--    function initMap() {--}}
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
-            center: {lat: -1.3032051, lng: 36.7073093}
-        });
+{{--        var map = new google.maps.Map(document.getElementById('map'), {--}}
+{{--            zoom: 15,--}}
+{{--            center: {lat: -1.3032051, lng: 36.7073093}--}}
+{{--        });--}}
 
 
-        map.addListener('click', function (e) {
-            addListing(e.latLng, map);
-        });
-    }
+{{--        map.addListener('click', function (e) {--}}
+{{--            addListing(e.latLng, map);--}}
+{{--        });--}}
+{{--    }--}}
 
-    function initSearchMap() {
-        var map = new google.maps.Map(document.getElementById('mapsearch'), {
-            zoom: 15,
-            center: {lat: -1.3032051, lng: 36.7073093}
-        });
+{{--    function initSearchMap() {--}}
+{{--        var map = new google.maps.Map(document.getElementById('mapsearch'), {--}}
+{{--            zoom: 15,--}}
+{{--            center: {lat: -1.3032051, lng: 36.7073093}--}}
+{{--        });--}}
 
-        map.addListener('click', function (e) {
-            addListing(e.latLng, map);
-        });
-    }
+{{--        map.addListener('click', function (e) {--}}
+{{--            addListing(e.latLng, map);--}}
+{{--        });--}}
+{{--    }--}}
 
-    var i = 1;
+{{--    var i = 1;--}}
 
-    function addListing(location, map) {
+{{--    function addListing(location, map) {--}}
 
-        var addMarker;
-        var iMax = 1;
+{{--        var addMarker;--}}
+{{--        var iMax = 1;--}}
 
-        if (i <= iMax) {
-            addMarker = new google.maps.Marker({
-                draggable: true,
-                position: location,
-                map: map
-            });
-            Event.$emit('updateCoordinates', location.toString());
-            google.maps.event.addListener(addMarker, 'dblclick', function () {
-                addMarker.setMap(null);
-                i = 1;
-            });
+{{--        if (i <= iMax) {--}}
+{{--            addMarker = new google.maps.Marker({--}}
+{{--                draggable: true,--}}
+{{--                position: location,--}}
+{{--                map: map--}}
+{{--            });--}}
+{{--            Event.$emit('updateCoordinates', location.toString());--}}
+{{--            google.maps.event.addListener(addMarker, 'dblclick', function () {--}}
+{{--                addMarker.setMap(null);--}}
+{{--                i = 1;--}}
+{{--            });--}}
 
-            i++;
+{{--            i++;--}}
 
-        } else {
-            console.log('you can only post', i - 1, 'markers');
-        }
-    }
-</script>
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+{{--        } else {--}}
+{{--            console.log('you can only post', i - 1, 'markers');--}}
+{{--        }--}}
+{{--    }--}}
+{{--</script>--}}
+{{--<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>--}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoibXV0aXN5YSIsImEiOiJja2JsN21kejExNjd5MnNvNThyYmNybTNhIn0.BmObv_gTFqLmuc-VObwKYw';
-    var map = new mapboxgl.Map({
-        container: 'maps',
-        style: 'mapbox://styles/mapbox/streets-v11'
-    });
-    $('#maps').show();
+{{--<script>--}}
+{{--    mapboxgl.accessToken = 'pk.eyJ1IjoibXV0aXN5YSIsImEiOiJja2JsN21kejExNjd5MnNvNThyYmNybTNhIn0.BmObv_gTFqLmuc-VObwKYw';--}}
+{{--    var map = new mapboxgl.Map({--}}
+{{--        container: 'maps',--}}
+{{--        style: 'mapbox://styles/mapbox/streets-v11'--}}
+{{--    });--}}
+{{--    $('#maps').show();--}}
 
-    // detect the map's new width and height and resize it
-    map.resize();
-</script>
+{{--    // detect the map's new width and height and resize it--}}
+{{--    map.resize();--}}
+{{--</script>--}}
 </body>
 </html>
