@@ -32,34 +32,36 @@
             </p>
         </div>
         <div class="col-md-2 pt-4">
-            <button class="btn-untapped"> Contact Us</button>
-            <span style="color: #DBDCDC" class="font-weight-bold align-items-baseline">|</span>
-            @guest()
-                <a href="{{ route('login') }}" style="color: #DBDCDC" class="font-weight-bold align-items-baseline">
-                    Login</a>
-            @else()
-                <div class="dropdown " style="color: #DBDCDC">
-                    <a class=" dropdown-toggle font-weight-bolder" type="button" id="dropdownMenu2"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ auth()->user()->name }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <a href="{{ route('myassets.index') }}" class="font-weight-bolder dropdown-item" type="button">My
-                            Assets</a>
-                        <a href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item" type="button">My
-                            Portfolio</a>
-                        <a href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item"
-                           type="button" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
+            <div class="row">
+                <button class="btn-untapped"> Contact Us</button>
+                <span style="color: #DBDCDC" class="font-weight-bold">&nbsp;|&nbsp;</span>
+                @guest()
+                    <a href="{{ route('login') }}" style="color: #DBDCDC" class="font-weight-bold">
+                        Login</a>
+                @else()
+                    <div class="dropdown " style="color: #DBDCDC">
+                        <a class=" dropdown-toggle font-weight-bolder" type="button" id="dropdownMenu2"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ auth()->user()->name }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <a href="{{ route('myassets.index') }}" class="font-weight-bolder dropdown-item" type="button">My
+                                Assets</a>
+                            <a href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item" type="button">My
+                                Portfolio</a>
+                            <a href="{{ route('portfolio.index') }}" class="font-weight-bolder dropdown-item"
+                               type="button" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                            Logout</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                        {{--                        <a href="{{ route('user-profile.index') }}" class="dropdown-item" type="button">User Profile</a>--}}
+                                Logout</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                            {{--                        <a href="{{ route('user-profile.index') }}" class="dropdown-item" type="button">User Profile</a>--}}
+                        </div>
                     </div>
-                </div>
-            @endguest
+                @endguest
+            </div>
         </div>
     </div>
 

@@ -18,7 +18,10 @@
         <img src="" alt="">
       </td>
       <td>
-        <a href="">{{ asset.categoryName }}</a>
+        <a  href="/assets/mobile-irrigation" v-if="asset.categoryName === 'Mobile Irrigation'">{{ asset.categoryName }}</a>
+        <a  href="/assets/raw-water-atm" v-if="asset.categoryName === 'Raw Water ATM'">{{ asset.categoryName }}</a>
+        <a  href="/assets/smartmeter" v-if="asset.categoryName === 'Smart Meter'">{{ asset.categoryName }}</a>
+        <a  href="/assets/motorbike" v-if="asset.categoryName === 'Motorbike'">{{ asset.categoryName }}</a>
       </td>
       <td>{{ asset.Numbers }}</td>
       <td>{{ asset.ticket }} $</td>

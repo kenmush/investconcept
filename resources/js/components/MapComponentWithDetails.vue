@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="col-md-2">
-      <div class="card shadow" style="margin-left: -50px">
+      <div class="card shadow" style=";margin-left: -50px">
         <div class="card-body">
           <div>
             <div style="border-top: 57px">
@@ -186,13 +186,13 @@ export default {
                   category = "MotorBike"
                 }
                 if (Self.categoryId === 3) {
-                  category = "Smart Water Meter"
+                  category = "Raw Water ATM"
                 }
                 if (Self.categoryId === 4) {
-                  category = "Irrigation"
+                  category = "Mobile Irrigation"
                 }
                 if (Self.categoryId === 2) {
-                  category = "Smart Water Meter"
+                  category = "Smart Meter"
                 }
                 var coordinates = e.features[0].geometry.coordinates.slice();
                 var description = e.features[0].properties.title;
