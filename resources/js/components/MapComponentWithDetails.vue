@@ -21,6 +21,7 @@
               </select>
               <!--Label: Country, Attributes:country -->
               <div class="form-group mt-3">
+                <label for="country">Country </label>
                 <select type="text" class="form-control" id="country" v-model="country"
                         aria-describedby="country-help"
                         :class="[errors.country ? 'is-invalid': '',!errors.country && Object.keys(errors).length > 1 ? 'is-valid': '']"
@@ -34,10 +35,12 @@
               <!--Label: Return, Attributes:return -->
               <!--Label: Returns, Attributes:returns -->
               <div class="form-group">
+                <label for="returns">Returns </label>
+
                 <select type="text" class="form-control" id="returns" v-model="returns"
                         aria-describedby="returns-help"
                         :class="[errors.returns ? 'is-invalid': '',!errors.returns && Object.keys(errors).length > 1 ? 'is-valid': '']"
-                        placeholder="Returns" required>
+                         required>
                   <option value="returns" selected>10% Return</option>
                 </select>
                 <div class="invalid-feedback" v-if="errors.returns">
