@@ -1,4 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,300;
+
+0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800);@charset "UTF-8";
+p {
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+}
 
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
@@ -34,7 +43,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Roboto", sans-serif;
+  --font-family-sans-serif: "Nunito", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -66,7 +75,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -6400,7 +6409,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -6525,7 +6534,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -10926,6 +10935,78 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section-grey {
+  background: #CAD2D3;
+  padding: 90px 0 100px 0;
+}
+
+h2.section-title {
+  margin-bottom: 10px;
+  line-height: 1.2;
+  margin-top: 0;
+  color: #071e55;
+  font-weight: 700;
+}
+
+.main-services h4 {
+  margin-bottom: 10px;
+  font-size: 21px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+  margin-top: 0;
+  color: #071e55;
+}
+
+.untapped-container {
+  width: 100%;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #0a1f44;
+}
+
+.hero-default-bg {
+  background-image: url(http://tanshcreative.com/blussom-lp-preview/assets/images/hero-trans.png), url(/images/hero-bottom-good.png?49ef45d2f01dcc17497380a877a1e3cb);
+  background-repeat: no-repeat no-repeat;
+  background-position: center top, center bottom;
+  height: 700px !important;
+}
+
+.bg-blue {
+  background-color: #DBDCDC;
+}
+
+.home-section {
+  position: relative;
+  z-index: 999;
+  padding-top: 140px;
+  padding-bottom: 110px;
+  background: url(/images/simulator.jpg?f00b38af8e2486caa85556a27efa9879) top center no-repeat;
+  background-size: cover;
+}
+
+.home-section-overlay {
+  width: 100%;
+  background: #000;
+  opacity: 0.39;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.dtr-py-8 {
+  padding-bottom: 10rem;
+  padding-top: 10rem;
 }
 
 .navbar.bg-untapped {

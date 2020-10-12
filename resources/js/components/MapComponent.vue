@@ -1,23 +1,22 @@
 <template>
   <div>
-    <div class="shadow"
+    <div
          style="z-index:9999 ;position: absolute;margin-top:80px;
                             margin-left:26px;height:
                             160px; width:20rem;">
-      <div class="card">
+      <div class="card ml-5">
         <div class="card-title">
-          <i class="fa fa-spinner fa-spin"></i>
         </div>
         <div class="card-body">
           <!--Label: Type, Attributes:type -->
           <div class="form-group">
-            <label for="type">Type <i class="fa fa-spinner fa-spin"></i></label>
+            <label for="type">Type </label>
             <select type="text" class="form-control form-control-sm" id="type"
                     v-model="categoryId"
                     aria-describedby="type-help"
                     @change="getAssetCoordinates"
                     required>
-              <option value="type">Type</option>
+              <option value="type" >All</option>
               <option :value="type.id" v-for="type in categories">{{ type['categoryName'] }}</option>
             </select>
             <!--Label: Country, Attributes:country -->
@@ -35,25 +34,25 @@
             </div>
             <!--Label: Return, Attributes:return -->
             <!--Label: Returns, Attributes:returns -->
-            <div class="form-group">
-              <label for="returns">Return </label>
+<!--            <div class="form-group">-->
+<!--              <label for="returns">Return </label>-->
 
-              <select type="text" class="form-control" id="returns" v-model="returns"
-                     aria-describedby="returns-help"
-                     :class="[errors.returns ? 'is-invalid': '',!errors.returns && Object.keys(errors).length > 1 ? 'is-valid': '']"
-                     placeholder="Returns" required>
-                <option value="returns" selected>10% Return</option>
-              </select>
-              <div class="invalid-feedback" v-if="errors.returns">
-                {{ errors.returns.toString()}}
-              </div>
-            </div>
+<!--              <select type="text" class="form-control" id="returns" v-model="returns"-->
+<!--                     aria-describedby="returns-help"-->
+<!--                     :class="[errors.returns ? 'is-invalid': '',!errors.returns && Object.keys(errors).length > 1 ? 'is-valid': '']"-->
+<!--                     placeholder="Returns" required>-->
+<!--                <option value="returns" selected>10% Return</option>-->
+<!--              </select>-->
+<!--              <div class="invalid-feedback" v-if="errors.returns">-->
+<!--                {{ errors.returns.toString()}}-->
+<!--              </div>-->
+<!--            </div>-->
           </div>
         </div>
       </div>
     </div>
     <div
-        style="width:100%;height: 549px;background: white;border-radius: 20px;margin-bottom:61px"
+        style="width:100%;height: 549px;background: white;margin-bottom:61px"
         id="maps">
     </div>
   </div>
@@ -65,7 +64,7 @@ let map = '';
 export default {
   data() {
     return {
-      categoryId: '',
+      categoryId: 'All',
       errors: '',
       country: '',
       returns: '',

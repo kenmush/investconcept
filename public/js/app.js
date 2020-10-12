@@ -2037,14 +2037,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 var mapboxgl = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ "./node_modules/mapbox-gl/dist/mapbox-gl.js");
 
 var map = '';
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      categoryId: '',
+      categoryId: 'All',
       errors: '',
       country: '',
       returns: '',
@@ -38170,7 +38169,6 @@ var render = function() {
     _c(
       "div",
       {
-        staticClass: "shadow",
         staticStyle: {
           "z-index": "9999",
           position: "absolute",
@@ -38180,12 +38178,12 @@ var render = function() {
         }
       },
       [
-        _c("div", { staticClass: "card" }, [
-          _vm._m(0),
+        _c("div", { staticClass: "card ml-5" }, [
+          _c("div", { staticClass: "card-title" }),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "form-group" }, [
-              _vm._m(1),
+              _c("label", { attrs: { for: "type" } }, [_vm._v("Type ")]),
               _vm._v(" "),
               _c(
                 "select",
@@ -38225,7 +38223,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("option", { attrs: { value: "type" } }, [_vm._v("Type")]),
+                  _c("option", { attrs: { value: "type" } }, [_vm._v("All")]),
                   _vm._v(" "),
                   _vm._l(_vm.categories, function(type) {
                     return _c("option", { domProps: { value: type.id } }, [
@@ -38291,73 +38289,9 @@ var render = function() {
                 _vm.errors.country
                   ? _c("div", { staticClass: "invalid-feedback" }, [
                       _vm._v(
-                        "\n              " +
+                        "\n                " +
                           _vm._s(_vm.errors.country.toString()) +
-                          "\n            "
-                      )
-                    ])
-                  : _vm._e()
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "returns" } }, [_vm._v("Return ")]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.returns,
-                        expression: "returns"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    class: [
-                      _vm.errors.returns ? "is-invalid" : "",
-                      !_vm.errors.returns && Object.keys(_vm.errors).length > 1
-                        ? "is-valid"
-                        : ""
-                    ],
-                    attrs: {
-                      type: "text",
-                      id: "returns",
-                      "aria-describedby": "returns-help",
-                      placeholder: "Returns",
-                      required: ""
-                    },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.returns = $event.target.multiple
-                          ? $$selectedVal
-                          : $$selectedVal[0]
-                      }
-                    }
-                  },
-                  [
-                    _c(
-                      "option",
-                      { attrs: { value: "returns", selected: "" } },
-                      [_vm._v("10% Return")]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _vm.errors.returns
-                  ? _c("div", { staticClass: "invalid-feedback" }, [
-                      _vm._v(
-                        "\n              " +
-                          _vm._s(_vm.errors.returns.toString()) +
-                          "\n            "
+                          "\n              "
                       )
                     ])
                   : _vm._e()
@@ -38373,32 +38307,13 @@ var render = function() {
         width: "100%",
         height: "549px",
         background: "white",
-        "border-radius": "20px",
         "margin-bottom": "61px"
       },
       attrs: { id: "maps" }
     })
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-title" }, [
-      _c("i", { staticClass: "fa fa-spinner fa-spin" })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "type" } }, [
-      _vm._v("Type "),
-      _c("i", { staticClass: "fa fa-spinner fa-spin" })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

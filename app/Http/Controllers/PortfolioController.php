@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Asset;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
@@ -13,7 +14,8 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        return view('portfolio');
+        $assets = Asset::all();
+        return view('portfolio',compact('assets'));
     }
 
     /**

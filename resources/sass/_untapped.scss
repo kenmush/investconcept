@@ -1,244 +1,321 @@
 $grid-breakpoints: (
-    xs: 1200px,
-    sm: 1200px,
-    md: 1200px,
-    lg: 1200px,
-    xl: 1200px,
-    xxl: 1900px
+        xs: 1200px,
+        sm: 1200px,
+        md: 1200px,
+        lg: 1200px,
+        xl: 1200px,
+        xxl: 1900px
 );
 
 $container-max-widths: (
-    sm: 1140px,
-    md: 1140px,
-    lg: 1140px,
-    xl: 1140px,
-    xxl: 1610px
+        sm: 1140px,
+        md: 1140px,
+        lg: 1140px,
+        xl: 1140px,
+        xxl: 1610px
 );
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section-grey {
+  background: #CAD2D3;
+  padding: 90px 0 100px 0;
+}
+
+h2.section-title {
+  margin-bottom: 10px;
+  line-height: 1.2;
+  margin-top: 0;
+  color: #071e55;
+  font-weight: 700;
+}
+
+.main-services h4 {
+  margin-bottom: 10px;
+  font-size: 21px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.2;
+  margin-top: 0;
+  color: #071e55;
+}
+
+.untapped-container {
+  width: 100%;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #0a1f44
+}
+
+.hero-default-bg {
+  background-image: url(http://tanshcreative.com/blussom-lp-preview/assets/images/hero-trans.png), url('public/hero-bottom-good.png');
+  background-repeat: no-repeat no-repeat;
+  background-position: center top, center bottom;
+  height: 700px !important;
+}
+
+.bg-blue {
+  //background-color: #f1faff;
+  background-color: #DBDCDC;
+}
+.home-section {
+  position: relative;
+  z-index: 999;
+  padding-top: 140px;
+  padding-bottom: 110px;
+  background: url('public/simulator.jpg') top center no-repeat;
+  background-size: cover;
+}
+.home-section-overlay {
+  width: 100%;
+  background: #000;
+  opacity: 0.39;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.dtr-py-8 {
+  padding-bottom: 10rem;
+  padding-top: 10rem;
+}
 
 .navbar.bg-untapped {
-    background-color: $untapped-bg !important;
+  background-color: $untapped-bg !important;
 }
 
 .highlights {
-    color: #B0D2E3;
-    font-weight: bold;
-    font-size: 16px;
-    text-align: left;
-    padding: 0;
-    margin: 0;
+  color: #B0D2E3;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
 }
 
 .highlights-text {
-    padding-top: 0;
-    font-weight: bold;
-    font-size: 16px;
-    color: #DBDCDC;
+  padding-top: 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: #DBDCDC;
 }
 
 .untapped-heading {
-    color: #565C59;
-    text-align: center;
-    font: Bold 20px/26px Roboto;
+  color: #565C59;
+  text-align: center;
+  font: Bold 20px/26px Roboto;
 }
 
 .untapped-subtitle {
-    color: #565C5980;
-    text-align: center;
-    font: Bold 16px/21px Roboto;
+  color: #565C5980;
+  text-align: center;
+  font: Bold 16px/21px Roboto;
 }
 
 .btn-untapped {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    padding: 0.2rem 0.71rem;
-    font-size: 0.9rem;
-    border-radius: 10px;
-    color: #565C59;
-    font-weight: bold;
-    background-color: $untapped-font-color;
-    border-color: $untapped-font-color;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  padding: 0.2rem 0.71rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  color: #565C59;
+  font-weight: bold;
+  background-color: $untapped-font-color;
+  border-color: $untapped-font-color;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .table-header-untapped {
-    color: white;
-    font: Bold 16px/24px Roboto;
+  color: white;
+  font: Bold 16px/24px Roboto;
 }
 
 tr td:first-child {
-    -moz-border-radius-topleft: 20px;
-    -moz-border-radius-bottomleft: 20px;
-    -webkit-border-top-left-radius: 20px;
-    -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
 
 }
 
 tr td:last-child {
-    -moz-border-radius-topright: 20px;
-    -moz-border-radius-bottomright: 20px;
-    -webkit-border-top-right-radius: 20px;
-    -webkit-border-bottom-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
 }
 
 .table {
-    border-collapse: separate;
-    border-spacing: 0 15px;
-    overflow: hidden;
-    width: 100%;
-    //margin-bottom: $spacer;
-    //color: $table-color;
-    //background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  overflow: hidden;
+  width: 100%;
+  //margin-bottom: $spacer;
+  //color: $table-color;
+  //background-color: $table-bg; // Reset for nesting within parents with `background-color`.
 
-    th,
-    td {
-        padding: $table-cell-padding;
-        vertical-align: top;
-        border-top: $table-border-width solid transparent;
-    }
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: top;
+    border-top: $table-border-width solid transparent;
+  }
 
-    thead th {
-        vertical-align: bottom;
-        border-bottom: (2 * $table-border-width) solid transparent;
-    }
+  thead th {
+    vertical-align: bottom;
+    border-bottom: (2 * $table-border-width) solid transparent;
+  }
 
-    tbody + tbody {
-        border-top: (2 * $table-border-width) solid transparent;
-    }
+  tbody + tbody {
+    border-top: (2 * $table-border-width) solid transparent;
+  }
 
-    tbody > tr {
-        box-shadow: 0 13px 26px #0000001A;
-        border-radius: 10px;
-        background-color: white;
-        color: #565C59;
-        padding-top: 10px;
-        font: Bold 16px/24px Roboto;
-        margin-bottom: 10px;
-    }
+  tbody > tr {
+    box-shadow: 0 13px 26px #0000001A;
+    border-radius: 10px;
+    background-color: white;
+    color: #565C59;
+    padding-top: 10px;
+    font: Bold 16px/24px Roboto;
+    margin-bottom: 10px;
+  }
 }
 
 .untapped-form {
-    display: block;
-    width: 100%;
-    font: Bold 16px/24px Roboto;
-    height: calc(1.6em + 0.75rem + 2px);
-    padding: 0.375rem 0.75rem;
-    font-size: 0.9rem;
-    font-weight: bolder;
-    line-height: 1.6;
-    color: #A2A2A2;
-    background-color: #fff;
-    background-clip: padding-box;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 3px solid #A2A2A2;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  width: 100%;
+  font: Bold 16px/24px Roboto;
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  line-height: 1.6;
+  color: #A2A2A2;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid #A2A2A2;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .login-button {
-    border-radius: 10px;
-    position: relative;
-    top: 40px;
-    right: -290px;
-    background: #B0D2E3;
+  border-radius: 10px;
+  position: relative;
+  top: 40px;
+  right: -290px;
+  background: #B0D2E3;
 }
+
 button {
-    outline: none;
-    border: none;
-    border-radius: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
 }
+
 button:hover {
-    outline: none;
-    border: none;
-    border-radius: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
 }
+
 button:active {
-    outline: none;
-    border: none;
-    border-radius: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
 }
+
 button:focus {
-    outline: none;
-    border: none;
-    border-radius: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
 
 }
-input::placeholder{
- color: #A2A2A2;
-}
-input{
-    outline: none;
 
-    & :focus,:active,:hover {
-        outline: none
-    }
+input::placeholder {
+  color: #A2A2A2;
 }
-.landing-page-text{
-    font: Bold 20px/26px Roboto;
-    color: #565C59;
-    opacity: 1;
+
+input {
+  outline: none;
+
+  & :focus, :active, :hover {
+    outline: none
+  }
+}
+
+.landing-page-text {
+  font: Bold 20px/26px Roboto;
+  color: #565C59;
+  opacity: 1;
 }
 
 .form-control {
-    border-bottom: solid #565C59 2px;
-    border-right: transparent;
-    border-top: transparent;
-    border-left: transparent;
-    &:focus {
-        outline: none !important;
-        box-shadow: 0 0 0 0 #565C59;
-    }
+  border-bottom: solid #565C59 2px;
+  border-right: transparent;
+  border-top: transparent;
+  border-left: transparent;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0 #565C59;
+  }
 }
 
 a {
-    color: #565C59;
+  color: #565C59;
 
-    &:hover {
-        color: darken(#565C59,0.3);
-        text-decoration: underline;
-    }
+  &:hover {
+    color: darken(#565C59, 0.3);
+    text-decoration: underline;
+  }
 }
 
 .nav-tabs {
-    border-bottom: $nav-tabs-border-width solid transparent;
+  border-bottom: $nav-tabs-border-width solid transparent;
 
-    .nav-item {
-        margin-bottom: -$nav-tabs-border-width;
-        color: white;
+  .nav-item {
+    margin-bottom: -$nav-tabs-border-width;
+    color: white;
+  }
+
+  .nav-link {
+
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
+    color: #dbdcdc !important;
+    @include hover-focus() {
+      border-color: transparent;
     }
 
-    .nav-link {
-
-        border: $nav-tabs-border-width solid transparent;
-        @include border-top-radius($nav-tabs-border-radius);
-        color: #dbdcdc !important;
-        @include hover-focus() {
-            border-color: transparent;
-        }
-
-        &.disabled {
-            color: $nav-link-disabled-color;
-            background-color: transparent;
-            border-color: transparent;
-        }
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
     }
+  }
 
-    .nav-link.active,
-    .nav-item.show .nav-link {
-        color: white;
-        background-color: transparent;
-        border-color: transparent;
-        border-bottom: 6px solid #B0D2E399;
-        height: 2rem;
-    }
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 6px solid #B0D2E399;
+    height: 2rem;
+  }
 
-    .dropdown-menu {
-        // Make dropdown border overlap tab border
-        margin-top: -$nav-tabs-border-width;
-        // Remove the top rounded corners here since there is a hard edge above the menu
-        @include border-top-radius(0);
-    }
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
 }
