@@ -2410,6 +2410,100 @@ var map = '';
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/impact-calculation.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "impact-calculation",
+  data: function data() {
+    return {
+      errors: '',
+      amount: ''
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -38693,6 +38787,224 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=template&id=2594814d&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/impact-calculation.vue?vue&type=template&id=2594814d&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("form", { attrs: { action: "" } }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "form-group" }, [
+            _c(
+              "h2",
+              {
+                staticClass: "section-title",
+                attrs: { for: "investmentamount" }
+              },
+              [_vm._v("Calculate your return\n            and impact")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "amount" } }, [_vm._v("Amount")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model.number",
+                      value: _vm.amount,
+                      expression: "amount",
+                      modifiers: { number: true }
+                    }
+                  ],
+                  staticClass: "form-control",
+                  class: [
+                    _vm.errors.amount ? "is-invalid" : "",
+                    !_vm.errors.amount && Object.keys(_vm.errors).length > 1
+                      ? "is-valid"
+                      : ""
+                  ],
+                  attrs: {
+                    type: "number",
+                    id: "amount",
+                    "aria-describedby": "amount-help",
+                    placeholder: "Amount",
+                    required: ""
+                  },
+                  domProps: { value: _vm.amount },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.amount = _vm._n($event.target.value)
+                    },
+                    blur: function($event) {
+                      return _vm.$forceUpdate()
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.errors.amount
+                  ? _c("div", { staticClass: "invalid-feedback" }, [
+                      _vm._v(
+                        "\n                " +
+                          _vm._s(_vm.errors.amount.toString()) +
+                          "\n              "
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(0)
+      ])
+    ]),
+    _vm._v(" "),
+    _c("table", { staticClass: "table" }, [
+      _vm._m(1),
+      _vm._v(" "),
+      _c("tbody", { staticStyle: { "background-color": "white" } }, [
+        _c("tr", { staticStyle: { "background-color": "white" } }, [
+          _c("td", { attrs: { scope: "row" } }, [_vm._v("Motorcycle")]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(_vm._s(Math.round(_vm.amount / 3 / 1000).toLocaleString()))
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(
+              _vm._s(Math.round((_vm.amount / 3 / 1000) * 80).toLocaleString())
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(
+              _vm._s(
+                Math.round((_vm.amount / 3 / 1000) * 3600).toLocaleString()
+              )
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", [_vm._v("3.6")])
+        ]),
+        _vm._v(" "),
+        _c("tr", { staticStyle: { "background-color": "white" } }, [
+          _c("td", { attrs: { scope: "row" } }, [_vm._v("Water ATM's")]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(_vm._s(Math.round(_vm.amount / 3 / 1000).toLocaleString()))
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(
+              _vm._s(Math.round((_vm.amount / 3 / 1000) * 80).toLocaleString())
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(
+              _vm._s(
+                Math.round((_vm.amount / 3 / 1000) * 12000).toLocaleString()
+              )
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", [_vm._v("12")])
+        ]),
+        _vm._v(" "),
+        _c("tr", { staticStyle: { "background-color": "white" } }, [
+          _c("td", { attrs: { scope: "row" } }, [_vm._v("Trailer")]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(_vm._s(Math.round(_vm.amount / 3 / 500).toLocaleString()))
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(
+              _vm._s(Math.round((_vm.amount / 3 / 500) * 40).toLocaleString())
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(
+              _vm._s(Math.round((_vm.amount / 3 / 500) * 1800).toLocaleString())
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", [_vm._v("3.6")])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div")
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-4" }, [
+      _c("button", { staticClass: "btn btn-primary mt-5" }, [
+        _vm._v("Calculate Impact")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Asset")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Amount")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Number")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Return")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Social Impact")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Leverage")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -50870,19 +51182,10 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
 Vue.component('map-component', __webpack_require__(/*! ./components/MapComponent.vue */ "./resources/js/components/MapComponent.vue")["default"]);
 Vue.component('map-component-with-details', __webpack_require__(/*! ./components/MapComponentWithDetails.vue */ "./resources/js/components/MapComponentWithDetails.vue")["default"]);
 Vue.component('asset-list', __webpack_require__(/*! ./components/AssetList.vue */ "./resources/js/components/AssetList.vue")["default"]);
+Vue.component('calculateimpact', __webpack_require__(/*! ./components/impact-calculation.vue */ "./resources/js/components/impact-calculation.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -51142,6 +51445,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponentWithDetails_vue_vue_type_template_id_3ff8a6c0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponentWithDetails_vue_vue_type_template_id_3ff8a6c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/impact-calculation.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/impact-calculation.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _impact_calculation_vue_vue_type_template_id_2594814d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./impact-calculation.vue?vue&type=template&id=2594814d&scoped=true& */ "./resources/js/components/impact-calculation.vue?vue&type=template&id=2594814d&scoped=true&");
+/* harmony import */ var _impact_calculation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./impact-calculation.vue?vue&type=script&lang=js& */ "./resources/js/components/impact-calculation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _impact_calculation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _impact_calculation_vue_vue_type_template_id_2594814d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _impact_calculation_vue_vue_type_template_id_2594814d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "2594814d",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/impact-calculation.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/impact-calculation.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/impact-calculation.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./impact-calculation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/impact-calculation.vue?vue&type=template&id=2594814d&scoped=true&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/impact-calculation.vue?vue&type=template&id=2594814d&scoped=true& ***!
+  \***************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_template_id_2594814d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./impact-calculation.vue?vue&type=template&id=2594814d&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=template&id=2594814d&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_template_id_2594814d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_template_id_2594814d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

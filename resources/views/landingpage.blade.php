@@ -1,53 +1,8 @@
 @extends('layouts.front')
 @section('content')
-    <section id="home" class="hero-section bg-blue hero-default-bg color-white">
+    <section id="home" style="margin-top: 5em;margin-bottom: -20em" class="hero-section bg-blue hero-default-bg
+    color-white">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-2 text-center">
-                    <img src="{{ asset('untapped/Logo_Untapped_1.png') }}" alt="">
-                    <p style="font: Bold 20px/26px Roboto; letter-spacing: 0px; color: #071e55; opacity: 1;">
-                        A BETTER FUTURE THROUGH ENTREPRENEURSHIP
-                    </p>
-                </div>
-                <div class="col-md-2 pt-4">
-                    <div class="row">
-                        <button class="btn-untapped"> Contact Us</button>
-                        <span style="color: #DBDCDC" class="font-weight-bold">&nbsp;|&nbsp;</span>
-                        @guest()
-                            <a href="{{ route('login') }}" style="color: #071e55" class="font-weight-bold">
-                                Login</a>
-                        @else()
-                            <div class="dropdown " style="color: #DBDCDC">
-                                <a class=" dropdown-toggle font-weight-bolder" type="button" id="dropdownMenu2"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ auth()->user()->name }}
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                    <a href="{{ route('myassets.index') }}"
-                                       class="font-weight-bolder dropdown-item"
-                                       type="button">My
-                                        Assets</a>
-                                    <a href="{{ route('portfolio.index') }}"
-                                       class="font-weight-bolder dropdown-item"
-                                       type="button">My
-                                        Portfolio</a>
-                                    <a href="{{ route('portfolio.index') }}"
-                                       class="font-weight-bolder dropdown-item"
-                                       type="button" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        Logout</a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                          style="display: none;">
-                                        @csrf
-                                    </form>
-                                    {{--                        <a href="{{ route('user-profile.index') }}" class="dropdown-item" type="button">User Profile</a>--}}
-                                </div>
-                            </div>
-                        @endguest
-                    </div>
-                </div>
-            </div>
             <div class="row align-items-center mt-4">
 
                 <!-- column 1 starts -->
@@ -63,17 +18,8 @@
                         Emerging markerts offer the strongest investor returns in the coming decades.
                         Alievating poverty and creating value for investors go hand-in-hand.
                     </p>
-
-                    <!-- button -->
                     <div class="btn btn-primary btn-lg" data-wow-delay="0.8s">
-                        <a href="{{  route('register')  }}" class="text-white"> View Assets
-                            <span>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="btn btn-primary btn-lg" data-wow-delay="0.8s">
-                        <a href="{{  route('register')  }}" class="text-white"> Simulate Impact
+                        <a href="#impactsimulation" class="text-white"> Simulate Impact
                             <span>
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
                             </span>
@@ -119,7 +65,7 @@
             <div class="container">
 
                 <!--begin row -->
-                <div class="row justify-content-center">
+                <div class="d-flex justify-content-center">
 
                     <!--begin col-md-4 -->
                     <div class="col-md-4">
@@ -207,7 +153,11 @@
 
                 </div>
                 <!--end row -->
-
+                <div class="d-flex justify-content-center bd-highlight mb-3">
+                    <div >
+                        <a class="btn btn-primary btn-lg" href="{{ route('register') }}">Get Started</a>
+                    </div>
+                </div>
             </div>
             <!--end container -->
 
@@ -221,8 +171,8 @@
     <div style="margin-top:-100px;width: 100%;padding-left: 0;padding-right: 0;padding-top:3em;padding-bottom:3em; background-color: #f2f5f7">
 
         <div class="container">
-            <div class="row mt-5 mb-5">
-                <div class="col-md-4">
+            <div class="row mt-5 mb-5 owl-carousel owl-theme">
+                <div class="mr-3">
                     <div class="card shadow">
                         <img class="card-img-top"
                              src="https://image.made-in-china.com/202f0j00CysEiJcznHgr/125cc-150cc-off-Road-Motorbike-TM125-2.jpg"
@@ -230,11 +180,11 @@
                         <div class="card-body">
                             <h4 class="card-title">Motorcycles</h4>
                             <p class="card-text">Unlocking the worlds opaque markerts</p>
-                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Become an Investor</a>
+                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="mr-3">
                     <div class="card shadow">
                         <img class="card-img-top"
                              src="https://www.prepayment-meter.com/photo/pl14870579-smart_gprs_remote_water_meter_reading_muti_jet_residential_water_meter.jpg"
@@ -242,11 +192,11 @@
                         <div class="card-body">
                             <h4 class="card-title">Smart Water Meter</h4>
                             <p class="card-text">Unlocking the worlds opaque markerts</p>
-                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Become an Investor</a>
+                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="mr-3">
                     <div class="card shadow">
                         <img class="card-img-top"
                              src="https://www.tankhandel.de/media/image/product/80/md/2000-liter-2-achs-anhaenger-fuer-wasser-weidefass-wassertankanhaenger-wasseranhaenger-mobiler-wassertank-bewaesserungstank-viehtraenketank.jpg"
@@ -254,7 +204,43 @@
                         <div class="card-body">
                             <h4 class="card-title">Irrigation System</h4>
                             <p class="card-text">Unlocking the worlds opaque markerts</p>
-                            <a href="{{ route('register') }}" class="btn btn-primary btn-block">Become an Investor</a>
+                            <a href="{{ route('register') }}" class="btn btn-primary btn-block">Invest</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mr-3">
+                    <div class="card shadow">
+                        <img class="card-img-top"
+                             src="https://image.made-in-china.com/202f0j00CysEiJcznHgr/125cc-150cc-off-Road-Motorbike-TM125-2.jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Another</h4>
+                            <p class="card-text">Unlocking the worlds opaque markerts</p>
+                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mr-3">
+                    <div class="card shadow">
+                        <img class="card-img-top"
+                             src="https://www.prepayment-meter.com/photo/pl14870579-smart_gprs_remote_water_meter_reading_muti_jet_residential_water_meter.jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Another 2</h4>
+                            <p class="card-text">Unlocking the worlds opaque markerts</p>
+                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mr-3">
+                    <div class="card shadow">
+                        <img class="card-img-top"
+                             src="https://www.tankhandel.de/media/image/product/80/md/2000-liter-2-achs-anhaenger-fuer-wasser-weidefass-wassertankanhaenger-wasseranhaenger-mobiler-wassertank-bewaesserungstank-viehtraenketank.jpg"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Another 3</h4>
+                            <p class="card-text">Unlocking the worlds opaque markerts</p>
+                            <a href="{{ route('register') }}" class="btn btn-primary btn-block">Invest</a>
                         </div>
                     </div>
                 </div>
@@ -266,70 +252,13 @@
         <div class="home-section-overlay"></div>
 
         <!--begin container -->
-        <div class="container">
+        <div class="container" id="impactsimulation">
 
             <div class="row">
                 <div class="col-12">
                     <div class="card shadow">
                         <div class="card-body">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <!--Label: How much would you like to invest, Attributes:investmentamount -->
-                                        <div class="form-group">
-                                            <h2 for="investmentamount" class="section-title">How much would you like to
-                                                invest ?</h2>
-                                            <div class="col-md-6">
-                                                <input type="text" id="investmentamount"
-                                                       aria-describedby="investmentamount-help"
-                                                       name="investmentamount" value="{{ old('investmentamount') }}"
-                                                       class="form-control @error('investmentamount') is-invalid @enderror"
-                                                       placeholder="How much would you like to invest" required>
-                                            </div>
-                                            @error('investmentamount')
-                                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <button class="btn btn-primary mt-5">Calculate Impact</button>
-                                    </div>
-                                </div>
-                            </form>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Asset</th>
-                                    <th>Amount</th>
-                                    <th>Number</th>
-                                    <th>Return</th>
-                                    <th>Social Impact</th>
-                                    <th>Leverage</th>
-                                </tr>
-                                </thead>
-                                <tbody style="background-color: white">
-                                <tr style="background-color: white">
-                                    <td scope="row">Motorcycle</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="background-color: white">
-                                    <td scope="row">Water ATM's</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr style="background-color: white">
-                                    <td scope="row">Trailer</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <div>
-
-                            </div>
+                         <calculateimpact></calculateimpact>
                         </div>
                     </div>
                 </div>
