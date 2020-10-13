@@ -45,8 +45,8 @@
                 <a class="navbar-text nav-link text-white" href="#">Simulate Impact</a>
             </li>
         </ul>
-        <a class="navbar-text nav-link text-white" href="#"> <i class="fa fa-lock"></i> Login</a>
-        <button class="btn btn-primary my-2 my-sm-0" type="submit">Get Started</button>
+        <a class="navbar-text nav-link text-white" href="{{ route('login }}"> <i class="fa fa-lock"></i> Login</a>
+        <a href="{{ route('register }}" class="btn btn-primary my-2 my-sm-0" type="submit">Get Started</a>
     </div>
 </nav>
 
