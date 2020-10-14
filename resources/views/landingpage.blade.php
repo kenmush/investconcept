@@ -154,7 +154,7 @@
                 </div>
                 <!--end row -->
                 <div class="d-flex justify-content-center bd-highlight mb-3">
-                    <div >
+                    <div>
                         <a class="btn btn-primary btn-lg" href="{{ route('register') }}">Get Started</a>
                     </div>
                 </div>
@@ -171,6 +171,24 @@
     <div style="margin-top:-100px;width: 100%;padding-left: 0;padding-right: 0;padding-top:3em;padding-bottom:3em; background-color: #f2f5f7">
 
         <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="https://image.made-in-china.com/202f0j00CysEiJcznHgr/125cc-150cc-off-Road-Motorbike-TM125-2.jpg" alt="">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Asset of leasing of motorbikes to support mototaxis in Uganda.</p>
+                                    <p>Company: Zembo</p>
+                                    <p>Country: Uganda</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row mt-5 mb-5 owl-carousel owl-theme">
                 <div class="mr-3">
                     <div class="card shadow">
@@ -258,7 +276,7 @@
                 <div class="col-12">
                     <div class="card shadow">
                         <div class="card-body">
-                         <calculateimpact></calculateimpact>
+                            <calculateimpact></calculateimpact>
                         </div>
                     </div>
                 </div>
