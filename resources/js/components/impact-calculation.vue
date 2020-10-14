@@ -98,7 +98,17 @@ export default {
       },
       chartOptions: {
         lineSmooth: true,
-        // width: 300,
+        chartPadding: {
+          top: 20,
+          right: 0,
+          bottom: 0,
+          left: 30
+        },
+        axisY: {
+          onlyInteger: true
+        },
+        plugins: [
+        ]       // width: 300,
         // height: 200
       }
     }

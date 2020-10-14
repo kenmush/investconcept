@@ -2660,7 +2660,17 @@ __webpack_require__.r(__webpack_exports__);
         series: [[250000, 30000, 400000, 500000, 600000, 700000], [30000, 400000, 500000, 600000, 700000, 800000]]
       },
       chartOptions: {
-        lineSmooth: true // width: 300,
+        lineSmooth: true,
+        chartPadding: {
+          top: 20,
+          right: 0,
+          bottom: 0,
+          left: 30
+        },
+        axisY: {
+          onlyInteger: true
+        },
+        plugins: [] // width: 300,
         // height: 200
 
       }

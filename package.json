@@ -28,6 +28,7 @@
     "dependencies": {
         "chart.js": "^2.9.3",
         "chartist": "^0.11.4",
+        "chartist-plugin-axistitle": "0.0.7",
         "mapbox-gl": "^1.12.0",
         "mapbox-gl-vue": "^2.0.4",
         "vue-chartist": "^2.3.1",
