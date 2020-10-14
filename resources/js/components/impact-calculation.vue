@@ -74,6 +74,7 @@
       </tr>
       </tbody>
     </table>
+    <hr>
     <chartist
         ratio="ct-major-twelfth"
         type="Line"
@@ -84,6 +85,7 @@
 </template>
 
 <script>
+import ctAxisTitle from 'chartist-plugin-axistitle'
 export default {
   name: "impact-calculation",
   data() {
@@ -107,8 +109,7 @@ export default {
         axisY: {
           onlyInteger: true
         },
-        plugins: [
-        ]       // width: 300,
+        plugins: []       // width: 300,
         // height: 200
       }
     }
@@ -144,6 +145,42 @@ export default {
 
           ]
         };
+        this.chartOptions = {
+          lineSmooth: true,
+          chartPadding: {
+            top: 20,
+            right: 0,
+            bottom: 0,
+            left: 60
+          },
+          axisY: {
+            onlyInteger: true
+          },
+          plugins: [
+            Vue.chartist.plugins.ctAxisTitle({
+              axisX: {
+                axisTitle: 'Years',
+                axisClass: 'ct-axis-title',
+                offset: {
+                  x: 0,
+                  y: 30
+                },
+                textAnchor: 'middle'
+              },
+              axisY: {
+                axisTitle: 'Amount in Dollars',
+                axisClass: 'ct-axis-title',
+                offset: {
+                  x: 0,
+                  y: -20
+                },
+                textAnchor: 'middle',
+                flipTitle: false
+              }
+            })
+          ]       // width: 300,
+          // height: 200
+        }
       });
       return Math.round(i / this.amount).toLocaleString();
     }
