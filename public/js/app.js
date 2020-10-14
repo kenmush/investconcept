@@ -2681,6 +2681,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     totalLeverage: function totalLeverage() {
       var i = this.amount / 3 / 500 * 1800 + this.amount / 3 / 1000 * 12000 + this.amount / 3 / 1000 * 3600;
+      var socialImpact = this.amount / 3 / 500 * 1800 + this.amount / 3 / 1000 * 12000 + this.amount / 3 / 1000 * 3600;
+      var personalreturn = this.amount / 3 / 1000 + this.amount / 3 / 500 + this.amount / 3 / 1000;
+      this.$nextTick(function () {
+        this.chartData = {
+          labels: ["1 Year", "2 Years", "3 Years", "4 Years", "6 Years", "10 Years"],
+          series: [[socialImpact, socialImpact * 2, socialImpact * 3, socialImpact * 4, socialImpact * 6, socialImpact * 10]]
+        };
+      });
       return Math.round(i / this.amount).toLocaleString();
     }
   },
