@@ -61,10 +61,10 @@
         <div style="width: 100%;padding-left: 0;padding-right: 0">
             <map-component :categories='@json($assets)'></map-component>
         </div>
-        <div style="width: 100%;padding-left: 0;padding-right: 0;margin-top: -100px">
+        <div style="width: 100%;padding-left: 0;padding-right: 0;margin-top: -100px;">
             <div class="row">
                 <div class="col-12">
-                    <div class="card shadow">
+                    <div class="card shadow" style="background-color: #535956">
                         <div class="card-body">
                             <div class="container">
                                 <asset-list></asset-list>

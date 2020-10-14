@@ -64,9 +64,9 @@ let map = '';
 export default {
   data() {
     return {
-      categoryId: 'All',
+      categoryId: 'type',
       errors: '',
-      country: '',
+      country: 'Kenya',
       returns: '',
       assets: '',
       loading: false
@@ -162,6 +162,7 @@ export default {
     }
   },
   mounted() {
+    this.getAssetCoordinates();
     mapboxgl.accessToken = 'pk.eyJ1IjoibXV0aXN5YSIsImEiOiJja2JsN21kejExNjd5MnNvNThyYmNybTNhIn0.BmObv_gTFqLmuc-VObwKYw';
     map = new mapboxgl.Map({
       container: 'maps',

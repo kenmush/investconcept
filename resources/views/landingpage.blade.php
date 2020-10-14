@@ -9,9 +9,10 @@
                 <div class="col-12 col-md-6 dtr-sm-mb-30px">
 
                     <!-- Heading -->
-                    <h1 style="color:#071e55;" class="dtr-mb-4 wow fadeInUp" data-wow-delay="0.4s">
-                        Unlocking Potential through opportunity and entrepreneurship.
-                    </h1>
+                    <h4 style="color:#071e55;" class="dtr-mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                        Grow your wealth with others. Contribute to emerging markets development while making a healthy return
+
+                    </h4>
 
                     <!-- Text -->
                     <p style="color: #7c8595" data-wow-delay="0.6s">
@@ -88,9 +89,9 @@
                                         points="39.35 15.39 36.94 13.1 36.58 16.41 33.65 18 36.69 19.36 37.3 22.64 39.53 20.16 42.84 20.6 41.17 17.71 42.61 14.71 39.35 15.39"/>
                             </svg>
 
-                            <h4>Easy</h4>
+                            <h4>Impactful</h4>
 
-                            <p>Select the deal and track your investments on our platform.</p>
+                            <p>Support emerging market entrepreneurs</p>
 
                         </div>
 
@@ -116,11 +117,8 @@
                                           transform="translate(0,952.36218)"/>
                                 </g>
                             </svg>
-
-                            <h4>Secure</h4>
-
-                            <p>Principal secured by technology-tracked, high performing assets.</p>
-
+                            <h4>Transparent</h4>
+                            <p>Keep track of your impact</p>
                         </div>
 
                     </div>
@@ -142,9 +140,9 @@
                                 </g>
                             </svg>
 
-                            <h4>Growth</h4>
+                            <h4>Attractive</h4>
 
-                            <p>Grow your capital and impact by reinvesting into new deals.</p>
+                            <p>Build wealth</p>
 
                         </div>
 
@@ -168,115 +166,103 @@
     <div style="width: 100%;padding-left: 0;padding-right: 0">
         <map-component :categories='@json($assets)'></map-component>
     </div>
-    <div style="margin-top:-100px;width: 100%;padding-left: 0;padding-right: 0;padding-top:3em;padding-bottom:3em; background-color: #f2f5f7">
+    <div style="margin-top:-100px;width: 100%;padding-left: 0;padding-right: 0;padding-top:3em;padding-bottom:3em;
+    background-color: #f2f5f7" id="assets">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="https://image.made-in-china.com/202f0j00CysEiJcznHgr/125cc-150cc-off-Road-Motorbike-TM125-2.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>Asset of leasing of motorbikes to support mototaxis in Uganda.</p>
-                                    <p>Company: Zembo</p>
-                                    <p>Country: Uganda</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container" >
+            <div class="mt-5 text-center">
+                <h2 class="section-title">Show Assets</h2>
             </div>
-            <div class="row mt-5 mb-5 owl-carousel owl-theme">
-                <div class="mr-3">
-                    <div class="card shadow">
-                        <img class="card-img-top"
-                             src="https://image.made-in-china.com/202f0j00CysEiJcznHgr/125cc-150cc-off-Road-Motorbike-TM125-2.jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Motorcycles</h4>
-                            <p class="card-text">Unlocking the worlds opaque markerts</p>
-                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mr-3">
-                    <div class="card shadow">
-                        <img class="card-img-top"
-                             src="https://www.prepayment-meter.com/photo/pl14870579-smart_gprs_remote_water_meter_reading_muti_jet_residential_water_meter.jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Smart Water Meter</h4>
-                            <p class="card-text">Unlocking the worlds opaque markerts</p>
-                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mr-3">
-                    <div class="card shadow">
-                        <img class="card-img-top"
-                             src="https://www.tankhandel.de/media/image/product/80/md/2000-liter-2-achs-anhaenger-fuer-wasser-weidefass-wassertankanhaenger-wasseranhaenger-mobiler-wassertank-bewaesserungstank-viehtraenketank.jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Irrigation System</h4>
-                            <p class="card-text">Unlocking the worlds opaque markerts</p>
-                            <a href="{{ route('register') }}" class="btn btn-primary btn-block">Invest</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mr-3">
-                    <div class="card shadow">
-                        <img class="card-img-top"
-                             src="https://image.made-in-china.com/202f0j00CysEiJcznHgr/125cc-150cc-off-Road-Motorbike-TM125-2.jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Another</h4>
-                            <p class="card-text">Unlocking the worlds opaque markerts</p>
-                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mr-3">
-                    <div class="card shadow">
-                        <img class="card-img-top"
-                             src="https://www.prepayment-meter.com/photo/pl14870579-smart_gprs_remote_water_meter_reading_muti_jet_residential_water_meter.jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Another 2</h4>
-                            <p class="card-text">Unlocking the worlds opaque markerts</p>
-                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mr-3">
-                    <div class="card shadow">
-                        <img class="card-img-top"
-                             src="https://www.tankhandel.de/media/image/product/80/md/2000-liter-2-achs-anhaenger-fuer-wasser-weidefass-wassertankanhaenger-wasseranhaenger-mobiler-wassertank-bewaesserungstank-viehtraenketank.jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Another 3</h4>
-                            <p class="card-text">Unlocking the worlds opaque markerts</p>
-                            <a href="{{ route('register') }}" class="btn btn-primary btn-block">Invest</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <showassets></showassets>
+            {{--            <div class="row mt-5 mb-5 owl-carousel owl-theme">--}}
+            {{--                <div class="mr-3">--}}
+            {{--                    <div class="card shadow">--}}
+            {{--                        <img class="card-img-top"--}}
+            {{--                             src="https://image.made-in-china.com/202f0j00CysEiJcznHgr/125cc-150cc-off-Road-Motorbike-TM125-2.jpg"--}}
+            {{--                             alt="Card image cap">--}}
+            {{--                        <div class="card-body">--}}
+            {{--                            <h4 class="card-title">Motorcycles</h4>--}}
+            {{--                            <p class="card-text">Unlocking the worlds opaque markerts</p>--}}
+            {{--                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>--}}
+            {{--                        </div>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--                <div class="mr-3">--}}
+            {{--                    <div class="card shadow">--}}
+            {{--                        <img class="card-img-top"--}}
+            {{--                             src="https://www.prepayment-meter.com/photo/pl14870579-smart_gprs_remote_water_meter_reading_muti_jet_residential_water_meter.jpg"--}}
+            {{--                             alt="Card image cap">--}}
+            {{--                        <div class="card-body">--}}
+            {{--                            <h4 class="card-title">Smart Water Meter</h4>--}}
+            {{--                            <p class="card-text">Unlocking the worlds opaque markerts</p>--}}
+            {{--                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>--}}
+            {{--                        </div>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--                <div class="mr-3">--}}
+            {{--                    <div class="card shadow">--}}
+            {{--                        <img class="card-img-top"--}}
+            {{--                             src="https://www.tankhandel.de/media/image/product/80/md/2000-liter-2-achs-anhaenger-fuer-wasser-weidefass-wassertankanhaenger-wasseranhaenger-mobiler-wassertank-bewaesserungstank-viehtraenketank.jpg"--}}
+            {{--                             alt="Card image cap">--}}
+            {{--                        <div class="card-body">--}}
+            {{--                            <h4 class="card-title">Irrigation System</h4>--}}
+            {{--                            <p class="card-text">Unlocking the worlds opaque markerts</p>--}}
+            {{--                            <a href="{{ route('register') }}" class="btn btn-primary btn-block">Invest</a>--}}
+            {{--                        </div>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--                <div class="mr-3">--}}
+            {{--                    <div class="card shadow">--}}
+            {{--                        <img class="card-img-top"--}}
+            {{--                             src="https://image.made-in-china.com/202f0j00CysEiJcznHgr/125cc-150cc-off-Road-Motorbike-TM125-2.jpg"--}}
+            {{--                             alt="Card image cap">--}}
+            {{--                        <div class="card-body">--}}
+            {{--                            <h4 class="card-title">Another</h4>--}}
+            {{--                            <p class="card-text">Unlocking the worlds opaque markerts</p>--}}
+            {{--                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>--}}
+            {{--                        </div>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--                <div class="mr-3">--}}
+            {{--                    <div class="card shadow">--}}
+            {{--                        <img class="card-img-top"--}}
+            {{--                             src="https://www.prepayment-meter.com/photo/pl14870579-smart_gprs_remote_water_meter_reading_muti_jet_residential_water_meter.jpg"--}}
+            {{--                             alt="Card image cap">--}}
+            {{--                        <div class="card-body">--}}
+            {{--                            <h4 class="card-title">Another 2</h4>--}}
+            {{--                            <p class="card-text">Unlocking the worlds opaque markerts</p>--}}
+            {{--                            <a href="{{  route('register')  }}" class="btn btn-primary btn-block">Invest</a>--}}
+            {{--                        </div>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--                <div class="mr-3">--}}
+            {{--                    <div class="card shadow">--}}
+            {{--                        <img class="card-img-top"--}}
+            {{--                             src="https://www.tankhandel.de/media/image/product/80/md/2000-liter-2-achs-anhaenger-fuer-wasser-weidefass-wassertankanhaenger-wasseranhaenger-mobiler-wassertank-bewaesserungstank-viehtraenketank.jpg"--}}
+            {{--                             alt="Card image cap">--}}
+            {{--                        <div class="card-body">--}}
+            {{--                            <h4 class="card-title">Another 3</h4>--}}
+            {{--                            <p class="card-text">Unlocking the worlds opaque markerts</p>--}}
+            {{--                            <a href="{{ route('register') }}" class="btn btn-primary btn-block">Invest</a>--}}
+            {{--                        </div>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
         </div>
     </div>
     <section class="home-section" id="home">
 
-        <div class="home-section-overlay"></div>
+        <div class="home-section-overlay" id="impactsimulation"></div>
 
         <!--begin container -->
-        <div class="container" id="impactsimulation">
+        <div class="container" >
 
             <div class="row">
                 <div class="col-12">
-                    <div class="card shadow">
+                    <div class="card shadow" >
                         <div class="card-body">
                             <calculateimpact></calculateimpact>
+                            <canvas id="myChart" width="400px" height="200px"></canvas>
                         </div>
                     </div>
                 </div>
@@ -289,27 +275,27 @@
         <div class="row">
 
         </div>
-        <div class="row" style="margin-top: 74px">
-            <div class="col-12"
-                 style="z-index:10;margin-left:-30px;margin-top:-25px;font: Bold 40px Roboto;color: #DBDCDC !important;">
-                Mission
-            </div>
-            <div class="col-12">
-                <p class="text-center" style="color: #DBDCDC;font: Bold 20px/26px Roboto;text-align: center;
-                margin-top: 38px">
-                    Untapped’s mission is to help entrepreneurs in frontier markets solve everyday problems with the
-                    right technology and access to capital.
-                </p>
-            </div>
-            <div class="col-12">
-                <div class="row justify-content-center mt-5">
-                    <img src="{{ asset('untapped/lead.svg') }}" alt="">
-                    <img class="pl-5" src="{{ asset('untapped/dashboard.svg') }}" alt="">
-                    <img class="pl-5" src="{{ asset('untapped/droplet.svg') }}" alt="">
-                    <img class="pl-5" src="{{ asset('untapped/motorbiked.svg') }}" alt="">
-                </div>
-            </div>
-        </div>
+        {{--        <div class="row" style="margin-top: 74px">--}}
+        {{--            <div class="col-12"--}}
+        {{--                 style="z-index:10;margin-left:-30px;margin-top:-25px;font: Bold 40px Roboto;color: #DBDCDC !important;">--}}
+        {{--                Mission--}}
+        {{--            </div>--}}
+        {{--            <div class="col-12">--}}
+        {{--                <p class="text-center" style="color: #DBDCDC;font: Bold 20px/26px Roboto;text-align: center;--}}
+        {{--                margin-top: 38px">--}}
+        {{--                    Untapped’s mission is to help entrepreneurs in frontier markets solve everyday problems with the--}}
+        {{--                    right technology and access to capital.--}}
+        {{--                </p>--}}
+        {{--            </div>--}}
+        {{--            <div class="col-12">--}}
+        {{--                <div class="row justify-content-center mt-5">--}}
+        {{--                    <img src="{{ asset('untapped/lead.svg') }}" alt="">--}}
+        {{--                    <img class="pl-5" src="{{ asset('untapped/dashboard.svg') }}" alt="">--}}
+        {{--                    <img class="pl-5" src="{{ asset('untapped/droplet.svg') }}" alt="">--}}
+        {{--                    <img class="pl-5" src="{{ asset('untapped/motorbiked.svg') }}" alt="">--}}
+        {{--                </div>--}}
+        {{--            </div>--}}
+        {{--        </div>--}}
         <div class="row" style="margin-top: 74px">
 
             <div class="col-12">
@@ -395,6 +381,5 @@
 
         </div>
     </div>
-    <canvas id="myChart" width="400" height="400"></canvas>
 
 @endsection

@@ -27,7 +27,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #34495e">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
         <img style="max-width: 250px;
     max-height: 50px;" src="https://www.untapped-inc.com/uploads/1/3/1/9/13198181/new-untapped-logo-trans.png" alt="">
     </a>
@@ -39,14 +39,23 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto text-white">
             <li class="nav-item active">
-                <a class="navbar-text nav-link text-white" href="#">Invest <span class="sr-only">(current)</span></a>
+                <a class="navbar-text nav-link text-white" href="{{ route('register') }}">Invest <span class="sr-only">
+                        (current)
+                    </span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="navbar-text nav-link" style="color: #ACD5E7 !important;" href="#assets">Assets <span
+                            class="sr-only">
+                        (current)
+                    </span></a>
             </li>
             <li class="nav-item">
-                <a class="navbar-text nav-link text-white" href="#">Simulate Impact</a>
+                <a class="navbar-text nav-link" style="color: #ACD5E7 !important;" href="#impactsimulation">Simulate
+                    Impact</a>
             </li>
         </ul>
         <a class="navbar-text nav-link text-white" href="{{ route('login') }}"> <i class="fa fa-lock"></i> Login</a>
-        <a href="{{ route('register') }}" class="btn btn-primary my-2 my-sm-0" type="submit">Get Started</a>
+        <a href="{{ route('register') }}" class="btn btn-primary my-2 my-sm-0" type="submit">Sign Up</a>
     </div>
 </nav>
 
@@ -61,12 +70,12 @@
 <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['0', '1', '2', '3', '6', '10'],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: 'Impact',
+                data: [83333, 19, 3, 5, 2, 3],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -84,7 +93,28 @@
                     'rgba(255, 159, 64, 1)'
                 ],
                 borderWidth: 1
-            }]
+            },
+                {
+                    label: 'Personal Return',
+                    data: [20, 23, 4, 9, 7, 12],
+                    backgroundColor: [
+                        'rgb(99,224,255)',
+                        'rgb(123,235,54)',
+                        'rgb(255,86,125)',
+                        'rgb(192,139,75)',
+                        'rgb(107,255,102)',
+                        'rgb(64,188,255)'
+                    ],
+                    borderColor: [
+                        'rgb(99,224,255)',
+                        'rgb(123,235,54)',
+                        'rgb(255,86,125)',
+                        'rgb(192,139,75)',
+                        'rgb(107,255,102)',
+                        'rgb(64,188,255)'
+                    ],
+                    borderWidth: 1
+                }]
         },
         options: {
             scales: {
@@ -105,11 +135,11 @@
             loop: true,
             margin: 10,
             autoplay: true,
-            autoWidth:true,
+            autoWidth: true,
             autoplayTimeout: 1000,
             autoplayHoverPause: true
         });
-        owl.trigger('play.owl.autoplay',[1000])
+        owl.trigger('play.owl.autoplay', [1000])
     });
 </script>
 </body>
