@@ -178,7 +178,7 @@
     background-color: #f2f5f7" id="assets">
         <div class="container">
             <div class="row justify-content-center text-center" style="margin-bottom: 30px;margin-top: 30px">
-                <button class="btn btn-primary btn-lg">Get Started</button>
+                <a href="{{ route('register') }}" class="btn btn-primary btn-lg">Get Started</a>
             </div>
             <div class="mt-5 text-center">
                 {{--                <h2 class="section-title">Show Assets</h2>--}}
