@@ -2179,7 +2179,8 @@ var map = '';
       container: 'maps',
       style: 'mapbox://styles/mapbox/light-v10',
       center: [-2.522805, 27.039787],
-      zoom: 2
+      zoom: 2,
+      minZoom: 2
     });
     map.resize();
   },

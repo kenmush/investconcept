@@ -88,7 +88,7 @@
 
                         <h4>Impactful</h4>
 
-                        <p>Support emerging market entrepreneurs</p>
+                        <p>Support emerging market <br> entrepreneurs</p>
 
                     </div>
 
