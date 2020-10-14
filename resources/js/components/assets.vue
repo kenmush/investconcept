@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-6 mb-4">
       <div class="card">
         <div class="card-body ">
           <div class="row">
@@ -77,6 +77,81 @@
         </div>
       </div>
     </div>
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="rounded float-left img-thumbnail"
+                   src="https://www.prepayment-meter.com/photo/pl14870579-smart_gprs_remote_water_meter_reading_muti_jet_residential_water_meter.jpg"
+                   alt="">
+            </div>
+            <div class="col-md-8" v-if="!showSmartMeter">
+              <p style="border-bottom: 3px solid #3e4494">Smart Meters</p>
+              <p>Company: Untapped</p>
+              <p>Country: Kenya</p>
+            </div>
+            <div class="col-md-8" v-else>
+              <p>Company: Untapped</p>
+              <p>Country: Kenya</p>
+              <p>Quality water walking distance form home</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card" v-if="!showSmartMeter">
+                <div class="card-body">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <p>$500</p>
+                        <p>Minimum Investment</p>
+                      </div>
+                      <div class="col-md-4">
+                        <p>9%</p>
+                        <p>APY</p>
+                      </div>
+                      <div class="col-md-4">
+                        <p>18</p>
+                        <p>18 Month term</p>
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-primary btn-block btn-lg" @click="showSmartMeterCard">
+                          See Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div v-else>
+                <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
+                  <thead class="thead-default">
+                  <tr>
+                    <th>For the Entrepreneur</th>
+                    <th>$700 <br>Moto</th>
+                    <th>$120/Month <br>Avg. Income</th>
+                    <th>$45/Month <br>Lease Payments</th>
+                  </tr>
+                  <tr>
+                    <th>For You:</th>
+                    <th>$500 <br>Minimum Investment</th>
+                    <th>9% <br>APY</th>
+                    <th>18 Month <br>Term</th>
+                  </tr>
+                  </thead>
+
+                </table>
+                <div class="row">
+                  <a href="/register" class="btn btn-primary btn-block">Invest</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -85,12 +160,17 @@ export default {
   name: "assets",
   data() {
     return {
-      showMotorbikeDetails: false
+      showMotorbikeDetails: false,
+      showSmartMeter: false,
+      showsSmartMeter: false
     }
   },
   methods: {
     showMotorbike() {
       this.showMotorbikeDetails = !this.showMotorbikeDetails;
+    },
+    showSmartMeterCard() {
+      this.showSmartMeter = !this.showSmartMeter;
     }
   },
 }

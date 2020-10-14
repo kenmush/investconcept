@@ -75,17 +75,36 @@
       </tbody>
     </table>
     <hr>
-    <chartist
-        ratio="ct-major-twelfth"
-        type="Line"
-        :data="chartData"
-        :options="chartOptions">
-    </chartist>
+    <div class="mt-4">
+      <chartist
+          ratio="ct-major-twelfth"
+          type="Line"
+          :data="chartData"
+          :options="chartOptions">
+      </chartist>
+    </div>
+<!--    <div>-->
+<!--      <table class="table table-sm text-sm">-->
+<!--        <tbody>-->
+<!--        <tr>-->
+<!--          <th>Impact</th>-->
+<!--          <td>-->
+<!--            <div class="border-bottom:5px solid #ACD5E7">sadasdasdasda</div>-->
+<!--          </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <th>Personal Return</th>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--      </table>-->
+<!--    </div>-->
   </div>
 </template>
 
 <script>
 import ctAxisTitle from 'chartist-plugin-axistitle'
+
 export default {
   name: "impact-calculation",
   data() {
@@ -93,10 +112,10 @@ export default {
       errors: '',
       amount: 250000,
       chartData: {
-        labels: ["1 Year", "2 Years", "3 Years", "4 Years", "6 Years", "10 Years"],
+        labels: ["18 Months", "2 Years", "3 Years", "5 Years", "10 Years"],
         series: [
-          [250000, 30000, 400000, 500000, 600000, 700000],
-          [30000, 400000, 500000, 600000, 700000, 800000]]
+          [400000, 500000, 600000, 700000, 800000],
+          [500000, 600000, 700000, 800000, 900000]]
       },
       chartOptions: {
         lineSmooth: true,
@@ -129,19 +148,26 @@ export default {
       return Math.round(i).toLocaleString();
     },
     totalLeverage() {
+      let amountToUse = this.amount;
       let i = (((this.amount / 3) / 500) * 1800) + (((this.amount / 3) / 1000) * 12000) + (((this.amount / 3) / 1000) *
           3600)
       let socialImpact = (((this.amount / 3) / 500) * 1800) + (((this.amount / 3) / 1000) * 12000) +
           (((this.amount / 3) / 1000) *
               3600)
-      let personalreturn = ((this.amount / 3) / 1000) + ((this.amount / 3) / 500) + ((this.amount / 3) / 1000);
+      let personalreturn = Math.round(((amountToUse / 3) / 1000) + ((amountToUse / 3) / 500) + ((amountToUse / 3) / 1000));
+      console.log("Logging");
+      console.log(personalreturn);
       this.$nextTick(function () {
         this.chartData = {
-          labels: ["1 Year", "2 Years", "3 Years", "4 Years", "6 Years", "10 Years"],
+          labels: ["18 Months", "2 Years", "3 Years", "5 Years", "10 Years"],
           series: [
             [socialImpact, socialImpact * 2, socialImpact * 3, socialImpact * 4,
               socialImpact * 6,
-              socialImpact * 10],
+              socialImpact * 10], [
+              personalreturn * 1000, personalreturn * 2 * 1000, personalreturn * 3 * 1000, personalreturn * 4 * 1000,
+              personalreturn * 6 * 1000,
+              personalreturn * 10 * 1000
+            ],
 
           ]
         };
@@ -191,5 +217,12 @@ export default {
 </script>
 
 <style scoped>
-
+.ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: blue;
+  /* Control the thikness of your lines */
+  stroke-width: 5px;
+  /* Create a dashed line with a pattern */
+  stroke-dasharray: 10px 20px;
+}
 </style>
