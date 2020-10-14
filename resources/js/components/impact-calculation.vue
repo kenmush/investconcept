@@ -74,21 +74,33 @@
       </tr>
       </tbody>
     </table>
-
+    <chartist
+        ratio="ct-major-twelfth"
+        type="Line"
+        :data="chartData"
+        :options="chartOptions">
+    </chartist>
   </div>
 </template>
 
 <script>
-import VueCharts from 'vue-chartjs'
-import {Bar, Line} from 'vue-chartjs'
-
 export default {
-  extends: Bar,
   name: "impact-calculation",
   data() {
     return {
       errors: '',
       amount: 250000,
+      chartData: {
+        labels: ["1 Year", "2 Years", "3 Years", "4 Years", "6 Years", "10 Years"],
+        series: [
+            [250000, 30000,400000, 500000, 600000, 700000],
+          [30000,400000, 500000, 600000, 700000,800000]]
+      },
+      chartOptions: {
+        lineSmooth: true,
+        // width: 300,
+        // height: 200
+      }
     }
   },
   computed: {
@@ -112,16 +124,6 @@ export default {
     }
   },
   mounted() {
-    this.renderChart({
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      datasets: [
-        {
-          label: 'GitHub Commits',
-          backgroundColor: '#f87979',
-          data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
-        }
-      ]
-    })
   }
 }
 </script>
