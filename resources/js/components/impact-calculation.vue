@@ -19,7 +19,7 @@
                     <div aria-labelledby="dropdownMenuButton" class="dropdown-menu currency-select-list">
                       <a href="#" data-currency="usd"
                          class="dropdown-item single-currency-select selected-currency active">USD</a>
-                      <a href="#" data-currency="eur" class="dropdown-item single-currency-select">EUR</a>
+<!--                      <a href="#" data-currency="eur" class="dropdown-item single-currency-select">EUR</a>-->
                     </div>
                   </form>
                 </div>

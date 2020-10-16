@@ -45308,15 +45308,6 @@ var staticRenderFns = [
             attrs: { href: "#", "data-currency": "usd" }
           },
           [_vm._v("USD")]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "dropdown-item single-currency-select",
-            attrs: { href: "#", "data-currency": "eur" }
-          },
-          [_vm._v("EUR")]
         )
       ]
     )
