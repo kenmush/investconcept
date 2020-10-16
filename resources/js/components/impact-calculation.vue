@@ -3,79 +3,94 @@
     <form action="">
       <div class="row">
         <div class="col-md-12">
-          <!--Label: How much would you like to invest, Attributes:investmentamount -->
           <div class="form-group">
-            <h2 for="investmentamount" class="section-title text-center mb-5">Calculate your return
-              and impact</h2>
-            <div class="col-md-6">
-              <!--Label: Amount, Attributes:amount -->
-              <div class="form-group">
-                <label for="amount" style="  line-height: 1.2;
-  margin-top: 0;
-  color: #0c2156;
-  font-weight: 700;">Enter the Amount you would like to invest.</label>
-                <input type="number" class="form-control" id="amount" v-model.number="amount"
-                       aria-describedby="amount-help"
-                       :class="[errors.amount ? 'is-invalid': '',!errors.amount && Object.keys(errors).length > 1 ? 'is-valid': '']"
-                       placeholder="Amount" required>
-                <div class="invalid-feedback" v-if="errors.amount">
-                  {{ errors.amount.toString() }}
-                </div>
+            <div class="col-6 ml-4">
+              <div class="part-amount mt-5">
+                <h4 class="title">Enter Amount</h4>
+                <form><span id="basic-addon1" class="currency-symbol">$</span>
+                  <input type="text" v-model.number="amount"
+                         :class="[errors.amount ? 'is-invalid': '',!errors.amount && Object.keys(errors).length > 1 ? 'is-valid': '']"
+                         class="inputted-amount">
+                  <button type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false" class="dropdown-toggle displayed-selected-currency">
+                    USD
+                  </button>
+                  <div aria-labelledby="dropdownMenuButton" class="dropdown-menu currency-select-list">
+                    <a href="#" data-currency="usd"
+                       class="dropdown-item single-currency-select selected-currency active">USD</a>
+                    <a href="#" data-currency="eur" class="dropdown-item single-currency-select">EUR</a>
+                  </div>
+                </form>
               </div>
+            </div>
+            <div class="d-inline-block cursor-not-allowed ml-5">
+              <button class="calculate-all text-center">
+                <span>Calculate</span>
+              </button>
             </div>
           </div>
         </div>
 
       </div>
     </form>
-    <table class="table table-borderless">
-      <thead class="table-header-dark">
-      <tr>
-        <th>Asset</th>
-        <th>Amount ($)</th>
-        <th>Number</th>
-        <th>Return</th>
-        <th>Social Impact</th>
-        <th>Leverage</th>
-      </tr>
-      </thead>
-      <tbody style="background-color: white">
-      <tr style="background-color: white">
-        <td scope="row">Motorcycle</td>
-        <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
-        <td>{{ Math.round((amount / 3) / 1000).toLocaleString() }}</td>
-        <td>{{ Math.round(((amount / 3) / 1000) * 80).toLocaleString() }}</td>
-        <td>{{ Math.round(((amount / 3) / 1000) * 3600).toLocaleString() }}</td>
-        <td>3.6</td>
-      </tr>
-      <tr style="background-color: white">
-        <td scope="row">Water ATM's</td>
-        <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
-        <td>{{ Math.round((amount / 3) / 1000).toLocaleString() }}</td>
-        <td>{{ Math.round(((amount / 3) / 1000) * 80).toLocaleString() }}</td>
-        <td>{{ Math.round(((amount / 3) / 1000) * 12000).toLocaleString() }}</td>
-        <td>12</td>
-      </tr>
-      <tr style="background-color: white">
-        <td scope="row">Trailer</td>
-        <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
-        <td>{{ Math.round((amount / 3) / 500).toLocaleString() }}</td>
-        <td>{{ Math.round(((amount / 3) / 500) * 40).toLocaleString() }}</td>
-        <td>{{ Math.round(((amount / 3) / 500) * 1800).toLocaleString() }}</td>
-        <td>3.6</td>
-      </tr>
-      <tr style="border-top: 3px solid gray">
-        <td>Totals</td>
-        <td>{{ Math.round(amount).toLocaleString() }}</td>
-        <td>{{ totalUnits }}</td>
-        <td>{{ totalNumbers }}</td>
-        <td>{{ socialImpact }}</td>
-        <td>{{ totalLeverage }}</td>
-      </tr>
-      </tbody>
-    </table>
-    <hr>
-    <div class="mt-4">
+    <div class="part-result">
+      <table class="table table-borderless part-result" style="background-color: transparent">
+        <thead class="thead-light">
+        <tr>
+          <th></th>
+          <th>Asset</th>
+          <th>Amount ($)</th>
+          <th>Number</th>
+          <th>Return</th>
+          <th>Social Impact</th>
+          <th>Leverage</th>
+        </tr>
+        </thead>
+        <tbody style="background-color: white">
+        <tr style="background-color: white">
+          <td scope="row">
+            <img src="/untapped/twowheeler.svg" alt="">
+          </td>
+          <td>Motorcycle</td>
+          <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
+          <td>{{ Math.round((amount / 3) / 1000).toLocaleString() }}</td>
+          <td>{{ Math.round(((amount / 3) / 1000) * 80).toLocaleString() }}</td>
+          <td>{{ Math.round(((amount / 3) / 1000) * 3600).toLocaleString() }}</td>
+          <td>3.6</td>
+        </tr>
+        <tr style="background-color: white">
+          <td scope="row">
+            <img src="/untapped/rawmeter.svg" alt="">
+          </td>
+          <td>Water ATM's</td>
+          <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
+          <td>{{ Math.round((amount / 3) / 1000).toLocaleString() }}</td>
+          <td>{{ Math.round(((amount / 3) / 1000) * 80).toLocaleString() }}</td>
+          <td>{{ Math.round(((amount / 3) / 1000) * 12000).toLocaleString() }}</td>
+          <td>12</td>
+        </tr>
+        <tr style="background-color: white">
+          <td scope="row">
+            <img src="/untapped/irrigation.svg" alt="">
+          </td>
+          <td>Trailer</td>
+          <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
+          <td>{{ Math.round((amount / 3) / 500).toLocaleString() }}</td>
+          <td>{{ Math.round(((amount / 3) / 500) * 40).toLocaleString() }}</td>
+          <td>{{ Math.round(((amount / 3) / 500) * 1800).toLocaleString() }}</td>
+          <td>3.6</td>
+        </tr>
+        <tr style="border-top: 3px solid gray">
+          <td></td>
+          <td>Totals</td>
+          <td>{{ Math.round(amount).toLocaleString() }}</td>
+          <td>{{ totalUnits }}</td>
+          <td>{{ totalNumbers }}</td>
+          <td>{{ socialImpact }}</td>
+          <td>{{ totalLeverage }}</td>
+        </tr>
+        </tbody>
+      </table>
       <chartist
           ratio="ct-major-twelfth"
           type="Line"
@@ -83,22 +98,14 @@
           :options="chartOptions">
       </chartist>
     </div>
-<!--    <div>-->
-<!--      <table class="table table-sm text-sm">-->
-<!--        <tbody>-->
-<!--        <tr>-->
-<!--          <th>Impact</th>-->
-<!--          <td>-->
-<!--            <div class="border-bottom:5px solid #ACD5E7">sadasdasdasda</div>-->
-<!--          </td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <th>Personal Return</th>-->
-<!--          <td></td>-->
-<!--        </tr>-->
-<!--        </tbody>-->
-<!--      </table>-->
-<!--    </div>-->
+
+
+    <div class="row" style="z-index: 999;">
+      <div class="mt-4">
+
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -204,7 +211,8 @@ export default {
                 flipTitle: false
               }
             })
-          ]       // width: 300,
+          ]
+          // , width: 300,
           // height: 200
         }
       });
@@ -224,5 +232,18 @@ export default {
   stroke-width: 5px;
   /* Create a dashed line with a pattern */
   stroke-dasharray: 10px 20px;
+}
+
+table{
+  /* set your gradient code here */
+  background: rgb(240,183,161);
+  background: -moz-linear-gradient(-45deg,  rgba(240,183,161,1) 0%, rgba(140,51,16,1) 50%, rgba(117,34,1,1) 51%, rgba(191,110,78,1) 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(240,183,161,1)), color-stop(50%,rgba(140,51,16,1)), color-stop(51%,rgba(117,34,1,1)), color-stop(100%,rgba(191,110,78,1)));
+  background: -webkit-linear-gradient(-45deg,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
+  background: -o-linear-gradient(-45deg,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
+  background: -ms-linear-gradient(-45deg,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
+  background: linear-gradient(135deg,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=1 );
+
 }
 </style>

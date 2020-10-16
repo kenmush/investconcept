@@ -2,6 +2,7 @@
 @section('content')
     <section id="home" style="margin-top: 5em;margin-bottom: -20em" class="hero-section bg-blue hero-default-bg
     color-white">
+
         <div class="container">
             <div class="row align-items-center mt-4">
 

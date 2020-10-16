@@ -6,7 +6,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/landing', function () {
     return view('landing');
 });
+
 Route::get('/', function () {
+    $assets = (new Investor())->getAssetCategories();
+    return view('index',compact('assets'));
+});
+Route::get('/ken', function () {
     $assets = (new Investor())->getAssetCategories();
     return view('landingpage',
             [
