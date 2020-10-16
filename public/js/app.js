@@ -44165,7 +44165,7 @@ var render = function() {
       "div",
       {
         staticStyle: {
-          "z-index": "9999",
+          "z-index": "1",
           position: "absolute",
           "margin-top": "80px",
           "margin-left": "26px",
