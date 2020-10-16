@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
-
-
-<!-- Mirrored from iamubaidah.com/html/oitila/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Oct 2020 09:13:22 GMT -->
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -12,26 +9,26 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <!-- fontawesome icon  -->
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
     <!-- flaticon css -->
-    <link rel="stylesheet" href="assets/fonts/flaticon.css">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/flaticon.css') }}">
     <!-- animate.css -->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
     <!-- magnific popup -->
-    <link rel="stylesheet" href="assets/css/modal-video.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/modal-video.min.css') }}">
     <!-- slick css -->
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick-theme.css') }}">
     <!-- odometer js -->
-    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/odometer.min.css') }}">
     <!-- toastr js -->
-    <link rel="stylesheet" href="assets/css/toastr.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/toastr.min.css') }}">
     <!-- stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <!-- responsive -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <style>
         .ct-series-a .ct-line {
             /* Set the colour of this series line */
@@ -608,20 +605,19 @@
 <!-- bootstrap -->
 {{--<script src="assets/js/bootstrap.min.js"></script>--}}
 <!-- modal video js -->
-<script src="assets/js/jquery-modal-video.min.js"></script>
+<script src="{{ asset('assets/js/jquery-modal-video.min.js') }}"></script>
 <!-- way poin js-->
-<script src="assets/js/waypoints.min.js"></script>
+<script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
 <!-- slick js -->
-<script src="assets/js/slick.min.js"></script>
+<script src="{{ asset('assets/js/slick.min.js') }}"></script>
 <!-- odometer js -->
 <!-- <script src="assets/js/odometer.min.js"></script> -->
 <!-- toastr js -->
-<script src="assets/js/toastr.min.js"></script>
+<script src="{{ asset('assets/js/toastr.min.js') }}"></script>
 <!-- main -->
-<script src="assets/js/main.js"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>
 
 
-<!-- Mirrored from iamubaidah.com/html/oitila/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Oct 2020 09:15:16 GMT -->
 </html>
