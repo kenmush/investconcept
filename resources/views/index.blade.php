@@ -554,7 +554,8 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-8 col-lg-8">
-                            <p>Copyright © <a href="/">Untapped Capital</a> - 2020. All Rights Reserved</p>
+                            <p>Copyright © <a href="https://untapped-inc.com">Untapped Inc</a> - 2020. All Rights
+                                Reserved</p>
                         </div>
                     </div>
                 </div>
