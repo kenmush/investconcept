@@ -288,7 +288,7 @@
             <div class="container">
                 <div class="row justify-content-xl-between justify-content-lg-between justify-content-md-center justify-content-sm-center">
 
-                    <div class="col-xl-12 monitor-for-480">
+                    <div class="col-xl-12 ">
                         <div class="profit-calculator">
                             <div class="calc-header">
                                 <h3 class="title text-center">Calculate <span class="special"> your return and

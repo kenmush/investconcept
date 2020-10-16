@@ -2758,6 +2758,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "impact-calculation",
@@ -2842,8 +2844,8 @@ __webpack_require__.r(__webpack_exports__);
               textAnchor: 'middle',
               flipTitle: false
             }
-          })] // , width: 300,
-          // height: 200
+          })] // , width: 1366,
+          // height: 800
 
         };
       });
@@ -11971,7 +11973,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.ct-series-a .ct-line[data-v-2594814d] {\n  /* Set the colour of this series line */\n  stroke: blue;\n  /* Control the thikness of your lines */\n  stroke-width: 5px;\n  /* Create a dashed line with a pattern */\n  stroke-dasharray: 10px 20px;\n}\ntable[data-v-2594814d]{\n  /* set your gradient code here */\n  background: rgb(240,183,161);\n  background: linear-gradient(135deg,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=1 );\n}\n", ""]);
+exports.push([module.i, "\n.ct-series-a .ct-line[data-v-2594814d] {\n  /* Set the colour of this series line */\n  stroke: blue;\n  /* Control the thikness of your lines */\n  stroke-width: 5px;\n  /* Create a dashed line with a pattern */\n  stroke-dasharray: 10px 20px;\n}\ntable[data-v-2594814d] {\n  /* set your gradient code here */\n  background: rgb(240, 183, 161);\n  background: linear-gradient(135deg, rgba(240, 183, 161, 1) 0%, rgba(140, 51, 16, 1) 50%, rgba(117, 34, 1, 1) 51%, rgba(191, 110, 78, 1) 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0b7a1', endColorstr='#bf6e4e', GradientType=1);\n}\n", ""]);
 
 // exports
 
@@ -45055,237 +45057,235 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("form", { attrs: { action: "" } }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("div", { staticClass: "form-group" }, [
-            _c("div", { staticClass: "col-6 ml-4" }, [
-              _c("div", { staticClass: "part-amount mt-5" }, [
-                _c("h4", { staticClass: "title" }, [_vm._v("Enter Amount")]),
-                _vm._v(" "),
-                _c("form", [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "currency-symbol",
-                      attrs: { id: "basic-addon1" }
-                    },
-                    [_vm._v("$")]
-                  ),
+    _c("div", [
+      _c("form", { attrs: { action: "" } }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("div", { staticClass: "col-6 ml-4" }, [
+                _c("div", { staticClass: "part-amount mt-5" }, [
+                  _c("h4", { staticClass: "title" }, [_vm._v("Enter Amount")]),
                   _vm._v(" "),
-                  _c("input", {
-                    directives: [
+                  _c("form", [
+                    _c(
+                      "span",
                       {
-                        name: "model",
-                        rawName: "v-model.number",
-                        value: _vm.amount,
-                        expression: "amount",
-                        modifiers: { number: true }
-                      }
-                    ],
-                    staticClass: "inputted-amount",
-                    class: [
-                      _vm.errors.amount ? "is-invalid" : "",
-                      !_vm.errors.amount && Object.keys(_vm.errors).length > 1
-                        ? "is-valid"
-                        : ""
-                    ],
-                    attrs: { type: "text" },
-                    domProps: { value: _vm.amount },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.amount = _vm._n($event.target.value)
+                        staticClass: "currency-symbol",
+                        attrs: { id: "basic-addon1" }
                       },
-                      blur: function($event) {
-                        return _vm.$forceUpdate()
+                      [_vm._v("$")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model.number",
+                          value: _vm.amount,
+                          expression: "amount",
+                          modifiers: { number: true }
+                        }
+                      ],
+                      staticClass: "inputted-amount",
+                      class: [
+                        _vm.errors.amount ? "is-invalid" : "",
+                        !_vm.errors.amount && Object.keys(_vm.errors).length > 1
+                          ? "is-valid"
+                          : ""
+                      ],
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.amount },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.amount = _vm._n($event.target.value)
+                        },
+                        blur: function($event) {
+                          return _vm.$forceUpdate()
+                        }
                       }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "dropdown-toggle displayed-selected-currency",
-                      attrs: {
-                        type: "button",
-                        id: "dropdownMenuButton",
-                        "data-toggle": "dropdown",
-                        "aria-haspopup": "true",
-                        "aria-expanded": "false"
-                      }
-                    },
-                    [_vm._v("\n                  USD\n                ")]
-                  ),
-                  _vm._v(" "),
-                  _vm._m(0)
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "dropdown-toggle displayed-selected-currency",
+                        attrs: {
+                          type: "button",
+                          id: "dropdownMenuButton",
+                          "data-toggle": "dropdown",
+                          "aria-haspopup": "true",
+                          "aria-expanded": "false"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                      USD\n                    "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm._m(0)
+                  ])
                 ])
-              ])
-            ]),
-            _vm._v(" "),
-            _vm._m(1)
+              ]),
+              _vm._v(" "),
+              _vm._m(1)
+            ])
           ])
         ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "part-result" },
-      [
-        _c(
-          "table",
-          {
-            staticClass: "table table-borderless part-result",
-            staticStyle: { "background-color": "transparent" }
-          },
-          [
-            _vm._m(2),
-            _vm._v(" "),
-            _c("tbody", { staticStyle: { "background-color": "white" } }, [
-              _c("tr", { staticStyle: { "background-color": "white" } }, [
-                _vm._m(3),
-                _vm._v(" "),
-                _c("td", [_vm._v("Motorcycle")]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(
-                    _vm._s(Math.round(_vm.amount / 3 / 1000).toLocaleString())
-                  )
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(
-                    _vm._s(
-                      Math.round((_vm.amount / 3 / 1000) * 80).toLocaleString()
-                    )
-                  )
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(
-                    _vm._s(
-                      Math.round(
-                        (_vm.amount / 3 / 1000) * 3600
-                      ).toLocaleString()
-                    )
-                  )
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("3.6")])
-              ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-12" }, [
+          _c(
+            "table",
+            {
+              staticClass: "table table-borderless part-result",
+              staticStyle: { "background-color": "transparent" }
+            },
+            [
+              _vm._m(2),
               _vm._v(" "),
-              _c("tr", { staticStyle: { "background-color": "white" } }, [
-                _vm._m(4),
-                _vm._v(" "),
-                _c("td", [_vm._v("Water ATM's")]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(
-                    _vm._s(Math.round(_vm.amount / 3 / 1000).toLocaleString())
-                  )
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(
-                    _vm._s(
-                      Math.round((_vm.amount / 3 / 1000) * 80).toLocaleString()
+              _c("tbody", { staticStyle: { "background-color": "white" } }, [
+                _c("tr", { staticStyle: { "background-color": "white" } }, [
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Motorcycle")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      _vm._s(Math.round(_vm.amount / 3 / 1000).toLocaleString())
                     )
-                  )
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(
-                    _vm._s(
-                      Math.round(
-                        (_vm.amount / 3 / 1000) * 12000
-                      ).toLocaleString()
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      _vm._s(
+                        Math.round(
+                          (_vm.amount / 3 / 1000) * 80
+                        ).toLocaleString()
+                      )
                     )
-                  )
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("12")])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticStyle: { "background-color": "white" } }, [
-                _vm._m(5),
-                _vm._v(" "),
-                _c("td", [_vm._v("Trailer")]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(
-                    _vm._s(Math.round(_vm.amount / 3 / 500).toLocaleString())
-                  )
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(
-                    _vm._s(
-                      Math.round((_vm.amount / 3 / 500) * 40).toLocaleString()
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      _vm._s(
+                        Math.round(
+                          (_vm.amount / 3 / 1000) * 3600
+                        ).toLocaleString()
+                      )
                     )
-                  )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("3.6")])
                 ]),
                 _vm._v(" "),
-                _c("td", [
-                  _vm._v(
-                    _vm._s(
-                      Math.round((_vm.amount / 3 / 500) * 1800).toLocaleString()
+                _c("tr", { staticStyle: { "background-color": "white" } }, [
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Water ATM's")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      _vm._s(Math.round(_vm.amount / 3 / 1000).toLocaleString())
                     )
-                  )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      _vm._s(
+                        Math.round(
+                          (_vm.amount / 3 / 1000) * 80
+                        ).toLocaleString()
+                      )
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      _vm._s(
+                        Math.round(
+                          (_vm.amount / 3 / 1000) * 12000
+                        ).toLocaleString()
+                      )
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("12")])
                 ]),
                 _vm._v(" "),
-                _c("td", [_vm._v("3.6")])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticStyle: { "border-top": "3px solid gray" } }, [
-                _c("td"),
-                _vm._v(" "),
-                _c("td", [_vm._v("Totals")]),
-                _vm._v(" "),
-                _c("td", [
-                  _vm._v(_vm._s(Math.round(_vm.amount).toLocaleString()))
+                _c("tr", { staticStyle: { "background-color": "white" } }, [
+                  _vm._m(5),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Trailer")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      _vm._s(Math.round(_vm.amount / 3 / 500).toLocaleString())
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      _vm._s(
+                        Math.round((_vm.amount / 3 / 500) * 40).toLocaleString()
+                      )
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      _vm._s(
+                        Math.round(
+                          (_vm.amount / 3 / 500) * 1800
+                        ).toLocaleString()
+                      )
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("3.6")])
                 ]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(_vm.totalUnits))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(_vm.totalNumbers))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(_vm.socialImpact))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(_vm.totalLeverage))])
+                _c("tr", { staticStyle: { "border-top": "3px solid gray" } }, [
+                  _c("td"),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Totals")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(_vm._s(Math.round(_vm.amount).toLocaleString()))
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(_vm.totalUnits))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(_vm.totalNumbers))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(_vm.socialImpact))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(_vm.totalLeverage))])
+                ])
               ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("chartist", {
-          attrs: {
-            ratio: "ct-major-twelfth",
-            type: "Line",
-            data: _vm.chartData,
-            options: _vm.chartOptions
-          }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _vm._m(6)
+            ]
+          )
+        ])
+      ])
+    ])
   ])
 }
 var staticRenderFns = [
@@ -45380,16 +45380,6 @@ var staticRenderFns = [
     return _c("td", { attrs: { scope: "row" } }, [
       _c("img", { attrs: { src: "/untapped/irrigation.svg", alt: "" } })
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "row", staticStyle: { "z-index": "999" } },
-      [_c("div", { staticClass: "mt-4" })]
-    )
   }
 ]
 render._withStripped = true
