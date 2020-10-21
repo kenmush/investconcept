@@ -12,7 +12,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            cd /var/www/html/insurance
+            cd /var/www/html/investordashboard
             sudo git stash
             sudo git pull origin master
             sudo composer install --optimize-autoloader --no-dev
