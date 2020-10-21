@@ -44766,185 +44766,193 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
-    _c("div", { staticClass: "col-md-6 mb-4" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-body " }, [
-          _c("div", { staticClass: "row" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            !_vm.showMotorbikeDetails
-              ? _c("div", { staticClass: "col-md-8" }, [
-                  _c(
-                    "p",
-                    { staticStyle: { "border-bottom": "3px solid #3e4494" } },
-                    [
-                      _vm._v(
-                        "Asset of leasing of motorbikes to support\n              mototaxis in Uganda."
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Company: Zembo")]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Country: Uganda")])
-                ])
-              : _c("div", { staticClass: "col-md-8" }, [
-                  _c("p", [_vm._v("Company: Zembo")]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Country: Uganda")]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Zembo provides affordable electric motorcycles for motorcycle taxi drivers in Africa, the Company\n              has already 100 motorbikes on site in Kampala, Uganda. The Company leases its motorbikes to taxi\n              drivers in a lease-to-own contract over 24 months for 60000 UGX per week."
-                    )
-                  ])
-                ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-12" }, [
+  return _c(
+    "div",
+    { staticClass: "row", on: { mouseleave: _vm.disableCards } },
+    [
+      _c("div", { staticClass: "col-md-6 mb-4" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-body " }, [
+            _c("div", { staticClass: "row" }, [
+              _vm._m(0),
+              _vm._v(" "),
               !_vm.showMotorbikeDetails
-                ? _c("div", { staticClass: "card" }, [
-                    _c("div", { staticClass: "card-body" }, [
-                      _c("div", { staticClass: "col-12" }, [
-                        _c("div", { staticClass: "row" }, [
-                          _vm._m(1),
-                          _vm._v(" "),
-                          _vm._m(2),
-                          _vm._v(" "),
-                          _vm._m(3),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "col-12" }, [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-custom btn-block btn-lg",
-                                on: {
-                                  click: _vm.showMotorbike,
-                                  mouseenter: _vm.showMotorbike,
-                                  mouseleave: _vm.disableCards
-                                }
-                              },
-                              [
-                                _vm._v(
-                                  "\n                        See Details\n                      "
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ])
-                    ])
-                  ])
-                : _c("div", [
-                    _vm._m(4),
+                ? _c("div", { staticClass: "col-md-8" }, [
+                    _c(
+                      "p",
+                      { staticStyle: { "border-bottom": "3px solid #3e4494" } },
+                      [
+                        _vm._v(
+                          "Asset of leasing of motorbikes to support\n              mototaxis in Uganda."
+                        )
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "row" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-custom btn-block btn-lg",
-                          attrs: { href: "/register" },
-                          on: { mouseleave: _vm.disableCards }
-                        },
-                        [_vm._v("Invest")]
-                      )
-                    ])
+                    _c("p", [_vm._v("Company: Zembo")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Country: Uganda")])
                   ])
-            ])
-          ])
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "col-md-6 mb-4" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-body " }, [
-          _c("div", { staticClass: "row" }, [
-            _vm._m(5),
-            _vm._v(" "),
-            !_vm.showSmartMeter
-              ? _c("div", { staticClass: "col-md-8" }, [
-                  _c(
-                    "p",
-                    { staticStyle: { "border-bottom": "3px solid #3e4494" } },
-                    [
+                : _c("div", { staticClass: "col-md-8" }, [
+                    _c("p", [_vm._v("Company: Zembo")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Country: Uganda")]),
+                    _vm._v(" "),
+                    _c("p", [
                       _vm._v(
-                        "\n              Asset of leasing of Smart Meters to support.\n              "
+                        "Zembo provides affordable electric motorcycles for motorcycle taxi drivers in Africa, the Company\n              has already 100 motorbikes on site in Kampala, Uganda. The Company leases its motorbikes to taxi\n              drivers in a lease-to-own contract over 24 months for 60000 UGX per week."
                       )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Company: Untapped")]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Country: Kenya")])
-                ])
-              : _c("div", { staticClass: "col-md-8" }, [
-                  _c("p", [_vm._v("Company: Untapped")]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Country: Kenya")]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Quality water walking distance form home")])
-                ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-12" }, [
-              !_vm.showSmartMeter
-                ? _c("div", { staticClass: "card" }, [
-                    _c("div", { staticClass: "card-body" }, [
-                      _c("div", { staticClass: "col-12" }, [
-                        _c("div", { staticClass: "row" }, [
-                          _vm._m(6),
-                          _vm._v(" "),
-                          _vm._m(7),
-                          _vm._v(" "),
-                          _vm._m(8),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "col-12" }, [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-custom btn-block btn-lg",
-                                on: {
-                                  mouseenter: _vm.showSmartMeterCard,
-                                  mouseleave: _vm.disableCards,
-                                  click: _vm.showSmartMeterCard
-                                }
-                              },
-                              [
-                                _vm._v(
-                                  "\n                        See Details\n                      "
-                                )
-                              ]
-                            )
+                    ])
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-12" }, [
+                !_vm.showMotorbikeDetails
+                  ? _c("div", { staticClass: "card" }, [
+                      _c("div", { staticClass: "card-body" }, [
+                        _c("div", { staticClass: "col-12" }, [
+                          _c("div", { staticClass: "row" }, [
+                            _vm._m(1),
+                            _vm._v(" "),
+                            _vm._m(2),
+                            _vm._v(" "),
+                            _vm._m(3),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-12" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "btn btn-custom btn-block btn-lg",
+                                  on: {
+                                    click: _vm.showMotorbike,
+                                    mouseenter: _vm.showMotorbike,
+                                    mouseleave: _vm.disableCards
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                        See Details\n                      "
+                                  )
+                                ]
+                              )
+                            ])
                           ])
                         ])
                       ])
                     ])
-                  ])
-                : _c("div", [
-                    _vm._m(9),
+                  : _c("div", [
+                      _vm._m(4),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-custom btn-block btn-lg",
+                            attrs: { href: "/register" },
+                            on: { mouseleave: _vm.disableCards }
+                          },
+                          [_vm._v("Invest")]
+                        )
+                      ])
+                    ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-6 mb-4" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-body " }, [
+            _c("div", { staticClass: "row" }, [
+              _vm._m(5),
+              _vm._v(" "),
+              !_vm.showSmartMeter
+                ? _c("div", { staticClass: "col-md-8" }, [
+                    _c(
+                      "p",
+                      { staticStyle: { "border-bottom": "3px solid #3e4494" } },
+                      [
+                        _vm._v(
+                          "\n              Asset of leasing of Smart Meters to support.\n              "
+                        )
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "row" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-custom btn-block btn-lg",
-                          attrs: { href: "/register" },
-                          on: { mouseleave: _vm.disableCards }
-                        },
-                        [_vm._v("Invest")]
-                      )
+                    _c("p", [_vm._v("Company: Untapped")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Country: Kenya")])
+                  ])
+                : _c("div", { staticClass: "col-md-8" }, [
+                    _c("p", [_vm._v("Company: Untapped")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Country: Kenya")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("Quality water walking distance form home")
                     ])
                   ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-12" }, [
+                !_vm.showSmartMeter
+                  ? _c("div", { staticClass: "card" }, [
+                      _c("div", { staticClass: "card-body" }, [
+                        _c("div", { staticClass: "col-12" }, [
+                          _c("div", { staticClass: "row" }, [
+                            _vm._m(6),
+                            _vm._v(" "),
+                            _vm._m(7),
+                            _vm._v(" "),
+                            _vm._m(8),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-12" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "btn btn-custom btn-block btn-lg",
+                                  on: {
+                                    mouseenter: _vm.showSmartMeterCard,
+                                    mouseleave: _vm.disableCards,
+                                    click: _vm.showSmartMeterCard
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                        See Details\n                      "
+                                  )
+                                ]
+                              )
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  : _c("div", [
+                      _vm._m(9),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-custom btn-block btn-lg",
+                            attrs: { href: "/register" },
+                            on: { mouseleave: _vm.disableCards }
+                          },
+                          [_vm._v("Invest")]
+                        )
+                      ])
+                    ])
+              ])
             ])
           ])
         ])
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = [
   function() {

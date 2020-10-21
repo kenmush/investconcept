@@ -46,6 +46,7 @@ class Investor
                 'organization' => $data['organization'],
                 'password'     => $data['password'],
         ]);
+
     }
 
     protected function request($method, $path, array $parameters = [])

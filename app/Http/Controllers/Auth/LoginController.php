@@ -42,7 +42,6 @@ class LoginController extends Controller
                 'username' => $request->email,
                 'password' => $request->password
         ];
-
         try {
             $userFromAPI = (new Investor())->investorLogin($data);
 

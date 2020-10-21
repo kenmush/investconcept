@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row" @mouseleave="disableCards">
     <div class="col-md-6 mb-4">
       <div class="card">
         <div class="card-body ">
