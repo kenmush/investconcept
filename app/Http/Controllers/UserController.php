@@ -14,6 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
+
         return view('userprofile');
     }
 
@@ -46,6 +47,7 @@ class UserController extends Controller
      */
     public function show( $user)
     {
+        return back();
         return view('userprofile',[
                 'name' => $user
         ]);
