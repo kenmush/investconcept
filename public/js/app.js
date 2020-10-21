@@ -2431,6 +2431,7 @@ var map = '';
       map.resize();
     });
     this.categoryId = 1;
+    this.getAssetCoordinates();
   },
   created: function created() {}
 });
