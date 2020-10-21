@@ -151,7 +151,8 @@ export default {
                   ],
                   'text-offset': [0, 1.25],
                   'text-anchor': 'top'
-                }
+                },
+
               });
             }
         );

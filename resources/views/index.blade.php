@@ -281,7 +281,7 @@
                 </div>
             </div>
         </div>
-        <div class="banner" style="padding-bottom: 253.5px;" id="simulateimpact">
+        <div class="banner" style="padding-bottom: 253.5px;padding-top: 0 !important;" id="simulateimpact">
             <div class="container">
                 <div class="row justify-content-xl-between justify-content-lg-between justify-content-md-center justify-content-sm-center">
 

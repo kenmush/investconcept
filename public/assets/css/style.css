@@ -870,6 +870,7 @@ ul {
   top: 0;
   width: 100%;
   height: 100%;
+
   background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
   background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
   z-index: -1;
