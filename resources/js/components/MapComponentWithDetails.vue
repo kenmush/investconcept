@@ -2,15 +2,14 @@
   <div class="row" style="padding-top: 13px">
     <div class="col-md-10">
       <div class="shadow"
-           style="z-index:9999 ;position: absolute;margin-top:80px; margin-left:26px;height: 160px; width:20rem;">
+           style="z-index:9999 ;position: absolute;margin-top:80px; margin-left:26px; width:20rem;">
         <div class="card">
           <div class="card-title">
-            <i class="fa fa-spinner fa-spin"></i>
           </div>
           <div class="card-body">
             <!--Label: Type, Attributes:type -->
             <div class="form-group">
-              <label for="type">Type <i class="fa fa-spinner fa-spin"></i></label>
+              <label for="type">Type</label>
               <select type="text" class="form-control form-control-sm" id="type"
                       v-model="categoryId"
                       aria-describedby="type-help"
@@ -34,19 +33,7 @@
               </div>
               <!--Label: Return, Attributes:return -->
               <!--Label: Returns, Attributes:returns -->
-              <div class="form-group">
-                <label for="returns">Returns </label>
 
-                <select type="text" class="form-control" id="returns" v-model="returns"
-                        aria-describedby="returns-help"
-                        :class="[errors.returns ? 'is-invalid': '',!errors.returns && Object.keys(errors).length > 1 ? 'is-valid': '']"
-                         required>
-                  <option value="returns" selected>10% Return</option>
-                </select>
-                <div class="invalid-feedback" v-if="errors.returns">
-                  {{ errors.returns.toString() }}
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -93,7 +80,7 @@ export default {
       categoryId: '',
       errors: '',
       returns: '',
-      country: '',
+      country: 'Kenya',
       assets: '',
       loading: false,
       description: '',
@@ -248,6 +235,7 @@ export default {
       mapDiv.style.height = '100%';
       map.resize();
     });
+    this.categoryId = 1;
   },
   created() {
   }

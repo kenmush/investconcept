@@ -2271,19 +2271,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var mapboxgl = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ "./node_modules/mapbox-gl/dist/mapbox-gl.js");
 
 var map = '';
@@ -2293,7 +2280,7 @@ var map = '';
       categoryId: '',
       errors: '',
       returns: '',
-      country: '',
+      country: 'Kenya',
       assets: '',
       loading: false,
       description: '',
@@ -2443,6 +2430,7 @@ var map = '';
       mapDiv.style.height = '100%';
       map.resize();
     });
+    this.categoryId = 1;
   },
   created: function created() {}
 });
@@ -44407,17 +44395,16 @@ var render = function() {
               position: "absolute",
               "margin-top": "80px",
               "margin-left": "26px",
-              height: "160px",
               width: "20rem"
             }
           },
           [
             _c("div", { staticClass: "card" }, [
-              _vm._m(0),
+              _c("div", { staticClass: "card-title" }),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(1),
+                  _c("label", { attrs: { for: "type" } }, [_vm._v("Type")]),
                   _vm._v(" "),
                   _c(
                     "select",
@@ -44534,72 +44521,6 @@ var render = function() {
                           )
                         ])
                       : _vm._e()
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", { attrs: { for: "returns" } }, [
-                      _vm._v("Returns ")
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.returns,
-                            expression: "returns"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: [
-                          _vm.errors.returns ? "is-invalid" : "",
-                          !_vm.errors.returns &&
-                          Object.keys(_vm.errors).length > 1
-                            ? "is-valid"
-                            : ""
-                        ],
-                        attrs: {
-                          type: "text",
-                          id: "returns",
-                          "aria-describedby": "returns-help",
-                          required: ""
-                        },
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.returns = $event.target.multiple
-                              ? $$selectedVal
-                              : $$selectedVal[0]
-                          }
-                        }
-                      },
-                      [
-                        _c(
-                          "option",
-                          { attrs: { value: "returns", selected: "" } },
-                          [_vm._v("10% Return")]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _vm.errors.returns
-                      ? _c("div", { staticClass: "invalid-feedback" }, [
-                          _vm._v(
-                            "\n                " +
-                              _vm._s(_vm.errors.returns.toString()) +
-                              "\n              "
-                          )
-                        ])
-                      : _vm._e()
                   ])
                 ])
               ])
@@ -44657,7 +44578,7 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                _vm._m(2),
+                _vm._m(0),
                 _vm._v(" "),
                 _c("div", { staticStyle: { "border-top": "57px" } }, [
                   _c(
@@ -44683,7 +44604,7 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                _vm._m(3)
+                _vm._m(1)
               ])
             ])
           ]
@@ -44693,23 +44614,6 @@ var render = function() {
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-title" }, [
-      _c("i", { staticClass: "fa fa-spinner fa-spin" })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { attrs: { for: "type" } }, [
-      _vm._v("Type "),
-      _c("i", { staticClass: "fa fa-spinner fa-spin" })
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
