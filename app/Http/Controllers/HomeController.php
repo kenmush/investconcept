@@ -24,7 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         $assets = (new Investor())->getAssetCategories();
-        return view('myassets', [
+        return view('portfolio', [
                 'assets' => collect($assets)->toArray()
         ]);
     }

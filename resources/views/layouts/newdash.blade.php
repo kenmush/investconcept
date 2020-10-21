@@ -137,7 +137,8 @@
                                      width="20" alt=""/>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a href="" class="dropdown-item ai-icon">
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" class="dropdown-item ai-icon">
                                     <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger"
                                          width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -147,6 +148,9 @@
                                     </svg>
                                     <span class="ml-2">Logout </span>
                                 </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             </div>
                         </li>
                     </ul>
