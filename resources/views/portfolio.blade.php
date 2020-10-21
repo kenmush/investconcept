@@ -48,7 +48,7 @@
                     <div class="card-body p-4">
                         <div class="media ai-icon">
 									<span class="mr-3 bgl-primary text-primary">
-								<i style="    color: #FF8377;" class="fa fa-dollar"></i>
+								<i style="    color: #FF8377;" class="fa fa-percent"></i>
 									</span>
                             <div class="media-body">
                                 <h3 class="mb-0 text-black">+<span class="counter ml-0">1,450</span>$</h3>
@@ -64,7 +64,7 @@
                     <div class="card-body p-4">
                         <div class="media ai-icon">
 									<span class="mr-3 bgl-primary text-primary">
-										 <i style="    color: #FF8377;" class="fa fa-dollar"></i>
+										 <i style="    color: #FF8377;" class="fa fa-money"></i>
 									</span>
                             <div class="media-body">
                                 <h3 class="mb-0 text-black"><span class="counter ml-0">150,600</span></h3>
