@@ -2621,6 +2621,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "assets",
   data: function data() {
@@ -2631,6 +2633,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    disableCards: function disableCards() {
+      this.showSmartMeter = false;
+      this.showMotorbikeDetails = false;
+    },
     showMotorbike: function showMotorbike() {
       this.showMotorbikeDetails = !this.showMotorbikeDetails;
       this.showSmartMeter = false;
@@ -44816,7 +44822,8 @@ var render = function() {
                                 staticClass: "btn btn-custom btn-block btn-lg",
                                 on: {
                                   click: _vm.showMotorbike,
-                                  mouseenter: _vm.showMotorbike
+                                  mouseenter: _vm.showMotorbike,
+                                  mouseleave: _vm.disableCards
                                 }
                               },
                               [
@@ -44830,7 +44837,21 @@ var render = function() {
                       ])
                     ])
                   ])
-                : _c("div", [_vm._m(4), _vm._v(" "), _vm._m(5)])
+                : _c("div", [
+                    _vm._m(4),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-custom btn-block btn-lg",
+                          attrs: { href: "/register" },
+                          on: { mouseleave: _vm.disableCards }
+                        },
+                        [_vm._v("Invest")]
+                      )
+                    ])
+                  ])
             ])
           ])
         ])
@@ -44841,7 +44862,7 @@ var render = function() {
       _c("div", { staticClass: "card" }, [
         _c("div", { staticClass: "card-body " }, [
           _c("div", { staticClass: "row" }, [
-            _vm._m(6),
+            _vm._m(5),
             _vm._v(" "),
             !_vm.showSmartMeter
               ? _c("div", { staticClass: "col-md-8" }, [
@@ -44875,11 +44896,11 @@ var render = function() {
                     _c("div", { staticClass: "card-body" }, [
                       _c("div", { staticClass: "col-12" }, [
                         _c("div", { staticClass: "row" }, [
+                          _vm._m(6),
+                          _vm._v(" "),
                           _vm._m(7),
                           _vm._v(" "),
                           _vm._m(8),
-                          _vm._v(" "),
-                          _vm._m(9),
                           _vm._v(" "),
                           _c("div", { staticClass: "col-12" }, [
                             _c(
@@ -44888,6 +44909,7 @@ var render = function() {
                                 staticClass: "btn btn-custom btn-block btn-lg",
                                 on: {
                                   mouseenter: _vm.showSmartMeterCard,
+                                  mouseleave: _vm.disableCards,
                                   click: _vm.showSmartMeterCard
                                 }
                               },
@@ -44902,7 +44924,21 @@ var render = function() {
                       ])
                     ])
                   ])
-                : _c("div", [_vm._m(10), _vm._v(" "), _vm._m(11)])
+                : _c("div", [
+                    _vm._m(9),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-custom btn-block btn-lg",
+                          attrs: { href: "/register" },
+                          on: { mouseleave: _vm.disableCards }
+                        },
+                        [_vm._v("Invest")]
+                      )
+                    ])
+                  ])
             ])
           ])
         ])
@@ -44995,21 +45031,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-custom btn-block btn-lg",
-          attrs: { href: "/register" }
-        },
-        [_vm._v("Invest")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-4" }, [
       _c("img", {
         staticClass: "rounded float-left img-thumbnail",
@@ -45085,21 +45106,6 @@ var staticRenderFns = [
         ])
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-custom btn-block btn-lg",
-          attrs: { href: "/register" }
-        },
-        [_vm._v("Invest")]
-      )
-    ])
   }
 ]
 render._withStripped = true

@@ -188,10 +188,11 @@
 
         <!-- banner begin -->
         <div class="cta">
-            <div class="container">
+            <div class="container mb-5">
                 <div class="cta-bg">
                     <div class="row justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-center">
-                        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-10 d-xl-flex d-lg-flex d-block align-items-center">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-xl-flex d-lg-flex d-block
+                        align-items-center">
                             <div class="cta-text">
                                 <h2>Grow your wealth with others. </h2>
                                 <p>Contribute to emerging markets development while making a healthy return</p>
@@ -199,15 +200,18 @@
                                     decades. Alievating poverty and creating value for investors go hand-in-hand.
 
                                 </p>
-                                <a href="#" class="btn-hyipox-medium cta-btn">Simulate your Impact</a>
+                                <a href="#simulateimpact" class="btn-hyipox-medium cta-btn">Simulate your Impact</a>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 d-xl-flex d-lg-flex justify-content-end d-block align-items-center">
-                            <div class="part-video">
-                                <img src="assets/img/video.jpg" alt="">
-                                <button data-video-id="vJ3ZumBIgAg" class="play-video js-video-button"><i
-                                            class="fas fa-play"></i></button>
-                            </div>
+                        <div class="col-xl-6 shadow col-lg-6 d-xl-flex d-lg-flex justify-content-end d-block
+                        align-items-center">
+                            <video style="border-radius: 10px" poster="{{asset('trialimae.jpg')}}" width="100%" height="100%"
+                                   controls>
+                                <source src="movie.mp4" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+
                         </div>
                     </div>
                 </div>
@@ -254,7 +258,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-center justify-content-sm-center">
-                        <a href="#" class="btn-hyipox-medium cta-btn">Get Started</a>
+                        <a href="{{ route('register') }}" class="btn-hyipox-medium cta-btn">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -302,9 +306,9 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-lg-8">
                         <div class="section-title">
-                                <span class="sub-title">
-                                    Untapped Capital
-                                </span>
+{{--                                <span class="sub-title">--}}
+{{--                                    Untapped Capital--}}
+{{--                                </span>--}}
                             <h2>
                                 <span class="special">Our Assets</span>
                             </h2>

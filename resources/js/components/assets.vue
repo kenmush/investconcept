@@ -44,6 +44,7 @@
                       <div class="col-12">
                         <button class="btn btn-custom btn-block btn-lg" @click="showMotorbike"
                                 @mouseenter="showMotorbike"
+                                @mouseleave="disableCards"
                         >
                           See Details
                         </button>
@@ -71,7 +72,7 @@
 
                 </table>
                 <div class="row">
-                  <a href="/register" class="btn btn-custom btn-block btn-lg">Invest</a>
+                  <a href="/register" class="btn btn-custom btn-block btn-lg"    @mouseleave="disableCards">Invest</a>
                 </div>
               </div>
             </div>
@@ -122,6 +123,7 @@
                       <div class="col-12">
                         <button class="btn btn-custom btn-block btn-lg"
                                 @mouseenter="showSmartMeterCard"
+                                @mouseleave="disableCards"
                                 @click="showSmartMeterCard">
                           See Details
                         </button>
@@ -149,7 +151,7 @@
 
                 </table>
                 <div class="row">
-                  <a href="/register" class="btn btn-custom btn-block btn-lg">Invest</a>
+                  <a href="/register" class="btn btn-custom btn-block btn-lg" @mouseleave="disableCards">Invest</a>
                 </div>
               </div>
             </div>
@@ -172,6 +174,10 @@ export default {
     }
   },
   methods: {
+    disableCards() {
+      this.showSmartMeter = false;
+      this.showMotorbikeDetails = false;
+    },
     showMotorbike() {
       this.showMotorbikeDetails = !this.showMotorbikeDetails;
       this.showSmartMeter = false;
