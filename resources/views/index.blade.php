@@ -222,7 +222,7 @@
                         <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                             <div class="single-system">
                                 <div class="part-icon">
-                                    <img src="assets/img/svg/add-user.svg" alt="">
+                                    <img src="{{ asset('impact.svg') }}" alt="">
                                 </div>
                                 <div class="part-text">
                                     <h4 class="title">Impactful</h4>
@@ -233,7 +233,7 @@
                         <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                             <div class="single-system">
                                 <div class="part-icon">
-                                    <img src="assets/img/svg/coin.svg" alt="">
+                                    <img src="{{ asset('transparent.svg') }}" alt="">
                                 </div>
                                 <div class="part-text">
                                     <h4 class="title">Transparent</h4>
@@ -244,7 +244,7 @@
                         <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                             <div class="single-system">
                                 <div class="part-icon">
-                                    <img src="assets/img/svg/money-bag.svg" alt="">
+                                    <img src="{{ asset('attractive.svg') }}" alt="">
                                 </div>
                                 <div class="part-text">
                                     <h4 class="title">Attractive</h4>

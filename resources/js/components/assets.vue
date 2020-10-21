@@ -42,7 +42,9 @@
                         <p>18 Month term</p>
                       </div>
                       <div class="col-12">
-                        <button class="btn btn-primary btn-block btn-lg" @click="showMotorbike">
+                        <button class="btn btn-custom btn-block btn-lg" @click="showMotorbike"
+                                @mouseenter="showMotorbike"
+                        >
                           See Details
                         </button>
                       </div>
@@ -69,7 +71,7 @@
 
                 </table>
                 <div class="row">
-                  <a href="/register" class="btn btn-primary btn-block">Invest</a>
+                  <a href="/register" class="btn btn-custom btn-block btn-lg">Invest</a>
                 </div>
               </div>
             </div>
@@ -87,7 +89,9 @@
                    alt="">
             </div>
             <div class="col-md-8" v-if="!showSmartMeter">
-              <p style="border-bottom: 3px solid #3e4494">Smart Meters</p>
+              <p style="border-bottom: 3px solid #3e4494">
+                Asset of leasing of Smart Meters to support.
+                </p>
               <p>Company: Untapped</p>
               <p>Country: Kenya</p>
             </div>
@@ -116,7 +120,9 @@
                         <p>18 Month term</p>
                       </div>
                       <div class="col-12">
-                        <button class="btn btn-primary btn-block btn-lg" @click="showSmartMeterCard">
+                        <button class="btn btn-custom btn-block btn-lg"
+                                @mouseenter="showSmartMeterCard"
+                                @click="showSmartMeterCard">
                           See Details
                         </button>
                       </div>
@@ -143,7 +149,7 @@
 
                 </table>
                 <div class="row">
-                  <a href="/register" class="btn btn-primary btn-block">Invest</a>
+                  <a href="/register" class="btn btn-custom btn-block btn-lg">Invest</a>
                 </div>
               </div>
             </div>
@@ -168,14 +174,25 @@ export default {
   methods: {
     showMotorbike() {
       this.showMotorbikeDetails = !this.showMotorbikeDetails;
+      this.showSmartMeter = false;
+
     },
     showSmartMeterCard() {
+      this.showMotorbikeDetails = false;
       this.showSmartMeter = !this.showSmartMeter;
     }
   },
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.btn-custom {
+  color: #fff;
+  background-color: #FF8377;
+  border-color: rgba(255, 131, 119, .8);
+}
 
+.btn-custom:hover {
+  background-color: darken(#FF8377, 30%);
+}
 </style>

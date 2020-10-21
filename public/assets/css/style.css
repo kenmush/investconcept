@@ -106,8 +106,8 @@
   display: inline-block;
   height: 50px;
   padding: 0 30px;
-  background: -o-linear-gradient(109deg, #8e54e9 10%, #4776e6);
-  background: linear-gradient(-19deg, #8e54e9 10%, #4776e6);
+  background: -o-linear-gradient(109deg, #FF8377 10%, #FF8377);
+  background: linear-gradient(-19deg, #FF8377 10%, #FF8377);
   font-weight: 500;
   font-size: 16px;
   line-height: 50px;
@@ -126,8 +126,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
-  background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
+  background: -o-linear-gradient(109deg, #ACD5E7 10%, #FF8478);
+  background: linear-gradient(-19deg, #ACD5E7 10%, #FF8478);
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -187,7 +187,8 @@
   font-weight: 700;
   font-family: "Kalam", cursive;
   font-style: italic;
-  background: -webkit-linear-gradient(-19deg, #8e54e9 10%, #4776e6);
+  background: -webkit-linear-gradient(-19deg, #ACD5E7 10%, #FF8478);
+  /*background: -webkit-linear-gradient(-19deg, #8e54e9 10%, #4776e6);*/
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -298,8 +299,10 @@ span.special {
   top: 0;
   width: 100%;
   height: 100%;
-  background: -o-linear-gradient(109deg, #8e54e9 10%, #4776e6);
-  background: linear-gradient(-19deg, #8e54e9 10%, #4776e6);
+  background: -o-linear-gradient(109deg, #ACD5E7 10%, #FF8478);
+  /*background: linear-gradient(-19deg, #8e54e9 10%, #4776e6);*/
+  background: -webkit-linear-gradient(-19deg, #ACD5E7 10%, #FF8478);
+
   z-index: -1;
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
@@ -520,8 +523,8 @@ ul {
   position: fixed;
   width: 100%;
   z-index: 5;
-  background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
-  background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
+  background: -o-linear-gradient(109deg, #898681 10%, #898681);
+  background: linear-gradient(-19deg, #898681 10%, #898681);
   top: 0;
   left: 0;
   border-bottom-color: transparent;
@@ -592,8 +595,8 @@ ul {
 }
 .header .bottom .mainmenu .navbar .navbar-nav .nav-item.join-now-btn a {
   background: #fff;
-  background: -o-linear-gradient(109deg, #8e54e9 10%, #4776e6);
-  background: linear-gradient(-19deg, #8e54e9 10%, #4776e6);
+  background: -o-linear-gradient(-19deg, #FF8377 10%, #FF8377);
+  background: linear-gradient(-19deg, #FF8377 10%, #FF8377);
   margin-right: 0;
   padding: 0 40px;
   height: 50px;
@@ -736,7 +739,7 @@ ul {
     banner
 ==========================================*/
 .banner {
-  padding: 170px 0 0;
+  padding: 100px 0 0;
   position: relative;
   background: url("../img/banner-bg.jpg") center center no-repeat;
   background-size: cover;
@@ -749,8 +752,8 @@ ul {
   top: 0;
   width: 100%;
   height: 100%;
-  background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
-  background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
+  background: -o-linear-gradient(109deg, #FF8377 10%, #ffdf9d);
+  background: linear-gradient(-19deg, #FF8377 10%, #ffdf9d);
   background: url("../img/banner.png") center center no-repeat;
   background-size: cover;
   z-index: -1;
@@ -1157,7 +1160,8 @@ ul {
   font-weight: 700;
   font-family: "Kalam", cursive;
   font-style: italic;
-  background: -webkit-linear-gradient(-19deg, #8e54e9 10%, #4776e6);
+  /*background: -webkit-linear-gradient(-19deg, #8e54e9 10%, #4776e6);*/
+  background: -webkit-linear-gradient(-19deg, #ACD5E7 10%, #FF8478);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1467,13 +1471,14 @@ ul {
 }
 
 .cta {
-  background: url(../img/cta-img.jpg) center center no-repeat;
+  background: url(https://www.untapped-inc.com/uploads/1/3/1/9/13198181/background-images/1712195187.jpg) center center no-repeat;
   background-size: cover;
   padding: 120px 0;
   position: relative;
   z-index: 2;
-  background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
-  background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
+
+  /*background: -o-linear-gradient(-19deg, #165b6b 10%, #2c2f61);*/
+  /*background: linear-gradient(-19deg, #165b6b 10%, #2c2f61);*/
 }
 .cta:after {
   position: absolute;
@@ -1510,8 +1515,8 @@ ul {
   line-height: 30px;
 }
 .cta .cta-bg .cta-text .cta-btn {
-  background: #fff;
-  color: #8e54e9;
+  background: #FF8377;
+  color: #fff;
   font-weight: 600;
   font-size: 18px;
   padding: 0 40px;
@@ -1581,8 +1586,8 @@ ul {
   right: 0px;
   top: 0px;
   bottom: 0px;
-  background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
-  background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
+  background: -o-linear-gradient(109deg, #165b6b 10%, #2c2f61);
+  background: linear-gradient(-19deg, #165b6b 10%, #2c2f61);;
   border-radius: 50%;
   z-index: -1;
 }
