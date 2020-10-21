@@ -132,7 +132,7 @@
                                                          src="{{ asset('untapped/mobileirrigation.svg') }}"
                                                          alt="">
                                     </td>
-                                    <td><a href="">Mobile
+                                    <td><a href="/assets/mobile-irrigation">Mobile
                                             Irrigation</a> <!----> <!----> <!----></td>
                                     <td>1</td>
                                     <td>1000 $</td>

@@ -169,7 +169,7 @@
         <div class="deznav-scroll">
             <ul class="metismenu" id="menu">
                 <li>
-                    <a class="has-arrow ai-icon" href="#" aria-expanded="false">
+                    <a class="has-arrow ai-icon" href="{{ route('home') }}" aria-expanded="false">
                         <i class="flaticon-381-networking"></i>
                         <span class="nav-text">Dashboard</span>
                     </a>
