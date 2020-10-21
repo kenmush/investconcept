@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Asset;
+use App\Services\Investor;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
@@ -10,11 +11,10 @@ class PortfolioController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $assets = Asset::all();
+        $assets = (new Investor())->getAssetCategories();
         return view('portfolio',compact('assets'));
     }
 
