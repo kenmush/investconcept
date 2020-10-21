@@ -222,7 +222,7 @@
 ***********************************-->
 
 
-</div>
+
 <!--**********************************
     Main wrapper end
 ***********************************-->
@@ -250,5 +250,6 @@
 <!-- Dashboard 1 -->
 <script src="{{ asset('backend/js/dashboard/dashboard-1.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>
