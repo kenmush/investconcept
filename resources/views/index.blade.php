@@ -18,11 +18,11 @@
                     </div>
                     <div class="col-xl-6 shadow col-lg-6 d-xl-flex d-lg-flex justify-content-end d-block
                         align-items-center">
-                        <video style="border-radius: 10px" poster="{{asset('trialimae.jpg')}}" width="100%"
+                        <video style="border-radius: 10px" poster="{{asset('trialimae.jpg')}}" autoplay width="100%"
                                height="100%"
                                controls>
-                            <source src="movie.mp4" type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
+                            <source src="{{ asset('nest.mp4') }}" type="video/mp4">
+                            <source src="{{ asset('nest.mp4') }}" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
 
