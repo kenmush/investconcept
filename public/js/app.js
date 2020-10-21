@@ -2099,7 +2099,7 @@ var map = '';
       var _this = this;
 
       this.loading = true;
-      var url = "http://localhost:3000";
+      var url = "https://invest.untapped-inc.com/";
       var points = [];
       var Self = this;
       axios.get("/api/getAllAssets/".concat(this.categoryId)).then(function (resp) {
@@ -2312,7 +2312,7 @@ var map = '';
       var _this = this;
 
       this.loading = true;
-      var url = "http://localhost:3000";
+      var url = "https://invest.untapped-inc.com/";
       var points = [];
       var Self = this;
       axios.get("/api/getAllAssets/".concat(this.categoryId)).then(function (resp) {
