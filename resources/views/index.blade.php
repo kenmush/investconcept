@@ -11,16 +11,15 @@
                         <div class="cta-text">
                             <h2>Grow your wealth with others. </h2>
                             <p>Contribute to emerging markets development while making a healthy return</p>
-                            <p class="marked">Emerging markerts offer the strongest investor returns in the coming
-                                decades. Alievating poverty and creating value for investors go hand-in-hand.
-
-                            </p>
+                            <p class="marked">Emerging markets offer the strongest investor returns in the coming
+                                decades. Alleviating poverty and creating value for investors go hand-in-hand.</p>
                             <a href="#simulateimpact" class="btn-hyipox-medium cta-btn">Simulate your Impact</a>
                         </div>
                     </div>
                     <div class="col-xl-6 shadow col-lg-6 d-xl-flex d-lg-flex justify-content-end d-block
                         align-items-center">
-                        <video style="border-radius: 10px" poster="{{asset('trialimae.jpg')}}" width="100%" height="100%"
+                        <video style="border-radius: 10px" poster="{{asset('trialimae.jpg')}}" width="100%"
+                               height="100%"
                                controls>
                             <source src="movie.mp4" type="video/mp4">
                             <source src="movie.ogg" type="video/ogg">
@@ -88,7 +87,7 @@
         <div class="container">
             <div class="cta-bg">
                 <div class="row text-center justify-content-center mb-4">
-                    <a href="/register"  class="btn-hyipox-medium cta-btn" >Get Started</a>
+                    <a href="/register" class="btn-hyipox-medium cta-btn">Get Started</a>
                 </div>
                 <div class="row justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-center">
 

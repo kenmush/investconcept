@@ -1,5 +1,6 @@
 <?php
 
+use App\Asset;
 use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +42,14 @@ Route::group(['prefix' => 'assets', 'middleware' => 'auth'], function () {
     Route::resource('myassets', 'AssetsController');
 
     Route::resource('portfolio', 'PortfolioController');
+
+    Route::get('/dash', function () {
+//        $user = urlencode(request()->user()->name);
+//        $image = Http::get("https://ui-avatars.com/api/?name={$user}&color=000000&background=FF8377&rounded=true");
+//        $Ima
+        $assets = Asset::all();
+        return view('dash',compact('assets'));
+    });
 });
 
 Route::view('signin', 'login');
