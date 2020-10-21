@@ -67,7 +67,7 @@
 										 <i style="    color: #FF8377;" class="fa fa-money"></i>
 									</span>
                             <div class="media-body">
-                                <h3 class="mb-0 text-black"><span class="counter ml-0">150,600</span></h3>
+                                <h3 class="mb-0 text-black"><span class="counter ml-0">150,600</span>$</h3>
                                 <p class="mb-0">Revenue</p>
                                 <small>GENERATED FOR ENTREPRENEUR</small>
                             </div>
