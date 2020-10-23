@@ -231,13 +231,15 @@
                             <img src="assets/img/blog/blog-1.jpg" alt="">
                         </div>
                         <div class="part-text">
-                            <a href="#" class="title">Content to be provided later</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem reiciendis voluptate
-                                eos,
-                                corrupti quasi beatae numquam quod saepe a nostrum tenetur doloribus sed quaerat
-                                nemo
-                                amet eveniet veritatis nam vero?</p>
-                            <a href="#" class="read-more-btn">read more</a>
+                            <a href="#" class="title">The Nest, A Zoom Shark Tank facilitates more than $2M in
+                                commitments for more than 20 Startups in Africa and Asia
+                            </a>
+                            <p>When the worldwide COVID19 lockdown went into effect in February 2020 the challenges of
+                                fundraising increased exponentially. Entrepreneurs, especially in emerging markets could
+                                not meet investors due to travel restrictions. Amid this uncertainty, The Nest, an
+                                online Zoom based shark tank, was born.</p>
+                            <a href="https://techpoint.africa/2020/09/28/the-nest-a-zoom-shark-tank-facilitates-more-than-2m-in-commitments-for-more-than-20-startups-in-africa-and-asia/"
+                               class="read-more-btn">read more</a>
                         </div>
                     </div>
                 </div>
@@ -247,13 +249,14 @@
                             <img src="assets/img/blog/blog-2.jpg" alt="">
                         </div>
                         <div class="part-text">
-                            <a href="#" class="title">Content to be provided later</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem reiciendis voluptate
-                                eos,
-                                corrupti quasi beatae numquam quod saepe a nostrum tenetur doloribus sed quaerat
-                                nemo
-                                amet eveniet veritatis nam vero?</p>
-                            <a href="#" class="read-more-btn">read more</a>
+                            <a href="https://medium.com/@findthenest/trailblazers-in-emerging-markets-haresh-aswani-50b747bc2856"
+                               class="title">Trailblazers In Emerging Markets- Haresh Aswani</a>
+                            <p>Haresh Aswani is the Managing Director — Africa for the Tolaram group. The Tolaram Group
+                                is a family-owned Singaporean conglomerate that started out in Indonesia in 1948 before
+                                eventually setting up in Africa where it has gone on to make it’s over $1 Bn revenue in
+                                cereals, noodles, and infrastructure and most recently fintech.</p>
+                            <a href="https://medium.com/@findthenest/trailblazers-in-emerging-markets-haresh-aswani-50b747bc2856"
+                               class="read-more-btn">read more</a>
                         </div>
                     </div>
                 </div>
@@ -263,13 +266,15 @@
                             <img src="assets/img/blog/blog-3.jpg" alt="">
                         </div>
                         <div class="part-text">
-                            <a href="#" class="title">Content to be provided later</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem reiciendis voluptate
-                                eos,
-                                corrupti quasi beatae numquam quod saepe a nostrum tenetur doloribus sed quaerat
-                                nemo
-                                amet eveniet veritatis nam vero?</p>
-                            <a href="#" class="read-more-btn">read more</a>
+                            <a href="https://medium.com/@findthenest/impact-investing-a-conversation-with-kanini-mutooni-205157f2142"
+                               class="title">Impact Investing: A Conversation With Kanini Mutooni.
+                            </a>
+                            <p>Kanini Mutooni is a Managing Director at Draper Richards Kaplan, a Venture Philanthropy
+                                institution focused on investing in global early stage entrepreneurs creating impact.
+                                She is also a Senior Adviser for Toniic, the global action network for impact investors
+                                with over 300 asset owners representing over $16b in investible wealth. </p>
+                            <a href="https://medium.com/@findthenest/impact-investing-a-conversation-with-kanini-mutooni-205157f2142"
+                               class="read-more-btn">read more</a>
                         </div>
                     </div>
                 </div>

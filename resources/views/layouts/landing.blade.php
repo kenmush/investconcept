@@ -224,18 +224,18 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#0" class="single-link">
+                                            <a href="https://twitter.com/FollowUntapped" class="single-link">
                                                 <i class="fab fa-twitter"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#0" class="single-link">
-                                                <i class="fab fa-instagram"></i>
+                                            <a href="https://www.facebook.com/UntappedGlobal" class="single-link">
+                                                <i class="fab fa-facebook"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#0" class="single-link">
-                                                <i class="fab fa-pinterest-p"></i>
+                                            <a href="https://www.instagram.com/untapped_global/" class="single-link">
+                                                <i class="fab fa-instagram"></i>
                                             </a>
                                         </li>
                                     </ul>
