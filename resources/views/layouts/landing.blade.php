@@ -219,11 +219,6 @@
                                 <div class="social-links">
                                     <ul>
                                         <li>
-                                            <a href="#0" class="single-link">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-                                        <li>
                                             <a href="https://twitter.com/FollowUntapped" class="single-link">
                                                 <i class="fab fa-twitter"></i>
                                             </a>
