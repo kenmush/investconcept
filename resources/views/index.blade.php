@@ -248,7 +248,8 @@
                 <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                     <div class="single-news">
                         <div class="part-img">
-                            <img src="https://miro.medium.com/max/563/1*6pnTRlxJEPgZwc4G0hJhsQ.jpeg" height="200px"
+                            <img src="https://miro.medium.com/max/563/1*6pnTRlxJEPgZwc4G0hJhsQ.jpeg"
+                                 style="object-fit: cover" height="200px"
                                  alt="">
                         </div>
                         <div class="part-text">
@@ -266,7 +267,8 @@
                 <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                     <div class="single-news">
                         <div class="part-img">
-                            <img src="https://miro.medium.com/max/499/1*ObqRCcBi5oN40lh6fGZ6YQ.png" alt="" height="200px">
+                            <img src="https://miro.medium.com/max/499/1*ObqRCcBi5oN40lh6fGZ6YQ.png" alt="" style="object-fit: cover"
+                                 height="200px">
                         </div>
                         <div class="part-text">
                             <a href="https://medium.com/@findthenest/impact-investing-a-conversation-with-kanini-mutooni-205157f2142"
