@@ -228,10 +228,12 @@
                 <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                     <div class="single-news">
                         <div class="part-img">
-                            <img src="assets/img/blog/blog-1.jpg" alt="">
+                            <img src="https://i1.wp.com/techpoint.africa/wp-content/uploads/2020/09/WhatsApp-Image-2020-09-28-at-8.53.59-AM.jpeg?resize=1024%2C576&ssl=1"
+                                 alt="">
                         </div>
                         <div class="part-text">
-                            <a href="#" class="title">The Nest, A Zoom Shark Tank facilitates more than $2M in
+                            <a href="https://techpoint.africa/2020/09/28/the-nest-a-zoom-shark-tank-facilitates-more-than-2m-in-commitments-for-more-than-20-startups-in-africa-and-asia/"
+                               class="title">The Nest, A Zoom Shark Tank facilitates more than $2M in
                                 commitments for more than 20 Startups in Africa and Asia
                             </a>
                             <p>When the worldwide COVID19 lockdown went into effect in February 2020 the challenges of
@@ -246,7 +248,8 @@
                 <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                     <div class="single-news">
                         <div class="part-img">
-                            <img src="assets/img/blog/blog-2.jpg" alt="">
+                            <img src="https://miro.medium.com/max/563/1*6pnTRlxJEPgZwc4G0hJhsQ.jpeg" height="200px"
+                                 alt="">
                         </div>
                         <div class="part-text">
                             <a href="https://medium.com/@findthenest/trailblazers-in-emerging-markets-haresh-aswani-50b747bc2856"
@@ -263,7 +266,7 @@
                 <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                     <div class="single-news">
                         <div class="part-img">
-                            <img src="assets/img/blog/blog-3.jpg" alt="">
+                            <img src="https://miro.medium.com/max/499/1*ObqRCcBi5oN40lh6fGZ6YQ.png" alt="" height="200px">
                         </div>
                         <div class="part-text">
                             <a href="https://medium.com/@findthenest/impact-investing-a-conversation-with-kanini-mutooni-205157f2142"
