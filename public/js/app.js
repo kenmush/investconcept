@@ -44686,19 +44686,15 @@ var render = function() {
                     _c(
                       "p",
                       { staticStyle: { "border-bottom": "3px solid #3e4494" } },
-                      [
-                        _vm._v(
-                          "Asset of leasing of motorbikes to support\n              mototaxis in Uganda."
-                        )
-                      ]
+                      [_vm._v("Electric motorbikes for moto taxi")]
                     ),
                     _vm._v(" "),
-                    _c("p", [_vm._v("Company: Zembo")]),
+                    _c("p", [_vm._v("Local Partner: Zembo Bikes")]),
                     _vm._v(" "),
                     _c("p", [_vm._v("Country: Uganda")])
                   ])
                 : _c("div", { staticClass: "col-md-8" }, [
-                    _c("p", [_vm._v("Company: Zembo")]),
+                    _c("p", [_vm._v("Local Partner: Zembo Bikes")]),
                     _vm._v(" "),
                     _c("p", [_vm._v("Country: Uganda")]),
                     _vm._v(" "),
@@ -44780,14 +44776,14 @@ var render = function() {
                       { staticStyle: { "border-bottom": "3px solid #3e4494" } },
                       [
                         _vm._v(
-                          "\n              Asset of leasing of Smart Meters to support.\n              "
+                          "\n              Petrol motorbikes for moto taxi\n            "
                         )
                       ]
                     ),
                     _vm._v(" "),
-                    _c("p", [_vm._v("Company: Untapped")]),
+                    _c("p", [_vm._v("Local partner: Asaak")]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("Country: Kenya")])
+                    _c("p", [_vm._v("Country: Uganda")])
                   ])
                 : _c("div", { staticClass: "col-md-8" }, [
                     _c("p", [_vm._v("Company: Untapped")]),
@@ -44867,11 +44863,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-md-4" }, [
       _c("img", {
         staticClass: "rounded float-left img-thumbnail",
-        attrs: {
-          src:
-            "https://image.made-in-china.com/202f0j00CysEiJcznHgr/125cc-150cc-off-Road-Motorbike-TM125-2.jpg",
-          alt: ""
-        }
+        attrs: { src: "/motorbikes.jpeg", alt: "" }
       })
     ])
   },
@@ -44880,9 +44872,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-4" }, [
-      _c("p", [_vm._v("$500")]),
+      _c("p", [_vm._v("Minimum Investment")]),
       _vm._v(" "),
-      _c("p", [_vm._v("Minimum Investment")])
+      _c("p", [_vm._v("1 100$")])
     ])
   },
   function() {
@@ -44890,9 +44882,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-4" }, [
-      _c("p", [_vm._v("9%")]),
+      _c("p", [_vm._v("Annual Revenue created")]),
       _vm._v(" "),
-      _c("p", [_vm._v("APY")])
+      _c("p", [_vm._v("3 600$")])
     ])
   },
   function() {
@@ -44900,9 +44892,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-4" }, [
-      _c("p", [_vm._v("18")]),
+      _c("p", [_vm._v("Money Multiplier")]),
       _vm._v(" "),
-      _c("p", [_vm._v("18 Month term")])
+      _c("p", [_vm._v("3.6x")])
     ])
   },
   function() {
@@ -44947,11 +44939,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-md-4" }, [
       _c("img", {
         staticClass: "rounded float-left img-thumbnail",
-        attrs: {
-          src:
-            "https://www.prepayment-meter.com/photo/pl14870579-smart_gprs_remote_water_meter_reading_muti_jet_residential_water_meter.jpg",
-          alt: ""
-        }
+        attrs: { src: "/motorbike2.jpeg", alt: "" }
       })
     ])
   },
@@ -44960,9 +44948,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-4" }, [
-      _c("p", [_vm._v("$500")]),
+      _c("p", [_vm._v("Minimum Investment")]),
       _vm._v(" "),
-      _c("p", [_vm._v("Minimum Investment")])
+      _c("p", [_vm._v("1 100$")])
     ])
   },
   function() {
@@ -44970,9 +44958,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-4" }, [
-      _c("p", [_vm._v("9%")]),
+      _c("p", [_vm._v("Annual Revenue created")]),
       _vm._v(" "),
-      _c("p", [_vm._v("APY")])
+      _c("p", [_vm._v("3 000$")])
     ])
   },
   function() {
@@ -44980,9 +44968,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-4" }, [
-      _c("p", [_vm._v("18")]),
+      _c("p", [_vm._v("Money Multiplier")]),
       _vm._v(" "),
-      _c("p", [_vm._v("18 Month term")])
+      _c("p", [_vm._v("3.0x")])
     ])
   },
   function() {

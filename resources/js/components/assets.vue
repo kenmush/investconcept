@@ -6,17 +6,16 @@
           <div class="row">
             <div class="col-md-4">
               <img class="rounded float-left img-thumbnail"
-                   src="https://image.made-in-china.com/202f0j00CysEiJcznHgr/125cc-150cc-off-Road-Motorbike-TM125-2.jpg"
+                   src="/motorbikes.jpeg"
                    alt="">
             </div>
             <div class="col-md-8" v-if="!showMotorbikeDetails">
-              <p style="border-bottom: 3px solid #3e4494">Asset of leasing of motorbikes to support
-                mototaxis in Uganda.</p>
-              <p>Company: Zembo</p>
+              <p style="border-bottom: 3px solid #3e4494">Electric motorbikes for moto taxi</p>
+              <p>Local Partner: Zembo Bikes</p>
               <p>Country: Uganda</p>
             </div>
             <div class="col-md-8" v-else>
-              <p>Company: Zembo</p>
+              <p>Local Partner: Zembo Bikes</p>
               <p>Country: Uganda</p>
               <p>Zembo provides affordable electric motorcycles for motorcycle taxi drivers in Africa, the Company
                 has already 100 motorbikes on site in Kampala, Uganda. The Company leases its motorbikes to taxi
@@ -30,16 +29,16 @@
                   <div class="col-12">
                     <div class="row">
                       <div class="col-md-4">
-                        <p>$500</p>
                         <p>Minimum Investment</p>
+                        <p>1 100$</p>
                       </div>
                       <div class="col-md-4">
-                        <p>9%</p>
-                        <p>APY</p>
+                        <p>Annual Revenue created</p>
+                        <p>3 600$</p>
                       </div>
                       <div class="col-md-4">
-                        <p>18</p>
-                        <p>18 Month term</p>
+                        <p>Money Multiplier</p>
+                        <p>3.6x</p>
                       </div>
                       <div class="col-12">
                         <button class="btn btn-custom btn-block btn-lg" @click="showMotorbike"
@@ -86,15 +85,15 @@
           <div class="row">
             <div class="col-md-4">
               <img class="rounded float-left img-thumbnail"
-                   src="https://www.prepayment-meter.com/photo/pl14870579-smart_gprs_remote_water_meter_reading_muti_jet_residential_water_meter.jpg"
+                   src="/motorbike2.jpeg"
                    alt="">
             </div>
             <div class="col-md-8" v-if="!showSmartMeter">
               <p style="border-bottom: 3px solid #3e4494">
-                Asset of leasing of Smart Meters to support.
-                </p>
-              <p>Company: Untapped</p>
-              <p>Country: Kenya</p>
+                Petrol motorbikes for moto taxi
+              </p>
+              <p>Local partner: Asaak</p>
+              <p>Country: Uganda</p>
             </div>
             <div class="col-md-8" v-else>
               <p>Company: Untapped</p>
@@ -109,16 +108,16 @@
                   <div class="col-12">
                     <div class="row">
                       <div class="col-md-4">
-                        <p>$500</p>
                         <p>Minimum Investment</p>
+                        <p>1 100$</p>
                       </div>
                       <div class="col-md-4">
-                        <p>9%</p>
-                        <p>APY</p>
+                        <p>Annual Revenue created</p>
+                        <p>3 000$</p>
                       </div>
                       <div class="col-md-4">
-                        <p>18</p>
-                        <p>18 Month term</p>
+                        <p>Money Multiplier</p>
+                        <p>3.0x</p>
                       </div>
                       <div class="col-12">
                         <button class="btn btn-custom btn-block btn-lg"
@@ -159,6 +158,7 @@
         </div>
       </div>
     </div>
+
 
   </div>
 </template>
