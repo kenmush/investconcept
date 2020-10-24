@@ -2898,8 +2898,8 @@ ul {
   .newsletter-widget {
     .newsletter-form .def-btn {
       display: inline-block;
-      background: -o-linear-gradient(109deg, #ACD5E7 10%, #FF8478);
-      background: linear-gradient(-19deg, #ACD5E7 10%, #FF8478);
+      background: -o-linear-gradient(109deg, $untapped-blue 10%, $untapped-blue);
+      background: linear-gradient(-19deg, $untapped-blue 10%, $untapped-blue);
       border: none;
       height: 40px;
       color: #fff;
@@ -2927,8 +2927,8 @@ ul {
         height: 100%;
 
         /*background: -webkit-linear-gradient(-19deg, #ACD5E7 10%, #FF8478);*/
-        background: -o-linear-gradient(109deg, #ACD5E7 10%, #FF8478);
-        background: linear-gradient(-19deg, #ACD5E7 10%, #FF8478);
+        background: -o-linear-gradient(109deg, $untapped-blue 10%, $untapped-blue);
+        background: linear-gradient(-19deg, $untapped-blue 10%, $untapped-blue);
         z-index: -1;
         -webkit-transition: all 0.3s ease-in;
         -o-transition: all 0.3s ease-in;
