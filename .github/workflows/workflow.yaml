@@ -1,24 +1,26 @@
-#name: Investor Workflow
-#
-#on: [push]
-#
-#jobs:
-#  deploy:
-#    name: CD Pipeline PRD
-##    needs: build
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: ls -a via ssh
-#        uses: fifsky/ssh-action@master
-#        with:
-#          command: |
-#            cd /var/www/html/investordashboard
-#            sudo git stash
-#            sudo git pull origin master
-#            sudo composer install --optimize-autoloader --no-dev
-#            sudo php artisan config:cache
-#            sudo php artisan queue:restart
-#          host: ${{ secrets.HOST }}
-#          user: ubuntu
-#          key: ${{ secrets.PRIVATE_KEY}}
-#
+name: Investor Workflow
+
+on: [push]
+
+jobs:
+  deploy:
+    name: CD Pipeline PRD
+#    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: ls -a via ssh
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd /var/www/html/investordashboard
+            sudo git stash
+            sudo git pull origin master
+            sudo composer install --optimize-autoloader --no-dev
+            sudo npm install
+            sudo npm run production
+            sudo php artisan config:cache
+            sudo php artisan queue:restart
+          host: ${{ secrets.HOST }}
+          user: ubuntu
+          key: ${{ secrets.PRIVATE_KEY}}
+

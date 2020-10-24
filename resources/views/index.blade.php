@@ -21,8 +21,8 @@
                         <video style="border-radius: 10px" poster="{{asset('trialimae.jpg')}}" autoplay width="100%"
                                height="100%"
                                controls>
-                            <source src="{{ asset('nest.mp4') }}" type="video/mp4">
-                            <source src="{{ asset('nest.mp4') }}" type="video/ogg">
+                            <source src="" type="video/mp4">
+                            <source src="" type="video/ogg">
                             Your browser does not support the video tag.
                         </video>
 
@@ -78,7 +78,7 @@
         </div>
         <div style="width: 100%;padding-left: 10px;padding-right: 10px;margin-top: -50px">
             <div class="part-text text-center">
-                <h2>Your <span class="special">assets</span> in realtime</h2>
+                <h2>Your <span class="special">impact</span> in realtime</h2>
             </div>
             <map-component :categories='@json($assets)'></map-component>
         </div>
@@ -236,10 +236,12 @@
                                class="title">The Nest, A Zoom Shark Tank facilitates more than $2M in
                                 commitments for more than 20 Startups in Africa and Asia
                             </a>
-                            <p>When the worldwide COVID19 lockdown went into effect in February 2020 the challenges of
+                            <p>
+                                {{ \Illuminate\Support\Str::words("When the worldwide COVID19 lockdown went into effect in February 2020 the challenges of
                                 fundraising increased exponentially. Entrepreneurs, especially in emerging markets could
                                 not meet investors due to travel restrictions. Amid this uncertainty, The Nest, an
-                                online Zoom based shark tank, was born.</p>
+                                online Zoom based shark tank, was born.",28) }}
+                            </p>
                             <a href="https://techpoint.africa/2020/09/28/the-nest-a-zoom-shark-tank-facilitates-more-than-2m-in-commitments-for-more-than-20-startups-in-africa-and-asia/"
                                class="read-more-btn">read more</a>
                         </div>

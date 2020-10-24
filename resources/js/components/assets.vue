@@ -5,7 +5,7 @@
         <div class="card-body ">
           <div class="row">
             <div class="col-md-4">
-              <img class="rounded float-left img-thumbnail"
+              <img class="rounded float-left"
                    src="/motorbikes.jpeg"
                    alt="">
             </div>
@@ -194,11 +194,11 @@ export default {
 <style scoped lang="scss">
 .btn-custom {
   color: #fff;
-  background-color: #FF8377;
-  border-color: rgba(255, 131, 119, .8);
+  background-color: #ED7D31;
+  border-color: #ED7D31;
 }
 
 .btn-custom:hover {
-  background-color: darken(#FF8377, 30%);
+  background-color: darken(#ED7D31, 30%);
 }
 </style>

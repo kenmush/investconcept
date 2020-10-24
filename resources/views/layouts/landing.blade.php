@@ -39,7 +39,7 @@
     <!-- toastr js -->
     <link rel="stylesheet" href="{{ asset('assets/css/toastr.min.css') }}">
     <!-- stylesheet -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <!-- responsive -->
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <style>

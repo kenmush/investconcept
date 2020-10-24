@@ -11976,7 +11976,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".btn-custom[data-v-f8aa67e4] {\n  color: #fff;\n  background-color: #FF8377;\n  border-color: rgba(255, 131, 119, 0.8);\n}\n.btn-custom[data-v-f8aa67e4]:hover {\n  background-color: #dd1400;\n}", ""]);
+exports.push([module.i, ".btn-custom[data-v-f8aa67e4] {\n  color: #fff;\n  background-color: #ED7D31;\n  border-color: #ED7D31;\n}\n.btn-custom[data-v-f8aa67e4]:hover {\n  background-color: #7a380b;\n}", ""]);
 
 // exports
 
@@ -44862,7 +44862,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-4" }, [
       _c("img", {
-        staticClass: "rounded float-left img-thumbnail",
+        staticClass: "rounded float-left",
         attrs: { src: "/motorbikes.jpeg", alt: "" }
       })
     ])
