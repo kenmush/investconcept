@@ -18,6 +18,10 @@ class Investor
         ]);
     }
 
+    public function getAllInvestors()
+    {
+        return $this->request('GET','portal/investor/creation/');
+    }
     public function getAssetsbyCategory()
     {
         return $this->request('GET', 'portal/asset/creation/');

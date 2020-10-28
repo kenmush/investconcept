@@ -2763,6 +2763,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "impact-calculation",
@@ -45115,148 +45117,168 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-12" }, [
-          _c(
-            "table",
-            {
-              staticClass: "table table-borderless part-result",
-              staticStyle: { "background-color": "transparent" }
-            },
-            [
-              _vm._m(2),
-              _vm._v(" "),
-              _c("tbody", { staticStyle: { "background-color": "white" } }, [
-                _c("tr", { staticStyle: { "background-color": "white" } }, [
-                  _vm._m(3),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Motorcycle")]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(
-                      _vm._s(Math.round(_vm.amount / 3 / 1000).toLocaleString())
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(
-                      _vm._s(
-                        Math.round(
-                          (_vm.amount / 3 / 1000) * 80
-                        ).toLocaleString()
-                      )
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(
-                      _vm._s(
-                        Math.round(
-                          (_vm.amount / 3 / 1000) * 3600
-                        ).toLocaleString()
-                      )
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("3.6")])
-                ]),
+          _c("div", { staticClass: "table-responsive" }, [
+            _c(
+              "table",
+              {
+                staticClass: "table table-borderless part-result",
+                staticStyle: { "background-color": "transparent" }
+              },
+              [
+                _vm._m(2),
                 _vm._v(" "),
-                _c("tr", { staticStyle: { "background-color": "white" } }, [
-                  _vm._m(4),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Water ATM's")]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(
-                      _vm._s(Math.round(_vm.amount / 3 / 1000).toLocaleString())
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(
-                      _vm._s(
-                        Math.round(
-                          (_vm.amount / 3 / 1000) * 80
-                        ).toLocaleString()
+                _c("tbody", { staticStyle: { "background-color": "white" } }, [
+                  _c("tr", { staticStyle: { "background-color": "white" } }, [
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("Motorcycle")]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(Math.round(_vm.amount / 3).toLocaleString())
                       )
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(
-                      _vm._s(
-                        Math.round(
-                          (_vm.amount / 3 / 1000) * 12000
-                        ).toLocaleString()
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(
+                          Math.round(_vm.amount / 3 / 1000).toLocaleString()
+                        )
                       )
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("12")])
-                ]),
-                _vm._v(" "),
-                _c("tr", { staticStyle: { "background-color": "white" } }, [
-                  _vm._m(5),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Trailer")]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(_vm._s(Math.round(_vm.amount / 3).toLocaleString()))
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(
-                      _vm._s(Math.round(_vm.amount / 3 / 500).toLocaleString())
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(
-                      _vm._s(
-                        Math.round((_vm.amount / 3 / 500) * 40).toLocaleString()
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(
+                          Math.round(
+                            (_vm.amount / 3 / 1000) * 80
+                          ).toLocaleString()
+                        )
                       )
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(
-                      _vm._s(
-                        Math.round(
-                          (_vm.amount / 3 / 500) * 1800
-                        ).toLocaleString()
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(
+                          Math.round(
+                            (_vm.amount / 3 / 1000) * 3600
+                          ).toLocaleString()
+                        )
                       )
-                    )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("3.6")])
                   ]),
                   _vm._v(" "),
-                  _c("td", [_vm._v("3.6")])
-                ]),
-                _vm._v(" "),
-                _c("tr", { staticStyle: { "border-top": "3px solid gray" } }, [
-                  _c("td"),
-                  _vm._v(" "),
-                  _c("td", [_vm._v("Totals")]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(_vm._s(Math.round(_vm.amount).toLocaleString()))
+                  _c("tr", { staticStyle: { "background-color": "white" } }, [
+                    _vm._m(4),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("Water ATM's")]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(Math.round(_vm.amount / 3).toLocaleString())
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(
+                          Math.round(_vm.amount / 3 / 1000).toLocaleString()
+                        )
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(
+                          Math.round(
+                            (_vm.amount / 3 / 1000) * 80
+                          ).toLocaleString()
+                        )
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(
+                          Math.round(
+                            (_vm.amount / 3 / 1000) * 12000
+                          ).toLocaleString()
+                        )
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("12")])
                   ]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(_vm.totalUnits))]),
+                  _c("tr", { staticStyle: { "background-color": "white" } }, [
+                    _vm._m(5),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("Trailer")]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(Math.round(_vm.amount / 3).toLocaleString())
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(
+                          Math.round(_vm.amount / 3 / 500).toLocaleString()
+                        )
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(
+                          Math.round(
+                            (_vm.amount / 3 / 500) * 40
+                          ).toLocaleString()
+                        )
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(
+                          Math.round(
+                            (_vm.amount / 3 / 500) * 1800
+                          ).toLocaleString()
+                        )
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("3.6")])
+                  ]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(_vm.totalNumbers))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(_vm.socialImpact))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(_vm.totalLeverage))])
+                  _c(
+                    "tr",
+                    { staticStyle: { "border-top": "3px solid gray" } },
+                    [
+                      _c("td"),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Totals")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(_vm._s(Math.round(_vm.amount).toLocaleString()))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(_vm.totalUnits))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(_vm.totalNumbers))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(_vm.socialImpact))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(_vm.totalLeverage))])
+                    ]
+                  )
                 ])
-              ])
-            ]
-          )
+              ]
+            )
+          ])
         ])
       ])
     ])

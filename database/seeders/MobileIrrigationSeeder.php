@@ -1,8 +1,8 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
-class SmartMeterSeeder extends Seeder
+class MobileIrrigationSeeder extends Seeder
 {
     /**
      * Run the database seeds.

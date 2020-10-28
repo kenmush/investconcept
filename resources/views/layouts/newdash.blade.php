@@ -169,11 +169,29 @@
         <div class="deznav-scroll">
             <ul class="metismenu" id="menu">
                 <li>
-                    <a class="has-arrow ai-icon" href="{{ route('home') }}" aria-expanded="false">
-                        <i class="flaticon-381-networking"></i>
+                    <a class="has-arrow ai-icon active" href="{{ route('home') }}" aria-expanded="false">
+                        <i class="fa fa-tachometer"></i>
                         <span class="nav-text">Dashboard</span>
                     </a>
 
+                </li>
+                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="fa fa-pagelines"></i>
+                        <span class="nav-text">Page Management</span>
+                    </a>
+                    <ul aria-expanded="false" class="mm-collapse">
+                        <li><a href="./app-profile.html">Landing Page</a></li>
+                        <li><a href="./app-profile.html">Assets</a></li>
+                    </ul>
+                </li>
+                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="fa fa-users"></i>
+                        <span class="nav-text">User Management</span>
+                    </a>
+                    <ul aria-expanded="false" class="mm-collapse">
+                        <li><a href="{{ route('investors.index') }}">Investors</a></li>
+                        <li><a href="./app-profile.html">Ambassadors</a></li>
+                    </ul>
                 </li>
             </ul>
 

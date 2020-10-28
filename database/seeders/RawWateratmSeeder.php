@@ -1,8 +1,8 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
-class CountrySeeder extends Seeder
+class RawWateratmSeeder extends Seeder
 {
     /**
      * Run the database seeds.

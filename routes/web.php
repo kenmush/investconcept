@@ -4,30 +4,16 @@ use App\Asset;
 use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/landing', function () {
-    return view('landing');
-});
-
 Route::get('/', function () {
     $assets = (new Investor())->getAssetCategories();
-    return view('index',compact('assets'));
+    return view('index', compact('assets'));
 });
-Route::get('/ken', function () {
-    $assets = (new Investor())->getAssetCategories();
-    return view('landingpage',
-            [
-                    'assets' => collect($assets)->toArray()
-            ]
-    );
 
-});
-Route::get('/contactus', function () {
+Route::group(['prefix' => 'assets', 'middleware' => ['auth', 'verified']], function () {
 
-    return view('contactus');
+    Route::resource('portfolio', 'PortfolioController');
 
-})->name('contactus');
-
-Route::group(['prefix' => 'assets', 'middleware' => 'auth'], function () {
+    Route::resource('portfolio', 'PortfolioController');
 
     Route::resource('motorbike', 'MotorbikeController');
 
@@ -41,19 +27,30 @@ Route::group(['prefix' => 'assets', 'middleware' => 'auth'], function () {
 
     Route::resource('myassets', 'AssetsController');
 
-    Route::resource('portfolio', 'PortfolioController');
 
     Route::get('/dash', function () {
 //        $user = urlencode(request()->user()->name);
 //        $image = Http::get("https://ui-avatars.com/api/?name={$user}&color=000000&background=FF8377&rounded=true");
 //        $Ima
         $assets = Asset::all();
-        return view('dash',compact('assets'));
+        return view('dash', compact('assets'));
     });
 });
 
-Route::view('signin', 'login');
+Route::group(['prefix' => 'administrate', 'middleware' => ['auth']], function () {
+
+    Route::resource('herosection', 'LandingpageController');
+
+    Route::resource('investors', 'Investors');
+
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::get('/contactus', function () {
+
+    return view('contactus');
+
+})->name('contactus');
+
+Auth::routes(['verify' => true]);

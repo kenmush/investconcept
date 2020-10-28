@@ -24,7 +24,7 @@
             {{--                </div>--}}
         </div>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="widget-stat card">
                     <div class="card-body p-4">
                         <div class="media ai-icon">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="widget-stat card">
                     <div class="card-body p-4">
                         <div class="media ai-icon">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" col-md-3">
+            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="widget-stat card">
                     <div class="card-body p-4">
                         <div class="media ai-icon">
@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="widget-stat card">
                     <div class="card-body p-4">
                         <div class="media ai-icon">
@@ -109,7 +109,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Recent Payments Queue</h4>
+                        <h4 class="card-title">My Assets</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

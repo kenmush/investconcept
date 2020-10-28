@@ -36,63 +36,65 @@
       </form>
       <div class="row">
         <div class="col-12">
-          <table class="table table-borderless part-result" style="background-color: transparent">
-            <thead class="thead-light">
-            <tr>
-              <th></th>
-              <th>Asset</th>
-              <th>Amount ($)</th>
-              <th>Number</th>
-              <th>Return</th>
-              <th>Social Impact</th>
-              <th>Leverage</th>
-            </tr>
-            </thead>
-            <tbody style="background-color: white">
-            <tr style="background-color: white">
-              <td scope="row">
-                <img src="/untapped/twowheeler.svg" alt="">
-              </td>
-              <td>Motorcycle</td>
-              <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
-              <td>{{ Math.round((amount / 3) / 1000).toLocaleString() }}</td>
-              <td>{{ Math.round(((amount / 3) / 1000) * 80).toLocaleString() }}</td>
-              <td>{{ Math.round(((amount / 3) / 1000) * 3600).toLocaleString() }}</td>
-              <td>3.6</td>
-            </tr>
-            <tr style="background-color: white">
-              <td scope="row">
-                <img src="/untapped/rawmeter.svg" alt="">
-              </td>
-              <td>Water ATM's</td>
-              <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
-              <td>{{ Math.round((amount / 3) / 1000).toLocaleString() }}</td>
-              <td>{{ Math.round(((amount / 3) / 1000) * 80).toLocaleString() }}</td>
-              <td>{{ Math.round(((amount / 3) / 1000) * 12000).toLocaleString() }}</td>
-              <td>12</td>
-            </tr>
-            <tr style="background-color: white">
-              <td scope="row">
-                <img src="/untapped/irrigation.svg" alt="">
-              </td>
-              <td>Trailer</td>
-              <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
-              <td>{{ Math.round((amount / 3) / 500).toLocaleString() }}</td>
-              <td>{{ Math.round(((amount / 3) / 500) * 40).toLocaleString() }}</td>
-              <td>{{ Math.round(((amount / 3) / 500) * 1800).toLocaleString() }}</td>
-              <td>3.6</td>
-            </tr>
-            <tr style="border-top: 3px solid gray">
-              <td></td>
-              <td>Totals</td>
-              <td>{{ Math.round(amount).toLocaleString() }}</td>
-              <td>{{ totalUnits }}</td>
-              <td>{{ totalNumbers }}</td>
-              <td>{{ socialImpact }}</td>
-              <td>{{ totalLeverage }}</td>
-            </tr>
-            </tbody>
-          </table>
+          <div class="table-responsive">
+            <table class="table table-borderless part-result" style="background-color: transparent">
+              <thead class="thead-light">
+              <tr>
+                <th></th>
+                <th>Asset</th>
+                <th>Amount ($)</th>
+                <th>Number</th>
+                <th>Return</th>
+                <th>Social Impact</th>
+                <th>Leverage</th>
+              </tr>
+              </thead>
+              <tbody style="background-color: white">
+              <tr style="background-color: white">
+                <td scope="row">
+                  <img src="/untapped/twowheeler.svg" alt="">
+                </td>
+                <td>Motorcycle</td>
+                <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
+                <td>{{ Math.round((amount / 3) / 1000).toLocaleString() }}</td>
+                <td>{{ Math.round(((amount / 3) / 1000) * 80).toLocaleString() }}</td>
+                <td>{{ Math.round(((amount / 3) / 1000) * 3600).toLocaleString() }}</td>
+                <td>3.6</td>
+              </tr>
+              <tr style="background-color: white">
+                <td scope="row">
+                  <img src="/untapped/rawmeter.svg" alt="">
+                </td>
+                <td>Water ATM's</td>
+                <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
+                <td>{{ Math.round((amount / 3) / 1000).toLocaleString() }}</td>
+                <td>{{ Math.round(((amount / 3) / 1000) * 80).toLocaleString() }}</td>
+                <td>{{ Math.round(((amount / 3) / 1000) * 12000).toLocaleString() }}</td>
+                <td>12</td>
+              </tr>
+              <tr style="background-color: white">
+                <td scope="row">
+                  <img src="/untapped/irrigation.svg" alt="">
+                </td>
+                <td>Trailer</td>
+                <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
+                <td>{{ Math.round((amount / 3) / 500).toLocaleString() }}</td>
+                <td>{{ Math.round(((amount / 3) / 500) * 40).toLocaleString() }}</td>
+                <td>{{ Math.round(((amount / 3) / 500) * 1800).toLocaleString() }}</td>
+                <td>3.6</td>
+              </tr>
+              <tr style="border-top: 3px solid gray">
+                <td></td>
+                <td>Totals</td>
+                <td>{{ Math.round(amount).toLocaleString() }}</td>
+                <td>{{ totalUnits }}</td>
+                <td>{{ totalNumbers }}</td>
+                <td>{{ socialImpact }}</td>
+                <td>{{ totalLeverage }}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 

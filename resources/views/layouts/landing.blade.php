@@ -140,27 +140,23 @@
                         <div class="col-xl-8 col-lg-10">
                             <div class="mainmenu">
                                 <div class="d-xl-none d-lg-none d-block">
-                                    <div class="user-profile">
-                                        <div class="part-img">
-                                            <img src="assets/img/member-1.jpg" alt="">
-                                        </div>
-                                        <div class="user-info">
-                                            <span class="user-name">Sadwel Eunton</span>
-                                            <span class="user-balance">Bal : $202.25</span>
-                                        </div>
-                                        <div class="log-out-area">
-                                            <a href="#">Log out</a>
-                                        </div>
-                                    </div>
+{{--                                    <div class="user-profile">--}}
+{{--                                        <div class="part-img">--}}
+{{--                                            <img src="assets/img/member-1.jpg" alt="">--}}
+{{--                                        </div>--}}
+{{--                                        <div class="user-info">--}}
+{{--                                            <span class="user-name">Sadwel Eunton</span>--}}
+{{--                                            <span class="user-balance">Bal : $202.25</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="log-out-area">--}}
+{{--                                            <a href="#">Log out</a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                 </div>
                                 <nav class="navbar navbar-expand-lg">
 
                                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul class="navbar-nav ml-auto">
-                                            <li class="nav-item active">
-                                                <a class="nav-link" href="/">Home <span class="sr-only">(current)
-                                                    </span></a>
-                                            </li>
 
                                             <li class="nav-item">
                                                 <a class="nav-link" href="/register">Invest <span class="sr-only">
@@ -177,6 +173,11 @@
                                                 <a class="nav-link" href="#simulateimpact">Simulate Impact <span
                                                             class="sr-only">(current)
                                                 </span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/login">
+                                                    Ambassadors
+                                                </a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="/login">

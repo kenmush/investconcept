@@ -1,8 +1,8 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
-class MobileIrrigationSeeder extends Seeder
+class ReturnTypeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
