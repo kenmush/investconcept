@@ -127,62 +127,37 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td scope="row"><img height="30px"
-                                                         src="{{ asset('untapped/mobileirrigation.svg') }}"
-                                                         alt="">
-                                    </td>
-                                    <td><a href="/assets/mobile-irrigation">Mobile
-                                            Irrigation</a> <!----> <!----> <!----></td>
-                                    <td>1</td>
-                                    <td>1000 $</td>
-                                    <td></td>
-                                    <td>10%</td>
-                                    <td>12 Months</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row"><img height="30px"
-                                                         src="{{ asset('untapped/rawwateratm.svg') }}"
-                                                         alt=""></td>
-                                    <td><!----> <a
-                                                href="/assets/raw-water-atm">Raw Water ATM</a>
-                                        <!----> <!----></td>
-                                    <td>6</td>
-                                    <td>1000 $</td>
-                                    <td></td>
-                                    <td>10%</td>
-                                    <td>12 Months</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row"><img height="30px"
-                                                         src="{{ asset('untapped/smartmeterheader.svg') }}"
-                                                         alt=""></td>
-                                    <td><!----> <!----> <a
-                                                href="/assets/smartmeter">Smart
-                                            Meter</a> <!----></td>
-                                    <td>5</td>
-                                    <td>1000 $</td>
-                                    <td></td>
-                                    <td>10%</td>
-                                    <td>12 Months</td>
-                                    <td>0</td>
-                                <tr>
-                                    <td scope="row"><img height="30px"
-                                                         src="{{ asset('motorbike.svg') }}"
-                                                         alt=""></td>
-                                    <td><!----> <!----> <!----> <a
-                                                href="/assets/motorbike">Motorbike</a>
-                                    </td>
-                                    <td>5</td>
-                                    <td>1000 $</td>
-                                    <td></td>
-                                    <td>10%</td>
-                                    <td>12 Months</td>
-                                    <td>40</td>
-                                </tr>
-                                </tr>
+                                @foreach($tableAssets as $asset)
+                                    <tr>
+                                        <td scope="row">
+                                            @if($asset['categoryName'] === 'Raw Water ATM')
+                                                <img height="30px"
+                                                     src="{{ asset('untapped/rawwateratm.svg') }}"
+                                                     alt="">
+                                            @elseif($asset['categoryName'] === 'Mobile Irrigation')
+                                                <img height="30px"
+                                                     src="{{ asset('untapped/mobileirrigation.svg') }}"
+                                                     alt="">
+                                            @elseif($asset['categoryName'] === 'Smart Meter')
+                                                <img height="30px"
+                                                     src="{{ asset('untapped/smartmeterheader.svg') }}"
+                                                     alt="">
+                                            @else
+                                                <img height="30px"
+                                                     src="{{ asset('motorbike.svg') }}"
+                                                     alt="">
+                                            @endif
+                                        </td>
+                                        <td><a href="/assets/mobile-irrigation">{{$asset['categoryName']}}</td>
+                                        <td>{{$asset['Numbers']}}</td>
+                                        <td>{{$asset['ticket']}} $</td>
+                                        <td></td>
+                                        <td>{{$asset['return_percentage']}}%</td>
+                                        <td>{{$asset['duration']}} Months</td>
+                                        <td>{{$asset['socialGain']}}</td>
+                                    </tr>
+                                @endforeach
+
                                 </tbody>
                             </table>
                         </div>

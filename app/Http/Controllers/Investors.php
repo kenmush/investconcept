@@ -48,6 +48,7 @@ class Investors extends Controller
                 "language"    => 'required',
                 "password"    => 'required',
         ]);
+        $path = $request->file('avatar')->store('tmp');
         try {
             (new Investor())->registerInvestor([
                     'phoneNumber'  => $request->phonenumber,
@@ -59,7 +60,10 @@ class Investors extends Controller
                     'email'        => $request->email,
                     'organization' => 'NA',
                     'password'     => $request->password,
+                    'avatar'     => $request->avatar,
+
             ]);
+
             return redirect()->route('investors.index');
 
         } catch (ClientException $e) {

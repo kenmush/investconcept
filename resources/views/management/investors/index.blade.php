@@ -38,7 +38,15 @@
                                     <tr>
                                         <th>{{$loop->iteration}}</th>
                                         <td>{{$investor['phoneNumber']}}</td>
-                                        <td>{{$investor['firstName'] .' '. $investor['middleName'] . ' '. $investor['lastName']}}
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                @if($investor['avatar'] !== null)
+                                                <img src="{{config('investordashboard.media_path').$investor['avatar']}}" class="rounded-lg mr-2" width="75" alt="">
+                                                @else
+                                                @endif
+                                                <span class="w-space-no"> {{$investor['firstName'] .' '. $investor['middleName'] . ' '. $investor['lastName']}}</span></div>
+
+
                                         </td>
                                         <td>{{$investor['username']}}</td>
                                         <td>{{$investor['email']}}</td>

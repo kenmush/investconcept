@@ -121,12 +121,32 @@
                                    <!--Label: Language, Attributes:language -->
                                    <div class="form-group">
                                        <label for="language">Language</label>
-                                       <input type="text" id="language"
+                                       <select type="text" id="language"
                                               aria-describedby="language-help"
                                               name="language" value="{{ old('language') }}"
                                               class="form-control @error('language') is-invalid @enderror"
-                                              placeholder="Language" required>
+                                               required>
+                                           <option selected>English</option>
+                                           <option>Swahili</option>
+                                           <option>French</option>
+                                       </select>
                                        @error('language')
+                                       <span class="invalid-feedback" role="alert">
+                                           <strong>{{ $message }}</strong>
+                                       </span>
+                                       @enderror
+                                   </div>
+                               </div>
+                               <div class="col-md-6">
+                                   <!--Label: Avatar, Attributes:avatar -->
+                                   <div class="form-group">
+                                       <label for="avatar">Avatar</label>
+                                       <input type="file" id="avatar"
+                                              aria-describedby="avatar-help"
+                                              name="avatar" value="{{ old('avatar') }}"
+                                              class="form-control @error('avatar') is-invalid @enderror"
+                                              placeholder="Avatar" required>
+                                       @error('avatar')
                                        <span class="invalid-feedback" role="alert">
                                            <strong>{{ $message }}</strong>
                                        </span>

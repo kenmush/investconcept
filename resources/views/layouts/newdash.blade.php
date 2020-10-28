@@ -180,8 +180,8 @@
                         <span class="nav-text">Page Management</span>
                     </a>
                     <ul aria-expanded="false" class="mm-collapse">
-                        <li><a href="./app-profile.html">Landing Page</a></li>
-                        <li><a href="./app-profile.html">Assets</a></li>
+                        <li><a href="">Landing Page</a></li>
+                        <li><a href="{{ route('myassets.index') }}">Assets</a></li>
                     </ul>
                 </li>
                 <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

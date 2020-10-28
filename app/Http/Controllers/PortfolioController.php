@@ -15,8 +15,11 @@ class PortfolioController extends Controller
      */
     public function index()
     {
+
         $assets = (new Investor())->getAssetCategories();
-        return view('portfolio',compact('assets'));
+        $tableAssets = (new Investor())->getInvestorAssets(auth()->user()->api_id);
+
+        return view('portfolio',compact('assets','tableAssets'));
     }
 
     /**

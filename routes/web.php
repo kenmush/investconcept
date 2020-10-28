@@ -9,8 +9,7 @@ Route::get('/', function () {
     return view('index', compact('assets'));
 });
 
-Route::group(['prefix' => 'assets', 'middleware' => ['auth', 'verified']], function () {
-
+Route::group(['prefix' => 'assets', 'middleware' => ['auth']], function () {
     Route::resource('portfolio', 'PortfolioController');
 
     Route::resource('portfolio', 'PortfolioController');
@@ -29,9 +28,6 @@ Route::group(['prefix' => 'assets', 'middleware' => ['auth', 'verified']], funct
 
 
     Route::get('/dash', function () {
-//        $user = urlencode(request()->user()->name);
-//        $image = Http::get("https://ui-avatars.com/api/?name={$user}&color=000000&background=FF8377&rounded=true");
-//        $Ima
         $assets = Asset::all();
         return view('dash', compact('assets'));
     });

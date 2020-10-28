@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -18,7 +19,14 @@ class RegistrationTest extends TestCase
                 'email'     => 'petysacyd@mailinator.com',
                 'password'  => 'Pa$$w0rd!',
         ]);
-        dd($response);
         $response->assertStatus(200);
     }
+
+    public function testdownload()
+    {
+
+        $contents = file_get_contents('https://github.com/laravel/framework/archive/v8.11.2.zip');
+        Storage::disk('public')->put('default/laravel.zip', $contents);
+    }
+
 }

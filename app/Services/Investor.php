@@ -8,7 +8,8 @@ use GuzzleHttp\Client;
 
 class Investor
 {
-    protected $path = 'http://100.27.13.227/v1/';
+    protected $path = 'https://5b441e4de88a.ngrok.io/';
+//    protected $path = ;
 
     public function investorLogin($data)
     {
@@ -18,10 +19,37 @@ class Investor
         ]);
     }
 
+    protected function request($method, $path, array $parameters = [])
+    {
+        $response = (new Client)->{$method}($this->path().ltrim($path, '/'), [
+                'headers' => [
+                        'Authorization' => "Bearer ".'X-Mutisya',
+                        'Content-Type'  => 'application/json',
+                ],
+                'json'    => $parameters,
+        ]);
+
+        return json_decode((string) $response->getBody(), true);
+    }
+
+    /**
+     * @return \Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    public function path()
+    {
+        return config('investordashboard.root_path');
+    }
+
     public function getAllInvestors()
     {
-        return $this->request('GET','portal/investor/creation/');
+        return $this->request('GET', 'portal/investor/creation/');
     }
+
     public function getAssetsbyCategory()
     {
         return $this->request('GET', 'portal/asset/creation/');
@@ -37,30 +65,65 @@ class Investor
         return $this->request('GET', 'portal/asset/category/creation/');
     }
 
+    public function getInvestorAssets($investorID)
+    {
+        return $this->request('GET', 'portal/investor/portfolio/'.$investorID);
+    }
+
     public function registerInvestor($data)
     {
-        return $this->request('POST', 'portal/investor/creation/', [
-                'phoneNumber'  => $data['phoneNumber'],
-                'firstName'    => $data['firstName'],
-                'middleName'   => $data['middleName'],
-                'lastName'     => $data['lastName'],
-                'username'     => $data['username'],
-                'language'     => $data['language'],
-                'email'        => $data['email'],
-                'organization' => $data['organization'],
-                'password'     => $data['password'],
+        return $this->requestFiles('POST', 'portal/investor/creation/', [
+                [
+                        'name'     => 'phoneNumber',
+                        'contents' => $data['phoneNumber']
+                ], [
+                        'name'     => 'firstName',
+                        'contents' => $data['firstName']
+                ], [
+                        'name'     => 'middleName',
+                        'contents' => $data['middleName']
+                ], [
+                        'name'     => 'lastName',
+                        'contents' => $data['lastName']
+                ],
+                [
+                        'name'     => 'username',
+                        'contents' => $data['username']
+                ],
+                [
+                        'name'     => 'language',
+                        'contents' => $data['language']
+                ],
+                [
+                        'name'     => 'email',
+                        'contents' => $data['email']
+                ],
+                [
+                        'name'     => 'organization',
+                        'contents' => $data['organization']
+                ],
+                [
+                        'name'     => 'password',
+                        'contents' => $data['password']
+                ],
+                [
+                        'name'     => 'avatar',
+                        'contents' => fopen( $data['avatar'], 'r' ),
+                        'filename' => $data['avatar']->getClientOriginalName()
+//                        'contents' => file_get_contents(storage_path('app\\'.$data['avatar']))
+                ],
+
         ]);
 
     }
 
-    protected function request($method, $path, array $parameters = [])
+    protected function requestFiles($method, $path, array $parameters = [])
     {
-        $response = (new Client)->{$method}($this->path.ltrim($path, '/'), [
-                'headers' => [
+        $response = (new Client)->{$method}($this->path().ltrim($path, '/'), [
+                'headers'   => [
                         'Authorization' => "Bearer ".'X-Mutisya',
-                        'Content-Type'  => 'application/json',
                 ],
-                'json'    => $parameters,
+                'multipart' => $parameters,
         ]);
 
         return json_decode((string) $response->getBody(), true);
