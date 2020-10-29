@@ -17,7 +17,6 @@ class PortfolioController extends Controller
 
         $assets = (new Investor())->getAssetCategories();
         $tableAssets = (new Investor())->getInvestorAssets(auth()->user()->api_id);
-
         return view('portfolio',compact('assets','tableAssets'));
     }
 
