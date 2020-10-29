@@ -95,13 +95,14 @@ class RegisterController extends Controller
         $investor['organization'] = 'NA';
         $investor['password'] = $data['password'];
         try {
-            $userFromAPI = (new Investor())->registerInvestor($investor);
+            $userFromAPI = (new Investor())->signupInvestor($investor);
             return User::firstOrCreate(
                     ['email' => $userFromAPI['email']],
                     [
                             'password' => bcrypt($data['password']),
                             'name'     => $userFromAPI['firstName'].' '.$userFromAPI['middleName'].' '.$userFromAPI['lastName'],
                             'api_id'   => $userFromAPI['id'],
+                            'avatar'   => $userFromAPI['id'],
 
                     ]
             );

@@ -38,6 +38,94 @@ class Investor
         return config('investordashboard.root_path');
     }
 
+    public function signupInvestor($data)
+    {
+        return $this->request('POST', 'portal/investor/creation/', [
+                'phoneNumber'  => $data['phoneNumber'],
+                'firstName'    => $data['firstName'],
+                'middleName'   => $data['middleName'],
+                'lastName'     => $data['lastName'],
+                'username'     => $data['username'],
+                'language'     => $data['language'],
+                'email'        => $data['email'],
+                'organization' => $data['organization'],
+                'password'     => $data['password'],
+        ]);
+    }
+
+    public function updateAsset($id, $data)
+    {
+        return $this->request('PUT', 'portal/asset/category/'.$id.'/', $data);
+    }
+
+    public function getAssetbyId($id)
+    {
+        return $this->request('GET', 'portal/asset/category/'.$id.'/');
+    }
+
+    public function createAsset($data)
+    {
+        return $this->request('POST', 'portal/asset/category/creation/', $data);
+    }
+
+    public function updateInvestor($data, $investor)
+    {
+        return $this->requestFiles('PUT', 'portal/investor/profile/'.$investor.'/', [
+                [
+                        'name'     => 'phoneNumber',
+                        'contents' => $data['phoneNumber']
+                ], [
+                        'name'     => 'firstName',
+                        'contents' => $data['firstName']
+                ], [
+                        'name'     => 'middleName',
+                        'contents' => $data['middleName']
+                ], [
+                        'name'     => 'lastName',
+                        'contents' => $data['lastName']
+                ],
+                [
+                        'name'     => 'username',
+                        'contents' => $data['username']
+                ],
+                [
+                        'name'     => 'language',
+                        'contents' => $data['language']
+                ],
+                [
+                        'name'     => 'email',
+                        'contents' => $data['email']
+                ],
+                [
+                        'name'     => 'organization',
+                        'contents' => $data['organization']
+                ],
+                [
+                        'name'     => 'password',
+                        'contents' => $data['password']
+                ],
+//                [
+//                        'name'     => 'avatar',
+//                        'contents' => fopen($data['avatar'], 'r'),
+//                        'filename' => $data['avatar']->getClientOriginalName()
+////                        'contents' => file_get_contents(storage_path('app\\'.$data['avatar']))
+//                ],
+
+        ]);
+    }
+
+    protected function requestFiles($method, $path, array $parameters = [])
+    {
+        $response = (new Client)->{$method}($this->path().ltrim($path, '/'), [
+                'headers'   => [
+                        'Authorization' => "Bearer ".'X-Mutisya',
+                ],
+                'multipart' => $parameters,
+        ]);
+
+        return json_decode((string) $response->getBody(), true);
+    }
+
     /**
      * @return \Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed
      */
@@ -58,7 +146,7 @@ class Investor
 
     public function getUserAssets($user)
     {
-        return $this->request('GET', 'portal/investor/portfolio/'.$user);
+        return $this->request('GET', 'portal/investor/portfolio/'.$user.'/');
     }
 
     public function getAssetCategories()
@@ -68,7 +156,7 @@ class Investor
 
     public function getInvestorAssets($investorID)
     {
-        return $this->request('GET', 'portal/investor/portfolio/'.$investorID);
+        return $this->request('GET', 'portal/investor/portfolio/'.$investorID.'/');
     }
 
     public function investorByID($investorId)
@@ -121,17 +209,5 @@ class Investor
 
         ]);
 
-    }
-
-    protected function requestFiles($method, $path, array $parameters = [])
-    {
-        $response = (new Client)->{$method}($this->path().ltrim($path, '/'), [
-                'headers'   => [
-                        'Authorization' => "Bearer ".'X-Mutisya',
-                ],
-                'multipart' => $parameters,
-        ]);
-
-        return json_decode((string) $response->getBody(), true);
     }
 }

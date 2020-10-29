@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\Investor;
+use GuzzleHttp\Exception\ClientException;
 use Illuminate\Http\Request;
 
 class AssetsController extends Controller
@@ -10,13 +11,12 @@ class AssetsController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
      */
     public function index()
     {
         $assets = (new Investor())->getAssetCategories();
 
-        return view('myassets',[
+        return view('myassets', [
                 'assets' => collect($assets)->toArray()
         ]);
     }
@@ -28,7 +28,7 @@ class AssetsController extends Controller
      */
     public function create()
     {
-        //
+        return view('management.assets.create');
     }
 
     /**
@@ -39,7 +39,28 @@ class AssetsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $asset = (new Investor())->createAsset([
+                    "categoryName"      => $request->categoryName,
+                    "use_case"          => $request->use_case,
+                    "duration"          => $request->duration,
+                    "ticket"            => $request->ticket,
+                    "return_percentage" => $request->return_percentage,
+                    "impact"            => $request->impact,
+            ]);
+            return redirect()->route('myassets.index');
+        } catch (ClientException $e) {
+            $response = $e->getResponse();
+            $responseBodyAsString = $response->getBody()->getContents();
+            $errors = collect(json_decode($responseBodyAsString));
+            $validator = \Validator::make($request->all(), [
+            ]);
+            foreach ($errors as $key => $error) {
+                $validator->errors()->add($key, $error[0] ?? '');
+            }
+            return back()->withErrors($validator)->withInput();
+        }
+        return $asset;
     }
 
     /**
@@ -57,11 +78,12 @@ class AssetsController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param $id
-     * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        return view('management.assets.edit', [
+                'asset' => (new Investor())->getAssetbyId($id)
+        ]);
     }
 
     /**
@@ -73,7 +95,16 @@ class AssetsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $updated=  (new Investor())->updateAsset($id, [
+                "categoryName"      => $request->categoryName,
+                "use_case"          => $request->use_case,
+                "duration"          => $request->duration,
+                "ticket"            => $request->ticket,
+                "return_percentage" => $request->return_percentage,
+                "impact"            => $request->impact,
+        ]);
+
+        return redirect()->route('myassets.index');
     }
 
     /**

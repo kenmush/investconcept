@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untapped Capital - Dashboard</title>
     <!-- Favicon icon -->
+    <link href="{{ asset('backend/vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/vendor/jqvmap/css/jqvmap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('backend/vendor/chartist/css/chartist.min.css') }}">
     <link href="{{ asset('backend/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
@@ -133,6 +134,7 @@
                                         </strong>
                                     </span>
                                 </div>
+
                                 <img src="https://icon-library.com/images/generic-user-icon/generic-user-icon-13.jpg"
                                      width="20" alt=""/>
                             </a>
@@ -180,7 +182,7 @@
                         <span class="nav-text">Page Management</span>
                     </a>
                     <ul aria-expanded="false" class="mm-collapse">
-                        <li><a href="">Landing Page</a></li>
+                        <li><a href="{{ route('herosection.create') }}">Landing Page</a></li>
                         <li><a href="{{ route('myassets.index') }}">Assets</a></li>
                     </ul>
                 </li>
@@ -272,6 +274,25 @@
 <!-- Dashboard 1 -->
 <script src="{{ asset('backend/js/dashboard/dashboard-1.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('backend/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+<script>
+    (function($) {
 
+        var table = $('#investorsTable').DataTable({
+            searching: true,
+            paging:true,
+            select: false,
+            //info: false,
+            "order": [[ 3, "desc" ]],
+            lengthChange:false
+
+        });
+        $('#example tbody').on('click', 'tr', function () {
+            var data = table.row( this ).data();
+
+        });
+
+    })(jQuery);
+</script>
 </body>
 </html>

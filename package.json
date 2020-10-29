@@ -32,6 +32,7 @@
         "mapbox-gl": "^1.12.0",
         "mapbox-gl-vue": "^2.0.4",
         "owl.carousel": "^2.3.4",
+        "sweetalert": "^2.1.2",
         "vue-chartist": "^2.3.1",
         "vue-chartjs": "^3.5.1"
     }

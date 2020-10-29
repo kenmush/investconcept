@@ -25,7 +25,7 @@ class LandingpageController extends Controller
      */
     public function create()
     {
-        //
+        return view('management.landingpage.create');
     }
 
     /**

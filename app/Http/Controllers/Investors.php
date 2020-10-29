@@ -60,7 +60,7 @@ class Investors extends Controller
                     'email'        => $request->email,
                     'organization' => 'NA',
                     'password'     => $request->password,
-                    'avatar'     => $request->avatar,
+                    'avatar'       => $request->avatar,
 
             ]);
 
@@ -80,7 +80,7 @@ class Investors extends Controller
                     "language"    => 'required',
                     "password"    => 'required',
             ]);
-            foreach ($errors as $key=>$error) {
+            foreach ($errors as $key => $error) {
                 $validator->errors()->add($key, $error[0] ?? '');
             }
             return back()->withErrors($validator);
@@ -97,10 +97,10 @@ class Investors extends Controller
      */
     public function show($user)
     {
-        $investor =(new Investor())->investorByID($user);
+        $investor = (new Investor())->investorByID($user);
         $assets = (new Investor())->getAssetCategories();
 
-        return view('management.investors.show',compact('investor','assets'));
+        return view('management.investors.show', compact('investor', 'assets'));
 
     }
 
@@ -108,11 +108,12 @@ class Investors extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  User  $user
-     * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($user)
     {
-        //
+        return view('management.investors.update',
+                ['investor' => (new Investor())->investorByID($user)]
+        );
     }
 
     /**
@@ -122,9 +123,24 @@ class Investors extends Controller
      * @param  User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $user)
     {
-        //
+        $data = [
+                'phoneNumber'  => $request->phonenumber,
+                'firstName'    => $request->firstname,
+                'middleName'   => $request->secondname,
+                'lastName'     => $request->lastname,
+                'username'     => $request->username,
+                'language'     => $request->language,
+                'email'        => $request->email,
+                'organization' => 'NA',
+                'password'     => $request->password,
+                'avatar'       => $request->avatar,
+
+        ];
+       (new Investor())->updateInvestor($data, $user);
+
+        return redirect()->route('investors.show',$user);
     }
 
     /**
