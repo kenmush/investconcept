@@ -95,9 +95,13 @@ class Investors extends Controller
      * @param  User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($user)
     {
-        //
+        $investor =(new Investor())->investorByID($user);
+        $assets = (new Investor())->getAssetCategories();
+
+        return view('management.investors.show',compact('investor','assets'));
+
     }
 
     /**

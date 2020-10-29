@@ -213,7 +213,7 @@
     <!--**********************************
         Content body start
     ***********************************-->
-    <div class="content-body">
+    <div class="content-body" id="app">
         <!-- row -->
      @yield('content')
     </div>

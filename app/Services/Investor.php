@@ -9,6 +9,7 @@ use GuzzleHttp\Client;
 class Investor
 {
     protected $path = 'https://5b441e4de88a.ngrok.io/';
+
 //    protected $path = ;
 
     public function investorLogin($data)
@@ -32,17 +33,17 @@ class Investor
         return json_decode((string) $response->getBody(), true);
     }
 
+    public function path()
+    {
+        return config('investordashboard.root_path');
+    }
+
     /**
      * @return \Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed
      */
     public function getPath()
     {
         return $this->path;
-    }
-
-    public function path()
-    {
-        return config('investordashboard.root_path');
     }
 
     public function getAllInvestors()
@@ -68,6 +69,11 @@ class Investor
     public function getInvestorAssets($investorID)
     {
         return $this->request('GET', 'portal/investor/portfolio/'.$investorID);
+    }
+
+    public function investorByID($investorId)
+    {
+        return $this->request('GET', 'portal/investor/profile/'.$investorId);
     }
 
     public function registerInvestor($data)
@@ -108,7 +114,7 @@ class Investor
                 ],
                 [
                         'name'     => 'avatar',
-                        'contents' => fopen( $data['avatar'], 'r' ),
+                        'contents' => fopen($data['avatar'], 'r'),
                         'filename' => $data['avatar']->getClientOriginalName()
 //                        'contents' => file_get_contents(storage_path('app\\'.$data['avatar']))
                 ],

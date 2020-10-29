@@ -126,39 +126,39 @@
                                     <th><strong>Impact Multiplier</strong></th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                @foreach($tableAssets as $asset)
-                                    <tr>
-                                        <td scope="row">
-                                            @if($asset['categoryName'] === 'Raw Water ATM')
-                                                <img height="30px"
-                                                     src="{{ asset('untapped/rawwateratm.svg') }}"
-                                                     alt="">
-                                            @elseif($asset['categoryName'] === 'Mobile Irrigation')
-                                                <img height="30px"
-                                                     src="{{ asset('untapped/mobileirrigation.svg') }}"
-                                                     alt="">
-                                            @elseif($asset['categoryName'] === 'Smart Meter')
-                                                <img height="30px"
-                                                     src="{{ asset('untapped/smartmeterheader.svg') }}"
-                                                     alt="">
-                                            @else
-                                                <img height="30px"
-                                                     src="{{ asset('motorbike.svg') }}"
-                                                     alt="">
-                                            @endif
-                                        </td>
-                                        <td><a href="/assets/mobile-irrigation">{{$asset['categoryName']}}</td>
-                                        <td>{{$asset['Numbers']}}</td>
-                                        <td>{{$asset['ticket']}} $</td>
-                                        <td></td>
-                                        <td>{{$asset['return_percentage']}}%</td>
-                                        <td>{{$asset['duration']}} Months</td>
-                                        <td>{{$asset['socialGain']}}</td>
-                                    </tr>
-                                @endforeach
+{{--                                <tbody>--}}
+{{--                                @foreach($tableAssets as $asset)--}}
+{{--                                    <tr>--}}
+{{--                                        <td scope="row">--}}
+{{--                                            @if($asset['categoryName'] === 'Raw Water ATM')--}}
+{{--                                                <img height="30px"--}}
+{{--                                                     src="{{ asset('untapped/rawwateratm.svg') }}"--}}
+{{--                                                     alt="">--}}
+{{--                                            @elseif($asset['categoryName'] === 'Mobile Irrigation')--}}
+{{--                                                <img height="30px"--}}
+{{--                                                     src="{{ asset('untapped/mobileirrigation.svg') }}"--}}
+{{--                                                     alt="">--}}
+{{--                                            @elseif($asset['categoryName'] === 'Smart Meter')--}}
+{{--                                                <img height="30px"--}}
+{{--                                                     src="{{ asset('untapped/smartmeterheader.svg') }}"--}}
+{{--                                                     alt="">--}}
+{{--                                            @else--}}
+{{--                                                <img height="30px"--}}
+{{--                                                     src="{{ asset('motorbike.svg') }}"--}}
+{{--                                                     alt="">--}}
+{{--                                            @endif--}}
+{{--                                        </td>--}}
+{{--                                        <td><a href="/assets/mobile-irrigation">{{$asset['categoryName']}}</td>--}}
+{{--                                        <td>{{$asset['Numbers']}}</td>--}}
+{{--                                        <td>{{$asset['ticket']}} $</td>--}}
+{{--                                        <td></td>--}}
+{{--                                        <td>{{$asset['return_percentage']}}%</td>--}}
+{{--                                        <td>{{$asset['duration']}} Months</td>--}}
+{{--                                        <td>{{$asset['socialGain']}}</td>--}}
+{{--                                    </tr>--}}
+{{--                                @endforeach--}}
 
-                                </tbody>
+{{--                                </tbody>--}}
                             </table>
                         </div>
                     </div>

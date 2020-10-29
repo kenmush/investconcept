@@ -2005,6 +2005,134 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AssociateAssets.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/AssociateAssets.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "AssociateAssets",
+  props: ['assets'],
+  data: function data() {
+    return {
+      errors: '',
+      units: '',
+      totalinvested: '',
+      balance: '',
+      category: ''
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponent.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapComponent.vue?vue&type=script&lang=js& ***!
@@ -44199,6 +44327,408 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AssociateAssets.vue?vue&type=template&id=2bcdb7b4&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/AssociateAssets.vue?vue&type=template&id=2bcdb7b4&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "col-12" }, [
+      _c("div", { staticClass: "col-md-6" }, [
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "category" } }, [_vm._v("Assets")]),
+          _vm._v(" "),
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.category,
+                  expression: "category"
+                }
+              ],
+              staticClass: "form-control form-control-sm",
+              attrs: { name: "category", id: "category" },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.category = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { selected: "" } }, [
+                _vm._v("-- Select Asset --")
+              ]),
+              _vm._v(" "),
+              _vm._l(_vm.assets, function(asset) {
+                return _c("option", [_vm._v(_vm._s(asset.categoryName))])
+              })
+            ],
+            2
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _vm.category
+        ? _c("form", { staticClass: "mt-5" }, [
+            _c("legend", [_vm._v("Data for: " + _vm._s(_vm.category))]),
+            _vm._v(" "),
+            _c("hr"),
+            _vm._v(" "),
+            _c("div", { staticClass: "row mt-2" }, [
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "units" } }, [_vm._v("Units")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.units,
+                        expression: "units"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: [
+                      _vm.errors.units ? "is-invalid" : "",
+                      !_vm.errors.units && Object.keys(_vm.errors).length > 1
+                        ? "is-valid"
+                        : ""
+                    ],
+                    attrs: {
+                      type: "text",
+                      id: "units",
+                      "aria-describedby": "units-help",
+                      placeholder: "Units",
+                      required: ""
+                    },
+                    domProps: { value: _vm.units },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.units = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.units
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(
+                          "\n             " +
+                            _vm._s(_vm.errors.units.toString()) +
+                            "\n           "
+                        )
+                      ])
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "totalinvested" } }, [
+                    _vm._v("Total Invested")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.totalinvested,
+                        expression: "totalinvested"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: [
+                      _vm.errors.totalinvested ? "is-invalid" : "",
+                      !_vm.errors.totalinvested &&
+                      Object.keys(_vm.errors).length > 1
+                        ? "is-valid"
+                        : ""
+                    ],
+                    attrs: {
+                      type: "text",
+                      id: "totalinvested",
+                      "aria-describedby": "totalinvested-help",
+                      placeholder: "Total Invested",
+                      required: ""
+                    },
+                    domProps: { value: _vm.totalinvested },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.totalinvested = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.totalinvested
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(
+                          "\n             " +
+                            _vm._s(_vm.errors.totalinvested.toString()) +
+                            "\n           "
+                        )
+                      ])
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "balance" } }, [
+                    _vm._v("Balance")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.balance,
+                        expression: "balance"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: [
+                      _vm.errors.balance ? "is-invalid" : "",
+                      !_vm.errors.balance && Object.keys(_vm.errors).length > 1
+                        ? "is-valid"
+                        : ""
+                    ],
+                    attrs: {
+                      type: "text",
+                      id: "balance",
+                      "aria-describedby": "balance-help",
+                      placeholder: "Balance",
+                      required: ""
+                    },
+                    domProps: { value: _vm.balance },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.balance = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.balance
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(
+                          "\n             " +
+                            _vm._s(_vm.errors.balance.toString()) +
+                            "\n           "
+                        )
+                      ])
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "interestgenerated" } }, [
+                    _vm._v("Interest Generated")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.interestgenerated,
+                        expression: "interestgenerated"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: [
+                      _vm.errors.interestgenerated ? "is-invalid" : "",
+                      !_vm.errors.interestgenerated &&
+                      Object.keys(_vm.errors).length > 1
+                        ? "is-valid"
+                        : ""
+                    ],
+                    attrs: {
+                      type: "text",
+                      id: "interestgenerated",
+                      "aria-describedby": "interestgenerated-help",
+                      placeholder: "Interest Generated",
+                      required: ""
+                    },
+                    domProps: { value: _vm.interestgenerated },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.interestgenerated = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.interestgenerated
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(
+                          "\n             " +
+                            _vm._s(_vm.errors.interestgenerated.toString()) +
+                            "\n           "
+                        )
+                      ])
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "duration" } }, [
+                    _vm._v("Duration")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.duration,
+                        expression: "duration"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: [
+                      _vm.errors.duration ? "is-invalid" : "",
+                      !_vm.errors.duration && Object.keys(_vm.errors).length > 1
+                        ? "is-valid"
+                        : ""
+                    ],
+                    attrs: {
+                      type: "text",
+                      id: "duration",
+                      "aria-describedby": "duration-help",
+                      placeholder: "Duration",
+                      required: ""
+                    },
+                    domProps: { value: _vm.duration },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.duration = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.duration
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(
+                          "\n             " +
+                            _vm._s(_vm.errors.duration.toString()) +
+                            "\n           "
+                        )
+                      ])
+                    : _vm._e()
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "impactmultiplier" } }, [
+                    _vm._v("Impact Multiplier")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.impactmultiplier,
+                        expression: "impactmultiplier"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    class: [
+                      _vm.errors.impactmultiplier ? "is-invalid" : "",
+                      !_vm.errors.impactmultiplier &&
+                      Object.keys(_vm.errors).length > 1
+                        ? "is-valid"
+                        : ""
+                    ],
+                    attrs: {
+                      type: "text",
+                      id: "impactmultiplier",
+                      "aria-describedby": "impactmultiplier-help",
+                      placeholder: "Impact Multiplier",
+                      required: ""
+                    },
+                    domProps: { value: _vm.impactmultiplier },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.impactmultiplier = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.impactmultiplier
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(
+                          "\n             " +
+                            _vm._s(_vm.errors.impactmultiplier.toString()) +
+                            "\n           "
+                        )
+                      ])
+                    : _vm._e()
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("button", { staticClass: "btn btn-sm btn-secondary" }, [
+                _vm._v("Associate " + _vm._s(_vm.category) + " Asset")
+              ])
+            ])
+          ])
+        : _vm._e()
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponent.vue?vue&type=template&id=2f302b28&":
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapComponent.vue?vue&type=template&id=2f302b28& ***!
@@ -57557,6 +58087,7 @@ Vue.component('map-component-with-details', __webpack_require__(/*! ./components
 Vue.component('asset-list', __webpack_require__(/*! ./components/AssetList.vue */ "./resources/js/components/AssetList.vue")["default"]);
 Vue.component('calculateimpact', __webpack_require__(/*! ./components/impact-calculation.vue */ "./resources/js/components/impact-calculation.vue")["default"]);
 Vue.component('showassets', __webpack_require__(/*! ./components/assets.vue */ "./resources/js/components/assets.vue")["default"]);
+Vue.component('associateassets', __webpack_require__(/*! ./components/AssociateAssets.vue */ "./resources/js/components/AssociateAssets.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -57679,6 +58210,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AssetList_vue_vue_type_template_id_6e158a5a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AssetList_vue_vue_type_template_id_6e158a5a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/AssociateAssets.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/AssociateAssets.vue ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AssociateAssets_vue_vue_type_template_id_2bcdb7b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AssociateAssets.vue?vue&type=template&id=2bcdb7b4&scoped=true& */ "./resources/js/components/AssociateAssets.vue?vue&type=template&id=2bcdb7b4&scoped=true&");
+/* harmony import */ var _AssociateAssets_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AssociateAssets.vue?vue&type=script&lang=js& */ "./resources/js/components/AssociateAssets.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AssociateAssets_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AssociateAssets_vue_vue_type_template_id_2bcdb7b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AssociateAssets_vue_vue_type_template_id_2bcdb7b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "2bcdb7b4",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/AssociateAssets.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/AssociateAssets.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/AssociateAssets.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AssociateAssets_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./AssociateAssets.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AssociateAssets.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AssociateAssets_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/AssociateAssets.vue?vue&type=template&id=2bcdb7b4&scoped=true&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/components/AssociateAssets.vue?vue&type=template&id=2bcdb7b4&scoped=true& ***!
+  \************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AssociateAssets_vue_vue_type_template_id_2bcdb7b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./AssociateAssets.vue?vue&type=template&id=2bcdb7b4&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/AssociateAssets.vue?vue&type=template&id=2bcdb7b4&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AssociateAssets_vue_vue_type_template_id_2bcdb7b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AssociateAssets_vue_vue_type_template_id_2bcdb7b4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

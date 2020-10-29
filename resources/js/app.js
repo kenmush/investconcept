@@ -13,6 +13,7 @@ Vue.component('map-component-with-details', require('./components/MapComponentWi
 Vue.component('asset-list', require('./components/AssetList.vue').default);
 Vue.component('calculateimpact', require('./components/impact-calculation.vue').default);
 Vue.component('showassets', require('./components/assets.vue').default);
+Vue.component('associateassets', require('./components/AssociateAssets.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
