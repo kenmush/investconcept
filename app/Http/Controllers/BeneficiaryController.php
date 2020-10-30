@@ -55,7 +55,9 @@ class BeneficiaryController extends Controller
      */
     public function show($beneficiary)
     {
-        return view('management.beneficiary.show');
+        return view('management.beneficiary.show',[
+                'beneficiary' => (new Investor())->getBeneficiaryById($beneficiary)
+        ]);
     }
 
     /**

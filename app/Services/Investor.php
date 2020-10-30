@@ -97,7 +97,7 @@ class Investor
 
     public function getBeneficiaryById($id)
     {
-        return $this->request('GET', 'portal/beneficiary/creation/');
+        return $this->request('GET', 'portal/beneficiary/profile/'.$id.'/');
     }
 
     public function signupInvestor($data)

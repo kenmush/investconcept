@@ -102,10 +102,10 @@ export default {
       let url = process.env.MIX_APP_URL;
       let points = [];
       let Self = this;
-      axios.get(`/api/getAllAssets/${this.categoryId}`).then(resp => {
+      axios.get(`/api/getAllAssets/6/20`).then(resp => {
         this.assets = resp.data;
-
         let ds = Object.keys(resp.data).map(function (datareturned, index) {
+          console.log( `hapa`);
           console.log( Self.assets[datareturned]);
           points.push({
             'type': 'Feature',
