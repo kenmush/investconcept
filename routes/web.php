@@ -15,7 +15,6 @@ Route::get('/', function () {
     $assets = (new Investor())->getAssetCategories();
     $landingPageData = collect((new Investor())->getLandingPageData())->first();
     return view('index', compact('assets','landingPageData'));
-//    return view('launch.launch', compact('assets','landingPageData'));
 });
 
 Route::group(['prefix' => 'assets', 'middleware' => ['auth']], function () {

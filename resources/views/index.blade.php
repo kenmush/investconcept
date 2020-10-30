@@ -9,9 +9,9 @@
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-xl-flex d-lg-flex d-block
                         align-items-center">
                         <div class="cta-text">
-                            <h2>{{$landingPageData['tag_line']}}</h2>
-                            <p>{{$landingPageData['tag_line_description_one']}}</p>
-                            <p class="marked">{{$landingPageData['tag_line_description_two']}}</p>
+                            <h2>{{$landingPageData['tag_line'] ?? ''}}</h2>
+                            <p>{{$landingPageData['tag_line_description_one'] ?? ''}}</p>
+                            <p class="marked">{{$landingPageData['tag_line_description_two'] ?? ''}}</p>
                             <a href="#simulateimpact" class="btn-hyipox-medium cta-btn">Simulate your Impact</a>
                         </div>
                     </div>
@@ -42,8 +42,8 @@
                                 <img src="{{ asset('impact.svg') }}" alt="">
                             </div>
                             <div class="part-text">
-                                <h4 class="title">{{$landingPageData['keyword_one']}}</h4>
-                                <p>{{$landingPageData['keyword_one_description']}}</p>
+                                <h4 class="title">{{$landingPageData['keyword_one'] ?? ''}}</h4>
+                                <p>{{$landingPageData['keyword_one_description'] ?? ''}}</p>
                             </div>
                         </div>
                     </div>
@@ -53,8 +53,8 @@
                                 <img src="{{ asset('transparent.svg') }}" alt="">
                             </div>
                             <div class="part-text">
-                                <h4 class="title">{{$landingPageData['keyword_two']}}</h4>
-                                <p>{{$landingPageData['keyword_two_description']}}</p>
+                                <h4 class="title">{{$landingPageData['keyword_two'] ?? ''}}</h4>
+                                <p>{{$landingPageData['keyword_two_description'] ?? ''}}</p>
                             </div>
                         </div>
                     </div>
@@ -64,8 +64,8 @@
                                 <img src="{{ asset('attractive.svg') }}" alt="">
                             </div>
                             <div class="part-text">
-                                <h4 class="title">{{$landingPageData['keyword_three']}}</h4>
-                                <p>{{$landingPageData['keyword_three_description']}}</p>
+                                <h4 class="title">{{$landingPageData['keyword_three'] ?? ''}}</h4>
+                                <p>{{$landingPageData['keyword_three_description'] ?? ''}}</p>
                             </div>
                         </div>
                     </div>
