@@ -99,8 +99,8 @@ class Investors extends Controller
     {
         $investor = (new Investor())->investorByID($user);
         $assets = (new Investor())->getAssetCategories();
-
-        return view('management.investors.show', compact('investor', 'assets'));
+        $tableAssets = (new Investor())->getInvestorAssets(auth()->user()->api_id)['investments'];
+        return view('management.investors.show', compact('investor', 'assets','tableAssets'));
 
     }
 

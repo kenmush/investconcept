@@ -111,7 +111,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">My Assets</h4>
+                        <h4 class="card-title">My Investments</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -131,7 +131,8 @@
                                     <tr>
                                         <td>
 {{--                                            <a href="{{ route('portfolio.show',[$asset['id']]) }}">--}}
-                                            <a href="{{ route('portfolio.show',$asset['id']) }}">
+{{--                                            <a href="{{ url('test/'.$asset['id']) }}">--}}
+                                            <a href="{{ route('portfolio.show',$asset['asset_category']) }}">
                                             {{$asset['asset_category_name'] ?? ''}}
                                             </a>
                                         </td>

@@ -107,6 +107,7 @@ class RegisterController extends Controller
                     ]
             );
         } catch (\Exception $exception) {
+           
             return redirect()->route('register');
         }
 

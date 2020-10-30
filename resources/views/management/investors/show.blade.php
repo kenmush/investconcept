@@ -42,6 +42,46 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="assetsTable" class="table table-responsive-md">
+                                        <thead>
+                                        <tr>
+                                            <th><strong>Asset Name</strong></th>
+                                            <th><strong>Units</strong></th>
+                                            <th><strong>Total Invested</strong></th>
+                                            <th><strong>Interest Generated</strong></th>
+                                            <th><strong>Duration</strong></th>
+                                            <th><strong>Impact Multiplier</strong></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($tableAssets as $asset)
+                                            <tr>
+                                                <td>
+                                                    {{--                                            <a href="{{ route('portfolio.show',[$asset['id']]) }}">--}}
+                                                    <a href="{{ url('/administrate/manageasset/'.$asset['id'].'/'
+                                                    .$investor['id']) }}">
+                                                        {{$asset['asset_category_name'] ?? ''}}
+                                                    </a>
+                                                </td>
+                                                <td>{{$asset['units']}}</td>
+                                                <td>{{$asset['amount_invested']}} $</td>
+                                                <td>{{$asset['interest']}}%</td>
+                                                <td>{{$asset['duration']}} Months</td>
+                                                <td>{{$asset['leverage']}}</td>
+                                                <td>
+                                                    <a href="{{ route('portfolio.edit',$asset['id']) }}">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                             {{--                   --}}
                             <div class="col-md-12">
                                 <associateassets :assets='@json($assets)'

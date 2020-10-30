@@ -1,8 +1,15 @@
 <?php
 
 use App\Asset;
+use App\Http\Controllers\AllassetController;
 use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
+
+
+Route::get('test/{investmentid}', function ($investmentId) {
+ return   (new Investor())->getCategoryInvestments($investmentId);
+});
+
 
 Route::get('/', function () {
     $assets = (new Investor())->getAssetCategories();
@@ -36,8 +43,12 @@ Route::group(['prefix' => 'assets', 'middleware' => ['auth']], function () {
 Route::group(['prefix' => 'administrate', 'middleware' => ['auth']], function () {
 
     Route::resource('herosection', 'LandingpageController');
-
+    Route::get('/manageasset/{id?}/{investor?}',[AllassetController::class,'showforUse']);
     Route::resource('investors', 'Investors');
+    Route::resource('investors', 'Investors');
+
+    Route::resource('manageassets', 'AllassetController');
+    Route::resource('beneficiary', 'BeneficiaryController');
 
 });
 

@@ -184,16 +184,21 @@
                     </a>
                     <ul aria-expanded="false" class="mm-collapse">
                         <li><a href="{{ route('herosection.create') }}">Landing Page</a></li>
-                        <li><a href="{{ route('myassets.index') }}">Assets</a></li>
+                        <li><a href="{{ route('myassets.index') }}">View Asset category</a></li>
+                        <li><a href="{{ route('myassets.create') }}">Add Asset category</a></li>
+                        <li><a href="{{ route('manageassets.index') }}">View Asset</a></li>
+                        <li><a href="{{ route('manageassets.create') }}">Add Asset</a></li>
                     </ul>
                 </li>
                 <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                         <i class="fa fa-users"></i>
-                        <span class="nav-text">User Management</span>
+                        <span class="nav-text">Investors</span>
                     </a>
                     <ul aria-expanded="false" class="mm-collapse">
-                        <li><a href="{{ route('investors.index') }}">Investors</a></li>
-                        <li><a href="./app-profile.html">Ambassadors</a></li>
+                        <li><a href="{{ route('investors.index') }}">View Investors</a></li>
+                        <li><a href="{{ route('investors.create') }}">Add Investors</a></li>
+                        <li><a href="{{ route('beneficiary.create') }}">Add Beneficiary</a></li>
+{{--                        <li><a href="./app-profile.html">Ambassadors</a></li>--}}
                     </ul>
                 </li>
             </ul>

@@ -55,6 +55,7 @@ class PortfolioController extends Controller
                     'assets' => (new Investor())->getAssetbyId($id)
             ]);
         } catch (ClientException $exception) {
+            dd($exception);
             return back();
         }
 

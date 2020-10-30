@@ -38,22 +38,61 @@ class Investor
         return config('investordashboard.root_path');
     }
 
-    public function getLandingPageData()
+    public function getCategoryInvestments($investmentId)
     {
-        return $this->request('GET','portal/website/contents/creation/');
-}
-    public function createLandingPageData($data)
-    {
-        return $this->request('POST','portal/website/contents/creation/',$data);
+        return $this->request('GET', "portal/assets/by/category/$investmentId/");
     }
 
-    public function updateLandingPageData($data,$id)
+    public function getAllAssets()
+    {
+        return $this->request('GET', 'portal/asset/creation/');
+    }
+
+    public function createAssetForInvestor($data)
+    {
+        return $this->requestFiles('POST', 'portal/asset/investment/creation/', $data);
+    }
+
+    protected function requestFiles($method, $path, array $parameters = [])
+    {
+        $response = (new Client)->{$method}($this->path().ltrim($path, '/'), [
+                'headers'   => [
+                        'Authorization' => "Bearer ".'X-Mutisya',
+                ],
+                'multipart' => $parameters,
+        ]);
+
+        return json_decode((string) $response->getBody(), true);
+    }
+
+    public function getLandingPageData()
+    {
+        return $this->request('GET', 'portal/website/contents/creation/');
+    }
+
+    public function createLandingPageData($data)
+    {
+        return $this->request('POST', 'portal/website/contents/creation/', $data);
+    }
+
+    public function updateLandingPageData($data, $id)
     {
         return $this->request('PUT', 'portal/website/contents/details/'.$id.'/', $data);
-}
+    }
+
     public function updateAssetInvestedIn($data, $investorId)
     {
         return $this->request('PUT', 'portal/investor/investments/'.$investorId.'/', $data);
+    }
+
+    public function registerBeneficiary($data)
+    {
+        return $this->request('POST', 'portal/beneficiary/creation/', $data);
+    }
+
+    public function getBeneficiary()
+    {
+        return $this->request('GET', 'portal/beneficiary/creation/');
     }
 
     public function signupInvestor($data)
@@ -135,18 +174,6 @@ class Investor
 //                ],
 
         ]);
-    }
-
-    protected function requestFiles($method, $path, array $parameters = [])
-    {
-        $response = (new Client)->{$method}($this->path().ltrim($path, '/'), [
-                'headers'   => [
-                        'Authorization' => "Bearer ".'X-Mutisya',
-                ],
-                'multipart' => $parameters,
-        ]);
-
-        return json_decode((string) $response->getBody(), true);
     }
 
     /**
