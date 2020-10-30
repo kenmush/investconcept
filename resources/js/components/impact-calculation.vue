@@ -19,7 +19,7 @@
                     <div aria-labelledby="dropdownMenuButton" class="dropdown-menu currency-select-list">
                       <a href="#" data-currency="usd"
                          class="dropdown-item single-currency-select selected-currency active">USD</a>
-<!--                      <a href="#" data-currency="eur" class="dropdown-item single-currency-select">EUR</a>-->
+                      <!--                      <a href="#" data-currency="eur" class="dropdown-item single-currency-select">EUR</a>-->
                     </div>
                   </form>
                 </div>
@@ -97,52 +97,68 @@
           </div>
         </div>
       </div>
-
-
+      <div class="row">
+        <div class="col-12">
+          <line-chart :chart-data="datacollection" :options="chartoption"></line-chart>
+          <!--        <chartist-->
+          <!--            ratio="ct-square"-->
+          <!--            type="Line"-->
+          <!--            :data="chartData"-->
+          <!--            :options="chartOptions">-->
+          <!--        </chartist>-->
+        </div>
+      </div>
     </div>
-<!--    <div class="row">-->
-<!--      <div class="col-12">-->
-<!--        <chartist-->
-<!--            ratio="ct-square"-->
-<!--            type="Line"-->
-<!--            :data="chartData"-->
-<!--            :options="chartOptions">-->
-<!--        </chartist>-->
-<!--      </div>-->
-<!--    </div>-->
   </div>
 </template>
 
 <script>
 import ctAxisTitle from 'chartist-plugin-axistitle'
+import LineChart from './LineChart.js'
 
 export default {
+  props: {
+    chartdata: {
+      type: Object,
+      default: null
+    },
+    options: {
+      type: Object,
+      default: null,
+
+    }
+  },
   name: "impact-calculation",
   data() {
     return {
+      datacollection: null,
       errors: '',
-      amount: 250000,
-      chartData: {
-        labels: ["18 Months", "2 Years", "3 Years", "5 Years", "10 Years"],
-        series: [
-          [400000, 500000, 600000, 700000, 800000],
-          [500000, 600000, 700000, 800000, 900000]]
+      amount: 80000,
+      chartoption: {
+        responsive: true,
+        low: 0,
+        showArea: true,
+        maintainAspectRatio: false,
+        scales: {
+          xAxes: [{
+            ticks: {
+              maxRotation: 90,
+              minRotation: 80
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              min: 0,
+              max: 3000000,
+              stepSize: 50000,
+            }
+          }]
+        }
       },
-      chartOptions: {
-        lineSmooth: true,
-        chartPadding: {
-          top: 20,
-          right: 0,
-          bottom: 0,
-          left: 30
-        },
-        axisY: {
-          onlyInteger: true
-        },
-        plugins: []       // width: 300,
-        // height: 200
-      }
     }
+  },
+  components: {
+    LineChart
   },
   computed: {
     totalNumbers() {
@@ -159,6 +175,7 @@ export default {
       return Math.round(i).toLocaleString();
     },
     totalLeverage() {
+      this.fillData()
       let amountToUse = this.amount;
       let i = (((this.amount / 3) / 500) * 1800) + (((this.amount / 3) / 1000) * 12000) + (((this.amount / 3) / 1000) *
           3600)
@@ -166,65 +183,86 @@ export default {
           (((this.amount / 3) / 1000) *
               3600)
       let personalreturn = Math.round(((amountToUse / 3) / 1000) + ((amountToUse / 3) / 500) + ((amountToUse / 3) / 1000));
-      console.log("Logging");
-      console.log(personalreturn);
-      this.$nextTick(function () {
-        this.chartData = {
-          labels: ["18 Months", "2 Years", "3 Years", "5 Years", "10 Years"],
-          series: [
-            [socialImpact, socialImpact * 2, socialImpact * 3, socialImpact * 4,
-              socialImpact * 6,
-              socialImpact * 10], [
-              personalreturn * 1000, personalreturn * 2 * 1000, personalreturn * 3 * 1000, personalreturn * 4 * 1000,
-              personalreturn * 6 * 1000,
-              personalreturn * 10 * 1000
-            ],
-
-          ]
-        };
-        this.chartOptions = {
-          lineSmooth: true,
-          chartPadding: {
-            top: 20,
-            right: 0,
-            bottom: 0,
-            left: 60
-          },
-          axisY: {
-            onlyInteger: true
-          },
-          plugins: [
-            Vue.chartist.plugins.ctAxisTitle({
-              axisX: {
-                axisTitle: 'Years',
-                axisClass: 'ct-axis-title',
-                offset: {
-                  x: 0,
-                  y: 30
-                },
-                textAnchor: 'middle'
-              },
-              axisY: {
-                axisTitle: 'Amount in Dollars',
-                axisClass: 'ct-axis-title',
-                offset: {
-                  x: 0,
-                  y: -20
-                },
-                textAnchor: 'middle',
-                flipTitle: false
-              }
-            })
-          ],
-          // , width: 1366,
-          // height: 800
-        }
-      });
       return Math.round(i / this.amount).toLocaleString();
     }
   },
   mounted() {
-  }
+    this.fillData()
+  },
+  methods: {
+    fillData() {
+      let amountToUse = this.amount;
+      let i = (((this.amount / 3) / 500) * 1800) + (((this.amount / 3) / 1000) * 12000) + (((this.amount / 3) / 1000) *
+          3600)
+      let socialImpact = (((this.amount / 3) / 500) * 1800) + (((this.amount / 3) / 1000) * 12000) +
+          (((this.amount / 3) / 1000) *
+              3600)
+      let personalreturn = Math.round(((amountToUse / 3) / 1000) + ((amountToUse / 3) / 500) + ((amountToUse / 3) / 1000));
+      this.datacollection = {
+        labels: ["18 Months", "2 Years", "3 Years", "5 Years", "10 Years"],
+        datasets: [
+          {
+            label: 'Social Impact',
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1,
+            data:
+                [socialImpact, socialImpact * 2, socialImpact * 3, socialImpact * 4,socialImpact * 10]
+          },
+          {
+            label: 'Personal Return',
+            backgroundColor: '#7995f8',
+            data:
+                [
+                  personalreturn * 1000, personalreturn * 2 * 1000, personalreturn * 3 * 1000, personalreturn * 4 * 1000, personalreturn * 10 * 1000
+                ]
+          }]
+      }
+     let stepSize = 100000
+      if (socialImpact * 10 > 1000000) {
+        stepSize = 1000000;
+      }
+      if (socialImpact * 10 < 100000) {
+        stepSize = 5000;
+      }
+      this.chartoption = {
+        // low: 0,
+        showArea: false,
+        fullWidth: true,
+        maintainAspectRatio: false,
+        scales: {
+          xAxes: [{
+            ticks: {
+              // maxRotation: 90,
+              // minRotation: 80
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              min: 0,
+              max: (socialImpact * 10) + socialImpact,
+              stepSize: stepSize,
+            }
+          }]
+        }
+      };
+    },
+
+  },
 }
 </script>
 
@@ -249,5 +287,10 @@ table {
   background: linear-gradient(135deg, rgba(240, 183, 161, 1) 0%, rgba(140, 51, 16, 1) 50%, rgba(117, 34, 1, 1) 51%, rgba(191, 110, 78, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0b7a1', endColorstr='#bf6e4e', GradientType=1);
 
+}
+
+.small {
+  max-width: 600px;
+  margin: 150px auto;
 }
 </style>

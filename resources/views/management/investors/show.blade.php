@@ -45,7 +45,7 @@
                             {{--                   --}}
                             <div class="col-md-12">
                                 <associateassets :assets='@json($assets)'
-                                                 :invesotorId='@json($investor['id'])'></associateassets>
+                                                 :invesotorid='@json($investor['id'])'></associateassets>
                             </div>
                         </div>
                     </div>

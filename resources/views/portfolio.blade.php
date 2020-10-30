@@ -35,7 +35,8 @@
 
 									</span>
                             <div class="media-body">
-                                <h3 class="mb-0 text-black"><span class="counter ml-0">150,600</span></h3>
+
+                                <h3 class="mb-0 text-black"><span class="counter ml-0">{{ $stats['total_balance'] }}</span></h3>
                                 <p class="mb-0">Balance</p>
                                 <small>24 MONTHS LEFT</small>
                             </div>
@@ -51,7 +52,8 @@
 								<i style="    color: #FF8377;" class="fa fa-percent"></i>
 									</span>
                             <div class="media-body">
-                                <h3 class="mb-0 text-black">+<span class="counter ml-0">1,450</span>$</h3>
+
+                                <h3 class="mb-0 text-black">+<span class="counter ml-0">{{ $stats['total_interest'] }}</span>$</h3>
                                 <p class="mb-0">Interest</p>
                                 <small>ANNUALIZED RETURN</small>
                             </div>
@@ -67,7 +69,7 @@
 										 <i style="    color: #FF8377;" class="fa fa-money"></i>
 									</span>
                             <div class="media-body">
-                                <h3 class="mb-0 text-black"><span class="counter ml-0">150,600</span>$</h3>
+                                <h3 class="mb-0 text-black"><span class="counter ml-0">{{ $stats['total_revenue'] }}</span>$</h3>
                                 <p class="mb-0">Revenue</p>
                                 <small>GENERATED FOR ENTREPRENEUR</small>
                             </div>
@@ -84,7 +86,7 @@
                                     <i style="    color: #FF8377;" class="fa fa-bar-chart"></i>
                                     </span>
                             <div class="media-body">
-                                <h3 class="mb-0 text-black"><span class="counter ml-0">2.4</span>x</h3>
+                                <h3 class="mb-0 text-black"><span class="counter ml-0">{{ $stats['total_leverage'] }}</span>x</h3>
                                 <p class="mb-0">Leverage</p>
                                 <small>CREATED PER DOLLAR INVESTED</small>
                             </div>
@@ -113,14 +115,12 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-responsive-md">
+                            <table id="assetsTable" class="table table-responsive-md">
                                 <thead>
                                 <tr>
-                                    <th style="width:80px;"><strong>#</strong></th>
                                     <th><strong>Asset Name</strong></th>
                                     <th><strong>Units</strong></th>
                                     <th><strong>Total Invested</strong></th>
-                                    <th><strong>Balance</strong></th>
                                     <th><strong>Interest Generated</strong></th>
                                     <th><strong>Duration</strong></th>
                                     <th><strong>Impact Multiplier</strong></th>
@@ -129,17 +129,22 @@
                                 <tbody>
                                 @foreach($tableAssets as $asset)
                                     <tr>
-                                        <td scope="row">
-                                            <img src="{{config('investordashboard.media_path').$asset['image']}}"
-                                                 class="rounded-circle" height="30px" alt="">
+                                        <td>
+{{--                                            <a href="{{ route('portfolio.show',[$asset['id']]) }}">--}}
+                                            <a href="{{ route('portfolio.show',$asset['id']) }}">
+                                            {{$asset['asset_category_name'] ?? ''}}
+                                            </a>
                                         </td>
-                                        <td><a href="/assets/mobile-irrigation">{{$asset['categoryName']}}</td>
-                                        <td>{{$asset['Numbers']}}</td>
-                                        <td>{{$asset['ticket']}} $</td>
-                                        <td></td>
-                                        <td>{{$asset['return_percentage']}}%</td>
+                                        <td>{{$asset['units']}}</td>
+                                        <td>{{$asset['amount_invested']}} $</td>
+                                        <td>{{$asset['interest']}}%</td>
                                         <td>{{$asset['duration']}} Months</td>
-                                        <td>{{$asset['socialGain']}}</td>
+                                        <td>{{$asset['leverage']}}</td>
+                                        <td>
+                                            <a href="{{ route('portfolio.edit',$asset['id']) }}">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                 @endforeach
 

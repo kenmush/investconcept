@@ -2,7 +2,8 @@
   <div>
     <div class="row">
       <div class="col-12">
-        <button type="button" v-if="Object.keys(currentCategory).length > 0" class="float-right btn btn-secondary btn-sm mr-3"
+        <button type="button" v-if="Object.keys(currentCategory).length > 0"
+                class="float-right btn btn-secondary btn-sm mr-3"
                 @click.prevent="addAssets">
           Add Assets
         </button>
@@ -40,7 +41,7 @@
                 <!--Label: Units, Attributes:units -->
                 <div class="form-group">
                   <label for="units">Total Invested</label>
-                  <input type="number" class="form-control" v-model="holdingData[index].totalInvested"
+                  <input type="number" class="form-control" v-model="holdingData[index].amount_invested"
                          aria-describedby="units-help"
                          :placeholder="a" required>
                   <div class="invalid-feedback" v-if="errors.units">
@@ -64,7 +65,7 @@
                 <!--Label: Units, Attributes:units -->
                 <div class="form-group">
                   <label for="units">Interest</label>
-                  <input type="number" class="form-control" v-model="holdingData[index].iterestGenerated"
+                  <input type="number" class="form-control" v-model="holdingData[index].interest"
                          aria-describedby="units-help"
                          :placeholder="a" required>
                   <div class="invalid-feedback" v-if="errors.units">
@@ -88,7 +89,7 @@
                 <!--Label: Units, Attributes:units -->
                 <div class="form-group">
                   <label for="units">Leverage</label>
-                  <input type="number" class="form-control" v-model="holdingData[index].leverate"
+                  <input type="number" class="form-control" v-model="holdingData[index].leverage"
                          aria-describedby="units-help"
                          :placeholder="a" required>
                   <div class="invalid-feedback" v-if="errors.units">
@@ -119,7 +120,7 @@ import swal from 'sweetalert';
 
 export default {
   name: "AssociateAssets",
-  props: ['assets', 'invesotorId'],
+  props: ['assets', 'invesotorid'],
   data() {
     return {
       errors: '',
@@ -150,15 +151,15 @@ export default {
           return;
         }
         _self.holdingData.push({
-          'categoryID': found.id,
-          'investorId': _self.investorId,
+          'asset_category_id': found.id,
+          'investorId': _self.investorid,
           'categoryName': found.categoryName,
           'units': 0,
-          'totalInvested': 0,
+          'amount_invested': 0,
           'balance': 0,
-          'iterestGenerated': 0,
+          'interest': 0,
           'duration': 0,
-          'leverate': 0
+          'leverage': 0
         });
       });
       if (Object.keys(_self.currentCategory).length === 0) {
@@ -181,8 +182,19 @@ export default {
   },
   methods: {
     addAssets() {
-      swal("Here's the title!", "...and here's the text!");
-      axios.post('kenya', this.holdingData);
+      let data = {
+        "investor_id": this.invesotorid,
+        'investments': this.holdingData
+      };
+
+      axios.post(`${process.env.MIX_ROOT_PATH}portal/investor/investments/${this.invesotorid}/`,data).then(data=>{
+        this.holdingData = [];
+        this.currentCategory = [];
+        swal("Data Uploaded Successfully", "You are good to go.");
+
+      }).catch(err=>{
+        swal("Error", "Fill all the fields. Use 0 for empty ones.");
+      });
     }
   },
 }

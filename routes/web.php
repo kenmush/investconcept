@@ -10,7 +10,6 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'assets', 'middleware' => ['auth']], function () {
-    Route::resource('portfolio', 'PortfolioController');
 
     Route::resource('portfolio', 'PortfolioController');
 
@@ -49,4 +48,5 @@ Route::get('/contactus', function () {
 
 })->name('contactus');
 
-Auth::routes(['verify' => true]);
+//Auth::routes(['verify' => true]);
+Auth::routes();

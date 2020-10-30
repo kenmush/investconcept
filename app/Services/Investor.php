@@ -38,6 +38,11 @@ class Investor
         return config('investordashboard.root_path');
     }
 
+    public function updateAssetInvestedIn($data, $investorId)
+    {
+        return $this->request('PUT', 'portal/investor/investments/'.$investorId.'/', $data);
+    }
+
     public function signupInvestor($data)
     {
         return $this->request('POST', 'portal/investor/creation/', [
@@ -61,6 +66,11 @@ class Investor
     public function getAssetbyId($id)
     {
         return $this->request('GET', 'portal/asset/category/'.$id.'/');
+    }
+
+    public function getAssetbyIdbyInvestor($id, $investorId)
+    {
+        return $this->request('GET', 'portal/assets/by/category/'.$id.'/'.$investorId.'/');
     }
 
     public function createAsset($data)

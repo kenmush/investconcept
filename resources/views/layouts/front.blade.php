@@ -10,7 +10,6 @@
     <title>{{ config('app.name', 'Untapped Capital') }}</title>
 
     <!-- Scripts -->
-    <link rel="stylesheet" href="{{ asset('owl.carousel.css') }}">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -99,7 +98,6 @@
 
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('owl.carousel.js') }}"></script>
 <script src="https://cdnjs.com/libraries/Chart.js"></script>
 {{--<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>--}}
 <script>
@@ -162,20 +160,6 @@
         }
     });
 </script>
-<script>
-    $(document).ready(function () {
-        var owl = $(".owl-carousel").owlCarousel();
-        owl.owlCarousel({
-            items: 6,
-            loop: true,
-            margin: 10,
-            autoplay: true,
-            autoWidth: true,
-            autoplayTimeout: 1000,
-            autoplayHoverPause: true
-        });
-        owl.trigger('play.owl.autoplay', [1000])
-    });
-</script>
+
 </body>
 </html>

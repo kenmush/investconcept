@@ -14,11 +14,9 @@ Vue.component('asset-list', require('./components/AssetList.vue').default);
 Vue.component('calculateimpact', require('./components/impact-calculation.vue').default);
 Vue.component('showassets', require('./components/assets.vue').default);
 Vue.component('associateassets', require('./components/AssociateAssets.vue').default);
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+
 Vue.use(require('vue-chartist'))
 const app = new Vue({
     el: '#app',

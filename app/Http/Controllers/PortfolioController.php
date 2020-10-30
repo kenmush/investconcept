@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Asset;
 use App\Services\Investor;
+use GuzzleHttp\Exception\ClientException;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
@@ -16,8 +17,9 @@ class PortfolioController extends Controller
     {
 
         $assets = (new Investor())->getAssetCategories();
-        $tableAssets = (new Investor())->getInvestorAssets(auth()->user()->api_id);
-        return view('portfolio',compact('assets','tableAssets'));
+        $tableAssets = (new Investor())->getInvestorAssets(auth()->user()->api_id)['investments'];
+        $stats = (new Investor())->getInvestorAssets(auth()->user()->api_id);
+        return view('portfolio', compact('assets', 'tableAssets', 'stats'));
     }
 
     /**
@@ -45,22 +47,36 @@ class PortfolioController extends Controller
      * Display the specified resource.
      *
      * @param $id
-     * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        try {
+            return view('motorbike', [
+                    'assets' => (new Investor())->getAssetbyId($id)
+            ]);
+        } catch (ClientException $exception) {
+            return back();
+        }
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param $id
-     * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+
+        try {
+            return view('management.portfolio.update', [
+                    'asset' => collect((new Investor())->getInvestorAssets(auth()->user()->api_id)['investments'])->where
+                    ('id',
+                            $id)->first()
+            ]);
+        } catch (\Exception $exception) {
+            return back();
+        }
     }
 
     /**
@@ -72,7 +88,26 @@ class PortfolioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $updated = (new Investor())->updateAssetInvestedIn([
+                    "investor_id" => $request->investorid,
+                    'investments' => [
+                            [
+                                    "id"                => $request->id,
+                                    "asset_category_id" => $request->asset_category,
+                                    "amount_invested"   => $request->amount_invested,
+                                    "leverage"          => $request->leverage,
+                                    "duration"          => $request->duration,
+                                    "interest"          => $request->interest,
+                                    "balance"           => $request->balance,
+                                    "units"             => $request->units
+                            ]
+                    ]
+            ], $request->investorid);
+            return redirect()->route('portfolio.index');
+        } catch (\Exception $exception) {
+            return back();
+        }
     }
 
     /**

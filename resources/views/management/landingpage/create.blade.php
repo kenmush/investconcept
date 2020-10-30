@@ -53,6 +53,41 @@
                                         @enderror
                                     </div>
                                 </div>
+                                <hr>
+                                <div class="mt-2"></div>
+                                <div class="col-md-6">
+                                    <!--Label: Call to Action A, Attributes:calltoactionone -->
+                                    <div class="form-group">
+                                        <label for="calltoactionone">Call to Action A</label>
+                                        <input type="text" id="calltoactionone"
+                                               aria-describedby="calltoactionone-help"
+                                               name="calltoactionone" value="{{ old('calltoactionone') }}"
+                                               class="form-control @error('calltoactionone') is-invalid @enderror"
+                                               placeholder="Call to Action A" required>
+                                        @error('calltoactionone')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Call to Action A Description, Attributes:calltoactiononedescription -->
+                                    <div class="form-group">
+                                        <label for="calltoactiononedescription">Call to Action A Description</label>
+                                        <input type="text" id="calltoactiononedescription"
+                                               aria-describedby="calltoactiononedescription-help"
+                                               name="calltoactiononedescription"
+                                               value="{{ old('calltoactiononedescription') }}"
+                                               class="form-control @error('calltoactiononedescription') is-invalid @enderror"
+                                               placeholder="Call to Action A Description" required>
+                                        @error('calltoactiononedescription')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="row float-right">

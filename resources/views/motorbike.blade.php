@@ -5,7 +5,8 @@
         <div class="row page-titles mx-0">
             <div class="col-sm-6 p-md-0">
                 <div class="welcome-text">
-                    <h4>Motorbike</h4>
+
+                    <h4>{{ $assets['categoryName'] }}</h4>
                     {{--                    <p class="mb-0">Your business dashboard template</p>--}}
                 </div>
             </div>
@@ -23,27 +24,25 @@
                                             <h2 class="card-title">Use Case</h2>
                                         </div>
                                         <div class="card-body pb-0">
-                                            <p>While motorcycle taxis like boda bodas are present throughout Africa and
-                                                beyond, the term boda boda is specific to East Africa.In Kenya, they
-                                                are more frequently called piki pikis.</p>
+
+                                            <p>{{ $assets['use_case'] }}</p>
                                             <ul class="list-group list-group-flush">
                                                 <li class="list-group-item d-flex px-0 justify-content-between">
                                                     <strong>Ticket</strong>
-                                                    <span class="mb-0">$1000</span>
+                                                    <span class="mb-0">{{ $assets['ticket'] }}</span>
                                                 </li>
                                                 <li class="list-group-item d-flex px-0 justify-content-between">
                                                     <strong>Return</strong>
-                                                    <span class="mb-0">10%</span>
+                                                    <span class="mb-0">{{ $assets['return_percentage'] }}%</span>
                                                 </li>
                                                 <li class="list-group-item d-flex px-0 justify-content-between">
                                                     <strong>Duration</strong>
-                                                    <span class="mb-0">18 Months</span>
+                                                    <span class="mb-0">{{ $assets['duration'] }}</span>
                                                 </li>
                                                 <li class="list-group-item d-flex px-0 justify-content-between">
+
                                                     <strong>Impact</strong>
-                                                    <span class="mb-0">Affordable</span> <br>
-                                                    <span class="mb-0">Shareable</span> <br>
-                                                    <span class="mb-0">Powerful</span>
+                                                    <span class="mb-0">  {{ $assets['impact'] }}</span> <br>
                                                 </li>
                                             </ul>
                                         </div>
@@ -95,58 +94,58 @@
                             <div class="row" style="padding-top: 53px">
                                 <h4> Innovators who use it</h4>
 
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="col-md-3 shadow-inner shadow-outline">
-                                            <a href="{{ route('user-profile.show',['Joroh']) }}">
-                                                <div class="card" style="border-radius: 1rem">
-                                                    <img class="card-img-top" src="{{ asset('untapped/joroh.png') }}"
-                                                         alt="Card image cap">
-                                                    <div class="card-body text-center">
-                                                        <h4 class=" untapped-heading">Joroh</h4>
-                                                        <p class="untapped-subtitle">Kenya</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 shadow-inner shadow-outline">
-                                            <a href="{{ route('user-profile.show',['Meridia']) }}">
-                                                <div class="card" style="border-radius: 1rem">
-                                                    <img class="card-img-top" src="{{ asset('untapped/meridia.png') }}"
-                                                         alt="Card image cap">
-                                                    <div class="card-body text-center">
-                                                        <h4 class=" untapped-heading">Meridia</h4>
-                                                        <p class="untapped-subtitle">Ghana</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 shadow-inner shadow-outline">
-                                            <a href="{{ route('user-profile.show',['Jamari']) }}">
-                                                <div class="card" style="border-radius: 1rem">
-                                                    <img class="card-img-top" src="{{ asset('untapped/jamari.png') }}"
-                                                         alt="Card image cap">
-                                                    <div class="card-body text-center">
-                                                        <h4 class=" untapped-heading">Jamari</h4>
-                                                        <p class="untapped-subtitle">Kenya</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-3 shadow-inner shadow-outline">
-                                            <a href="{{ route('user-profile.show',['sarah']) }}">
-                                                <div class="card" style="border-radius: 1rem">
-                                                    <img class="card-img-top" src="{{ asset('untapped/sarah.png') }}"
-                                                         alt="Card image cap">
-                                                    <div class="card-body text-center">
-                                                        <h4 class=" untapped-heading">Sarah</h4>
-                                                        <p class="untapped-subtitle">Kenya</p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                <div class="col-md-12">--}}
+{{--                                    <div class="row">--}}
+{{--                                        <div class="col-md-3 shadow-inner shadow-outline">--}}
+{{--                                            <a href="{{ route('user-profile.show',['Joroh']) }}">--}}
+{{--                                                <div class="card" style="border-radius: 1rem">--}}
+{{--                                                    <img class="card-img-top" src="{{ asset('untapped/joroh.png') }}"--}}
+{{--                                                         alt="Card image cap">--}}
+{{--                                                    <div class="card-body text-center">--}}
+{{--                                                        <h4 class=" untapped-heading">Joroh</h4>--}}
+{{--                                                        <p class="untapped-subtitle">Kenya</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-3 shadow-inner shadow-outline">--}}
+{{--                                            <a href="{{ route('user-profile.show',['Meridia']) }}">--}}
+{{--                                                <div class="card" style="border-radius: 1rem">--}}
+{{--                                                    <img class="card-img-top" src="{{ asset('untapped/meridia.png') }}"--}}
+{{--                                                         alt="Card image cap">--}}
+{{--                                                    <div class="card-body text-center">--}}
+{{--                                                        <h4 class=" untapped-heading">Meridia</h4>--}}
+{{--                                                        <p class="untapped-subtitle">Ghana</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-3 shadow-inner shadow-outline">--}}
+{{--                                            <a href="{{ route('user-profile.show',['Jamari']) }}">--}}
+{{--                                                <div class="card" style="border-radius: 1rem">--}}
+{{--                                                    <img class="card-img-top" src="{{ asset('untapped/jamari.png') }}"--}}
+{{--                                                         alt="Card image cap">--}}
+{{--                                                    <div class="card-body text-center">--}}
+{{--                                                        <h4 class=" untapped-heading">Jamari</h4>--}}
+{{--                                                        <p class="untapped-subtitle">Kenya</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-3 shadow-inner shadow-outline">--}}
+{{--                                            <a href="{{ route('user-profile.show',['sarah']) }}">--}}
+{{--                                                <div class="card" style="border-radius: 1rem">--}}
+{{--                                                    <img class="card-img-top" src="{{ asset('untapped/sarah.png') }}"--}}
+{{--                                                         alt="Card image cap">--}}
+{{--                                                    <div class="card-body text-center">--}}
+{{--                                                        <h4 class=" untapped-heading">Sarah</h4>--}}
+{{--                                                        <p class="untapped-subtitle">Kenya</p>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>

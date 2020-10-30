@@ -13,7 +13,8 @@
     <link href="{{ asset('backend/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/style.css') }}" rel="stylesheet">
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
 
@@ -171,7 +172,7 @@
         <div class="deznav-scroll">
             <ul class="metismenu" id="menu">
                 <li>
-                    <a class="has-arrow ai-icon active" href="{{ route('home') }}" aria-expanded="false">
+                    <a class="has-arrow ai-icon active" href="{{ route('portfolio.index') }}" aria-expanded="false">
                         <i class="fa fa-tachometer"></i>
                         <span class="nav-text">Dashboard</span>
                     </a>
@@ -287,11 +288,15 @@
             lengthChange:false
 
         });
-        $('#example tbody').on('click', 'tr', function () {
-            var data = table.row( this ).data();
+        var newt = $('#assetsTable').DataTable({
+            searching: true,
+            paging:true,
+            select: false,
+            //info: false,
+            "order": [[ 3, "desc" ]],
+            lengthChange:false
 
         });
-
     })(jQuery);
 </script>
 </body>
