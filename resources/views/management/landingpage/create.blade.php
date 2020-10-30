@@ -88,6 +88,70 @@
                                         @enderror
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <!--Label: Keyword 2, Attributes:keyword2 -->
+                                    <div class="form-group">
+                                        <label for="keyword2">Keyword 2</label>
+                                        <input type="text" id="keyword2"
+                                               aria-describedby="keyword2-help"
+                                               name="keyword2" value="{{ old('keyword2') }}"
+                                               class="form-control @error('keyword2') is-invalid @enderror"
+                                               placeholder="Keyword 2" required>
+                                        @error('keyword2')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Keyword 2 Description, Attributes:keyword2description -->
+                                    <div class="form-group">
+                                        <label for="keyword2description">Keyword 2 Description</label>
+                                        <input type="text" id="keyword2description"
+                                               aria-describedby="keyword2description-help"
+                                               name="keyword2description" value="{{ old('keyword2description') }}"
+                                               class="form-control @error('keyword2description') is-invalid @enderror"
+                                               placeholder="Keyword 2 Description" required>
+                                        @error('keyword2description')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Keyword 3, Attributes:Keyword3description -->
+                                    <div class="form-group">
+                                        <label for="Keyword3description">Keyword 3</label>
+                                        <input type="text" id="Keyword3description"
+                                               aria-describedby="Keyword3description-help"
+                                               name="Keyword3description" value="{{ old('Keyword3description') }}"
+                                               class="form-control @error('Keyword3description') is-invalid @enderror"
+                                               placeholder="Keyword 3" required>
+                                        @error('Keyword3description')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Keyword 3 Description, Attributes:keyword3description -->
+                                    <div class="form-group">
+                                        <label for="keyword3description">Keyword 3 Description</label>
+                                        <input type="text" id="keyword3description"
+                                               aria-describedby="keyword3description-help"
+                                               name="keyword3description" value="{{ old('keyword3description') }}"
+                                               class="form-control @error('keyword3description') is-invalid @enderror"
+                                               placeholder="Keyword 3 Description" required>
+                                        @error('keyword3description')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="row float-right">

@@ -23,41 +23,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b7fb0b123e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-    <style>
-        .ct-series-a .ct-line {
-            /* Set the colour of this series line */
-            stroke: #ACD5E7 ;
-            /* Control the thikness of your lines */
-            stroke-width: 5px;
-            /* Create a dashed line with a pattern */
-            /*stroke-dasharray: 10px 20px;*/
-        }
-        .ct-series-a .ct-point {
-            /* Colour of your points */
-            stroke: #ACD5E7 ;
-            /* Size of your points */
-            stroke-width: 10px;
-            /* Make your points appear as squares */
-            stroke-linecap: round;
-        }
-        .ct-series-b .ct-line {
-            /* Set the colour of this series line */
-            stroke: #D07538 ;
-            /* Control the thikness of your lines */
-            stroke-width: 5px;
-            /* Create a dashed line with a pattern */
-            /*stroke-dasharray: 10px 20px;*/
-        }
 
-        .ct-series-b .ct-point {
-            /* Colour of your points */
-            stroke: #D07538 ;
-            /* Size of your points */
-            stroke-width: 10px;
-            /* Make your points appear as squares */
-            stroke-linecap: round;
-        }
-    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #34495e">

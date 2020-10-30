@@ -42,43 +42,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <!-- responsive -->
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-    <style>
-        .ct-series-a .ct-line {
-            /* Set the colour of this series line */
-            stroke: #ACD5E7;
-            /* Control the thikness of your lines */
-            stroke-width: 5px;
-            /* Create a dashed line with a pattern */
-            /*stroke-dasharray: 10px 20px;*/
-        }
 
-        .ct-series-a .ct-point {
-            /* Colour of your points */
-            stroke: #ACD5E7;
-            /* Size of your points */
-            stroke-width: 10px;
-            /* Make your points appear as squares */
-            stroke-linecap: round;
-        }
-
-        .ct-series-b .ct-line {
-            /* Set the colour of this series line */
-            stroke: #D07538;
-            /* Control the thikness of your lines */
-            stroke-width: 5px;
-            /* Create a dashed line with a pattern */
-            /*stroke-dasharray: 10px 20px;*/
-        }
-
-        .ct-series-b .ct-point {
-            /* Colour of your points */
-            stroke: #D07538;
-            /* Size of your points */
-            stroke-width: 10px;
-            /* Make your points appear as squares */
-            stroke-linecap: round;
-        }
-    </style>
 </head>
 
 <body>
@@ -90,9 +54,9 @@
 </div>
 
 <!-- preloader begin-->
-<div class="preloader">
-    <img src="assets/img/tenor.gif" alt="">
-</div>
+{{--<div class="preloader">--}}
+{{--    <img src="assets/img/tenor.gif" alt="">--}}
+{{--</div>--}}
 <!-- preloader end -->
 <div id="app">
 
