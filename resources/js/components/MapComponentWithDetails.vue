@@ -93,6 +93,8 @@ export default {
       type: Object | Array,
       default: {}
     },
+    investorid: {
+    }
   },
   methods: {
     getAssetCoordinates() {
@@ -216,6 +218,7 @@ export default {
     }
   },
   mounted() {
+    console.log(`${this.investorid}`)
     mapboxgl.accessToken = 'pk.eyJ1IjoibXV0aXN5YSIsImEiOiJja2JsN21kejExNjd5MnNvNThyYmNybTNhIn0.BmObv_gTFqLmuc-VObwKYw';
     map = new mapboxgl.Map({
       container: 'newmap',

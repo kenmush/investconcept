@@ -26,6 +26,7 @@ class BeneficiaryController extends Controller
      */
     public function create()
     {
+        $beneficiary = (new Investor())->getBeneficiary();
         return view('management.beneficiary.create');
     }
 
@@ -52,9 +53,9 @@ class BeneficiaryController extends Controller
      * @param  \App\Beneficiary  $beneficiary
      * @return \Illuminate\Http\Response
      */
-    public function show(Beneficiary $beneficiary)
+    public function show($beneficiary)
     {
-        //
+        return view('management.beneficiary.show');
     }
 
     /**

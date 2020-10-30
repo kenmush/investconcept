@@ -27,7 +27,11 @@ class AllassetController extends Controller
      */
     public function create()
     {
-        return view('management.assets.managecreate');
+        return view('management.assets.managecreate',[
+                'investmentId'  => 1,
+                'investor'      => 1,
+                'beneficiaries' => (new Investor())->getBeneficiary(),
+        ]);
     }
 
     /**

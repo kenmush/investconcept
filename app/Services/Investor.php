@@ -95,6 +95,11 @@ class Investor
         return $this->request('GET', 'portal/beneficiary/creation/');
     }
 
+    public function getBeneficiaryById($id)
+    {
+        return $this->request('GET', 'portal/beneficiary/creation/');
+    }
+
     public function signupInvestor($data)
     {
         return $this->request('POST', 'portal/investor/creation/', [
@@ -187,6 +192,11 @@ class Investor
     public function getAllInvestors()
     {
         return $this->request('GET', 'portal/investor/creation/');
+    }
+
+    public function assetsByInvestment($categoryId, $investmentId)
+    {
+        return $this->request('GET', "portal/assets/by/investor/{$categoryId}/{$investmentId}/");
     }
 
     public function getAssetsbyCategory()

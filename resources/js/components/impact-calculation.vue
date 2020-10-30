@@ -221,7 +221,7 @@ export default {
             ],
             borderWidth: 1,
             data:
-                [socialImpact, socialImpact * 2, socialImpact * 3, socialImpact * 4,socialImpact * 10]
+                [socialImpact, socialImpact * 2, socialImpact * 3, socialImpact * 4, socialImpact * 10]
           },
           {
             label: 'Personal Return',
@@ -232,7 +232,7 @@ export default {
                 ]
           }]
       }
-     let stepSize = 100000
+      let stepSize = 100000
       if (socialImpact * 10 > 1000000) {
         stepSize = 1000000;
       }

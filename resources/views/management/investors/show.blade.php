@@ -53,6 +53,8 @@
                                             <th><strong>Interest Generated</strong></th>
                                             <th><strong>Duration</strong></th>
                                             <th><strong>Impact Multiplier</strong></th>
+                                            <th></th>
+                                            <th></th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -75,6 +77,12 @@
                                                         <i class="fa fa-pencil"></i>
                                                     </a>
                                                 </td>
+                                                <td>
+                                                    <a class="btn btn-secondary btn-sm"
+                                                       href="{{ url('/administrate/manageasset/' .$asset['id'].'/' .$investor['id']) }}">
+                                                        Add Assets
+                                                    </a>
+                                                </td>
                                             </tr>
                                         @endforeach
 
@@ -83,9 +91,25 @@
                                 </div>
                             </div>
                             {{--                   --}}
-                            <div class="col-md-12">
-                                <associateassets :assets='@json($assets)'
-                                                 :invesotorid='@json($investor['id'])'></associateassets>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Add Investments</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="card-body">
+                                <div class="col-md-12">
+                                    <associateassets :assets='@json($assets)'
+                                                     :invesotorid='@json($investor['id'])'></associateassets>
+                                </div>
                             </div>
                         </div>
                     </div>

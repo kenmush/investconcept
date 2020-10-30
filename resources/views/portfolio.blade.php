@@ -101,7 +101,8 @@
                     </div>
                     <div class="card-body">
                         <div id="app">
-                            <map-component-with-details :categories='@json($assets)'></map-component-with-details>
+                            <map-component-with-details :investorid='@json(auth()->user()->id)'
+                                                        :categories='@json($assets)'></map-component-with-details>
 
                         </div>
                     </div>

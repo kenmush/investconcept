@@ -198,6 +198,7 @@
                         <li><a href="{{ route('investors.index') }}">View Investors</a></li>
                         <li><a href="{{ route('investors.create') }}">Add Investors</a></li>
                         <li><a href="{{ route('beneficiary.create') }}">Add Beneficiary</a></li>
+                        <li><a href="{{ route('beneficiary.index') }}">View Beneficiary</a></li>
 {{--                        <li><a href="./app-profile.html">Ambassadors</a></li>--}}
                     </ul>
                 </li>
