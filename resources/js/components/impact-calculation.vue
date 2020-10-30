@@ -133,7 +133,7 @@ export default {
     return {
       datacollection: null,
       errors: '',
-      amount: 80000,
+      amount: 250000,
       chartoption: {
         responsive: true,
         low: 0,

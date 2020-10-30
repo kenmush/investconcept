@@ -18,19 +18,19 @@
                         </a>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('myassets.store') }}" enctype="multipart/form-data" method="post">
+                        <form action="{{ route('herosection.store') }}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
-                                    <!--Label: Tagline, Attributes:tagline -->
+                                    <!--Label: Tagline, Attributes:tag_line -->
                                     <div class="form-group">
-                                        <label for="tagline">Tagline</label>
-                                        <input type="text" id="tagline"
-                                               aria-describedby="tagline-help"
-                                               name="tagline" value="{{ old('tagline') }}"
-                                               class="form-control @error('tagline') is-invalid @enderror"
+                                        <label for="tag_line">Tagline</label>
+                                        <input type="text" id="tag_line"
+                                               aria-describedby="tag_line-help"
+                                               name="tag_line" value="{{ old('tag_line') }}"
+                                               class="form-control @error('tag_line') is-invalid @enderror"
                                                placeholder="Tagline" required>
-                                        @error('tagline')
+                                        @error('tag_line')
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -38,15 +38,31 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <!--Label: Tagline Description, Attributes:tagdescription -->
+                                    <!--Label: Tagline Description, Attributes:tag_line_description_one -->
                                     <div class="form-group">
-                                        <label for="tagdescription">Tagline Description</label>
-                                        <input type="text" id="tagdescription"
-                                               aria-describedby="tagdescription-help"
-                                               name="tagdescription" value="{{ old('tagdescription') }}"
-                                               class="form-control @error('tagdescription') is-invalid @enderror"
+                                        <label for="tag_line_description_one">Tagline Description</label>
+                                        <input type="text" id="tag_line_description_one"
+                                               aria-describedby="tag_line_description_one-help"
+                                               name="tag_line_description_one" value="{{ old('tag_line_description_one') }}"
+                                               class="form-control @error('tag_line_description_one') is-invalid @enderror"
                                                placeholder="Tagline Description" required>
-                                        @error('tagdescription')
+                                        @error('tag_line_description_one')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Tagline Description Two, Attributes:tag_line_description_two -->
+                                    <div class="form-group">
+                                        <label for="tag_line_description_two">Tagline Description Two</label>
+                                        <input type="text" id="tag_line_description_two"
+                                               aria-describedby="tag_line_description_two-help"
+                                               name="tag_line_description_two" value="{{ old('tag_line_description_two') }}"
+                                               class="form-control @error('tag_line_description_two') is-invalid @enderror"
+                                               placeholder="Tagline Description Two" required>
+                                        @error('tag_line_description_two')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -56,15 +72,16 @@
                                 <hr>
                                 <div class="mt-2"></div>
                                 <div class="col-md-6">
-                                    <!--Label: Call to Action A, Attributes:calltoactionone -->
+                                   
+                                    <!--Label: Call to Action A, Attributes:keyword_one -->
                                     <div class="form-group">
-                                        <label for="calltoactionone">Call to Action A</label>
-                                        <input type="text" id="calltoactionone"
-                                               aria-describedby="calltoactionone-help"
-                                               name="calltoactionone" value="{{ old('calltoactionone') }}"
-                                               class="form-control @error('calltoactionone') is-invalid @enderror"
+                                        <label for="keyword_one">First Keyword</label>
+                                        <input type="text" id="keyword_one"
+                                               aria-describedby="keyword_one-help"
+                                               name="keyword_one" value="{{ old('keyword_one') }}"
+                                               class="form-control @error('keyword_one') is-invalid @enderror"
                                                placeholder="Call to Action A" required>
-                                        @error('calltoactionone')
+                                        @error('keyword_one')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -72,16 +89,17 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <!--Label: Call to Action A Description, Attributes:calltoactiononedescription -->
+                                   
+                                    <!--Label: Call to Action A Description, Attributes:keyword_one_description -->
                                     <div class="form-group">
-                                        <label for="calltoactiononedescription">Call to Action A Description</label>
-                                        <input type="text" id="calltoactiononedescription"
-                                               aria-describedby="calltoactiononedescription-help"
-                                               name="calltoactiononedescription"
-                                               value="{{ old('calltoactiononedescription') }}"
-                                               class="form-control @error('calltoactiononedescription') is-invalid @enderror"
+                                        <label for="keyword_one_description">First Keyword Description</label>
+                                        <input type="text" id="keyword_one_description"
+                                               aria-describedby="keyword_one_description-help"
+                                               name="keyword_one_description"
+                                               value="{{ old('keyword_one_description') }}"
+                                               class="form-control @error('keyword_one_description') is-invalid @enderror"
                                                placeholder="Call to Action A Description" required>
-                                        @error('calltoactiononedescription')
+                                        @error('keyword_one_description')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -89,15 +107,16 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <!--Label: Keyword 2, Attributes:keyword2 -->
+                                   
+                                    <!--Label: Keyword 2, Attributes:keyword_two -->
                                     <div class="form-group">
-                                        <label for="keyword2">Keyword 2</label>
-                                        <input type="text" id="keyword2"
-                                               aria-describedby="keyword2-help"
-                                               name="keyword2" value="{{ old('keyword2') }}"
-                                               class="form-control @error('keyword2') is-invalid @enderror"
+                                        <label for="keyword_two">Second Keyword</label>
+                                        <input type="text" id="keyword_two"
+                                               aria-describedby="keyword_two-help"
+                                               name="keyword_two" value="{{ old('keyword_two') }}"
+                                               class="form-control @error('keyword_two') is-invalid @enderror"
                                                placeholder="Keyword 2" required>
-                                        @error('keyword2')
+                                        @error('keyword_two')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -105,15 +124,16 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <!--Label: Keyword 2 Description, Attributes:keyword2description -->
+                                   
+                                    <!--Label: Keyword 2 Description, Attributes:keyword_twodescription -->
                                     <div class="form-group">
-                                        <label for="keyword2description">Keyword 2 Description</label>
-                                        <input type="text" id="keyword2description"
-                                               aria-describedby="keyword2description-help"
-                                               name="keyword2description" value="{{ old('keyword2description') }}"
-                                               class="form-control @error('keyword2description') is-invalid @enderror"
+                                        <label for="keyword_two_description">Second Keyword Description</label>
+                                        <input type="text" id="keyword_two_description"
+                                               aria-describedby="keyword_two_description-help"
+                                               name="keyword_two_description" value="{{ old('keyword_two_description') }}"
+                                               class="form-control @error('keyword_two_description') is-invalid @enderror"
                                                placeholder="Keyword 2 Description" required>
-                                        @error('keyword2description')
+                                        @error('keyword_two_description')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -121,15 +141,16 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
+                                   
                                     <!--Label: Keyword 3, Attributes:Keyword3description -->
                                     <div class="form-group">
-                                        <label for="Keyword3description">Keyword 3</label>
-                                        <input type="text" id="Keyword3description"
-                                               aria-describedby="Keyword3description-help"
-                                               name="Keyword3description" value="{{ old('Keyword3description') }}"
-                                               class="form-control @error('Keyword3description') is-invalid @enderror"
+                                        <label for="keyword_three">Third Keyword</label>
+                                        <input type="text" id="keyword_three"
+                                               aria-describedby="keyword_three-help"
+                                               name="keyword_three" value="{{ old('keyword_three') }}"
+                                               class="form-control @error('keyword_three') is-invalid @enderror"
                                                placeholder="Keyword 3" required>
-                                        @error('Keyword3description')
+                                        @error('keyword_three')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -139,13 +160,29 @@
                                 <div class="col-md-6">
                                     <!--Label: Keyword 3 Description, Attributes:keyword3description -->
                                     <div class="form-group">
-                                        <label for="keyword3description">Keyword 3 Description</label>
-                                        <input type="text" id="keyword3description"
-                                               aria-describedby="keyword3description-help"
-                                               name="keyword3description" value="{{ old('keyword3description') }}"
-                                               class="form-control @error('keyword3description') is-invalid @enderror"
+                                        <label for="keyword_three_description">Third Keyword Description</label>
+                                        <input type="text" id="keyword_three_description"
+                                               aria-describedby="keyword_three_description-help"
+                                               name="keyword_three_description" value="{{ old('keyword_three_description') }}"
+                                               class="form-control @error('keyword_three_description') is-invalid @enderror"
                                                placeholder="Keyword 3 Description" required>
-                                        @error('keyword3description')
+                                        @error('keyword_three_description')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <!--Label: Footer Text, Attributes:footertext -->
+                                    <div class="form-group">
+                                        <label for="footer_about">Footer Text</label>
+                                        <input type="text" id="footer_about"
+                                               aria-describedby="footer_about-help"
+                                               name="footer_about" value="{{ old('footer_about') }}"
+                                               class="form-control @error('footer_about') is-invalid @enderror"
+                                               placeholder="Footer Text" required>
+                                        @error('footer_about')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -156,10 +193,10 @@
 
                             <div class="row float-right">
                                 <div class="float-right">
-                                    <button class="float-right btn-sm btn btn-secondary">Add Information</button>
+                                    <button type="submit" class="float-right btn-sm btn btn-secondary">Add
+                                        Information</button>
                                 </div>
                             </div>
-                        </form>
                         </form>
                     </div>
                 </div>

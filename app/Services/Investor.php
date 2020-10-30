@@ -38,6 +38,19 @@ class Investor
         return config('investordashboard.root_path');
     }
 
+    public function getLandingPageData()
+    {
+        return $this->request('GET','portal/website/contents/creation/');
+}
+    public function createLandingPageData($data)
+    {
+        return $this->request('POST','portal/website/contents/creation/',$data);
+    }
+
+    public function updateLandingPageData($data,$id)
+    {
+        return $this->request('PUT', 'portal/website/contents/details/'.$id.'/', $data);
+}
     public function updateAssetInvestedIn($data, $investorId)
     {
         return $this->request('PUT', 'portal/investor/investments/'.$investorId.'/', $data);

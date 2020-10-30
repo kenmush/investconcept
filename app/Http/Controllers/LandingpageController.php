@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LandingPageRequest;
 use App\Landingpage;
+use App\Services\Investor;
 use Illuminate\Http\Request;
 
 class LandingpageController extends Controller
@@ -15,7 +16,11 @@ class LandingpageController extends Controller
      */
     public function index()
     {
-        //
+
+
+        return view('management.landingpage.index',[
+                'contents' => (new Investor())->getLandingPageData()
+        ]);
     }
 
     /**
@@ -34,18 +39,15 @@ class LandingpageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(LandingPageRequest $request, Landingpage $landingpage)
+    public function store(Request $request)
     {
-        $landingpage->tagline = $request->tagline;
-        $landingpage->tagdescription = $request->tagdescription;
-        $landingpage->calltoactionone = $request->calltoactionone;
-        $landingpage->calltoactiononedescription = $request->calltoactiononedescription;
-        $landingpage->calltoactiontwo = $request->calltoactiontwo;
-        $landingpage->calltoactiontwodescription = $request->calltoactiontwodescription;
-        $landingpage->calltoactionthree = $request->calltoactionthree;
-        $landingpage->calltoactionthreedescription = $request->calltoactionthreedescription;
-        $landingpage->save();
-        return response($landingpage,200);
+
+        try {
+            $store = (new Investor())->createLandingPageData($request->all());
+            return redirect()->route('herosection.index');
+        } catch (\Exception $exception) {
+            return back();
+        }
     }
 
     /**
@@ -65,9 +67,11 @@ class LandingpageController extends Controller
      * @param  \App\Landingpage  $landingpage
      * @return \Illuminate\Http\Response
      */
-    public function edit(Landingpage $landingpage)
+    public function edit($landingpage)
     {
-        //
+        return view('management.landingpage.edit', [
+                'contents' => collect((new Investor())->getLandingPageData())->first()
+        ]);
     }
 
     /**
@@ -77,9 +81,14 @@ class LandingpageController extends Controller
      * @param  \App\Landingpage  $landingpage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Landingpage $landingpage)
+    public function update(Request $request, $landingpage)
     {
-        //
+        try {
+            (new Investor())->updateLandingPageData($request->all(), $landingpage);
+            return redirect()->route('herosection.index');
+        } catch (\Exception $exception) {
+            return back();
+        }
     }
 
     /**

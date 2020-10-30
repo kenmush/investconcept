@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $assets = (new Investor())->getAssetCategories();
-    return view('index', compact('assets'));
+    $landingPageData = collect((new Investor())->getLandingPageData())->first();
+    return view('index', compact('assets','landingPageData'));
 });
 
 Route::group(['prefix' => 'assets', 'middleware' => ['auth']], function () {
