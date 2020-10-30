@@ -143,6 +143,7 @@
                                                     Ambassadors
                                                 </a>
                                             </li>
+                                            @guest()
                                             <li class="nav-item">
                                                 <a class="nav-link" href="/login">
                                                     <i class="fa fa-lock"></i>
@@ -152,6 +153,11 @@
                                             <li class="nav-item join-now-btn">
                                                 <a class="nav-link" href="/register">Sign Up</a>
                                             </li>
+                                            @else
+                                                <li class="nav-item join-now-btn">
+                                                <a class="nav-link" href="{{ route('portfolio.index') }}">My Dashboard</a>
+                                                </li>
+                                            @endguest
                                         </ul>
                                     </div>
                                 </nav>

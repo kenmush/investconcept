@@ -167,13 +167,17 @@ export default {
       }
       if (Object.keys(_self.currentCategory).length !== Object.keys(_self.holdingData).length) {
         _self.currentCategory.forEach(data => {
+          let toRemove = '';
           let found = _.find(_self.holdingData, function (o) {
+            if (o.categoryName !== data) {
+              toRemove = _self.holdingData.indexOf(o);
+            }
             return o.categoryName !== data;
           });
           if (found) {
             var index = _self.holdingData.indexOf(found);
-            _self.holdingData.splice(index, 1);
-
+            console.log(index);
+            _self.holdingData.splice(toRemove, 1);
           }
         });
       }
