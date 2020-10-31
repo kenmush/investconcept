@@ -67,7 +67,7 @@ class Investor
 
     public function getLandingPageData()
     {
-        return $this->request('GET', 'portal/website/contents/contents/details/1/');
+        return $this->request('GET', 'portal/website/contents/details/1/');
     }
 
     public function createLandingPageData($data)
