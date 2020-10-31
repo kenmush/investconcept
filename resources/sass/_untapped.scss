@@ -1,43 +1,5 @@
 @charset "UTF-8";
 
-/* =================================
- Temlate Name :
- Author Name :
- Date: 17/01/2019
- Version: 1.0
- =================================
-
-/* =================================
- css index
- =================================
- *. typography
- *. section title
- *. preloader
- *. scroll to top button
- *. normalize
- 1. header
- 2. Breadcrump
- 3. banner
- 4. limelight feature
- 5. About
- 6. Service
- 7. Portfolio
- 8. Call to action
- 9. Testimonial
- 10. Team
- 11. News
- 12. Brand
- 13. Contact
- 14. Footer & copyright
- 15. About second part
- 16. Service page
- 17. Service Details
- 18. Sidebar
- 19. Blog
- 20. Contact
- 21. Appointment
-
-================================= */
 /*==========================================
     typography
 ===========================================*/
@@ -357,9 +319,11 @@ body {
   font-size: 16px;
   margin: 0;
   color: #444;
+  background-color: #fcfcfc;
   overflow-x: hidden;
   line-height: 30px;
   letter-spacing: 0.03em;
+  -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -842,8 +806,8 @@ ul {
   //padding: 100px 0 0;
   position: relative;
   //background: url("../img/banner-bg.jpg") center center no-repeat;
-  background: -o-linear-gradient(109deg, $untapped-blue 10%, lighten($untapped-blue,20%));
-  background: linear-gradient(-19deg, $untapped-blue 10%, lighten($untapped-blue,20%));
+  background: -o-linear-gradient(109deg, $untapped-blue 10%, lighten($untapped-blue, 20%));
+  background: linear-gradient(-19deg, $untapped-blue 10%, lighten($untapped-blue, 20%));
   background-size: cover;
   z-index: 2;
 
@@ -854,8 +818,8 @@ ul {
     top: 0;
     width: 100%;
     height: 100%;
-    background: -o-linear-gradient(109deg, $untapped-blue 10%, lighten($untapped-blue,20%));
-    background: linear-gradient(-19deg, $untapped-blue 10%, lighten($untapped-blue,20%));
+    background: -o-linear-gradient(109deg, $untapped-blue 10%, lighten($untapped-blue, 20%));
+    background: linear-gradient(-19deg, $untapped-blue 10%, lighten($untapped-blue, 20%));
     //background: url("../img/banner.png") center center no-repeat;
     background-size: cover;
     z-index: -1;
@@ -989,8 +953,8 @@ ul {
         top: 0;
         width: 100%;
         height: 100%;
-        background: -o-linear-gradient(109deg, $untapped-blue 10%, darken($untapped-blue,20%));
-        background: linear-gradient(-19deg, $untapped-blue 10%, darken($untapped-blue,20%));
+        background: -o-linear-gradient(109deg, $untapped-blue 10%, darken($untapped-blue, 20%));
+        background: linear-gradient(-19deg, $untapped-blue 10%, darken($untapped-blue, 20%));
         z-index: -1;
       }
     }
@@ -3036,4 +3000,54 @@ ul {
       }
     }
   }
+}
+
+// Assets View
+.asset-title {
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 200;
+  font-family: 'Avenir', 'Verdana', sans-serif;
+  letter-spacing: 1.2px;
+  margin-bottom: 1px;
+  color: #737373;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+  width: fit-content;
+  width: -moz-fit-content;
+  padding: 8px 15px 5px 15px;
+  position: relative;
+  z-index: 50;
+  border: 1px solid #f5f5f5;
+}
+.deal-stats-line {
+  border-top: 1px solid $untapped-accent;
+  width: 75%;
+  height: 3px;
+  clear: both;
+  margin: 0 auto;
+}
+.deal-stats-box {
+  border: 1px solid #f3f3f3;
+  background: #fff;
+  width: fit-content;
+  width: -moz-fit-content;
+  height: 24px;
+  margin-top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6px;
+  padding-left: 11px;
+  padding-top: 4px;
+  padding-right: 11px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  box-shadow: 0px 2px 8px 0px #00000009;
+  color: #337ab7;
+  clear: both;
+  font-family: 'Avenir',sans-serif;
+  font-weight: 500;
 }
