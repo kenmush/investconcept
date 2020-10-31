@@ -23,9 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $assets = (new Investor())->getAssetCategories();
-        return view('portfolio', [
-                'assets' => collect($assets)->toArray()
-        ]);
+        return redirect()->route('portfolio.index');
     }
 }
