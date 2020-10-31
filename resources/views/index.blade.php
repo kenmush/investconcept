@@ -9,11 +9,13 @@
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-xl-flex d-lg-flex d-block
                         align-items-center">
                         <div class="cta-text">
-                            <h2>{{$landingPageData['tag_line'] ?? ''}}</h2>
-                            <p>{{$landingPageData['tag_line_description_one'] ?? ''}}</p>
-                            <p class="marked">{{$landingPageData['tag_line_description_two'] ?? ''}}</p>
+                            <h2>Grow your wealth with others. </h2>
+                            <p>Contribute to emerging markets development while making a healthy return</p>
+                            <p class="marked">Emerging markets offer the strongest investor returns in the coming
+                                decades. Alleviating poverty and creating value for investors go hand-in-hand.</p>
                             <a href="#simulateimpact" class="btn-hyipox-medium cta-btn">Simulate your Impact</a>
                         </div>
+
                     </div>
                     <div class="col-xl-6 shadow col-lg-6 d-xl-flex d-lg-flex justify-content-end d-block
                         align-items-center">
@@ -42,8 +44,8 @@
                                 <img src="{{ asset('impact.svg') }}" alt="">
                             </div>
                             <div class="part-text">
-                                <h4 class="title">{{$landingPageData['keyword_one'] ?? ''}}</h4>
-                                <p>{{$landingPageData['keyword_one_description'] ?? ''}}</p>
+                                <h4 class="title">Impactful</h4>
+                                <p>Support emerging market entrepreneurs</p>
                             </div>
                         </div>
                     </div>
@@ -53,8 +55,8 @@
                                 <img src="{{ asset('transparent.svg') }}" alt="">
                             </div>
                             <div class="part-text">
-                                <h4 class="title">{{$landingPageData['keyword_two'] ?? ''}}</h4>
-                                <p>{{$landingPageData['keyword_two_description'] ?? ''}}</p>
+                                <h4 class="title">Transparent</h4>
+                                <p>Keep track of your impact</p>
                             </div>
                         </div>
                     </div>
@@ -64,8 +66,8 @@
                                 <img src="{{ asset('attractive.svg') }}" alt="">
                             </div>
                             <div class="part-text">
-                                <h4 class="title">{{$landingPageData['keyword_three'] ?? ''}}</h4>
-                                <p>{{$landingPageData['keyword_three_description'] ?? ''}}</p>
+                                <h4 class="title">Attractive</h4>
+                                <p>Build wealth</p>
                             </div>
                         </div>
                     </div>
