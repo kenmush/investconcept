@@ -13,7 +13,7 @@ Route::get('test/{investmentid}', function ($investmentId) {
 
 Route::get('/', function () {
     $assets = (new Investor())->getAssetCategories();
-    $landingPageData = collect((new Investor())->getLandingPageData())->first();
+    $landingPageData = collect((new Investor())->getLandingPageData());
     return view('index', compact('assets','landingPageData'));
 });
 
