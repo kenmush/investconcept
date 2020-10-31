@@ -9,10 +9,10 @@
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-xl-flex d-lg-flex d-block
                         align-items-center">
                         <div class="cta-text">
-                            <h2>Grow your wealth with others. </h2>
-                            <p>Contribute to emerging markets development while making a healthy return</p>
-                            <p class="marked">Emerging markets offer the strongest investor returns in the coming
-                                decades. Alleviating poverty and creating value for investors go hand-in-hand.</p>
+                            <h2>Invest in People.  Multiply Your Wealth</h2>
+                            <p>Emerging markets offer the strongest investor returns in the coming decades. Alleviating poverty and creating value for investors go hand-in-hand.
+                            </p>
+                            <p class="marked">Positive, measurable social and environmental impact alongside a strong financial return.</p>
                             <a href="#simulateimpact" class="btn-hyipox-medium cta-btn">Simulate your Impact</a>
                         </div>
 
@@ -100,10 +100,9 @@
             </div>
         </div>
     </div>
-    <div class="banner" style="padding-bottom: 253.5px;padding-top: 0 !important;" id="simulateimpact">
+    <div class="banner"  id="simulateimpact">
         <div class="container">
             <div class="row justify-content-xl-between justify-content-lg-between justify-content-md-center justify-content-sm-center">
-
                 <div class="col-xl-12 ">
                     <div class="profit-calculator">
                         <div class="calc-header">

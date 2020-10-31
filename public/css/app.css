@@ -144,7 +144,7 @@
   font-weight: 700;
   font-family: "Kalam", cursive;
   font-style: italic;
-  background: #ACD4E7;
+  background: #acd4e7;
   /*background: -webkit-linear-gradient(-19deg, #8e54e9 10%, #4776e6);*/
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -209,7 +209,7 @@ span.special {
 }
 
 .back-to-top-btn a {
-  background: linear-gradient(-19deg, #ACD4E7 10%, #ACD4E7);
+  background: linear-gradient(-19deg, #acd4e7 10%, #acd4e7);
   border: none;
   display: inline-block;
   padding: 10px;
@@ -243,7 +243,7 @@ span.special {
   width: 100%;
   height: 100%;
   /*background: linear-gradient(-19deg, #8e54e9 10%, #4776e6);*/
-  background: -webkit-linear-gradient(-19deg, #ACD4E7 10%, #ACD4E7);
+  background: -webkit-linear-gradient(-19deg, #acd4e7 10%, #acd4e7);
   z-index: -1;
   transition: all 0.3s ease-in;
 }
@@ -718,9 +718,8 @@ ul {
 ==========================================*/
 
 .banner {
-  padding: 100px 0 0;
   position: relative;
-  background: url(/images/banner-bg.jpg?40b4288470cc5d5aaf38ed9537e39d03) center center no-repeat;
+  background: linear-gradient(-19deg, #acd4e7 10%, #fbfdfe);
   background-size: cover;
   z-index: 2;
 }
@@ -732,8 +731,7 @@ ul {
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(-19deg, #ED7D31 10%, #ffdf9d);
-  background: url(/images/banner.png?d64b73ee8c367949562749b21568bc7c) center center no-repeat;
+  background: linear-gradient(-19deg, #acd4e7 10%, #fbfdfe);
   background-size: cover;
   z-index: -1;
 }
@@ -853,7 +851,7 @@ ul {
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
+  background: linear-gradient(-19deg, #acd4e7 10%, #5dabd0);
   z-index: -1;
 }
 
@@ -1175,7 +1173,7 @@ ul {
   font-family: "Kalam", cursive;
   font-style: italic;
   /*background: -webkit-linear-gradient(-19deg, #8e54e9 10%, #4776e6);*/
-  background: #ACD4E7;
+  background: #acd4e7;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2502,7 +2500,7 @@ ul {
   display: inline-block;
   font-size: 18px;
   color: #fff;
-  background: linear-gradient(-19deg, #ACD4E7 10%, #ACD4E7);
+  background: linear-gradient(-19deg, #acd4e7 10%, #acd4e7);
   padding: 0 35px;
   height: 50px;
   line-height: 50px;
@@ -2642,7 +2640,7 @@ ul {
 
 .footer .newsletter-widget .newsletter-form .def-btn {
   display: inline-block;
-  background: linear-gradient(-19deg, #ACD4E7 10%, #ACD4E7);
+  background: linear-gradient(-19deg, #acd4e7 10%, #acd4e7);
   border: none;
   height: 40px;
   color: #fff;
@@ -2668,7 +2666,7 @@ ul {
   width: 100%;
   height: 100%;
   /*background: -webkit-linear-gradient(-19deg, #ACD5E7 10%, #FF8478);*/
-  background: linear-gradient(-19deg, #ACD4E7 10%, #ACD4E7);
+  background: linear-gradient(-19deg, #acd4e7 10%, #acd4e7);
   z-index: -1;
   transition: all 0.3s ease-in;
 }

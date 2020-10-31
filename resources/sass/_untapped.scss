@@ -49,7 +49,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&amp;display=swap");
 
-$untapped-blue: #ACD4E7;
+$untapped-blue: #acd4e7;
 $untapped-accent: #ED7D31;
 
 .container {
@@ -839,9 +839,11 @@ ul {
 ==========================================*/
 
 .banner {
-  padding: 100px 0 0;
+  //padding: 100px 0 0;
   position: relative;
-  background: url("../img/banner-bg.jpg") center center no-repeat;
+  //background: url("../img/banner-bg.jpg") center center no-repeat;
+  background: -o-linear-gradient(109deg, $untapped-blue 10%, lighten($untapped-blue,20%));
+  background: linear-gradient(-19deg, $untapped-blue 10%, lighten($untapped-blue,20%));
   background-size: cover;
   z-index: 2;
 
@@ -852,9 +854,9 @@ ul {
     top: 0;
     width: 100%;
     height: 100%;
-    background: -o-linear-gradient(109deg, $untapped-accent 10%, #ffdf9d);
-    background: linear-gradient(-19deg, $untapped-accent 10%, #ffdf9d);
-    background: url("../img/banner.png") center center no-repeat;
+    background: -o-linear-gradient(109deg, $untapped-blue 10%, lighten($untapped-blue,20%));
+    background: linear-gradient(-19deg, $untapped-blue 10%, lighten($untapped-blue,20%));
+    //background: url("../img/banner.png") center center no-repeat;
     background-size: cover;
     z-index: -1;
   }
@@ -987,8 +989,8 @@ ul {
         top: 0;
         width: 100%;
         height: 100%;
-        background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
-        background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
+        background: -o-linear-gradient(109deg, $untapped-blue 10%, darken($untapped-blue,20%));
+        background: linear-gradient(-19deg, $untapped-blue 10%, darken($untapped-blue,20%));
         z-index: -1;
       }
     }

@@ -267,27 +267,6 @@ export default {
 </script>
 
 <style scoped>
-.ct-series-a .ct-line {
-  /* Set the colour of this series line */
-  stroke: blue;
-  /* Control the thikness of your lines */
-  stroke-width: 5px;
-  /* Create a dashed line with a pattern */
-  stroke-dasharray: 10px 20px;
-}
-
-table {
-  /* set your gradient code here */
-  background: rgb(240, 183, 161);
-  background: -moz-linear-gradient(-45deg, rgba(240, 183, 161, 1) 0%, rgba(140, 51, 16, 1) 50%, rgba(117, 34, 1, 1) 51%, rgba(191, 110, 78, 1) 100%);
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(240, 183, 161, 1)), color-stop(50%, rgba(140, 51, 16, 1)), color-stop(51%, rgba(117, 34, 1, 1)), color-stop(100%, rgba(191, 110, 78, 1)));
-  background: -webkit-linear-gradient(-45deg, rgba(240, 183, 161, 1) 0%, rgba(140, 51, 16, 1) 50%, rgba(117, 34, 1, 1) 51%, rgba(191, 110, 78, 1) 100%);
-  background: -o-linear-gradient(-45deg, rgba(240, 183, 161, 1) 0%, rgba(140, 51, 16, 1) 50%, rgba(117, 34, 1, 1) 51%, rgba(191, 110, 78, 1) 100%);
-  background: -ms-linear-gradient(-45deg, rgba(240, 183, 161, 1) 0%, rgba(140, 51, 16, 1) 50%, rgba(117, 34, 1, 1) 51%, rgba(191, 110, 78, 1) 100%);
-  background: linear-gradient(135deg, rgba(240, 183, 161, 1) 0%, rgba(140, 51, 16, 1) 50%, rgba(117, 34, 1, 1) 51%, rgba(191, 110, 78, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0b7a1', endColorstr='#bf6e4e', GradientType=1);
-
-}
 
 .small {
   max-width: 600px;
