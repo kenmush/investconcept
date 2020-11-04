@@ -65,12 +65,13 @@
                                         <p>3.6x</p>
                                       </div>
                                       <div class="col-12">
-                                        <button class="btn btn-custom btn-block btn-lg" @click="showMotorbike"
+                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
+                                           @click="showMotorbike"
                                                 @mouseenter="showMotorbike"
                                                 @mouseleave="disableCards"
                                         >
                                           Invest
-                                        </button>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -145,12 +146,12 @@
                                         <p>3.0x</p>
                                       </div>
                                       <div class="col-12">
-                                        <button class="btn btn-custom btn-block btn-lg"
+                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
                                                 @mouseenter="showSmartMeterCard"
                                                 @mouseleave="disableCards"
                                                 @click="showSmartMeterCard">
                                           Invest
-                                        </button>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -231,12 +232,12 @@
                                         <p>4.0x</p>
                                       </div>
                                       <div class="col-12">
-                                        <button class="btn btn-custom btn-block btn-lg"
+                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
                                                 @mouseenter="opiBusCard"
                                                 @mouseleave="disableCards"
                                                 @click="opiBusCard">
                                           Invest
-                                        </button>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -311,12 +312,12 @@
                                         <p>4.0x</p>
                                       </div>
                                       <div class="col-12">
-                                        <button class="btn btn-custom btn-block btn-lg"
+                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
                                                 @mouseenter="oviveCard"
                                                 @mouseleave="disableCards"
                                                 @click="oviveCard">
                                           Invest
-                                        </button>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -397,12 +398,12 @@
                                         <p>2.4x</p>
                                       </div>
                                       <div class="col-12">
-                                        <button class="btn btn-custom btn-block btn-lg"
+                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
                                                 @mouseenter="majimileleCard"
                                                 @mouseleave="disableCards"
                                                 @click="majimileleCard">
                                           Invest
-                                        </button>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -477,12 +478,12 @@
                                         <p>7.5x</p>
                                       </div>
                                       <div class="col-12">
-                                        <button class="btn btn-custom btn-block btn-lg"
+                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
                                                 @mouseenter="mvuapapCard"
                                                 @mouseleave="disableCards"
                                                 @click="mvuapapCard">
                                           Invest
-                                        </button>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -565,12 +566,13 @@
                                         <p>3.6x</p>
                                       </div>
                                       <div class="col-12">
-                                        <button class="btn btn-custom btn-block btn-lg" @click="showMotorbike"
+                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
+                                           @click="showMotorbike"
                                                 @mouseenter="showMotorbike"
                                                 @mouseleave="disableCards"
                                         >
                                           Invest
-                                        </button>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -645,12 +647,12 @@
                                         <p>3.0x</p>
                                       </div>
                                       <div class="col-12">
-                                        <button class="btn btn-custom btn-block btn-lg"
+                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
                                                 @mouseenter="showSmartMeterCard"
                                                 @mouseleave="disableCards"
                                                 @click="showSmartMeterCard">
                                           Invest
-                                        </button>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -730,12 +732,12 @@
                                         <p>4.0x</p>
                                       </div>
                                       <div class="col-12">
-                                        <button class="btn btn-custom btn-block btn-lg"
+                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
                                                 @mouseenter="opiBusCard"
                                                 @mouseleave="disableCards"
                                                 @click="opiBusCard">
                                           Invest
-                                        </button>
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
