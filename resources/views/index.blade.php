@@ -103,7 +103,6 @@
         <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-8">
                 <div class="section-title">
-
                     <h2>
                         <span class="special">Calculate your impact</span>
                     </h2>
