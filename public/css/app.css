@@ -142,8 +142,6 @@
 
 .section-title h2 span.special {
   font-weight: 700;
-  font-family: "Kalam", cursive;
-  font-style: italic;
   background: #acd4e7;
   /*background: -webkit-linear-gradient(-19deg, #8e54e9 10%, #4776e6);*/
   -webkit-background-clip: text;
@@ -752,8 +750,6 @@ ul {
 
 .about .part-text h2 span.special {
   font-weight: 700;
-  font-family: "Kalam", cursive;
-  font-style: italic;
   /*background: -webkit-linear-gradient(-19deg, #8e54e9 10%, #4776e6);*/
   background: #acd4e7;
   -webkit-background-clip: text;

@@ -89,22 +89,21 @@ export default {
     },
     calculateImpact() {
       let _self = this;
-      this.loading = false;
-      this.calculations = true;
-
-      this.motorbikes = Math.round((this.amountInvested / 3) / 1000) * this.years;
-      this.wateratm = Math.round((this.amountInvested / 3) / 1000) * this.years;
-      this.trailer = Math.round((this.amountInvested / 3) / 500) * this.years;
-      let socialImpact = (((this.amountInvested / 3) / 500) * 1800) + (((this.amountInvested / 3) / 1000) * 12000) +
-          (((this.amountInvested / 3) / 1000) *
-              3600)
-      let addition = (this.motorbikes + this.wateratm + this.trailer);
-      this.entreprenuars = Math.round(addition);
-      this.impact = socialImpact * this.years;
-      // setTimeout(function () {
-      //   _self.loading = false;
-      //   _self.calculations = true;
-      // },3000);
+      this.loading = true;
+      this.calculations = false;
+      setTimeout(function () {
+        _self.loading = false;
+        _self.calculations = true;
+        _self.motorbikes = Math.round((_self.amountInvested / 3) / 1000) * _self.years;
+        _self.wateratm = Math.round((_self.amountInvested / 3) / 1000) * _self.years;
+        _self.trailer = Math.round((_self.amountInvested / 3) / 500) * _self.years;
+        let socialImpact = (((_self.amountInvested / 3) / 500) * 1800) + (((_self.amountInvested / 3) / 1000) * 12000) +
+            (((_self.amountInvested / 3) / 1000) *
+                3600)
+        let addition = (_self.motorbikes + _self.wateratm + _self.trailer);
+        _self.entreprenuars = Math.round(addition);
+        _self.impact = socialImpact * _self.years;
+      },1000);
     }
   }
 }

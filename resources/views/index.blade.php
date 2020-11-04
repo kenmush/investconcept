@@ -110,12 +110,12 @@
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-8">
                     <div class="section-title">
-                                <span class="sub-title">
-                                    Untapped Capital News
-                                </span>
-{{--                        <h2>--}}
-{{--                            Read the<span class="special"> News</span>--}}
-{{--                        </h2>--}}
+{{--                                <span class="sub-title">--}}
+{{--                                    Untapped Capital News--}}
+{{--                                </span>--}}
+                        <h2>
+                    <span class="special">Untapped Capital News</span>
+                        </h2>
                     </div>
                 </div>
             </div>
