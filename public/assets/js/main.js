@@ -252,8 +252,8 @@
         var header_section_height = header_section.outerHeight();
         
         how_to_works_section.css('margin-top', - half_of_how_to_work_section );
-        banner_section.css('padding-bottom', half_of_how_to_work_section + 150 + 'px');
-        banner_section.css('padding-top', header_section_height + 150 + 'px');
+        banner_section.css('padding-bottom', half_of_how_to_work_section + 50 + 'px');
+        banner_section.css('padding-top', header_section_height + 5 + 'px');
 
         $(".js-video-button").modalVideo({
 			youtube:{

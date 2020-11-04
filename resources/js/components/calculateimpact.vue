@@ -154,10 +154,13 @@ export default {
 }
 
 .border {
-  border-top: 2px solid #E2EFF5;
+  border-top: #E2EFF5  2px  solid !important;
+  border-bottom: none !important;
+  border-right: none !important;
+  border-left: none !important;
 }
 
 [contenteditable] {
-  outline: 0px solid transparent;
+  outline: 0 solid transparent;
 }
 </style>
