@@ -77,7 +77,7 @@
         </div>
         <div style="width: 100%;padding-left: 10px;padding-right: 10px;margin-top: -50px">
             <div class="part-text text-center">
-                <h2>Your <span class="special">impact</span> in realtime</h2>
+                <h2>Your <span class="special">impact</span> in real-time</h2>
             </div>
             <map-component :categories='@json($assets)'></map-component>
         </div>
@@ -114,102 +114,6 @@
             </div>
         </div>
     </div>
-    <div class="pricing-plan">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-8">
-                    <div class="section-title">
-                        {{--                                <span class="sub-title">--}}
-                        {{--                                    Untapped Capital--}}
-                        {{--                                </span>--}}
-                        <h2>
-                            <span class="special">Our Assets</span>
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center justify-content-md-start">
-                <div class="col-12">
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                            <tr class="thead-dark">
-                                <th></th>
-                                <th>Asset Name</th>
-                                <th>User</th>
-                                <th>Operator</th>
-                                <th>Use Case</th>
-                                <th>Ticket</th>
-                                <th>Return</th>
-                                <th>Duration</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td scope="row">
-                                    <img src="{{ asset('untapped/twowheeler.svg') }}" alt="">
-                                </td>
-                                <td>
-                                    <a href="{{ route('motorbike.index') }}">Motorbike</a>
-                                </td>
-                                <td>Moto-taxi</td>
-                                <td>Ride Hailing</td>
-                                <td>Transport passenger goods</td>
-                                <td>100$</td>
-                                <td>10%</td>
-                                <td>24 months</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">
-                                    <img src="{{ asset('untapped/smartmeter.svg') }}" alt="">
-                                </td>
-                                <td>
-                                    <a href="{{ route('smartmeter.index') }}">Smart Meter</a>
-                                </td>
-                                <td>Low income households</td>
-                                <td>Water Services</td>
-                                <td>Bring running water access</td>
-                                <td>200$</td>
-                                <td>8%</td>
-                                <td>18 months</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">
-                                    <img src="{{ asset('untapped/rawmeter.svg') }}" alt="">
-                                </td>
-                                <td>
-                                    <a href="{{ route('raw-water-atm.index') }}">Raw Water ATM</a>
-                                </td>
-                                <td>Low income households</td>
-                                <td>3000$</td>
-                                <td>Water Services</td>
-                                <td>Communal water kiosks</td>
-                                <td>3000$</td>
-                                <td>36 months</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">
-                                    <img src="{{ asset('untapped/irrigation.svg') }}" alt="">
-                                </td>
-                                <td>
-                                    <a href="{{ route('mobile-irrigation.index') }}">Mobile Irrigation</a>
-                                </td>
-                                <td>Farmers</td>
-                                <td>Extension Farming</td>
-                                <td>Irrigate, Increase harvest</td>
-                                <td>1000$</td>
-                                <td>10%</td>
-                                <td>18 months</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
     <!-- blog begin -->
     <div class="blog">
         <div class="container">
@@ -219,9 +123,9 @@
                                 <span class="sub-title">
                                     Untapped Capital News
                                 </span>
-                        <h2>
-                            Read the<span class="special"> News</span>
-                        </h2>
+{{--                        <h2>--}}
+{{--                            Read the<span class="special"> News</span>--}}
+{{--                        </h2>--}}
                     </div>
                 </div>
             </div>
