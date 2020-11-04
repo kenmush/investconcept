@@ -2,9 +2,10 @@
   <div class="d-flex justify-content-center">
     <div class="row">
       <div class="text-center">
-        <h2>If I Invest <span class="orangeinput needstext" contenteditable="true" @input="onInput">100k</span>
+        <h2>If I Invest <span class="orangeinput needstext" contenteditable="true" @input="onInput">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           $ on
-          <span class="orangeinput needstext" contenteditable="true" @input="onYearUpdate">15</span> year,</h2>
+          <span class="orangeinput needstext" contenteditable="true" @input="onYearUpdate">{{  years }}</span> year,
+        </h2>
         <i class="fa fa-spin fa-spinner fa-2x" v-if="loading"></i>
         <div v-if="calculations" style="margin-top: 31.5px !important;">
           <div class="border"></div>
@@ -14,15 +15,16 @@
               <p class="toptext">
                 I generate
                 <span class="orangeinput">
-                700k$
+                {{ impact.toLocaleString() }} $
               </span> for them,
               </p>
             </div>
             <div style="position: relative;z-index: 10">
               <img style="z-index: 1;     margin-bottom: -87px; margin-left: -186px;" src="./assets/person.svg" alt="">
               <p class="toptext">
+                &nbsp;&nbsp;&nbsp;
                 support
-                <span class="orangeinput" style="position: relative">200
+                <span class="orangeinput" style="position: relative">{{ entreprenuars.toLocaleString() }}
                               </span> entrepreneurs and create:
               </p>
             </div>
@@ -34,23 +36,20 @@
           <div style="margin-top: 97px !important;" class="d-flex justify-content-between">
             <div style="position: relative">
               <img style="z-index: 1; margin-bottom: -19px;" src="./assets/motorbike.svg" alt="">
-              <p class="supportingtext"><span class="orangeinput ">70</span> Motorbikes</p>
+              <p class="supportingtext"><span class="orangeinput ">{{ motorbikes.toLocaleString() }}</span> Motorbikes</p>
             </div>
             <div>
               <img style="z-index: 1; margin-bottom: -19px;" src="./assets/pump.svg" alt="">
-              <p class="supportingtext"><span class="orangeinput ">130</span> Pumps</p>
+              <p class="supportingtext"><span class="orangeinput ">{{ wateratm.toLocaleString() }}</span> Water ATM</p>
             </div>
-            <!--            <div>-->
-            <!--              <img src="" alt="">-->
-            <!--              <h5><span class="orangeinput ">70</span> Motorbikes</h5>-->
-            <!--            </div>-->
-            <div>
-              <img style="z-index: 1; margin-bottom: -19px;" src="./assets/bottles.svg" alt="">
-              <p class="supportingtext"><span class="orangeinput ">70</span> Bottles</p>
-            </div>
+
+<!--            <div>-->
+<!--              <img style="z-index: 1; margin-bottom: -19px;" src="./assets/bottles.svg" alt="">-->
+<!--              <p class="supportingtext"><span class="orangeinput ">70</span> Bottles</p>-->
+<!--            </div>-->
             <div>
               <img style="z-index: 1; margin-bottom: -19px;" src="./assets/purification.svg" alt="">
-              <p class="supportingtext"><span class="orangeinput ">70</span> Purification system</p>
+              <p class="supportingtext"><span class="orangeinput ">{{  trailer.toLocaleString() }}</span> Irrigation Trailer</p>
             </div>
 
           </div>
@@ -69,8 +68,13 @@ export default {
   data() {
     return {
       calculations: false,
-      years: '',
+      years: 1,
       amountInvested: '',
+      motorbikes: '',
+      trailer: '',
+      wateratm: '',
+      entreprenuars: '',
+      impact: '',
       loading: false
     }
   },
@@ -87,6 +91,16 @@ export default {
       let _self = this;
       this.loading = false;
       this.calculations = true;
+
+      this.motorbikes = Math.round((this.amountInvested / 3) / 1000) * this.years;
+      this.wateratm = Math.round((this.amountInvested / 3) / 1000) * this.years;
+      this.trailer = Math.round((this.amountInvested / 3) / 500) * this.years;
+      let socialImpact = (((this.amountInvested / 3) / 500) * 1800) + (((this.amountInvested / 3) / 1000) * 12000) +
+          (((this.amountInvested / 3) / 1000) *
+              3600)
+      let addition = (this.motorbikes + this.wateratm + this.trailer);
+      this.entreprenuars = Math.round(addition);
+      this.impact = socialImpact * this.years;
       // setTimeout(function () {
       //   _self.loading = false;
       //   _self.calculations = true;
