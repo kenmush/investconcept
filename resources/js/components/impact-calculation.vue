@@ -63,7 +63,7 @@
               </tr>
               <tr style="background-color: white">
                 <td scope="row">
-                  <img src="/untapped/rawmeter.svg" alt="">
+                  <img src="/untapped/rawmeter.svg" height="32px" width="32px" alt="">
                 </td>
                 <td>Water ATM's</td>
                 <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
@@ -74,7 +74,7 @@
               </tr>
               <tr style="background-color: white">
                 <td scope="row">
-                  <img src="/untapped/irrigation.svg" alt="">
+                  <img src="/untapped/irrigation.svg"  height="32px" width="32px" alt="">
                 </td>
                 <td>Trailer</td>
                 <td>{{ Math.round(amount / 3).toLocaleString() }}</td>

@@ -99,7 +99,7 @@
         </div>
     </div>
 
-    <div class="banner"  id="simulateimpact">
+    <div  id="simulateimpact">
         <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-8">
                 <div class="section-title">
@@ -110,7 +110,11 @@
             </div>
         </div>
         <div class="container-fluid">
-            <impactcalculation></impactcalculation>
+            <div class="row">
+                <div class="col-12">
+                    <impactcalculation></impactcalculation>
+                </div>
+            </div>
 
         </div>
     </div>
