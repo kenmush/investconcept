@@ -6,7 +6,9 @@
           $ on
           <span class="orangeinput needstext" contenteditable="true" @input="onYearUpdate">{{  years }}</span> year,
         </h2>
-        <i class="fa fa-spin fa-spinner fa-2x" v-if="loading"></i>
+        <svg v-if="loading" id="star" xmlns="http://www.w3.org/2000/svg" width="68.918" height="68.918" viewBox="0 0 68.918 68.918"><g
+            transform="translate(25.047 -0.668) rotate(30)" opacity="0.5"><g transform="translate(0.489 0.489)"><rect width="50.452" height="50.452" fill="none"/></g><g transform="translate(6.664 6.663)"><path d="M36.869,3H7.234A4.246,4.246,0,0,0,3,7.234V36.869A4.246,4.246,0,0,0,7.234,41.1H36.869A4.246,4.246,0,0,0,41.1,36.869V7.234A4.246,4.246,0,0,0,36.869,3ZM24.232,11.594l2.244-2.244,2.985,2.985,2.985-2.985,2.244,2.244L31.7,14.579l2.985,2.985-2.244,2.244-2.985-2.964-2.985,2.985-2.244-2.244L27.217,14.6ZM9.88,12.991H20.464v3.175H9.88ZM20.993,30.519H16.759v4.234H13.584V30.519H9.351V27.344h4.234V23.11h3.175v4.234h4.234Zm13.759,2.646H24.168V29.99H34.753Zm0-5.292H24.168V24.7H34.753Z" transform="translate(-3 -3)" fill="#868780"/></g></g></svg>
+<!--        <i class="fa fa-spin fa-spinner fa-2x" ></i>-->
         <div v-if="calculations" style="margin-top: 31.5px !important;">
           <div class="border"></div>
           <div class="d-flex justify-content-between" style="margin-top: 46.53px">
@@ -162,5 +164,13 @@ export default {
 
 [contenteditable] {
   outline: 0 solid transparent;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% {  transform: rotate(359deg); }
+}
+#star {
+  animation: spin 2s linear infinite;
+
 }
 </style>
