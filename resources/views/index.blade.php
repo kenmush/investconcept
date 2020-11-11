@@ -82,9 +82,9 @@
             <map-component :categories='@json($assets)'></map-component>
         </div>
     </div>
-    <div class="cta" style="margin-top: -140px" id="assets">
+    <div class="cta-assets" style="margin-top: -140px" id="assets">
         <div class="container">
-            <div class="cta-bg">
+            <div class="cta-assets-bg">
                 <div class="row text-center justify-content-center mb-4">
                     <a style="margin-top: -180px" href="/register" class="btn-hyipox-medium cta-btn">Get Started</a>
                 </div>

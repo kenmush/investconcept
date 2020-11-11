@@ -3,10 +3,11 @@
     <div class="row">
       <div class="col-12">
         <div class="text-center">
-          <h2>If I Invest <span class="orangeinput needstext" contenteditable="true" @input="onInput">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <p class="invest">If I Invest <span class="orangeinput needstext" contenteditable="true"
+                                              @input="onInput">1000000</span>
             $ on
             <span class="orangeinput needstext" contenteditable="true" @input="onYearUpdate">{{ years }}</span> year.
-          </h2>
+          </p>
           <svg v-if="loading" id="star" xmlns="http://www.w3.org/2000/svg" width="68.918" height="68.918"
                viewBox="0 0 68.918 68.918">
             <g
@@ -22,141 +23,181 @@
             </g>
           </svg>
           <!--        <i class="fa fa-spin fa-spinner fa-2x" ></i>-->
-          <div v-if="calculations" style="margin-top: 31.5px !important;">
-            <div class="row">
-              <!--              <div class="d-flex justify-content-center text-center">-->
-              <!--                <h3>I CREATE:</h3>-->
-              <!--              </div>-->
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="border"></div>
+        <div v-if="calculations" style="margin-top: 31.5px !important;">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex justify-content-center text-center">
+                <p class="impactheading">I CREATE</p>
+              </div>
             </div>
+          </div>
+          <div class="container" style="max-width: 726px">
             <div class="row">
               <div class="col-12">
-                <div class="border"></div>
-                <div class="row" style="margin-top: 46.53px">
-                  <div class="col-md-6" style="position: relative;z-index: 10">
-                    <img style="z-index: 1; margin-bottom: -60px;" src="./assets/monetization.svg" alt="">
-                    <p class="toptext">
-                <span class="orangeinput">
-                {{ impact.toLocaleString() }} $ <br>
-              </span> of cumulated revenues
-                    </p>
-                  </div>
-                  <div class="col-md-6" style="position: relative;z-index: 10">
-                    <img style="z-index: 1;margin-bottom: -87px;" src="./assets/person.svg"
-                         alt="">
-                    <p class="toptext">
-                      <span class="orangeinput" style="position: relative">
-                            {{ entreprenuars.toLocaleString() }} <br>
-                              </span> entrepreneurs </p>
-                  </div>
-                </div>
-                <div class="row" style="margin-top: 46.53px">
-                  <div class="col-md-6" style="position: relative;z-index: 10">
-                    <img style="z-index: 1; margin-bottom: -60px;" src="./assets/monetization.svg" alt="">
-                    <p class="toptext">
-                <span class="orangeinput">
-                {{ overallreturn }} % <br>
-              </span> Overall Return
-                    </p>
-                  </div>
-                  <div class="col-md-6" style="position: relative;z-index: 10">
-                    <img style="z-index: 1;margin-bottom: -87px;" src="./assets/person.svg"
-                         alt="">
-                    <p class="toptext">
-                      <span class="orangeinput" style="position: relative">
-                            {{ socialReturn.toLocaleString() }}x <br>
-                              </span> Social return on money </p>
-                  </div>
-                </div>
-                <div style="margin-top: 3em;margin-bottom: 3em">
-                 <button class="btn btn-secondary"> <i class="fa fa-arrow-down"></i> More</button>
-                </div>
-                <div class="container" style="margin-top: 10px !important;">
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <img style="z-index: 1; margin-bottom: -19px;" src="./assets/motorbike.svg" alt="">
-                      <p class="supportingtext"><span class="orangeinput ">{{ motorbikes.toLocaleString() }}</span>
-                        Motorbikes</p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="d-flex justify-content-center">
+                      <img src="./assets/monetization.svg" alt="">
                     </div>
-                    <div>
-                      <img style="z-index: 1; margin-bottom: -19px;" src="./assets/pump.svg" alt="">
-                      <p class="supportingtext"><span class="orangeinput ">{{ wateratm.toLocaleString() }}</span>
-                        Water
-                        ATM</p>
-                    </div>
-                    <div>
-                      <img style="z-index: 1; margin-bottom: -19px;" src="./assets/purification.svg" alt="">
-                      <p class="supportingtext"><span class="orangeinput ">{{ trailer.toLocaleString() }}</span>
-                        Irrigation Trailer</p>
+                    <div class="text-center">
+                      <p class="toptext">
+                        <span class="inputfor">{{ impact.toLocaleString() }} $ </span> of cumulated revenues
+                      </p>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="container">
-                      <div class="table-responsive">
-                        <table class="table table-borderless part-result" style="background-color: transparent">
-                          <thead class="thead-light">
-                          <tr>
-                            <th></th>
-                            <th>Asset</th>
-                            <th>Amount ($)</th>
-                            <th>Number</th>
-                            <th>Return</th>
-                            <th>Social Impact</th>
-                            <th>Leverage</th>
-                          </tr>
-                          </thead>
-                          <tbody style="background-color: white">
-                          <tr style="background-color: white">
-                            <td scope="row">
-                              <img src="/untapped/twowheeler.svg" alt="">
-                            </td>
-                            <td>Motorcycle</td>
-                            <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>
-                            <td>{{ motorbikes }}</td>
-                            <td>{{ Math.round(motorbikeReturn).toLocaleString() }}</td>
-                            <td>{{ impact / amountInvested }}</td>
-                            <td>3.6</td>
-                          </tr>
-                          <tr style="background-color: white">
-                            <td scope="row">
-                              <img src="/untapped/rawmeter.svg" height="32px" width="32px" alt="">
-                            </td>
-                            <td>Water ATM's</td>
-                            <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>
-                            <td>{{ wateratm }}</td>
-                            <td>{{ Math.round(atmReturn).toLocaleString() }}</td>
-                            <td>{{ impact / amountInvested }}</td>
-                            <td>12</td>
-                          </tr>
-                          <tr style="background-color: white">
-                            <td scope="row">
-                              <img src="/untapped/irrigation.svg" height="32px" width="32px" alt="">
-                            </td>
-                            <td>Trailer</td>
-                            <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>
-                            <td>{{ trailer }}</td>
-                            <td>{{ Math.round(trailerReturn).toLocaleString() }}</td>
-                            <td>{{ impact / amountInvested }}</td>
-                            <td>3.6</td>
-                          </tr>
-                          <tr style="border-top: 3px solid gray">
-                            <td></td>
-                            <td>Totals</td>
-                            <td>{{ Math.round(amountInvested).toLocaleString() }}</td>
-                            <td>{{ entreprenuars.toLocaleString() }}</td>
-                            <td>{{ impact.toLocaleString() }}</td>
-                            <td>{{ socialImpact }}</td>
-                            <td>{{ totalLeverage }}</td>
-                          </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                  <div class="col-md-6">
+                    <div class="d-flex justify-content-center">
+                      <img src="./assets/person.svg" alt="" height="122px" width="122px">
+                    </div>
+                    <div class="text-center">
+                      <p class="toptext">
+                      <span class="inputfor">
+                        {{ entreprenuars.toLocaleString() }}
+                      </span> entrepreneurs </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="col-12">
+              <div class="d-flex justify-content-center text-center">
+                <p class="impactheading">I MAKE</p>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="d-flex justify-content-center">
+                    <img src="./assets/percent.svg" alt=""> <br>
+
+                  </div>
+                  <div class="text-center">
+                    <p class="toptext">
+                      <span class="inputfor">
+                        {{ overallreturn }} %
+                      </span> Overall Return
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex justify-content-center">
+                    <img src="./assets/X.svg"
+                         alt="">
+                  </div>
+                  <div class="text-center">
+                    <p class="toptext">
+                      <span class="inputfor" style="position: relative">
+                        {{ socialReturn.toLocaleString() }}x
+                      </span> Social return on money </p>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top: 3em;margin-bottom: 3em">
+                <div class="d-flex justify-content-center">
+                  <div>
+                    <p class="more" @click.prevent="showmore">More details</p>
+                    <div class="text-center cursor-pointer" style="cursor: pointer" @click.prevent="showmore">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="24.7" viewBox="0 0 40 24.7">
+                        <path id="Path_338" data-name="Path 338" d="M10.7,8.59,26,23.857,41.3,8.59l4.7,4.7-20,20-20-20Z"
+                              transform="translate(-6 -8.59)" fill="#48586a"/>
+                      </svg>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+              <div v-if="showmores" class="container" style="margin-top: 10px !important;">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <img style="z-index: 1; margin-bottom: -19px;" src="./assets/motorbike.svg" alt="">
+                    <p class="supportingtext"><span class="orangeinput ">{{ motorbikes.toLocaleString() }}</span>
+                      Motorbikes</p>
+                  </div>
+                  <div>
+                    <img style="z-index: 1; margin-bottom: -19px;" src="./assets/pump.svg" alt="">
+                    <p class="supportingtext"><span class="orangeinput ">{{ wateratm.toLocaleString() }}</span>
+                      Water
+                      ATM</p>
+                  </div>
+                  <div>
+                    <img style="z-index: 1; margin-bottom: -19px;" src="./assets/purification.svg" alt="">
+                    <p class="supportingtext"><span class="orangeinput ">{{ trailer.toLocaleString() }}</span>
+                      Irrigation Trailer</p>
+                  </div>
+                </div>
+<!--                <div class="row">-->
+<!--                  <div class="container">-->
+<!--                    <div class="table-responsive">-->
+<!--                      <table class="table table-borderless part-result" style="background-color: transparent">-->
+<!--                        <thead class="thead-light">-->
+<!--                        <tr>-->
+<!--                          <th></th>-->
+<!--                          <th>Asset</th>-->
+<!--                          <th>Amount ($)</th>-->
+<!--                          <th>Number</th>-->
+<!--                          <th>Return</th>-->
+<!--                          <th>Social Impact</th>-->
+<!--                          <th>Leverage</th>-->
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody style="background-color: white">-->
+<!--                        <tr style="background-color: white">-->
+<!--                          <td scope="row">-->
+<!--                            <img src="/untapped/twowheeler.svg" alt="">-->
+<!--                          </td>-->
+<!--                          <td>Motorcycle</td>-->
+<!--                          <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>-->
+<!--                          <td>{{ motorbikes }}</td>-->
+<!--                          <td>{{ Math.round(motorbikeReturn).toLocaleString() }}</td>-->
+<!--                          <td>{{ impact / amountInvested }}</td>-->
+<!--                          <td>3.6</td>-->
+<!--                        </tr>-->
+<!--                        <tr style="background-color: white">-->
+<!--                          <td scope="row">-->
+<!--                            <img src="/untapped/rawmeter.svg" height="32px" width="32px" alt="">-->
+<!--                          </td>-->
+<!--                          <td>Water ATM's</td>-->
+<!--                          <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>-->
+<!--                          <td>{{ wateratm }}</td>-->
+<!--                          <td>{{ Math.round(atmReturn).toLocaleString() }}</td>-->
+<!--                          <td>{{ impact / amountInvested }}</td>-->
+<!--                          <td>12</td>-->
+<!--                        </tr>-->
+<!--                        <tr style="background-color: white">-->
+<!--                          <td scope="row">-->
+<!--                            <img src="/untapped/irrigation.svg" height="32px" width="32px" alt="">-->
+<!--                          </td>-->
+<!--                          <td>Trailer</td>-->
+<!--                          <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>-->
+<!--                          <td>{{ trailer }}</td>-->
+<!--                          <td>{{ Math.round(trailerReturn).toLocaleString() }}</td>-->
+<!--                          <td>{{ impact / amountInvested }}</td>-->
+<!--                          <td>3.6</td>-->
+<!--                        </tr>-->
+<!--                        <tr style="border-top: 3px solid gray">-->
+<!--                          <td></td>-->
+<!--                          <td>Totals</td>-->
+<!--                          <td>{{ Math.round(amountInvested).toLocaleString() }}</td>-->
+<!--                          <td>{{ entreprenuars.toLocaleString() }}</td>-->
+<!--                          <td>{{ impact.toLocaleString() }}</td>-->
+<!--                          <td>{{ socialImpact }}</td>-->
+<!--                          <td>{{ totalLeverage }}</td>-->
+<!--                        </tr>-->
+<!--                        </tbody>-->
+<!--                      </table>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -169,7 +210,7 @@ export default {
     return {
       calculations: false,
       years: 5,
-      amountInvested: '',
+      amountInvested: 0,
       motorbikes: '',
       overallreturn: '',
       trailer: '',
@@ -181,11 +222,18 @@ export default {
       atmReturn: '',
       trailerReturn: '',
       impact: '',
+      showmores: false,
       batch: '',
       loading: false
     }
   },
+  mounted() {
+    // this.amountInvested = 100000;
+  },
   methods: {
+    showmore() {
+      this.showmores = !this.showmores;
+    },
     onInput(e) {
       this.amountInvested = e.target.innerText;
       this.calculateImpact();
@@ -262,12 +310,24 @@ export default {
 
 .orangeinput {
   color: #ED7D31;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: bolder;
+  border-bottom: solid #ED7D31 3px;
   font-family: Roboto, Helvetica Neue, Arial, sans-serif;
 
   &.needstext {
-    text-decoration: underline;
+    //text-decoration: underline;
+  }
+}
+
+.inputfor {
+  color: #ED7D31;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+
+  &.needstext {
+    //text-decoration: underline;
   }
 }
 
@@ -290,9 +350,10 @@ export default {
 }
 
 .toptext {
-  text-align: center;
-  font: normal normal bold 26px/34px Roboto;
-  letter-spacing: 0px;
+  //text-align: center;
+  font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: 26px;
+  letter-spacing: 0;
   color: #48586A;
 }
 
@@ -319,5 +380,28 @@ export default {
 #star {
   animation: spin 2s linear infinite;
 
+}
+
+.impactheading {
+  color: #48586A;
+  font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.more {
+  color: #48586A;
+  font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+  font-weight: bold;
+  //letter-spacing: 37px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.invest {
+  color: #48586A;
+  font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
 }
 </style>
