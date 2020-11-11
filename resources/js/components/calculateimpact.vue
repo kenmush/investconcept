@@ -12,21 +12,24 @@
                   onkeypress="return (this.innerText.length <= 1)"
                   @input="onYearUpdate">5</span> year.
           </p>
-          <svg :style="'transform: rotate(180deg);'" v-if="loading" id="star" xmlns="http://www.w3.org/2000/svg"
-               width="68.918" height="68.918"
-               viewBox="0 0 68.918 68.918">
-            <g
-                transform="translate(25.047 -0.668) rotate(30)" opacity="0.5">
-              <g transform="translate(0.489 0.489)">
-                <rect width="50.452" height="50.452" fill="none"/>
+          <div>
+            <svg v-if="loading" id="star"
+                 xmlns="http://www.w3.org/2000/svg"
+                 width="68.918" height="68.918"
+                 viewBox="0 0 68.918 68.918">
+              <g
+                  transform="translate(25.047 -0.668) rotate(30)" opacity="0.5">
+                <g transform="translate(0.489 0.489)">
+                  <rect width="50.452" height="50.452" fill="none"/>
+                </g>
+                <g transform="translate(6.664 6.663)">
+                  <path
+                      d="M36.869,3H7.234A4.246,4.246,0,0,0,3,7.234V36.869A4.246,4.246,0,0,0,7.234,41.1H36.869A4.246,4.246,0,0,0,41.1,36.869V7.234A4.246,4.246,0,0,0,36.869,3ZM24.232,11.594l2.244-2.244,2.985,2.985,2.985-2.985,2.244,2.244L31.7,14.579l2.985,2.985-2.244,2.244-2.985-2.964-2.985,2.985-2.244-2.244L27.217,14.6ZM9.88,12.991H20.464v3.175H9.88ZM20.993,30.519H16.759v4.234H13.584V30.519H9.351V27.344h4.234V23.11h3.175v4.234h4.234Zm13.759,2.646H24.168V29.99H34.753Zm0-5.292H24.168V24.7H34.753Z"
+                      transform="translate(-3 -3)" fill="#868780"/>
+                </g>
               </g>
-              <g transform="translate(6.664 6.663)">
-                <path
-                    d="M36.869,3H7.234A4.246,4.246,0,0,0,3,7.234V36.869A4.246,4.246,0,0,0,7.234,41.1H36.869A4.246,4.246,0,0,0,41.1,36.869V7.234A4.246,4.246,0,0,0,36.869,3ZM24.232,11.594l2.244-2.244,2.985,2.985,2.985-2.985,2.244,2.244L31.7,14.579l2.985,2.985-2.244,2.244-2.985-2.964-2.985,2.985-2.244-2.244L27.217,14.6ZM9.88,12.991H20.464v3.175H9.88ZM20.993,30.519H16.759v4.234H13.584V30.519H9.351V27.344h4.234V23.11h3.175v4.234h4.234Zm13.759,2.646H24.168V29.99H34.753Zm0-5.292H24.168V24.7H34.753Z"
-                    transform="translate(-3 -3)" fill="#868780"/>
-              </g>
-            </g>
-          </svg>
+            </svg>
+          </div>
           <!--        <i class="fa fa-spin fa-spinner fa-2x" ></i>-->
         </div>
       </div>
@@ -107,10 +110,21 @@
                   <div>
                     <p class="more" @click.prevent="showmore">More details</p>
                     <div class="text-center cursor-pointer" style="cursor: pointer" @click.prevent="showmore">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="24.7" viewBox="0 0 40 24.7">
+                      <svg v-if="!showmores" xmlns="http://www.w3.org/2000/svg"
+                           width="40"
+                           height="24.7"
+                           viewBox="0 0 40 24.7">
                         <path id="Path_338" data-name="Path 338" d="M10.7,8.59,26,23.857,41.3,8.59l4.7,4.7-20,20-20-20Z"
                               transform="translate(-6 -8.59)" fill="#48586a"/>
                       </svg>
+                      <svg v-else style="transform: rotate(180deg)" xmlns="http://www.w3.org/2000/svg"
+                            width="40"
+                            height="24.7"
+                            viewBox="0 0 40 24.7">
+                        <path id="Path_338" data-name="Path 338" d="M10.7,8.59,26,23.857,41.3,8.59l4.7,4.7-20,20-20-20Z"
+                              transform="translate(-6 -8.59)" fill="#48586a"/>
+                      </svg>
+
                     </div>
 
                   </div>
@@ -243,7 +257,7 @@ export default {
     $("span[contenteditable]").keypress(function (evt) {
       var keycode = evt.charCode || evt.keyCode;
       var x = evt.charCode || evt.keyCode;
-      if (isNaN(String.fromCharCode(evt.which)) && x!=46 || x===32 || x===13 || (x===46 && evt.currentTarget.innerText.includes('.'))) evt.preventDefault();
+      if (isNaN(String.fromCharCode(evt.which)) && x != 46 || x === 32 || x === 13 || (x === 46 && evt.currentTarget.innerText.includes('.'))) evt.preventDefault();
 
       if (keycode == 13) { //Enter key's keycode
         this.calculateImpact();
@@ -449,22 +463,29 @@ export default {
   font-weight: bold;
   font-size: 40px;
 }
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity 2s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
   opacity: 0;
 }
+
 /* Enter and leave animations can use different */
 /* durations and timing functions.              */
 .slide-fade-enter-active {
   transition: all .3s ease;
 }
+
 .slide-fade-leave-active {
   transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
+
 .slide-fade-enter, .slide-fade-leave-to
-  /* .slide-fade-leave-active below version 2.1.8 */ {
+  /* .slide-fade-leave-active below version 2.1.8 */
+{
   transform: translateX(10px);
   opacity: 0;
 }
