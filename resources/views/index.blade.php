@@ -86,7 +86,7 @@
         <div class="container">
             <div class="cta-bg">
                 <div class="row text-center justify-content-center mb-4">
-                    <a style="margin-top: -100px" href="/register" class="btn-hyipox-medium cta-btn">Get Started</a>
+                    <a style="margin-top: -180px" href="/register" class="btn-hyipox-medium cta-btn">Get Started</a>
                 </div>
 
             </div>

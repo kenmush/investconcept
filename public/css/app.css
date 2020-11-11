@@ -1107,7 +1107,7 @@ ul {
 .cta {
   background: url(/images/bg_gradient.png?c3d0a4eec61ce261f2f5a93d20cced0d) center center no-repeat;
   background-size: cover;
-  padding: 0 0;
+  padding: 100px 0;
   position: relative;
   z-index: 2;
   /*background: -o-linear-gradient(-19deg, #165b6b 10%, #2c2f61);*/
