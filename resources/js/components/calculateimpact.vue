@@ -79,7 +79,7 @@
                   <div class="text-center">
                     <p class="toptext">
                       <span class="inputfor">
-                        {{ overallreturn }} %
+                        {{ overallreturn }}%
                       </span> Overall Return
                     </p>
                   </div>
@@ -238,7 +238,7 @@ export default {
     nFormatter(num, digits) {
       var si = [
         {value: 1, symbol: ""},
-        {value: 1E3, symbol: "k"},
+        {value: 1E3, symbol: "K"},
         {value: 1E6, symbol: "M"},
         {value: 1E9, symbol: "G"},
         {value: 1E12, symbol: "T"},
@@ -317,7 +317,7 @@ export default {
                 3600)
         let addition = (_self.motorbikes + _self.wateratm + _self.trailer);
         _self.entreprenuars = Math.round(addition);
-      }, 500);
+      }, 250);
     }
   }
 }
@@ -376,7 +376,7 @@ export default {
   //text-align: center;
   font-family: Roboto, Helvetica Neue, Arial, sans-serif;
   font-size: 26px;
-  letter-spacing: 0;
+  font-weight: bold;
   color: #48586A;
 }
 
