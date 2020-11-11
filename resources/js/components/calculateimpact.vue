@@ -35,7 +35,7 @@
               </div>
             </div>
           </div>
-          <div class="container" style="max-width: 726px">
+          <div class="container" style="max-width: 926px">
             <div class="row">
               <div class="col-12">
                 <div class="row">
@@ -45,7 +45,7 @@
                     </div>
                     <div class="text-center">
                       <p class="toptext">
-                        <span class="inputfor">{{ impact.toLocaleString() }} $ </span> of cumulated revenues
+                        <span class="inputfor">{{ impact }}$</span> of cumulated revenues
                       </p>
                     </div>
                   </div>
@@ -60,6 +60,7 @@
                       </span> entrepreneurs </p>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -130,69 +131,69 @@
                       Irrigation Trailer</p>
                   </div>
                 </div>
-<!--                <div class="row">-->
-<!--                  <div class="container">-->
-<!--                    <div class="table-responsive">-->
-<!--                      <table class="table table-borderless part-result" style="background-color: transparent">-->
-<!--                        <thead class="thead-light">-->
-<!--                        <tr>-->
-<!--                          <th></th>-->
-<!--                          <th>Asset</th>-->
-<!--                          <th>Amount ($)</th>-->
-<!--                          <th>Number</th>-->
-<!--                          <th>Return</th>-->
-<!--                          <th>Social Impact</th>-->
-<!--                          <th>Leverage</th>-->
-<!--                        </tr>-->
-<!--                        </thead>-->
-<!--                        <tbody style="background-color: white">-->
-<!--                        <tr style="background-color: white">-->
-<!--                          <td scope="row">-->
-<!--                            <img src="/untapped/twowheeler.svg" alt="">-->
-<!--                          </td>-->
-<!--                          <td>Motorcycle</td>-->
-<!--                          <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>-->
-<!--                          <td>{{ motorbikes }}</td>-->
-<!--                          <td>{{ Math.round(motorbikeReturn).toLocaleString() }}</td>-->
-<!--                          <td>{{ impact / amountInvested }}</td>-->
-<!--                          <td>3.6</td>-->
-<!--                        </tr>-->
-<!--                        <tr style="background-color: white">-->
-<!--                          <td scope="row">-->
-<!--                            <img src="/untapped/rawmeter.svg" height="32px" width="32px" alt="">-->
-<!--                          </td>-->
-<!--                          <td>Water ATM's</td>-->
-<!--                          <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>-->
-<!--                          <td>{{ wateratm }}</td>-->
-<!--                          <td>{{ Math.round(atmReturn).toLocaleString() }}</td>-->
-<!--                          <td>{{ impact / amountInvested }}</td>-->
-<!--                          <td>12</td>-->
-<!--                        </tr>-->
-<!--                        <tr style="background-color: white">-->
-<!--                          <td scope="row">-->
-<!--                            <img src="/untapped/irrigation.svg" height="32px" width="32px" alt="">-->
-<!--                          </td>-->
-<!--                          <td>Trailer</td>-->
-<!--                          <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>-->
-<!--                          <td>{{ trailer }}</td>-->
-<!--                          <td>{{ Math.round(trailerReturn).toLocaleString() }}</td>-->
-<!--                          <td>{{ impact / amountInvested }}</td>-->
-<!--                          <td>3.6</td>-->
-<!--                        </tr>-->
-<!--                        <tr style="border-top: 3px solid gray">-->
-<!--                          <td></td>-->
-<!--                          <td>Totals</td>-->
-<!--                          <td>{{ Math.round(amountInvested).toLocaleString() }}</td>-->
-<!--                          <td>{{ entreprenuars.toLocaleString() }}</td>-->
-<!--                          <td>{{ impact.toLocaleString() }}</td>-->
-<!--                          <td>{{ socialImpact }}</td>-->
-<!--                          <td>{{ totalLeverage }}</td>-->
-<!--                        </tr>-->
-<!--                        </tbody>-->
-<!--                      </table>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
+                <!--                <div class="row">-->
+                <!--                  <div class="container">-->
+                <!--                    <div class="table-responsive">-->
+                <!--                      <table class="table table-borderless part-result" style="background-color: transparent">-->
+                <!--                        <thead class="thead-light">-->
+                <!--                        <tr>-->
+                <!--                          <th></th>-->
+                <!--                          <th>Asset</th>-->
+                <!--                          <th>Amount ($)</th>-->
+                <!--                          <th>Number</th>-->
+                <!--                          <th>Return</th>-->
+                <!--                          <th>Social Impact</th>-->
+                <!--                          <th>Leverage</th>-->
+                <!--                        </tr>-->
+                <!--                        </thead>-->
+                <!--                        <tbody style="background-color: white">-->
+                <!--                        <tr style="background-color: white">-->
+                <!--                          <td scope="row">-->
+                <!--                            <img src="/untapped/twowheeler.svg" alt="">-->
+                <!--                          </td>-->
+                <!--                          <td>Motorcycle</td>-->
+                <!--                          <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>-->
+                <!--                          <td>{{ motorbikes }}</td>-->
+                <!--                          <td>{{ Math.round(motorbikeReturn).toLocaleString() }}</td>-->
+                <!--                          <td>{{ impact / amountInvested }}</td>-->
+                <!--                          <td>3.6</td>-->
+                <!--                        </tr>-->
+                <!--                        <tr style="background-color: white">-->
+                <!--                          <td scope="row">-->
+                <!--                            <img src="/untapped/rawmeter.svg" height="32px" width="32px" alt="">-->
+                <!--                          </td>-->
+                <!--                          <td>Water ATM's</td>-->
+                <!--                          <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>-->
+                <!--                          <td>{{ wateratm }}</td>-->
+                <!--                          <td>{{ Math.round(atmReturn).toLocaleString() }}</td>-->
+                <!--                          <td>{{ impact / amountInvested }}</td>-->
+                <!--                          <td>12</td>-->
+                <!--                        </tr>-->
+                <!--                        <tr style="background-color: white">-->
+                <!--                          <td scope="row">-->
+                <!--                            <img src="/untapped/irrigation.svg" height="32px" width="32px" alt="">-->
+                <!--                          </td>-->
+                <!--                          <td>Trailer</td>-->
+                <!--                          <td>{{ Math.round(amountInvested / 3).toLocaleString() }}</td>-->
+                <!--                          <td>{{ trailer }}</td>-->
+                <!--                          <td>{{ Math.round(trailerReturn).toLocaleString() }}</td>-->
+                <!--                          <td>{{ impact / amountInvested }}</td>-->
+                <!--                          <td>3.6</td>-->
+                <!--                        </tr>-->
+                <!--                        <tr style="border-top: 3px solid gray">-->
+                <!--                          <td></td>-->
+                <!--                          <td>Totals</td>-->
+                <!--                          <td>{{ Math.round(amountInvested).toLocaleString() }}</td>-->
+                <!--                          <td>{{ entreprenuars.toLocaleString() }}</td>-->
+                <!--                          <td>{{ impact.toLocaleString() }}</td>-->
+                <!--                          <td>{{ socialImpact }}</td>-->
+                <!--                          <td>{{ totalLeverage }}</td>-->
+                <!--                        </tr>-->
+                <!--                        </tbody>-->
+                <!--                      </table>-->
+                <!--                    </div>-->
+                <!--                  </div>-->
+                <!--                </div>-->
               </div>
             </div>
           </div>
@@ -228,9 +229,38 @@ export default {
     }
   },
   mounted() {
-    // this.amountInvested = 100000;
+    setTimeout(function () {
+      this.amountInvested = 100000;
+    },500);
+  },
+  watch: {
+    years() {
+      if (this.years <= 0) {
+        return this.years = 1;
+      }
+      return this.years;
+    }
   },
   methods: {
+    nFormatter(num, digits) {
+      var si = [
+        {value: 1, symbol: ""},
+        {value: 1E3, symbol: "k"},
+        {value: 1E6, symbol: "M"},
+        {value: 1E9, symbol: "G"},
+        {value: 1E12, symbol: "T"},
+        {value: 1E15, symbol: "P"},
+        {value: 1E18, symbol: "E"}
+      ];
+      var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+      var i;
+      for (i = si.length - 1; i > 0; i--) {
+        if (num >= si[i].value) {
+          break;
+        }
+      }
+      return (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
+    },
     showmore() {
       this.showmores = !this.showmores;
     },
@@ -276,7 +306,7 @@ export default {
             * trailerAnnualRevenue * 3 + trailerperYear * trailerAnnualRevenue * _self.timeToRepay;
 
         /* Total Revenue*/
-        _self.impact = totalRevenueMotorbike + totalATMRevenue + trailerATMRevenue;
+        _self.impact = _self.nFormatter(totalRevenueMotorbike + totalATMRevenue + trailerATMRevenue, 2);
         _self.motorbikeReturn = totalRevenueMotorbike;
         _self.atmReturn = totalATMRevenue;
         _self.trailerReturn = trailerATMRevenue;
