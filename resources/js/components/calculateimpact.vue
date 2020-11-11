@@ -116,7 +116,7 @@
 
                 </div>
               </div>
-              <transition name="fade">
+              <transition name="slide-fade">
                 <div v-if="showmores" class="container" style="margin-top: 10px !important;">
                   <div class="d-flex justify-content-between">
                     <div>
@@ -454,4 +454,19 @@ export default {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+
 </style>
