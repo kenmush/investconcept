@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Untapped Capital') }}</title>
+    <title>{{ config('app.name', 'Untapped Inc') }}</title>
 
     <!-- Scripts -->
     <!-- Fonts -->

@@ -18,7 +18,7 @@
     <meta property="og:image"
           content="https://www.untapped-inc.com/uploads/1/3/1/9/13198181/screen-shot-2014-06-12-at-8-00-35-pm_orig.jpg"/>
     <meta property="og:url" content="http://www.untapped-inc.com/"/>
-    <title>Untapped Capital</title>
+    <title>Untapped Inc</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- bootstrap -->

@@ -12,7 +12,8 @@
                   onkeypress="return (this.innerText.length <= 1)"
                   @input="onYearUpdate">5</span> year.
           </p>
-          <svg v-if="loading" id="star" xmlns="http://www.w3.org/2000/svg" width="68.918" height="68.918"
+          <svg :style="'transform: rotate(180deg);'" v-if="loading" id="star" xmlns="http://www.w3.org/2000/svg"
+               width="68.918" height="68.918"
                viewBox="0 0 68.918 68.918">
             <g
                 transform="translate(25.047 -0.668) rotate(30)" opacity="0.5">

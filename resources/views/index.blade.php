@@ -132,10 +132,10 @@
                 <div class="col-xl-8 col-lg-8">
                     <div class="section-title">
                         {{--                                <span class="sub-title">--}}
-                        {{--                                    Untapped Capital News--}}
+                        {{--                                    Untapped Inc News--}}
                         {{--                                </span>--}}
                         <h2>
-                            <span class="special">Untapped Capital News</span>
+                            <span class="special">Untapped Inc News</span>
                         </h2>
                     </div>
                 </div>
