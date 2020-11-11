@@ -2,7 +2,7 @@
   <div class="row" style="padding-top: 13px">
     <div class="col-md-10">
       <div class="shadow"
-           style="z-index:9999 ;position: absolute;margin-top:80px; margin-left:26px; width:20rem;">
+           style="z-index:1 ;position: absolute;margin-top:80px; margin-left:26px; width:20rem;">
         <div class="card">
           <div class="card-title">
           </div>
