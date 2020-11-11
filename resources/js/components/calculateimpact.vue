@@ -4,7 +4,7 @@
       <div class="col-12">
         <div class="text-center">
           <p class="invest">If I Invest <span class="orangeinput needstext" contenteditable="true"
-                                              @input="onInput">1000000</span>
+                                              @input="onInput">100000</span>
             $ on
             <span class="orangeinput needstext" contenteditable="true" @input="onYearUpdate">{{ years }}</span> year.
           </p>
@@ -211,7 +211,7 @@ export default {
     return {
       calculations: false,
       years: 5,
-      amountInvested: 0,
+      amountInvested: 100000,
       motorbikes: '',
       overallreturn: '',
       trailer: '',
@@ -229,18 +229,11 @@ export default {
     }
   },
   mounted() {
-    setTimeout(function () {
-      this.amountInvested = 100000;
-    },500);
+    this.amountInvested = 100000;
+    this.years = 5;
+    this.calculateImpact();
   },
-  watch: {
-    years() {
-      if (this.years <= 0) {
-        return this.years = 1;
-      }
-      return this.years;
-    }
-  },
+
   methods: {
     nFormatter(num, digits) {
       var si = [
