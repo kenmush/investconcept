@@ -118,9 +118,9 @@
                               transform="translate(-6 -8.59)" fill="#48586a"/>
                       </svg>
                       <svg v-else style="transform: rotate(180deg)" xmlns="http://www.w3.org/2000/svg"
-                            width="40"
-                            height="24.7"
-                            viewBox="0 0 40 24.7">
+                           width="40"
+                           height="24.7"
+                           viewBox="0 0 40 24.7">
                         <path id="Path_338" data-name="Path 338" d="M10.7,8.59,26,23.857,41.3,8.59l4.7,4.7-20,20-20-20Z"
                               transform="translate(-6 -8.59)" fill="#48586a"/>
                       </svg>
@@ -131,7 +131,7 @@
 
                 </div>
               </div>
-              <transition name="slide-fade">
+              <transition name="fade">
                 <div v-if="showmores" class="container" style="margin-top: 10px !important;">
                   <div class="d-flex justify-content-between">
                     <div>
