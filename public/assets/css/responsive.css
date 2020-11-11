@@ -1657,7 +1657,7 @@
     /* header */
     .header {
         position: initial;
-        background: #5370e6;
+        background: #898681;
     }
     .header .bottom .logo a {
         height: 30px;
@@ -1728,7 +1728,7 @@
         height: 100%;
         background: white;
         width: 100%;
-        background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
+        background: linear-gradient(-19deg, #acd4e7 10%, #acd4e7);
         z-index: -1;
         transition: .4s;
     }

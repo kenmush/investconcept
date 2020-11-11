@@ -270,17 +270,17 @@
         <div class="mobile-navigation-bar">
             <ul>
                 <li>
-                    <a href="#0">
+                    <a href="/login">
                         <img src="assets/img/svg/profile.svg" alt="">
                     </a>
                 </li>
                 <li>
-                    <a href="#0">
+                    <a href="#assets">
                         <img src="assets/img/svg/money-transfering.svg" alt="">
                     </a>
                 </li>
                 <li>
-                    <a href="#0">
+                    <a href="#simulateimpact">
                         <img src="assets/img/svg/calculator.svg" alt="">
                     </a>
                 </li>

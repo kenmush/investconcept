@@ -1,775 +1,484 @@
 <template>
   <div>
     <section class="pt-5 pb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <h3 class="mb-3 text-white">Investments </h3>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body ">
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="rounded float-left"
+                       src="/motorbikes.jpeg"
+                       alt="">
+                </div>
+                <div class="col-md-8" v-if="!showMotorbikeDetails">
+                  <p style="border-bottom: 3px solid #3e4494">Electric motorbikes for moto taxi</p>
+                  <p>Local Partner: Zembo Bikes</p>
+                  <p>Country: Uganda</p>
+                </div>
+                <div class="col-md-8" v-else>
+                  <p>Local Partner: Zembo Bikes</p>
+                  <p>Country: Uganda</p>
+                  <p>Zembo provides affordable electric motorcycles for motorcycle taxi drivers in Africa,
+                    the
+                    Company
+                    has already 100 motorbikes on site in Kampala, Uganda. The Company leases its motorbikes
+                    to taxi
+                    drivers in a lease-to-own contract over 24 months for 60000 UGX per week.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card" v-if="!showMotorbikeDetails">
+                    <div class="card-body">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Minimum Investment</p>
+                            <p>1 100$</p>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Annual Revenue created</p>
+                            <p>3 600$</p>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Money Multiplier</p>
+                            <p>3.6x</p>
+                          </div>
+                          <div class="col-12">
+                            <a href="/register" class="btn btn-custom btn-block btn-lg"
+                               @click="showMotorbike"
+                               @mouseenter="showMotorbike"
+                               @mouseleave="disableCards"
+                            >
+                              Invest
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div v-else>
+                    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
+                      <thead class="thead-default">
+                      <tr>
+                        <th>For the Entrepreneur</th>
+                        <th>$700 <br>Moto</th>
+                        <th>$120/Month <br>Avg. Income</th>
+                        <th>$45/Month <br>Lease Payments</th>
+                      </tr>
+                      <tr>
+                        <th>For You:</th>
+                        <th>$500 <br>Minimum Investment</th>
+                        <th>9% <br>APY</th>
+                        <th>18 Month <br>Term</th>
+                      </tr>
+                      </thead>
+
+                    </table>
+                    <div class="row">
+                      <a href="/register" class="btn btn-custom btn-block btn-lg"
+                         @mouseleave="disableCards">Invest</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-6 text-right">
-            <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-              <i class="fa fa-arrow-left"></i>
-            </a>
-            <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-              <i class="fa fa-arrow-right"></i>
-            </a>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body ">
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="rounded float-left img-thumbnail"
+                       src="/motorbike2.jpeg"
+                       alt="">
+                </div>
+                <div class="col-md-8" v-if="!showSmartMeter">
+                  <p style="border-bottom: 3px solid #3e4494">
+                    Petrol motorbikes for moto taxi
+                  </p>
+                  <p>Local partner: Asaak</p>
+                  <p>Country: Uganda</p>
+                </div>
+                <div class="col-md-8" v-else>
+                  <p>Company: Untapped</p>
+                  <p>Country: Kenya</p>
+                  <p>Quality water walking distance form home</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card" v-if="!showSmartMeter">
+                    <div class="card-body">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Minimum Investment</p>
+                            <p>1 100$</p>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Annual Revenue created</p>
+                            <p>3 000$</p>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Money Multiplier</p>
+                            <p>3.0x</p>
+                          </div>
+                          <div class="col-12">
+                            <a href="/register" class="btn btn-custom btn-block btn-lg"
+                               @mouseenter="showSmartMeterCard"
+                               @mouseleave="disableCards"
+                               @click="showSmartMeterCard">
+                              Invest
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div v-else>
+                    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
+                      <thead class="thead-default">
+                      <tr>
+                        <th>For the Entrepreneur</th>
+                        <th>$700 <br>Moto</th>
+                        <th>$120/Month <br>Avg. Income</th>
+                        <th>$45/Month <br>Lease Payments</th>
+                      </tr>
+                      <tr>
+                        <th>For You:</th>
+                        <th>$500 <br>Minimum Investment</th>
+                        <th>9% <br>APY</th>
+                        <th>18 Month <br>Term</th>
+                      </tr>
+                      </thead>
+
+                    </table>
+                    <div class="row">
+                      <a href="/register" class="btn btn-custom btn-block btn-lg"
+                         @mouseleave="disableCards">Invest</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-12">
-            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row">
-
-                    <div class="col-md-6 mb-3">
-                      <div class="card">
-                        <div class="card-body ">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img class="rounded float-left"
-                                   src="/motorbikes.jpeg"
-                                   alt="">
-                            </div>
-                            <div class="col-md-8" v-if="!showMotorbikeDetails">
-                              <p style="border-bottom: 3px solid #3e4494">Electric motorbikes for moto taxi</p>
-                              <p>Local Partner: Zembo Bikes</p>
-                              <p>Country: Uganda</p>
-                            </div>
-                            <div class="col-md-8" v-else>
-                              <p>Local Partner: Zembo Bikes</p>
-                              <p>Country: Uganda</p>
-                              <p>Zembo provides affordable electric motorcycles for motorcycle taxi drivers in Africa,
-                                the
-                                Company
-                                has already 100 motorbikes on site in Kampala, Uganda. The Company leases its motorbikes
-                                to taxi
-                                drivers in a lease-to-own contract over 24 months for 60000 UGX per week.</p>
-                            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body ">
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="rounded float-left img-thumbnail"
+                       src="./assets/opibus.jpeg"
+                       alt="">
+                </div>
+                <div class="col-md-8" v-if="!opiBus">
+                  <p style="border-bottom: 3px solid #3e4494">
+                    Electric motorbikes for deliveries
+                  </p>
+                  <p>Local partner: Opibus</p>
+                  <p>Country: Kenya</p>
+                </div>
+                <div class="col-md-8" v-else>
+                  <p>Company: Untapped</p>
+                  <p>Country: Kenya</p>
+                  <p></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card" v-if="!opiBus">
+                    <div class="card-body">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Minimum Investment</p>
+                            <p>1 500$</p>
                           </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="card" v-if="!showMotorbikeDetails">
-                                <div class="card-body">
-                                  <div class="col-12">
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <p>Minimum Investment</p>
-                                        <p>1 100$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Annual Revenue created</p>
-                                        <p>3 600$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Money Multiplier</p>
-                                        <p>3.6x</p>
-                                      </div>
-                                      <div class="col-12">
-                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                           @click="showMotorbike"
-                                                @mouseenter="showMotorbike"
-                                                @mouseleave="disableCards"
-                                        >
-                                          Invest
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div v-else>
-                                <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
-                                  <thead class="thead-default">
-                                  <tr>
-                                    <th>For the Entrepreneur</th>
-                                    <th>$700 <br>Moto</th>
-                                    <th>$120/Month <br>Avg. Income</th>
-                                    <th>$45/Month <br>Lease Payments</th>
-                                  </tr>
-                                  <tr>
-                                    <th>For You:</th>
-                                    <th>$500 <br>Minimum Investment</th>
-                                    <th>9% <br>APY</th>
-                                    <th>18 Month <br>Term</th>
-                                  </tr>
-                                  </thead>
-
-                                </table>
-                                <div class="row">
-                                  <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                     @mouseleave="disableCards">Invest</a>
-                                </div>
-                              </div>
-                            </div>
+                          <div class="col-md-4">
+                            <p>Annual Revenue created</p>
+                            <p>6 000$</p>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Money Multiplier</p>
+                            <p>4.0x</p>
+                          </div>
+                          <div class="col-12">
+                            <a href="/register" class="btn btn-custom btn-block btn-lg"
+                               @mouseenter="opiBusCard"
+                               @mouseleave="disableCards"
+                               @click="opiBusCard">
+                              Invest
+                            </a>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                      <div class="card">
-                        <div class="card-body ">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img class="rounded float-left img-thumbnail"
-                                   src="/motorbike2.jpeg"
-                                   alt="">
-                            </div>
-                            <div class="col-md-8" v-if="!showSmartMeter">
-                              <p style="border-bottom: 3px solid #3e4494">
-                                Petrol motorbikes for moto taxi
-                              </p>
-                              <p>Local partner: Asaak</p>
-                              <p>Country: Uganda</p>
-                            </div>
-                            <div class="col-md-8" v-else>
-                              <p>Company: Untapped</p>
-                              <p>Country: Kenya</p>
-                              <p>Quality water walking distance form home</p>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="card" v-if="!showSmartMeter">
-                                <div class="card-body">
-                                  <div class="col-12">
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <p>Minimum Investment</p>
-                                        <p>1 100$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Annual Revenue created</p>
-                                        <p>3 000$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Money Multiplier</p>
-                                        <p>3.0x</p>
-                                      </div>
-                                      <div class="col-12">
-                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                                @mouseenter="showSmartMeterCard"
-                                                @mouseleave="disableCards"
-                                                @click="showSmartMeterCard">
-                                          Invest
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div v-else>
-                                <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
-                                  <thead class="thead-default">
-                                  <tr>
-                                    <th>For the Entrepreneur</th>
-                                    <th>$700 <br>Moto</th>
-                                    <th>$120/Month <br>Avg. Income</th>
-                                    <th>$45/Month <br>Lease Payments</th>
-                                  </tr>
-                                  <tr>
-                                    <th>For You:</th>
-                                    <th>$500 <br>Minimum Investment</th>
-                                    <th>9% <br>APY</th>
-                                    <th>18 Month <br>Term</th>
-                                  </tr>
-                                  </thead>
+                  </div>
+                  <div v-else>
+                    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
+                      <thead class="thead-default">
+                      <tr>
+                        <th>For the Entrepreneur</th>
+                        <th>$700 <br>Moto</th>
+                        <th>$120/Month <br>Avg. Income</th>
+                        <th>$45/Month <br>Lease Payments</th>
+                      </tr>
+                      <tr>
+                        <th>For You:</th>
+                        <th>1 500$ <br>Minimum Investment</th>
+                        <th>6 000 $ <br>Annual Revenue</th>
+                        <th>4.0x <br>Money Multiplier</th>
+                      </tr>
+                      </thead>
 
-                                </table>
-                                <div class="row">
-                                  <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                     @mouseleave="disableCards">Invest</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    </table>
+                    <div class="row">
+                      <a href="/register" class="btn btn-custom btn-block btn-lg"
+                         @mouseleave="disableCards">Invest</a>
                     </div>
-
-
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col-md-6 mb-3">
-                      <div class="card">
-                        <div class="card-body ">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img class="rounded float-left img-thumbnail"
-                                   src="./assets/opibus.jpeg"
-                                   alt="">
-                            </div>
-                            <div class="col-md-8" v-if="!opiBus">
-                              <p style="border-bottom: 3px solid #3e4494">
-                                Electric motorbikes for deliveries
-                              </p>
-                              <p>Local partner: Opibus</p>
-                              <p>Country: Kenya</p>
-                            </div>
-                            <div class="col-md-8" v-else>
-                              <p>Company: Untapped</p>
-                              <p>Country: Kenya</p>
-                              <p></p>
-                            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body ">
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="rounded float-left img-thumbnail"
+                       src="./assets/ovive.jpeg"
+                       alt="">
+                </div>
+                <div class="col-md-8" v-if="!ovive">
+                  <p style="border-bottom: 3px solid #3e4494">
+                    Purified water kiosk
+                  </p>
+                  <p>Local partner: OVIVE</p>
+                  <p>Country: Kenya</p>
+                </div>
+                <div class="col-md-8" v-else>
+                  <p>Company: Untapped</p>
+                  <p>Country: Kenya</p>
+                  <p></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card" v-if="!ovive">
+                    <div class="card-body">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Minimum Investment</p>
+                            <p>9 000$</p>
                           </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="card" v-if="!opiBus">
-                                <div class="card-body">
-                                  <div class="col-12">
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <p>Minimum Investment</p>
-                                        <p>1 500$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Annual Revenue created</p>
-                                        <p>6 000$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Money Multiplier</p>
-                                        <p>4.0x</p>
-                                      </div>
-                                      <div class="col-12">
-                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                                @mouseenter="opiBusCard"
-                                                @mouseleave="disableCards"
-                                                @click="opiBusCard">
-                                          Invest
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div v-else>
-                                <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
-                                  <thead class="thead-default">
-                                  <tr>
-                                    <th>For the Entrepreneur</th>
-                                    <th>$700 <br>Moto</th>
-                                    <th>$120/Month <br>Avg. Income</th>
-                                    <th>$45/Month <br>Lease Payments</th>
-                                  </tr>
-                                  <tr>
-                                    <th>For You:</th>
-                                    <th>1 500$ <br>Minimum Investment</th>
-                                    <th>6 000 $ <br>Annual Revenue</th>
-                                    <th>4.0x <br>Money Multiplier</th>
-                                  </tr>
-                                  </thead>
-
-                                </table>
-                                <div class="row">
-                                  <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                     @mouseleave="disableCards">Invest</a>
-                                </div>
-                              </div>
-                            </div>
+                          <div class="col-md-4">
+                            <p>Annual Revenue created</p>
+                            <p>36 000$</p>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Money Multiplier</p>
+                            <p>4.0x</p>
+                          </div>
+                          <div class="col-12">
+                            <a href="/register" class="btn btn-custom btn-block btn-lg"
+                               @mouseenter="oviveCard"
+                               @mouseleave="disableCards"
+                               @click="oviveCard">
+                              Invest
+                            </a>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                      <div class="card">
-                        <div class="card-body ">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img class="rounded float-left img-thumbnail"
-                                   src="./assets/ovive.jpeg"
-                                   alt="">
-                            </div>
-                            <div class="col-md-8" v-if="!ovive">
-                              <p style="border-bottom: 3px solid #3e4494">
-                                Purified water kiosk
-                              </p>
-                              <p>Local partner: OVIVE</p>
-                              <p>Country: Kenya</p>
-                            </div>
-                            <div class="col-md-8" v-else>
-                              <p>Company: Untapped</p>
-                              <p>Country: Kenya</p>
-                              <p></p>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="card" v-if="!ovive">
-                                <div class="card-body">
-                                  <div class="col-12">
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <p>Minimum Investment</p>
-                                        <p>9 000$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Annual Revenue created</p>
-                                        <p>36 000$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Money Multiplier</p>
-                                        <p>4.0x</p>
-                                      </div>
-                                      <div class="col-12">
-                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                                @mouseenter="oviveCard"
-                                                @mouseleave="disableCards"
-                                                @click="oviveCard">
-                                          Invest
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div v-else>
-                                <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
-                                  <thead class="thead-default">
-                                  <!--                          <tr>-->
-                                  <!--                            <th>For the Entrepreneur</th>-->
-                                  <!--                            <th> <br>Moto</th>-->
-                                  <!--                            <th>$120/Month <br>Avg. Income</th>-->
-                                  <!--                            <th>$45/Month <br>Lease Payments</th>-->
-                                  <!--                          </tr>-->
-                                  <tr>
-                                    <th>For You:</th>
-                                    <th>9 000$ <br>Minimum Investment</th>
-                                    <th>36 000 $ <br>Annual Revenue</th>
-                                    <th>4.0x <br>Money Multiplier</th>
-                                  </tr>
-                                  </thead>
+                  </div>
+                  <div v-else>
+                    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
+                      <thead class="thead-default">
+                      <!--                          <tr>-->
+                      <!--                            <th>For the Entrepreneur</th>-->
+                      <!--                            <th> <br>Moto</th>-->
+                      <!--                            <th>$120/Month <br>Avg. Income</th>-->
+                      <!--                            <th>$45/Month <br>Lease Payments</th>-->
+                      <!--                          </tr>-->
+                      <tr>
+                        <th>For You:</th>
+                        <th>9 000$ <br>Minimum Investment</th>
+                        <th>36 000 $ <br>Annual Revenue</th>
+                        <th>4.0x <br>Money Multiplier</th>
+                      </tr>
+                      </thead>
 
-                                </table>
-                                <div class="row">
-                                  <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                     @mouseleave="disableCards">Invest</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    </table>
+                    <div class="row">
+                      <a href="/register" class="btn btn-custom btn-block btn-lg"
+                         @mouseleave="disableCards">Invest</a>
                     </div>
-
-
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col-md-6 mb-3">
-                      <div class="card">
-                        <div class="card-body ">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img class="rounded float-left img-thumbnail"
-                                   src="./assets/majimilele.jpeg"
-                                   alt="">
-                            </div>
-                            <div class="col-md-8" v-if="!majimilele">
-                              <p style="border-bottom: 3px solid #3e4494">
-                                Automated water kiosk
-                              </p>
-                              <p>Local partner: Maji Milele </p>
-                              <p>Country: Kenya</p>
-                            </div>
-                            <div class="col-md-8" v-else>
-                              <p>Company: Untapped</p>
-                              <p>Country: Kenya</p>
-                              <p></p>
-                            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body ">
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="rounded float-left img-thumbnail"
+                       src="./assets/majimilele.jpeg"
+                       alt="">
+                </div>
+                <div class="col-md-8" v-if="!majimilele">
+                  <p style="border-bottom: 3px solid #3e4494">
+                    Automated water kiosk
+                  </p>
+                  <p>Local partner: Maji Milele </p>
+                  <p>Country: Kenya</p>
+                </div>
+                <div class="col-md-8" v-else>
+                  <p>Company: Untapped</p>
+                  <p>Country: Kenya</p>
+                  <p></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card" v-if="!majimilele">
+                    <div class="card-body">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Minimum Investment</p>
+                            <p>3 000$</p>
                           </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="card" v-if="!majimilele">
-                                <div class="card-body">
-                                  <div class="col-12">
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <p>Minimum Investment</p>
-                                        <p>3 000$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Annual Revenue created</p>
-                                        <p>7 200$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Money Multiplier</p>
-                                        <p>2.4x</p>
-                                      </div>
-                                      <div class="col-12">
-                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                                @mouseenter="majimileleCard"
-                                                @mouseleave="disableCards"
-                                                @click="majimileleCard">
-                                          Invest
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div v-else>
-                                <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
-                                  <thead class="thead-default">
-                                  <!--                          <tr>-->
-                                  <!--                            <th>For the Entrepreneur</th>-->
-                                  <!--                            <th> <br>Moto</th>-->
-                                  <!--                            <th>$120/Month <br>Avg. Income</th>-->
-                                  <!--                            <th>$45/Month <br>Lease Payments</th>-->
-                                  <!--                          </tr>-->
-                                  <tr>
-                                    <th>For You:</th>
-                                    <th>3 000$ <br>Minimum Investment</th>
-                                    <th>7 200 $ <br>Annual Revenue</th>
-                                    <th>2.4x <br>Money Multiplier</th>
-                                  </tr>
-                                  </thead>
-
-                                </table>
-                                <div class="row">
-                                  <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                     @mouseleave="disableCards">Invest</a>
-                                </div>
-                              </div>
-                            </div>
+                          <div class="col-md-4">
+                            <p>Annual Revenue created</p>
+                            <p>7 200$</p>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Money Multiplier</p>
+                            <p>2.4x</p>
+                          </div>
+                          <div class="col-12">
+                            <a href="/register" class="btn btn-custom btn-block btn-lg"
+                               @mouseenter="majimileleCard"
+                               @mouseleave="disableCards"
+                               @click="majimileleCard">
+                              Invest
+                            </a>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                      <div class="card">
-                        <div class="card-body ">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img class="rounded float-left img-thumbnail"
-                                   src="./assets/mvuapap.jpeg"
-                                   alt="">
-                            </div>
-                            <div class="col-md-8" v-if="!mvuapap">
-                              <p style="border-bottom: 3px solid #3e4494">
-                                Mobile irrigation trailer
-                              </p>
-                              <p>Local partner: Mvua pap </p>
-                              <p>Country: Kenya</p>
-                            </div>
-                            <div class="col-md-8" v-else>
-                              <p>Company: Untapped</p>
-                              <p>Country: Kenya</p>
-                              <p></p>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="card" v-if="!mvuapap">
-                                <div class="card-body">
-                                  <div class="col-12">
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <p>Minimum Investment</p>
-                                        <p>800$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Annual Revenue created</p>
-                                        <p>6 000$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Money Multiplier</p>
-                                        <p>7.5x</p>
-                                      </div>
-                                      <div class="col-12">
-                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                                @mouseenter="mvuapapCard"
-                                                @mouseleave="disableCards"
-                                                @click="mvuapapCard">
-                                          Invest
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div v-else>
-                                <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
-                                  <thead class="thead-default">
-                                  <!--                          <tr>-->
-                                  <!--                            <th>For the Entrepreneur</th>-->
-                                  <!--                            <th> <br>Moto</th>-->
-                                  <!--                            <th>$120/Month <br>Avg. Income</th>-->
-                                  <!--                            <th>$45/Month <br>Lease Payments</th>-->
-                                  <!--                          </tr>-->
-                                  <tr>
-                                    <th>For You:</th>
-                                    <th>800$ <br>Minimum Investment</th>
-                                    <th>6 000 $ <br>Annual Revenue</th>
-                                    <th>7.5x <br>Money Multiplier</th>
-                                  </tr>
-                                  </thead>
+                  </div>
+                  <div v-else>
+                    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
+                      <thead class="thead-default">
+                      <!--                          <tr>-->
+                      <!--                            <th>For the Entrepreneur</th>-->
+                      <!--                            <th> <br>Moto</th>-->
+                      <!--                            <th>$120/Month <br>Avg. Income</th>-->
+                      <!--                            <th>$45/Month <br>Lease Payments</th>-->
+                      <!--                          </tr>-->
+                      <tr>
+                        <th>For You:</th>
+                        <th>3 000$ <br>Minimum Investment</th>
+                        <th>7 200 $ <br>Annual Revenue</th>
+                        <th>2.4x <br>Money Multiplier</th>
+                      </tr>
+                      </thead>
 
-                                </table>
-                                <div class="row">
-                                  <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                     @mouseleave="disableCards">Invest</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    </table>
+                    <div class="row">
+                      <a href="/register" class="btn btn-custom btn-block btn-lg"
+                         @mouseleave="disableCards">Invest</a>
                     </div>
-
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col-md-6 mb-3">
-                      <div class="card">
-                        <div class="card-body ">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img class="rounded float-left"
-                                   src="/motorbikes.jpeg"
-                                   alt="">
-                            </div>
-                            <div class="col-md-8" v-if="!showMotorbikeDetails">
-                              <p style="border-bottom: 3px solid #3e4494">Electric motorbikes for moto taxi</p>
-                              <p>Local Partner: Zembo Bikes</p>
-                              <p>Country: Uganda</p>
-                            </div>
-                            <div class="col-md-8" v-else>
-                              <p>Local Partner: Zembo Bikes</p>
-                              <p>Country: Uganda</p>
-                              <p>Zembo provides affordable electric motorcycles for motorcycle taxi drivers in Africa,
-                                the
-                                Company
-                                has already 100 motorbikes on site in Kampala, Uganda. The Company leases its motorbikes
-                                to taxi
-                                drivers in a lease-to-own contract over 24 months for 60000 UGX per week.</p>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="card" v-if="!showMotorbikeDetails">
-                                <div class="card-body">
-                                  <div class="col-12">
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <p>Minimum Investment</p>
-                                        <p>1 100$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Annual Revenue created</p>
-                                        <p>3 600$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Money Multiplier</p>
-                                        <p>3.6x</p>
-                                      </div>
-                                      <div class="col-12">
-                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                           @click="showMotorbike"
-                                                @mouseenter="showMotorbike"
-                                                @mouseleave="disableCards"
-                                        >
-                                          Invest
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div v-else>
-                                <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
-                                  <thead class="thead-default">
-                                  <tr>
-                                    <th>For the Entrepreneur</th>
-                                    <th>$700 <br>Moto</th>
-                                    <th>$120/Month <br>Avg. Income</th>
-                                    <th>$45/Month <br>Lease Payments</th>
-                                  </tr>
-                                  <tr>
-                                    <th>For You:</th>
-                                    <th>$500 <br>Minimum Investment</th>
-                                    <th>9% <br>APY</th>
-                                    <th>18 Month <br>Term</th>
-                                  </tr>
-                                  </thead>
-
-                                </table>
-                                <div class="row">
-                                  <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                     @mouseleave="disableCards">Invest</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                      <div class="card">
-                        <div class="card-body ">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img class="rounded float-left img-thumbnail"
-                                   src="/motorbike2.jpeg"
-                                   alt="">
-                            </div>
-                            <div class="col-md-8" v-if="!showSmartMeter">
-                              <p style="border-bottom: 3px solid #3e4494">
-                                Petrol motorbikes for moto taxi
-                              </p>
-                              <p>Local partner: Asaak</p>
-                              <p>Country: Uganda</p>
-                            </div>
-                            <div class="col-md-8" v-else>
-                              <p>Company: Untapped</p>
-                              <p>Country: Kenya</p>
-                              <p>Quality water walking distance form home</p>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="card" v-if="!showSmartMeter">
-                                <div class="card-body">
-                                  <div class="col-12">
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <p>Minimum Investment</p>
-                                        <p>1 100$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Annual Revenue created</p>
-                                        <p>3 000$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Money Multiplier</p>
-                                        <p>3.0x</p>
-                                      </div>
-                                      <div class="col-12">
-                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                                @mouseenter="showSmartMeterCard"
-                                                @mouseleave="disableCards"
-                                                @click="showSmartMeterCard">
-                                          Invest
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div v-else>
-                                <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
-                                  <thead class="thead-default">
-                                  <tr>
-                                    <th>For the Entrepreneur</th>
-                                    <th>$700 <br>Moto</th>
-                                    <th>$120/Month <br>Avg. Income</th>
-                                    <th>$45/Month <br>Lease Payments</th>
-                                  </tr>
-                                  <tr>
-                                    <th>For You:</th>
-                                    <th>$500 <br>Minimum Investment</th>
-                                    <th>9% <br>APY</th>
-                                    <th>18 Month <br>Term</th>
-                                  </tr>
-                                  </thead>
-
-                                </table>
-                                <div class="row">
-                                  <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                     @mouseleave="disableCards">Invest</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body ">
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="rounded float-left img-thumbnail"
+                       src="./assets/mvuapap.jpeg"
+                       alt="">
                 </div>
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col-md-6 mb-3">
-                      <div class="card">
-                        <div class="card-body ">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img class="rounded float-left img-thumbnail"
-                                   src="./assets/opibus.jpeg"
-                                   alt="">
-                            </div>
-                            <div class="col-md-8" v-if="!opiBus">
-                              <p style="border-bottom: 3px solid #3e4494">
-                                Electric motorbikes for deliveries
-                              </p>
-                              <p>Local partner: Opibus</p>
-                              <p>Country: Kenya</p>
-                            </div>
-                            <div class="col-md-8" v-else>
-                              <p>Company: Untapped</p>
-                              <p>Country: Kenya</p>
-                              <p></p>
-                            </div>
+                <div class="col-md-8" v-if="!mvuapap">
+                  <p style="border-bottom: 3px solid #3e4494">
+                    Mobile irrigation trailer
+                  </p>
+                  <p>Local partner: Mvua pap </p>
+                  <p>Country: Kenya</p>
+                </div>
+                <div class="col-md-8" v-else>
+                  <p>Company: Untapped</p>
+                  <p>Country: Kenya</p>
+                  <p></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card" v-if="!mvuapap">
+                    <div class="card-body">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <p>Minimum Investment</p>
+                            <p>800$</p>
                           </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="card" v-if="!opiBus">
-                                <div class="card-body">
-                                  <div class="col-12">
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <p>Minimum Investment</p>
-                                        <p>1 500$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Annual Revenue created</p>
-                                        <p>6 000$</p>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <p>Money Multiplier</p>
-                                        <p>4.0x</p>
-                                      </div>
-                                      <div class="col-12">
-                                        <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                                @mouseenter="opiBusCard"
-                                                @mouseleave="disableCards"
-                                                @click="opiBusCard">
-                                          Invest
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div v-else>
-                                <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
-                                  <thead class="thead-default">
-                                  <tr>
-                                    <th>For the Entrepreneur</th>
-                                    <th>$700 <br>Moto</th>
-                                    <th>$120/Month <br>Avg. Income</th>
-                                    <th>$45/Month <br>Lease Payments</th>
-                                  </tr>
-                                  <tr>
-                                    <th>For You:</th>
-                                    <th>1 500$ <br>Minimum Investment</th>
-                                    <th>6 000 $ <br>Annual Revenue</th>
-                                    <th>4.0x <br>Money Multiplier</th>
-                                  </tr>
-                                  </thead>
-
-                                </table>
-                                <div class="row">
-                                  <a href="/register" class="btn btn-custom btn-block btn-lg"
-                                     @mouseleave="disableCards">Invest</a>
-                                </div>
-                              </div>
-                            </div>
+                          <div class="col-md-4">
+                            <p>Annual Revenue created</p>
+                            <p>6 000$</p>
+                          </div>
+                          <div class="col-md-4">
+                            <p>Money Multiplier</p>
+                            <p>7.5x</p>
+                          </div>
+                          <div class="col-12">
+                            <a href="/register" class="btn btn-custom btn-block btn-lg"
+                               @mouseenter="mvuapapCard"
+                               @mouseleave="disableCards"
+                               @click="mvuapapCard">
+                              Invest
+                            </a>
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                  <div v-else>
+                    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
+                      <thead class="thead-default">
+                      <!--                          <tr>-->
+                      <!--                            <th>For the Entrepreneur</th>-->
+                      <!--                            <th> <br>Moto</th>-->
+                      <!--                            <th>$120/Month <br>Avg. Income</th>-->
+                      <!--                            <th>$45/Month <br>Lease Payments</th>-->
+                      <!--                          </tr>-->
+                      <tr>
+                        <th>For You:</th>
+                        <th>800$ <br>Minimum Investment</th>
+                        <th>6 000 $ <br>Annual Revenue</th>
+                        <th>7.5x <br>Money Multiplier</th>
+                      </tr>
+                      </thead>
+
+                    </table>
+                    <div class="row">
+                      <a href="/register" class="btn btn-custom btn-block btn-lg"
+                         @mouseleave="disableCards">Invest</a>
                     </div>
                   </div>
                 </div>
@@ -845,5 +554,9 @@ export default {
 
 .btn-custom:hover {
   background-color: darken(#ED7D31, 30%);
+}
+
+.img-thumbnail {
+  height: 100px;
 }
 </style>

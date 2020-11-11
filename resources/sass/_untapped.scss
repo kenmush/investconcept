@@ -1212,7 +1212,7 @@ ul {
 .cta {
   background: url('../../bg_gradient.png') center center no-repeat;
   background-size: cover;
-  padding: 120px 0;
+  padding: 0 0;
   position: relative;
   z-index: 2;
 
@@ -2474,8 +2474,8 @@ ul {
 }
 
 .mobile-navigation-bar {
-  background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
-  background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
+  background: $untapped-blue;
+  background: $untapped-blue;
   position: fixed;
   z-index: 55;
   width: 100%;
@@ -2561,6 +2561,25 @@ ul {
   z-index: 50;
   border: 1px solid #f5f5f5;
 }
+
+.asset-title-new {
+  color: $untapped-blue;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.070em;
+  font-size: 50px;
+  margin-bottom: 0 !important;
+  border-bottom: solid $untapped-accent 3px;
+
+  &.line {
+    border-bottom: solid $untapped-accent 3px;
+    width: 85%;
+    height: 3px;
+    clear: both;
+    margin: 0 auto;
+  }
+}
+
 .deal-stats-line {
   border-top: 1px solid $untapped-accent;
   width: 75%;
@@ -2568,6 +2587,7 @@ ul {
   clear: both;
   margin: 0 auto;
 }
+
 .deal-stats-box {
   border: 1px solid #f3f3f3;
   background: #fff;
@@ -2588,6 +2608,6 @@ ul {
   box-shadow: 0px 2px 8px 0px #00000009;
   color: #337ab7;
   clear: both;
-  font-family: 'Avenir',sans-serif;
+  font-family: 'Avenir', sans-serif;
   font-weight: 500;
 }

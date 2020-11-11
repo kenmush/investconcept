@@ -6,7 +6,7 @@
         <div class="container mb-5">
             <div class="cta-bg">
                 <div class="row justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-center">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-xl-flex d-lg-flex d-block
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 d-xl-flex d-lg-flex d-block
                         align-items-center">
                         <div class="cta-text">
                             <h2>{{$landingPageData['tag_line'] ?? ''}}</h2>
@@ -17,13 +17,13 @@
                     </div>
                     <div class="col-xl-6 shadow col-lg-6 d-xl-flex d-lg-flex justify-content-end d-block
                         align-items-center">
-{{--                        <video style="border-radius: 10px" poster="{{asset('trialimae.jpg')}}" autoplay width="100%"--}}
-{{--                               height="100%"--}}
-{{--                               controls>--}}
-{{--                            <source src="" type="video/mp4">--}}
-{{--                            <source src="" type="video/ogg">--}}
-{{--                            Your browser does not support the video tag.--}}
-{{--                        </video>--}}
+                        {{--                        <video style="border-radius: 10px" poster="{{asset('trialimae.jpg')}}" autoplay width="100%"--}}
+                        {{--                               height="100%"--}}
+                        {{--                               controls>--}}
+                        {{--                            <source src="" type="video/mp4">--}}
+                        {{--                            <source src="" type="video/ogg">--}}
+                        {{--                            Your browser does not support the video tag.--}}
+                        {{--                        </video>--}}
 
                     </div>
                 </div>
@@ -86,20 +86,25 @@
         <div class="container">
             <div class="cta-bg">
                 <div class="row text-center justify-content-center mb-4">
-                    <a href="/register" class="btn-hyipox-medium cta-btn">Get Started</a>
+                    <a style="margin-top: -100px" href="/register" class="btn-hyipox-medium cta-btn">Get Started</a>
                 </div>
-                <div class="row justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-center">
 
-                    <div class="col-12 d-xl-flex d-lg-flex justify-content-end d-block align-items-center">
-                        <showassets></showassets>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center">
+                <h2 class="asset-title-new">Assets</h2>
+            </div>
+            <div class="row">
+                <div class="col-12 d-xl-flex d-lg-flex justify-content-end d-block align-items-center">
+                    <showassets></showassets>
 
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div  id="simulateimpact">
+    <div id="simulateimpact">
         <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-8">
                 <div class="section-title">
@@ -124,11 +129,11 @@
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-8">
                     <div class="section-title">
-{{--                                <span class="sub-title">--}}
-{{--                                    Untapped Capital News--}}
-{{--                                </span>--}}
+                        {{--                                <span class="sub-title">--}}
+                        {{--                                    Untapped Capital News--}}
+                        {{--                                </span>--}}
                         <h2>
-                    <span class="special">Untapped Capital News</span>
+                            <span class="special">Untapped Capital News</span>
                         </h2>
                     </div>
                 </div>
@@ -178,7 +183,8 @@
                 <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                     <div class="single-news">
                         <div class="part-img">
-                            <img src="https://miro.medium.com/max/499/1*ObqRCcBi5oN40lh6fGZ6YQ.png" alt="" style="object-fit: cover"
+                            <img src="https://miro.medium.com/max/499/1*ObqRCcBi5oN40lh6fGZ6YQ.png" alt=""
+                                 style="object-fit: cover"
                                  height="200px">
                         </div>
                         <div class="part-text">
