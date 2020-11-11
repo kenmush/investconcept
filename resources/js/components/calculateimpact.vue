@@ -3,10 +3,14 @@
     <div class="row">
       <div class="col-12">
         <div class="text-center">
-          <p class="invest">If I Invest <span class="orangeinput needstext" contenteditable="true"
+          <p class="invest">If I Invest <span class="orangeinput needstext"
+                                              onkeypress="return (this.innerText.length <= 6)"
+                                              contenteditable="true"
                                               @input="onInput">100000</span>
             $ on
-            <span class="orangeinput needstext" contenteditable="true" @input="onYearUpdate">{{ years }}</span> year.
+            <span maxlength="2" class="orangeinput needstext" contenteditable="true"
+                  onkeypress="return (this.innerText.length <= 1)"
+                  @input="onYearUpdate">5</span> year.
           </p>
           <svg v-if="loading" id="star" xmlns="http://www.w3.org/2000/svg" width="68.918" height="68.918"
                viewBox="0 0 68.918 68.918">
@@ -229,6 +233,12 @@ export default {
     }
   },
   mounted() {
+    $("span[contenteditable]").keypress(function (evt) {
+      var keycode = evt.charCode || evt.keyCode;
+      if (keycode  == 13) { //Enter key's keycode
+        return false;
+      }
+    });
     this.amountInvested = 100000;
     this.years = 5;
     this.calculateImpact();
@@ -263,6 +273,7 @@ export default {
     },
     onYearUpdate(e) {
       this.years = e.target.innerText;
+
       this.calculateImpact();
     },
     calculateImpact() {
