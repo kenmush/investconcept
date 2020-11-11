@@ -233,9 +233,16 @@ export default {
     }
   },
   mounted() {
+    $("#myeditablediv").keypress(function (e) {
+
+    });
     $("span[contenteditable]").keypress(function (evt) {
       var keycode = evt.charCode || evt.keyCode;
-      if (keycode  == 13) { //Enter key's keycode
+      var x = evt.charCode || evt.keyCode;
+      if (isNaN(String.fromCharCode(evt.which)) && x!=46 || x===32 || x===13 || (x===46 && evt.currentTarget.innerText.includes('.'))) evt.preventDefault();
+
+      if (keycode == 13) { //Enter key's keycode
+        this.calculateImpact();
         return false;
       }
     });
