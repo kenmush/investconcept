@@ -353,7 +353,7 @@ export default {
                 3600)
         let addition = (_self.motorbikes + _self.wateratm + _self.trailer);
         _self.entreprenuars = Math.round(addition);
-      }, 250);
+      }, 1500);
     }
   }
 }
