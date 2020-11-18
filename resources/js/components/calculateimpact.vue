@@ -297,7 +297,7 @@ export default {
       this.calculateImpact();
     },
     onYearUpdate(e) {
-      this.years = e.target.innerText;
+      this.years = Math.round(e.target.innerText);
 
       this.calculateImpact();
     },
@@ -307,8 +307,8 @@ export default {
       this.calculations = false;
       setTimeout(function () {
         _self.timeToRepay = 1.5;
-        _self.batch = 4;
-        let annualReturnForInvestors = 8;
+        _self.batch = Math.round(_self.years / _self.timeToRepay);
+        let annualReturnForInvestors = 5;
 
         let motorbikePrice = 1000;
         let waterATMPrice = 10000;
@@ -345,9 +345,12 @@ export default {
         /* Overall Return*/
         _self.loading = false;
         _self.calculations = true;
-        _self.motorbikes = Math.round(((_self.amountInvested / 3) / motorbikePrice) * _self.batch);
-        _self.wateratm = Math.round(((_self.amountInvested / 3) / waterATMPrice) * _self.batch);
+
+        /* Total Numbers*/
+        _self.motorbikes = Math.round((((_self.amountInvested / 3) / motorbikePrice) * _self.batch));
+        _self.wateratm = Math.round((((_self.amountInvested / 3) / waterATMPrice) * _self.batch));
         _self.trailer = Math.round(((_self.amountInvested / 3) / trailerPrice) * _self.batch);
+        console.log(`motorbikes:${_self.motorbikes}. wateratm:${_self.wateratm}.trailer:${_self.trailer}`)
         let socialImpact = (((_self.amountInvested / 3) / 500) * 1800) + (((_self.amountInvested / 3) / 1000) * 12000) +
             (((_self.amountInvested / 3) / 1000) *
                 3600)
