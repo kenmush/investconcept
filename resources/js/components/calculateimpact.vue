@@ -1,3 +1,4 @@
+<script src="../../../../../../Users/User/Downloads/login signup/login signup/Login.js"></script>
 <template>
   <div class="">
     <div class="row">
@@ -307,8 +308,8 @@ export default {
       this.calculations = false;
       setTimeout(function () {
         _self.timeToRepay = 1.5;
-        _self.batch = Math.round(_self.years / _self.timeToRepay);
-        let annualReturnForInvestors = 5;
+        _self.batch = 4;
+        let annualReturnForInvestors = 8;
 
         let motorbikePrice = 1000;
         let waterATMPrice = 10000;
