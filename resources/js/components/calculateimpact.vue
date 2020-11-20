@@ -308,7 +308,7 @@ export default {
       this.calculations = false;
       setTimeout(function () {
         _self.timeToRepay = 1.5;
-        _self.batch = 4;
+        _self.batch = Math.round(_self.years / _self.timeToRepay);
         let annualReturnForInvestors = 8;
 
         let motorbikePrice = 1000;
