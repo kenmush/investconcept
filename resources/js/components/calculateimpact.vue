@@ -38,8 +38,8 @@
         <div v-if="calculations" style="margin-top: 31.5px !important;">
           <div class="bg-white shadow-lg container mt-5" style="border-radius: 20px;">
             <div class="row" style="padding-top: 26px;padding-bottom: 27px;padding-left: 40px">
-              <div class="col-md-2 text-center">
-                <p class="gdtext align-self-center flex">
+              <div class="col-md-2 text-center align-self-center flex justify-content-center">
+                <p class="gdtext ">
                   I create:
                 </p>
               </div>
@@ -73,7 +73,7 @@
           </div>
           <div class="bg-white shadow-lg container mt-5" style="border-radius: 20px;margin-top: 20px">
             <div class="row" style="padding-top: 26px;padding-bottom: 27px;padding-left: 40px">
-              <div class="col-md-2 text-center align-middle">
+              <div class="col-md-2 text-center align-self-center flex justify-content-center">
                 <p class="gdtext align-middle">
                   I generate:
                 </p>
