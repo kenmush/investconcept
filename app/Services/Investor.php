@@ -209,6 +209,11 @@ class Investor
         return $this->request('GET', 'portal/investor/portfolio/'.$user.'/');
     }
 
+    public function getassetCoordinates()
+    {
+        return $this->request('GET','portal/asset/creation/');
+    }
+
     public function getAssetCategories()
     {
         return $this->request('GET', 'portal/asset/category/creation/');

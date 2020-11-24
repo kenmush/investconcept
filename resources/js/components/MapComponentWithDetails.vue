@@ -60,8 +60,8 @@
               <p style="font: Bold 20px/24px Roboto;color: #565C59;">{{revenue}}%</p>
             </div>
             <div style="border-top: 57px">
-              <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Innovator</h3>
-              <p style="font: Bold 20px/24px Roboto;color: #565C59;"></p>
+              <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Serial Number</h3>
+              <p style="font: Bold 20px/24px Roboto;color: #565C59;">{{ serial}}</p>
               <!--            <img class=" rounded-circle" src=""-->
               <!--                 height="75px" width="75px">-->
             </div>
@@ -85,6 +85,7 @@ export default {
       loading: false,
       description: '',
       revenue: '',
+      serial: '',
       category: ''
     }
   },
@@ -102,7 +103,7 @@ export default {
       let url = process.env.MIX_APP_URL;
       let points = [];
       let Self = this;
-      axios.get(`/api/getAllAssets/6/20`).then(resp => {
+      axios.get(`/api/getCoordinates`).then(resp => {
         this.assets = resp.data;
         let ds = Object.keys(resp.data).map(function (datareturned, index) {
           console.log( `hapa`);
@@ -112,13 +113,14 @@ export default {
             'geometry': {
               'type': 'Point',
               'coordinates': [
-                Self.assets[datareturned].longitude,
-                Self.assets[datareturned].latitude
+                Self.assets[datareturned].latitude ,
+                Self.assets[datareturned].longitude
               ]
             },
             'properties': {
               'title': Self.assets[datareturned].brand,
               'revenue': Self.assets[datareturned].revenue_returned,
+              'serial': Self.assets[datareturned].serial_number,
             }
           })
         });
@@ -189,6 +191,7 @@ export default {
                 var coordinates = e.features[0].geometry.coordinates.slice();
                 var description = e.features[0].properties.title;
                 var revenue = e.features[0].properties.revenue;
+                var serial = e.features[0].properties.serial;
 
                 while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                   coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
@@ -197,6 +200,7 @@ export default {
                 Self.description = description;
                 Self.category = category;
                 Self.revenue = revenue;
+                Self.serial = serial;
               });
 
 
@@ -224,7 +228,8 @@ export default {
       container: 'newmap',
       style: 'mapbox://styles/mapbox/light-v10',
       center: [-2.522805, 27.039787],
-      zoom: 2
+      zoom: 2,
+      minZoom: 2,
     });
     var biggerSmaller;
 

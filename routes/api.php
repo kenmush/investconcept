@@ -12,3 +12,8 @@ Route::get('userAssets/{userId}', function ($userId) {
     $response = (new Investor())->getUserAssets($userId);
     return collect($response);
 });
+
+Route::get('getCoordinates', function () {
+    $coordinates = (new Investor())->getassetCoordinates();
+    return $coordinates;
+});
