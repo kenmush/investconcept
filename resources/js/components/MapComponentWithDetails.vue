@@ -86,7 +86,8 @@ export default {
       description: '',
       revenue: '',
       serial: '',
-      category: ''
+      category: '',
+      selectedcategory: ''
     }
   },
   props: {
@@ -103,6 +104,10 @@ export default {
       let url = process.env.MIX_APP_URL;
       let points = [];
       let Self = this;
+      let categoryAsset = _.find(this.categories, function (o) {
+        return o.id === Self.categoryId;
+      });
+
       axios.get(`/api/getCoordinates`).then(resp => {
         this.assets = resp.data;
         let ds = Object.keys(resp.data).map(function (datareturned, index) {
@@ -113,8 +118,8 @@ export default {
             'geometry': {
               'type': 'Point',
               'coordinates': [
-                Self.assets[datareturned].latitude ,
-                Self.assets[datareturned].longitude
+                Self.assets[datareturned].longitude ,
+                Self.assets[datareturned].latitude
               ]
             },
             'properties': {
@@ -125,19 +130,8 @@ export default {
           })
         });
 
-        let image = `${url}/untapped/twowheeler.png`;
-        if (this.categoryId === 1) {
-          image = `${url}/untapped/twowheeler.png`
-        }
-        if (this.categoryId === 3) {
-          image = `${url}/untapped/rawmeter.png`
-        }
-        if (this.categoryId === 4) {
-          image = `${url}/untapped/irrigationmapicon.png`
-        }
-        if (this.categoryId === 2) {
-          image = `${url}/untapped/smartmeter.png`
-        }
+        let image = `${url}${categoryAsset.icon}`;
+
         console.log(image)
         if (map.getLayer('points')) map.removeLayer('points');
         if (map.getSource('points')) map.removeSource('points');
@@ -175,19 +169,7 @@ export default {
                 }
               });
               map.on('click', 'points', function (e) {
-                let category = '';
-                if (Self.categoryId === 1) {
-                  category = "MotorBike"
-                }
-                if (Self.categoryId === 3) {
-                  category = "Raw Water ATM"
-                }
-                if (Self.categoryId === 4) {
-                  category = "Mobile Irrigation"
-                }
-                if (Self.categoryId === 2) {
-                  category = "Smart Meter"
-                }
+                let category = categoryAsset.categoryName;
                 var coordinates = e.features[0].geometry.coordinates.slice();
                 var description = e.features[0].properties.title;
                 var revenue = e.features[0].properties.revenue;
