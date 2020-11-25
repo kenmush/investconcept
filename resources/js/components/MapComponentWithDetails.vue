@@ -118,8 +118,8 @@ export default {
             'geometry': {
               'type': 'Point',
               'coordinates': [
-                Self.assets[datareturned].longitude ,
-                Self.assets[datareturned].latitude
+                Self.assets[datareturned].latitude ,
+                Self.assets[datareturned].longitude
               ]
             },
             'properties': {
