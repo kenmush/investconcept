@@ -9,6 +9,7 @@
                                               @input="onInput">100000</span>
             $ on
             <span maxlength="2" class="orangeinput needstext" contenteditable="true"
+                  id="yearlength"
                   onkeypress="return (this.innerText.length <= 1)"
                   @input="onYearUpdate">5</span> year.
           </p>
@@ -216,15 +217,13 @@ export default {
     }
   },
   mounted() {
-    $("#myeditablediv").keypress(function (e) {
-
-    });
     $("span[contenteditable]").keypress(function (evt) {
+
       var keycode = evt.charCode || evt.keyCode;
       var x = evt.charCode || evt.keyCode;
       if (isNaN(String.fromCharCode(evt.which)) && x != 46 || x === 32 || x === 13 || (x === 46 && evt.currentTarget.innerText.includes('.'))) evt.preventDefault();
 
-      if (keycode == 13) { //Enter key's keycode
+      if (keycode == 13) {
         this.calculateImpact();
         return false;
       }
@@ -322,6 +321,17 @@ export default {
         _self.entreprenuars = Math.round(addition);
       }, 1000);
     }
+  },
+  watch: {
+    years: function (newQuestion, oldQuestion) {
+      let answ = this.years
+      if (answ === 0 || answ === "") {
+        document.getElementById("yearlength").innerHTML = 0;
+      }
+      // this.answer = 'Waiting for you to stop typing...';
+      // this.debouncedGetAnswer()
+    }
+
   }
 }
 </script>
