@@ -15,7 +15,7 @@
                       aria-describedby="type-help"
                       @change="getAssetCoordinates"
                       required>
-                <option value="type">Type</option>
+                <option value="type" selected>All</option>
                 <option :value="type.id" v-for="type in categories">{{ type['categoryName'] }}</option>
               </select>
               <!--Label: Country, Attributes:country -->
@@ -77,7 +77,7 @@ let map = '';
 export default {
   data() {
     return {
-      categoryId: '',
+      categoryId: 'All',
       errors: '',
       returns: '',
       country: 'Kenya',
@@ -130,9 +130,19 @@ export default {
           })
         });
 
-        let image = `${url}${categoryAsset.icon}`;
-        // console.log(categoryAsset.icon);
-        // console.log(image)
+        let image = `${url}/untapped/twowheeler.png`;
+        if (this.categoryId === 1) {
+          image = `${url}/untapped/twowheeler.png`
+        }
+        if (this.categoryId === 3) {
+          image = `${url}/untapped/rawmeter.png`
+        }
+        if (this.categoryId === 4) {
+          image = `${url}/untapped/irrigationmapicon.png`
+        }
+        if (this.categoryId === 2) {
+          image = `${url}/untapped/smartmeter.png`
+        }
         if (map.getLayer('points')) map.removeLayer('points');
         if (map.getSource('points')) map.removeSource('points');
         if (map.hasImage('custom-marker')) map.removeImage('custom-marker');
