@@ -22,6 +22,8 @@ try {
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common['API-KEY'] = 'asilimia=buda?thanos/secret!!';
+window.axios.defaults.headers.common['API-SECRET'] = 'XE3H8sjuNbZgDgjJzH69Trcm2_KtwCof2af9Sc0Bdi4=';
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
