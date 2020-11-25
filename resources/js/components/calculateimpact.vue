@@ -233,7 +233,6 @@ export default {
     this.years = 5;
     this.calculateImpact();
   },
-
   methods: {
     nFormatter(num, digits) {
       var si = [
