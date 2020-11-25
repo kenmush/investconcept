@@ -131,8 +131,8 @@ export default {
         });
 
         let image = `${url}${categoryAsset.icon}`;
-
-        console.log(image)
+        // console.log(categoryAsset.icon);
+        // console.log(image)
         if (map.getLayer('points')) map.removeLayer('points');
         if (map.getSource('points')) map.removeSource('points');
         if (map.hasImage('custom-marker')) map.removeImage('custom-marker');

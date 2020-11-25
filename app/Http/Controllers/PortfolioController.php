@@ -50,9 +50,11 @@ class PortfolioController extends Controller
      */
     public function show($id)
     {
+
         try {
             return view('motorbike', [
-                    'assets' => (new Investor())->getAssetbyId($id)
+                    'assets' => (new Investor())->getAssetbyId($id),
+                    'beneficiaries' => (new Investor())->getBeneficiary()
             ]);
         } catch (ClientException $exception) {
             return back();
