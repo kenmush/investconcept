@@ -36,7 +36,8 @@
 									</span>
                             <div class="media-body">
                                 <p class="mb-0">Portfolio Balance</p>
-                                <h3 class="mb-0 text-black"><span class="counter ml-0">{{ $stats['total_balance'] }}</span></h3>
+                                <h3 class="mb-0 text-black"><span class="counter ml-0">
+                                        {{ $stats['portfolio_balance'] }}$</span></h3>
                                 {{--                                <small>24 MONTHS LEFT</small>--}}
                             </div>
                         </div>
