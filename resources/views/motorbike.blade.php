@@ -39,7 +39,6 @@
                                                 <span class="mb-0">{{ $assets['duration'] }}</span>
                                             </li>
                                             <li class="list-group-item d-flex px-0 justify-content-between">
-
                                                 <strong>Impact</strong>
                                                 <span class="mb-0">  {{ $assets['impact'] }}</span> <br>
                                             </li>
