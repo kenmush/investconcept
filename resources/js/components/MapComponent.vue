@@ -84,7 +84,7 @@ export default {
       let url = process.env.MIX_APP_URL;
       let points = [];
       let Self = this;
-      axios.get(`/api/getAllAssets/${this.categoryId}`).then(resp => {
+      axios.get(`/api/allAssets`).then(resp => {
         this.assets = resp.data;
 
         let ds = Object.keys(resp.data).map(function (datareturned, index) {

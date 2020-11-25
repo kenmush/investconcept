@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\Investor;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -48,7 +49,7 @@ class UserController extends Controller
     public function show( $user)
     {
         return view('userprofile',[
-                'name' => $user
+                'name' => (new Investor())->getBeneficiaryById($user)
         ]);
 
     }
