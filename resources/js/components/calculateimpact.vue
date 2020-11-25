@@ -193,6 +193,7 @@ border:#ACADA6 solid 1px;margin-right: 20px;
 </template>
 
 <script>
+
 export default {
   name: "calculateimpact",
   data() {
@@ -216,7 +217,15 @@ export default {
       loading: false
     }
   },
+  created() {
+    console.log(`logging text`);
+    console.log(document.getElementById("yearlength").textContent);
+  },
   mounted() {
+
+    if (document.getElementById("yearlength").textContent === "") {
+      document.getElementById("yearlength").innerHTML = 0;
+    }
     $("span[contenteditable]").keypress(function (evt) {
 
       var keycode = evt.charCode || evt.keyCode;
@@ -231,8 +240,10 @@ export default {
     this.amountInvested = 100000;
     this.years = 5;
     this.calculateImpact();
+
   },
   methods: {
+
     nFormatter(num, digits) {
       var si = [
         {value: 1, symbol: ""},
@@ -313,7 +324,6 @@ export default {
         _self.motorbikes = Math.round((((_self.amountInvested / 3) / motorbikePrice) * _self.batch));
         _self.wateratm = Math.round((((_self.amountInvested / 3) / waterATMPrice) * _self.batch));
         _self.trailer = Math.round(((_self.amountInvested / 3) / trailerPrice) * _self.batch);
-        console.log(`motorbikes:${_self.motorbikes}. wateratm:${_self.wateratm}.trailer:${_self.trailer}`)
         let socialImpact = (((_self.amountInvested / 3) / 500) * 1800) + (((_self.amountInvested / 3) / 1000) * 12000) +
             (((_self.amountInvested / 3) / 1000) *
                 3600)
@@ -323,11 +333,14 @@ export default {
     }
   },
   watch: {
+
     years: function (newQuestion, oldQuestion) {
       let answ = this.years
       if (answ === 0 || answ === "") {
         document.getElementById("yearlength").innerHTML = 0;
       }
+      console.log(document.getElementById("yearlength").textContent)
+
       // this.answer = 'Waiting for you to stop typing...';
       // this.debouncedGetAnswer()
     }
