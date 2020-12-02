@@ -5,7 +5,7 @@
         <div class="form-head d-flex mb-3 align-items-start">
             <div class="mr-auto d-none d-lg-block">
                 <h2 class="text-black font-w600 mb-0">Dashboard</h2>
-                <p class="mb-0">Welcome to {{ auth()->user()->name }}!</p>
+                <p class="mb-0">Welcome, {{ auth()->user()->name }}!</p>
             </div>
 
             {{--                <div class="dropdown custom-dropdown">--}}
@@ -208,9 +208,9 @@
                                         <td>{{$asset['duration']}} Months</td>
                                         <td>{{$asset['leverage']}}</td>
                                         <td>
-                                            <a href="{{ route('portfolio.edit',$asset['id']) }}">
-                                                <i class="fa fa-pencil"></i>
-                                            </a>
+{{--                                            <a href="{{ route('portfolio.edit',$asset['id']) }}">--}}
+{{--                                                <i class="fa fa-pencil"></i>--}}
+{{--                                            </a>--}}
                                         </td>
                                     </tr>
                                 @endforeach

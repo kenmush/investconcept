@@ -49,7 +49,7 @@
           <div>
             <div style="border-top: 57px">
               <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Asset</h3>
-              <p style="font: Bold 20px/24px Roboto;color: #565C59;">{{  category }} &mdash; {{ description}}</p>
+              <p style="font: Bold 20px/24px Roboto;color: #565C59;">{{ description}}</p>
             </div>
             <div style="border-top: 57px">
               <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Country</h3>
@@ -101,6 +101,7 @@ export default {
   methods: {
     getAssetCoordinates() {
       this.loading = true;
+      // let url = 'http://localhost:3000';
       let url = process.env.MIX_APP_URL;
       let points = [];
       let Self = this;
@@ -123,7 +124,7 @@ export default {
               ]
             },
             'properties': {
-              'title': Self.assets[datareturned].brand,
+              'title': Self.assets[datareturned].fullName,
               'revenue': Self.assets[datareturned].revenue_returned,
               'serial': Self.assets[datareturned].serial_number,
             }

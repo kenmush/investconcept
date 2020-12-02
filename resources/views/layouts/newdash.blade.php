@@ -141,7 +141,8 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();" class="dropdown-item ai-icon">
+                                                     document.getElementById('logout-form').submit();"
+                                   class="dropdown-item ai-icon">
                                     <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger"
                                          width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -151,7 +152,8 @@
                                     </svg>
                                     <span class="ml-2">Logout </span>
                                 </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
                                     @csrf
                                 </form>
                             </div>
@@ -161,13 +163,7 @@
             </nav>
         </div>
     </div>
-    <!--**********************************
-        Header end ti-comment-alt
-    ***********************************-->
 
-    <!--**********************************
-        Sidebar start
-    ***********************************-->
     <div class="deznav">
         <div class="deznav-scroll">
             <ul class="metismenu" id="menu">
@@ -178,30 +174,32 @@
                     </a>
 
                 </li>
-                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                        <i class="fa fa-pagelines"></i>
-                        <span class="nav-text">Page Management</span>
-                    </a>
-                    <ul aria-expanded="false" class="mm-collapse">
-                        <li><a href="{{ route('herosection.create') }}">Landing Page</a></li>
-                        <li><a href="{{ route('myassets.index') }}">View Asset category</a></li>
-                        <li><a href="{{ route('myassets.create') }}">Add Asset category</a></li>
-                        <li><a href="{{ route('manageassets.index') }}">View Asset</a></li>
-                        <li><a href="{{ route('manageassets.create') }}">Add Asset</a></li>
-                    </ul>
-                </li>
-                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                        <i class="fa fa-users"></i>
-                        <span class="nav-text">Investors</span>
-                    </a>
-                    <ul aria-expanded="false" class="mm-collapse">
-                        <li><a href="{{ route('investors.index') }}">View Investors</a></li>
-                        <li><a href="{{ route('investors.create') }}">Add Investors</a></li>
-                        <li><a href="{{ route('beneficiary.create') }}">Add Beneficiary</a></li>
-                        <li><a href="{{ route('beneficiary.index') }}">View Beneficiary</a></li>
-{{--                        <li><a href="./app-profile.html">Ambassadors</a></li>--}}
-                    </ul>
-                </li>
+                @if((int)Auth::user()->api_id === 3)
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-pagelines"></i>
+                            <span class="nav-text">Page Management</span>
+                        </a>
+                        <ul aria-expanded="false" class="mm-collapse">
+                            <li><a href="{{ route('herosection.create') }}">Landing Page </a></li>
+                            <li><a href="{{ route('myassets.index') }}">View Asset category</a></li>
+                            <li><a href="{{ route('myassets.create') }}">Add Asset category</a></li>
+                            <li><a href="{{ route('manageassets.index') }}">View Asset</a></li>
+                            <li><a href="{{ route('manageassets.create') }}">Add Asset</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-users"></i>
+                            <span class="nav-text">Investors</span>
+                        </a>
+                        <ul aria-expanded="false" class="mm-collapse">
+                            <li><a href="{{ route('investors.index') }}">View Investors</a></li>
+                            <li><a href="{{ route('investors.create') }}">Add Investors</a></li>
+                            <li><a href="{{ route('beneficiary.create') }}">Add Beneficiary</a></li>
+                            <li><a href="{{ route('beneficiary.index') }}">View Beneficiary</a></li>
+                            {{--                        <li><a href="./app-profile.html">Ambassadors</a></li>--}}
+                        </ul>
+                    </li>
+                @endif
             </ul>
 
             {{--            <div class="add-menu-sidebar">--}}
@@ -224,7 +222,7 @@
     ***********************************-->
     <div class="content-body" id="app">
         <!-- row -->
-     @yield('content')
+        @yield('content')
     </div>
 </div>
 <!--**********************************
@@ -251,7 +249,6 @@
 <!--**********************************
    Support ticket button end
 ***********************************-->
-
 
 
 <!--**********************************
@@ -283,24 +280,24 @@
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('backend/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
 <script>
-    (function($) {
+    (function ($) {
 
         var table = $('#investorsTable').DataTable({
             searching: true,
-            paging:true,
+            paging: true,
             select: false,
             //info: false,
-            "order": [[ 3, "desc" ]],
-            lengthChange:false
+            "order": [[3, "desc"]],
+            lengthChange: false
 
         });
         var newt = $('#assetsTable').DataTable({
             searching: true,
-            paging:true,
+            paging: true,
             select: false,
             //info: false,
-            "order": [[ 3, "desc" ]],
-            lengthChange:false
+            "order": [[3, "desc"]],
+            lengthChange: false
 
         });
     })(jQuery);

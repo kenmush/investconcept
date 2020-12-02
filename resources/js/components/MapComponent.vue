@@ -81,8 +81,7 @@ export default {
   methods: {
     getAssetCoordinates() {
       this.loading = true;
-      let url = 'http://localhost:3000';
-      // let url = process.env.MIX_APP_URL;
+      let url = process.env.MIX_APP_URL;
       let points = [];
       let Self = this;
       axios.get(`/api/allAssets`).then(resp => {
@@ -93,7 +92,7 @@ export default {
             assetURL = Self.assets[datareturned].fullName
             console.log(Self.assets[datareturned].fullName)
           } else {
-            assetURL = Self.assets[datareturned].brand
+            assetURL = Self.assets[datareturned].fullName
           }
           points.push({
             'type': 'Feature',
