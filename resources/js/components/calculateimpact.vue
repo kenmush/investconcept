@@ -1,18 +1,18 @@
 <template>
   <div class="mb-5">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 p-0">
         <div class="text-center">
-          <p class="invest">If I Invest <span class="orangeinput needstext"
-                                              onkeypress="return (this.innerText.length <= 6)"
-                                              contenteditable="true"
-                                              @input="onInput">100000</span>
-            $ on
-            <span maxlength="2" class="orangeinput needstext" contenteditable="true"
-                  id="yearlength"
-                  onkeypress="return (this.innerText.length <= 1)"
-                  @input="onYearUpdate">5</span> year.
+          <p class="invest">If I Invest <span class="orangeinput needstext">$</span><span class="orangeinput needstext"
+                                               onkeypress="return (this.innerText.length <= 6)"
+                                               contenteditable="true"
+                                               @input="onInput">100,000</span>
+            Now
           </p>
+          <p class="invest"> In <span maxlength="2" class="orangeinput needstext" contenteditable="true"
+                    id="yearlength"
+                    onkeypress="return (this.innerText.length <= 1)"
+                    @input="onYearUpdate">5</span> years I create:</p>
           <div>
             <svg v-if="loading" id="star"
                  xmlns="http://www.w3.org/2000/svg"
@@ -39,12 +39,7 @@
         <div v-if="calculations" style="margin-top: 31.5px !important;">
           <div class="bg-white shadow-lg container mt-5" style="border-radius: 20px;">
             <div class="row" style="padding-top: 26px;padding-bottom: 27px;padding-left: 40px">
-              <div class="col-md-2 text-center align-self-center flex justify-content-center">
-                <p class="gdtext ">
-                  I create:
-                </p>
-              </div>
-              <div class="col-md-5">
+              <div class="col-md-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" viewBox="0 0 86 86">
                   <g id="monetization_on-24px" transform="translate(16 16)">
                     <path id="Path_341" data-name="Path 341" d="M43,0A43,43,0,1,1,0,43,43,43,0,0,1,43,0Z"
@@ -58,7 +53,8 @@
                 <span class="gdtext" style="padding-left: 20px">{{ impact }}$</span>
                 <span class="gdltext">cumulated revenues</span>
               </div>
-              <div class="col-md-5">
+              <div class="col-md-4">
+               <span class="gdltext">for  </span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" viewBox="0 0 86 86">
                   <circle id="Ellipse_2" data-name="Ellipse 2" cx="43" cy="43" r="43" fill="#aed4e9" opacity="0.313"/>
                   <path id="Union_1" data-name="Union 1"
@@ -66,19 +62,30 @@
                         transform="translate(3787.001 -159.724)" fill="#48586a"/>
                 </svg>
                 <span class="gdtext" style="padding-left: 20px">{{ entreprenuars.toLocaleString() }}</span> <span
-                  class="gdltext"> entrepreneurs</span>
+                  class="gdltext"> entrepreneurs making</span>
 
+              </div>
+              <div class="col-md-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" viewBox="0 0 86 86">
+                  <path id="Path_343" data-name="Path 343" d="M43,0A43,43,0,1,1,0,43,43,43,0,0,1,43,0Z" fill="#aed4e9"
+                        opacity="0.313"/>
+                  <path id="Path_340" data-name="Path 340"
+                        d="M-24.478-82.448l7.357-13.528h9.3L-19.25-76.519-7.528-56.739h-9.405l-7.546-13.744-7.546,13.744h-9.405l11.723-19.781L-41.133-95.977h9.3Z"
+                        transform="translate(67.936 119.477)" fill="#48586a"/>
+                </svg>
+                <span class="gdtext" style="padding-left: 18px">{{ socialReturn.toLocaleString() }}x</span>
+                <span class="gdltext"> Social return on money</span>
               </div>
             </div>
-
+          </div>
+          <div class="container mt-4">
+            <div class="text-center">
+              <p class="invest">I make</p>
+            </div>
           </div>
           <div class="bg-white shadow-lg container mt-5" style="border-radius: 20px;margin-top: 20px">
-            <div class="row" style="padding-top: 26px;padding-bottom: 27px;padding-left: 40px">
-              <div class="col-md-2 text-center align-self-center flex justify-content-center">
-                <p class="gdtext align-middle">
-                  I generate:
-                </p>
-              </div>
+
+            <div class="row justify-content-center" style="padding-top: 26px;padding-bottom: 27px;padding-left: 40px">
               <div class="col-md-5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" viewBox="0 0 86 86">
                   <g id="monetization_on-24px" transform="translate(16 16)">
@@ -90,7 +97,8 @@
                           transform="translate(1 1)" fill="#48586a"/>
                   </g>
                 </svg>
-                <span class="gdtext" style="padding-left: 19px">{{ overallreturn }}%</span> <span class="gdltext">gain
+                <span class="gdtext" style="padding-left: 19px">{{ investmentreturn.toLocaleString() }}</span> <span
+                  class="gdltext">return on investment
               </span>
               </div>
               <div class="col-md-5">
@@ -212,6 +220,7 @@ export default {
       atmReturn: '',
       trailerReturn: '',
       impact: '',
+      investmentreturn: '',
       showmores: false,
       batch: '',
       loading: false
@@ -329,6 +338,9 @@ export default {
                 3600)
         let addition = (_self.motorbikes + _self.wateratm + _self.trailer);
         _self.entreprenuars = Math.round(addition);
+        _self.investmentreturn = Math.round(
+            _self.amountInvested * (1 + (annualReturnForInvestors / 100)) ** _self.years
+        );
       }, 1000);
     }
   },

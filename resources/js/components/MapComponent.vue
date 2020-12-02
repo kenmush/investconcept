@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-         style="z-index:1 ;position: absolute;margin-top:80px;
+        style="z-index:1 ;position: absolute;margin-top:80px;
                             margin-left:26px;height:
                             160px; width:20rem;">
       <div class="card ml-5">
@@ -16,15 +16,15 @@
                     aria-describedby="type-help"
                     @change="getAssetCoordinates"
                     required>
-              <option value="type" >All</option>
+              <option value="type">All</option>
               <option :value="type.id" v-for="type in categories">{{ type['categoryName'] }}</option>
             </select>
             <!--Label: Country, Attributes:country -->
             <div class="form-group mt-3">
               <label for="country">Country </label>
               <select type="text" class="form-control" id="country" v-model="country"
-                     aria-describedby="country-help"
-                     :class="[errors.country ? 'is-invalid': '',!errors.country && Object.keys(errors).length > 1 ? 'is-valid': '']"
+                      aria-describedby="country-help"
+                      :class="[errors.country ? 'is-invalid': '',!errors.country && Object.keys(errors).length > 1 ? 'is-valid': '']"
                       required>
                 <option value="Kenya" selected>Kenya</option>
               </select>
@@ -34,19 +34,19 @@
             </div>
             <!--Label: Return, Attributes:return -->
             <!--Label: Returns, Attributes:returns -->
-<!--            <div class="form-group">-->
-<!--              <label for="returns">Return </label>-->
+            <!--            <div class="form-group">-->
+            <!--              <label for="returns">Return </label>-->
 
-<!--              <select type="text" class="form-control" id="returns" v-model="returns"-->
-<!--                     aria-describedby="returns-help"-->
-<!--                     :class="[errors.returns ? 'is-invalid': '',!errors.returns && Object.keys(errors).length > 1 ? 'is-valid': '']"-->
-<!--                     placeholder="Returns" required>-->
-<!--                <option value="returns" selected>10% Return</option>-->
-<!--              </select>-->
-<!--              <div class="invalid-feedback" v-if="errors.returns">-->
-<!--                {{ errors.returns.toString()}}-->
-<!--              </div>-->
-<!--            </div>-->
+            <!--              <select type="text" class="form-control" id="returns" v-model="returns"-->
+            <!--                     aria-describedby="returns-help"-->
+            <!--                     :class="[errors.returns ? 'is-invalid': '',!errors.returns && Object.keys(errors).length > 1 ? 'is-valid': '']"-->
+            <!--                     placeholder="Returns" required>-->
+            <!--                <option value="returns" selected>10% Return</option>-->
+            <!--              </select>-->
+            <!--              <div class="invalid-feedback" v-if="errors.returns">-->
+            <!--                {{ errors.returns.toString()}}-->
+            <!--              </div>-->
+            <!--            </div>-->
           </div>
         </div>
       </div>
@@ -81,13 +81,20 @@ export default {
   methods: {
     getAssetCoordinates() {
       this.loading = true;
-      let url = process.env.MIX_APP_URL;
+      let url = 'http://localhost:3000';
+      // let url = process.env.MIX_APP_URL;
       let points = [];
       let Self = this;
       axios.get(`/api/allAssets`).then(resp => {
         this.assets = resp.data;
-
         let ds = Object.keys(resp.data).map(function (datareturned, index) {
+          let assetURL = "";
+          if (Self.assets[datareturned].brand === null || Self.assets[datareturned].brand === "null") {
+            assetURL = Self.assets[datareturned].fullName
+            console.log(Self.assets[datareturned].fullName)
+          } else {
+            assetURL = Self.assets[datareturned].brand
+          }
           points.push({
             'type': 'Feature',
             'geometry': {
@@ -98,25 +105,33 @@ export default {
               ]
             },
             'properties': {
-              'title': Self.assets[datareturned].brand
+              'title':assetURL,
+              icon: {
+                iconUrl: `${url}/untapped/twowheeler.png`,
+                iconSize: [50, 50], // size of the icon
+                iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+                popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+                className: 'dot'
+              }
             }
-          })
+          });
         });
 
+        // let image = `${url}/untapped/rawmeter.png`;
         let image = `${url}/untapped/twowheeler.png`;
-        if (this.categoryId === 1) {
-          image = `${url}/untapped/twowheeler.png`
-        }
-        if (this.categoryId === 3) {
-          image = `${url}/untapped/rawmeter.png`
-        }
-        if (this.categoryId === 4) {
-          image = `${url}/untapped/irrigationmapicon.png`
-        }
-        if (this.categoryId === 2) {
-          image = `${url}/untapped/smartmeter.png`
-        }
-        console.log(image)
+        // if (this.categoryId === 1) {
+        //   image = `${url}/untapped/twowheeler.png`
+        // }
+        // if (this.categoryId === 3) {
+        //   image = `${url}/untapped/rawmeter.png`
+        // }
+        // if (this.categoryId === 4) {
+        //   image = `${url}/untapped/irrigationmapicon.png`
+        // }
+        // if (this.categoryId === 2) {
+        //   image = `${url}/untapped/smartmeter.png`
+        // }
+
         if (map.getLayer('points')) map.removeLayer('points');
         if (map.getSource('points')) map.removeSource('points');
         if (map.hasImage('custom-marker')) map.removeImage('custom-marker');
@@ -160,6 +175,49 @@ export default {
       }).catch(err => {
         this.loading = false;
       });
+    },
+    getCoordinates() {
+      var geojson = [
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [-77.031952, 38.913184]
+          },
+          properties: {
+            icon: {
+              iconUrl: 'https://www.mapbox.com/mapbox.js/assets/images/astronaut1.png',
+              iconSize: [50, 50], // size of the icon
+              iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+              popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+              className: 'dot'
+            }
+          }
+        },
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [-122.413682, 37.775408]
+          },
+          properties: {
+            icon: {
+              iconUrl: 'https://www.mapbox.com/mapbox.js/assets/images/astronaut2.png',
+              iconSize: [50, 50], // size of the icon
+              iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+              popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+              className: 'dot'
+            }
+          }
+        }
+      ];
+      map.on('layeradd', function (e) {
+        var marker = e.layer,
+            feature = marker.feature;
+        marker.setIcon(L.icon(feature.properties.icon));
+      });
+      map.setGeoJSON(geojson);
+      map.scrollWheelZoom.disable();
     }
   },
   mounted() {

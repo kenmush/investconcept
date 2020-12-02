@@ -23,7 +23,7 @@
             {{--                    </div>--}}
             {{--                </div>--}}
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="widget-stat card">
                     <div class="card-body p-4">
@@ -73,42 +73,9 @@
 									</span>
                             <div class="media-body">
                                 <p class="mb-0">Interest</p>
-                                <h3 class="mb-0 text-black">+<span class="counter ml-0">{{ $stats['total_interest'] }}</span>$</h3>
+                                <h3 class="mb-0 text-black">+<span
+                                            class="counter ml-0">{{ $stats['total_interest'] }}</span>$</h3>
                                 <small>ANNUALIZED RETURN</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
-                <div class="widget-stat card">
-                    <div class="card-body p-4">
-                        <div class="media ai-icon">
-									<span class="mr-3 bgl-primary text-primary">
-										 <i style="    color: #FF8377;" class="fa fa-money"></i>
-									</span>
-                            <div class="media-body">
-                                <p class="mb-0">Revenue</p>
-                                <h3 class="mb-0 text-black"><span class="counter ml-0">{{ $stats['total_revenue'] }}</span>$</h3>
-                                <small>GENERATED FOR ENTREPRENEUR</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
-                <div class="widget-stat card">
-                    <div class="card-body p-4">
-                        <div class="media ai-icon">
-                                <span class="mr-3 bgl-primary text-primary">
-                                    <!-- <i class="ti-user"></i> -->
-                                    <i style="    color: #FF8377;" class="fa fa-bar-chart"></i>
-                                    </span>
-                            <div class="media-body">
-                                <p class="mb-0">Leverage</p>
-
-                                <h3 class="mb-0 text-black"><span class="counter ml-0">{{ $stats['total_leverage'] }}</span>x</h3>
-                                <small>CREATED PER DOLLAR INVESTED</small>
                             </div>
                         </div>
                     </div>
@@ -126,8 +93,64 @@
 									</span>
                             <div class="media-body">
                                 <p class="mb-0">Balance</p>
-                                <h3 class="mb-0 text-black"><span class="counter ml-0">{{ $stats['total_balance'] }}</span></h3>
+                                <h3 class="mb-0 text-black"><span
+                                            class="counter ml-0">{{ $stats['total_balance'] }}</span></h3>
                                 <small>24 MONTHS LEFT</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
+                <div class="widget-stat card">
+                    <div class="card-body p-4">
+                        <div class="media ai-icon">
+                                <span class="mr-3 bgl-primary text-primary">
+                                    <!-- <i class="ti-user"></i> -->
+                                    <i style="    color: #FF8377;" class="fa fa-bar-chart"></i>
+                                    </span>
+                            <div class="media-body">
+                                <p class="mb-0">Number of Entrepreneurs</p>
+
+                                <h3 class="mb-0 text-black"><span
+                                            class="counter ml-0">{{ $stats['total_leverage'] }}</span>x</h3>
+                                {{--                                <small>CREATED PER DOLLAR INVESTED</small>--}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
+                <div class="widget-stat card">
+                    <div class="card-body p-4">
+                        <div class="media ai-icon">
+                                <span class="mr-3 bgl-primary text-primary">
+                                    <!-- <i class="ti-user"></i> -->
+                                    <i style="    color: #FF8377;" class="fa fa-bar-chart"></i>
+                                    </span>
+                            <div class="media-body">
+                                <p class="mb-0">Leverage</p>
+
+                                <h3 class="mb-0 text-black"><span
+                                            class="counter ml-0">{{ $stats['total_leverage'] }}</span>x</h3>
+                                <small>CREATED PER DOLLAR INVESTED</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
+                <div class="widget-stat card">
+                    <div class="card-body p-4">
+                        <div class="media ai-icon">
+									<span class="mr-3 bgl-primary text-primary">
+										 <i style="    color: #FF8377;" class="fa fa-money"></i>
+									</span>
+                            <div class="media-body">
+                                <p class="mb-0">Revenue</p>
+                                <h3 class="mb-0 text-black"><span
+                                            class="counter ml-0">{{ $stats['total_revenue'] }}</span>$</h3>
+                                <small>GENERATED FOR ENTREPRENEUR</small>
                             </div>
                         </div>
                     </div>
@@ -170,10 +193,10 @@
                                 @foreach($tableAssets as $asset)
                                     <tr>
                                         <td>
-{{--                                            <a href="{{ route('portfolio.show',[$asset['id']]) }}">--}}
-{{--                                            <a href="{{ url('test/'.$asset['id']) }}">--}}
+                                            {{--                                            <a href="{{ route('portfolio.show',[$asset['id']]) }}">--}}
+                                            {{--                                            <a href="{{ url('test/'.$asset['id']) }}">--}}
                                             <a href="{{ route('portfolio.show',$asset['asset_category']) }}">
-                                            {{$asset['asset_category_name'] ?? ''}}
+                                                {{$asset['asset_category_name'] ?? ''}}
                                             </a>
                                         </td>
                                         <td>{{$asset['units']}}</td>

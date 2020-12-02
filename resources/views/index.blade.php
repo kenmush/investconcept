@@ -104,27 +104,25 @@
         </div>
     </div>
 
-    <div id="simulateimpact">
-        <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-8">
-                <div class="section-title mt-5">
-                    <h2>
-                        Calculate your<span class="special" > impact</span>
-                    </h2>
-                    <hr>
-                </div>
+    <div class="container-fluid">
+        <div id="simulateimpact">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-8">
+                    <div class="section-title mt-5">
+                        <h2>
+                            Calculate your<span class="special" > impact</span>
+                        </h2>
+                        <hr>
+                    </div>
 
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <impactcalculation></impactcalculation>
                 </div>
             </div>
-
+            <div class="container-fluid">
+                <impactcalculation></impactcalculation>
+            </div>
         </div>
     </div>
+
     <!-- blog begin -->
     <div class="blog">
         <div class="container">
