@@ -109,8 +109,8 @@
                         d="M-24.478-82.448l7.357-13.528h9.3L-19.25-76.519-7.528-56.739h-9.405l-7.546-13.744-7.546,13.744h-9.405l11.723-19.781L-41.133-95.977h9.3Z"
                         transform="translate(67.936 119.477)" fill="#48586a"/>
                 </svg>
-                <span class="gdtext" style="padding-left: 18px">{{ socialReturn.toLocaleString() }}x</span>
-                <span class="gdltext"> Social return on money</span>
+                <span class="gdtext" style="padding-left: 18px">8%</span>
+                <span class="gdltext"> Annual return</span>
               </div>
             </div>
 
