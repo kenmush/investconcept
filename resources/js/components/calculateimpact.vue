@@ -50,11 +50,11 @@
                           transform="translate(1 1)" fill="#48586a"/>
                   </g>
                 </svg>
-                <span class="gdtext" style="padding-left: 20px">{{ impact }}$</span>
+                <span class="gdtext" style="padding-left: 20px">{{ impact }}</span>
                 <span class="gdltext">cumulated revenues</span>
               </div>
               <div class="col-md-4">
-               <span class="gdltext">for  </span>
+               <span class="gdltext">for &nbsp;&nbsp;</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" viewBox="0 0 86 86">
                   <circle id="Ellipse_2" data-name="Ellipse 2" cx="43" cy="43" r="43" fill="#aed4e9" opacity="0.313"/>
                   <path id="Union_1" data-name="Union 1"
@@ -503,6 +503,6 @@ export default {
   color: #48586A;
   font-family: Roboto;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 14px;
 }
 </style>

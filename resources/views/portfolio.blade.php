@@ -37,7 +37,7 @@
                             <div class="media-body">
                                 <p class="mb-0">Amount Invested</p>
                                 <h3 class="mb-0 text-black"><span class="counter ml-0">
-                                        {{ $stats['total_invested'] }}$</span></h3>
+                                        {{ $stats['total_invested'] }}</span></h3>
                                 {{--                                <small>24 MONTHS LEFT</small>--}}
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                             <div class="media-body">
                                 <p class="mb-0">Portfolio Balance</p>
                                 <h3 class="mb-0 text-black"><span class="counter ml-0">
-                                        {{ $stats['portfolio_balance'] }}$</span></h3>
+                                        {{ $stats['portfolio_balance'] }}</span></h3>
                                 {{--                                <small>24 MONTHS LEFT</small>--}}
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                             <div class="media-body">
                                 <p class="mb-0">Interest</p>
                                 <h3 class="mb-0 text-black">+<span
-                                            class="counter ml-0">{{ $stats['total_interest'] }}</span>$</h3>
+                                            class="counter ml-0">{{ $stats['total_interest'] }}</span></h3>
                                 <small>ANNUALIZED RETURN</small>
                             </div>
                         </div>
@@ -113,7 +113,10 @@
                                 <p class="mb-0">Number of Entrepreneurs</p>
 
                                 <h3 class="mb-0 text-black"><span
-                                            class="counter ml-0">{{ $stats['total_leverage'] }}</span>x</h3>
+                                            class="counter ml-0">
+                                        {{ $stats['number_of_entrepreneurs'] ?? '' }}
+                                    </span>
+                                </h3>
                                 {{--                                <small>CREATED PER DOLLAR INVESTED</small>--}}
                             </div>
                         </div>
@@ -149,7 +152,7 @@
                             <div class="media-body">
                                 <p class="mb-0">Revenue</p>
                                 <h3 class="mb-0 text-black"><span
-                                            class="counter ml-0">{{ $stats['total_revenue'] }}</span>$</h3>
+                                            class="counter ml-0">{{ $stats['total_revenue'] }}</span></h3>
                                 <small>GENERATED FOR ENTREPRENEUR</small>
                             </div>
                         </div>
@@ -183,7 +186,7 @@
                                 <tr>
                                     <th><strong>Asset Name</strong></th>
                                     <th><strong>Units</strong></th>
-                                    <th><strong>Total Invested</strong></th>
+                                    <th><strong>Total Invested ($)</strong></th>
                                     <th><strong>Interest Generated</strong></th>
                                     <th><strong>Duration</strong></th>
                                     <th><strong>Impact Multiplier</strong></th>
@@ -200,7 +203,7 @@
                                             </a>
                                         </td>
                                         <td>{{$asset['units']}}</td>
-                                        <td>{{$asset['amount_invested']}} $</td>
+                                        <td>{{$asset['amount_invested']}}</td>
                                         <td>{{$asset['interest']}}%</td>
                                         <td>{{$asset['duration']}} Months</td>
                                         <td>{{$asset['leverage']}}</td>
