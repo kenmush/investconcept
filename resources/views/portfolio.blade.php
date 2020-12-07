@@ -72,7 +72,7 @@
 								<i style="    color: #FF8377;" class="fa fa-percent"></i>
 									</span>
                             <div class="media-body">
-                                <p class="mb-0">Interest</p>
+                                <p class="mb-0">Interest Earned</p>
                                 <h3 class="mb-0 text-black">+<span
                                             class="counter ml-0">{{ $stats['total_interest'] }}</span></h3>
                                 <small>ANNUALIZED RETURN</small>
@@ -92,7 +92,7 @@
 
 									</span>
                             <div class="media-body">
-                                <p class="mb-0">Balance</p>
+                                <p class="mb-0">Balance available to withdraw</p>
                                 <h3 class="mb-0 text-black"><span
                                             class="counter ml-0">{{ $stats['total_balance'] }}</span></h3>
                                 <small>24 MONTHS LEFT</small>
@@ -127,6 +127,23 @@
                 <div class="widget-stat card">
                     <div class="card-body p-4">
                         <div class="media ai-icon">
+									<span class="mr-3 bgl-primary text-primary">
+										 <i style="    color: #FF8377;" class="fa fa-money"></i>
+									</span>
+                            <div class="media-body">
+                                <p class="mb-0">Revenues created for entrepreneur's</p>
+                                <h3 class="mb-0 text-black"><span
+                                            class="counter ml-0">{{ $stats['total_revenue'] }}</span></h3>
+                                <small>GENERATED FOR ENTREPRENEUR</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
+                <div class="widget-stat card">
+                    <div class="card-body p-4">
+                        <div class="media ai-icon">
                                 <span class="mr-3 bgl-primary text-primary">
                                     <!-- <i class="ti-user"></i> -->
                                     <i style="    color: #FF8377;" class="fa fa-bar-chart"></i>
@@ -142,23 +159,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
-                <div class="widget-stat card">
-                    <div class="card-body p-4">
-                        <div class="media ai-icon">
-									<span class="mr-3 bgl-primary text-primary">
-										 <i style="    color: #FF8377;" class="fa fa-money"></i>
-									</span>
-                            <div class="media-body">
-                                <p class="mb-0">Revenue</p>
-                                <h3 class="mb-0 text-black"><span
-                                            class="counter ml-0">{{ $stats['total_revenue'] }}</span></h3>
-                                <small>GENERATED FOR ENTREPRENEUR</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
