@@ -3,16 +3,20 @@
     <div class="row">
       <div class="col-12 p-0">
         <div class="text-center">
-          <p class="invest">If I Invest <span class="orangeinput needstext">$</span><span class="orangeinput needstext"
-                                               onkeypress="return (this.innerText.length <= 6)"
-                                               contenteditable="true"
-                                               @input="onInput">100000</span>
+          <p class="invest">If I Invest
+            <span class="orangeinput needstext">$</span><span style="min-width: 20px"
+                  class="orangeinput needstext"
+                  onkeypress="return (this.innerText.length <= 6)"
+                  contenteditable="true"
+                  @input="onInput">100000</span>
             Now
           </p>
-          <p class="invest"> In <span maxlength="2" class="orangeinput needstext" contenteditable="true"
-                    id="yearlength"
-                    onkeypress="return (this.innerText.length <= 1)"
-                    @input="onYearUpdate">5</span> years I create:</p>
+          <p class="invest"> In
+            <span class="orangeinput needstext"></span>
+            <span maxlength="2" class="orangeinput needstext" contenteditable="true"
+                  id="yearlength"
+                  onkeypress="return (this.innerText.length <= 1)"
+                  @input="onYearUpdate">5</span> years I create:</p>
           <div>
             <svg v-if="loading" id="star"
                  xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +58,7 @@
                 <span class="gdltext">cumulated revenues</span>
               </div>
               <div class="col-md-4">
-               <span class="gdltext">for &nbsp;&nbsp;</span>
+                <span class="gdltext">for &nbsp;&nbsp;</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" viewBox="0 0 86 86">
                   <circle id="Ellipse_2" data-name="Ellipse 2" cx="43" cy="43" r="43" fill="#aed4e9" opacity="0.313"/>
                   <path id="Union_1" data-name="Union 1"
@@ -350,11 +354,10 @@ export default {
       let answ = this.years
       if (answ === 0 || answ === "") {
         document.getElementById("yearlength").innerHTML = 0;
+        document.getElementById("yearlength").focus();
       }
-      console.log(document.getElementById("yearlength").textContent)
+      document.getElementById("yearlength").focus();
 
-      // this.answer = 'Waiting for you to stop typing...';
-      // this.debouncedGetAnswer()
     }
 
   }
