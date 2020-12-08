@@ -292,13 +292,6 @@
 <script src="{{ asset('js/manifest.js') }}"></script>
 <script src="{{ asset('js/vendor.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
-<!-- jquery -->
-{{--<script src="assets/js/jquery.js"></script>--}}
-<!-- popper js -->
-{{--<script src="../../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>--}}
-<!-- bootstrap -->
-{{--<script src="assets/js/bootstrap.min.js"></script>--}}
-<!-- modal video js -->
 <script src="{{ asset('assets/js/jquery-modal-video.min.js') }}"></script>
 <!-- way poin js-->
 <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>

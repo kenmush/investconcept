@@ -39,11 +39,11 @@
                           </div>
                           <div class="col-md-4">
                             <p>Annual Revenue created</p>
-                            <p>3 600$</p>
+                            <p>2 500$</p>
                           </div>
                           <div class="col-md-4">
                             <p>Money Multiplier</p>
-                            <p>3.6x</p>
+                            <p>2.4x</p>
                           </div>
                           <div class="col-12">
                             <a href="/register" class="btn btn-custom btn-block btn-lg"
@@ -116,15 +116,15 @@
                         <div class="row">
                           <div class="col-md-4">
                             <p>Minimum Investment</p>
-                            <p>1 100$</p>
+                            <p>1 500$</p>
                           </div>
                           <div class="col-md-4">
                             <p>Annual Revenue created</p>
-                            <p>3 000$</p>
+                            <p>2 500$</p>
                           </div>
                           <div class="col-md-4">
                             <p>Money Multiplier</p>
-                            <p>3.0x</p>
+                            <p>1.7x</p>
                           </div>
                           <div class="col-12">
                             <a href="/register" class="btn btn-custom btn-block btn-lg"
@@ -166,86 +166,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body ">
-              <div class="row">
-                <div class="col-md-4">
-                  <img class="rounded float-left img-thumbnail"
-                       src="./assets/opibus.jpeg"
-                       alt="">
-                </div>
-                <div class="col-md-8" v-if="!opiBus">
-                  <p style="border-bottom: 3px solid #3e4494">
-                    Electric motorbikes for deliveries
-                  </p>
-                  <p>Local partner: Opibus</p>
-                  <p>Country: Kenya</p>
-                </div>
-                <div class="col-md-8" v-else>
-                  <p>Company: Untapped</p>
-                  <p>Country: Kenya</p>
-                  <p></p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="card" v-if="!opiBus">
-                    <div class="card-body">
-                      <div class="col-12">
-                        <div class="row">
-                          <div class="col-md-4">
-                            <p>Minimum Investment</p>
-                            <p>1 500$</p>
-                          </div>
-                          <div class="col-md-4">
-                            <p>Annual Revenue created</p>
-                            <p>6 000$</p>
-                          </div>
-                          <div class="col-md-4">
-                            <p>Money Multiplier</p>
-                            <p>4.0x</p>
-                          </div>
-                          <div class="col-12">
-                            <a href="/register" class="btn btn-custom btn-block btn-lg"
-                               @mouseenter="opiBusCard"
-                               @mouseleave="disableCards"
-                               @click="opiBusCard">
-                              Invest
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div v-else>
-                    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
-                      <thead class="thead-default">
-                      <tr>
-                        <th>For the Entrepreneur</th>
-                        <th>$700 <br>Moto</th>
-                        <th>$120/Month <br>Avg. Income</th>
-                        <th>$45/Month <br>Lease Payments</th>
-                      </tr>
-                      <tr>
-                        <th>For You:</th>
-                        <th>1 500$ <br>Minimum Investment</th>
-                        <th>6 000 $ <br>Annual Revenue</th>
-                        <th>4.0x <br>Money Multiplier</th>
-                      </tr>
-                      </thead>
 
-                    </table>
-                    <div class="row">
-                      <a href="/register" class="btn btn-custom btn-block btn-lg"
-                         @mouseleave="disableCards">Invest</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="col-md-4 mb-3">
           <div class="card">
             <div class="card-body ">
@@ -276,15 +197,15 @@
                         <div class="row">
                           <div class="col-md-4">
                             <p>Minimum Investment</p>
-                            <p>9 000$</p>
+                            <p>10 000$</p>
                           </div>
                           <div class="col-md-4">
                             <p>Annual Revenue created</p>
-                            <p>36 000$</p>
+                            <p>30 000$</p>
                           </div>
                           <div class="col-md-4">
                             <p>Money Multiplier</p>
-                            <p>4.0x</p>
+                            <p>3.0x</p>
                           </div>
                           <div class="col-12">
                             <a href="/register" class="btn btn-custom btn-block btn-lg"
@@ -360,11 +281,11 @@
                           </div>
                           <div class="col-md-4">
                             <p>Annual Revenue created</p>
-                            <p>7 200$</p>
+                            <p>4 200$</p>
                           </div>
                           <div class="col-md-4">
                             <p>Money Multiplier</p>
-                            <p>2.4x</p>
+                            <p>1.4x</p>
                           </div>
                           <div class="col-12">
                             <a href="/register" class="btn btn-custom btn-block btn-lg"
@@ -436,15 +357,15 @@
                         <div class="row">
                           <div class="col-md-4">
                             <p>Minimum Investment</p>
-                            <p>800$</p>
+                            <p>1 100$</p>
                           </div>
                           <div class="col-md-4">
                             <p>Annual Revenue created</p>
-                            <p>6 000$</p>
+                            <p>9 750$</p>
                           </div>
                           <div class="col-md-4">
                             <p>Money Multiplier</p>
-                            <p>7.5x</p>
+                            <p>9.0x</p>
                           </div>
                           <div class="col-12">
                             <a href="/register" class="btn btn-custom btn-block btn-lg"
