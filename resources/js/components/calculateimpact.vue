@@ -508,4 +508,7 @@ export default {
   font-weight: bold;
   font-size: 14px;
 }
+.k {
+  color: black;
+}
 </style>
