@@ -38,6 +38,7 @@
         "vue-awesome-swiper": "^4.1.1",
         "vue-card-carousel": "^1.0.0",
         "vue-chartist": "^2.3.1",
-        "vue-chartjs": "^3.5.1"
+        "vue-chartjs": "^3.5.1",
+        "vue-google-maps": "^0.1.21"
     }
 }

@@ -6,7 +6,7 @@
           <p class="invest">If I Invest <span class="orangeinput needstext">$</span><span class="orangeinput needstext"
                                                onkeypress="return (this.innerText.length <= 6)"
                                                contenteditable="true"
-                                               @input="onInput">100,000</span>
+                                               @input="onInput">100000</span>
             Now
           </p>
           <p class="invest"> In <span maxlength="2" class="orangeinput needstext" contenteditable="true"
