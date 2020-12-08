@@ -21,27 +21,14 @@
     <title>Untapped Inc</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <!-- fontawesome icon  -->
+
+    <link rel="stylesheet" href="{{ mix('css/front.css') }}">
+
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
-    <!-- flaticon css -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/flaticon.css') }}">
-    <!-- animate.css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
-    <!-- magnific popup -->
-    <link rel="stylesheet" href="{{ asset('assets/css/modal-video.min.css') }}">
-    <!-- slick css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+
     <link rel="stylesheet" href="{{ asset('assets/css/slick-theme.css') }}">
-    <!-- odometer js -->
-    <link rel="stylesheet" href="{{ asset('assets/css/odometer.min.css') }}">
-    <!-- toastr js -->
-    <link rel="stylesheet" href="{{ asset('assets/css/toastr.min.css') }}">
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <!-- responsive -->
-    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 </head>
 
@@ -104,18 +91,18 @@
                         <div class="col-xl-8 col-lg-10">
                             <div class="mainmenu">
                                 <div class="d-xl-none d-lg-none d-block">
-{{--                                    <div class="user-profile">--}}
-{{--                                        <div class="part-img">--}}
-{{--                                            <img src="assets/img/member-1.jpg" alt="">--}}
-{{--                                        </div>--}}
-{{--                                        <div class="user-info">--}}
-{{--                                            <span class="user-name">Sadwel Eunton</span>--}}
-{{--                                            <span class="user-balance">Bal : $202.25</span>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="log-out-area">--}}
-{{--                                            <a href="#">Log out</a>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
+                                    {{--                                    <div class="user-profile">--}}
+                                    {{--                                        <div class="part-img">--}}
+                                    {{--                                            <img src="assets/img/member-1.jpg" alt="">--}}
+                                    {{--                                        </div>--}}
+                                    {{--                                        <div class="user-info">--}}
+                                    {{--                                            <span class="user-name">Sadwel Eunton</span>--}}
+                                    {{--                                            <span class="user-balance">Bal : $202.25</span>--}}
+                                    {{--                                        </div>--}}
+                                    {{--                                        <div class="log-out-area">--}}
+                                    {{--                                            <a href="#">Log out</a>--}}
+                                    {{--                                        </div>--}}
+                                    {{--                                    </div>--}}
                                 </div>
                                 <nav class="navbar navbar-expand-lg">
 
@@ -144,18 +131,19 @@
                                                 </a>
                                             </li>
                                             @guest()
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="/login">
-                                                    <i class="fa fa-lock"></i>
-                                                    Login
-                                                </a>
-                                            </li>
-                                            <li class="nav-item join-now-btn">
-                                                <a class="nav-link" href="/register">Sign Up</a>
-                                            </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="/login">
+                                                        <i class="fa fa-lock"></i>
+                                                        Login
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item join-now-btn">
+                                                    <a class="nav-link" href="/register">Sign Up</a>
+                                                </li>
                                             @else
                                                 <li class="nav-item join-now-btn">
-                                                <a class="nav-link" href="{{ route('portfolio.index') }}">My Dashboard</a>
+                                                    <a class="nav-link" href="{{ route('portfolio.index') }}">My
+                                                        Dashboard</a>
                                                 </li>
                                             @endguest
                                         </ul>
