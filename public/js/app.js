@@ -819,16 +819,23 @@ var map = '';
       zoom: 2,
       minZoom: 2
     });
-    var biggerSmaller;
-    map.on('load', function () {
-      var mapCanvas = document.getElementsByClassName('mapboxgl-canvas')[0];
-      var mapDiv = document.getElementById('newmap');
-      mapDiv.style.width = '100%';
-      mapCanvas.style.width = '100%';
-      mapCanvas.style.height = '100%';
-      mapDiv.style.height = '100%';
-      map.resize();
+    var nav = new mapboxgl.NavigationControl({
+      showCompass: false,
+      showZoom: true
     });
+    map.addControl(nav, 'top-right'); // var biggerSmaller;
+    //
+    // map.on('load', function () {
+    //   var mapCanvas = document.getElementsByClassName('mapboxgl-canvas')[0];
+    //   var mapDiv = document.getElementById('newmap');
+    //
+    //   mapDiv.style.width = '100%';
+    //   mapCanvas.style.width = '100%';
+    //   mapCanvas.style.height = '100%';
+    //   mapDiv.style.height = '100%';
+    //   map.resize();
+    // });
+
     this.categoryId = 1;
     this.getAssetCoordinates();
   },
@@ -87121,7 +87128,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "row", staticStyle: { "padding-top": "13px" } },
+    {
+      staticClass: "row",
+      staticStyle: { "padding-top": "13px", "min-height": "20rem" }
+    },
     [
       _c("div", { staticClass: "col-md-10" }, [
         _c(

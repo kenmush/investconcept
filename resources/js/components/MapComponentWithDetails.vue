@@ -1,5 +1,5 @@
 <template>
-  <div class="row" style="padding-top: 13px">
+  <div class="row" style="padding-top: 13px;min-height: 20rem">
     <div class="col-md-10">
       <div class="shadow"
            style="z-index:1 ;position: absolute;margin-top:80px; margin-left:26px; width:20rem;">
@@ -222,18 +222,24 @@ export default {
       zoom: 2,
       minZoom: 2,
     });
-    var biggerSmaller;
-
-    map.on('load', function () {
-      var mapCanvas = document.getElementsByClassName('mapboxgl-canvas')[0];
-      var mapDiv = document.getElementById('newmap');
-
-      mapDiv.style.width = '100%';
-      mapCanvas.style.width = '100%';
-      mapCanvas.style.height = '100%';
-      mapDiv.style.height = '100%';
-      map.resize();
+    var nav = new mapboxgl.NavigationControl({
+      showCompass: false,
+      showZoom: true
     });
+
+    map.addControl(nav, 'top-right')
+    // var biggerSmaller;
+    //
+    // map.on('load', function () {
+    //   var mapCanvas = document.getElementsByClassName('mapboxgl-canvas')[0];
+    //   var mapDiv = document.getElementById('newmap');
+    //
+    //   mapDiv.style.width = '100%';
+    //   mapCanvas.style.width = '100%';
+    //   mapCanvas.style.height = '100%';
+    //   mapDiv.style.height = '100%';
+    //   map.resize();
+    // });
     this.categoryId = 1;
     this.getAssetCoordinates();
   },
