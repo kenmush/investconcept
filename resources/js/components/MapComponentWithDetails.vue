@@ -72,6 +72,7 @@
   </div>
 </template>
 <script>
+import 'mapbox-gl/src/css/mapbox-gl.css'
 let mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 let map = '';
 export default {

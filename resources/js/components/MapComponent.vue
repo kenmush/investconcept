@@ -60,8 +60,7 @@
 
 <script>
 import 'mapbox-gl/src/css/mapbox-gl.css'
-import 'mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-in.svg'
-import 'mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-out.svg'
+
 let mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 let map = '';
 export default {

@@ -338,10 +338,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mapbox-gl/src/css/mapbox-gl.css */ "./node_modules/mapbox-gl/src/css/mapbox-gl.css");
 /* harmony import */ var mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var mapbox_gl_src_css_svg_mapboxgl_ctrl_zoom_in_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-in.svg */ "./node_modules/mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-in.svg");
-/* harmony import */ var mapbox_gl_src_css_svg_mapboxgl_ctrl_zoom_in_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(mapbox_gl_src_css_svg_mapboxgl_ctrl_zoom_in_svg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var mapbox_gl_src_css_svg_mapboxgl_ctrl_zoom_out_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-out.svg */ "./node_modules/mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-out.svg");
-/* harmony import */ var mapbox_gl_src_css_svg_mapboxgl_ctrl_zoom_out_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(mapbox_gl_src_css_svg_mapboxgl_ctrl_zoom_out_svg__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
@@ -402,8 +398,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
 
 
 var mapboxgl = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ "./node_modules/mapbox-gl/dist/mapbox-gl.js");
@@ -604,6 +598,8 @@ var map = '';
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mapbox-gl/src/css/mapbox-gl.css */ "./node_modules/mapbox-gl/src/css/mapbox-gl.css");
+/* harmony import */ var mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -677,6 +673,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
+
 var mapboxgl = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ "./node_modules/mapbox-gl/dist/mapbox-gl.js");
 
 var map = '';
@@ -52837,28 +52835,6 @@ var update = __webpack_require__(/*! ../../../style-loader/lib/addStyles.js */ "
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
-
-/***/ }),
-
-/***/ "./node_modules/mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-in.svg":
-/*!**********************************************************************!*\
-  !*** ./node_modules/mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-in.svg ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/vendor/mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-in.svg?0b972bc0aeeb5bb2abec12bcaf3e5fd3";
-
-/***/ }),
-
-/***/ "./node_modules/mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-out.svg":
-/*!***********************************************************************!*\
-  !*** ./node_modules/mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-out.svg ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/vendor/mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-out.svg?6a52a7aab97b1b05ceb76587ab13f97f";
 
 /***/ }),
 
