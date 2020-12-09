@@ -112,8 +112,27 @@ export default {
       axios.get(`/api/getCoordinates`).then(resp => {
         this.assets = resp.data;
         let ds = Object.keys(resp.data).map(function (datareturned, index) {
-          console.log( `hapa`);
-          console.log( Self.assets[datareturned]);
+          let assetURL = "";
+          if (Self.assets[datareturned].brand === null || Self.assets[datareturned].brand === "null") {
+            assetURL = Self.assets[datareturned].fullName
+            console.log(Self.assets[datareturned].fullName)
+          } else {
+            assetURL = Self.assets[datareturned].fullName
+          }
+          let image = `${url}/untapped/twowheeler.png`;
+          if (Self.assets[datareturned].category === 1) {
+            image = `${url}/untapped/twowheeler.png`
+          }
+          if (Self.assets[datareturned].category === 3) {
+            image = `${url}/untapped/rawmeter.png`
+          }
+          if (Self.assets[datareturned].category === 4) {
+            image = `${url}/untapped/irrigationmapicon.png`
+          }
+          if (Self.assets[datareturned].category === 2) {
+            image = `${url}/untapped/smartmeter.png`
+          }
+
           points.push({
             'type': 'Feature',
             'geometry': {
@@ -124,90 +143,68 @@ export default {
               ]
             },
             'properties': {
-              'title': Self.assets[datareturned].fullName,
-              'revenue': Self.assets[datareturned].revenue_returned,
-              'serial': Self.assets[datareturned].serial_number,
+              'title': assetURL,
+              'icon': image
             }
-          })
+          });
         });
 
-        let image = `${url}/untapped/twowheeler.png`;
-        if (this.categoryId === 1) {
-          image = `${url}/untapped/twowheeler.png`
-        }
-        if (this.categoryId === 3) {
-          image = `${url}/untapped/rawmeter.png`
-        }
-        if (this.categoryId === 4) {
-          image = `${url}/untapped/irrigationmapicon.png`
-        }
-        if (this.categoryId === 2) {
-          image = `${url}/untapped/smartmeter.png`
-        }
+        // let image = `${url}/untapped/rawmeter.png`;
+        // let image = `${url}/untapped/twowheeler.png`;
+        // if (this.categoryId === 1) {
+        //   image = `${url}/untapped/twowheeler.png`
+        // }
+        // if (this.categoryId === 3) {
+        //   image = `${url}/untapped/rawmeter.png`
+        // }
+        // if (this.categoryId === 4) {
+        //   image = `${url}/untapped/irrigationmapicon.png`
+        // }
+        // if (this.categoryId === 2) {
+        //   image = `${url}/untapped/smartmeter.png`
+        // }
+
         if (map.getLayer('points')) map.removeLayer('points');
         if (map.getSource('points')) map.removeSource('points');
         if (map.hasImage('custom-marker')) map.removeImage('custom-marker');
+        map.addSource('points', {
+          'type': 'geojson',
+          'data': {
+            'type': 'FeatureCollection',
+            'features': points
+          }
+        });
 
-        map.loadImage(
-            image,
-            function (error, image) {
-              if (error) {
-                throw error;
-              }
-              map.addImage('custom-marker', image);
-              map.addSource('points', {
-                'type': 'geojson',
-                'data': {
-                  'type': 'FeatureCollection',
-                  'features': points
-                }
-              });
+        map.on("styleimagemissing", e => {
+          console.log("loading missing image: " + e.id);
+          if (
+              e.id === `${url}/untapped/twowheeler.png` ||
+              e.id === `${url}/untapped/smartmeter.png` ||
+              e.id === `${url}/untapped/irrigationmapicon.png`
+          ) {
+            map.loadImage(e.id, (error, image) => {
+              if (error) throw error;
+              if (!map.hasImage(e.id)) map.addImage(e.id, image);
+            });
+          }
+        });
+        map.addLayer({
+          'id': 'points',
+          'type': 'symbol',
+          'source': 'points',
+          'layout': {
+            'icon-image': ['get', 'icon'],
+            'text-field': ['get', 'title'],
+            'text-font': [
+              'Open Sans Semibold',
+              'Arial Unicode MS Bold'
+            ],
+            'text-offset': [0, 1.25],
+            'text-anchor': 'top'
+          },
 
-              map.addLayer({
-                'id': 'points',
-                'type': 'symbol',
-                'source': 'points',
-                'layout': {
-                  'icon-image': 'custom-marker',
-// get the title name from the source's "title" property
-                  'text-field': ['get', 'title'],
-                  'text-font': [
-                    'Open Sans Semibold',
-                    'Arial Unicode MS Bold'
-                  ],
-                  'text-offset': [0, 1.25],
-                  'text-anchor': 'top'
-                }
-              });
-              map.on('click', 'points', function (e) {
-                let category = categoryAsset.categoryName;
-                var coordinates = e.features[0].geometry.coordinates.slice();
-                var description = e.features[0].properties.title;
-                var revenue = e.features[0].properties.revenue;
-                var serial = e.features[0].properties.serial;
+        });
 
-                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                  coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-                }
-
-                Self.description = description;
-                Self.category = category;
-                Self.revenue = revenue;
-                Self.serial = serial;
-              });
-
-
-// Change the cursor to a pointer when the mouse is over the places layer.
-              map.on('mouseenter', 'places', function () {
-                map.getCanvas().style.cursor = 'pointer';
-              });
-
-// Change it back to a pointer when it leaves.
-              map.on('mouseleave', 'places', function () {
-                map.getCanvas().style.cursor = '';
-              });
-            }
-        );
         this.loading = false;
       }).catch(err => {
         this.loading = false;
