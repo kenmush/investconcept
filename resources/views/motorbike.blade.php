@@ -26,10 +26,10 @@
 
                                         <p>{{ $assets['use_case'] }}</p>
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item d-flex px-0 justify-content-between">
-                                                <strong>Ticket</strong>
-                                                <span class="mb-0">{{ $assets['ticket'] }}</span>
-                                            </li>
+{{--                                            <li class="list-group-item d-flex px-0 justify-content-between">--}}
+{{--                                                <strong>Ticket</strong>--}}
+{{--                                                <span class="mb-0">{{ $assets['ticket'] }}</span>--}}
+{{--                                            </li>--}}
                                             <li class="list-group-item d-flex px-0 justify-content-between">
                                                 <strong>Return</strong>
                                                 <span class="mb-0">{{ $assets['return_percentage'] }}%</span>
