@@ -69,7 +69,7 @@
                     <div class="card-body p-4">
                         <div class="media ai-icon">
 									<span class="mr-3 bgl-primary text-primary">
-								<i style="    color: #FF8377;" class="fa fa-percent"></i>
+								<i style="    color: #FF8377;" class="fa fa-dollar"></i>
 									</span>
                             <div class="media-body">
                                 <p class="mb-0">Interest Earned</p>
@@ -188,7 +188,7 @@
                                     <th><strong>Asset Name</strong></th>
                                     <th><strong>Units</strong></th>
                                     <th><strong>Total Invested ($)</strong></th>
-                                    <th><strong>Interest Generated</strong></th>
+                                    <th><strong>Interest Generated ($)</strong></th>
                                     <th><strong>Duration</strong></th>
                                     <th><strong>Impact Multiplier</strong></th>
                                 </tr>
@@ -205,7 +205,7 @@
                                         </td>
                                         <td>{{$asset['units']}}</td>
                                         <td>{{$asset['amount_invested']}}</td>
-                                        <td>{{$asset['interest']}}%</td>
+                                        <td>{{$asset['interest']}}</td>
                                         <td>{{$asset['duration']}} Months</td>
                                         <td>{{$asset['leverage']}}</td>
                                         <td>
