@@ -2,11 +2,9 @@
   <div>
     <div
         style="z-index:1 ;
-        position: absolute;
-        margin-top:80px;
-        margin-left:26px;
-        min-height: 160px;
-         width:20rem;">
+        position: absolute;margin-top:80px;
+                            margin-left:26px;min-height:
+                            160px; width:20rem;">
       <div class="card ml-5">
         <div class="card-title">
         </div>
