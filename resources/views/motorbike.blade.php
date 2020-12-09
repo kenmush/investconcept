@@ -6,7 +6,8 @@
             <div class="col-sm-6 p-md-0">
                 <div class="welcome-text">
 
-                    <h4>{{ $assets['categoryName'] }}</h4>
+{{--                    <h4>{{ $assets['categoryName'] }}</h4>--}}
+                    <h4>Beneficiary</h4>
                     {{--                    <p class="mb-0">Your business dashboard template</p>--}}
                 </div>
             </div>
@@ -104,7 +105,7 @@
                                                         <h4 class=" untapped-heading">
                                                             {{ $beneficiary['firstName'] }}
                                                             {{ $beneficiary['middleName'] }}
-                                                            {{ $beneficiary['lastName'] }}
+{{--                                                            {{ $beneficiary['lastName'] }}--}}
                                                         </h4>
                                                         <p class="untapped-subtitle">
                                                             {{ $beneficiary['country'] }}
