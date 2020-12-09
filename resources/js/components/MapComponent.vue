@@ -97,17 +97,20 @@ export default {
             assetURL = Self.assets[datareturned].fullName
           }
           let image = `${url}/untapped/twowheeler.png`;
-          if (Self.assets[datareturned].category === 1) {
+          if (Self.assets[datareturned].category === 1
+          || Self.assets[datareturned].category === 3
+          || Self.assets[datareturned].category === 7
+          ) {
             image = `${url}/untapped/twowheeler.png`
           }
-          if (Self.assets[datareturned].category === 3) {
-            image = `${url}/untapped/rawmeter.png`
+          if (Self.assets[datareturned].category === 6) {
+            image = `${url}/untapped/community.png`
           }
-          if (Self.assets[datareturned].category === 4) {
-            image = `${url}/untapped/irrigationmapicon.png`
+          if (Self.assets[datareturned].category === 5) {
+            image = `${url}/untapped/mobileirrigation.png`
           }
           if (Self.assets[datareturned].category === 2) {
-            image = `${url}/untapped/smartmeter.png`
+            image = `${url}/untapped/community.png`
           }
 
           points.push({
@@ -125,22 +128,6 @@ export default {
             }
           });
         });
-
-        // let image = `${url}/untapped/rawmeter.png`;
-        // let image = `${url}/untapped/twowheeler.png`;
-        // if (this.categoryId === 1) {
-        //   image = `${url}/untapped/twowheeler.png`
-        // }
-        // if (this.categoryId === 3) {
-        //   image = `${url}/untapped/rawmeter.png`
-        // }
-        // if (this.categoryId === 4) {
-        //   image = `${url}/untapped/irrigationmapicon.png`
-        // }
-        // if (this.categoryId === 2) {
-        //   image = `${url}/untapped/smartmeter.png`
-        // }
-
         if (map.getLayer('points')) map.removeLayer('points');
         if (map.getSource('points')) map.removeSource('points');
         if (map.hasImage('custom-marker')) map.removeImage('custom-marker');
