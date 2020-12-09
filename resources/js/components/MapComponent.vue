@@ -59,6 +59,9 @@
 </template>
 
 <script>
+import 'mapbox-gl/src/css/mapbox-gl.css'
+import 'mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-in.svg'
+import 'mapbox-gl/src/css/svg/mapboxgl-ctrl-zoom-out.svg'
 let mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 let map = '';
 export default {
@@ -94,6 +97,20 @@ export default {
           } else {
             assetURL = Self.assets[datareturned].fullName
           }
+          let image = `${url}/untapped/twowheeler.png`;
+          if (Self.assets[datareturned].category === 1) {
+            image = `${url}/untapped/twowheeler.png`
+          }
+          if (Self.assets[datareturned].category === 3) {
+            image = `${url}/untapped/rawmeter.png`
+          }
+          if (Self.assets[datareturned].category === 4) {
+            image = `${url}/untapped/irrigationmapicon.png`
+          }
+          if (Self.assets[datareturned].category === 2) {
+            image = `${url}/untapped/smartmeter.png`
+          }
+
           points.push({
             'type': 'Feature',
             'geometry': {
@@ -104,20 +121,14 @@ export default {
               ]
             },
             'properties': {
-              'title':assetURL,
-              icon: {
-                iconUrl: `${url}/untapped/twowheeler.png`,
-                iconSize: [50, 50], // size of the icon
-                iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
-                popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
-                className: 'dot'
-              }
+              'title': assetURL,
+              'icon': image
             }
           });
         });
 
         // let image = `${url}/untapped/rawmeter.png`;
-        let image = `${url}/untapped/twowheeler.png`;
+        // let image = `${url}/untapped/twowheeler.png`;
         // if (this.categoryId === 1) {
         //   image = `${url}/untapped/twowheeler.png`
         // }
@@ -134,42 +145,44 @@ export default {
         if (map.getLayer('points')) map.removeLayer('points');
         if (map.getSource('points')) map.removeSource('points');
         if (map.hasImage('custom-marker')) map.removeImage('custom-marker');
+        map.addSource('points', {
+          'type': 'geojson',
+          'data': {
+            'type': 'FeatureCollection',
+            'features': points
+          }
+        });
 
-        map.loadImage(
-            image,
-            function (error, image) {
-              if (error) {
-                throw error;
-              }
-              map.addImage('custom-marker', image);
-              map.addSource('points', {
-                'type': 'geojson',
-                'data': {
-                  'type': 'FeatureCollection',
-                  'features': points
-                }
-              });
+        map.on("styleimagemissing", e => {
+          console.log("loading missing image: " + e.id);
+          if (
+              e.id === `${url}/untapped/twowheeler.png` ||
+              e.id === `${url}/untapped/smartmeter.png` ||
+              e.id === `${url}/untapped/irrigationmapicon.png`
+          ) {
+            map.loadImage(e.id, (error, image) => {
+              if (error) throw error;
+              if (!map.hasImage(e.id)) map.addImage(e.id, image);
+            });
+          }
+        });
+        map.addLayer({
+          'id': 'points',
+          'type': 'symbol',
+          'source': 'points',
+          'layout': {
+            'icon-image': ['get', 'icon'],
+            'text-field': ['get', 'title'],
+            'text-font': [
+              'Open Sans Semibold',
+              'Arial Unicode MS Bold'
+            ],
+            'text-offset': [0, 1.25],
+            'text-anchor': 'top'
+          },
 
-// Add a symbol layer
-              map.addLayer({
-                'id': 'points',
-                'type': 'symbol',
-                'source': 'points',
-                'layout': {
-                  'icon-image': 'custom-marker',
-// get the title name from the source's "title" property
-                  'text-field': ['get', 'title'],
-                  'text-font': [
-                    'Open Sans Semibold',
-                    'Arial Unicode MS Bold'
-                  ],
-                  'text-offset': [0, 1.25],
-                  'text-anchor': 'top'
-                },
+        });
 
-              });
-            }
-        );
         this.loading = false;
       }).catch(err => {
         this.loading = false;
@@ -229,7 +242,12 @@ export default {
       zoom: 2,
       minZoom: 2,
     });
-    map.resize();
+    var nav = new mapboxgl.NavigationControl({
+      showCompass: false,
+      showZoom: true
+    });
+
+    map.addControl(nav, 'top-right')
   },
   created() {
   }

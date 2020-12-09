@@ -47,9 +47,7 @@
                           </div>
                           <div class="col-12">
                             <a href="/register" class="btn btn-custom btn-block btn-lg"
-                               @click="showMotorbike"
-                               @mouseenter="showMotorbike"
-                               @mouseleave="disableCards"
+                             
                             >
                               Invest
                             </a>
@@ -78,7 +76,7 @@
                     </table>
                     <div class="row">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
-                         @mouseleave="disableCards">Invest</a>
+                         >Invest</a>
                     </div>
                   </div>
                 </div>
@@ -128,9 +126,9 @@
                           </div>
                           <div class="col-12">
                             <a href="/register" class="btn btn-custom btn-block btn-lg"
-                               @mouseenter="showSmartMeterCard"
-                               @mouseleave="disableCards"
-                               @click="showSmartMeterCard">
+
+                               
+                               >
                               Invest
                             </a>
                           </div>
@@ -158,7 +156,7 @@
                     </table>
                     <div class="row">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
-                         @mouseleave="disableCards">Invest</a>
+                         >Invest</a>
                     </div>
                   </div>
                 </div>
@@ -209,9 +207,8 @@
                           </div>
                           <div class="col-12">
                             <a href="/register" class="btn btn-custom btn-block btn-lg"
-                               @mouseenter="oviveCard"
-                               @mouseleave="disableCards"
-                               @click="oviveCard">
+
+                               >
                               Invest
                             </a>
                           </div>
@@ -239,7 +236,7 @@
                     </table>
                     <div class="row">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
-                         @mouseleave="disableCards">Invest</a>
+                         >Invest</a>
                     </div>
                   </div>
                 </div>
@@ -289,9 +286,8 @@
                           </div>
                           <div class="col-12">
                             <a href="/register" class="btn btn-custom btn-block btn-lg"
-                               @mouseenter="majimileleCard"
-                               @mouseleave="disableCards"
-                               @click="majimileleCard">
+
+                               >
                               Invest
                             </a>
                           </div>
@@ -319,7 +315,7 @@
                     </table>
                     <div class="row">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
-                         @mouseleave="disableCards">Invest</a>
+                         >Invest</a>
                     </div>
                   </div>
                 </div>
@@ -369,9 +365,8 @@
                           </div>
                           <div class="col-12">
                             <a href="/register" class="btn btn-custom btn-block btn-lg"
-                               @mouseenter="mvuapapCard"
-                               @mouseleave="disableCards"
-                               @click="mvuapapCard">
+
+                               >
                               Invest
                             </a>
                           </div>
@@ -399,7 +394,7 @@
                     </table>
                     <div class="row">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
-                         @mouseleave="disableCards">Invest</a>
+                         >Invest</a>
                     </div>
                   </div>
                 </div>
