@@ -150,20 +150,6 @@ export default {
           });
         });
 
-        // let image = `${url}/untapped/rawmeter.png`;
-        // let image = `${url}/untapped/twowheeler.png`;
-        // if (this.categoryId === 1) {
-        //   image = `${url}/untapped/twowheeler.png`
-        // }
-        // if (this.categoryId === 3) {
-        //   image = `${url}/untapped/rawmeter.png`
-        // }
-        // if (this.categoryId === 4) {
-        //   image = `${url}/untapped/irrigationmapicon.png`
-        // }
-        // if (this.categoryId === 2) {
-        //   image = `${url}/untapped/smartmeter.png`
-        // }
 
         if (map.getLayer('points')) map.removeLayer('points');
         if (map.getSource('points')) map.removeSource('points');
@@ -205,7 +191,33 @@ export default {
           },
 
         });
+        map.on('click', 'points', function (e) {
+          let category = categoryAsset.categoryName;
+          var coordinates = e.features[0].geometry.coordinates.slice();
+          var description = e.features[0].properties.title;
+          var revenue = e.features[0].properties.revenue;
+          var serial = e.features[0].properties.serial;
 
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+
+          Self.description = description;
+          Self.category = category;
+          Self.revenue = revenue;
+          Self.serial = serial;
+        });
+
+
+// Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', function () {
+          map.getCanvas().style.cursor = 'pointer';
+        });
+
+// Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function () {
+          map.getCanvas().style.cursor = '';
+        });
         this.loading = false;
       }).catch(err => {
         this.loading = false;
