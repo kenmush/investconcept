@@ -128,7 +128,7 @@
                     <div class="card-body p-4">
                         <div class="media ai-icon">
 									<span class="mr-3 bgl-primary text-primary">
-										 <i style="    color: #FF8377;" class="fa fa-money"></i>
+										 <i style="    color: #FF8377;" class="fa fa-dollar"></i>
 									</span>
                             <div class="media-body">
                                 <p class="mb-0">Revenues created for entrepreneur's</p>
