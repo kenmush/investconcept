@@ -96,7 +96,6 @@
                                 <div class="row">
                                     @foreach($beneficiaries as $beneficiary)
                                         <div class="col-md-3 shadow-inner shadow-outline">
-                                            <a href="{{ route('user-profile.show',['Joroh']) }}">
                                                 <div class="card" style="border-radius: 1rem">
                                                     <img class="card-img-top"
                                                          src="{{ config('investordashboard.media_path').$beneficiary['avatar'] }}"
@@ -112,7 +111,6 @@
                                                         </p>
                                                     </div>
                                                 </div>
-                                            </a>
                                         </div>
                                     @endforeach
                                 </div>
