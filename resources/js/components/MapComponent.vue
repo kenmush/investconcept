@@ -1,9 +1,12 @@
 <template>
   <div>
     <div
-        style="z-index:1 ;position: absolute;margin-top:80px;
-                            margin-left:26px;height:
-                            160px; width:20rem;">
+        style="z-index:1 ;
+        position: absolute;
+        margin-top:80px;
+        margin-left:26px;
+        min-height: 160px;
+         width:20rem;">
       <div class="card ml-5">
         <div class="card-title">
         </div>
@@ -98,8 +101,8 @@ export default {
           }
           let image = `${url}/untapped/twowheeler.png`;
           if (Self.assets[datareturned].category === 1
-          || Self.assets[datareturned].category === 3
-          || Self.assets[datareturned].category === 7
+              || Self.assets[datareturned].category === 3
+              || Self.assets[datareturned].category === 7
           ) {
             image = `${url}/untapped/twowheeler.png`
           }

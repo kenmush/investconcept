@@ -167,6 +167,9 @@ export default {
           if (
               e.id === `${url}/untapped/twowheeler.png` ||
               e.id === `${url}/untapped/smartmeter.png` ||
+              e.id === `${url}/untapped/community.png` ||
+              e.id === `${url}/untapped/emotorbikes.png` ||
+              e.id === `${url}/untapped/mobileirrigation.png` ||
               e.id === `${url}/untapped/irrigationmapicon.png`
           ) {
             map.loadImage(e.id, (error, image) => {
