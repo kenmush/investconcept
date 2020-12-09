@@ -95,7 +95,7 @@
                                 <p class="mb-0">Balance available to withdraw</p>
                                 <h3 class="mb-0 text-black"><span
                                             class="counter ml-0">{{ $stats['total_balance'] }}</span></h3>
-                                <small>24 MONTHS LEFT</small>
+                                <small>16 MONTHS TO MATURITY</small>
                             </div>
                         </div>
                     </div>
