@@ -203,11 +203,11 @@
                                     <td>
                                         <strong>TOTAL</strong>
                                     </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><strong>{{ $stats['total_units'] ?? '' }}</strong></td>
+                                    <td><strong>{{ $stats['total_invested'] }}</strong></td>
+                                    <td><strong>{{ $stats['total_interest'] }}</strong></td>
+                                    <td><strong>{{ $stats['total_revenue'] }}</strong></td>
+                                    <td><strong>{{ $stats['total_leverage'] }}</strong></td>
                                 </tr>
                                 @foreach($tableAssets as $asset)
                                     <tr>
