@@ -348,59 +348,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 var mapboxgl = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ "./node_modules/mapbox-gl/dist/mapbox-gl.js");
@@ -86920,156 +86867,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      {
-        staticStyle: {
-          "z-index": "1",
-          position: "absolute",
-          "margin-top": "80px",
-          "margin-left": "26px",
-          "min-height": "160px",
-          width: "20rem"
-        }
-      },
-      [
-        _c("div", { staticClass: "card ml-5" }, [
-          _c("div", { staticClass: "card-title" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "type" } }, [_vm._v("Type ")]),
-              _vm._v(" "),
-              _c(
-                "select",
-                {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.categoryId,
-                      expression: "categoryId"
-                    }
-                  ],
-                  staticClass: "form-control form-control-sm",
-                  attrs: {
-                    type: "text",
-                    id: "type",
-                    "aria-describedby": "type-help",
-                    required: ""
-                  },
-                  on: {
-                    change: [
-                      function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.categoryId = $event.target.multiple
-                          ? $$selectedVal
-                          : $$selectedVal[0]
-                      },
-                      _vm.getAssetCoordinates
-                    ]
-                  }
-                },
-                [
-                  _c("option", { attrs: { value: "type" } }, [_vm._v("All")]),
-                  _vm._v(" "),
-                  _vm._l(_vm.categories, function(type) {
-                    return _c("option", { domProps: { value: type.id } }, [
-                      _vm._v(_vm._s(type["categoryName"]))
-                    ])
-                  })
-                ],
-                2
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group mt-3" }, [
-                _c("label", { attrs: { for: "country" } }, [
-                  _vm._v("Country ")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.country,
-                        expression: "country"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    class: [
-                      _vm.errors.country ? "is-invalid" : "",
-                      !_vm.errors.country && Object.keys(_vm.errors).length > 1
-                        ? "is-valid"
-                        : ""
-                    ],
-                    attrs: {
-                      type: "text",
-                      id: "country",
-                      "aria-describedby": "country-help",
-                      required: ""
-                    },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.country = $event.target.multiple
-                          ? $$selectedVal
-                          : $$selectedVal[0]
-                      }
-                    }
-                  },
-                  [
-                    _c("option", { attrs: { value: "Kenya", selected: "" } }, [
-                      _vm._v("Kenya")
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _vm.errors.country
-                  ? _c("div", { staticClass: "invalid-feedback" }, [
-                      _vm._v(
-                        "\n              " +
-                          _vm._s(_vm.errors.country.toString()) +
-                          "\n            "
-                      )
-                    ])
-                  : _vm._e()
-              ])
-            ])
-          ])
-        ])
-      ]
-    ),
-    _vm._v(" "),
-    _c("div", {
-      staticStyle: {
-        width: "100%",
-        height: "549px",
-        background: "white",
-        "margin-bottom": "61px"
-      },
-      attrs: { id: "maps" }
-    })
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", {
+        staticStyle: {
+          width: "100%",
+          height: "549px",
+          background: "white",
+          "margin-bottom": "61px"
+        },
+        attrs: { id: "maps" }
+      })
+    ])
+  }
+]
 render._withStripped = true
 
 
