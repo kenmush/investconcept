@@ -20,7 +20,7 @@ jobs:
             sudo npm run production
             sudo php artisan config:cache
             sudo php artisan queue:restart
-            sudo php artisan migrate:fresh
+            sudo php artisan migrate:fresh --force
           host: ${{ secrets.HOST }}
           user: ubuntu
           key: ${{ secrets.PRIVATE_KEY}}
