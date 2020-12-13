@@ -1,16 +1,13 @@
 <template>
   <div>
-
     <div
         style="width:100%;height: 549px;background: white;margin-bottom:61px"
         id="maps">
     </div>
   </div>
 </template>
-
 <script>
 import 'mapbox-gl/src/css/mapbox-gl.css'
-
 let mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 let map = '';
 export default {
