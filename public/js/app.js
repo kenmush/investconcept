@@ -378,6 +378,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 var mapboxgl = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ "./node_modules/mapbox-gl/dist/mapbox-gl.js");
@@ -86712,53 +86714,11 @@ var render = function() {
                 _vm._v(" "),
                 _vm._m(1),
                 _vm._v(" "),
-                _c("div", { staticStyle: { "border-top": "57px" } }, [
-                  _c(
-                    "h3",
-                    {
-                      staticStyle: {
-                        font: "Bold 16px/24px Roboto",
-                        color: "#A2A2A2"
-                      }
-                    },
-                    [_vm._v("Return")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "p",
-                    {
-                      staticStyle: {
-                        font: "Bold 20px/24px Roboto",
-                        color: "#565C59"
-                      }
-                    },
-                    [_vm._v(_vm._s(_vm.revenue) + "%")]
-                  )
-                ]),
+                _vm._m(2),
                 _vm._v(" "),
-                _c("div", { staticStyle: { "border-top": "57px" } }, [
-                  _c(
-                    "h3",
-                    {
-                      staticStyle: {
-                        font: "Bold 16px/24px Roboto",
-                        color: "#A2A2A2"
-                      }
-                    },
-                    [_vm._v("Serial Number")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "p",
-                    {
-                      staticStyle: {
-                        font: "Bold 20px/24px Roboto",
-                        color: "#565C59"
-                      }
-                    },
-                    [_vm._v(_vm._s(_vm.serial))]
-                  )
-                ])
+                _vm._m(3),
+                _vm._v(" "),
+                _vm._m(4)
               ])
             ])
           ]
@@ -86804,6 +86764,22 @@ var staticRenderFns = [
       _c(
         "h3",
         { staticStyle: { font: "Bold 16px/24px Roboto", color: "#A2A2A2" } },
+        [_vm._v("Asset Owner Name")]
+      ),
+      _vm._v(" "),
+      _c("p", {
+        staticStyle: { font: "Bold 20px/24px Roboto", color: "#565C59" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticStyle: { "border-top": "57px" } }, [
+      _c(
+        "h3",
+        { staticStyle: { font: "Bold 16px/24px Roboto", color: "#A2A2A2" } },
         [_vm._v("Country")]
       ),
       _vm._v(" "),
@@ -86812,6 +86788,38 @@ var staticRenderFns = [
         { staticStyle: { font: "Bold 20px/24px Roboto", color: "#565C59" } },
         [_vm._v("Kenya")]
       )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticStyle: { "border-top": "57px" } }, [
+      _c(
+        "h3",
+        { staticStyle: { font: "Bold 16px/24px Roboto", color: "#A2A2A2" } },
+        [_vm._v("Partner")]
+      ),
+      _vm._v(" "),
+      _c("p", {
+        staticStyle: { font: "Bold 20px/24px Roboto", color: "#565C59" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticStyle: { "border-top": "57px" } }, [
+      _c(
+        "h3",
+        { staticStyle: { font: "Bold 16px/24px Roboto", color: "#A2A2A2" } },
+        [_vm._v("Activity")]
+      ),
+      _vm._v(" "),
+      _c("p", {
+        staticStyle: { font: "Bold 20px/24px Roboto", color: "#565C59" }
+      })
     ])
   }
 ]

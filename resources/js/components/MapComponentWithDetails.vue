@@ -19,18 +19,20 @@
               <p style="font: Bold 20px/24px Roboto;color: #565C59;">{{ description}}</p>
             </div>
             <div style="border-top: 57px">
+              <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Asset Owner Name</h3>
+              <p style="font: Bold 20px/24px Roboto;color: #565C59;"></p>
+            </div>
+            <div style="border-top: 57px">
               <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Country</h3>
               <p style="font: Bold 20px/24px Roboto;color: #565C59;">Kenya</p>
             </div>
             <div style="border-top: 57px">
-              <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Return</h3>
-              <p style="font: Bold 20px/24px Roboto;color: #565C59;">{{revenue}}%</p>
+              <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Partner</h3>
+              <p style="font: Bold 20px/24px Roboto;color: #565C59;"></p>
             </div>
             <div style="border-top: 57px">
-              <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Serial Number</h3>
-              <p style="font: Bold 20px/24px Roboto;color: #565C59;">{{ serial}}</p>
-              <!--            <img class=" rounded-circle" src=""-->
-              <!--                 height="75px" width="75px">-->
+              <h3 style="font: Bold 16px/24px Roboto;color: #A2A2A2;">Activity</h3>
+              <p style="font: Bold 20px/24px Roboto;color: #565C59;"></p>
             </div>
           </div>
         </div>
