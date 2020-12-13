@@ -192,13 +192,23 @@
                                 <tr>
                                     <th><strong>Asset Name</strong></th>
                                     <th><strong>Units Bought</strong></th>
-                                    <th><strong>Total Invested ($)</strong></th>
+                                    <th><strong>Total Invested</strong></th>
                                     <th><strong>Interest Earned ($)</strong></th>
                                     <th><strong>Revenue for Entrepreneurs</strong></th>
                                     <th><strong>Impact Multiplier</strong></th>
                                 </tr>
                                 </thead>
                                 <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>TOTAL</strong>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
                                 @foreach($tableAssets as $asset)
                                     <tr>
                                         <td>

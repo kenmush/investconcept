@@ -109,10 +109,10 @@
                             <a style="background-color: #cbe4ef" class="nav-link" href="#" role="button"
                                data-toggle="dropdown">
                                 <div class="header-info">
-                                    <span style="color:black;">Hello,
+                                    <span style="color:black;">
                                         <strong style="color:black;">
 
-                                            {{ Str::words(auth()->user()->name,1) }}
+                                            {{ Str::words(auth()->user()->name,2) }}
                                         </strong>
                                     </span>
                                 </div>
