@@ -191,10 +191,10 @@
                                 <thead>
                                 <tr>
                                     <th><strong>Asset Name</strong></th>
-                                    <th><strong>Units</strong></th>
+                                    <th><strong>Units Bought</strong></th>
                                     <th><strong>Total Invested ($)</strong></th>
-                                    <th><strong>Interest Generated ($)</strong></th>
-                                    <th><strong>Duration</strong></th>
+                                    <th><strong>Interest Earned ($)</strong></th>
+                                    <th><strong>Revenue for Entrepreneurs</strong></th>
                                     <th><strong>Impact Multiplier</strong></th>
                                 </tr>
                                 </thead>
@@ -211,7 +211,7 @@
                                         <td>{{$asset['units']}}</td>
                                         <td>{{$asset['amount_invested']}}</td>
                                         <td>{{$asset['interest']}}</td>
-                                        <td>{{$asset['duration']}} Months</td>
+                                        <td>{{number_format($asset['revenue'],2)}}</td>
                                         <td>{{$asset['leverage']}}</td>
                                         <td>
                                             {{--                                            <a href="{{ route('portfolio.edit',$asset['id']) }}">--}}

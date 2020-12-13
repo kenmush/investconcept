@@ -50,13 +50,14 @@ class RegisterController extends Controller
     {
         $this->validator($request->all())->validate();
         event(new Registered($user = $this->create($request->all())));
-        Auth::login($user);
+//        Auth::login($user);
 //        $this->guard()->login($user);
 
         if ($response = $this->registered($request, $user)) {
             return $response;
         }
 
+        return view('auth.registered');
         return $request->wantsJson()
                 ? new JsonResponse([], 201)
                 : redirect($this->redirectPath());
