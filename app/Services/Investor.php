@@ -134,6 +134,10 @@ class Investor
     {
         return $this->request('POST', 'portal/asset/category/creation/', $data);
     }
+    public function changepassword($data,$apiid)
+    {
+        return $this->request('POST', 'portal/investor/changePassword/'.$apiid.'/', $data);
+    }
 
     public function updateInvestor($data, $investor)
     {

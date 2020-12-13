@@ -16,6 +16,7 @@ class Alteruserstable extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('api_id')->nullable();
             $table->string('avatar')->nullable();
+            $table->boolean('first_login')->nullable();
         });
     }
 

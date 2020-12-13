@@ -2,22 +2,23 @@
 
 use App\Asset;
 use App\Http\Controllers\AllassetController;
+use App\Http\Controllers\ChangePasswordController;
 use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('test/{investmentid}', function ($investmentId) {
- return   (new Investor())->getCategoryInvestments($investmentId);
+    return (new Investor())->getCategoryInvestments($investmentId);
 });
 
 
 Route::get('/', function () {
     $assets = (new Investor())->getAssetCategories();
     $landingPageData = collect((new Investor())->getLandingPageData());
-    return view('index', compact('assets','landingPageData'));
+    return view('index', compact('assets', 'landingPageData'));
 });
 
-Route::group(['prefix' => 'assets', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'assets', 'middleware' => ['auth', 'changepassword']], function () {
 
     Route::resource('portfolio', 'PortfolioController');
 
@@ -43,7 +44,7 @@ Route::group(['prefix' => 'assets', 'middleware' => ['auth']], function () {
 Route::group(['prefix' => 'administrate', 'middleware' => ['auth']], function () {
 
     Route::resource('herosection', 'LandingpageController');
-    Route::get('/manageasset/{id?}/{investor?}',[AllassetController::class,'showforUse']);
+    Route::get('/manageasset/{id?}/{investor?}', [AllassetController::class, 'showforUse']);
     Route::resource('investors', 'Investors');
     Route::resource('investors', 'Investors');
 
@@ -60,5 +61,6 @@ Route::get('/contactus', function () {
 
 })->name('contactus');
 
-//Auth::routes(['verify' => true]);
+Route::get('update-your-password', 'ChangePasswordController')->name('changepassword');
+Route::post('resetpassword', 'ResetPassword')->name('resetpassword');
 Auth::routes();
