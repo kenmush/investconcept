@@ -5,10 +5,10 @@
         <div class="text-center">
           <p class="invest">If I Invest
             <span class="orangeinput needstext">$</span><span style="min-width: 20px"
-                  class="orangeinput needstext"
-                  onkeypress="return (this.innerText.length <= 6)"
-                  contenteditable="true"
-                  @input="onInput">100000</span>
+                                                              class="orangeinput needstext"
+                                                              onkeypress="return (this.innerText.length <= 6)"
+                                                              contenteditable="true"
+                                                              @input="onInput">100000</span>
             Now
           </p>
           <p class="invest"> In
@@ -286,63 +286,18 @@ export default {
       this.calculateImpact();
     },
     calculateImpact() {
-      let _self = this;
-      this.loading = true;
-      this.calculations = false;
-      setTimeout(function () {
-        _self.timeToRepay = 1.5;
-        _self.batch = Math.round(_self.years / _self.timeToRepay);
-        let annualReturnForInvestors = 9;
+      /* Revenue*/
+      let durationofInvestment = this.years;
+      let annualAverage = 2.5;
+      let annualRevenueCreated = this.amountInvested * annualAverage;
+      let revenue = durationofInvestment * annualRevenueCreated;
+      /* Revenue*/
 
-        let motorbikePrice = 1000;
-        let waterATMPrice = 10000;
-        let trailerPrice = 500;
-        let numberofAssets = 3;
-
-        let motorBikeLeverage = 3.6;
-        let ATMLeverage = 1.2;
-        let trailerLeverage = 3.6;
-
-        let motorBikeAnnualRevenue = 3600;
-        let atmAnnualRevenue = 12000;
-        let trailerAnnualRevenue = 1800;
-
-        let motorbikesPerYear = ((_self.amountInvested / numberofAssets) / motorbikePrice);
-        let atmPerYear = ((_self.amountInvested / numberofAssets) / waterATMPrice);
-        let trailerperYear = ((_self.amountInvested / numberofAssets) / trailerPrice);
-
-        let totalRevenueMotorbike = motorbikesPerYear * motorBikeAnnualRevenue * _self.years + motorbikesPerYear
-            * motorBikeAnnualRevenue * 3 + motorbikesPerYear * motorBikeAnnualRevenue * _self.timeToRepay;
-        let totalATMRevenue = atmPerYear * atmAnnualRevenue * _self.years + atmPerYear
-            * atmAnnualRevenue * 3 + atmPerYear * atmAnnualRevenue * _self.timeToRepay;
-        let trailerATMRevenue = trailerperYear * trailerAnnualRevenue * _self.years + trailerperYear
-            * trailerAnnualRevenue * 3 + trailerperYear * trailerAnnualRevenue * _self.timeToRepay;
-
-        /* Total Revenue*/
-        _self.impact = _self.nFormatter(totalRevenueMotorbike + totalATMRevenue + trailerATMRevenue, 2);
-        _self.motorbikeReturn = totalRevenueMotorbike;
-        _self.atmReturn = totalATMRevenue;
-        _self.trailerReturn = trailerATMRevenue;
-        _self.socialReturn = (totalRevenueMotorbike + totalATMRevenue + trailerATMRevenue) / _self.amountInvested;
-        /* Overall Return*/
-        _self.overallreturn = (_self.amountInvested * annualReturnForInvestors * _self.years) / _self.amountInvested;
-        /* Overall Return*/
-        _self.loading = false;
-        _self.calculations = true;
-
-        /* Total Numbers*/
-        _self.motorbikes = Math.round((((_self.amountInvested / 3) / motorbikePrice) * _self.batch));
-        _self.wateratm = Math.round((((_self.amountInvested / 3) / waterATMPrice) * _self.batch));
-        _self.trailer = Math.round(((_self.amountInvested / 3) / trailerPrice) * _self.batch);
-        let socialImpact = (((_self.amountInvested / 3) / 500) * 1800) + (((_self.amountInvested / 3) / 1000) * 12000) +
-            (((_self.amountInvested / 3) / 1000) *
-                3600)
-        let addition = (_self.motorbikes + _self.wateratm + _self.trailer);
-        _self.entreprenuars = Math.round(addition);
-        _self.investmentreturn = Math.round(
-            _self.amountInvested * (1 + (annualReturnForInvestors / 100)) ** _self.years
-        );
-      }, 1000);
+      /* Number of entreprenuars*/
+      let averagePerBatch;
+      let entreprenuarsPerBatch = this.amountInvested * averagePerBatch;
+      let numberOfEntreprenuars = entreprenuarsPerBatch * numberofBatches;
+      /* Number of entreprenuars*/
     }
   },
   watch: {
@@ -505,6 +460,7 @@ export default {
   font-weight: bold;
   font-size: 14px;
 }
+
 .k {
   color: black;
 }

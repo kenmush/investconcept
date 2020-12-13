@@ -327,255 +327,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponent.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapComponent.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mapbox-gl/src/css/mapbox-gl.css */ "./node_modules/mapbox-gl/src/css/mapbox-gl.css");
-/* harmony import */ var mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-var mapboxgl = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ "./node_modules/mapbox-gl/dist/mapbox-gl.js");
-
-var map = '';
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      categoryId: 'type',
-      errors: '',
-      country: 'Kenya',
-      returns: '',
-      assets: '',
-      loading: false
-    };
-  },
-  props: {
-    categories: {
-      type: Object | Array,
-      "default": {}
-    }
-  },
-  methods: {
-    getAssetCoordinates: function getAssetCoordinates() {
-      var _this = this;
-
-      this.loading = true;
-      var url = "https://invest.untapped-inc.com";
-      var points = [];
-      var Self = this;
-      axios.get("/api/allAssets").then(function (resp) {
-        _this.assets = resp.data;
-        var ds = Object.keys(resp.data).map(function (datareturned, index) {
-          var assetURL = "";
-
-          if (Self.assets[datareturned].brand === null || Self.assets[datareturned].brand === "null") {
-            assetURL = Self.assets[datareturned].fullName;
-            console.log(Self.assets[datareturned].fullName);
-          } else {
-            assetURL = Self.assets[datareturned].fullName;
-          }
-
-          var image = "".concat(url, "/untapped/twowheeler.png");
-
-          if (Self.assets[datareturned].category === 1 || Self.assets[datareturned].category === 3 || Self.assets[datareturned].category === 7) {
-            image = "".concat(url, "/untapped/twowheeler.png");
-          }
-
-          if (Self.assets[datareturned].category === 6) {
-            image = "".concat(url, "/untapped/community.png");
-          }
-
-          if (Self.assets[datareturned].category === 5) {
-            image = "".concat(url, "/untapped/mobileirrigation.png");
-          }
-
-          if (Self.assets[datareturned].category === 2) {
-            image = "".concat(url, "/untapped/community.png");
-          }
-
-          points.push({
-            'type': 'Feature',
-            'geometry': {
-              'type': 'Point',
-              'coordinates': [Self.assets[datareturned].longitude, Self.assets[datareturned].latitude]
-            },
-            'properties': {
-              'title': assetURL,
-              'icon': image
-            }
-          });
-        });
-        if (map.getLayer('points')) map.removeLayer('points');
-        if (map.getSource('points')) map.removeSource('points');
-        if (map.hasImage('custom-marker')) map.removeImage('custom-marker');
-        map.addSource('points', {
-          'type': 'geojson',
-          'data': {
-            'type': 'FeatureCollection',
-            'features': points
-          }
-        });
-        map.on("styleimagemissing", function (e) {
-          console.log("loading missing image: " + e.id);
-
-          if (e.id === "".concat(url, "/untapped/twowheeler.png") || e.id === "".concat(url, "/untapped/smartmeter.png") || e.id === "".concat(url, "/untapped/community.png") || e.id === "".concat(url, "/untapped/emotorbikes.png") || e.id === "".concat(url, "/untapped/mobileirrigation.png") || e.id === "".concat(url, "/untapped/irrigationmapicon.png")) {
-            map.loadImage(e.id, function (error, image) {
-              if (error) throw error;
-              if (!map.hasImage(e.id)) map.addImage(e.id, image);
-            });
-          }
-        });
-        map.addLayer({
-          'id': 'points',
-          'type': 'symbol',
-          'source': 'points',
-          'layout': {
-            'icon-image': ['get', 'icon'],
-            'text-field': ['get', 'title'],
-            'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 1.25],
-            'text-anchor': 'top'
-          }
-        });
-        _this.loading = false;
-      })["catch"](function (err) {
-        _this.loading = false;
-      });
-    },
-    getCoordinates: function getCoordinates() {
-      var geojson = [{
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [-77.031952, 38.913184]
-        },
-        properties: {
-          icon: {
-            iconUrl: 'https://www.mapbox.com/mapbox.js/assets/images/astronaut1.png',
-            iconSize: [50, 50],
-            // size of the icon
-            iconAnchor: [25, 25],
-            // point of the icon which will correspond to marker's location
-            popupAnchor: [0, -25],
-            // point from which the popup should open relative to the iconAnchor
-            className: 'dot'
-          }
-        }
-      }, {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [-122.413682, 37.775408]
-        },
-        properties: {
-          icon: {
-            iconUrl: 'https://www.mapbox.com/mapbox.js/assets/images/astronaut2.png',
-            iconSize: [50, 50],
-            // size of the icon
-            iconAnchor: [25, 25],
-            // point of the icon which will correspond to marker's location
-            popupAnchor: [0, -25],
-            // point from which the popup should open relative to the iconAnchor
-            className: 'dot'
-          }
-        }
-      }];
-      map.on('layeradd', function (e) {
-        var marker = e.layer,
-            feature = marker.feature;
-        marker.setIcon(L.icon(feature.properties.icon));
-      });
-      map.setGeoJSON(geojson);
-      map.scrollWheelZoom.disable();
-    }
-  },
-  mounted: function mounted() {
-    this.getAssetCoordinates();
-    mapboxgl.accessToken = 'pk.eyJ1IjoibXV0aXN5YSIsImEiOiJja2JsN21kejExNjd5MnNvNThyYmNybTNhIn0.BmObv_gTFqLmuc-VObwKYw';
-    map = new mapboxgl.Map({
-      container: 'maps',
-      style: 'mapbox://styles/mapbox/light-v10',
-      center: [-2.522805, 27.039787],
-      zoom: 2,
-      minZoom: 2
-    });
-    var nav = new mapboxgl.NavigationControl({
-      showCompass: false,
-      showZoom: true
-    });
-    map.addControl(nav, 'top-right');
-  },
-  created: function created() {}
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponentWithDetails.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapComponentWithDetails.vue?vue&type=script&lang=js& ***!
@@ -587,39 +338,6 @@ var map = '';
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mapbox-gl/src/css/mapbox-gl.css */ "./node_modules/mapbox-gl/src/css/mapbox-gl.css");
 /* harmony import */ var mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mapbox_gl_src_css_mapbox_gl_css__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -1515,10 +1233,6 @@ __webpack_require__.r(__webpack_exports__);
       loading: false
     };
   },
-  created: function created() {
-    console.log("logging text");
-    console.log(document.getElementById("yearlength").textContent);
-  },
   mounted: function mounted() {
     if (document.getElementById("yearlength").textContent === "") {
       document.getElementById("yearlength").innerHTML = 0;
@@ -1592,7 +1306,7 @@ __webpack_require__.r(__webpack_exports__);
       setTimeout(function () {
         _self.timeToRepay = 1.5;
         _self.batch = Math.round(_self.years / _self.timeToRepay);
-        var annualReturnForInvestors = 8;
+        var annualReturnForInvestors = 9;
         var motorbikePrice = 1000;
         var waterATMPrice = 10000;
         var trailerPrice = 500;
@@ -86938,176 +86652,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponent.vue?vue&type=template&id=2f302b28&":
-/*!***************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapComponent.vue?vue&type=template&id=2f302b28& ***!
-  \***************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      {
-        staticStyle: {
-          "z-index": "1",
-          position: "absolute",
-          "margin-top": "80px",
-          "margin-left": "26px",
-          width: "20rem"
-        }
-      },
-      [
-        _c("div", { staticClass: "card ml-5" }, [
-          _c("div", { staticClass: "card-title" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "type" } }, [_vm._v("Type ")]),
-              _vm._v(" "),
-              _c(
-                "select",
-                {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.categoryId,
-                      expression: "categoryId"
-                    }
-                  ],
-                  staticClass: "form-control form-control-sm",
-                  attrs: {
-                    type: "text",
-                    id: "type",
-                    "aria-describedby": "type-help",
-                    required: ""
-                  },
-                  on: {
-                    change: [
-                      function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.categoryId = $event.target.multiple
-                          ? $$selectedVal
-                          : $$selectedVal[0]
-                      },
-                      _vm.getAssetCoordinates
-                    ]
-                  }
-                },
-                [
-                  _c("option", { attrs: { value: "type" } }, [_vm._v("All")]),
-                  _vm._v(" "),
-                  _vm._l(_vm.categories, function(type) {
-                    return _c("option", { domProps: { value: type.id } }, [
-                      _vm._v(_vm._s(type["categoryName"]))
-                    ])
-                  })
-                ],
-                2
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group mt-3" }, [
-                _c("label", { attrs: { for: "country" } }, [
-                  _vm._v("Country ")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.country,
-                        expression: "country"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    class: [
-                      _vm.errors.country ? "is-invalid" : "",
-                      !_vm.errors.country && Object.keys(_vm.errors).length > 1
-                        ? "is-valid"
-                        : ""
-                    ],
-                    attrs: {
-                      type: "text",
-                      id: "country",
-                      "aria-describedby": "country-help",
-                      required: ""
-                    },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.country = $event.target.multiple
-                          ? $$selectedVal
-                          : $$selectedVal[0]
-                      }
-                    }
-                  },
-                  [
-                    _c("option", { attrs: { value: "Kenya", selected: "" } }, [
-                      _vm._v("Kenya")
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _vm.errors.country
-                  ? _c("div", { staticClass: "invalid-feedback" }, [
-                      _vm._v(
-                        "\n              " +
-                          _vm._s(_vm.errors.country.toString()) +
-                          "\n            "
-                      )
-                    ])
-                  : _vm._e()
-              ])
-            ])
-          ])
-        ])
-      ]
-    ),
-    _vm._v(" "),
-    _c("div", {
-      staticStyle: {
-        width: "100%",
-        height: "549px",
-        background: "white",
-        "margin-bottom": "61px"
-      },
-      attrs: { id: "maps" }
-    })
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponentWithDetails.vue?vue&type=template&id=3ff8a6c0&":
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapComponentWithDetails.vue?vue&type=template&id=3ff8a6c0& ***!
@@ -87130,160 +86674,7 @@ var render = function() {
       staticStyle: { "padding-top": "13px", "min-height": "20rem" }
     },
     [
-      _c("div", { staticClass: "col-md-10" }, [
-        _c(
-          "div",
-          {
-            staticClass: "shadow",
-            staticStyle: {
-              "z-index": "1",
-              position: "absolute",
-              "margin-top": "80px",
-              "margin-left": "26px",
-              width: "20rem"
-            }
-          },
-          [
-            _c("div", { staticClass: "card" }, [
-              _c("div", { staticClass: "card-title" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "type" } }, [_vm._v("Type")]),
-                  _vm._v(" "),
-                  _c(
-                    "select",
-                    {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.categoryId,
-                          expression: "categoryId"
-                        }
-                      ],
-                      staticClass: "form-control form-control-sm",
-                      attrs: {
-                        type: "text",
-                        id: "type",
-                        "aria-describedby": "type-help",
-                        required: ""
-                      },
-                      on: {
-                        change: [
-                          function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.categoryId = $event.target.multiple
-                              ? $$selectedVal
-                              : $$selectedVal[0]
-                          },
-                          _vm.getAssetCoordinates
-                        ]
-                      }
-                    },
-                    [
-                      _c("option", { attrs: { value: "type", selected: "" } }, [
-                        _vm._v("All")
-                      ]),
-                      _vm._v(" "),
-                      _vm._l(_vm.categories, function(type) {
-                        return _c("option", { domProps: { value: type.id } }, [
-                          _vm._v(_vm._s(type["categoryName"]))
-                        ])
-                      })
-                    ],
-                    2
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group mt-3" }, [
-                    _c("label", { attrs: { for: "country" } }, [
-                      _vm._v("Country ")
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.country,
-                            expression: "country"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: [
-                          _vm.errors.country ? "is-invalid" : "",
-                          !_vm.errors.country &&
-                          Object.keys(_vm.errors).length > 1
-                            ? "is-valid"
-                            : ""
-                        ],
-                        attrs: {
-                          type: "text",
-                          id: "country",
-                          "aria-describedby": "country-help",
-                          required: ""
-                        },
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.country = $event.target.multiple
-                              ? $$selectedVal
-                              : $$selectedVal[0]
-                          }
-                        }
-                      },
-                      [
-                        _c(
-                          "option",
-                          { attrs: { value: "Kenya", selected: "" } },
-                          [_vm._v("Kenya")]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _vm.errors.country
-                      ? _c("div", { staticClass: "invalid-feedback" }, [
-                          _vm._v(
-                            "\n                " +
-                              _vm._s(_vm.errors.country.toString()) +
-                              "\n              "
-                          )
-                        ])
-                      : _vm._e()
-                  ])
-                ])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", {
-          staticStyle: {
-            width: "100%",
-            height: "549px",
-            background: "white",
-            "border-radius": "20px",
-            "margin-bottom": "61px"
-          },
-          attrs: { id: "newmap" }
-        })
-      ]),
+      _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-2" }, [
         _c(
@@ -87319,7 +86710,7 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                _vm._m(0),
+                _vm._m(1),
                 _vm._v(" "),
                 _c("div", { staticStyle: { "border-top": "57px" } }, [
                   _c(
@@ -87377,6 +86768,34 @@ var render = function() {
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-10" }, [
+      _c("div", {
+        staticClass: "shadow",
+        staticStyle: {
+          "z-index": "1",
+          position: "absolute",
+          "margin-top": "80px",
+          "margin-left": "26px",
+          width: "20rem"
+        }
+      }),
+      _vm._v(" "),
+      _c("div", {
+        staticStyle: {
+          width: "100%",
+          height: "549px",
+          background: "white",
+          "border-radius": "20px",
+          "margin-bottom": "61px"
+        },
+        attrs: { id: "newmap" }
+      })
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -89755,20 +89174,17 @@ var reactiveProp = vue_chartjs__WEBPACK_IMPORTED_MODULE_0__["mixins"].reactivePr
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _MapComponent_vue_vue_type_template_id_2f302b28___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MapComponent.vue?vue&type=template&id=2f302b28& */ "./resources/js/components/MapComponent.vue?vue&type=template&id=2f302b28&");
-/* harmony import */ var _MapComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/MapComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _MapComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _MapComponent_vue_vue_type_template_id_2f302b28___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _MapComponent_vue_vue_type_template_id_2f302b28___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
+  script,
+  render,
+  staticRenderFns,
   false,
   null,
   null,
@@ -89776,42 +89192,8 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   
 )
 
-/* hot reload */
-if (false) { var api; }
 component.options.__file = "resources/js/components/MapComponent.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/MapComponent.vue?vue&type=script&lang=js&":
-/*!***************************************************************************!*\
-  !*** ./resources/js/components/MapComponent.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./MapComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/MapComponent.vue?vue&type=template&id=2f302b28&":
-/*!*********************************************************************************!*\
-  !*** ./resources/js/components/MapComponent.vue?vue&type=template&id=2f302b28& ***!
-  \*********************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponent_vue_vue_type_template_id_2f302b28___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./MapComponent.vue?vue&type=template&id=2f302b28& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapComponent.vue?vue&type=template&id=2f302b28&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponent_vue_vue_type_template_id_2f302b28___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapComponent_vue_vue_type_template_id_2f302b28___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
 
 /***/ }),
 

@@ -100,7 +100,7 @@ class RegisterController extends Controller
                     ['email' => $userFromAPI['email']],
                     [
                             'password' => bcrypt($data['password']),
-                            'name'     => $userFromAPI['firstName'].' '.$userFromAPI['middleName'].' '.$userFromAPI['lastName'],
+                            'name'     => $userFromAPI['firstName'].' '.$userFromAPI['lastName'],
                             'api_id'   => $userFromAPI['id'],
                             'avatar'   => $userFromAPI['id'],
 
