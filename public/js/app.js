@@ -1699,12 +1699,43 @@ var locations = [{
               coordinates = [];
               _context.next = 3;
               return axios.get("/api/allAssets").then(function (resp) {
+                var iconBase = "http://localhost:3000/";
+                var icons = {
+                  community: {
+                    icon: iconBase + "untapped/community.png"
+                  },
+                  mobileirrigation: {
+                    icon: iconBase + "untapped/mobileirrigation.png"
+                  },
+                  motorbike: {
+                    icon: iconBase + "untapped/twowheeler.png"
+                  }
+                };
                 resp.data.map(function (datareturned, index) {
+                  var iconToDisplay = '';
+
+                  if (datareturned.category === 1 || datareturned.category === 3 || datareturned.category === 7) {
+                    iconToDisplay = icons.motorbike.icon;
+                  }
+
+                  if (datareturned.category === 2) {
+                    iconToDisplay = icons.community.icon;
+                  }
+
+                  if (datareturned.category === 5) {
+                    iconToDisplay = icons.mobileirrigation.icon;
+                  }
+
+                  if (datareturned.category === 6) {
+                    iconToDisplay = icons.mobileirrigation.icon;
+                  }
+
                   coordinates.push({
                     position: {
                       lat: datareturned.latitude,
                       lng: datareturned.longitude
-                    }
+                    },
+                    icon: iconToDisplay
                   });
                 });
               });

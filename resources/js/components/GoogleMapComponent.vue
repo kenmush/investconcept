@@ -50,12 +50,41 @@ export default {
   async mounted() {
     let coordinates = [];
     await axios.get(`/api/allAssets`).then(resp => {
+      let iconBase = `http://localhost:3000/`
+      const icons = {
+        community: {
+          icon: iconBase + "untapped/community.png",
+        },
+        mobileirrigation: {
+          icon: iconBase + "untapped/mobileirrigation.png",
+        },
+        motorbike: {
+          icon: iconBase + "untapped/twowheeler.png",
+        },
+      };
       resp.data.map(function (datareturned, index) {
+        let iconToDisplay = '';
+        if (datareturned.category === 1
+            || datareturned.category === 3
+            || datareturned.category === 7
+        ) {
+          iconToDisplay = icons.motorbike.icon
+        }
+        if (datareturned.category === 2) {
+          iconToDisplay = icons.community.icon
+        }
+        if (datareturned.category === 5) {
+          iconToDisplay = icons.mobileirrigation.icon
+        }
+        if (datareturned.category === 6) {
+          iconToDisplay = icons.mobileirrigation.icon
+        }
         coordinates.push({
           position: {
             lat: datareturned.latitude,
             lng: datareturned.longitude,
           },
+          icon:  iconToDisplay
         })
       });
     })
