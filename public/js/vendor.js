@@ -32243,16 +32243,17 @@ module.exports = g;
 /***/ }),
 
 /***/ 1:
-/*!*******************************************!*\
-  !*** multi vue axios popper.js bootstrap ***!
-  \*******************************************/
+/*!**************************************************!*\
+  !*** multi popper.js jquery bootstrap vue axios ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! vue */"./node_modules/vue/dist/vue.common.js");
-__webpack_require__(/*! axios */"./node_modules/axios/index.js");
 __webpack_require__(/*! popper.js */"./node_modules/popper.js/dist/esm/popper.js");
-module.exports = __webpack_require__(/*! bootstrap */"./node_modules/bootstrap/dist/js/bootstrap.js");
+__webpack_require__(/*! jquery */"./node_modules/jquery/dist/jquery.js");
+__webpack_require__(/*! bootstrap */"./node_modules/bootstrap/dist/js/bootstrap.js");
+__webpack_require__(/*! vue */"./node_modules/vue/dist/vue.common.js");
+module.exports = __webpack_require__(/*! axios */"./node_modules/axios/index.js");
 
 
 /***/ })

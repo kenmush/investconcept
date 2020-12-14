@@ -6,12 +6,6 @@ use App\Http\Controllers\ChangePasswordController;
 use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
 
-
-Route::get('test/{investmentid}', function ($investmentId) {
-    return (new Investor())->getCategoryInvestments($investmentId);
-});
-
-
 Route::get('/', function () {
     $assets = (new Investor())->getAssetCategories();
     $landingPageData = collect((new Investor())->getLandingPageData());

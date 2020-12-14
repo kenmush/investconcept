@@ -4,7 +4,7 @@ require('laravel-mix-purgecss');
 
 mix.js('resources/js/app.js', 'public/js')
     .extract([
-        'vue','axios','popper.js','bootstrap',
+        'popper.js', 'jquery', 'bootstrap', 'vue', 'axios'
     ])
     .browserSync('localhost:8000')
     .sass('resources/sass/app.scss', 'public/css')
