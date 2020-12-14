@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-        <div style="width: 90%;padding-left: 10px;margin-right: 100px;height:1500px !important;">
+        <div style="width: 100%;margin-right: 100px;height:130% !important;">
             <div class="part-text text-center">
                 <h2>Your <span class="special">impact</span> in real-time</h2>
             </div>
