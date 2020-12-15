@@ -41,7 +41,7 @@
         Nav header start
     ***********************************-->
     <div class="nav-header">
-        <a href="{{ route('home') }}" class="brand-logo">
+        <a href="{{ url('/') }}" class="brand-logo">
             <img class="logo-abbr" src="{{ asset('favicon.ico') }}" alt="">
             <img class="logo-compact" src="{{ asset('favicon.ico') }}" alt="">
             <img class="brand-title"
@@ -121,6 +121,11 @@
                                      width="20" alt=""/>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
+                                <a href="{{ route('changepassword') }}"
+                                   class="dropdown-item ai-icon">
+
+                                    <span class="ml-2">Change Password </span>
+                                </a>
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"
                                    class="dropdown-item ai-icon">

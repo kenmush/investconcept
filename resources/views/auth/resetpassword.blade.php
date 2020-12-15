@@ -56,7 +56,8 @@
                             <div class="form-group">
                                 <label class="font-size-h6 font-weight-bolder text-dark">Your Old Password</label>
                                 <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg" type="text"
-                                       name="oldpassword" id="oldpassword" placeholder="Romain" autocomplete="off"/>
+                                       name="oldpassword" id="oldpassword" placeholder="Your old password"
+                                       autocomplete="off"/>
                             </div>
                             <!--end::Form group-->
                             <!--begin::Form group-->

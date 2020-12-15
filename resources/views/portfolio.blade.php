@@ -192,11 +192,11 @@
                                 <thead>
                                 <tr>
                                     <th><strong>Asset Name</strong></th>
-                                    <th><strong>Units Bought</strong></th>
+                                    <th><strong>Units Financed</strong></th>
                                     <th><strong>Total Invested</strong></th>
-                                    <th><strong>Interest Earned ($)</strong></th>
-                                    <th><strong>Revenue for Entrepreneurs</strong></th>
-                                    <th><strong>Impact Multiplier</strong></th>
+                                    <th><strong>Portfolio %</strong></th>
+                                    <th><strong>Impact</strong></th>
+                                    <th><strong>Impact Leverage</strong></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -206,7 +206,7 @@
                                     </td>
                                     <td><strong>{{ $stats['total_units'] ?? '' }}</strong></td>
                                     <td><strong>{{ $stats['total_invested'] }}</strong></td>
-                                    <td><strong>{{ $stats['total_interest'] }}</strong></td>
+                                    <td><strong>100</strong></td>
                                     <td><strong>{{ $stats['total_revenue'] }}</strong></td>
                                     <td><strong>{{ $stats['total_leverage'] }}</strong></td>
                                 </tr>
@@ -221,7 +221,7 @@
                                         </td>
                                         <td>{{$asset['units']}}</td>
                                         <td>{{$asset['amount_invested']}}</td>
-                                        <td>{{$asset['interest']}}</td>
+                                        <td>{{$asset['percentage_invested']}}</td>
                                         <td>{{number_format($asset['revenue'],2)}}</td>
                                         <td>{{$asset['leverage']}}</td>
                                         <td>
