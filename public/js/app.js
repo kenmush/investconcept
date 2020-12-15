@@ -1776,7 +1776,23 @@ var locations = [{
               mc = new _google_markerclusterer__WEBPACK_IMPORTED_MODULE_1__["default"](map, markers, {
                 zoom: 4,
                 maxZoom: 15,
-                imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+                styles: [{
+                  textColor: 'white',
+                  url: 'https://unpkg.com/@googlemaps/markerclustererplus@1.0.3/images/m3.png',
+                  height: 78,
+                  width: 77
+                }, {
+                  textColor: 'white',
+                  url: 'https://unpkg.com/@googlemaps/markerclustererplus@1.0.3/images/m3.png',
+                  height: 78,
+                  width: 77
+                }, {
+                  textColor: 'white',
+                  url: 'https://unpkg.com/@googlemaps/markerclustererplus@1.0.3/images/m3.png',
+                  height: 78,
+                  width: 77
+                }],
+                // imagePath: `https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m`,
                 textColor: "red"
               });
               mc.setStyles(mc.getStyles().map(function (style) {
