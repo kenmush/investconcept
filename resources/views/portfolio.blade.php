@@ -92,15 +92,7 @@
                                     <i style="    color: #FF8377;" class="fa fa-bar-chart"></i>
                                     </span>
                             <div class="media-body">
-                                <p class="mb-0">Number of Entrepreneurs
-
-                                    <i data-toggle="tooltip"
-                                       class="fa fa-info-circle text-blue-300"
-                                       style="rgba(37, 99, 235, 1)"
-                                       data-placement="top"
-                                       title="Entrepreneurs we lent an asset with your investment">
-                                    </i>
-                                </p>
+                                <p class="mb-0">Entrepreneurs Created</p>
 
                                 <h3 class="mb-0 text-black"><span
                                             class="counter ml-0">
@@ -121,18 +113,17 @@
 										 <i style="    color: #FF8377;" class="fa fa-dollar"></i>
 									</span>
                             <div class="media-body">
-                                <p class="mb-0">Revenues created for entrepreneur's
+                                <p class="mb-0">Impact
 
                                     <i data-toggle="tooltip"
                                        class="fa fa-info-circle text-blue-300"
                                        style="rgba(37, 99, 235, 1)"
                                        data-placement="top"
-                                       title="Total revenue entrepreneurs made since you invested">
+                                       title="Local value creation from your investment">
                                     </i>
                                 </p>
                                 <h3 class="mb-0 text-black"><span
                                             class="counter ml-0">{{ $stats['total_revenue'] }}</span></h3>
-                                <small>GENERATED FOR ENTREPRENEUR</small>
                             </div>
                         </div>
                     </div>
@@ -152,35 +143,17 @@
                                        class="fa fa-info-circle text-blue-300"
                                        style="rgba(37, 99, 235, 1)"
                                        data-placement="top"
-                                       title="Revenues created to date for each $ invested">
+                                       title="Local value creation per dollar invested">
                                     </i>
                                 </p>
 
                                 <h3 class="mb-0 text-black"><span
                                             class="counter ml-0">{{ $stats['total_leverage'] }}</span>x</h3>
-                                <small>CREATED PER DOLLAR INVESTED</small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Your Assets</h4>
-                    </div>
-                    <div class="card-body">
-                        <div id="app">
-                            <googlemap></googlemap>
-{{--                            <map-component-with-details :investorid='@json(auth()->user()->id)'--}}
-{{--                                                        :categories='@json($assets)'></map-component-with-details>--}}
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
@@ -238,6 +211,24 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Your Assets</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="app">
+                            <googlemap></googlemap>
+{{--                            <map-component-with-details :investorid='@json(auth()->user()->id)'--}}
+{{--                                                        :categories='@json($assets)'></map-component-with-details>--}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 @endsection
