@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
+            <div class="col-xl-6 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="widget-stat card">
                     <div class="card-body p-4">
                         <div class="media ai-icon">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
+            <div class="col-xl-6 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="widget-stat card">
                     <div class="card-body p-4">
                         <div class="media ai-icon">
@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
+            <div class="col-xl-6 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="widget-stat card">
                     <div class="card-body p-4">
                         <div class="media ai-icon">
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
+            <div class="col-xl-6 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="widget-stat card">
                     <div class="card-body p-4">
                         <div class="media ai-icon">
