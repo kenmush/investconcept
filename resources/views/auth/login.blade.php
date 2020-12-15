@@ -45,12 +45,13 @@
                     <div class="login-form login-signin py-11">
                         <!--begin::Form-->
                         <form class="form" novalidate="novalidate" method="post" action="{{ route('login') }}">
-                            @csrf
-                            <!--begin::Title-->
+                        @csrf
+                        <!--begin::Title-->
                             <div class="text-center pb-8">
                                 <h2 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">Sign In</h2>
                                 <span class="text-muted font-weight-bold font-size-h4">Or
-										<a href="{{ route('register') }}" style="color: rgb(237,127,51)" class="font-weight-bolder"
+										<a href="{{ route('register') }}" style="color: rgb(237,127,51)"
+                                           class="font-weight-bolder"
                                            id="kt_login_signup">Sign Up</a></span>
                             </div>
                             <!--end::Title-->
@@ -58,7 +59,8 @@
                             <div class="form-group">
                                 <label class="font-size-h6 font-weight-bolder text-dark">Email</label>
                                 <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg" type="text"
-                                       name="email" id="email" placeholder="Example@untapped-inc.com" autocomplete="off"/>
+                                       name="email" id="email" placeholder="Example@untapped-inc.com"
+                                       autocomplete="off"/>
                             </div>
                             <!--end::Form group-->
                             <!--begin::Form group-->
@@ -198,7 +200,7 @@
                 <h3 class="display4 font-weight-bolder my-7 text-dark" style="color: #986923;">Start Investing
                     today</h3>
                 <p class="font-weight-bolder font-size-h2-md font-size-lg text-dark opacity-70">
-                    For Impact at scale
+                    For Impact at scale.
                 </p>
             </div>
             <!--end::Title-->
@@ -214,7 +216,8 @@
 <!--end::Main-->
 
 <!--begin::Global Config(global config for global JS scripts)-->
-<script>var KTAppSettings = {"breakpoints": {"sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200},
+<script>var KTAppSettings = {
+        "breakpoints": {"sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200},
         "colors": {
             "theme": {
                 "base": {
