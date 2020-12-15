@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-        <div style="width: 100%;margin-right: 100px;height:130% !important;">
+        <div style="width: 100%;margin-right: 100px;height:900px !important;">
             <div class="part-text text-center">
                 <h2>Your <span class="special">impact</span> in real-time</h2>
             </div>
@@ -83,7 +83,7 @@
 {{--            <map-component :categories='@json($assets)'></map-component>--}}
         </div>
     </div>
-    <div class="cta-assets" style="margin-top: -140px" id="assets">
+    <div class="cta-assets" style="margin-top: -160px" id="assets">
         <div class="container">
             <div class="cta-assets-bg">
                 <div class="row text-center justify-content-center mb-4">
