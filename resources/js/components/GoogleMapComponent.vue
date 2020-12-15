@@ -50,7 +50,7 @@ export default {
   async mounted() {
     let coordinates = [];
     await axios.get(`/api/allAssets`).then(resp => {
-      let iconBase = `http://localhost:3000/`
+      let iconBase = process.env.MIX_APP_URL;
       const icons = {
         community: {
           icon: iconBase + "untapped/community.png",
@@ -84,7 +84,7 @@ export default {
             lat: datareturned.latitude,
             lng: datareturned.longitude,
           },
-          icon:  iconToDisplay
+          icon: iconToDisplay
         })
       });
     })
@@ -93,7 +93,7 @@ export default {
       const bounds = new google.maps.LatLngBounds(
           {lat: 3.159339, lng: 36.875788}
       );
-      const map = new google.maps.Map(this.$el,{
+      const map = new google.maps.Map(this.$el, {
         zoom: 5,
       });
       map.setCenter({
@@ -112,11 +112,11 @@ export default {
             marker.addListener(`click`, () => markerClickHandler(marker));
             return marker;
           });
-    const mc =  new MarkerClusterer(map, markers, {
+      const mc = new MarkerClusterer(map, markers, {
         zoom: 4,
         maxZoom: 15,
         imagePath: `https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m`,
-        textColor:"red",
+        textColor: "red",
       });
       mc.setStyles(mc.getStyles().map(function (style) {
         style.textColor = '#fff';
