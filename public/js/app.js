@@ -78723,7 +78723,7 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _c("p", [_vm._v("Local partner: Mvua pap ")]),
+                      _c("p", [_vm._v("Local partner: MvuaPap ")]),
                       _vm._v(" "),
                       _c("p", [_vm._v("Country: Kenya")])
                     ])
@@ -78776,13 +78776,13 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Annual Revenue created")]),
+            _c("p", [_vm._v("Impact")]),
             _vm._v(" "),
             _c("p", [_vm._v("2 500$")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Money Multiplier")]),
+            _c("p", [_vm._v("Leverage")]),
             _vm._v(" "),
             _c("p", [_vm._v("2.4x")])
           ]),
@@ -78880,13 +78880,13 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Annual Revenue created")]),
+            _c("p", [_vm._v("Impact")]),
             _vm._v(" "),
             _c("p", [_vm._v("2 500$")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Money Multiplier")]),
+            _c("p", [_vm._v("Leverage")]),
             _vm._v(" "),
             _c("p", [_vm._v("1.7x")])
           ]),
@@ -78984,13 +78984,13 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Annual Revenue created")]),
+            _c("p", [_vm._v("Impact")]),
             _vm._v(" "),
             _c("p", [_vm._v("30 000$")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Money Multiplier")]),
+            _c("p", [_vm._v("Leverage")]),
             _vm._v(" "),
             _c("p", [_vm._v("3.0x")])
           ]),
@@ -79032,7 +79032,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("th", [_vm._v("36 000 $ "), _c("br"), _vm._v("Annual Revenue")]),
             _vm._v(" "),
-            _c("th", [_vm._v("4.0x "), _c("br"), _vm._v("Money Multiplier")])
+            _c("th", [_vm._v("4.0x "), _c("br"), _vm._v("Leverage")])
           ])
         ])
       ]
@@ -79078,13 +79078,13 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Annual Revenue created")]),
+            _c("p", [_vm._v("Impact")]),
             _vm._v(" "),
             _c("p", [_vm._v("4 200$")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Money Multiplier")]),
+            _c("p", [_vm._v("Leverage")]),
             _vm._v(" "),
             _c("p", [_vm._v("1.4x")])
           ]),
@@ -79126,7 +79126,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("th", [_vm._v("7 200 $ "), _c("br"), _vm._v("Annual Revenue")]),
             _vm._v(" "),
-            _c("th", [_vm._v("2.4x "), _c("br"), _vm._v("Money Multiplier")])
+            _c("th", [_vm._v("2.4x "), _c("br"), _vm._v("Leverage")])
           ])
         ])
       ]
@@ -79172,13 +79172,13 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Annual Revenue created")]),
+            _c("p", [_vm._v("Impact")]),
             _vm._v(" "),
             _c("p", [_vm._v("9 750$")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Money Multiplier")]),
+            _c("p", [_vm._v("Leverage")]),
             _vm._v(" "),
             _c("p", [_vm._v("9.0x")])
           ]),
@@ -79220,7 +79220,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("th", [_vm._v("6 000 $ "), _c("br"), _vm._v("Annual Revenue")]),
             _vm._v(" "),
-            _c("th", [_vm._v("7.5x "), _c("br"), _vm._v("Money Multiplier")])
+            _c("th", [_vm._v("7.5x "), _c("br"), _vm._v("Leverage")])
           ])
         ])
       ]

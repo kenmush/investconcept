@@ -38,11 +38,11 @@
                             <p>1 100$</p>
                           </div>
                           <div class="col-md-4">
-                            <p>Annual Revenue created</p>
+                            <p>Impact</p>
                             <p>2 500$</p>
                           </div>
                           <div class="col-md-4">
-                            <p>Money Multiplier</p>
+                            <p>Leverage</p>
                             <p>2.4x</p>
                           </div>
                           <div class="col-12">
@@ -117,11 +117,11 @@
                             <p>1 500$</p>
                           </div>
                           <div class="col-md-4">
-                            <p>Annual Revenue created</p>
+                            <p>Impact</p>
                             <p>2 500$</p>
                           </div>
                           <div class="col-md-4">
-                            <p>Money Multiplier</p>
+                            <p>Leverage</p>
                             <p>1.7x</p>
                           </div>
                           <div class="col-12">
@@ -198,11 +198,11 @@
                             <p>10 000$</p>
                           </div>
                           <div class="col-md-4">
-                            <p>Annual Revenue created</p>
+                            <p>Impact</p>
                             <p>30 000$</p>
                           </div>
                           <div class="col-md-4">
-                            <p>Money Multiplier</p>
+                            <p>Leverage</p>
                             <p>3.0x</p>
                           </div>
                           <div class="col-12">
@@ -229,7 +229,7 @@
                         <th>For You:</th>
                         <th>9 000$ <br>Minimum Ticket</th>
                         <th>36 000 $ <br>Annual Revenue</th>
-                        <th>4.0x <br>Money Multiplier</th>
+                        <th>4.0x <br>Leverage</th>
                       </tr>
                       </thead>
 
@@ -277,11 +277,11 @@
                             <p>3 000$</p>
                           </div>
                           <div class="col-md-4">
-                            <p>Annual Revenue created</p>
+                            <p>Impact</p>
                             <p>4 200$</p>
                           </div>
                           <div class="col-md-4">
-                            <p>Money Multiplier</p>
+                            <p>Leverage</p>
                             <p>1.4x</p>
                           </div>
                           <div class="col-12">
@@ -308,7 +308,7 @@
                         <th>For You:</th>
                         <th>3 000$ <br>Minimum Ticket</th>
                         <th>7 200 $ <br>Annual Revenue</th>
-                        <th>2.4x <br>Money Multiplier</th>
+                        <th>2.4x <br>Leverage</th>
                       </tr>
                       </thead>
 
@@ -336,7 +336,7 @@
                   <p style="border-bottom: 3px solid #3e4494">
                     Mobile irrigation trailer
                   </p>
-                  <p>Local partner: Mvua pap </p>
+                  <p>Local partner: MvuaPap </p>
                   <p>Country: Kenya</p>
                 </div>
                 <div class="col-md-8" v-else>
@@ -356,11 +356,11 @@
                             <p>1 100$</p>
                           </div>
                           <div class="col-md-4">
-                            <p>Annual Revenue created</p>
+                            <p>Impact</p>
                             <p>9 750$</p>
                           </div>
                           <div class="col-md-4">
-                            <p>Money Multiplier</p>
+                            <p>Leverage</p>
                             <p>9.0x</p>
                           </div>
                           <div class="col-12">
@@ -387,7 +387,7 @@
                         <th>For You:</th>
                         <th>800$ <br>Minimum Ticket</th>
                         <th>6 000 $ <br>Annual Revenue</th>
-                        <th>7.5x <br>Money Multiplier</th>
+                        <th>7.5x <br>Leverage</th>
                       </tr>
                       </thead>
 
