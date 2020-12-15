@@ -1661,13 +1661,13 @@ var locations = [{
   }
 }, {
   position: {
-    lat: 48.174270,
+    lat: 48.174265,
     lng: 16.329620
   }
 }, {
   position: {
     lat: 48.146140,
-    lng: 16.297030
+    lng: 16.296530
   }
 }, {
   position: {
@@ -1682,7 +1682,7 @@ var locations = [{
 }, {
   position: {
     lat: 47.503040,
-    lng: 9.747070
+    lng: 9.746565
   }
 }];
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1749,7 +1749,7 @@ var locations = [{
               google = _context.sent;
               bounds = new google.maps.LatLngBounds({
                 lat: 3.159339,
-                lng: 36.875788
+                lng: 36.875658
               });
               map = new google.maps.Map(_this.$el, {
                 zoom: 5
@@ -1779,18 +1779,18 @@ var locations = [{
                 styles: [{
                   textColor: 'white',
                   url: 'https://unpkg.com/@googlemaps/markerclustererplus@1.0.3/images/m3.png',
-                  height: 78,
-                  width: 77
+                  height: 65,
+                  width: 65
                 }, {
                   textColor: 'white',
                   url: 'https://unpkg.com/@googlemaps/markerclustererplus@1.0.3/images/m3.png',
-                  height: 78,
-                  width: 77
+                  height: 65,
+                  width: 65
                 }, {
                   textColor: 'white',
                   url: 'https://unpkg.com/@googlemaps/markerclustererplus@1.0.3/images/m3.png',
-                  height: 78,
-                  width: 77
+                  height: 65,
+                  width: 65
                 }],
                 // imagePath: `https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m`,
                 textColor: "red"
