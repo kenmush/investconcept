@@ -12,7 +12,7 @@ Route::get('/', function () {
     return view('index', compact('assets', 'landingPageData'));
 });
 
-Route::group(['prefix' => 'assets', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'assets', 'middleware' => ['auth','changepassword']], function () {
 
     Route::resource('portfolio', 'PortfolioController');
 
