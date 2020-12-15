@@ -78770,7 +78770,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Minimum Investment")]),
+            _c("p", [_vm._v("Minimum Ticket")]),
             _vm._v(" "),
             _c("p", [_vm._v("1 100$")])
           ]),
@@ -78830,7 +78830,7 @@ var staticRenderFns = [
           _c("tr", [
             _c("th", [_vm._v("For You:")]),
             _vm._v(" "),
-            _c("th", [_vm._v("$500 "), _c("br"), _vm._v("Minimum Investment")]),
+            _c("th", [_vm._v("$500 "), _c("br"), _vm._v("Minimum Ticket")]),
             _vm._v(" "),
             _c("th", [_vm._v("9% "), _c("br"), _vm._v("APY")]),
             _vm._v(" "),
@@ -78874,7 +78874,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Minimum Investment")]),
+            _c("p", [_vm._v("Minimum Ticket")]),
             _vm._v(" "),
             _c("p", [_vm._v("1 500$")])
           ]),
@@ -78934,7 +78934,7 @@ var staticRenderFns = [
           _c("tr", [
             _c("th", [_vm._v("For You:")]),
             _vm._v(" "),
-            _c("th", [_vm._v("$500 "), _c("br"), _vm._v("Minimum Investment")]),
+            _c("th", [_vm._v("$500 "), _c("br"), _vm._v("Minimum Ticket")]),
             _vm._v(" "),
             _c("th", [_vm._v("9% "), _c("br"), _vm._v("APY")]),
             _vm._v(" "),
@@ -78978,7 +78978,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Minimum Investment")]),
+            _c("p", [_vm._v("Minimum Ticket")]),
             _vm._v(" "),
             _c("p", [_vm._v("10 000$")])
           ]),
@@ -79028,11 +79028,7 @@ var staticRenderFns = [
           _c("tr", [
             _c("th", [_vm._v("For You:")]),
             _vm._v(" "),
-            _c("th", [
-              _vm._v("9 000$ "),
-              _c("br"),
-              _vm._v("Minimum Investment")
-            ]),
+            _c("th", [_vm._v("9 000$ "), _c("br"), _vm._v("Minimum Ticket")]),
             _vm._v(" "),
             _c("th", [_vm._v("36 000 $ "), _c("br"), _vm._v("Annual Revenue")]),
             _vm._v(" "),
@@ -79076,7 +79072,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Minimum Investment")]),
+            _c("p", [_vm._v("Minimum Ticket")]),
             _vm._v(" "),
             _c("p", [_vm._v("3 000$")])
           ]),
@@ -79126,11 +79122,7 @@ var staticRenderFns = [
           _c("tr", [
             _c("th", [_vm._v("For You:")]),
             _vm._v(" "),
-            _c("th", [
-              _vm._v("3 000$ "),
-              _c("br"),
-              _vm._v("Minimum Investment")
-            ]),
+            _c("th", [_vm._v("3 000$ "), _c("br"), _vm._v("Minimum Ticket")]),
             _vm._v(" "),
             _c("th", [_vm._v("7 200 $ "), _c("br"), _vm._v("Annual Revenue")]),
             _vm._v(" "),
@@ -79174,7 +79166,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Minimum Investment")]),
+            _c("p", [_vm._v("Minimum Ticket")]),
             _vm._v(" "),
             _c("p", [_vm._v("1 100$")])
           ]),
@@ -79224,7 +79216,7 @@ var staticRenderFns = [
           _c("tr", [
             _c("th", [_vm._v("For You:")]),
             _vm._v(" "),
-            _c("th", [_vm._v("800$ "), _c("br"), _vm._v("Minimum Investment")]),
+            _c("th", [_vm._v("800$ "), _c("br"), _vm._v("Minimum Ticket")]),
             _vm._v(" "),
             _c("th", [_vm._v("6 000 $ "), _c("br"), _vm._v("Annual Revenue")]),
             _vm._v(" "),

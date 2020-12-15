@@ -34,7 +34,7 @@
                       <div class="col-12">
                         <div class="row">
                           <div class="col-md-4">
-                            <p>Minimum Investment</p>
+                            <p>Minimum Ticket</p>
                             <p>1 100$</p>
                           </div>
                           <div class="col-md-4">
@@ -67,7 +67,7 @@
                       </tr>
                       <tr>
                         <th>For You:</th>
-                        <th>$500 <br>Minimum Investment</th>
+                        <th>$500 <br>Minimum Ticket</th>
                         <th>9% <br>APY</th>
                         <th>18 Month <br>Term</th>
                       </tr>
@@ -113,7 +113,7 @@
                       <div class="col-12">
                         <div class="row">
                           <div class="col-md-4">
-                            <p>Minimum Investment</p>
+                            <p>Minimum Ticket</p>
                             <p>1 500$</p>
                           </div>
                           <div class="col-md-4">
@@ -147,7 +147,7 @@
                       </tr>
                       <tr>
                         <th>For You:</th>
-                        <th>$500 <br>Minimum Investment</th>
+                        <th>$500 <br>Minimum Ticket</th>
                         <th>9% <br>APY</th>
                         <th>18 Month <br>Term</th>
                       </tr>
@@ -194,7 +194,7 @@
                       <div class="col-12">
                         <div class="row">
                           <div class="col-md-4">
-                            <p>Minimum Investment</p>
+                            <p>Minimum Ticket</p>
                             <p>10 000$</p>
                           </div>
                           <div class="col-md-4">
@@ -227,7 +227,7 @@
                       <!--                          </tr>-->
                       <tr>
                         <th>For You:</th>
-                        <th>9 000$ <br>Minimum Investment</th>
+                        <th>9 000$ <br>Minimum Ticket</th>
                         <th>36 000 $ <br>Annual Revenue</th>
                         <th>4.0x <br>Money Multiplier</th>
                       </tr>
@@ -273,7 +273,7 @@
                       <div class="col-12">
                         <div class="row">
                           <div class="col-md-4">
-                            <p>Minimum Investment</p>
+                            <p>Minimum Ticket</p>
                             <p>3 000$</p>
                           </div>
                           <div class="col-md-4">
@@ -306,7 +306,7 @@
                       <!--                          </tr>-->
                       <tr>
                         <th>For You:</th>
-                        <th>3 000$ <br>Minimum Investment</th>
+                        <th>3 000$ <br>Minimum Ticket</th>
                         <th>7 200 $ <br>Annual Revenue</th>
                         <th>2.4x <br>Money Multiplier</th>
                       </tr>
@@ -352,7 +352,7 @@
                       <div class="col-12">
                         <div class="row">
                           <div class="col-md-4">
-                            <p>Minimum Investment</p>
+                            <p>Minimum Ticket</p>
                             <p>1 100$</p>
                           </div>
                           <div class="col-md-4">
@@ -385,7 +385,7 @@
                       <!--                          </tr>-->
                       <tr>
                         <th>For You:</th>
-                        <th>800$ <br>Minimum Investment</th>
+                        <th>800$ <br>Minimum Ticket</th>
                         <th>6 000 $ <br>Annual Revenue</th>
                         <th>7.5x <br>Money Multiplier</th>
                       </tr>
