@@ -58,7 +58,7 @@
                             <div class="form-group">
                                 <label class="font-size-h6 font-weight-bolder text-dark">Email</label>
                                 <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg" type="text"
-                                       name="email" id="email" placeholder="Your email or username" autocomplete="off"/>
+                                       name="email" id="email" placeholder="Example@untapped-inc.com" autocomplete="off"/>
                             </div>
                             <!--end::Form group-->
                             <!--begin::Form group-->
