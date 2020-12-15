@@ -197,10 +197,10 @@
         <div class="content order-1 order-lg-2 d-flex flex-column w-100 pb-0" style="background-color: #B1DCED;">
             <!--begin::Title-->
             <div class="d-flex flex-column justify-content-center text-center pt-lg-40 pt-md-5 pt-sm-5 px-lg-0 pt-5 px-7">
-                <h3 class="display4 font-weight-bolder my-7 text-dark" style="color: #986923;">Start Investing
+                <h3 class="display4 font-weight-bolder my-7 text-dark" style="color: #986923;">Start investing
                     today</h3>
                 <p class="font-weight-bolder font-size-h2-md font-size-lg text-dark opacity-70">
-                    For Impact at scale.
+                    For impact at scale
                 </p>
             </div>
             <!--end::Title-->
