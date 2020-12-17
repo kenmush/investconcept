@@ -195,7 +195,7 @@
                                         <td>{{$asset['units']}}</td>
                                         <td>{{$asset['amount_invested']}}</td>
                                         <td>{{$asset['percentage_invested']}}</td>
-                                        <td>{{number_format($asset['revenue'],2)}}</td>
+                                        <td>{{$asset['revenue']}}</td>
                                         <td>{{$asset['leverage']}}</td>
                                         <td>
                                             {{--                                            <a href="{{ route('portfolio.edit',$asset['id']) }}">--}}

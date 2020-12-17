@@ -37,6 +37,9 @@
                         received.
                         We will come back to you shortly
                     </p>
+                    <div class="d-flex justify-content-center">
+                        <a href="/">Go back Home</a>
+                    </div>
                 </div>
             </div>
         </div>
