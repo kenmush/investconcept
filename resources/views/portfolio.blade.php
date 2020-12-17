@@ -165,6 +165,7 @@
                                 <thead>
                                 <tr>
                                     <th><strong>Asset Name</strong></th>
+                                    <th><strong>Country</strong></th>
                                     <th><strong>Units Financed</strong></th>
                                     <th><strong>Total Invested</strong></th>
                                     <th><strong>Portfolio %</strong></th>
@@ -177,6 +178,7 @@
                                     <td>
                                         <strong>TOTAL</strong>
                                     </td>
+                                    <td></td>
                                     <td><strong>{{ $stats['total_units'] ?? '' }}</strong></td>
                                     <td><strong>{{ $stats['total_invested'] }}</strong></td>
                                     <td><strong>100</strong></td>
@@ -192,6 +194,7 @@
                                                 {{$asset['asset_category_name'] ?? ''}}
                                             </a>
                                         </td>
+                                        <td></td>
                                         <td>{{$asset['units']}}</td>
                                         <td>{{$asset['amount_invested']}}</td>
                                         <td>{{$asset['percentage_invested']}}</td>

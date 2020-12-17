@@ -336,7 +336,7 @@
                   <p style="border-bottom: 3px solid #3e4494">
                     Mobile irrigation trailer
                   </p>
-                  <p>Local partner: MvuaPap </p>
+                  <p>Local partner: MvuaPap! </p>
                   <p>Country: Kenya</p>
                 </div>
                 <div class="col-md-8" v-else>
