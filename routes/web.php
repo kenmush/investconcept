@@ -7,12 +7,14 @@ use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $assets = (new Investor())->getAssetCategories();
-    $landingPageData = collect((new Investor())->getLandingPageData());
-    return view('index', compact('assets', 'landingPageData'));
+
+    return view('index', [
+            'assets'          => (new Investor())->getAssetCategories(),
+            'landingPageData' => collect((new Investor())->getLandingPageData())
+    ]);
 });
 
-Route::group(['prefix' => 'assets', 'middleware' => ['auth','changepassword']], function () {
+Route::group(['prefix' => 'assets', 'middleware' => ['auth', 'changepassword']], function () {
 
     Route::resource('portfolio', 'PortfolioController');
 
@@ -55,6 +57,7 @@ Route::get('/contactus', function () {
 
 })->name('contactus');
 
-Route::get('update-your-password', 'ChangePasswordController')->name('changepassword');
+Route::get('update-your-password', 'ChangePasswordController')
+        ->name('changepassword');
 Route::post('resetpassword', 'ResetPassword')->name('resetpassword');
 Auth::routes();

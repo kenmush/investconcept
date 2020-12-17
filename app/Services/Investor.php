@@ -19,6 +19,11 @@ class Investor
                 "password" => $data['password']
         ]);
     }
+    public function checkFirstTimeLogin($api_id)
+    {
+
+        return $this->request('GET', 'portal/investor/check_first/login/'.$api_id.'/');
+    }
 
     protected function request($method, $path, array $parameters = [])
     {

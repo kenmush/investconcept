@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Services\Investor;
 use Closure;
 
 class ChangePasswordIfDefault
@@ -15,7 +16,8 @@ class ChangePasswordIfDefault
      */
     public function handle($request, Closure $next)
     {
-        if ($request->user()->first_login) {
+        $userFromAPI = (new Investor())->checkFirstTimeLogin($request->user()->api_id);
+        if ($userFromAPI['status']) {
             return redirect()->route('changepassword');
         }
         return $next($request);

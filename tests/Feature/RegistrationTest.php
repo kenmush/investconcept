@@ -20,6 +20,7 @@ class RegistrationTest extends TestCase
                 'password'  => 'Pa$$w0rd!',
         ]);
         $response->assertStatus(200);
+        dd($response->dump());
     }
 
     public function testdownload()
