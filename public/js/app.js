@@ -2666,8 +2666,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "assets",
   data: function data() {
@@ -78525,7 +78523,7 @@ var render = function() {
   return _c("div", [
     _c("section", { staticClass: "pt-5 pb-5" }, [
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-4 mb-3" }, [
+        _c("div", { staticClass: "col-md-4  mb-3" }, [
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-body " }, [
               _c("div", { staticClass: "row" }, [
@@ -78536,9 +78534,12 @@ var render = function() {
                       _c(
                         "p",
                         {
-                          staticStyle: { "border-bottom": "3px solid #3e4494" }
+                          staticStyle: {
+                            "border-bottom": "3px solid #3e4494",
+                            "text-transform": "uppercase"
+                          }
                         },
-                        [_vm._v("Electric motorbikes for moto taxi")]
+                        [_vm._v("Electric motorbikes")]
                       ),
                       _vm._v(" "),
                       _c("p", [_vm._v("Local Partner: Zembo Bikes")]),
@@ -78569,7 +78570,7 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-4 mb-3" }, [
+        _c("div", { staticClass: "col-md-4  mb-3" }, [
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-body " }, [
               _c("div", { staticClass: "row" }, [
@@ -78580,11 +78581,14 @@ var render = function() {
                       _c(
                         "p",
                         {
-                          staticStyle: { "border-bottom": "3px solid #3e4494" }
+                          staticStyle: {
+                            "border-bottom": "3px solid #3e4494",
+                            "text-transform": "uppercase"
+                          }
                         },
                         [
                           _vm._v(
-                            "\n                  Petrol motorbikes for moto taxi\n                "
+                            "\n                  Petrol motorbikes\n                "
                           )
                         ]
                       ),
@@ -78615,7 +78619,7 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-4 mb-3" }, [
+        _c("div", { staticClass: "col-md-4  mb-3" }, [
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-body " }, [
               _c("div", { staticClass: "row" }, [
@@ -78626,7 +78630,10 @@ var render = function() {
                       _c(
                         "p",
                         {
-                          staticStyle: { "border-bottom": "3px solid #3e4494" }
+                          staticStyle: {
+                            "border-bottom": "3px solid #3e4494",
+                            "text-transform": "uppercase"
+                          }
                         },
                         [
                           _vm._v(
@@ -78659,7 +78666,7 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-4 mb-3" }, [
+        _c("div", { staticClass: "col-md-4  mb-3" }, [
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-body " }, [
               _c("div", { staticClass: "row" }, [
@@ -78670,7 +78677,10 @@ var render = function() {
                       _c(
                         "p",
                         {
-                          staticStyle: { "border-bottom": "3px solid #3e4494" }
+                          staticStyle: {
+                            "border-bottom": "3px solid #3e4494",
+                            "text-transform": "uppercase"
+                          }
                         },
                         [
                           _vm._v(
@@ -78703,7 +78713,7 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-4 mb-3" }, [
+        _c("div", { staticClass: "col-md-4  mb-3" }, [
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-body " }, [
               _c("div", { staticClass: "row" }, [
@@ -78714,7 +78724,10 @@ var render = function() {
                       _c(
                         "p",
                         {
-                          staticStyle: { "border-bottom": "3px solid #3e4494" }
+                          staticStyle: {
+                            "border-bottom": "3px solid #3e4494",
+                            "text-transform": "uppercase"
+                          }
                         },
                         [
                           _vm._v(
@@ -78723,7 +78736,7 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _c("p", [_vm._v("Local partner: MvuaPap ")]),
+                      _c("p", [_vm._v("Local partner: MvuaPap! ")]),
                       _vm._v(" "),
                       _c("p", [_vm._v("Country: Kenya")])
                     ])
@@ -78755,10 +78768,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4" }, [
+    return _c("div", { staticClass: "col-md-4 " }, [
       _c("img", {
         staticClass: "rounded float-left",
-        attrs: { src: "/motorbikes.jpeg", alt: "" }
+        attrs: { loading: "lazy", src: "assets/zembo.PNG", alt: "" }
       })
     ])
   },
@@ -78769,20 +78782,20 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-body" }, [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Minimum Ticket")]),
+          _c("div", { staticClass: "col-md-4 border " }, [
+            _c("p", [_c("strong", [_vm._v("Minimum Ticket")])]),
             _vm._v(" "),
             _c("p", [_vm._v("1 100$")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Impact")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Impact")])]),
             _vm._v(" "),
             _c("p", [_vm._v("2 500$")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Leverage")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Leverage")])]),
             _vm._v(" "),
             _c("p", [_vm._v("2.4x")])
           ]),
@@ -78830,7 +78843,11 @@ var staticRenderFns = [
           _c("tr", [
             _c("th", [_vm._v("For You:")]),
             _vm._v(" "),
-            _c("th", [_vm._v("$500 "), _c("br"), _vm._v("Minimum Ticket")]),
+            _c("th", [
+              _vm._v("$500 "),
+              _c("br"),
+              _c("strong", [_vm._v("Minimum Ticket")])
+            ]),
             _vm._v(" "),
             _c("th", [_vm._v("9% "), _c("br"), _vm._v("APY")]),
             _vm._v(" "),
@@ -78859,10 +78876,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4" }, [
+    return _c("div", { staticClass: "col-md-4 " }, [
       _c("img", {
         staticClass: "rounded float-left img-thumbnail",
-        attrs: { src: "/motorbike2.jpeg", alt: "" }
+        attrs: { loading: "lazy", src: "/assets/asaak.jpg", alt: "" }
       })
     ])
   },
@@ -78873,20 +78890,20 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-body" }, [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Minimum Ticket")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Minimum Ticket")])]),
             _vm._v(" "),
             _c("p", [_vm._v("1 500$")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Impact")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Impact")])]),
             _vm._v(" "),
             _c("p", [_vm._v("2 500$")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Leverage")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Leverage")])]),
             _vm._v(" "),
             _c("p", [_vm._v("1.7x")])
           ]),
@@ -78934,7 +78951,11 @@ var staticRenderFns = [
           _c("tr", [
             _c("th", [_vm._v("For You:")]),
             _vm._v(" "),
-            _c("th", [_vm._v("$500 "), _c("br"), _vm._v("Minimum Ticket")]),
+            _c("th", [
+              _vm._v("$500 "),
+              _c("br"),
+              _c("strong", [_vm._v("Minimum Ticket")])
+            ]),
             _vm._v(" "),
             _c("th", [_vm._v("9% "), _c("br"), _vm._v("APY")]),
             _vm._v(" "),
@@ -78963,10 +78984,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4" }, [
+    return _c("div", { staticClass: "col-md-4 " }, [
       _c("img", {
         staticClass: "rounded float-left img-thumbnail",
-        attrs: { src: __webpack_require__(/*! ./assets/ovive.jpeg */ "./resources/js/components/assets/ovive.jpeg"), alt: "" }
+        attrs: { loading: "lazy", src: "assets/ovive.jpg", alt: "" }
       })
     ])
   },
@@ -78977,20 +78998,20 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-body" }, [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Minimum Ticket")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Minimum Ticket")])]),
             _vm._v(" "),
             _c("p", [_vm._v("10 000$")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Impact")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Impact")])]),
             _vm._v(" "),
             _c("p", [_vm._v("30 000$")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Leverage")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Leverage")])]),
             _vm._v(" "),
             _c("p", [_vm._v("3.0x")])
           ]),
@@ -79028,11 +79049,19 @@ var staticRenderFns = [
           _c("tr", [
             _c("th", [_vm._v("For You:")]),
             _vm._v(" "),
-            _c("th", [_vm._v("9 000$ "), _c("br"), _vm._v("Minimum Ticket")]),
+            _c("th", [
+              _vm._v("9 000$ "),
+              _c("br"),
+              _c("strong", [_vm._v("Minimum Ticket")])
+            ]),
             _vm._v(" "),
             _c("th", [_vm._v("36 000 $ "), _c("br"), _vm._v("Annual Revenue")]),
             _vm._v(" "),
-            _c("th", [_vm._v("4.0x "), _c("br"), _vm._v("Leverage")])
+            _c("th", [
+              _vm._v("4.0x "),
+              _c("br"),
+              _c("strong", [_vm._v("Leverage")])
+            ])
           ])
         ])
       ]
@@ -79057,10 +79086,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4" }, [
+    return _c("div", { staticClass: "col-md-4 " }, [
       _c("img", {
         staticClass: "rounded float-left img-thumbnail",
-        attrs: { src: __webpack_require__(/*! ./assets/majimilele.jpeg */ "./resources/js/components/assets/majimilele.jpeg"), alt: "" }
+        attrs: { loading: "lazy", src: "assets/kiosk.jpg", alt: "" }
       })
     ])
   },
@@ -79071,20 +79100,20 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-body" }, [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Minimum Ticket")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Minimum Ticket")])]),
             _vm._v(" "),
             _c("p", [_vm._v("3 000$")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Impact")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Impact")])]),
             _vm._v(" "),
             _c("p", [_vm._v("4 200$")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Leverage")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Leverage")])]),
             _vm._v(" "),
             _c("p", [_vm._v("1.4x")])
           ]),
@@ -79122,11 +79151,19 @@ var staticRenderFns = [
           _c("tr", [
             _c("th", [_vm._v("For You:")]),
             _vm._v(" "),
-            _c("th", [_vm._v("3 000$ "), _c("br"), _vm._v("Minimum Ticket")]),
+            _c("th", [
+              _vm._v("3 000$ "),
+              _c("br"),
+              _c("strong", [_vm._v("Minimum Ticket")])
+            ]),
             _vm._v(" "),
             _c("th", [_vm._v("7 200 $ "), _c("br"), _vm._v("Annual Revenue")]),
             _vm._v(" "),
-            _c("th", [_vm._v("2.4x "), _c("br"), _vm._v("Leverage")])
+            _c("th", [
+              _vm._v("2.4x "),
+              _c("br"),
+              _c("strong", [_vm._v("Leverage")])
+            ])
           ])
         ])
       ]
@@ -79151,10 +79188,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4" }, [
+    return _c("div", { staticClass: "col-md-4 " }, [
       _c("img", {
         staticClass: "rounded float-left img-thumbnail",
-        attrs: { src: __webpack_require__(/*! ./assets/mvuapap.jpeg */ "./resources/js/components/assets/mvuapap.jpeg"), alt: "" }
+        attrs: { loading: "lazy", src: "assets/mvuapap.jpg", alt: "" }
       })
     ])
   },
@@ -79165,20 +79202,20 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-body" }, [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Minimum Ticket")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Minimum Ticket")])]),
             _vm._v(" "),
             _c("p", [_vm._v("1 100$")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Impact")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Impact")])]),
             _vm._v(" "),
             _c("p", [_vm._v("9 750$")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("p", [_vm._v("Leverage")]),
+          _c("div", { staticClass: "col-md-4 border" }, [
+            _c("p", [_c("strong", [_vm._v("Leverage")])]),
             _vm._v(" "),
             _c("p", [_vm._v("9.0x")])
           ]),
@@ -79216,11 +79253,19 @@ var staticRenderFns = [
           _c("tr", [
             _c("th", [_vm._v("For You:")]),
             _vm._v(" "),
-            _c("th", [_vm._v("800$ "), _c("br"), _vm._v("Minimum Ticket")]),
+            _c("th", [
+              _vm._v("800$ "),
+              _c("br"),
+              _c("strong", [_vm._v("Minimum Ticket")])
+            ]),
             _vm._v(" "),
             _c("th", [_vm._v("6 000 $ "), _c("br"), _vm._v("Annual Revenue")]),
             _vm._v(" "),
-            _c("th", [_vm._v("7.5x "), _c("br"), _vm._v("Leverage")])
+            _c("th", [
+              _vm._v("7.5x "),
+              _c("br"),
+              _c("strong", [_vm._v("Leverage")])
+            ])
           ])
         ])
       ]
@@ -81153,39 +81198,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_assets_vue_vue_type_template_id_f8aa67e4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
-
-/***/ }),
-
-/***/ "./resources/js/components/assets/majimilele.jpeg":
-/*!********************************************************!*\
-  !*** ./resources/js/components/assets/majimilele.jpeg ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/majimilele.jpeg?97532a735f2eb01c9df54a9a7b261fa3";
-
-/***/ }),
-
-/***/ "./resources/js/components/assets/mvuapap.jpeg":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/assets/mvuapap.jpeg ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/mvuapap.jpeg?ffcf52e3d84f92ad2f70e7d7e3d5b82f";
-
-/***/ }),
-
-/***/ "./resources/js/components/assets/ovive.jpeg":
-/*!***************************************************!*\
-  !*** ./resources/js/components/assets/ovive.jpeg ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/ovive.jpeg?992827b6166db21bad2bc962e83c5688";
 
 /***/ }),
 

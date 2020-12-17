@@ -2,17 +2,17 @@
   <div>
     <section class="pt-5 pb-5">
       <div class="row">
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4  mb-3">
           <div class="card">
             <div class="card-body ">
               <div class="row">
-                <div class="col-md-4">
-                  <img class="rounded float-left"
-                       src="/motorbikes.jpeg"
+                <div class="col-md-4 ">
+                  <img loading="lazy" class="rounded float-left"
+                       src="assets/zembo.PNG"
                        alt="">
                 </div>
                 <div class="col-md-8" v-if="!showMotorbikeDetails">
-                  <p style="border-bottom: 3px solid #3e4494">Electric motorbikes for moto taxi</p>
+                  <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">Electric motorbikes</p>
                   <p>Local Partner: Zembo Bikes</p>
                   <p>Country: Uganda</p>
                 </div>
@@ -33,16 +33,16 @@
                     <div class="card-body">
                       <div class="col-12">
                         <div class="row">
-                          <div class="col-md-4">
-                            <p>Minimum Ticket</p>
+                          <div class="col-md-4 border ">
+                            <p><strong>Minimum Ticket</strong></p>
                             <p>1 100$</p>
                           </div>
-                          <div class="col-md-4">
-                            <p>Impact</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Impact</strong></p>
                             <p>2 500$</p>
                           </div>
-                          <div class="col-md-4">
-                            <p>Leverage</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Leverage</strong></p>
                             <p>2.4x</p>
                           </div>
                           <div class="col-12">
@@ -67,7 +67,7 @@
                       </tr>
                       <tr>
                         <th>For You:</th>
-                        <th>$500 <br>Minimum Ticket</th>
+                        <th>$500 <br><strong>Minimum Ticket</strong></th>
                         <th>9% <br>APY</th>
                         <th>18 Month <br>Term</th>
                       </tr>
@@ -84,18 +84,18 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4  mb-3">
           <div class="card">
             <div class="card-body ">
               <div class="row">
-                <div class="col-md-4">
-                  <img class="rounded float-left img-thumbnail"
-                       src="/motorbike2.jpeg"
+                <div class="col-md-4 ">
+                  <img loading="lazy" class="rounded float-left img-thumbnail"
+                       src="/assets/asaak.jpg"
                        alt="">
                 </div>
                 <div class="col-md-8" v-if="!showSmartMeter">
-                  <p style="border-bottom: 3px solid #3e4494">
-                    Petrol motorbikes for moto taxi
+                  <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">
+                    Petrol motorbikes
                   </p>
                   <p>Local partner: Asaak</p>
                   <p>Country: Uganda</p>
@@ -112,16 +112,16 @@
                     <div class="card-body">
                       <div class="col-12">
                         <div class="row">
-                          <div class="col-md-4">
-                            <p>Minimum Ticket</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Minimum Ticket</strong></p>
                             <p>1 500$</p>
                           </div>
-                          <div class="col-md-4">
-                            <p>Impact</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Impact</strong></p>
                             <p>2 500$</p>
                           </div>
-                          <div class="col-md-4">
-                            <p>Leverage</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Leverage</strong></p>
                             <p>1.7x</p>
                           </div>
                           <div class="col-12">
@@ -147,7 +147,7 @@
                       </tr>
                       <tr>
                         <th>For You:</th>
-                        <th>$500 <br>Minimum Ticket</th>
+                        <th>$500 <br><strong>Minimum Ticket</strong></th>
                         <th>9% <br>APY</th>
                         <th>18 Month <br>Term</th>
                       </tr>
@@ -165,17 +165,17 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4  mb-3">
           <div class="card">
             <div class="card-body ">
               <div class="row">
-                <div class="col-md-4">
-                  <img class="rounded float-left img-thumbnail"
-                       src="./assets/ovive.jpeg"
+                <div class="col-md-4 ">
+                  <img loading="lazy" class="rounded float-left img-thumbnail"
+                       src="assets/ovive.jpg"
                        alt="">
                 </div>
                 <div class="col-md-8" v-if="!ovive">
-                  <p style="border-bottom: 3px solid #3e4494">
+                  <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">
                     Purified water kiosk
                   </p>
                   <p>Local partner: OVIVE</p>
@@ -193,16 +193,16 @@
                     <div class="card-body">
                       <div class="col-12">
                         <div class="row">
-                          <div class="col-md-4">
-                            <p>Minimum Ticket</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Minimum Ticket</strong></p>
                             <p>10 000$</p>
                           </div>
-                          <div class="col-md-4">
-                            <p>Impact</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Impact</strong></p>
                             <p>30 000$</p>
                           </div>
-                          <div class="col-md-4">
-                            <p>Leverage</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Leverage</strong></p>
                             <p>3.0x</p>
                           </div>
                           <div class="col-12">
@@ -227,9 +227,9 @@
                       <!--                          </tr>-->
                       <tr>
                         <th>For You:</th>
-                        <th>9 000$ <br>Minimum Ticket</th>
+                        <th>9 000$ <br><strong>Minimum Ticket</strong></th>
                         <th>36 000 $ <br>Annual Revenue</th>
-                        <th>4.0x <br>Leverage</th>
+                        <th>4.0x <br><strong>Leverage</strong></th>
                       </tr>
                       </thead>
 
@@ -244,17 +244,17 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4  mb-3">
           <div class="card">
             <div class="card-body ">
               <div class="row">
-                <div class="col-md-4">
-                  <img class="rounded float-left img-thumbnail"
-                       src="./assets/majimilele.jpeg"
+                <div class="col-md-4 ">
+                  <img loading="lazy" class="rounded float-left img-thumbnail"
+                       src="assets/kiosk.jpg"
                        alt="">
                 </div>
                 <div class="col-md-8" v-if="!majimilele">
-                  <p style="border-bottom: 3px solid #3e4494">
+                  <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">
                     Automated water kiosk
                   </p>
                   <p>Local partner: Maji Milele </p>
@@ -272,16 +272,16 @@
                     <div class="card-body">
                       <div class="col-12">
                         <div class="row">
-                          <div class="col-md-4">
-                            <p>Minimum Ticket</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Minimum Ticket</strong></p>
                             <p>3 000$</p>
                           </div>
-                          <div class="col-md-4">
-                            <p>Impact</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Impact</strong></p>
                             <p>4 200$</p>
                           </div>
-                          <div class="col-md-4">
-                            <p>Leverage</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Leverage</strong></p>
                             <p>1.4x</p>
                           </div>
                           <div class="col-12">
@@ -306,9 +306,9 @@
                       <!--                          </tr>-->
                       <tr>
                         <th>For You:</th>
-                        <th>3 000$ <br>Minimum Ticket</th>
+                        <th>3 000$ <br><strong>Minimum Ticket</strong></th>
                         <th>7 200 $ <br>Annual Revenue</th>
-                        <th>2.4x <br>Leverage</th>
+                        <th>2.4x <br><strong>Leverage</strong></th>
                       </tr>
                       </thead>
 
@@ -323,17 +323,17 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4  mb-3">
           <div class="card">
             <div class="card-body ">
               <div class="row">
-                <div class="col-md-4">
-                  <img class="rounded float-left img-thumbnail"
-                       src="./assets/mvuapap.jpeg"
+                <div class="col-md-4 ">
+                  <img loading="lazy" class="rounded float-left img-thumbnail"
+                       src="assets/mvuapap.jpg"
                        alt="">
                 </div>
                 <div class="col-md-8" v-if="!mvuapap">
-                  <p style="border-bottom: 3px solid #3e4494">
+                  <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">
                     Mobile irrigation trailer
                   </p>
                   <p>Local partner: MvuaPap! </p>
@@ -351,22 +351,20 @@
                     <div class="card-body">
                       <div class="col-12">
                         <div class="row">
-                          <div class="col-md-4">
-                            <p>Minimum Ticket</p>
+                          <div class="col-md-4 border">
+                            <p ><strong>Minimum Ticket</strong></p>
                             <p>1 100$</p>
                           </div>
-                          <div class="col-md-4">
-                            <p>Impact</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Impact</strong></p>
                             <p>9 750$</p>
                           </div>
-                          <div class="col-md-4">
-                            <p>Leverage</p>
+                          <div class="col-md-4 border">
+                            <p><strong>Leverage</strong></p>
                             <p>9.0x</p>
                           </div>
                           <div class="col-12">
-                            <a href="/register" class="btn btn-custom btn-block btn-lg"
-
-                               >
+                            <a href="/register" class="btn btn-custom btn-block btn-lg">
                               Invest
                             </a>
                           </div>
@@ -385,9 +383,9 @@
                       <!--                          </tr>-->
                       <tr>
                         <th>For You:</th>
-                        <th>800$ <br>Minimum Ticket</th>
+                        <th>800$ <br><strong>Minimum Ticket</strong></th>
                         <th>6 000 $ <br>Annual Revenue</th>
-                        <th>7.5x <br>Leverage</th>
+                        <th>7.5x <br><strong>Leverage</strong></th>
                       </tr>
                       </thead>
 

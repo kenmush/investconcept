@@ -143,7 +143,7 @@
                                        class="fa fa-info-circle text-blue-300"
                                        style="rgba(37, 99, 235, 1)"
                                        data-placement="top"
-                                       title="Local value creation per dollar invested">
+                                       title="Local value creation per dollar invested since 1 October 2020.">
                                     </i>
                                 </p>
 
@@ -194,7 +194,7 @@
                                                 {{$asset['asset_category_name'] ?? ''}}
                                             </a>
                                         </td>
-                                        <td></td>
+                                        <td>{{$asset['country']}}</td>
                                         <td>{{$asset['units']}}</td>
                                         <td>{{$asset['amount_invested']}}</td>
                                         <td>{{$asset['percentage_invested']}}</td>
