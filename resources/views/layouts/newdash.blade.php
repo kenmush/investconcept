@@ -117,7 +117,7 @@
                                     </span>
                                 </div>
                                 @if(!is_null(auth()->user()->avatar))
-                                    <img src="{{ env('MEDIA_PATH'). "/".auth()->user()->avatar }}"
+                                    <img src="{{ "https://investorapis.untapped-inc.com/".auth()->user()->avatar }}"
                                          width="20" alt=""/>
                                 @else
                                     <img src="https://icon-library.com/images/generic-user-icon/generic-user-icon-13.jpg"
