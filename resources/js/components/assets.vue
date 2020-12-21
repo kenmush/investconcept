@@ -45,10 +45,8 @@
                             <p><strong>Leverage</strong></p>
                             <p>2.4x</p>
                           </div>
-                          <div class="col-12">
-                            <a href="/moto-taxis" class="btn btn-custom btn-block btn-lg"
-
-                            >
+                          <div class="col-12 mt-3">
+                            <a href="/moto-taxis" class="btn btn-custom btn-block btn-lg">
                               More
                             </a>
                           </div>
@@ -74,7 +72,7 @@
                       </thead>
 
                     </table>
-                    <div class="row">
+                    <div class="row mt-3">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
                       >More</a>
                     </div>
@@ -124,7 +122,7 @@
                             <p><strong>Leverage</strong></p>
                             <p>1.7x</p>
                           </div>
-                          <div class="col-12">
+                          <div class="col-12 mt-3">
                             <a href="/moto-taxis" class="btn btn-custom btn-block btn-lg">
                               More
                             </a>
@@ -151,7 +149,7 @@
                       </thead>
 
                     </table>
-                    <div class="row">
+                    <div class="row mt-3">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
                       >More</a>
                     </div>
@@ -202,7 +200,7 @@
                             <p><strong>Leverage</strong></p>
                             <p>3.0x</p>
                           </div>
-                          <div class="col-12">
+                          <div class="col-12 mt-3">
                             <a href="/water-atms" class="btn btn-custom btn-block btn-lg">
                               More
                             </a>
@@ -229,7 +227,7 @@
                       </thead>
 
                     </table>
-                    <div class="row">
+                    <div class="row mt-3">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
                       >More</a>
                     </div>
@@ -279,7 +277,7 @@
                             <p><strong>Leverage</strong></p>
                             <p>1.4x</p>
                           </div>
-                          <div class="col-12">
+                          <div class="col-12 mt-3">
                             <a href="/water-atms" class="btn btn-custom btn-block btn-lg">
                               More
                             </a>
@@ -306,7 +304,7 @@
                       </thead>
 
                     </table>
-                    <div class="row">
+                    <div class="row mt-3">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
                       >More</a>
                     </div>
@@ -356,7 +354,7 @@
                             <p><strong>Leverage</strong></p>
                             <p>9.0x</p>
                           </div>
-                          <div class="col-12">
+                          <div class="col-12 mt-3">
                             <a href="/irrigation-pumps" class="btn btn-custom btn-block btn-lg">
                               More
                             </a>

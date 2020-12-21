@@ -2635,8 +2635,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "assets",
   data: function data() {
@@ -78771,7 +78769,7 @@ var staticRenderFns = [
             _c("p", [_vm._v("2.4x")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12" }, [
+          _c("div", { staticClass: "col-12 mt-3" }, [
             _c(
               "a",
               {
@@ -78832,7 +78830,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
+    return _c("div", { staticClass: "row mt-3" }, [
       _c(
         "a",
         {
@@ -78879,7 +78877,7 @@ var staticRenderFns = [
             _c("p", [_vm._v("1.7x")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12" }, [
+          _c("div", { staticClass: "col-12 mt-3" }, [
             _c(
               "a",
               {
@@ -78940,7 +78938,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
+    return _c("div", { staticClass: "row mt-3" }, [
       _c(
         "a",
         {
@@ -78987,7 +78985,7 @@ var staticRenderFns = [
             _c("p", [_vm._v("3.0x")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12" }, [
+          _c("div", { staticClass: "col-12 mt-3" }, [
             _c(
               "a",
               {
@@ -79042,7 +79040,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
+    return _c("div", { staticClass: "row mt-3" }, [
       _c(
         "a",
         {
@@ -79089,7 +79087,7 @@ var staticRenderFns = [
             _c("p", [_vm._v("1.4x")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12" }, [
+          _c("div", { staticClass: "col-12 mt-3" }, [
             _c(
               "a",
               {
@@ -79144,7 +79142,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
+    return _c("div", { staticClass: "row mt-3" }, [
       _c(
         "a",
         {
@@ -79191,7 +79189,7 @@ var staticRenderFns = [
             _c("p", [_vm._v("9.0x")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-12" }, [
+          _c("div", { staticClass: "col-12 mt-3" }, [
             _c(
               "a",
               {
