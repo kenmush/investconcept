@@ -59,7 +59,7 @@
                             <div class="form-group">
                                 <label class="font-size-h6 font-weight-bolder text-dark">Email</label>
                                 <input class="form-control
-                                 {{ $errors->has('email') ? ' is-invalid' : '' }}
+
                                         form-control-solid h-auto py-7 px-6 rounded-lg" type="text"
                                        name="email" id="email"
                                        value="{{ old('email') }}"
@@ -76,8 +76,7 @@
                                        class=" font-size-h6 font-weight-bolder text-hover-primary pt-5"
                                        id="kt_login_forgot">Forgot Password ?</a>
                                 </div>
-                                <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg
- {{ $errors->has('email') ? ' is-invalid' : '' }}"
+                                <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg {{ $errors->has('email') ? ' is-invalid' : '' }}"
                                        type="password" name="password" autocomplete="off"/>
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
