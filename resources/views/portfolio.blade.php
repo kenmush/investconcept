@@ -181,7 +181,7 @@
                                     <td></td>
                                     <td><strong>{{ $stats['total_units'] ?? '' }}</strong></td>
                                     <td><strong>{{ $stats['total_invested'] }}</strong></td>
-                                    <td><strong>100</strong></td>
+                                    <td><strong></strong></td>
                                     <td><strong>{{ $stats['total_revenue'] }}</strong></td>
                                     <td><strong>{{ $stats['total_leverage'] }}</strong></td>
                                 </tr>
