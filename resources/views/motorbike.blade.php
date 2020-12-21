@@ -26,25 +26,7 @@
                                     <div class="card-body pb-0">
 
                                         <p>{{ $assets['use_case'] }}</p>
-                                        <ul class="list-group list-group-flush">
-                                            {{--                                            <li class="list-group-item d-flex px-0 justify-content-between">--}}
-                                            {{--                                                <strong>Ticket</strong>--}}
-                                            {{--                                                <span class="mb-0">{{ $assets['ticket'] }}</span>--}}
-                                            {{--                                            </li>--}}
-                                            <li class="list-group-item d-flex px-0 justify-content-between">
-                                                <strong>Return</strong>
-                                                <span class="mb-0">{{ $assets['return_percentage'] }}%</span>
-                                            </li>
-                                            <li class="list-group-item d-flex px-0 justify-content-between">
-                                                <strong>Duration</strong>
-                                                <span class="mb-0">{{ $assets['duration'] }}</span>
-                                            </li>
-                                            <li class="list-group-item d-flex px-0 justify-content-between">
-                                                <strong>Impact</strong>
-                                                <span class="mb-0">  {{ $assets['impact'] }}</span> <br>
-                                            </li>
-                                        </ul>
-                                    </div>
+
 
                                 </div>
                             </div>
