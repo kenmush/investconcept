@@ -2637,35 +2637,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "assets",
   data: function data() {
@@ -78753,7 +78724,7 @@ var render = function() {
                 _c("div", { staticClass: "col-12" }, [
                   !_vm.mvuapap
                     ? _c("div", { staticClass: "card" }, [_vm._m(17)])
-                    : _c("div", [_vm._m(18), _vm._v(" "), _vm._m(19)])
+                    : _vm._e()
                 ])
               ])
             ])
@@ -78805,11 +78776,11 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "btn btn-custom btn-block btn-lg",
-                attrs: { href: "/register" }
+                attrs: { href: "/moto-taxis" }
               },
               [
                 _vm._v(
-                  "\n                            Invest\n                          "
+                  "\n                            More\n                          "
                 )
               ]
             )
@@ -78868,7 +78839,7 @@ var staticRenderFns = [
           staticClass: "btn btn-custom btn-block btn-lg",
           attrs: { href: "/register" }
         },
-        [_vm._v("Invest")]
+        [_vm._v("More")]
       )
     ])
   },
@@ -78913,11 +78884,11 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "btn btn-custom btn-block btn-lg",
-                attrs: { href: "/register" }
+                attrs: { href: "/moto-taxis" }
               },
               [
                 _vm._v(
-                  "\n                            Invest\n                          "
+                  "\n                            More\n                          "
                 )
               ]
             )
@@ -78976,7 +78947,7 @@ var staticRenderFns = [
           staticClass: "btn btn-custom btn-block btn-lg",
           attrs: { href: "/register" }
         },
-        [_vm._v("Invest")]
+        [_vm._v("More")]
       )
     ])
   },
@@ -79021,11 +78992,11 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "btn btn-custom btn-block btn-lg",
-                attrs: { href: "/register" }
+                attrs: { href: "/water-atms" }
               },
               [
                 _vm._v(
-                  "\n                            Invest\n                          "
+                  "\n                            More\n                          "
                 )
               ]
             )
@@ -79078,7 +79049,7 @@ var staticRenderFns = [
           staticClass: "btn btn-custom btn-block btn-lg",
           attrs: { href: "/register" }
         },
-        [_vm._v("Invest")]
+        [_vm._v("More")]
       )
     ])
   },
@@ -79123,11 +79094,11 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "btn btn-custom btn-block btn-lg",
-                attrs: { href: "/register" }
+                attrs: { href: "/water-atms" }
               },
               [
                 _vm._v(
-                  "\n                            Invest\n                          "
+                  "\n                            More\n                          "
                 )
               ]
             )
@@ -79180,7 +79151,7 @@ var staticRenderFns = [
           staticClass: "btn btn-custom btn-block btn-lg",
           attrs: { href: "/register" }
         },
-        [_vm._v("Invest")]
+        [_vm._v("More")]
       )
     ])
   },
@@ -79225,65 +79196,17 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "btn btn-custom btn-block btn-lg",
-                attrs: { href: "/register" }
+                attrs: { href: "/irrigation-pumps" }
               },
               [
                 _vm._v(
-                  "\n                            Invest\n                          "
+                  "\n                            More\n                          "
                 )
               ]
             )
           ])
         ])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "table",
-      {
-        staticClass:
-          "table table-{1:striped|sm|bordered|hover|inverse} table-inverse"
-      },
-      [
-        _c("thead", { staticClass: "thead-default" }, [
-          _c("tr", [
-            _c("th", [_vm._v("For You:")]),
-            _vm._v(" "),
-            _c("th", [
-              _vm._v("800$ "),
-              _c("br"),
-              _c("strong", [_vm._v("Minimum Ticket")])
-            ]),
-            _vm._v(" "),
-            _c("th", [_vm._v("6 000 $ "), _c("br"), _vm._v("Annual Revenue")]),
-            _vm._v(" "),
-            _c("th", [
-              _vm._v("7.5x "),
-              _c("br"),
-              _c("strong", [_vm._v("Leverage")])
-            ])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-custom btn-block btn-lg",
-          attrs: { href: "/register" }
-        },
-        [_vm._v("Invest")]
-      )
     ])
   }
 ]

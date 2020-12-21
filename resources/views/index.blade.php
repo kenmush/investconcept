@@ -80,7 +80,7 @@
                 <h2>Your <span class="special">impact</span> in real-time</h2>
             </div>
             <googlemap></googlemap>
-{{--            <map-component :categories='@json($assets)'></map-component>--}}
+            {{--            <map-component :categories='@json($assets)'></map-component>--}}
         </div>
     </div>
     <div class="cta-assets" style="margin-top: -160px" id="assets">
@@ -99,7 +99,15 @@
             <div class="row">
                 <div class="col-12 d-xl-flex d-lg-flex justify-content-end d-block align-items-center">
                     <showassets></showassets>
-
+                </div>
+                <div class="col-12">
+                    <div class="col-12 d-flex align-content-center justify-content-center mb-3">
+                        <a
+                                style="border-radius: 0!important;"
+                                href="/register" class="btn-hyipox-medium cta-btn">
+                            Invest
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,7 +119,7 @@
                 <div class="col-xl-8 col-lg-8">
                     <div class="section-title mt-5">
                         <h2>
-                            Calculate your<span class="special" > impact</span>
+                            Calculate your<span class="special"> impact</span>
                         </h2>
                         <hr>
                     </div>

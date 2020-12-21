@@ -3,6 +3,7 @@
 use App\Asset;
 use App\Http\Controllers\AllassetController;
 use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\MotoTaxisController;
 use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
 
@@ -61,3 +62,7 @@ Route::get('update-your-password', 'ChangePasswordController')
         ->name('changepassword');
 Route::post('resetpassword', 'ResetPassword')->name('resetpassword');
 Auth::routes();
+
+Route::get('moto-taxis', 'MotoTaxisController');
+Route::get('water-atms', 'WaterAtms');
+Route::get('irrigation-pumps', 'IrrigationPumps');

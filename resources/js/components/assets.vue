@@ -46,10 +46,10 @@
                             <p>2.4x</p>
                           </div>
                           <div class="col-12">
-                            <a href="/register" class="btn btn-custom btn-block btn-lg"
-                             
+                            <a href="/moto-taxis" class="btn btn-custom btn-block btn-lg"
+
                             >
-                              Invest
+                              More
                             </a>
                           </div>
                         </div>
@@ -76,7 +76,7 @@
                     </table>
                     <div class="row">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
-                         >Invest</a>
+                      >More</a>
                     </div>
                   </div>
                 </div>
@@ -125,11 +125,8 @@
                             <p>1.7x</p>
                           </div>
                           <div class="col-12">
-                            <a href="/register" class="btn btn-custom btn-block btn-lg"
-
-                               
-                               >
-                              Invest
+                            <a href="/moto-taxis" class="btn btn-custom btn-block btn-lg">
+                              More
                             </a>
                           </div>
                         </div>
@@ -156,7 +153,7 @@
                     </table>
                     <div class="row">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
-                         >Invest</a>
+                      >More</a>
                     </div>
                   </div>
                 </div>
@@ -206,10 +203,8 @@
                             <p>3.0x</p>
                           </div>
                           <div class="col-12">
-                            <a href="/register" class="btn btn-custom btn-block btn-lg"
-
-                               >
-                              Invest
+                            <a href="/water-atms" class="btn btn-custom btn-block btn-lg">
+                              More
                             </a>
                           </div>
                         </div>
@@ -236,7 +231,7 @@
                     </table>
                     <div class="row">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
-                         >Invest</a>
+                      >More</a>
                     </div>
                   </div>
                 </div>
@@ -285,10 +280,8 @@
                             <p>1.4x</p>
                           </div>
                           <div class="col-12">
-                            <a href="/register" class="btn btn-custom btn-block btn-lg"
-
-                               >
-                              Invest
+                            <a href="/water-atms" class="btn btn-custom btn-block btn-lg">
+                              More
                             </a>
                           </div>
                         </div>
@@ -315,7 +308,7 @@
                     </table>
                     <div class="row">
                       <a href="/register" class="btn btn-custom btn-block btn-lg"
-                         >Invest</a>
+                      >More</a>
                     </div>
                   </div>
                 </div>
@@ -352,7 +345,7 @@
                       <div class="col-12">
                         <div class="row">
                           <div class="col-md-4 border">
-                            <p ><strong>Minimum Ticket</strong></p>
+                            <p><strong>Minimum Ticket</strong></p>
                             <p>1 100$</p>
                           </div>
                           <div class="col-md-4 border">
@@ -364,37 +357,15 @@
                             <p>9.0x</p>
                           </div>
                           <div class="col-12">
-                            <a href="/register" class="btn btn-custom btn-block btn-lg">
-                              Invest
+                            <a href="/irrigation-pumps" class="btn btn-custom btn-block btn-lg">
+                              More
                             </a>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div v-else>
-                    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
-                      <thead class="thead-default">
-                      <!--                          <tr>-->
-                      <!--                            <th>For the Entrepreneur</th>-->
-                      <!--                            <th> <br>Moto</th>-->
-                      <!--                            <th>$120/Month <br>Avg. Income</th>-->
-                      <!--                            <th>$45/Month <br>Lease Payments</th>-->
-                      <!--                          </tr>-->
-                      <tr>
-                        <th>For You:</th>
-                        <th>800$ <br><strong>Minimum Ticket</strong></th>
-                        <th>6 000 $ <br>Annual Revenue</th>
-                        <th>7.5x <br><strong>Leverage</strong></th>
-                      </tr>
-                      </thead>
 
-                    </table>
-                    <div class="row">
-                      <a href="/register" class="btn btn-custom btn-block btn-lg"
-                         >Invest</a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
