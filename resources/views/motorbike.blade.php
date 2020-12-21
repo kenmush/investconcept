@@ -7,7 +7,7 @@
                 <div class="welcome-text">
 
                     <h4>{{ $assets['categoryName'] }}</h4>
-{{--                    <h4>Beneficiary</h4>--}}
+                    {{--                    <h4>Beneficiary</h4>--}}
                     {{--                    <p class="mb-0">Your business dashboard template</p>--}}
                 </div>
             </div>
@@ -27,10 +27,10 @@
 
                                         <p>{{ $assets['use_case'] }}</p>
                                         <ul class="list-group list-group-flush">
-{{--                                            <li class="list-group-item d-flex px-0 justify-content-between">--}}
-{{--                                                <strong>Ticket</strong>--}}
-{{--                                                <span class="mb-0">{{ $assets['ticket'] }}</span>--}}
-{{--                                            </li>--}}
+                                            {{--                                            <li class="list-group-item d-flex px-0 justify-content-between">--}}
+                                            {{--                                                <strong>Ticket</strong>--}}
+                                            {{--                                                <span class="mb-0">{{ $assets['ticket'] }}</span>--}}
+                                            {{--                                            </li>--}}
                                             <li class="list-group-item d-flex px-0 justify-content-between">
                                                 <strong>Return</strong>
                                                 <span class="mb-0">{{ $assets['return_percentage'] }}%</span>
@@ -91,12 +91,14 @@
                             </div>
                         </div>
                         <div class="row" style="padding-top: 53px">
-                            <h4> Innovators who use it</h4>
+                            <h4> Partners</h4>
 
                             <div class="col-md-12">
                                 <div class="row">
-                                    @foreach($beneficiaries as $beneficiary)
-                                        <div class="col-md-3 shadow-inner shadow-outline">
+
+                                    @if(Str::of($assets['categoryName'])->contains('bike'))
+                                        @foreach(collect($beneficiaries)->where('middleName','bikes') as $beneficiary)
+                                            <div class="col-md-3 shadow-inner shadow-outline">
                                                 <div class="card" style="border-radius: 1rem">
                                                     <img class="card-img-top"
                                                          src="{{ config('investordashboard.media_path').$beneficiary['avatar'] }}"
@@ -105,24 +107,44 @@
                                                         <h4 class=" untapped-heading">
                                                             {{ $beneficiary['firstName'] }}
                                                             {{ $beneficiary['middleName'] }}
-{{--                                                            {{ $beneficiary['lastName'] }}--}}
+                                                            {{--                                                            {{ $beneficiary['lastName'] }}--}}
                                                         </h4>
                                                         <p class="untapped-subtitle">
                                                             {{ $beneficiary['country'] }}
                                                         </p>
                                                     </div>
                                                 </div>
-                                        </div>
-                                    @endforeach
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                    @if(Str::of($assets['categoryName'])->contains('atm'))
+                                        @foreach(collect($beneficiaries)->where('middleName','ATM') as $beneficiary)
+                                            <div class="col-md-3 shadow-inner shadow-outline">
+                                                <div class="card" style="border-radius: 1rem">
+                                                    <img class="card-img-top"
+                                                         src="{{ config('investordashboard.media_path').$beneficiary['avatar'] }}"
+                                                         alt="{{ $beneficiary['firstName'] }}">
+                                                    <div class="card-body text-center">
+                                                        <h4 class=" untapped-heading">
+                                                            {{ $beneficiary['firstName'] }}
+                                                            {{ $beneficiary['middleName'] }}
+                                                            {{--                                                            {{ $beneficiary['lastName'] }}--}}
+                                                        </h4>
+                                                        <p class="untapped-subtitle">
+                                                            {{ $beneficiary['country'] }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @endif
+
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 @endsection
