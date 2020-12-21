@@ -52,6 +52,7 @@ class LoginController extends Controller
                             'name'     => $userFromAPI['firstName'].' '.$userFromAPI['lastName'],
                             'api_id'   => $userFromAPI['id'],
                             'first_login'   => $userFromAPI['first_login'],
+                            'avatar'   => $userFromAPI['avatar'],
                     ]
             );
             Auth::loginUsingId($user->id);

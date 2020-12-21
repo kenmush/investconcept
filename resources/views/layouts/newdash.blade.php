@@ -116,9 +116,13 @@
                                         </strong>
                                     </span>
                                 </div>
-
-                                <img src="https://icon-library.com/images/generic-user-icon/generic-user-icon-13.jpg"
-                                     width="20" alt=""/>
+                                @if(!is_null(auth()->user()->avatar))
+                                    <img src="{{ env('MEDIA_PATH'). "/".auth()->user()->avatar }}"
+                                         width="20" alt=""/>
+                                @else
+                                    <img src="https://icon-library.com/images/generic-user-icon/generic-user-icon-13.jpg"
+                                         width="20" alt=""/>
+                                @endif
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a href="{{ route('changepassword') }}"
