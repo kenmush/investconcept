@@ -5,13 +5,9 @@
         <div class="row page-titles mx-0">
             <div class="col-sm-6 p-md-0">
                 <div class="welcome-text">
-
-                    <h4>{{ $assets['categoryName'] }}</h4>
-                    {{--                    <h4>Beneficiary</h4>--}}
-                    {{--                    <p class="mb-0">Your business dashboard template</p>--}}
+                    <h4>{{ $assets['category'] ?? '' }}</h4>
                 </div>
             </div>
-
         </div>
         <div class="row">
             <div class="col-lg-12">
@@ -28,9 +24,11 @@
                                         <p>{{ $assets['use_case'] }}</p>
 
 
+                                    </div>
                                 </div>
+
                             </div>
-                            <div class="col-md-6  ">
+                            <div class="col-xl-6 col-lg-6 col-sm-6">
                                 <div class="bootstrap-carousel shadow rounded-sm">
                                     <div id="carouselExampleIndicators2" class="carousel slide"
                                          data-ride="carousel">

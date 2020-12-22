@@ -6,6 +6,7 @@ use App\Asset;
 use App\Services\Investor;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PortfolioController extends Controller
 {
@@ -51,8 +52,22 @@ class PortfolioController extends Controller
     public function show($id)
     {
         try {
+            $beneficiaries = collect((new Investor())->getAssetbyId($id));
+
+            if (Str::contains($beneficiaries['categoryName'], 'pump')) {
+                $beneficiaries['category'] = 'Irrigation pumps';
+            }
+
+            if (Str::contains($beneficiaries['categoryName'], 'bike')) {
+                $beneficiaries['category'] = 'Moto Taxis';
+            }
+
+            if (Str::contains($beneficiaries['categoryName'], 'ATM')) {
+                $beneficiaries['category'] = 'ATMs';
+            }
+
             return view('motorbike', [
-                    'assets'        => (new Investor())->getAssetbyId($id),
+                    'assets'        => $beneficiaries,
                     'beneficiaries' => (new Investor())->getBeneficiary()
             ]);
         } catch (ClientException $exception) {
