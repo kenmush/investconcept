@@ -52,23 +52,34 @@ class PortfolioController extends Controller
     public function show($id)
     {
         try {
-            $beneficiaries = collect((new Investor())->getAssetbyId($id));
+            $assets = collect((new Investor())->getAssetbyId($id));
 
-            if (Str::contains($beneficiaries['categoryName'], 'pump')) {
-                $beneficiaries['category'] = 'Irrigation pumps';
+            if (Str::contains($assets['categoryName'], 'MvuaPap! Irrigation Trailer')) {
+                $assets['category'] = 'Irrigation pumps';
             }
 
-            if (Str::contains($beneficiaries['categoryName'], 'bike')) {
-                $beneficiaries['category'] = 'Moto Taxis';
+            if (Str::contains($assets['categoryName'], 'bike')) {
+                $assets['category'] = 'Moto Taxis';
             }
 
-            if (Str::contains($beneficiaries['categoryName'], 'ATM')) {
-                $beneficiaries['category'] = 'ATMs';
+            if (Str::contains($assets['categoryName'], 'ATM')) {
+                $assets['category'] = 'ATMs';
             }
+            $benefiaries = collect((new Investor())->getBeneficiary());
+            $allBeneficiaries = $benefiaries->map(function ($benefiaries) {
+                if ($benefiaries['firstName'] === 'MvuaPap!') {
+                    $benefiaries['founded'] = '2019';
+                    $benefiaries['Assets managed'] = 1;
+                    $benefiaries['Planned Q1 2021'] = 5;
+                    $benefiaries['Mission'] =
+                            "To make high quality drinking water available on demand at scale to the Kenyan urban middle class";
+                }
+                return $benefiaries;
+            });
 
             return view('motorbike', [
-                    'assets'        => $beneficiaries,
-                    'beneficiaries' => (new Investor())->getBeneficiary()
+                    'assets'        => $assets,
+                    'beneficiaries' => $allBeneficiaries
             ]);
         } catch (ClientException $exception) {
             return back();

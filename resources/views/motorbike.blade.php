@@ -75,29 +75,41 @@
 
                             <div class="col-md-12">
                                 <div class="row">
-
                                     @if(Str::of($assets['categoryName'])->contains('bike'))
                                         @foreach(collect($beneficiaries)->where('middleName','bikes') as $beneficiary)
                                             <div class="col-md-3 shadow-inner shadow-outline">
                                                 <div class="card" style="border-radius: 1rem">
                                                     <img class="card-img-top"
+                                                         style="object-fit: cover;height: 200px"
                                                          src="{{ config('investordashboard.media_path').$beneficiary['avatar'] }}"
                                                          alt="{{ $beneficiary['firstName'] }}">
-                                                    <div class="card-body text-center">
-                                                        <h4 class=" untapped-heading">
+                                                    <div class="card-body">
+                                                        <h4 class="untapped-heading">
                                                             {{ $beneficiary['firstName'] }}
                                                             {{ $beneficiary['middleName'] }}
                                                             {{--                                                            {{ $beneficiary['lastName'] }}--}}
                                                         </h4>
                                                         <p class="untapped-subtitle">
-                                                            {{ $beneficiary['country'] }}
+                                                            <strong>Country:</strong> {{ $beneficiary['country'] }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Assets
+                                                                Managed:</strong> {{ $beneficiary['Assets managed'] ?? '' }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Planned Q1
+                                                                2021:</strong> {{ $beneficiary['Planned Q1 2021'] ?? '' }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Mission:</strong> {{ $beneficiary['Mission'] ??
+                                                            '' }}
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         @endforeach
                                     @endif
-                                    @if(Str::of($assets['categoryName'])->contains('atm'))
+                                    @if(Str::of($assets['categoryName'])->contains('ATM'))
                                         @foreach(collect($beneficiaries)->where('middleName','ATM') as $beneficiary)
                                             <div class="col-md-3 shadow-inner shadow-outline">
                                                 <div class="card" style="border-radius: 1rem">
@@ -111,7 +123,85 @@
                                                             {{--                                                            {{ $beneficiary['lastName'] }}--}}
                                                         </h4>
                                                         <p class="untapped-subtitle">
-                                                            {{ $beneficiary['country'] }}
+                                                            <strong>Country:</strong> {{ $beneficiary['country'] }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Assets
+                                                                Managed:</strong> {{ $beneficiary['Assets managed'] ?? '' }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Planned Q1
+                                                                2021:</strong> {{ $beneficiary['Planned Q1 2021'] ?? '' }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Mission:</strong> {{ $beneficiary['Mission'] ??
+                                                            '' }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                    @if(Str::of($assets['categoryName'])->contains('pump'))
+                                        @foreach(collect($beneficiaries)->where('middleName','pump') as $beneficiary)
+                                            <div class="col-md-3 shadow-inner shadow-outline">
+                                                <div class="card" style="border-radius: 1rem">
+                                                    <img class="card-img-top"
+                                                         src="{{ config('investordashboard.media_path').$beneficiary['avatar'] }}"
+                                                         alt="{{ $beneficiary['firstName'] }}">
+                                                    <div class="card-body text-center">
+                                                        <h4 class=" untapped-heading">
+                                                            {{ $beneficiary['firstName'] }}
+                                                            {{ $beneficiary['middleName'] }}
+                                                            {{--                                                            {{ $beneficiary['lastName'] }}--}}
+                                                        </h4>
+                                                        <p class="untapped-subtitle">
+                                                            <strong>Country:</strong> {{ $beneficiary['country'] }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Assets
+                                                                Managed:</strong> {{ $beneficiary['Assets managed'] ?? '' }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Planned Q1
+                                                                2021:</strong> {{ $beneficiary['Planned Q1 2021'] ?? '' }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Mission:</strong> {{ $beneficiary['Mission'] ??
+                                                            '' }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                    @if(Str::of($assets['categoryName'])->contains('MvuaPap! Irrigation Trailer'))
+                                        @foreach(collect($beneficiaries)->where('firstName','MvuaPap!') as $beneficiary)
+                                            <div class="col-md-3 shadow-inner shadow-outline">
+                                                <div class="card" style="border-radius: 1rem">
+                                                    <img class="card-img-top"
+                                                         src="{{ config('investordashboard.media_path').$beneficiary['avatar'] }}"
+                                                         alt="{{ $beneficiary['firstName'] }}">
+                                                    <div class="card-body text-center">
+                                                        <h4 class=" untapped-heading">
+                                                            {{ $beneficiary['firstName'] }}
+                                                            {{ $beneficiary['middleName'] }}
+                                                            {{--                                                            {{ $beneficiary['lastName'] }}--}}
+                                                        </h4>
+                                                        <p class="untapped-subtitle">
+                                                            <strong>Country:</strong> {{ $beneficiary['country'] }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Assets
+                                                                Managed:</strong> {{ $beneficiary['Assets managed'] ?? '' }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Planned Q1
+                                                                2021:</strong> {{ $beneficiary['Planned Q1 2021'] ?? '' }}
+                                                        </p>
+                                                        <p class="mt-0 pt-0">
+                                                            <strong>Mission:</strong> {{ $beneficiary['Mission'] ??
+                                                            '' }}
                                                         </p>
                                                     </div>
                                                 </div>
