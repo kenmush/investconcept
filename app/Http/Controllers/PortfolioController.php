@@ -53,7 +53,7 @@ class PortfolioController extends Controller
     {
         try {
             $assets = collect((new Investor())->getAssetbyId($id));
-
+            $assets['carousel'] = [];
             if (Str::contains($assets['categoryName'], 'MvuaPap! Irrigation Trailer')) {
                 $assets['category'] = 'Irrigation pumps';
                 $assets['carousel'] = [
@@ -76,7 +76,7 @@ class PortfolioController extends Controller
                 ];
             }
 
-            if (Str::contains($assets['categoryName'], 'ATM')) {
+            if (Str::contains($assets['categoryName'], 'ATM')|| Str::contains($assets['categoryName'], 'Maji milele')) {
                 $assets['category'] = 'ATMs';
                 $assets['carousel'] = [
                         'atm/atm1.jpg',
@@ -100,6 +100,13 @@ class PortfolioController extends Controller
                     $benefiaries['Planned Q1 2021'] = 5;
                     $benefiaries['Mission'] =
                             "To make high quality drinking water available on demand at scale to the Kenyan urban middle class.";
+                }
+                if ($benefiaries['firstName'] === 'Maji') {
+                    $benefiaries['founded'] = '2008';
+                    $benefiaries['Assets managed'] = 9;
+                    $benefiaries['Planned Q1 2021'] = 25;
+                    $benefiaries['Mission'] =
+                            "Widening base of pyramid access to safe water";
                 }
                 return $benefiaries;
             });
