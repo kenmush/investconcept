@@ -78511,9 +78511,11 @@ var render = function() {
                         [_vm._v("Motorbikes")]
                       ),
                       _vm._v(" "),
-                      _c("p", [_vm._v("Local Partners: Zembo Bikes, Asaak")]),
+                      _c("p", [
+                        _vm._v("Local Partners: Zembo Bikes, Asaak, Teliman ")
+                      ]),
                       _vm._v(" "),
-                      _c("p", [_vm._v("Country: Uganda")])
+                      _c("p", [_vm._v("Country: Uganda, Mali")])
                     ])
                   : _c("div", { staticClass: "col-md-8" }, [
                       _c("p", [_vm._v("Local Partner: Zembo Bikes")]),

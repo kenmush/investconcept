@@ -13,8 +13,8 @@
                 </div>
                 <div class="col-md-8" v-if="!showMotorbikeDetails">
                   <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">Motorbikes</p>
-                  <p>Local Partners: Zembo Bikes, Asaak</p>
-                  <p>Country: Uganda</p>
+                  <p>Local Partners: Zembo Bikes, Asaak, Teliman </p>
+                  <p>Country: Uganda, Mali</p>
                 </div>
                 <div class="col-md-8" v-else>
                   <p>Local Partner: Zembo Bikes</p>
