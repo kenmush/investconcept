@@ -51,7 +51,7 @@ class MotoTaxisController extends Controller
                 $benefiaries['Mission'] =
                         "To make high quality drinking water available on demand at scale to the Kenyan urban middle class";
             }
-            if ($benefiaries['firstName'] === 'OVIVE purified') {
+            if ($benefiaries['firstName'] === 'Ovive Purified Water ATM') {
                 $benefiaries['founded'] = '2019';
                 $benefiaries['Assets managed'] = 1;
                 $benefiaries['Planned Q1 2021'] = 5;
