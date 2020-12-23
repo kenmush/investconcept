@@ -102,11 +102,7 @@
                 </div>
                 <div class="col-12">
                     <div class="col-12 d-flex align-content-center justify-content-center mb-3">
-                        <a
-                                style="border-radius: 0!important;"
-                                href="/register" class="btn-hyipox-medium cta-btn">
-                            Invest
-                        </a>
+                        <a href="/register" class="btn-hyipox-medium cta-btn" style="margin-top: -50px;">Invest</a>
                     </div>
                 </div>
             </div>

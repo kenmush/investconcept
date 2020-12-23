@@ -56,14 +56,34 @@ class PortfolioController extends Controller
 
             if (Str::contains($assets['categoryName'], 'MvuaPap! Irrigation Trailer')) {
                 $assets['category'] = 'Irrigation pumps';
+                $assets['carousel'] = [
+                        'mvua/mvua1.jpg',
+                        'mvua/mvua2.jpg',
+                        'mvua/mvua3.jpg',
+                        'mvua/mvua4.jpg',
+                ];
             }
 
             if (Str::contains($assets['categoryName'], 'bike')) {
                 $assets['category'] = 'Moto Taxis';
+                $assets['carousel'] = [
+                        'mototaxis/zembo2.PNG',
+                        'mototaxis/asaak1.jpg',
+                        'mototaxis/asaak2.jpg',
+                        'mototaxis/asaak3.jpg',
+                        'mototaxis/zembo1.PNG',
+                        'mototaxis/zembo3.PNG',
+                ];
             }
 
             if (Str::contains($assets['categoryName'], 'ATM')) {
                 $assets['category'] = 'ATMs';
+                $assets['carousel'] = [
+                        'atm/atm1.jpg',
+                        'atm/atm2.jpg',
+                        'atm/atm3.jpg',
+                        'atm/ovive1.jpg',
+                ];
             }
             $benefiaries = collect((new Investor())->getBeneficiary());
             $allBeneficiaries = $benefiaries->map(function ($benefiaries) {
