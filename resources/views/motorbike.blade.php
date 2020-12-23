@@ -113,7 +113,7 @@
                                     @if(Str::of($assets['categoryName'])->contains('ATM') || Str::of($assets['categoryName'])->contains('Maji milele'))
                                         @foreach(collect($beneficiaries)->filter(function ($m) {
 
-  return $m['middleName'] === 'Water ATM' || $m['middleName'] === 'Community Water ATM';
+  return $m['username'] === 'atm' || $m['middleName'] === 'Community Water ATM';
 }) as $beneficiary)
                                             <div class="col-md-12 shadow-inner shadow-outline">
                                                 <div class="card">

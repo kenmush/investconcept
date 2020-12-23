@@ -96,7 +96,7 @@ class PortfolioController extends Controller
                     $benefiaries['Mission'] =
                             "To make high quality drinking water available on demand at scale to the Kenyan urban middle class";
                 }
-                if ($benefiaries['firstName'] === 'Ovive Purified') {
+                if ($benefiaries['username'] === 'atm') {
                     $benefiaries['founded'] = '2019';
                     $benefiaries['Assets managed'] = 10;
                     $benefiaries['Planned Q1 2021'] = 30;
