@@ -73,7 +73,9 @@
                                         <div class="col-md-12">
                                             <div class="row">
                                                 @if(Str::of($assets['categoryName'])->contains('bike'))
-                                                    @foreach(collect($beneficiaries)->where('middleName','bikes') as $beneficiary)
+                                                    @foreach(collect($beneficiaries)->filter(function ($m) {
+              return $m['middleName'] === '- Motorbikes' || $m['middleName'] === '- E-Motorbike';
+            }) as $beneficiary)
                                                         <div class="col-md-12 shadow-inner shadow-outline">
                                                             <div class="card">
                                                                 <div class="row">
@@ -113,7 +115,10 @@
                                                     @endforeach
                                                 @endif
                                                 @if(Str::of($assets['categoryName'])->contains('ATM') || Str::of($assets['categoryName'])->contains('Maji milele'))
-                                                    @foreach(collect($beneficiaries)->where('middleName','ATM') as $beneficiary)
+                                                    @foreach(collect($beneficiaries)->filter(function ($m) {
+
+              return $m['middleName'] === 'Water ATM' || $m['middleName'] === 'Community Water ATM';
+            }) as $beneficiary)
                                                         <div class="col-md-12 shadow-inner shadow-outline">
                                                             <div class="card">
                                                                 <div class="row">

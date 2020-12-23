@@ -76,7 +76,8 @@ class PortfolioController extends Controller
                 ];
             }
 
-            if (Str::contains($assets['categoryName'], 'ATM')|| Str::contains($assets['categoryName'], 'Maji milele')) {
+            if (Str::contains($assets['categoryName'], 'ATM') || Str::contains($assets['categoryName'],
+                            'Maji milele')) {
                 $assets['category'] = 'ATMs';
                 $assets['carousel'] = [
                         'atm/atm1.jpg',
@@ -108,6 +109,30 @@ class PortfolioController extends Controller
                     $benefiaries['Planned Q1 2021'] = 25;
                     $benefiaries['Mission'] =
                             "Widening base of pyramid access to safe water";
+                }
+                if ($benefiaries['firstName'] === 'Asaak') {
+                    $benefiaries['founded'] = '';
+                    $benefiaries['Assets managed'] = 40;
+                    $benefiaries['Planned Q1 2021'] = round(0.4 * 40);
+                    $benefiaries['Mission'] =
+                            "Asaak is on a mission to democratize financial services by helping businesses
+grow with confidence
+
+";
+                }
+                if ($benefiaries['firstName'] === 'Zembo') {
+                    $benefiaries['founded'] = '';
+                    $benefiaries['Assets managed'] = 83;
+                    $benefiaries['Planned Q1 2021'] = round(0.4 * 83);
+                    $benefiaries['Mission'] =
+                            "Zembo, the Zero Emission Motorcycle Boda";
+                }
+                if ($benefiaries['firstName'] === 'Teliman') {
+                    $benefiaries['founded'] = '';
+                    $benefiaries['Assets managed'] = 15;
+                    $benefiaries['Planned Q1 2021'] = round(0.4 * 15);
+                    $benefiaries['Mission'] =
+                            "";
                 }
                 return $benefiaries;
             });
