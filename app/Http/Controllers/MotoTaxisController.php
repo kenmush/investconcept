@@ -48,17 +48,18 @@ class MotoTaxisController extends Controller
                 $benefiaries['founded'] = '2019';
                 $benefiaries['Assets managed'] = 1;
                 $benefiaries['Planned Q1 2021'] = 5;
+
                 $benefiaries['Mission'] =
                         "To make high quality drinking water available on demand at scale to the Kenyan urban middle class";
             }
-            if ($benefiaries['firstName'] === 'Ovive Purified Water ATM') {
+            if ($benefiaries['firstName'] === 'Ovive Purified') {
                 $benefiaries['founded'] = '2019';
                 $benefiaries['Assets managed'] = 1;
                 $benefiaries['Planned Q1 2021'] = 5;
                 $benefiaries['Mission'] =
                         "To make high quality drinking water available on demand at scale to the Kenyan urban middle class.";
             }
-            if ($benefiaries['firstName'] === 'Maji') {
+            if ($benefiaries['firstName'] === 'Maji Milele') {
                 $benefiaries['founded'] = '2008';
                 $benefiaries['Assets managed'] = 9;
                 $benefiaries['Planned Q1 2021'] = 25;
