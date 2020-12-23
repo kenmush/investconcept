@@ -85,7 +85,7 @@ class WaterAtms extends Controller
                 $benefiaries['Assets managed'] = 15;
                 $benefiaries['Planned Q1 2021'] = round(0.4 * 15);
                 $benefiaries['Mission'] =
-                        "The first on demand moto-taxi service in Mali, Africa’s fastest growing capital";
+                        "";
             }
             return $benefiaries;
         });
