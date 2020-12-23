@@ -115,10 +115,7 @@ class PortfolioController extends Controller
                     $benefiaries['Assets managed'] = 40;
                     $benefiaries['Planned Q1 2021'] = round(0.4 * 40);
                     $benefiaries['Mission'] =
-                            "Asaak is on a mission to democratize financial services by helping businesses
-grow with confidence
-
-";
+                            "Enabling first-time bike ownership with boda-boda financing";
                 }
                 if ($benefiaries['firstName'] === 'Zembo') {
                     $benefiaries['founded'] = '';
