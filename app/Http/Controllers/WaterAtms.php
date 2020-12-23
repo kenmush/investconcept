@@ -46,8 +46,8 @@ class WaterAtms extends Controller
         $allBeneficiaries = $benefiaries->map(function ($benefiaries) {
             if ($benefiaries['firstName'] === 'MvuaPap!') {
                 $benefiaries['founded'] = '2019';
-                $benefiaries['Assets managed'] = 1;
-                $benefiaries['Planned Q1 2021'] = 5;
+                $benefiaries['Assets managed'] = 8;
+                $benefiaries['Planned Q1 2021'] = 45;
 
                 $benefiaries['Mission'] =
                         "To make high quality drinking water available on demand at scale to the Kenyan urban middle class";
