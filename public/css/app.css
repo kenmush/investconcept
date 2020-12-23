@@ -1238,7 +1238,7 @@ ul {
   padding: 100px 0;
   position: relative;
   z-index: 2;
-  background: linear-gradient(-19deg, #d4e9f2 10%, #215a73);
+  background: linear-gradient(-19deg, white 10%, #84c1dc);
 }
 
 .cta-profile:after {
