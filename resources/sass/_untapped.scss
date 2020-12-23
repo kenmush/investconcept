@@ -1354,8 +1354,7 @@ ul {
   padding: 100px 0;
   position: relative;
   z-index: 2;
-  background: -o-linear-gradient(-19deg, lighten(#ACD5E7,50%) 10%, darken(#ACD5E7,10%));
-  background: linear-gradient(-19deg, lighten(#ACD5E7,50%) 10%, darken(#ACD5E7,10%));
+ background-color: #cbe4ef;
 
   &:after {
     position: absolute;
