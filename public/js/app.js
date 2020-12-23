@@ -78508,10 +78508,10 @@ var render = function() {
                             "text-transform": "uppercase"
                           }
                         },
-                        [_vm._v("Electric motorbikes")]
+                        [_vm._v("Motorbikes")]
                       ),
                       _vm._v(" "),
-                      _c("p", [_vm._v("Local Partner: Zembo Bikes")]),
+                      _c("p", [_vm._v("Local Partners: Zembo Bikes, Asaak")]),
                       _vm._v(" "),
                       _c("p", [_vm._v("Country: Uganda")])
                     ])
@@ -78522,7 +78522,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("p", [
                         _vm._v(
-                          "Zembo provides affordable electric motorcycles for motorcycle taxi drivers in Africa,\n                  the\n                  Company\n                  has already 100 motorbikes on site in Kampala, Uganda. The Company leases its motorbikes\n                  to taxi\n                  drivers in a lease-to-own contract over 24 months for 60000 UGX per week."
+                          "Zembo provides affordable electric motorcycles for motorcycle taxi drivers in Africa,\n                    the\n                    Company\n                    has already 100 motorbikes on site in Kampala, Uganda. The Company leases its motorbikes\n                    to taxi\n                    drivers in a lease-to-own contract over 24 months for 60000 UGX per week."
                         )
                       ])
                     ])
@@ -78545,55 +78545,6 @@ var render = function() {
               _c("div", { staticClass: "row" }, [
                 _vm._m(4),
                 _vm._v(" "),
-                !_vm.showSmartMeter
-                  ? _c("div", { staticClass: "col-md-8" }, [
-                      _c(
-                        "p",
-                        {
-                          staticStyle: {
-                            "border-bottom": "3px solid #3e4494",
-                            "text-transform": "uppercase"
-                          }
-                        },
-                        [
-                          _vm._v(
-                            "\n                  Petrol motorbikes\n                "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Local partner: Asaak")]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Country: Uganda")])
-                    ])
-                  : _c("div", { staticClass: "col-md-8" }, [
-                      _c("p", [_vm._v("Company: Untapped")]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Country: Kenya")]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v("Quality water walking distance form home")
-                      ])
-                    ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-12" }, [
-                  !_vm.showSmartMeter
-                    ? _c("div", { staticClass: "card" }, [_vm._m(5)])
-                    : _c("div", [_vm._m(6), _vm._v(" "), _vm._m(7)])
-                ])
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-4  mb-3" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-body " }, [
-              _c("div", { staticClass: "row" }, [
-                _vm._m(8),
-                _vm._v(" "),
                 !_vm.ovive
                   ? _c("div", { staticClass: "col-md-8" }, [
                       _c(
@@ -78606,12 +78557,12 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                  Purified water kiosk\n                "
+                            "\n                    ATMs\n                  "
                           )
                         ]
                       ),
                       _vm._v(" "),
-                      _c("p", [_vm._v("Local partner: OVIVE")]),
+                      _c("p", [_vm._v("Local partners: OVIVE, Maji Milele")]),
                       _vm._v(" "),
                       _c("p", [_vm._v("Country: Kenya")])
                     ])
@@ -78627,8 +78578,8 @@ var render = function() {
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-12" }, [
                   !_vm.ovive
-                    ? _c("div", { staticClass: "card" }, [_vm._m(9)])
-                    : _c("div", [_vm._m(10), _vm._v(" "), _vm._m(11)])
+                    ? _c("div", { staticClass: "card" }, [_vm._m(5)])
+                    : _c("div", [_vm._m(6), _vm._v(" "), _vm._m(7)])
                 ])
               ])
             ])
@@ -78639,54 +78590,7 @@ var render = function() {
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-body " }, [
               _c("div", { staticClass: "row" }, [
-                _vm._m(12),
-                _vm._v(" "),
-                !_vm.majimilele
-                  ? _c("div", { staticClass: "col-md-8" }, [
-                      _c(
-                        "p",
-                        {
-                          staticStyle: {
-                            "border-bottom": "3px solid #3e4494",
-                            "text-transform": "uppercase"
-                          }
-                        },
-                        [
-                          _vm._v(
-                            "\n                  Automated water kiosk\n                "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Local partner: Maji Milele ")]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Country: Kenya")])
-                    ])
-                  : _c("div", { staticClass: "col-md-8" }, [
-                      _c("p", [_vm._v("Company: Untapped")]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Country: Kenya")]),
-                      _vm._v(" "),
-                      _c("p")
-                    ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-12" }, [
-                  !_vm.majimilele
-                    ? _c("div", { staticClass: "card" }, [_vm._m(13)])
-                    : _c("div", [_vm._m(14), _vm._v(" "), _vm._m(15)])
-                ])
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-4  mb-3" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-body " }, [
-              _c("div", { staticClass: "row" }, [
-                _vm._m(16),
+                _vm._m(8),
                 _vm._v(" "),
                 !_vm.mvuapap
                   ? _c("div", { staticClass: "col-md-8" }, [
@@ -78700,7 +78604,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                  Mobile irrigation trailer\n                "
+                            "\n                    Mobile irrigation trailer\n                  "
                           )
                         ]
                       ),
@@ -78721,7 +78625,7 @@ var render = function() {
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-12" }, [
                   !_vm.mvuapap
-                    ? _c("div", { staticClass: "card" }, [_vm._m(17)])
+                    ? _c("div", { staticClass: "card" }, [_vm._m(9)])
                     : _vm._e()
                 ])
               ])
@@ -78778,115 +78682,7 @@ var staticRenderFns = [
               },
               [
                 _vm._v(
-                  "\n                            More\n                          "
-                )
-              ]
-            )
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "table",
-      {
-        staticClass:
-          "table table-{1:striped|sm|bordered|hover|inverse} table-inverse"
-      },
-      [
-        _c("thead", { staticClass: "thead-default" }, [
-          _c("tr", [
-            _c("th", [_vm._v("For the Entrepreneur")]),
-            _vm._v(" "),
-            _c("th", [_vm._v("$700 "), _c("br"), _vm._v("Moto")]),
-            _vm._v(" "),
-            _c("th", [_vm._v("$120/Month "), _c("br"), _vm._v("Avg. Income")]),
-            _vm._v(" "),
-            _c("th", [_vm._v("$45/Month "), _c("br"), _vm._v("Lease Payments")])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("th", [_vm._v("For You:")]),
-            _vm._v(" "),
-            _c("th", [
-              _vm._v("$500 "),
-              _c("br"),
-              _c("strong", [_vm._v("Minimum Ticket")])
-            ]),
-            _vm._v(" "),
-            _c("th", [_vm._v("9% "), _c("br"), _vm._v("APY")]),
-            _vm._v(" "),
-            _c("th", [_vm._v("18 Month "), _c("br"), _vm._v("Term")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-3" }, [
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-custom btn-block btn-lg",
-          attrs: { href: "/register" }
-        },
-        [_vm._v("More")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4 " }, [
-      _c("img", {
-        staticClass: "rounded float-left img-thumbnail",
-        attrs: { loading: "lazy", src: "/assets/asaak.jpg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-body" }, [
-      _c("div", { staticClass: "col-12" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-4 border" }, [
-            _c("p", [_c("strong", [_vm._v("Minimum Ticket")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v("1 500$")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-4 border" }, [
-            _c("p", [_c("strong", [_vm._v("Impact")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v("2 500$")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-4 border" }, [
-            _c("p", [_c("strong", [_vm._v("Leverage")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v("1.7x")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 mt-3" }, [
-            _c(
-              "a",
-              {
-                staticClass: "btn btn-custom btn-block btn-lg",
-                attrs: { href: "/moto-taxis" }
-              },
-              [
-                _vm._v(
-                  "\n                            More\n                          "
+                  "\n                              More\n                            "
                 )
               ]
             )
@@ -78994,7 +78790,7 @@ var staticRenderFns = [
               },
               [
                 _vm._v(
-                  "\n                            More\n                          "
+                  "\n                              More\n                            "
                 )
               ]
             )
@@ -79028,108 +78824,6 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("th", [
               _vm._v("4.0x "),
-              _c("br"),
-              _c("strong", [_vm._v("Leverage")])
-            ])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-3" }, [
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-custom btn-block btn-lg",
-          attrs: { href: "/register" }
-        },
-        [_vm._v("More")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4 " }, [
-      _c("img", {
-        staticClass: "rounded float-left img-thumbnail",
-        attrs: { loading: "lazy", src: "assets/kiosk.jpg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-body" }, [
-      _c("div", { staticClass: "col-12" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-4 border" }, [
-            _c("p", [_c("strong", [_vm._v("Minimum Ticket")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v("3 000$")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-4 border" }, [
-            _c("p", [_c("strong", [_vm._v("Impact")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v("4 200$")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-4 border" }, [
-            _c("p", [_c("strong", [_vm._v("Leverage")])]),
-            _vm._v(" "),
-            _c("p", [_vm._v("1.4x")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 mt-3" }, [
-            _c(
-              "a",
-              {
-                staticClass: "btn btn-custom btn-block btn-lg",
-                attrs: { href: "/water-atms" }
-              },
-              [
-                _vm._v(
-                  "\n                            More\n                          "
-                )
-              ]
-            )
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "table",
-      {
-        staticClass:
-          "table table-{1:striped|sm|bordered|hover|inverse} table-inverse"
-      },
-      [
-        _c("thead", { staticClass: "thead-default" }, [
-          _c("tr", [
-            _c("th", [_vm._v("For You:")]),
-            _vm._v(" "),
-            _c("th", [
-              _vm._v("3 000$ "),
-              _c("br"),
-              _c("strong", [_vm._v("Minimum Ticket")])
-            ]),
-            _vm._v(" "),
-            _c("th", [_vm._v("7 200 $ "), _c("br"), _vm._v("Annual Revenue")]),
-            _vm._v(" "),
-            _c("th", [
-              _vm._v("2.4x "),
               _c("br"),
               _c("strong", [_vm._v("Leverage")])
             ])
@@ -79198,7 +78892,7 @@ var staticRenderFns = [
               },
               [
                 _vm._v(
-                  "\n                            More\n                          "
+                  "\n                              More\n                            "
                 )
               ]
             )
