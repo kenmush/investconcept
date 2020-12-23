@@ -229,6 +229,7 @@
                                             </div>
                                         @endforeach
                                     @endif
+                                    @if(Str::of($assets['categoryName'])->contains('Maji milele'))
                                         @foreach(collect($beneficiaries)->where('middleName','Milele') as $beneficiary)
                                             <div class="col-md-12 shadow-inner shadow-outline">
                                                 <div class="card">
@@ -267,6 +268,7 @@
                                                 </div>
                                             </div>
                                         @endforeach
+                                    @endif
                                 </div>
                             </div>
                         </div>
