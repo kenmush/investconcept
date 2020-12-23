@@ -266,9 +266,7 @@
                                             </div>
                                         @endforeach
                                     @endif
-                                    @if(Str::of($assets['categoryName'])->contains('Maji milele'))
 
-                                    @endif
                                 </div>
                             </div>
                         </div>
