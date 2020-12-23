@@ -98,8 +98,8 @@ class PortfolioController extends Controller
                 }
                 if ($benefiaries['firstName'] === 'Ovive Purified') {
                     $benefiaries['founded'] = '2019';
-                    $benefiaries['Assets managed'] = 1;
-                    $benefiaries['Planned Q1 2021'] = 5;
+                    $benefiaries['Assets managed'] = 10;
+                    $benefiaries['Planned Q1 2021'] = 30;
                     $benefiaries['Mission'] =
                             "To make high quality drinking water available on demand at scale to the Kenyan urban middle class.";
                 }
