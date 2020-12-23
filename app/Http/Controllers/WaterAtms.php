@@ -47,7 +47,7 @@ class WaterAtms extends Controller
             if ($benefiaries['firstName'] === 'MvuaPap!') {
                 $benefiaries['founded'] = '2019';
                 $benefiaries['Assets managed'] = 8;
-                $benefiaries['Planned Q1 2021'] = 45;
+                $benefiaries['Planned Q1 2021'] = 50;
 
                 $benefiaries['Mission'] =
                         "To make high quality drinking water available on demand at scale to the Kenyan urban middle class";
@@ -78,14 +78,14 @@ class WaterAtms extends Controller
                 $benefiaries['Assets managed'] = 83;
                 $benefiaries['Planned Q1 2021'] = round(0.4 * 83);
                 $benefiaries['Mission'] =
-                        "Zembo, the Zero Emission Motorcycle Boda";
+                        "";
             }
             if ($benefiaries['firstName'] === 'Teliman') {
                 $benefiaries['founded'] = '';
                 $benefiaries['Assets managed'] = 15;
                 $benefiaries['Planned Q1 2021'] = round(0.4 * 15);
                 $benefiaries['Mission'] =
-                        "";
+                        "The first on demand moto-taxi service in Mali, Africa’s fastest growing capital";
             }
             return $benefiaries;
         });
