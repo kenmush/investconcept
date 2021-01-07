@@ -22,7 +22,7 @@ class ResetPassword extends Controller
             return redirect()->intended();
         }
         return back()->withErrors([
-                'updatepassword' => "COuld not update password"
+                'updatepassword' => $response['detail']
         ]);
     }
 }

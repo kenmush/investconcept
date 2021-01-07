@@ -58,6 +58,12 @@
                                 <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg" type="text"
                                        name="oldpassword" id="oldpassword" placeholder="Your old password"
                                        autocomplete="off"/>
+                                @error('updatepassword')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('updatepassword') }}</strong>
+                                    </span>
+                                @enderror
+
                             </div>
                             <!--end::Form group-->
                             <!--begin::Form group-->

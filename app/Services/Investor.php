@@ -19,11 +19,6 @@ class Investor
                 "password" => $data['password']
         ]);
     }
-    public function checkFirstTimeLogin($api_id)
-    {
-
-        return $this->request('GET', 'portal/investor/check_first/login/'.$api_id.'/');
-    }
 
     protected function request($method, $path, array $parameters = [])
     {
@@ -41,6 +36,12 @@ class Investor
     public function path()
     {
         return config('investordashboard.root_path');
+    }
+
+    public function checkFirstTimeLogin($api_id)
+    {
+
+        return $this->request('GET', 'portal/investor/check_first/login/'.$api_id.'/');
     }
 
     public function getCategoryInvestments($investmentId)
@@ -108,15 +109,17 @@ class Investor
     public function signupInvestor($data)
     {
         return $this->request('POST', 'portal/investor/creation/', [
-                'phoneNumber'  => $data['phoneNumber'],
-                'firstName'    => $data['firstName'],
-                'middleName'   => $data['middleName'],
-                'lastName'     => $data['lastName'],
-                'username'     => $data['username'],
-                'language'     => $data['language'],
-                'email'        => $data['email'],
-                'organization' => $data['organization'],
-                'password'     => $data['password'],
+                'phoneNumber'   => $data['phoneNumber'],
+                'firstName'     => $data['firstName'],
+                'middleName'    => $data['middleName'],
+                'lastName'      => $data['lastName'],
+                'username'      => $data['username'],
+                'language'      => $data['language'],
+                'email'         => $data['email'],
+                'organization'  => $data['organization'],
+                'password'      => $data['password'],
+                'accredited'    => $data['accredited'],
+                'investor_type' => $data['investor_type'],
         ]);
     }
 
@@ -139,7 +142,8 @@ class Investor
     {
         return $this->request('POST', 'portal/asset/category/creation/', $data);
     }
-    public function changepassword($data,$apiid)
+
+    public function changepassword($data, $apiid)
     {
         return $this->request('POST', 'portal/investor/changePassword/'.$apiid.'/', $data);
     }
@@ -180,6 +184,18 @@ class Investor
                         'name'     => 'password',
                         'contents' => $data['password']
                 ],
+                [
+                        'name'     => 'passport',
+                        'contents' => "null",
+                ],
+                [
+                        'name'     => 'license',
+                        'contents' => "null",
+                ],
+                [
+                        'name'     => 'avatar',
+                        'contents' => "null",
+                ],
 //                [
 //                        'name'     => 'avatar',
 //                        'contents' => fopen($data['avatar'], 'r'),
@@ -187,6 +203,26 @@ class Investor
 ////                        'contents' => file_get_contents(storage_path('app\\'.$data['avatar']))
 //                ],
 
+        ]);
+    }
+
+    public function updateVerificationData($data, $investor)
+    {
+        return $this->requestFiles('PUT', 'portal/investor/profile/upload/'.$investor.'/', [
+                [
+                        'name'     => 'passport',
+                        'contents' => fopen($data['passport'], 'r'),
+                        'filename' => $data['passport']->getClientOriginalName()
+                ],
+                [
+                        'name'     => 'license',
+                        'contents' => fopen($data['licence'], 'r'),
+                        'filename' => $data['licence']->getClientOriginalName()
+                ],
+                [
+                        'name'     => 'avatar',
+                        'contents' =>  null,
+                ]
         ]);
     }
 
@@ -220,7 +256,7 @@ class Investor
 
     public function getassetCoordinates()
     {
-        return $this->request('GET','portal/asset/creation/');
+        return $this->request('GET', 'portal/asset/creation/');
     }
 
     public function getAssetCategories()

@@ -17,8 +17,11 @@ class ChangePasswordIfDefault
     public function handle($request, Closure $next)
     {
         $userFromAPI = (new Investor())->checkFirstTimeLogin($request->user()->api_id);
-        if ($userFromAPI['status']) {
+        if ($userFromAPI['status'] ) {
             return redirect()->route('changepassword');
+        }
+        if (!$userFromAPI['verified']) {
+            return redirect()->route('verifyinvestor');
         }
         return $next($request);
     }

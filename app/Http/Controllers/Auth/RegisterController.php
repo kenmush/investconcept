@@ -95,6 +95,8 @@ class RegisterController extends Controller
         $investor['email'] = $data['email'];
         $investor['organization'] = 'NA';
         $investor['password'] = $data['password'];
+        $investor['accredited'] = $data['accredited_investor'] === 'Yes' ? true : false;
+        $investor['investor_type'] = $data['accredited_type'];
         try {
             $userFromAPI = (new Investor())->signupInvestor($investor);
             return User::firstOrCreate(
@@ -108,7 +110,7 @@ class RegisterController extends Controller
                     ]
             );
         } catch (\Exception $exception) {
-           
+
             return redirect()->route('register');
         }
 

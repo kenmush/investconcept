@@ -55,6 +55,9 @@ class LoginController extends Controller
                             'avatar'   => $userFromAPI['avatar'],
                     ]
             );
+//            if ($userFromAPI['status'] === false) {
+//                return redirect()->route('verifyinvestor');
+//            }
             Auth::loginUsingId($user->id);
         } catch (\Exception $exception) {
             $this->sendFailedLoginResponse($request);

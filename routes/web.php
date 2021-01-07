@@ -60,7 +60,14 @@ Route::get('/contactus', function () {
 
 Route::get('update-your-password', 'ChangePasswordController')
         ->name('changepassword');
+
+Route::get('investor-verification', 'VerifyInvestor')
+        ->name('verifyinvestor');
+
 Route::post('resetpassword', 'ResetPassword')->name('resetpassword');
+
+Route::post('updateverification', 'Verification')->name('updateverification');
+
 Auth::routes();
 
 Route::get('moto-taxis', 'MotoTaxisController');
