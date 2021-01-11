@@ -40,13 +40,21 @@
                 </a>
                 <!--end::Logo-->
                 <!--begin::Aside body-->
-                <div class="d-flex flex-column-fluid flex-column flex-center">
+                <div class="d-flex flex-column-fluid flex-column" style="margin-top: 2em">
                     <!--begin::Signin-->
-                    <div class="login-form login-signin py-11">
+                    <div class="">
                         <!--begin::Form-->
                         @if(session()->has('verified'))
-                            <div class="alert alert-success" role="alert">
-                                <strong>Check your email in 24 hours as we verify your information.</strong>
+                            <div class="alert alert-light" role="alert">
+                                <strong style="font-size: 24px">Photo Submitted</strong>
+                                <p style="font-size: 20px">KYC verification takes a few days.</p>
+                                <p style="font-size: 20px">Thanks for your patience.</p>
+                            </div>
+                            <div class="row text-center justify-content-center">
+                                <button class="btn btn-outline-success">Continue to questionnare</button>
+                            </div>
+                            <div class="row text-center justify-content-center mt-3">
+                                <a href="/" class="text-muted">Return to Deals</a>
                             </div>
                         @else
                             <form class="form" novalidate="novalidate" method="post"
