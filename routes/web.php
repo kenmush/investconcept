@@ -7,13 +7,7 @@ use App\Http\Controllers\MotoTaxisController;
 use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-
-    return view('index', [
-            'assets'          => (new Investor())->getAssetCategories(),
-            'landingPageData' => collect((new Investor())->getLandingPageData())
-    ]);
-});
+Route::get('/', 'WelcomePageController');
 
 Route::group(['prefix' => 'assets', 'middleware' => ['auth', 'changepassword']], function () {
 

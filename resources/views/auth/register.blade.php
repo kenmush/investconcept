@@ -95,7 +95,7 @@
                             <div class="form-group" v-if="accredited_investor === 'Yes'">
                                 <div class="d-flex justify-content-between mt-n5">
                                     <label class="font-size-h6 font-weight-bolder text-dark pt-5">
-                                        What type of an investor are you?
+                                        What type of an investor will you be investing as?
                                     </label>
                                 </div>
                                 <div class="radio-inline mt-2">
@@ -120,6 +120,16 @@
                                 <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg"
                                        v-model="password"
                                        type="password" name="password" placeholder="Password" autocomplete="off"/>
+                            </div>
+                            <div class="form-group row ml-2">
+                                <label class="checkbox">
+                                    <input type="checkbox" checked="checked" name="Checkboxes1">
+                                    <span></span>
+                                    &nbsp;I have read and accept the terms and
+                                    conditions.
+                                </label>
+
+
                             </div>
                             <!--end::Form group-->
                             <!--begin::Action-->

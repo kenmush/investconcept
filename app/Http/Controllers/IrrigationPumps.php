@@ -10,8 +10,7 @@ class IrrigationPumps extends Controller
     public function __invoke()
     {
         $assets = collect((new Investor())->getAssetbyId(5));
-
-        if (Str::contains($assets['categoryName'], 'MvuaPap! Irrigation Trailer')) {
+        if (Str::contains($assets['categoryName'], 'MvuaPap! - Irrigation Trailer')) {
             $assets['category'] = 'Irrigation pumps';
             $assets['carousel'] = [
                     'mvua/mvua1.jpg',
@@ -43,6 +42,7 @@ class IrrigationPumps extends Controller
             ];
         }
         $benefiaries = collect((new Investor())->getBeneficiary());
+
         $allBeneficiaries = $benefiaries->map(function ($benefiaries) {
             if ($benefiaries['firstName'] === 'MvuaPap!') {
                 $benefiaries['founded'] = '2019';

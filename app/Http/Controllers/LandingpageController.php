@@ -16,8 +16,6 @@ class LandingpageController extends Controller
      */
     public function index()
     {
-
-
         return view('management.landingpage.index',[
                 'contents' => (new Investor())->getLandingPageData()
         ]);

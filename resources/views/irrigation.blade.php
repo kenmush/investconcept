@@ -235,7 +235,7 @@
                                                         </div>
                                                     @endforeach
                                                 @endif
-                                                @if(Str::of($assets['categoryName'])->contains('MvuaPap! Irrigation Trailer'))
+                                                @if(Str::of($assets['categoryName'])->contains('MvuaPap! - Irrigation Trailer'))
                                                     @foreach(collect($beneficiaries)->where('firstName','MvuaPap!') as $beneficiary)
                                                         <div class="col-md-12 shadow-inner shadow-outline">
                                                             <div class="card">
