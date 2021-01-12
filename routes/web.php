@@ -4,8 +4,10 @@ use App\Asset;
 use App\Http\Controllers\AllassetController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\MotoTaxisController;
+use App\Http\Controllers\QuestinnareController;
 use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
+
 
 Route::get('/', 'WelcomePageController');
 
@@ -67,3 +69,5 @@ Auth::routes();
 Route::get('moto-taxis', 'MotoTaxisController');
 Route::get('water-atms', 'WaterAtms');
 Route::get('irrigation-pumps', 'IrrigationPumps');
+Route::get('questionnaire', 'QuestinnareController')->name('questionarre');
+Route::post('questionnaire', 'UploadQuestionaire')->name('uploadquestionaire');

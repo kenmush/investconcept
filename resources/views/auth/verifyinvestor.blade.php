@@ -4,7 +4,7 @@
 <head>
     <base href="../../../">
     <meta charset="utf-8"/>
-    <title>Untapped Inc &mdash; Login</title>
+    <title>Untapped Inc &mdash; Verify Investor</title>
     <meta name="description" content="Login page example"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <!--begin::Fonts-->
@@ -51,7 +51,7 @@
                                 <p style="font-size: 20px">Thanks for your patience.</p>
                             </div>
                             <div class="row text-center justify-content-center">
-                                <button class="btn btn-outline-success">Continue to questionnare</button>
+                                <a href="/questionnaire" class="btn btn-outline-success">Continue to questionnaire</a>
                             </div>
                             <div class="row text-center justify-content-center mt-3">
                                 <a href="/" class="text-muted">Return to Deals</a>

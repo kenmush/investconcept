@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Services\Investor;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 
 class Verification extends Controller
 {
@@ -16,15 +17,12 @@ class Verification extends Controller
                 'licence'  => $request->document
         ];
         try {
-           (new Investor())->updateVerificationData($data, $request->investor_id);
+            (new Investor())->updateVerificationData($data, $request->investor_id);
             return back()->with([
-                    'verified' => 'Documents have been submitted. You will receive an email with more information.'
+                    'verified' => 'Documents have been submitted. You will receive an email with more information.',
+                    'investor' => $request->investor_id,
             ]);
         } catch (\Exception $e) {
-//            $message = $e->getResponse() ?
-//                    $e->getResponse()->getReasonPhrase() :
-//                    $e->getMessage();
-//            throw new Exception($e->getResponse()->getBody()->getContents());
             return back()->withErrors(
                     ['error' => 'There were errors uploading and verifying your documents.']
             );

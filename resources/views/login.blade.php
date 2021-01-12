@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--begin::Head-->
-<head><base href="../../../">
+<head>
+    <base href="../../../">
     <meta charset="utf-8" />
     <title>Untapped Inc &mdash; Login</title>
     <meta name="description" content="Login page example" />
@@ -20,7 +21,8 @@
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
 </head>
 <!--end::Head-->
 <!--begin::Body-->

@@ -221,8 +221,46 @@ class Investor
                 ],
                 [
                         'name'     => 'avatar',
-                        'contents' =>  null,
+                        'contents' => null,
                 ]
+        ]);
+    }
+
+    public function updateQuestionaireData($data, $investor)
+    {
+        return $this->requestFiles('PUT', 'portal/investor/questionnaires/'.$investor.'/', [
+                [
+                        'name'     => 'investor',
+                        'contents' => $data['investor']
+                ], [
+                        'name'     => 'legal_name',
+                        'contents' => $data['legal_name']
+                ], [
+                        'name'     => 'investor_location',
+                        'contents' => $data['investor_location']
+                ], [
+                        'name'     => 'nationality',
+                        'contents' => $data['nationality']
+                ], [
+                        'name'     => 'source_of_wealth',
+                        'contents' => $data['source_of_wealth']
+                ], [
+                        'name'     => 'tax_identification_number',
+                        'contents' => $data['tax_identification_number']
+                ], [
+                        'name'     => 'authorization',
+                        'contents' => $data['authorization']
+                ], [
+                        'name'     => 'address',
+                        'contents' => $data['address']
+                ], [
+                        'name'     => 'date_of_birth',
+                        'contents' => $data['date_of_birth']
+                ], [
+                        'name'     => 'w9_form',
+                        'contents' => fopen($data['w9_form'], 'r'),
+                        'filename' => $data['w9_form']->getClientOriginalName()
+                ],
         ]);
     }
 
