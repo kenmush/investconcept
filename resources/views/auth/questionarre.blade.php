@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--begin::Head-->
 <head>
     <base href="../../../">
     <meta charset="utf-8"/>
@@ -288,7 +287,8 @@
     </div>
 </div>
 <!--begin::Global Config(global config for global JS scripts)-->
-<script>var KTAppSettings = {
+<script>
+    var KTAppSettings = {
         "breakpoints": {"sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200},
         "colors": {
             "theme": {
@@ -339,7 +339,8 @@
             }
         },
         "font-family": "Poppins"
-    };</script>
+    };
+</script>
 <!--end::Global Config-->
 <!--begin::Global Theme Bundle(used by all pages)-->
 <script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
