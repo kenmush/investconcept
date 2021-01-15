@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" href="{{ asset('assets/css/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
+    <meta name="google-site-verification" content="asYzS-DkS6ZwlV58TDwegECEQ_WQR0iD3LUvQDLJZKg" />
 </head>
 
 <body>

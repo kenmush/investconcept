@@ -48,12 +48,7 @@
             "Tests\\": "tests/"
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./nova"
-        }
-    ],
+
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
