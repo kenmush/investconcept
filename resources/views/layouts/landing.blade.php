@@ -27,6 +27,18 @@
       "logo": "https://invest.untapped-inc.com/untappedlogo.png"
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.invest.untapped-inc.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": ""https://www.invest.untapped-inc.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
