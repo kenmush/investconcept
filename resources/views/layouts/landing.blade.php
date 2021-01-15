@@ -34,7 +34,7 @@
       "url": "https://www.invest.untapped-inc.com/",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": ""https://www.invest.untapped-inc.com/search?q={search_term_string}",
+        "target": "https://www.invest.untapped-inc.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
