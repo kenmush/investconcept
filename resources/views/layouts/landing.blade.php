@@ -50,6 +50,15 @@
     <link rel="stylesheet" href="{{ asset('assets/css/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <meta name="google-site-verification" content="asYzS-DkS6ZwlV58TDwegECEQ_WQR0iD3LUvQDLJZKg" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2CC9K4BKH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-K2CC9K4BKH');
+    </script>
 </head>
 
 <body>
