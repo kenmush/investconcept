@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="{{ mix('css/front.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
+    <link rel="stylesheet"  href="{{ asset('assets/css/fontawesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/fonts/flaticon.css') }}">
 
     <link rel="stylesheet" href="{{ asset('assets/css/slick-theme.css') }}">
