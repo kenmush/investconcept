@@ -17,8 +17,16 @@
     <meta property="og:description" content="Access to Safe Water for the Next Billion"/>
     <meta property="og:image"
           content="https://www.untapped-inc.com/uploads/1/3/1/9/13198181/screen-shot-2014-06-12-at-8-00-35-pm_orig.jpg"/>
-    <meta property="og:url" content="http://www.untapped-inc.com/"/>
+    <meta property="og:url" content="https://invest.untapped-inc.com/"/>
     <title>Untapped Inc</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "http://invest.untapped-inc.com",
+      "logo": "https://invest.untapped-inc.com/untappedlogo.png"
+    }
+    </script>
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
