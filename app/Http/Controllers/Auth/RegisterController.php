@@ -58,9 +58,7 @@ class RegisterController extends Controller
         }
 
         return view('auth.registered');
-        return $request->wantsJson()
-                ? new JsonResponse([], 201)
-                : redirect($this->redirectPath());
+
     }
 
     /**

@@ -42,7 +42,10 @@ class AllassetController extends Controller
     public function store(Request $request)
     {
         try {
-            $path = $request->file('image')->store('tmp');
+            $path = '';
+            if ($request->hasFile('image')) {
+                $path = $request->file('image')->store('tmp');
+            }
             (new Investor())->createAssetForInvestor([
                     [
                             'name'     => 'investment',

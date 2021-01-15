@@ -60,7 +60,6 @@ class AssetsController extends Controller
             }
             return back()->withErrors($validator)->withInput();
         }
-        return $asset;
     }
 
     /**
