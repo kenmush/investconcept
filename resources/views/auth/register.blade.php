@@ -17,6 +17,24 @@
     <link href="assets/css/style.bundle.css?v=7.0.5" rel="stylesheet" type="text/css"/>
 
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico"/>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Untapped Invest",
+        "item": "https://invest.untapped-inc.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Untapped Invest - Sign Up",
+        "item": "https://invest.untapped-inc.com/register"
+      }]
+    }
+    </script>
 </head>
 
 <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled page-loading">
