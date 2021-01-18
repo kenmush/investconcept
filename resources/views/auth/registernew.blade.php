@@ -397,23 +397,42 @@
     let formData = new FormData(myForm);
 
     function submitForm() {
-        formData.append('firstname',document.getElementById('fname').value)
-        formData.append('lastname',document.getElementById('lname').value)
-        formData.append('investoremail',document.getElementById('email').value)
-        formData.append('investorpassword',document.getElementById('password').value)
-        formData.append('investorpassword-confirm',document.getElementById('password-confirm').value)
-        axios.post( '/sample',
+        formData.append('firstname', document.getElementById('fname').value)
+        formData.append('lastname', document.getElementById('lname').value)
+        formData.append('investoremail', document.getElementById('email').value)
+        formData.append('investorpassword', document.getElementById('password').value)
+        formData.append('investorpassword-confirm', document.getElementById('password-confirm').value)
+        axios.post('/sample',
             formData,
             {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             }
-        ).then(function(){
-            console.log('SUCCESS!!');
+        ).then(function () {
+            Swal.fire({
+                text: "You're good to go! Thank you for your patience as we complete KYC (Know Your Customer) verification. This process is required by law and may take up to 7 working days. All of your data and documentation is encrypted and secured",
+                icon: "info",
+                buttonsStyling: false,
+                confirmButtonText: "Ok",
+                customClass: {
+                    confirmButton: "btn font-weight-bold btn-light-primary"
+                }
+            });
+            setTimeout(function () {
+                window.location.href = '/'
+            },6000);
         })
-            .catch(function(){
-                console.log('FAILURE!!');
+            .catch(function () {
+                Swal.fire({
+                    text: "Sorry, looks like there are some errors detected, please try again.",
+                    icon: "error",
+                    buttonsStyling: false,
+                    confirmButtonText: "Ok, got it!",
+                    customClass: {
+                        confirmButton: "btn font-weight-bold btn-light-primary"
+                    }
+                })
             });
         // document.querySelector('#kt_login_signup_form').submit();
     }
