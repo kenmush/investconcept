@@ -421,7 +421,7 @@
             });
             setTimeout(function () {
                 window.location.href = '/'
-            },6000);
+            },11000);
         })
             .catch(function () {
                 Swal.fire({

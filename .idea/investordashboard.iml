@@ -129,6 +129,15 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensiolabs/security-checker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/enlightn/enlightn" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpstan/phpstan" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pragmarx/ia-collection" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pragmarx/ia-str" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pragmarx/countries" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pragmarx/ia-arr" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pragmarx/coollection" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/caching" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/colinodell/json5" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

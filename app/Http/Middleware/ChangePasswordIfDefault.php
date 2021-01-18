@@ -21,7 +21,7 @@ class ChangePasswordIfDefault
             return redirect()->route('changepassword');
         }
         if (!$userFromAPI['verified']) {
-            return redirect()->route('verifyinvestor');
+            return redirect()->route('questionarre');
         }
         return $next($request);
     }

@@ -20,7 +20,9 @@
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="assets/media/logos/favicon.ico"/>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -131,11 +133,14 @@
                             <!--Label: Nationality, Attributes:nationality -->
                             <div class="form-group">
                                 <label for="nationality">Nationality</label>
-                                <input type="text" id="nationality"
-                                       aria-describedby="nationality-help"
-                                       name="nationality" value="{{ old('nationality') }}"
-                                       class="form-control @error('nationality') is-invalid @enderror"
-                                       placeholder="Nationality" required>
+
+                                <select name="nationality" id="nationality" class="form-control select
+@error('nationality') is-invalid @enderror">
+                                    @foreach($coutries as $country=>$key)
+                                        <option value=""> {{ $key['name']['common'] ?? '' }}</option>
+                                    @endforeach
+                                </select>
+
                                 @error('nationality')
                                 <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -248,7 +253,7 @@
                             <!--Label: Date of Birth, Attributes:date_of_birth -->
                             <div class="form-group">
                                 <label for="date_of_birth">Date of Birth</label>
-                                <input type="text" id="date_of_birth"
+                                <input type="date" id="date_of_birth"
                                        aria-describedby="date_of_birth-help"
                                        name="date_of_birth" value="{{ old('date_of_birth') }}"
                                        class="form-control @error('date_of_birth') is-invalid @enderror"
@@ -260,22 +265,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <!--Label: Upload W-9 For Below, Attributes:w9_form -->
-                            <div class="form-group">
-                                <label for="w9_form">Upload W-9 For Below</label>
-                                <input type="file" id="w9_form"
-                                       aria-describedby="w9_form-help"
-                                       name="w9_form" value="{{ old('w9_form') }}"
-                                       class="form-control @error('w9_form') is-invalid @enderror"
-                                       placeholder="Upload W-9 For Below" required>
-                                @error('w9_form')
-                                <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                                @enderror
-                            </div>
-                        </div>
+
                         <div class="col-12 float-right">
                             <button class="btn btn-primary float-right">Submit</button>
                         </div>
@@ -349,6 +339,12 @@
 <!--end::Global Theme Bundle-->
 <!--begin::Page Scripts(used by this page)-->
 <script src="assets/js/pages/custom/wizard/wizard-1.js?v=7.0.6"></script>
+<script>
+
+    $(document).ready(function() {
+        $('.select').select2();
+    });
+</script>
 <!--end::Page Scripts-->
 </body>
 <!--end::Body-->
