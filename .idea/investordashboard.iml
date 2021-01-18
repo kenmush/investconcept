@@ -137,5 +137,6 @@
     <orderEntry type="library" name="chartist" level="application" />
     <orderEntry type="library" name="b7fb0b123e" level="application" />
     <orderEntry type="library" name="Chart" level="application" />
+    <orderEntry type="module" module-name="framework" />
   </component>
 </module>

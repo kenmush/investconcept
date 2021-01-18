@@ -9,5 +9,8 @@ mix.js('resources/js/app.js', 'public/js')
     .browserSync('localhost:8080')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/front.scss', 'public/css')
+    .options({
+        processCssUrls: false
+    })
     .version()
     .purgeCss();

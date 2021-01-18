@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../testsforlaravel/vendor/laravel/framework/.idea/framework.iml" filepath="$PROJECT_DIR$/../testsforlaravel/vendor/laravel/framework/.idea/framework.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/investordashboard.iml" filepath="$PROJECT_DIR$/.idea/investordashboard.iml" />
     </modules>
   </component>
