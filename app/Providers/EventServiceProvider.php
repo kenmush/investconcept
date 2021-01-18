@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Events\UploadInvestorDocuments;
+use App\Listeners\UploadVerificationDocuments;
+use App\Listeners\UploadW9Form;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -15,9 +18,13 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        Registered::class => [
-            SendEmailVerificationNotification::class,
-        ],
+            Registered::class              => [
+                    SendEmailVerificationNotification::class,
+            ],
+            UploadInvestorDocuments::class => [
+                    UploadVerificationDocuments::class,
+                    UploadW9Form::class,
+            ],
     ];
 
     /**

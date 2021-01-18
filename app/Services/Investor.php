@@ -5,6 +5,7 @@ namespace App\Services;
 
 
 use GuzzleHttp\Client;
+use Illuminate\Support\Str;
 
 class Investor
 {
@@ -208,16 +209,18 @@ class Investor
 
     public function updateVerificationData($data, $investor)
     {
+        $ext = pathinfo($data['passport'], PATHINFO_EXTENSION);
+
         return $this->requestFiles('PUT', 'portal/investor/profile/upload/'.$investor.'/', [
                 [
                         'name'     => 'passport',
                         'contents' => fopen($data['passport'], 'r'),
-                        'filename' => $data['passport']->getClientOriginalName()
+                        'filename' => Str::random(7).".".$ext
                 ],
                 [
                         'name'     => 'license',
                         'contents' => fopen($data['licence'], 'r'),
-                        'filename' => $data['licence']->getClientOriginalName()
+                        'filename' => Str::random(7).".".$ext
                 ],
                 [
                         'name'     => 'avatar',
@@ -261,6 +264,46 @@ class Investor
                         'contents' => fopen($data['w9_form'], 'r'),
                         'filename' => $data['w9_form']->getClientOriginalName()
                 ],
+        ]);
+    }
+
+    public function updateW9Form($data, $investor)
+    {
+        $ext = pathinfo($data['w9_form'], PATHINFO_EXTENSION);
+        return $this->requestFiles('PUT', 'portal/investor/questionnaires/'.$investor.'/', [
+                [
+                        'name'     => 'investor',
+                        'contents' => ""
+                ], [
+                        'name'     => 'legal_name',
+                        'contents' => ""
+                ], [
+                        'name'     => 'investor_location',
+                        'contents' => ""
+                ], [
+                        'name'     => 'nationality',
+                        'contents' => ""
+                ], [
+                        'name'     => 'source_of_wealth',
+                        'contents' => ""
+                ], [
+                        'name'     => 'tax_identification_number',
+                        'contents' => ""
+                ], [
+                        'name'     => 'authorization',
+                        'contents' => ""
+                ], [
+                        'name'     => 'address',
+                        'contents' => ""
+                ], [
+                        'name'     => 'date_of_birth',
+                        'contents' => ""
+                ],
+                [
+                        'name'     => 'w9_form',
+                        'contents' => fopen($data['w9_form'], 'r'),
+                        'filename' => Str::random(7).".".$ext
+                ]
         ]);
     }
 
@@ -350,7 +393,7 @@ class Investor
                 ],
                 [
                         'name'     => 'avatar',
-                        'contents' => fopen($data['avatar'], 'r'),
+                        'contents' => fopen($data['avatar'] , 'rb') ,
                         'filename' => $data['avatar']->getClientOriginalName()
 //                        'contents' => file_get_contents(storage_path('app\\'.$data['avatar']))
                 ],

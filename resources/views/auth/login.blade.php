@@ -20,7 +20,8 @@
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="assets/media/logos/favicon.ico"/>
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

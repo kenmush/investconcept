@@ -207,6 +207,13 @@ var KTLogin = function() {
 							}
 						}
 					},
+					password: {
+						validators: {
+							notEmpty: {
+								message: 'Password is required'
+							}
+						}
+					},
 					email: {
 						validators: {
 							notEmpty: {
