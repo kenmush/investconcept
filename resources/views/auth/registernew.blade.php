@@ -105,10 +105,6 @@
                 </div>
 
             </div>
-
-
-
-
         </div>
 
 
@@ -391,6 +387,8 @@
     let formData = new FormData(myForm);
 
     function submitForm() {
+        let signup = document.getElementById('kt_login_signup_form_submit_button');
+        signup.innerText = "Submitting ...";
         formData.append('firstname', document.getElementById('fname').value)
         formData.append('lastname', document.getElementById('lname').value)
         formData.append('investoremail', document.getElementById('email').value)
