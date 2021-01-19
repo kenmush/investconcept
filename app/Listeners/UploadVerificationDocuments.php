@@ -5,6 +5,7 @@ namespace App\Listeners;
 use App\Events\UploadInvestorDocuments;
 use App\Services\Investor;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Storage;
 
 class UploadVerificationDocuments implements ShouldQueue
 {
@@ -21,7 +22,7 @@ class UploadVerificationDocuments implements ShouldQueue
         ];
         try {
           (new Investor())->updateVerificationData($data, $event->investor['id']);
-
+//            Storage::delete(storage_path('app\\public\\'.$event->document));
         } catch (\Exception $e) {
             return back()->withErrors(
                     ['error' => 'There were errors uploading and verifying your documents.']

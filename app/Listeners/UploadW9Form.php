@@ -5,6 +5,8 @@ namespace App\Listeners;
 use App\Events\UploadInvestorDocuments;
 use App\Services\Investor;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class UploadW9Form implements ShouldQueue
 {
@@ -25,6 +27,7 @@ class UploadW9Form implements ShouldQueue
                    $investor
            ]);
 
+//            Storage::delete(storage_path('app\\public\\'.$event->wnineForm));
         } catch (\Exception $e) {
             return back()->withErrors(
                     ['error' => 'There were errors uploading and verifying your documents.']
