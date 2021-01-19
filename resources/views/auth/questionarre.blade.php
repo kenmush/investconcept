@@ -68,9 +68,9 @@
                     will be sent to you through SignNow in the next few days.</p>
                     <p style="font-size: 20px">Thanks for your patience.</p>
                 </div>
-                <div class="row text-center justify-content-center">
-                    <a href="#" class="btn btn-outline-success">Link Bank Account</a>
-                </div>
+{{--                <div class="row text-center justify-content-center">--}}
+{{--                    <a href="#" class="btn btn-outline-success">Link Bank Account</a>--}}
+{{--                </div>--}}
                 <div class="row text-center justify-content-center mt-3">
                     <a href="/" class="text-muted">Return to Deals</a>
                 </div>
@@ -200,7 +200,7 @@
                         <div class="col-md-6">
                             <!--Label: Authorizing, Attributes:authorization -->
                             <div class="form-group">
-                                <label for="authorization">Authorizing</label>
+                                <label for="authorization">Authorization</label>
                                 <div class="custom-control custom-radio">
                                     <input type="radio" id="customRadio1" name="authorization"
                                            class="custom-control-input" value="10% or more shareholder">

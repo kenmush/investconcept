@@ -18,11 +18,6 @@
     <link href="assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.6" rel="stylesheet" type="text/css"/>
     <link href="assets/css/style.bundle.css?v=7.0.6" rel="stylesheet" type="text/css"/>
 
-
-    <link href="assets/css/themes/layout/header/base/light.css?v=7.0.6" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/themes/layout/header/menu/light.css?v=7.0.6" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/themes/layout/brand/dark.css?v=7.0.6" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/themes/layout/aside/dark.css?v=7.0.6" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="{{ asset('dropzone/basic.css') }}">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
@@ -112,9 +107,7 @@
             </div>
 
 
-            <div class="aside-img-wizard d-flex flex-row-fluid bgi-no-repeat bgi-position-y-bottom bgi-position-x-center pt-2 pt-lg-5"
-                 style="background-position-y: calc(100% + 3rem); background-image: url(assets/media/svg/illustrations/features.svg)">
-            </div>
+
 
         </div>
 
@@ -203,7 +196,8 @@
                                         Yes
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="accredited_investor" value="No">
+                                        <input type="radio" name="accredited_investor" value="No"
+                                               onkeydown="changeEvent(this,event)" onclick="changeEvent(this, event)">
                                         <span></span>
                                         No
                                     </label>
@@ -421,7 +415,7 @@
             });
             setTimeout(function () {
                 window.location.href = '/'
-            },11000);
+            }, 11000);
         })
             .catch(function () {
                 Swal.fire({
@@ -437,10 +431,32 @@
         // document.querySelector('#kt_login_signup_form').submit();
     }
 
+    function changeEvent(element, event) {
+        if (event.type === 'click') {
+
+            Swal.fire({
+                text: "Sorry, Untapped Invest is only available to accredited investors at this time.",
+                icon: "error",
+                buttonsStyling: false,
+                confirmButtonText: "Ok",
+                customClass: {
+                    confirmButton: "btn font-weight-bold btn-light-primary"
+                }
+            });
+            window.location.href = '/';
+        } else {
+            console.log();
+            //alert("keyboard event");
+
+        }
+
+
+    }
+
     var uploadpassport = new Dropzone("div#uploadpassport", {
         url: "/file/post",
         maxFiles: 1,
-        acceptedFiles: ".jpeg,.jpg,.png,.gif",
+        acceptedFiles: ".jpeg,.jpg,.png,.gif,.pdf",
         autoProcessQueue: false,
     }).on('addedfile', function (file) {
         formData.append('passport', file)
@@ -448,7 +464,7 @@
     var uploadw9 = new Dropzone("div#uploadw9form", {
         url: "/file/post",
         maxFiles: 1,
-        acceptedFiles: ".jpeg,.jpg,.png,.gif",
+        acceptedFiles: ".jpeg,.jpg,.png,.gif,.pdf",
         autoProcessQueue: false,
     }).on('addedfile', function (file) {
         formData.append('w9form', file)
