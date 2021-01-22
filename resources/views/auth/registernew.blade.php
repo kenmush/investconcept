@@ -123,7 +123,7 @@
 
                 <div class="login-form login-form-signup">
 
-                    <form action="{{ route('sample') }}" class="form" novalidate="novalidate" id="kt_login_signup_form"
+                    <form action="{{ route('registeraninvestor') }}" class="form" novalidate="novalidate" id="kt_login_signup_form"
                           enctype="multipart/form-data" method="POST">
                         @csrf
                         <div class="pb-5" data-wizard-type="step-content" data-wizard-state="current">
