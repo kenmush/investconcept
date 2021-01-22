@@ -12,7 +12,7 @@ Route::get('getAllAssets/{categoryId?}/{investorid?}', function ($categoryId = 1
     return collect($response);
 //    return collect($response)->where('category', $categoryId);
 });
-Route::get('getAllAssets/{categoryId?}/{investorid}', function ($categoryId = 1,$investorid) {
+Route::get('getAllAssets/{categoryId?}/{investorid?}', function ($categoryId = 1,$investorid=null) {
     $response = (new Investor())->assetsByInvestment($categoryId,$investorid)['assets'];
     return collect($response);
 //    return collect($response)->where('category', $categoryId);
