@@ -26,3 +26,6 @@ Route::get('getCoordinates', function () {
     $coordinates = (new Investor())->getassetCoordinates();
     return $coordinates;
 });
+Route::get('invest', function () {
+    return "new server";
+});
