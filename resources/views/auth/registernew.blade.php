@@ -394,7 +394,7 @@
         formData.append('investoremail', document.getElementById('email').value)
         formData.append('investorpassword', document.getElementById('password').value)
         formData.append('investorpassword-confirm', document.getElementById('password-confirm').value)
-        axios.post('/sample',
+        axios.post('/registeraninvestor',
             formData,
             {
                 headers: {

@@ -74,7 +74,7 @@ Route::get('irrigation-pumps', 'IrrigationPumps');
 Route::get('questionnaire', 'QuestinnareController')->name('questionarre');
 Route::post('questionnaire', 'UploadQuestionaire')->name('uploadquestionaire');
 
-Route::post('sample', function (\Illuminate\Http\Request $request) {
+Route::post('registeraninvestor', function (\Illuminate\Http\Request $request) {
     try {
         $investor = (new Investor())->registerInvestor([
                 'phoneNumber'  => 'NA',
@@ -89,9 +89,14 @@ Route::post('sample', function (\Illuminate\Http\Request $request) {
                 'avatar'       => $request->passport,
 
         ]);
-        $document = $request->file('passport')->store('documents', 'public');
-        $w9Form = $request->file('w9form')->store('w9s', 'public');
-        UploadInvestorDocuments::dispatch($investor, $request->except('passport', 'w9form'), $document,$w9Form);
+
+        if ($request->hasFile('passport')) {
+            $document = $request->file('passport')->store('documents', 'public');
+        }
+        if ($request->hasFile('passport')) {
+            $w9Form = $request->file('w9form')->store('w9s', 'public');
+        }
+        UploadInvestorDocuments::dispatch($investor, $request->except('passport', 'w9form'), $document, $w9Form);
 
     } catch (ClientException $e) {
         $response = $e->getResponse();
@@ -110,12 +115,10 @@ Route::post('sample', function (\Illuminate\Http\Request $request) {
         foreach ($errors as $key => $error) {
             $validator->errors()->add($key, $error[0] ?? '');
         }
-        dd($errors);
     }
 
-})->name('sample');
+})->name('registeraninvestor');
+
 Route::get('successfully/unsubscribed', function () {
-
-
     return redirect('/');
 });
