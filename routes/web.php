@@ -80,7 +80,7 @@ Route::post('registeraninvestor', function (\Illuminate\Http\Request $request) {
                 'firstName'    => $request->firstname,
                 'middleName'   => "",
                 'lastName'     => $request->lastname,
-                'username'     => $request->firstname,
+                'username'     => $request->investoremail,
                 'language'     => "English",
                 'email'        => $request->investoremail,
                 'organization' => 'NA',
