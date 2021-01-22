@@ -419,7 +419,7 @@
         })
             .catch(err => {
                 let errors = err.response.data;
-                let string = "<ol>"
+                let string = "<ul>"
                 for (displayerror in errors) {
                     string += `<li>${errors[displayerror]}</li>`;
                 }
@@ -431,7 +431,7 @@
                     buttonsStyling: false,
                     confirmButtonText: "Ok, got it!",
                     customClass: {
-                        confirmButton: "btn font-weight-bold btn-light-primary"
+                        confirmButton: "btn font-weight-bold btn-light-danger"
                     }
                 })
             });
