@@ -20,9 +20,9 @@ class ChangePasswordIfDefault
         if ($userFromAPI['status'] ) {
             return redirect()->route('changepassword');
         }
-        if (!$userFromAPI['verified']) {
-            return redirect()->route('questionarre');
-        }
+//        if (!$userFromAPI['verified']) {
+//            return redirect()->route('questionarre');
+//        }
         return $next($request);
     }
 }
