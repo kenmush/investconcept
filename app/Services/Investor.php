@@ -357,6 +357,21 @@ class Investor
 
     public function registerInvestor($data)
     {
+
+        if ($data['avatar'] === null) {
+            $avatar = [
+                    'name'     => 'avatar',
+                    'contents' => fopen(public_path('untapped/useravatar.png'), 'r'),
+                    'filename' => Str::random(7)."."."png"
+
+            ];
+        } else {
+            $avatar = [
+                    'name'     => 'avatar',
+                    'contents' => fopen($data['avatar'], 'rb'),
+                    'filename' => $data['avatar']->getClientOriginalName()
+            ];
+        }
         return $this->requestFiles('POST', 'portal/investor/creation/', [
                 [
                         'name'     => 'phoneNumber',
@@ -391,12 +406,7 @@ class Investor
                         'name'     => 'password',
                         'contents' => $data['password']
                 ],
-                [
-                        'name'     => 'avatar',
-                        'contents' => fopen($data['avatar'] , 'rb') ,
-                        'filename' => $data['avatar']->getClientOriginalName()
-//                        'contents' => file_get_contents(storage_path('app\\'.$data['avatar']))
-                ],
+                $avatar,
 
         ]);
 

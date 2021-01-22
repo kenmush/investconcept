@@ -10,7 +10,6 @@ use App\Services\Investor;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('/', 'WelcomePageController');
 
 Route::group(['prefix' => 'assets', 'middleware' => ['auth', 'changepassword']], function () {
@@ -86,10 +85,11 @@ Route::post('registeraninvestor', function (\Illuminate\Http\Request $request) {
                 'email'        => $request->investoremail,
                 'organization' => 'NA',
                 'password'     => $request->investorpassword,
-                'avatar'       => $request->passport,
-
+                'avatar'       => null,
         ]);
-
+        info("Investor Details", [
+                $investor
+        ]);
         if ($request->hasFile('passport')) {
             $document = $request->file('passport')->store('documents', 'public');
         }
@@ -99,6 +99,7 @@ Route::post('registeraninvestor', function (\Illuminate\Http\Request $request) {
         UploadInvestorDocuments::dispatch($investor, $request->except('passport', 'w9form'), $document, $w9Form);
 
     } catch (ClientException $e) {
+        throw new Exception($e->getResponse()->getBody()->getContents());
         $response = $e->getResponse();
         $responseBodyAsString = $response->getBody()->getContents();
         $errors = collect(json_decode($responseBodyAsString));
