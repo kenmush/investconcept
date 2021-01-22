@@ -17,17 +17,18 @@ class UploadVerificationDocuments implements ShouldQueue
     public function handle(UploadInvestorDocuments $event)
     {
         $data = [
-                'passport' => storage_path('app\\public\\'.$event->document),
-                'licence' => $licence =storage_path('app\\public\\'.$event->document),
+                'passport' => storage_path('app/public/'.$event->document),
+                'licence' => $licence =storage_path('app/public/'.$event->document),
         ];
-        info("Investor Licence Details", [
-                $licence
-        ]);
+
         try {
          $investor = (new Investor())->updateVerificationData($data, $event->investor['id']);
 
 //            Storage::delete(storage_path('app\\public\\'.$event->document));
         } catch (\Exception $e) {
+            info("error in W9",[
+                    $e->getMessage()
+            ]);
             return back()->withErrors(
                     ['error' => 'There were errors uploading and verifying your documents.']
             );
