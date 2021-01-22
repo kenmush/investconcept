@@ -259,10 +259,6 @@ class Investor
                 ], [
                         'name'     => 'date_of_birth',
                         'contents' => $data['date_of_birth']
-                ], [
-                        'name'     => 'w9_form',
-                        'contents' => fopen($data['w9_form'], 'r'),
-                        'filename' => $data['w9_form']->getClientOriginalName()
                 ],
         ]);
     }
