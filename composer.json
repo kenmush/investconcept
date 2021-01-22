@@ -16,7 +16,8 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.0",
-        "pragmarx/countries": "^0.7.2"
+        "pragmarx/countries": "^0.7.2",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "enlightn/enlightn": "^1.0",
