@@ -24,11 +24,7 @@ class UploadW9Form implements ShouldQueue
 
         try {
            $investor = (new Investor())->updateW9Form($data, $event->investor['id']);
-           info("In W9",[
-                   $investor
-           ]);
 
-//            Storage::delete(storage_path('app\\public\\'.$event->wnineForm));
         } catch (\Exception $e) {
             info("error in W9",[
                     $e->getMessage()

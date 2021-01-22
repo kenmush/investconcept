@@ -16,6 +16,7 @@ class PortfolioController extends Controller
      */
     public function index()
     {
+
         return view('portfolio', [
                 'assets'      => (new Investor())->getAssetCategories() ?? [],
                 'tableAssets' => (new Investor())->getInvestorAssets(auth()->user()->api_id)['investments'] ?? [],
