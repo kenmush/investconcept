@@ -123,7 +123,8 @@
 
                 <div class="login-form login-form-signup">
 
-                    <form action="{{ route('registeraninvestor') }}" class="form" novalidate="novalidate" id="kt_login_signup_form"
+                    <form action="{{ route('registeraninvestor') }}" class="form" novalidate="novalidate"
+                          id="kt_login_signup_form"
                           enctype="multipart/form-data" method="POST">
                         @csrf
                         <div class="pb-5" data-wizard-type="step-content" data-wizard-state="current">
@@ -401,7 +402,8 @@
                     'Content-Type': 'multipart/form-data'
                 }
             }
-        ).then(function () {
+        ).then(data => {
+            console.log(data.response);
             Swal.fire({
                 text: "You're good to go! Thank you for your patience as we complete KYC (Know Your Customer) verification. This process is required by law and may take up to 7 working days. All of your data and documentation is encrypted and secured",
                 icon: "info",
@@ -415,9 +417,16 @@
                 window.location.href = '/'
             }, 11000);
         })
-            .catch(function () {
+            .catch(err => {
+                let errors = err.response.data;
+                let string = "<ol>"
+                for (displayerror in errors) {
+                    string += `<li>${errors[displayerror]}</li>`;
+                }
+                string += "</ol>"
                 Swal.fire({
-                    text: "Sorry, looks like there are some errors detected, please try again.",
+                    title: "Kindly correct the following errors.",
+                    html: string,
                     icon: "error",
                     buttonsStyling: false,
                     confirmButtonText: "Ok, got it!",

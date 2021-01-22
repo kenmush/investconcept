@@ -99,23 +99,8 @@ Route::post('registeraninvestor', function (\Illuminate\Http\Request $request) {
         UploadInvestorDocuments::dispatch($investor, $request->except('passport', 'w9form'), $document, $w9Form);
 
     } catch (ClientException $e) {
-        throw new Exception($e->getResponse()->getBody()->getContents());
-        $response = $e->getResponse();
-        $responseBodyAsString = $response->getBody()->getContents();
-        $errors = collect(json_decode($responseBodyAsString));
-        $validator = \Validator::make($request->all(), [
-                "firstname"   => 'required',
-                "secondname"  => 'required',
-                "lastname"    => 'required',
-                "phonenumber" => 'required',
-                "username"    => 'required',
-                "email"       => 'required',
-                "language"    => 'required',
-                "password"    => 'required',
-        ]);
-        foreach ($errors as $key => $error) {
-            $validator->errors()->add($key, $error[0] ?? '');
-        }
+        $errors = collect(json_decode($e->getResponse()->getBody()->getContents()));
+        return response()->json($errors,422);
     }
 
 })->name('registeraninvestor');
