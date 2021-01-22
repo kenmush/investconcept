@@ -18,9 +18,11 @@ class UploadW9Form implements ShouldQueue
     public function handle(UploadInvestorDocuments $event)
     {
         $data = [
-                'w9_form' => storage_path('app\\public\\'.$event->wnineForm),
+                'w9_form' => $w9 =storage_path('app\\public\\'.$event->wnineForm),
         ];
-
+        info("Investor W9 Details", [
+                $w9
+        ]);
         try {
            $investor = (new Investor())->updateW9Form($data, $event->investor['id']);
            info("In W9",[

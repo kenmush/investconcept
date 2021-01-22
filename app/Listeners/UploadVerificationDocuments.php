@@ -18,13 +18,14 @@ class UploadVerificationDocuments implements ShouldQueue
     {
         $data = [
                 'passport' => storage_path('app\\public\\'.$event->document),
-                'licence' => storage_path('app\\public\\'.$event->document),
+                'licence' => $licence =storage_path('app\\public\\'.$event->document),
         ];
+        info("Investor Licence Details", [
+                $licence
+        ]);
         try {
          $investor = (new Investor())->updateVerificationData($data, $event->investor['id']);
-            info("Investor Licence Details", [
-                    $investor
-            ]);
+
 //            Storage::delete(storage_path('app\\public\\'.$event->document));
         } catch (\Exception $e) {
             return back()->withErrors(
