@@ -44,6 +44,6 @@ class UploadVerificationDocuments implements ShouldQueue
     }
     public function tags()
     {
-        return ['Verification Documents', 'investor:'.$this->investor->investor['id']];
+        return ['Verification Documents', 'investor:'.$this->investor['name']."-".$this->investor['id']];
     }
 }
