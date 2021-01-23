@@ -216,7 +216,8 @@ class Investor
                     'contents' => fopen($data['passport'], 'r'),
                     'filename' => Str::random(7).".".$ext
             ];
-        } else {
+        }
+        if ($data['licence']) {
             $verificationDocument = [
                     'name'     => 'license',
                     'contents' => fopen($data['licence'], 'r'),
