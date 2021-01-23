@@ -618,6 +618,7 @@
         formData.append('authorization', document.querySelector('input[name="authorization"]:checked').value)
         formData.append('address', document.getElementById('address').value)
         formData.append('date_of_birth', document.getElementById('date_of_birth').value)
+        formData.append('documenttype', document.getElementById('documenttype').value)
         axios.post('/registeraninvestor',
             formData,
             {

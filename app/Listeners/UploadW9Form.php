@@ -23,7 +23,7 @@ class UploadW9Form implements ShouldQueue
         ];
 
         try {
-           $investor = (new Investor())->updateW9Form($data, $event->investor['id']);
+          return (new Investor())->updateW9Form($data, $event->investor['id']);
 
         } catch (\Exception $e) {
             info("error in W9",[

@@ -93,7 +93,7 @@ Route::post('registeraninvestor', function (\Illuminate\Http\Request $request) {
         if ($request->hasFile('passport')) {
             $document = $request->file('passport')->store('documents', 'public');
         }
-        if ($request->hasFile('passport')) {
+        if ($request->hasFile('w9form')) {
             $w9Form = $request->file('w9form')->store('w9s', 'public');
         }
         UploadInvestorDocuments::dispatch($investor, $request->except('passport', 'w9form'), $document, $w9Form);

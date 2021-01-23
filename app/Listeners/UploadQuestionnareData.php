@@ -28,10 +28,7 @@ class UploadQuestionnareData implements ShouldQueue
 
         ];
         try {
-            $inves = (new Investor())->updateQuestionaireData($data, $event->investor['id']);
-            info('Investor questionnare',[
-                    $inves
-            ]);
+            return (new Investor())->updateQuestionaireData($data, $event->investor['id']);
         } catch (\Exception $e) {
         }
     }

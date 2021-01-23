@@ -224,7 +224,9 @@ class Investor
                 ],
                 [
                         'name'     => 'avatar',
-                        'contents' => null,
+                        'contents' => fopen(public_path('untapped/useravatar.png'), 'r'),
+                        'filename' => Str::random(7)."."."png"
+
                 ]
         ]);
     }
