@@ -26,7 +26,6 @@ class UploadVerificationDocuments implements ShouldQueue
             ];
         }
 
-
         try {
             return (new Investor())->updateVerificationData($data, $event->investor['id']);
         } catch (\Exception $e) {

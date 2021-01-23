@@ -210,18 +210,21 @@ class Investor
     public function updateVerificationData($data, $investor)
     {
         $ext = pathinfo($data['passport'], PATHINFO_EXTENSION);
-
+        if ($data['passport']) {
+            $verificationDocument = [
+                    'name'     => 'passport',
+                    'contents' => fopen($data['passport'], 'r'),
+                    'filename' => Str::random(7).".".$ext
+            ];
+        } else {
+            $verificationDocument = [
+                    'name'     => 'license',
+                    'contents' => fopen($data['licence'], 'r'),
+                    'filename' => Str::random(7).".".$ext
+            ];
+        }
         return $this->requestFiles('PUT', 'portal/investor/profile/upload/'.$investor.'/', [
-                [
-                        'name'     => 'passport',
-                        'contents' => fopen($data['passport'], 'r'),
-                        'filename' => Str::random(7).".".$ext
-                ],
-                [
-                        'name'     => 'license',
-                        'contents' => fopen($data['licence'], 'r'),
-                        'filename' => Str::random(7).".".$ext
-                ],
+                $verificationDocument,
                 [
                         'name'     => 'avatar',
                         'contents' => fopen(public_path('untapped/useravatar.png'), 'r'),
