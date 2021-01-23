@@ -30,7 +30,6 @@ class UploadVerificationDocuments implements ShouldQueue
                     'licence' => $licence = storage_path('app/public/'.$event->document),
             ];
         }
-
         try {
             return (new Investor())->updateVerificationData($data, $event->investor['id']);
         } catch (\Exception $e) {
@@ -39,8 +38,10 @@ class UploadVerificationDocuments implements ShouldQueue
             );
         }
     }
+
     public function tags()
     {
-        return ['Verification Documents', 'investor:'.$this->investor['name']."-".$this->investor['id']];
+
+        return ['Verification Documents', 'investor:'];
     }
 }

@@ -210,14 +210,15 @@ class Investor
     public function updateVerificationData($data, $investor)
     {
         $ext = pathinfo($data['passport'], PATHINFO_EXTENSION);
-        if ($data['passport']) {
+
+        if (isset($data['passport'])) {
             $verificationDocument = [
                     'name'     => 'passport',
                     'contents' => fopen($data['passport'], 'r'),
                     'filename' => Str::random(7).".".$ext
             ];
         }
-        if ($data['licence']) {
+        if (isset($data['licence'])) {
             $verificationDocument = [
                     'name'     => 'license',
                     'contents' => fopen($data['licence'], 'r'),
