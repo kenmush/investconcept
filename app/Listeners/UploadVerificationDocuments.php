@@ -11,13 +11,10 @@ class UploadVerificationDocuments implements ShouldQueue
 {
     public $investor;
 
-    /**
-     * UploadVerificationDocuments constructor.
-     * @param $investor
-     */
-    public function __construct($investor)
+
+    public function __construct()
     {
-        $this->investor = $investor;
+
     }
 
     public function handle(UploadInvestorDocuments $event)
