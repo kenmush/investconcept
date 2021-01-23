@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use PragmaRX\Countries\Package\Countries;
 
 class RegisterController extends Controller
 {
@@ -45,10 +46,16 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+
     public function showRegistrationForm()
     {
-        return view('auth.registernew');
+        $countries = new Countries();
+        return view('auth.registernew', [
+                'countries' => $countries->all(),
+
+        ]);
     }
+
     public function register(Request $request)
     {
         $this->validator($request->all())->validate();

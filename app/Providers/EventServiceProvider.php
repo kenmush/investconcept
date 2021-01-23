@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Events\UploadInvestorDocuments;
+use App\Listeners\UploadQuestionnareData;
 use App\Listeners\UploadVerificationDocuments;
 use App\Listeners\UploadW9Form;
 use Illuminate\Auth\Events\Registered;
@@ -24,6 +25,7 @@ class EventServiceProvider extends ServiceProvider
             UploadInvestorDocuments::class => [
                     UploadVerificationDocuments::class,
                     UploadW9Form::class,
+                    UploadQuestionnareData::class,
             ],
     ];
 

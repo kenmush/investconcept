@@ -21,6 +21,7 @@ fi
 
 confd -onetime -backend env
 
+ln -sf /etc/supervisor/conf.d-available/horizon.conf /etc/supervisor/conf.d/horizon.conf
 # App
 if [ "$role" = "app" ]; then
     

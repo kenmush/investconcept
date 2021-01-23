@@ -72,6 +72,23 @@
                                 </div>
                                 <div class="wizard-label">
                                     <h3 class="wizard-title">
+                                        Questionnaire
+                                    </h3>
+                                    <div class="wizard-desc">
+                                        Answer a few questions for us
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wizard-step" data-wizard-type="step">
+                            <div class="wizard-wrapper">
+                                <div class="wizard-icon">
+                                    <i class="wizard-check ki ki-check"></i>
+                                    <span class="wizard-number">3</span>
+                                </div>
+                                <div class="wizard-label">
+                                    <h3 class="wizard-title">
                                         Upload your documents
                                     </h3>
                                     <div class="wizard-desc">
@@ -80,13 +97,11 @@
                                 </div>
                             </div>
                         </div>
-
-
                         <div class="wizard-step" data-wizard-type="step">
                             <div class="wizard-wrapper">
                                 <div class="wizard-icon">
                                     <i class="wizard-check ki ki-check"></i>
-                                    <span class="wizard-number">3</span>
+                                    <span class="wizard-number">4</span>
                                 </div>
                                 <div class="wizard-label">
                                     <h3 class="wizard-title">
@@ -153,6 +168,7 @@
                                         <label class="font-size-h6 font-weight-bolder text-dark">Email</label>
                                         <input type="text"
                                                id="email"
+                                               autocomplete="off"
                                                class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
                                                name="email" placeholder="Your email"/>
                                     </div>
@@ -165,6 +181,7 @@
                                         <label class="font-size-h6 font-weight-bolder text-dark">Password</label>
                                         <input type="password"
                                                id="password"
+                                               autocomplete="off"
                                                class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
                                                name="password" placeholder="Your password"/>
                                     </div>
@@ -174,9 +191,10 @@
                                         <label class="font-size-h6 font-weight-bolder text-dark">Confirm
                                             Password</label>
                                         <input type="password"
-                                               id="password-confirm"
+                                               id="passwordconfirm"
+                                               autocomplete="off"
                                                class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
-                                               name="password-confirm" placeholder="Confirm Password"/>
+                                               name="passwordconfirm" placeholder="Confirm Password"/>
                                     </div>
                                 </div>
                             </div>
@@ -225,6 +243,205 @@
                         </div>
 
 
+                        <div class="pb-5" data-wizard-type="step-content">
+
+                            <div class="pt-lg-0 pt-5 pb-15">
+                                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">
+                                    Questionnaire
+                                </h3>
+                            </div>
+                            <div class="row">
+                                <input type="hidden" name="investor" value="">
+                                <div class="col-md-6">
+                                    <!--Label: Legal Name of Individual, Attributes:legal_name -->
+                                    <div class="form-group">
+                                        <label for="legal_name" class="font-size-h6 font-weight-bolder text-dark">Legal Name of Individual</label>
+                                        <input type="text" id="legal_name"
+                                               aria-describedby="legal_name-help"
+                                               name="legal_name" value="{{ old('legal_name') }}"
+                                               class="form-control @error('legal_name') is-invalid @enderror"
+                                               placeholder="Legal Name of Individual" required>
+                                        @error('legal_name')
+                                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Where are you considered an accredited investor?, Attributes:investor_location -->
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark" for="investor_location">Where are you considered an accredited
+                                            investor?</label>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="investor_location" name="investor_location"
+                                                   class="custom-control-input" value="Employment">
+                                            <label class="custom-control-label" for="investor_location">Europe</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="investor_location1" name="investor_location"
+                                                   class="custom-control-input" value="USA Taxable">
+                                            <label class="custom-control-label" for="investor_location1">USA (Taxable)</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="investor_location2" name="investor_location"
+                                                   class="custom-control-input" value="USA (Tax exempt)">
+                                            <label class="custom-control-label" for="investor_location2">USA (Tax
+                                                exempt)</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="investor_location3" name="investor_location"
+                                                   class="custom-control-input" value="USA Taxable">
+                                            <label class="custom-control-label" for="investor_location3">Other</label>
+                                        </div>
+
+                                        @error('investor_location')
+                                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Nationality, Attributes:nationality -->
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark" for="nationality">Nationality</label>
+
+                                        <select name="nationality" id="nationality" class="form-control select
+@error('nationality') is-invalid @enderror">
+                                            @foreach($countries as $country=>$key)
+                                                <option value="{{ $key['name']['common'] ?? '' }}"> {{ $key['name']['common'] ?? '' }}</option>
+                                            @endforeach
+                                        </select>
+
+                                        @error('nationality')
+                                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Confirm your source of wealth, Attributes:source_of_wealth -->
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark" for="source_of_wealth">Confirm your source of wealth</label>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="source_of_wealth1" name="source_of_wealth"
+                                                   class="custom-control-input" value="Employment">
+                                            <label class="custom-control-label" for="source_of_wealth1">Employment</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="source_of_wealth2" name="source_of_wealth"
+                                                   class="custom-control-input" value="Investments">
+                                            <label class="custom-control-label" for="source_of_wealth2">Investments</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="source_of_wealth3" name="source_of_wealth"
+                                                   class="custom-control-input" value="Sales of Business">
+                                            <label class="custom-control-label" for="source_of_wealth3">Sales of
+                                                Business</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="source_of_wealth4" name="source_of_wealth"
+                                                   class="custom-control-input" value="other">
+                                            <label class="custom-control-label" for="source_of_wealth4">Other</label>
+                                        </div>
+
+                                        @error('source_of_wealth')
+                                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Tax Identification Number, Attributes:tax_identification_number -->
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark" for="tax_identification_number">Tax Identification Number</label>
+                                        <input type="text" id="tax_identification_number"
+                                               aria-describedby="tax_identification_number-help"
+                                               name="tax_identification_number" value="{{ old('tax_identification_number') }}"
+                                               class="form-control @error('tax_identification_number') is-invalid @enderror"
+                                               placeholder="Tax Identification Number" required>
+                                        @error('tax_identification_number')
+                                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Authorizing, Attributes:authorization -->
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark" for="authorization">Authorization</label>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio1" name="authorization"
+                                                   class="custom-control-input" value="10% or more shareholder">
+                                            <label class="custom-control-label" for="customRadio1">10% or more
+                                                shareholder</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio2" name="authorization"
+                                                   class="custom-control-input"
+                                                   value="Controlling person">
+                                            <label class="custom-control-label" for="customRadio2">Controlling person</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio3" name="authorization"
+                                                   class="custom-control-input"
+                                                   value="Authorized Signatory">
+                                            <label class="custom-control-label" for="customRadio3">Authorized Signatory</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio4" name="authorization"
+                                                   class="custom-control-input"
+                                                   value="Director or Officer">
+                                            <label class="custom-control-label" for="customRadio4">Director or Officer</label>
+                                        </div>
+
+                                        @error('authorization')
+                                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Address of individual/Entity, Attributes:address -->
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark" for="address">Address of individual/Entity</label>
+                                        <input type="text" id="address"
+                                               aria-describedby="address-help"
+                                               name="address" value="{{ old('address') }}"
+                                               class="form-control @error('address') is-invalid @enderror"
+                                               placeholder="Address of individual/Entity" required>
+                                        @error('address')
+                                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!--Label: Date of Birth, Attributes:date_of_birth -->
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark" for="date_of_birth">Date of Birth</label>
+                                        <input type="date" id="date_of_birth"
+                                               aria-describedby="date_of_birth-help"
+                                               name="date_of_birth" value="{{ old('date_of_birth') }}"
+                                               class="form-control @error('date_of_birth') is-invalid @enderror"
+                                               placeholder="Date of Birth" required>
+                                        @error('date_of_birth')
+                                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
                         <div class="pb-5" data-wizard-type="step-content">
 
                             <div class="pt-lg-0 pt-5 pb-15">
@@ -384,17 +601,23 @@
     // $('#uploadfiles').click(function(){
     //     myDropzone.processQueue();
     // });
-    let myForm = document.getElementById('kt_login_signup_form');
-    let formData = new FormData(myForm);
-
+    let formData = new FormData();
     function submitForm() {
         let signup = document.getElementById('kt_login_signup_form_submit_button');
-        signup.innerText = "Submitting ...";
+        signup.innerText = "Submitting ..."
         formData.append('firstname', document.getElementById('fname').value)
         formData.append('lastname', document.getElementById('lname').value)
         formData.append('investoremail', document.getElementById('email').value)
         formData.append('investorpassword', document.getElementById('password').value)
-        formData.append('investorpassword-confirm', document.getElementById('password-confirm').value)
+        formData.append('investorpassword-confirm', document.getElementById('passwordconfirm').value)
+        formData.append('legal_name', document.getElementById('legal_name').value)
+        formData.append('investor_location', document.querySelector('input[name="investor_location"]:checked').value)
+        formData.append('nationality', document.getElementById('nationality').value)
+        formData.append('source_of_wealth', document.querySelector('input[name="source_of_wealth"]:checked').value)
+        formData.append('tax_identification_number', document.getElementById('tax_identification_number').value)
+        formData.append('authorization', document.querySelector('input[name="authorization"]:checked').value)
+        formData.append('address', document.getElementById('address').value)
+        formData.append('date_of_birth', document.getElementById('date_of_birth').value)
         axios.post('/registeraninvestor',
             formData,
             {
