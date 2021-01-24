@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\Storage;
 
 class UploadVerificationDocuments implements ShouldQueue
 {
-    public $investor;
-
-
     public function __construct()
     {
 
@@ -19,13 +16,12 @@ class UploadVerificationDocuments implements ShouldQueue
 
     public function handle(UploadInvestorDocuments $event)
     {
-        $this->investor = $event->investor;
+        $data = [];
         if ($event->request['documenttype'] === 'passport') {
             $data = [
                     'passport' => storage_path('app/public/'.$event->document),
             ];
-        }
-        if ($event->request['documenttype'] === 'driverslicence') {
+        } else {
             $data = [
                     'licence' => $licence = storage_path('app/public/'.$event->document),
             ];
@@ -33,6 +29,10 @@ class UploadVerificationDocuments implements ShouldQueue
         try {
             return (new Investor())->updateVerificationData($data, $event->investor['id']);
         } catch (\Exception $e) {
+            info("upload passport", [
+                    $e->getMessage(),
+
+            ]);
             return back()->withErrors(
                     ['error' => 'There were errors uploading and verifying your documents.']
             );

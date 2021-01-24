@@ -209,9 +209,10 @@ class Investor
 
     public function updateVerificationData($data, $investor)
     {
-        $ext = pathinfo($data['passport'], PATHINFO_EXTENSION);
 
         if (isset($data['passport'])) {
+            $ext = pathinfo($data['passport'], PATHINFO_EXTENSION);
+
             $verificationDocument = [
                     'name'     => 'passport',
                     'contents' => fopen($data['passport'], 'r'),
@@ -219,12 +220,15 @@ class Investor
             ];
         }
         if (isset($data['licence'])) {
+            $ext = pathinfo($data['licence'], PATHINFO_EXTENSION);
+
             $verificationDocument = [
                     'name'     => 'license',
                     'contents' => fopen($data['licence'], 'r'),
                     'filename' => Str::random(7).".".$ext
             ];
         }
+
         return $this->requestFiles('PUT', 'portal/investor/profile/upload/'.$investor.'/', [
                 $verificationDocument,
                 [
@@ -238,6 +242,8 @@ class Investor
 
     public function updateQuestionaireData($data, $investor)
     {
+        $ext = pathinfo($data['w9_form'], PATHINFO_EXTENSION);
+
         return $this->requestFiles('PUT', 'portal/investor/questionnaires/'.$investor.'/', [
                 [
                         'name'     => 'investor',
@@ -266,41 +272,6 @@ class Investor
                 ], [
                         'name'     => 'date_of_birth',
                         'contents' => $data['date_of_birth']
-                ],
-        ]);
-    }
-
-    public function updateW9Form($data, $investor)
-    {
-        $ext = pathinfo($data['w9_form'], PATHINFO_EXTENSION);
-        return $this->requestFiles('PUT', 'portal/investor/questionnaires/'.$investor.'/', [
-                [
-                        'name'     => 'investor',
-                        'contents' => ""
-                ], [
-                        'name'     => 'legal_name',
-                        'contents' => ""
-                ], [
-                        'name'     => 'investor_location',
-                        'contents' => ""
-                ], [
-                        'name'     => 'nationality',
-                        'contents' => ""
-                ], [
-                        'name'     => 'source_of_wealth',
-                        'contents' => ""
-                ], [
-                        'name'     => 'tax_identification_number',
-                        'contents' => ""
-                ], [
-                        'name'     => 'authorization',
-                        'contents' => ""
-                ], [
-                        'name'     => 'address',
-                        'contents' => ""
-                ], [
-                        'name'     => 'date_of_birth',
-                        'contents' => ""
                 ],
                 [
                         'name'     => 'w9_form',

@@ -87,9 +87,7 @@ Route::post('registeraninvestor', function (\Illuminate\Http\Request $request) {
                 'password'     => $request->investorpassword,
                 'avatar'       => null,
         ]);
-        info("Investor Details", [
-                $investor
-        ]);
+
         if ($request->hasFile('passport')) {
             $document = $request->file('passport')->store('documents', 'public');
         }
@@ -100,7 +98,7 @@ Route::post('registeraninvestor', function (\Illuminate\Http\Request $request) {
 
     } catch (ClientException $e) {
         $errors = collect(json_decode($e->getResponse()->getBody()->getContents()));
-        return response()->json($errors,422);
+        return response()->json($errors, 422);
     }
 
 })->name('registeraninvestor');

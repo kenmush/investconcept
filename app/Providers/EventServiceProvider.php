@@ -24,7 +24,6 @@ class EventServiceProvider extends ServiceProvider
             ],
             UploadInvestorDocuments::class => [
                     UploadVerificationDocuments::class,
-                    UploadW9Form::class,
                     UploadQuestionnareData::class,
             ],
     ];

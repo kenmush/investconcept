@@ -25,6 +25,7 @@ class UploadQuestionnareData implements ShouldQueue
                 'authorization'             => $event->request['authorization'],
                 'address'                   => $event->request['address'],
                 'date_of_birth'             => $event->request['date_of_birth'],
+                'w9_form'                   => storage_path('app/public/'.$event->wnineForm),
 
         ];
         try {
