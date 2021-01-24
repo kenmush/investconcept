@@ -638,7 +638,7 @@
                 }
             });
             setTimeout(function () {
-                window.location.href = '/'
+                window.location.href = '/login'
             }, 11000);
         })
             .catch(err => {
