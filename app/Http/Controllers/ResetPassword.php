@@ -19,7 +19,7 @@ class ResetPassword extends Controller
             $request->user()->update([
                     'first_login' => false
             ]);
-            return redirect()->intended();
+            return redirect()->route('portfolio.index');
         }
         return back()->withErrors([
                 'updatepassword' => $response['detail']
