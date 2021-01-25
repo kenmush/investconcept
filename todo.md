@@ -1,10 +1,11 @@
 ## Work Done Tracker.
 ### Week of 25th Jan 2021
-- [ ] If registration form has errors, change submitting copy to submit 
-- [ ] Change Reset password fields to password fields instead of text fields
-- [ ] Questionnaire validation fields to show successful validation on the labels and not one radio button
+- [ ] During registration If registration form has errors, change submitting copy to submit 
+- [ ] Change Reset password fields from text fields to password fields instead of text fields
+- [ ] Update Questionnaire validation fields to show successful validation on the labels and not one radio button
 - [ ] Optimize all images by converting them to webp images for faster load times
-- [ ] Add markup schema to show a good preview when sharing the website in across social media pages
+- [ ] Add markup schema to show a aesthetic preview when sharing the website to social media pages
+- [ ] Run complete Unit test on Investor Platform in readiness for launch
 
 ### Week of 12th Jan 2021. Work discussed with Mark and Ayad.
 
