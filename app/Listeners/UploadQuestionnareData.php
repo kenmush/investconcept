@@ -5,9 +5,11 @@ namespace App\Listeners;
 use App\Events\UploadInvestorDocuments;
 use App\Services\Investor;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 
 class UploadQuestionnareData implements ShouldQueue
 {
+    use InteractsWithQueue;
     public function __construct()
     {
         //
@@ -29,11 +31,13 @@ class UploadQuestionnareData implements ShouldQueue
 
         ];
         try {
+            throw new \Exception("Can't upload document");
             return (new Investor())->updateQuestionaireData($data, $event->investor['id']);
         } catch (\Exception $e) {
-            $this->release(120);
+            return $this->release(120);
         }
     }
+
     public function tags()
     {
 
