@@ -10,6 +10,7 @@ use Illuminate\Queue\InteractsWithQueue;
 class UploadQuestionnareData implements ShouldQueue
 {
     use InteractsWithQueue;
+
     public function __construct()
     {
         //
@@ -39,7 +40,6 @@ class UploadQuestionnareData implements ShouldQueue
 
     public function tags()
     {
-
         return ['Questionnaire Data', 'investor'];
     }
 }

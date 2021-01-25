@@ -17,13 +17,11 @@ class UploadInvestorDocuments
     public $document;
     public $wnineForm;
 
-    public function __construct($investor,$request,$document,$w9Form)
+    public function __construct($investor, $request, $document, $w9Form)
     {
         $this->investor = $investor;
         $this->request = $request;
         $this->document = $document;
         $this->wnineForm = $w9Form;
     }
-
-
 }

@@ -32,8 +32,6 @@ class APIService extends TestCase
     public function can_get_categories()
     {
         $response = (new Investor())->getAssetCategories();
-        self::assertArrayHasKey('categoryName',$response[0]);
+        self::assertArrayHasKey('categoryName', $response[0]);
     }
-
-
 }

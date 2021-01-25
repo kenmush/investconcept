@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Services;
-
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Str;
@@ -16,8 +14,8 @@ class Investor
     public function investorLogin($data)
     {
         return $this->request('POST', 'portal/investor/login/', [
-                "username" => $data['username'],
-                "password" => $data['password']
+                'username' => $data['username'],
+                'password' => $data['password'],
         ]);
     }
 
@@ -25,7 +23,7 @@ class Investor
     {
         $response = (new Client)->{$method}($this->path().ltrim($path, '/'), [
                 'headers' => [
-                        'Authorization' => "Bearer ".'X-Mutisya',
+                        'Authorization' => 'Bearer '.'X-Mutisya',
                         'Content-Type'  => 'application/json',
                 ],
                 'json'    => $parameters,
@@ -41,7 +39,6 @@ class Investor
 
     public function checkFirstTimeLogin($api_id)
     {
-
         return $this->request('GET', 'portal/investor/check_first/login/'.$api_id.'/');
     }
 
@@ -64,7 +61,7 @@ class Investor
     {
         $response = (new Client)->{$method}($this->path().ltrim($path, '/'), [
                 'headers'   => [
-                        'Authorization' => "Bearer ".'X-Mutisya',
+                        'Authorization' => 'Bearer '.'X-Mutisya',
                 ],
                 'multipart' => $parameters,
         ]);
@@ -154,48 +151,48 @@ class Investor
         return $this->requestFiles('PUT', 'portal/investor/profile/'.$investor.'/', [
                 [
                         'name'     => 'phoneNumber',
-                        'contents' => $data['phoneNumber']
+                        'contents' => $data['phoneNumber'],
                 ], [
                         'name'     => 'firstName',
-                        'contents' => $data['firstName']
+                        'contents' => $data['firstName'],
                 ], [
                         'name'     => 'middleName',
-                        'contents' => $data['middleName']
+                        'contents' => $data['middleName'],
                 ], [
                         'name'     => 'lastName',
-                        'contents' => $data['lastName']
+                        'contents' => $data['lastName'],
                 ],
                 [
                         'name'     => 'username',
-                        'contents' => $data['username']
+                        'contents' => $data['username'],
                 ],
                 [
                         'name'     => 'language',
-                        'contents' => $data['language']
+                        'contents' => $data['language'],
                 ],
                 [
                         'name'     => 'email',
-                        'contents' => $data['email']
+                        'contents' => $data['email'],
                 ],
                 [
                         'name'     => 'organization',
-                        'contents' => $data['organization']
+                        'contents' => $data['organization'],
                 ],
                 [
                         'name'     => 'password',
-                        'contents' => $data['password']
+                        'contents' => $data['password'],
                 ],
                 [
                         'name'     => 'passport',
-                        'contents' => "null",
+                        'contents' => 'null',
                 ],
                 [
                         'name'     => 'license',
-                        'contents' => "null",
+                        'contents' => 'null',
                 ],
                 [
                         'name'     => 'avatar',
-                        'contents' => "null",
+                        'contents' => 'null',
                 ],
 //                [
 //                        'name'     => 'avatar',
@@ -209,14 +206,13 @@ class Investor
 
     public function updateVerificationData($data, $investor)
     {
-
         if (isset($data['passport'])) {
             $ext = pathinfo($data['passport'], PATHINFO_EXTENSION);
 
             $verificationDocument = [
                     'name'     => 'passport',
                     'contents' => fopen($data['passport'], 'r'),
-                    'filename' => Str::random(7).".".$ext
+                    'filename' => Str::random(7).'.'.$ext,
             ];
         }
         if (isset($data['licence'])) {
@@ -225,7 +221,7 @@ class Investor
             $verificationDocument = [
                     'name'     => 'license',
                     'contents' => fopen($data['licence'], 'r'),
-                    'filename' => Str::random(7).".".$ext
+                    'filename' => Str::random(7).'.'.$ext,
             ];
         }
 
@@ -234,9 +230,9 @@ class Investor
                 [
                         'name'     => 'avatar',
                         'contents' => fopen(public_path('untapped/useravatar.png'), 'r'),
-                        'filename' => Str::random(7)."."."png"
+                        'filename' => Str::random(7).'.'.'png',
 
-                ]
+                ],
         ]);
     }
 
@@ -247,37 +243,37 @@ class Investor
         return $this->requestFiles('PUT', 'portal/investor/questionnaires/'.$investor.'/', [
                 [
                         'name'     => 'investor',
-                        'contents' => $data['investor']
+                        'contents' => $data['investor'],
                 ], [
                         'name'     => 'legal_name',
-                        'contents' => $data['legal_name']
+                        'contents' => $data['legal_name'],
                 ], [
                         'name'     => 'investor_location',
-                        'contents' => $data['investor_location']
+                        'contents' => $data['investor_location'],
                 ], [
                         'name'     => 'nationality',
-                        'contents' => $data['nationality']
+                        'contents' => $data['nationality'],
                 ], [
                         'name'     => 'source_of_wealth',
-                        'contents' => $data['source_of_wealth']
+                        'contents' => $data['source_of_wealth'],
                 ], [
                         'name'     => 'tax_identification_number',
-                        'contents' => $data['tax_identification_number']
+                        'contents' => $data['tax_identification_number'],
                 ], [
                         'name'     => 'authorization',
-                        'contents' => $data['authorization']
+                        'contents' => $data['authorization'],
                 ], [
                         'name'     => 'address',
-                        'contents' => $data['address']
+                        'contents' => $data['address'],
                 ], [
                         'name'     => 'date_of_birth',
-                        'contents' => $data['date_of_birth']
+                        'contents' => $data['date_of_birth'],
                 ],
                 [
                         'name'     => 'w9_form',
                         'contents' => fopen($data['w9_form'], 'r'),
-                        'filename' => Str::random(7).".".$ext
-                ]
+                        'filename' => Str::random(7).'.'.$ext,
+                ],
         ]);
     }
 
@@ -331,58 +327,57 @@ class Investor
 
     public function registerInvestor($data)
     {
-
         if ($data['avatar'] === null) {
             $avatar = [
                     'name'     => 'avatar',
                     'contents' => fopen(public_path('untapped/useravatar.png'), 'r'),
-                    'filename' => Str::random(7)."."."png"
+                    'filename' => Str::random(7).'.'.'png',
 
             ];
         } else {
             $avatar = [
                     'name'     => 'avatar',
                     'contents' => fopen($data['avatar'], 'rb'),
-                    'filename' => $data['avatar']->getClientOriginalName()
+                    'filename' => $data['avatar']->getClientOriginalName(),
             ];
         }
+
         return $this->requestFiles('POST', 'portal/investor/creation/', [
                 [
                         'name'     => 'phoneNumber',
-                        'contents' => $data['phoneNumber']
+                        'contents' => $data['phoneNumber'],
                 ], [
                         'name'     => 'firstName',
-                        'contents' => $data['firstName']
+                        'contents' => $data['firstName'],
                 ], [
                         'name'     => 'middleName',
-                        'contents' => $data['middleName']
+                        'contents' => $data['middleName'],
                 ], [
                         'name'     => 'lastName',
-                        'contents' => $data['lastName']
+                        'contents' => $data['lastName'],
                 ],
                 [
                         'name'     => 'username',
-                        'contents' => $data['username']
+                        'contents' => $data['username'],
                 ],
                 [
                         'name'     => 'language',
-                        'contents' => $data['language']
+                        'contents' => $data['language'],
                 ],
                 [
                         'name'     => 'email',
-                        'contents' => $data['email']
+                        'contents' => $data['email'],
                 ],
                 [
                         'name'     => 'organization',
-                        'contents' => $data['organization']
+                        'contents' => $data['organization'],
                 ],
                 [
                         'name'     => 'password',
-                        'contents' => $data['password']
+                        'contents' => $data['password'],
                 ],
                 $avatar,
 
         ]);
-
     }
 }

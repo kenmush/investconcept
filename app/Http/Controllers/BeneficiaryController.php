@@ -16,7 +16,8 @@ class BeneficiaryController extends Controller
     public function index()
     {
         $beneficiaries = (new Investor())->getBeneficiary();
-        return view('management.beneficiary.index',compact('beneficiaries'));
+
+        return view('management.beneficiary.index', compact('beneficiaries'));
     }
 
     /**
@@ -27,6 +28,7 @@ class BeneficiaryController extends Controller
     public function create()
     {
         $beneficiary = (new Investor())->getBeneficiary();
+
         return view('management.beneficiary.create');
     }
 
@@ -40,11 +42,11 @@ class BeneficiaryController extends Controller
     {
         try {
             (new Investor())->registerBeneficiary($request->all());
+
             return redirect()->route('beneficiary.index');
         } catch (\Exception $exception) {
             return back();
         }
-
     }
 
     /**
@@ -55,8 +57,8 @@ class BeneficiaryController extends Controller
      */
     public function show($beneficiary)
     {
-        return view('management.beneficiary.show',[
-                'beneficiary' => (new Investor())->getBeneficiaryById($beneficiary)
+        return view('management.beneficiary.show', [
+                'beneficiary' => (new Investor())->getBeneficiaryById($beneficiary),
         ]);
     }
 

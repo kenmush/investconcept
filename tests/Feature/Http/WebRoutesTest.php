@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Http;
 
-use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class WebRoutesTest extends TestCase
 {
@@ -40,6 +40,4 @@ class WebRoutesTest extends TestCase
     {
         $this->get('login')->assertStatus(200)->assertSeeText('Email');
     }
-
-
 }

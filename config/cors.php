@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['api/*','untapped/*','media/*'],
+    'paths' => ['api/*', 'untapped/*', 'media/*'],
 
     'allowed_methods' => ['*'],
 

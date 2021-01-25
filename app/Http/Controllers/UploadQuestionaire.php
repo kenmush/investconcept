@@ -24,6 +24,7 @@ class UploadQuestionaire extends Controller
         ];
         try {
             (new Investor())->updateQuestionaireData($data, $request->investor);
+
             return back()->with([
                     'verified' => 'good',
             ]);

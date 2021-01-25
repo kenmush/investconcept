@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Services\Investor;
 use Exception;
 use Illuminate\Http\Request;
@@ -14,10 +13,11 @@ class Verification extends Controller
     {
         $data = [
                 'passport' => $request->document,
-                'licence'  => $request->document
+                'licence'  => $request->document,
         ];
         try {
             (new Investor())->updateVerificationData($data, $request->investor_id);
+
             return back()->with([
                     'verified' => 'Documents have been submitted. You will receive an email with more information.',
                     'investor' => $request->investor_id,
@@ -27,7 +27,5 @@ class Verification extends Controller
                     ['error' => 'There were errors uploading and verifying your documents.']
             );
         }
-
-
     }
 }

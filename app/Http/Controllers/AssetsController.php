@@ -10,14 +10,13 @@ class AssetsController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
      */
     public function index()
     {
         $assets = (new Investor())->getAssetCategories();
 
         return view('myassets', [
-                'assets' => collect($assets)->toArray()
+                'assets' => collect($assets)->toArray(),
         ]);
     }
 
@@ -41,13 +40,14 @@ class AssetsController extends Controller
     {
         try {
             $asset = (new Investor())->createAsset([
-                    "categoryName"      => $request->categoryName,
-                    "use_case"          => $request->use_case,
-                    "duration"          => $request->duration,
-                    "ticket"            => $request->ticket,
-                    "return_percentage" => $request->return_percentage,
-                    "impact"            => $request->impact,
+                    'categoryName'      => $request->categoryName,
+                    'use_case'          => $request->use_case,
+                    'duration'          => $request->duration,
+                    'ticket'            => $request->ticket,
+                    'return_percentage' => $request->return_percentage,
+                    'impact'            => $request->impact,
             ]);
+
             return redirect()->route('myassets.index');
         } catch (ClientException $e) {
             $response = $e->getResponse();
@@ -58,6 +58,7 @@ class AssetsController extends Controller
             foreach ($errors as $key => $error) {
                 $validator->errors()->add($key, $error[0] ?? '');
             }
+
             return back()->withErrors($validator)->withInput();
         }
     }
@@ -81,7 +82,7 @@ class AssetsController extends Controller
     public function edit($id)
     {
         return view('management.assets.edit', [
-                'asset' => (new Investor())->getAssetbyId($id)
+                'asset' => (new Investor())->getAssetbyId($id),
         ]);
     }
 
@@ -94,13 +95,13 @@ class AssetsController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $updated=  (new Investor())->updateAsset($id, [
-                "categoryName"      => $request->categoryName,
-                "use_case"          => $request->use_case,
-                "duration"          => $request->duration,
-                "ticket"            => $request->ticket,
-                "return_percentage" => $request->return_percentage,
-                "impact"            => $request->impact,
+        $updated = (new Investor())->updateAsset($id, [
+                'categoryName'      => $request->categoryName,
+                'use_case'          => $request->use_case,
+                'duration'          => $request->duration,
+                'ticket'            => $request->ticket,
+                'return_percentage' => $request->return_percentage,
+                'impact'            => $request->impact,
         ]);
 
         return redirect()->route('myassets.index');

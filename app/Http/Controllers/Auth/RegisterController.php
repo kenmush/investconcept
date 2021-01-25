@@ -50,6 +50,7 @@ class RegisterController extends Controller
     public function showRegistrationForm()
     {
         $countries = new Countries();
+
         return view('auth.registernew', [
                 'countries' => $countries->all(),
 
@@ -68,7 +69,6 @@ class RegisterController extends Controller
         }
 
         return view('auth.registered');
-
     }
 
     /**
@@ -107,6 +107,7 @@ class RegisterController extends Controller
         $investor['investor_type'] = $data['accredited_type'];
         try {
             $userFromAPI = (new Investor())->signupInvestor($investor);
+
             return User::firstOrCreate(
                     ['email' => $userFromAPI['email']],
                     [
@@ -118,10 +119,7 @@ class RegisterController extends Controller
                     ]
             );
         } catch (\Exception $exception) {
-
             return redirect()->route('register');
         }
-
-
     }
 }

@@ -15,7 +15,6 @@ class UserController extends Controller
      */
     public function index()
     {
-
         return view('userprofile');
     }
 
@@ -46,12 +45,11 @@ class UserController extends Controller
      * @param  User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show( $user)
+    public function show($user)
     {
-        return view('userprofile',[
-                'name' => (new Investor())->getBeneficiaryById($user)
+        return view('userprofile', [
+                'name' => (new Investor())->getBeneficiaryById($user),
         ]);
-
     }
 
     /**

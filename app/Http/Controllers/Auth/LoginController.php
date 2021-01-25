@@ -41,7 +41,7 @@ class LoginController extends Controller
     {
         $data = [
                 'username' => $request->email,
-                'password' => $request->password
+                'password' => $request->password,
         ];
         try {
             $userFromAPI = (new Investor())->investorLogin($data);
@@ -83,5 +83,4 @@ class LoginController extends Controller
                 ? new JsonResponse([], 204)
                 : redirect('/');
     }
-
 }

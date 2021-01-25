@@ -32,7 +32,7 @@ class IrrigationPumps extends Controller
             ];
         }
 
-        if (Str::contains($assets['categoryName'], 'ATM')||Str::contains($assets['categoryName'], 'Maji milele')) {
+        if (Str::contains($assets['categoryName'], 'ATM') || Str::contains($assets['categoryName'], 'Maji milele')) {
             $assets['category'] = 'ATMs';
             $assets['carousel'] = [
                     'atm/atm1.jpg',
@@ -50,49 +50,50 @@ class IrrigationPumps extends Controller
                 $benefiaries['Planned Q1 2021'] = 50;
 
                 $benefiaries['Mission'] =
-                        "To make high quality drinking water available on demand at scale to the Kenyan urban middle class";
+                        'To make high quality drinking water available on demand at scale to the Kenyan urban middle class';
             }
             if ($benefiaries['firstName'] === 'Ovive Purified') {
                 $benefiaries['founded'] = '2019';
                 $benefiaries['Assets managed'] = 1;
                 $benefiaries['Planned Q1 2021'] = 5;
                 $benefiaries['Mission'] =
-                        "To make high quality drinking water available on demand at scale to the Kenyan urban middle class.";
+                        'To make high quality drinking water available on demand at scale to the Kenyan urban middle class.';
             }
             if ($benefiaries['firstName'] === 'Maji Milele') {
                 $benefiaries['founded'] = '2008';
                 $benefiaries['Assets managed'] = 9;
                 $benefiaries['Planned Q1 2021'] = 25;
                 $benefiaries['Mission'] =
-                        "Widening base of pyramid access to safe water";
+                        'Widening base of pyramid access to safe water';
             }
             if ($benefiaries['firstName'] === 'Asaak') {
                 $benefiaries['founded'] = '';
                 $benefiaries['Assets managed'] = 40;
                 $benefiaries['Planned Q1 2021'] = round(0.4 * 40);
                 $benefiaries['Mission'] =
-                        "Enabling first-time bike ownership with boda-boda financing";
+                        'Enabling first-time bike ownership with boda-boda financing';
             }
             if ($benefiaries['firstName'] === 'Zembo') {
                 $benefiaries['founded'] = '';
                 $benefiaries['Assets managed'] = 83;
                 $benefiaries['Planned Q1 2021'] = round(0.4 * 83);
                 $benefiaries['Mission'] =
-                        "";
+                        '';
             }
             if ($benefiaries['firstName'] === 'Teliman') {
                 $benefiaries['founded'] = '';
                 $benefiaries['Assets managed'] = 15;
                 $benefiaries['Planned Q1 2021'] = round(0.4 * 15);
                 $benefiaries['Mission'] =
-                        "The first on demand moto-taxi service in Mali, Africa’s fastest growing capital";
+                        'The first on demand moto-taxi service in Mali, Africa’s fastest growing capital';
             }
+
             return $benefiaries;
         });
 
-        return view('irrigation',[
+        return view('irrigation', [
                 'assets'        => $assets,
-                'beneficiaries' => $allBeneficiaries
+                'beneficiaries' => $allBeneficiaries,
         ]);
     }
 }

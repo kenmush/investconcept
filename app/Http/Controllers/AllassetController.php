@@ -15,8 +15,8 @@ class AllassetController extends Controller
      */
     public function index()
     {
-        return view('management.assets.manageindex',[
-                'assets' => (new Investor())->getAllAssets()
+        return view('management.assets.manageindex', [
+                'assets' => (new Investor())->getAllAssets(),
         ]);
     }
 
@@ -27,7 +27,7 @@ class AllassetController extends Controller
      */
     public function create()
     {
-        return view('management.assets.managecreate',[
+        return view('management.assets.managecreate', [
                 'investmentId'  => 1,
                 'investor'      => 1,
                 'beneficiaries' => (new Investor())->getBeneficiary(),
@@ -49,56 +49,57 @@ class AllassetController extends Controller
             (new Investor())->createAssetForInvestor([
                     [
                             'name'     => 'investment',
-                            'contents' => $request->investment
+                            'contents' => $request->investment,
                     ], [
                             'name'     => 'investor_id',
-                            'contents' => $request->investor
+                            'contents' => $request->investor,
                     ], [
                             'name'     => 'beneficiary',
-                            'contents' => $request->beneficiary
+                            'contents' => $request->beneficiary,
                     ], [
                             'name'     => 'brand',
-                            'contents' => $request->brand
+                            'contents' => $request->brand,
                     ], [
                             'name'     => 'model',
-                            'contents' => $request->model
+                            'contents' => $request->model,
                     ],
                     [
                             'name'     => 'serial_number',
-                            'contents' => $request->serial_number
+                            'contents' => $request->serial_number,
                     ],
                     [
                             'name'     => 'location',
-                            'contents' => $request->location
+                            'contents' => $request->location,
                     ],
                     [
                             'name'     => 'latitude',
-                            'contents' => $request->latitude
+                            'contents' => $request->latitude,
                     ],
                     [
                             'name'     => 'longitude',
-                            'contents' => $request->longitude
+                            'contents' => $request->longitude,
                     ],
                     [
                             'name'     => 'asset_cost',
-                            'contents' => $request->asset_cost
+                            'contents' => $request->asset_cost,
                     ],
                     [
                             'name'     => 'revenue',
-                            'contents' => $request->revenue
+                            'contents' => $request->revenue,
                     ],
                     [
                             'name'     => 'revenue_returned',
-                            'contents' => $request->revenue_returned
+                            'contents' => $request->revenue_returned,
                     ],
                     [
                             'name'     => 'image',
                             'contents' => fopen(storage_path('app\\'.$path), 'r'),
-                            'filename' => $request->file('image')->getClientOriginalName()
+                            'filename' => $request->file('image')->getClientOriginalName(),
 //                        'contents' => file_get_contents(storage_path('app\\'.$data['avatar']))
                     ],
 
             ]);
+
             return redirect()->route('manageassets.index');
         } catch (\Exception $exception) {
             return back();
@@ -112,7 +113,6 @@ class AllassetController extends Controller
      */
     public function show($allasset, $investor)
     {
-
         return view('management.assets.managecreate', [
                 'investmentId'  => $allasset,
                 'investor'      => $investor,
@@ -122,7 +122,6 @@ class AllassetController extends Controller
 
     public function showforUse($allasset, $investor)
     {
-
         return view('management.assets.managecreate', [
                 'investmentId'  => $allasset,
                 'investor'      => $investor,

@@ -12,15 +12,13 @@ class PortfolioController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
      */
     public function index()
     {
-
         return view('portfolio', [
                 'assets'      => (new Investor())->getAssetCategories() ?? [],
                 'tableAssets' => (new Investor())->getInvestorAssets(auth()->user()->api_id)['investments'] ?? [],
-                'stats'       => (new Investor())->getInvestorAssets(auth()->user()->api_id) ?? []
+                'stats'       => (new Investor())->getInvestorAssets(auth()->user()->api_id) ?? [],
         ]);
     }
 
@@ -95,54 +93,54 @@ class PortfolioController extends Controller
                     $benefiaries['Planned Q1 2021'] = 50;
 
                     $benefiaries['Mission'] =
-                            "To make high quality drinking water available on demand at scale to the Kenyan urban middle class";
+                            'To make high quality drinking water available on demand at scale to the Kenyan urban middle class';
                 }
                 if ($benefiaries['username'] === 'atm') {
                     $benefiaries['founded'] = '2019';
                     $benefiaries['Assets managed'] = 10;
                     $benefiaries['Planned Q1 2021'] = 30;
                     $benefiaries['Mission'] =
-                            "To make high quality drinking water available on demand at scale to the Kenyan urban middle class.";
+                            'To make high quality drinking water available on demand at scale to the Kenyan urban middle class.';
                 }
                 if ($benefiaries['firstName'] === 'Maji Milele') {
                     $benefiaries['founded'] = '2008';
                     $benefiaries['Assets managed'] = 9;
                     $benefiaries['Planned Q1 2021'] = 25;
                     $benefiaries['Mission'] =
-                            "Widening base of pyramid access to safe water";
+                            'Widening base of pyramid access to safe water';
                 }
                 if ($benefiaries['firstName'] === 'Asaak') {
                     $benefiaries['founded'] = '';
                     $benefiaries['Assets managed'] = 40;
                     $benefiaries['Planned Q1 2021'] = round(0.4 * 40);
                     $benefiaries['Mission'] =
-                            "Enabling first-time bike ownership with boda-boda financing";
+                            'Enabling first-time bike ownership with boda-boda financing';
                 }
                 if ($benefiaries['firstName'] === 'Zembo') {
                     $benefiaries['founded'] = '';
                     $benefiaries['Assets managed'] = 83;
                     $benefiaries['Planned Q1 2021'] = round(0.4 * 83);
                     $benefiaries['Mission'] =
-                            "";
+                            '';
                 }
                 if ($benefiaries['firstName'] === 'Teliman') {
                     $benefiaries['founded'] = '';
                     $benefiaries['Assets managed'] = 15;
                     $benefiaries['Planned Q1 2021'] = round(0.4 * 15);
                     $benefiaries['Mission'] =
-                            "The first on demand moto-taxi service in Mali, Africa’s fastest growing capital";
+                            'The first on demand moto-taxi service in Mali, Africa’s fastest growing capital';
                 }
+
                 return $benefiaries;
             });
 
             return view('motorbike', [
                     'assets'        => $assets,
-                    'beneficiaries' => $allBeneficiaries
+                    'beneficiaries' => $allBeneficiaries,
             ]);
         } catch (ClientException $exception) {
             return back();
         }
-
     }
 
     /**
@@ -152,12 +150,10 @@ class PortfolioController extends Controller
      */
     public function edit($id)
     {
-
         try {
             return view('management.portfolio.update', [
-                    'asset' => collect((new Investor())->getInvestorAssets(auth()->user()->api_id)['investments'])->where
-                    ('id',
-                            $id)->first()
+                    'asset' => collect((new Investor())->getInvestorAssets(auth()->user()->api_id)['investments'])->where('id',
+                            $id)->first(),
             ]);
         } catch (\Exception $exception) {
             return back();
@@ -175,20 +171,21 @@ class PortfolioController extends Controller
     {
         try {
             $updated = (new Investor())->updateAssetInvestedIn([
-                    "investor_id" => $request->investorid,
+                    'investor_id' => $request->investorid,
                     'investments' => [
                             [
-                                    "id"                => $request->id,
-                                    "asset_category_id" => $request->asset_category,
-                                    "amount_invested"   => $request->amount_invested,
-                                    "leverage"          => $request->leverage,
-                                    "duration"          => $request->duration,
-                                    "interest"          => $request->interest,
-                                    "balance"           => $request->balance,
-                                    "units"             => $request->units
-                            ]
-                    ]
+                                    'id'                => $request->id,
+                                    'asset_category_id' => $request->asset_category,
+                                    'amount_invested'   => $request->amount_invested,
+                                    'leverage'          => $request->leverage,
+                                    'duration'          => $request->duration,
+                                    'interest'          => $request->interest,
+                                    'balance'           => $request->balance,
+                                    'units'             => $request->units,
+                            ],
+                    ],
             ], $request->investorid);
+
             return redirect()->route('portfolio.index');
         } catch (\Exception $exception) {
             return back();

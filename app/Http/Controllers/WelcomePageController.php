@@ -10,7 +10,7 @@ class WelcomePageController extends Controller
     {
         return view('index', [
                 'assets'          => (new Investor())->getAssetCategories(),
-                'landingPageData' => collect((new Investor())->getLandingPageData())
+                'landingPageData' => collect((new Investor())->getLandingPageData()),
         ]);
     }
 }

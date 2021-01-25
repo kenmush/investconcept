@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Storage;
 class UploadVerificationDocuments implements ShouldQueue
 {
     public $tries = 10;
+
     public function __construct()
     {
-
     }
 
     public function handle(UploadInvestorDocuments $event)
@@ -30,11 +30,12 @@ class UploadVerificationDocuments implements ShouldQueue
         try {
             return (new Investor())->updateVerificationData($data, $event->investor['id']);
         } catch (\Exception $e) {
-             $this->release(120);
-            info("upload passport", [
+            $this->release(120);
+            info('upload passport', [
                     $e->getMessage(),
 
             ]);
+
             return back()->withErrors(
                     ['error' => 'There were errors uploading and verifying your documents.']
             );
@@ -43,7 +44,6 @@ class UploadVerificationDocuments implements ShouldQueue
 
     public function tags()
     {
-
         return ['Verification Documents', 'investor:'];
     }
 }

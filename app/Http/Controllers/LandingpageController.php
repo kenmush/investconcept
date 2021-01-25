@@ -16,8 +16,8 @@ class LandingpageController extends Controller
      */
     public function index()
     {
-        return view('management.landingpage.index',[
-                'contents' => (new Investor())->getLandingPageData()
+        return view('management.landingpage.index', [
+                'contents' => (new Investor())->getLandingPageData(),
         ]);
     }
 
@@ -39,9 +39,9 @@ class LandingpageController extends Controller
      */
     public function store(Request $request)
     {
-
         try {
             $store = (new Investor())->createLandingPageData($request->all());
+
             return redirect()->route('herosection.index');
         } catch (\Exception $exception) {
             return back();
@@ -68,7 +68,7 @@ class LandingpageController extends Controller
     public function edit($landingpage)
     {
         return view('management.landingpage.edit', [
-                'contents' => collect((new Investor())->getLandingPageData())->first()
+                'contents' => collect((new Investor())->getLandingPageData())->first(),
         ]);
     }
 
@@ -83,6 +83,7 @@ class LandingpageController extends Controller
     {
         try {
             (new Investor())->updateLandingPageData($request->all(), $landingpage);
+
             return redirect()->route('herosection.index');
         } catch (\Exception $exception) {
             return back();
