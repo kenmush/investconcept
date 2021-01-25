@@ -1,6 +1,12 @@
 ## Work Done Tracker.
+### Week of 25th Jan 2021
+- [ ] If registration form has errors, change submitting copy to submit 
+- [ ] Change Reset password fields to password fields instead of text fields
+- [ ] Questionnaire validation fields to show successful validation on the labels and not one radio button
+- [ ] Optimize all images by converting them to webp images for faster load times
+- [ ] Add markup schema to show a good preview when sharing the website in across social media pages
 
-Week of 12th Jan 2021. Work discussed with Mark and Ayad.
+### Week of 12th Jan 2021. Work discussed with Mark and Ayad.
 
 - [x] Sign-Up Page:
 
@@ -40,3 +46,4 @@ Week of 12th Jan 2021. Work discussed with Mark and Ayad.
     - [ ] One week (Assuming we will use stripe)
 - [x] Sign Up page and Sign Up workflow done by end of this week for presentation to Dan.
 - [x] Rest (+ any edits to previous) by end next week. Presentation to Jim w/b 25th.
+
