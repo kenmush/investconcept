@@ -31,7 +31,6 @@ class UploadQuestionnareData implements ShouldQueue
 
         ];
         try {
-            throw new \Exception("Can't upload document");
             return (new Investor())->updateQuestionaireData($data, $event->investor['id']);
         } catch (\Exception $e) {
             return $this->release(120);
