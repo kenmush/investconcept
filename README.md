@@ -19,7 +19,7 @@ npm install npm@latest -g
 
 1. Clone  development repo
 ```sh
-git clone untapped  https://gitlab.com/untappedke/investordashboard.git
+git clone untapped  https://gitlab.com/untappedke/investor-dashboard-frontend.git
 ```
 2. Install Composer dependencies
 ```sh
