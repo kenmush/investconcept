@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 
 class UploadVerificationDocuments implements ShouldQueue
 {
+    public $tries = 10;
     public function __construct()
     {
 
