@@ -29,6 +29,7 @@ class UploadVerificationDocuments implements ShouldQueue
         try {
             return (new Investor())->updateVerificationData($data, $event->investor['id']);
         } catch (\Exception $e) {
+             $this->release(120);
             info("upload passport", [
                     $e->getMessage(),
 
