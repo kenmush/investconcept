@@ -110,22 +110,6 @@ phpunit:
     expire_in: 1 days
     when: on_failure
 
-codestyle:
-  stage: testing
-  image: lorisleiva/laravel-docker
-  script:
-    - phpcs --extensions=php app
-  dependencies: []
-
-phpcpd:
-  stage: testing
-  script:
-    - test -f phpcpd.phar || curl -L https://phar.phpunit.de/phpcpd.phar -o phpcpd.phar
-    - php phpcpd.phar app/ --min-lines=50
-  dependencies: []
-  cache:
-    paths:
-      - phpcpd.phar
 
 sensiolabs:
   stage: security
