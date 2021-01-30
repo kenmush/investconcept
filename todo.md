@@ -1,5 +1,6 @@
 ## Work Done Tracker.
 ### Week of 25th Jan 2021
+- [ ] More fields in address column
 - [ ] During registration If registration form has errors, change submitting copy to submit 
 - [ ] Change Reset password fields from text fields to password fields instead of text fields
 - [ ] Update Questionnaire validation fields to show successful validation on the labels and not one radio button
