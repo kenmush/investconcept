@@ -44,21 +44,21 @@
 
     <link rel="stylesheet" href="{{ mix('css/front.css') }}">
 
-    <link rel="stylesheet"  href="{{ asset('assets/css/fontawesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/fonts/flaticon.css') }}">
+    <link rel="preload" as="style"   href="{{ asset('assets/css/fontawesome.min.css') }}">
+    <link rel="preload" as="style" href="{{ asset('assets/fonts/flaticon.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets/css/slick-theme.css') }}">
+    <link rel="preload" as="style" href="{{ asset('assets/css/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <meta name="google-site-verification" content="asYzS-DkS6ZwlV58TDwegECEQ_WQR0iD3LUvQDLJZKg" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2CC9K4BKH"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+{{--    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2CC9K4BKH"></script>--}}
+{{--    <script>--}}
+{{--        window.dataLayer = window.dataLayer || [];--}}
+{{--        function gtag(){dataLayer.push(arguments);}--}}
+{{--        gtag('js', new Date());--}}
 
-        gtag('config', 'G-K2CC9K4BKH');
-    </script>
+{{--        gtag('config', 'G-K2CC9K4BKH');--}}
+{{--    </script>--}}
 </head>
 
 <body>
@@ -321,17 +321,17 @@
 <script src="{{ mix('js/manifest.js') }}"></script>
 <script src="{{ mix('js/vendor.js') }}"></script>
 <script src="{{ mix('js/app.js') }}"></script>
-<script src="{{ asset('assets/js/jquery-modal-video.min.js') }}"></script>
+<script defer src="{{ asset('assets/js/jquery-modal-video.min.js') }}"></script>
 <!-- way poin js-->
 {{--<script src="{{ asset('assets/js/waypoints.min.js') }}"></script>--}}
 <!-- slick js -->
-<script src="{{ asset('assets/js/slick.min.js') }}"></script>
+<script defer src="{{ asset('assets/js/slick.min.js') }}"></script>
 <!-- odometer js -->
 <!-- <script src="assets/js/odometer.min.js"></script> -->
 <!-- toastr js -->
-<script src="{{ asset('assets/js/toastr.min.js') }}"></script>
+<script defer src="{{ asset('assets/js/toastr.min.js') }}"></script>
 <!-- main -->
-<script src="{{ asset('assets/js/main.js') }}"></script>
+<script defer src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>
 
