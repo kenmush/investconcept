@@ -169,7 +169,7 @@
                 <div class="col-xl-4 col-lg-4 col-sm-10 col-md-6">
                     <div class="single-news">
                         <div class="part-img">
-                            <img src="https://miro.medium.com/max/563/1*6pnTRlxJEPgZwc4G0hJhsQ.jpeg"
+                            <img src="{{ asset('haresh.webp') }}" loading="lazy"
                                  style="object-fit: cover" height="200px"
                                  alt="">
                         </div>
