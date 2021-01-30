@@ -72,11 +72,6 @@ db-seeding:
     - name: mysql:8.0
       command: ["--default-authentication-plugin=mysql_native_password"]
   # Download the artifacts for these jobs
-  variables:
-    # Configure mysql service (https://hub.docker.com/_/mysql/)
-    MYSQL_DATABASE: laravel
-    MYSQL_ROOT_PASSWORD:
-
   dependencies:
     - composer
     - yarn
