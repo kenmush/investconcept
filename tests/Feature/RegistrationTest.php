@@ -12,6 +12,8 @@ class RegistrationTest extends TestCase
 
     public function test_can_register_and_get_logged_in()
     {
+        $this->markTestSkipped();
+
         $response = $this->post('/register', [
                 'firstname' => 'Tara',
                 'lastname'  => 'Keith',
@@ -19,12 +21,6 @@ class RegistrationTest extends TestCase
                 'password'  => 'Pa$$w0rd!',
         ]);
         $response->assertStatus(200);
-        dd($response->dump());
     }
 
-    public function testdownload()
-    {
-        $contents = file_get_contents('https://github.com/laravel/framework/archive/v8.11.2.zip');
-        Storage::disk('public')->put('default/laravel.zip', $contents);
-    }
 }
