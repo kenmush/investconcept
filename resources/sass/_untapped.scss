@@ -975,7 +975,7 @@ ul {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url("../img/banner-bg.png") center center repeat;
+    //background: url("../img/banner-bg.png") center center repeat;
     background-size: 85%;
     z-index: -1;
   }
@@ -1210,7 +1210,7 @@ ul {
 }
 
 .cta {
-  background: url('../../bg_gradient.png') center center no-repeat;
+  background: url('../../bg_gradient.webp') center center no-repeat;
   background-size: cover;
   padding: 100px 0;
   position: relative;
@@ -1226,9 +1226,9 @@ ul {
     top: 0;
     width: 100%;
     height: 100%;
-    background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
-    background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
-    background: url(../img/banner-bg.png) center center no-repeat;
+    //background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
+    //background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
+    //background: url(../img/banner-bg.png) center center no-repeat;
     background-size: 90%;
     z-index: -1;
     opacity: 1;
@@ -1349,7 +1349,7 @@ ul {
   }
 }
 .cta-profile {
-  //background: url('../../bg_gradient.png') center center no-repeat;
+  //background: url('../../bg_gradient.webp') center center no-repeat;
   background-size: cover;
   padding: 100px 0;
   position: relative;
@@ -1365,7 +1365,7 @@ ul {
     height: 100%;
     background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
     background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
-    background: url(../img/banner-bg.png) center center no-repeat;
+    //background: url(../img/banner-bg.png) center center no-repeat;
     background-size: 90%;
     z-index: -1;
     opacity: 1;
@@ -1486,7 +1486,7 @@ ul {
   }
 }
 .cta-assets {
-  background: url('../../bg_gradient.png') center center no-repeat;
+  background: url('../../bg_gradient.webp') center center no-repeat;
   background-size: cover;
   padding: 0 0;
   position: relative;
@@ -1504,7 +1504,7 @@ ul {
     height: 100%;
     background: -o-linear-gradient(109deg, #4776e6 10%, #8e54e9);
     background: linear-gradient(-19deg, #4776e6 10%, #8e54e9);
-    background: url(../img/banner-bg.png) center center no-repeat;
+    //background: url(../img/banner-bg.png) center center no-repeat;
     background-size: 90%;
     z-index: -1;
     opacity: 1;
@@ -1909,7 +1909,7 @@ ul {
 
 .choosing-reason {
   padding: 120px 0 120px;
-  background: url("../img/feature-bg.jpg") center center no-repeat;
+  //background: url("../img/feature-bg.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
   z-index: 2;
@@ -2296,7 +2296,7 @@ ul {
   position: relative;
 
   &:after {
-    background: url("../img/banner-bg.png") center center repeat;
+    //background: url("../img/banner-bg.png") center center repeat;
     background-size: 75%;
     z-index: -1;
     position: absolute;
@@ -2484,7 +2484,7 @@ ul {
 
 .blog {
   padding: 120px 0 90px;
-  background: url(../img/feature-bg.jpg) center center no-repeat;
+  //background: url(../img/feature-bg.jpg) center center no-repeat;
   background-size: cover;
 
   .single-news {
