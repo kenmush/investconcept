@@ -55,8 +55,8 @@
                             <!--begin::Form group-->
                             <div class="form-group">
                                 <label class="font-size-h6 font-weight-bolder text-dark">Your Old Password</label>
-                                <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg" type="text"
-                                       name="oldpassword" id="oldpassword" placeholder="Your old password"
+                                <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg" type="password"
+                                       name="oldpassword" id="oldpassword"
                                        autocomplete="off"/>
                                 @error('updatepassword')
                                 <span class="invalid-feedback" role="alert">
