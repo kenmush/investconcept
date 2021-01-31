@@ -407,22 +407,6 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <!--Label: Address of individual/Entity, Attributes:address -->
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="address">Address of individual/Entity</label>
-                                        <input type="text" id="address"
-                                               aria-describedby="address-help"
-                                               name="address" value="{{ old('address') }}"
-                                               class="form-control @error('address') is-invalid @enderror"
-                                               placeholder="Address of individual/Entity" required>
-                                        @error('address')
-                                        <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
                                     <!--Label: Date of Birth, Attributes:date_of_birth -->
                                     <div class="form-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark" for="date_of_birth">Date of Birth</label>
@@ -438,6 +422,60 @@
                                         @enderror
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <!-- address-line1 input-->
+                                    <div class="control-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark">Address Line 1</label>
+                                        <div class="controls">
+                                            <input id="address-line1" name="address-line1" type="text" placeholder="address line 1"
+                                                   class="form-control @error('address-line1') is-invalid @enderror">
+                                            <p class="help-block">Street address, P.O. box, company name, c/o</p>
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="col-md-6">
+                                   <!-- address-line2 input-->
+                                   <div class="control-group">
+                                       <label class="font-size-h6 font-weight-bolder text-dark">Address Line 2</label>
+                                       <div class="controls">
+                                           <input id="address-line2" name="address-line2" type="text" placeholder="address line 2"
+                                                  class="form-control @error('address-line2') is-invalid @enderror">
+                                           <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="col-md-6">
+                                   <!-- city input-->
+                                   <div class="control-group">
+                                       <label class="font-size-h6 font-weight-bolder text-dark">City / Town</label>
+                                       <div class="controls">
+                                           <input id="city" name="city" type="text" placeholder="city"
+                                                  class="form-control @error('city') is-invalid @enderror">
+                                           <p class="help-block"></p>
+                                       </div>
+                                   </div>
+                               </div>
+                                <div class="col-md-6">
+                                    <div class="control-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark">State / Province / Region</label>
+                                        <div class="controls">
+                                            <input id="region" name="region" type="text" placeholder="state / province / region"
+                                                   class="form-control @error('region') is-invalid @enderror">
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="col-md-6">
+                                   <div class="control-group">
+                                       <label class="font-size-h6 font-weight-bolder text-dark">Zip / Postal Code</label>
+                                       <div class="controls">
+                                           <input id="postal-code" name="postal-code" type="text" placeholder="zip or postal code"
+                                                  class=" form-control @error('postal-code') is-invalid @enderror">
+                                           <p class="help-block"></p>
+                                       </div>
+                                   </div>
+                               </div>
+
                             </div>
 
 
