@@ -665,7 +665,6 @@
                 }
             }
         ).then(data => {
-            console.log(data.response);
             Swal.fire({
                 text: "You're good to go! Thank you for your patience as we complete KYC (Know Your Customer) verification. This process is required by law and may take up to 7 working days. All of your data and documentation is encrypted and secured",
                 icon: "info",
@@ -680,6 +679,7 @@
             }, 11000);
         })
             .catch(err => {
+                signup.innerText = "Submit";
                 let errors = err.response.data;
                 let string = "<ul>"
                 for (displayerror in errors) {

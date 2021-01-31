@@ -1,6 +1,7 @@
 <?php
 
 use App\Asset;
+use Symfony\Component\Process\Process;
 
 Route::get('/', 'WelcomePageController');
 
