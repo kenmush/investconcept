@@ -654,7 +654,11 @@
         formData.append('source_of_wealth', document.querySelector('input[name="source_of_wealth"]:checked').value)
         formData.append('tax_identification_number', document.getElementById('tax_identification_number').value)
         formData.append('authorization', document.querySelector('input[name="authorization"]:checked').value)
-        formData.append('address', document.getElementById('address').value)
+        formData.append('address-line1', document.getElementById('address-line1').value)
+        formData.append('address-line2', document.getElementById('address-line2').value)
+        formData.append('city', document.getElementById('city').value)
+        formData.append('region', document.getElementById('region').value)
+        formData.append('postal-code', document.getElementById('postal-code').value)
         formData.append('date_of_birth', document.getElementById('date_of_birth').value)
         formData.append('documenttype', document.getElementById('documenttype').value)
         axios.post('/registeraninvestor',

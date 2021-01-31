@@ -269,13 +269,6 @@ var KTLogin = function () {
                             }
                         }
                     },
-                    address: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Provide your address information'
-                            }
-                        }
-                    },
                     date_of_birth: {
                         validators: {
                             notEmpty: {
