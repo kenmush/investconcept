@@ -14,7 +14,7 @@ Vue.component('asset-list', require('./components/AssetList.vue').default);
 Vue.component('calculateimpact', require('./components/impact-calculation.vue').default);
 Vue.component('showassets', require('./components/assets.vue').default);
 Vue.component('associateassets', require('./components/AssociateAssets.vue').default);
-Vue.component('impactcalculation', require('./components/calculateimpact.vue').default);
+Vue.component('impactcalculation', require('./components/simulator.vue').default);
 Vue.component('googlemap', require('./components/GoogleMapComponent.vue').default);
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
