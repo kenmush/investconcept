@@ -20,8 +20,8 @@
 - [x] Sign Up Workflow:
   - [x] Email verification
   - [x] Password Confirmation
-- [ ] Email prompts after registration and to complete Verification > Timing and copy from Ayad
-- [ ] Driver's License with ' Documentation (including W-9 form) comes after a questionnaire
+- [x] Email prompts after registration and to complete Verification > Timing and copy from Ayad
+- [x] Driver's License with ' Documentation (including W-9 form) comes after a questionnaire
   ``` Waiting for clarification from Ayad```
 - [x]  Allow only img and pdf files
 - [x]  date field
@@ -37,7 +37,7 @@
 
 ## Behind the Scenes Stuff:
 
-- [ ] Decide document signing platform (Ayad)
+- [x] Decide document signing platform (Ayad)
 - [x] Decide security (tell me the options, I'll run it past Jim)
   - Get Custom HTTPS from Comodo, DigiCert, Entrust, GeoTrust, GlobalSign, IdenTrust, Network Solutions, RapidSSL
 
