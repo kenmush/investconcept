@@ -44,8 +44,8 @@
 
     <link rel="stylesheet" href="{{ mix('css/front.css') }}">
 
-    <link rel="preload" as="style"   href="{{ asset('assets/css/fontawesome.min.css') }}">
-    <link rel="preload" as="style" href="{{ asset('assets/fonts/flaticon.css') }}">
+{{--    <link rel="preload" as="style"   href="{{ asset('assets/css/fontawesome.min.css') }}">--}}
+{{--    <link rel="preload" as="style" href="{{ asset('assets/fonts/flaticon.css') }}">--}}
 
     <link rel="preload" as="style" href="{{ asset('assets/css/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
