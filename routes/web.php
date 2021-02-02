@@ -66,3 +66,7 @@ Route::post('registeraninvestor', 'RegisterInvestorController')->name('registera
 Route::get('successfully/unsubscribed', function () {
     return redirect('/');
 });
+
+Route::get('engage', function () {
+    return view('engage');
+});

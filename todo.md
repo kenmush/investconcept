@@ -28,7 +28,7 @@
 - [x] Dropdown nationality field
 - [x] Authorizing change to 'Authorization'
 - [x] Remove prompt to link bank account at end
-- [x] Form wizard in side bar Sign Up > About You > Upload Documents >
+  - [x] Form wizard in side bar Sign Up > About You > Upload Documents >
   Verification KYC message > "
 
       `You're good to go! Thank you for your patience as we complete KYC (Know Your Customer) verification. This process
