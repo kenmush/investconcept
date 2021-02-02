@@ -3,6 +3,11 @@
 use App\Asset;
 use Symfony\Component\Process\Process;
 
+Route::domain('engage.untapped-global.com', function () {
+    Route::get('/', function () {
+        return view('engage');
+    });
+});
 Route::get('/', 'WelcomePageController');
 
 Route::group(['prefix' => 'assets', 'middleware' => ['auth', 'changepassword']], function () {
