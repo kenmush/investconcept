@@ -28,6 +28,9 @@
     }
 
 
+
+
+
     </script>
     <script type="application/ld+json">
     {
@@ -40,6 +43,9 @@
         "query-input": "required name=search_term_string"
       }
     }
+
+
+
 
 
     </script>
@@ -142,42 +148,16 @@
                                         <ul class="navbar-nav ml-auto">
 
                                             <li class="nav-item">
-                                                <a class="nav-link" href="/register">Invest <span class="sr-only">
+                                                <a class="nav-link" href="https://untapped-global.com">Home <span
+                                                            class="sr-only">
                                                         (current)
                                                 </span></a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#assets">Assets <span class="sr-only">
-                                                        (current)
-                                                </span></a>
-                                            </li>
-
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#simulateimpact">Simulate Impact <span
-                                                            class="sr-only">(current)
-                                                </span></a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="/login">
-                                                    Ambassadors
+                                            <li class="nav-item join-now-btn">
+                                                <a class="nav-link" href="https://invest.untapped-global.com">
+                                                    Invest
                                                 </a>
                                             </li>
-                                            @guest()
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="/login">
-                                                        <i class="fa fa-lock"></i>
-                                                        Login
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item join-now-btn">
-                                                    <a class="nav-link" href="/register">Sign Up</a>
-                                                </li>
-                                            @else
-                                                <li class="nav-item join-now-btn">
-                                                    <a class="nav-link" href="{{ route('portfolio.index') }}">My
-                                                        Dashboard</a>
-                                                </li>
-                                            @endguest
                                         </ul>
                                     </div>
                                 </nav>
