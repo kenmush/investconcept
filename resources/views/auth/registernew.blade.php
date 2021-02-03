@@ -198,7 +198,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <div class="d-flex justify-content-between mt-n5">
                                     <label class="font-size-h6 font-weight-bolder text-dark pt-5">Are you an
@@ -239,16 +238,19 @@
 
                                 </div>
                             </div>
-                            <div class="checkbox-inline">
-                                <label class="checkbox checkbox-outline m-0 font-size-h6 font-weight-bolder text-muted
+                            <div class="form-group">
+                                <div class="checkbox-inline">
+                                    <label class="checkbox checkbox-outline m-0 font-size-h6 font-weight-bolder text-muted
                                 pt-5">
-                                    <input checked type="checkbox" name="agree" id="agree">
-                                    <span></span>
-                                    I agree to the &nbsp;<a target="_blank" href="/terms">Terms of service </a>&nbsp;and
-                                    Privacy
-                                    Policy
-                                </label>
+                                        <input  type="checkbox" name="agree" id="agree">
+                                        <span></span>
+                                        I agree to the &nbsp;<a target="_blank" href="/terms">Terms of service </a>&nbsp;and
+                                        Privacy
+                                        Policy
+                                    </label>
+                                </div>
                             </div>
+
 
                         </div>
 

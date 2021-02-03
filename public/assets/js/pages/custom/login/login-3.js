@@ -215,16 +215,16 @@ var KTLogin = function () {
                             }
                         }
                     },
-					passwordconfirm: {
-						validators: {
-							identical: {
-								compare: function () {
-									return form.querySelector('[name="password"]').value;
-								},
-								message: 'The password and its confirm are not the same'
-							}
-						}
-					},
+                    passwordconfirm: {
+                        validators: {
+                            identical: {
+                                compare: function () {
+                                    return form.querySelector('[name="password"]').value;
+                                },
+                                message: 'The password and its confirm are not the same'
+                            }
+                        }
+                    },
                     email: {
                         validators: {
                             notEmpty: {
@@ -234,8 +234,14 @@ var KTLogin = function () {
                                 message: 'The value is not a valid email address'
                             }
                         }
-                    } ,
-
+                    },
+                    'agree': {
+                        validators: {
+                            notEmpty: {
+                                message: 'You must agree to our terms and conditions to Signup.'
+                            },
+                        }
+                    },
                 },
                 plugins: {
                     trigger: new FormValidation.plugins.Trigger(),
@@ -277,21 +283,21 @@ var KTLogin = function () {
                             }
                         }
                     },
-					investor_location: {
+                    investor_location: {
                         validators: {
                             notEmpty: {
                                 message: 'Please provide where you are an accredited investor'
                             }
                         }
                     },
-					source_of_wealth: {
+                    source_of_wealth: {
                         validators: {
                             notEmpty: {
                                 message: 'Please confirm your source of wealth'
                             }
                         }
                     },
-					authorization: {
+                    authorization: {
                         validators: {
                             notEmpty: {
                                 message: 'Please provide the authorization structure'
