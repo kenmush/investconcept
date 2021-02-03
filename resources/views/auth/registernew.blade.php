@@ -127,9 +127,9 @@
 
             <div class="text-right d-flex justify-content-center">
                 <div class="top-signup text-right d-flex justify-content-end pt-5 pb-lg-0 pb-10">
-                    <span class="font-weight-bold text-muted font-size-h4">Having issues?</span>
-                    <a href="javascript:;" class="font-weight-bolder text-primary font-size-h4 ml-2"
-                       id="kt_login_signup">Get Help</a>
+{{--                    <span class="font-weight-bold text-muted font-size-h4">Having issues?</span>--}}
+{{--                    <a href="javascript:;" class="font-weight-bolder text-primary font-size-h4 ml-2"--}}
+{{--                       id="kt_login_signup">Get Help</a>--}}
                 </div>
             </div>
 
