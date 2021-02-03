@@ -234,7 +234,8 @@ var KTLogin = function () {
                                 message: 'The value is not a valid email address'
                             }
                         }
-                    }
+                    } ,
+
                 },
                 plugins: {
                     trigger: new FormValidation.plugins.Trigger(),

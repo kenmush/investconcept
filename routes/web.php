@@ -70,3 +70,7 @@ Route::get('successfully/unsubscribed', function () {
 Route::get('engage', function () {
     return view('engage');
 });
+
+Route::get('terms', function () {
+    return view('terms');
+});

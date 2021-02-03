@@ -239,6 +239,16 @@
 
                                 </div>
                             </div>
+                            <div class="checkbox-inline">
+                                <label class="checkbox checkbox-outline m-0 font-size-h6 font-weight-bolder text-muted
+                                pt-5">
+                                    <input checked type="checkbox" name="agree" id="agree">
+                                    <span></span>
+                                    I agree to the &nbsp;<a target="_blank" href="/terms">Terms of service </a>&nbsp;and
+                                    Privacy
+                                    Policy
+                                </label>
+                            </div>
 
                         </div>
 
@@ -255,7 +265,8 @@
                                 <div class="col-md-6">
                                     <!--Label: Legal Name of Individual, Attributes:legal_name -->
                                     <div class="form-group">
-                                        <label for="legal_name" class="font-size-h6 font-weight-bolder text-dark">Legal Name of Individual</label>
+                                        <label for="legal_name" class="font-size-h6 font-weight-bolder text-dark">Legal
+                                            Name of Individual</label>
                                         <input type="text" id="legal_name"
                                                aria-describedby="legal_name-help"
                                                name="legal_name" value="{{ old('legal_name') }}"
@@ -271,7 +282,8 @@
                                 <div class="col-md-6">
                                     <!--Label: Where are you considered an accredited investor?, Attributes:investor_location -->
                                     <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="investor_location">Where are you considered an accredited
+                                        <label class="font-size-h6 font-weight-bolder text-dark"
+                                               for="investor_location">Where are you considered an accredited
                                             investor?</label>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="investor_location" name="investor_location"
@@ -281,7 +293,8 @@
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="investor_location1" name="investor_location"
                                                    class="custom-control-input" value="USA Taxable">
-                                            <label class="custom-control-label" for="investor_location1">USA (Taxable)</label>
+                                            <label class="custom-control-label" for="investor_location1">USA
+                                                (Taxable)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="investor_location2" name="investor_location"
@@ -324,16 +337,19 @@
                                 <div class="col-md-6">
                                     <!--Label: Confirm your source of wealth, Attributes:source_of_wealth -->
                                     <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="source_of_wealth">Confirm your source of wealth</label>
+                                        <label class="font-size-h6 font-weight-bolder text-dark" for="source_of_wealth">Confirm
+                                            your source of wealth</label>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="source_of_wealth1" name="source_of_wealth"
                                                    class="custom-control-input" value="Employment">
-                                            <label class="custom-control-label" for="source_of_wealth1">Employment</label>
+                                            <label class="custom-control-label"
+                                                   for="source_of_wealth1">Employment</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="source_of_wealth2" name="source_of_wealth"
                                                    class="custom-control-input" value="Investments">
-                                            <label class="custom-control-label" for="source_of_wealth2">Investments</label>
+                                            <label class="custom-control-label"
+                                                   for="source_of_wealth2">Investments</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="source_of_wealth3" name="source_of_wealth"
@@ -357,10 +373,12 @@
                                 <div class="col-md-6">
                                     <!--Label: Tax Identification Number, Attributes:tax_identification_number -->
                                     <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="tax_identification_number">Tax Identification Number</label>
+                                        <label class="font-size-h6 font-weight-bolder text-dark"
+                                               for="tax_identification_number">Tax Identification Number</label>
                                         <input type="text" id="tax_identification_number"
                                                aria-describedby="tax_identification_number-help"
-                                               name="tax_identification_number" value="{{ old('tax_identification_number') }}"
+                                               name="tax_identification_number"
+                                               value="{{ old('tax_identification_number') }}"
                                                class="form-control @error('tax_identification_number') is-invalid @enderror"
                                                placeholder="Tax Identification Number" required>
                                         @error('tax_identification_number')
@@ -384,19 +402,22 @@
                                             <input type="radio" id="customRadio2" name="authorization"
                                                    class="custom-control-input"
                                                    value="Controlling person">
-                                            <label class="custom-control-label" for="customRadio2">Controlling person</label>
+                                            <label class="custom-control-label" for="customRadio2">Controlling
+                                                person</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="customRadio3" name="authorization"
                                                    class="custom-control-input"
                                                    value="Authorized Signatory">
-                                            <label class="custom-control-label" for="customRadio3">Authorized Signatory</label>
+                                            <label class="custom-control-label" for="customRadio3">Authorized
+                                                Signatory</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="customRadio4" name="authorization"
                                                    class="custom-control-input"
                                                    value="Director or Officer">
-                                            <label class="custom-control-label" for="customRadio4">Director or Officer</label>
+                                            <label class="custom-control-label" for="customRadio4">Director or
+                                                Officer</label>
                                         </div>
 
                                         @error('authorization')
@@ -409,7 +430,8 @@
                                 <div class="col-md-6">
                                     <!--Label: Date of Birth, Attributes:date_of_birth -->
                                     <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="date_of_birth">Date of Birth</label>
+                                        <label class="font-size-h6 font-weight-bolder text-dark" for="date_of_birth">Date
+                                            of Birth</label>
                                         <input type="date" id="date_of_birth"
                                                aria-describedby="date_of_birth-help"
                                                name="date_of_birth" value="{{ old('date_of_birth') }}"
@@ -427,54 +449,60 @@
                                     <div class="control-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark">Address Line 1</label>
                                         <div class="controls">
-                                            <input id="address-line1" name="address-line1" type="text" placeholder="address line 1"
+                                            <input id="address-line1" name="address-line1" type="text"
+                                                   placeholder="address line 1"
                                                    class="form-control @error('address-line1') is-invalid @enderror">
                                             <p class="help-block">Street address, P.O. box, company name, c/o</p>
                                         </div>
                                     </div>
                                 </div>
-                               <div class="col-md-6">
-                                   <!-- address-line2 input-->
-                                   <div class="control-group">
-                                       <label class="font-size-h6 font-weight-bolder text-dark">Address Line 2</label>
-                                       <div class="controls">
-                                           <input id="address-line2" name="address-line2" type="text" placeholder="address line 2"
-                                                  class="form-control @error('address-line2') is-invalid @enderror">
-                                           <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="col-md-6">
-                                   <!-- city input-->
-                                   <div class="control-group">
-                                       <label class="font-size-h6 font-weight-bolder text-dark">City / Town</label>
-                                       <div class="controls">
-                                           <input id="city" name="city" type="text" placeholder="city"
-                                                  class="form-control @error('city') is-invalid @enderror">
-                                           <p class="help-block"></p>
-                                       </div>
-                                   </div>
-                               </div>
+                                <div class="col-md-6">
+                                    <!-- address-line2 input-->
+                                    <div class="control-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark">Address Line 2</label>
+                                        <div class="controls">
+                                            <input id="address-line2" name="address-line2" type="text"
+                                                   placeholder="address line 2"
+                                                   class="form-control @error('address-line2') is-invalid @enderror">
+                                            <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- city input-->
+                                    <div class="control-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark">City / Town</label>
+                                        <div class="controls">
+                                            <input id="city" name="city" type="text" placeholder="city"
+                                                   class="form-control @error('city') is-invalid @enderror">
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="control-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark">State / Province / Region</label>
+                                        <label class="font-size-h6 font-weight-bolder text-dark">State / Province /
+                                            Region</label>
                                         <div class="controls">
-                                            <input id="region" name="region" type="text" placeholder="state / province / region"
+                                            <input id="region" name="region" type="text"
+                                                   placeholder="state / province / region"
                                                    class="form-control @error('region') is-invalid @enderror">
                                             <p class="help-block"></p>
                                         </div>
                                     </div>
                                 </div>
-                               <div class="col-md-6">
-                                   <div class="control-group">
-                                       <label class="font-size-h6 font-weight-bolder text-dark">Zip / Postal Code</label>
-                                       <div class="controls">
-                                           <input id="postal-code" name="postal-code" type="text" placeholder="zip or postal code"
-                                                  class=" form-control @error('postal-code') is-invalid @enderror">
-                                           <p class="help-block"></p>
-                                       </div>
-                                   </div>
-                               </div>
+                                <div class="col-md-6">
+                                    <div class="control-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark">Zip / Postal
+                                            Code</label>
+                                        <div class="controls">
+                                            <input id="postal-code" name="postal-code" type="text"
+                                                   placeholder="zip or postal code"
+                                                   class=" form-control @error('postal-code') is-invalid @enderror">
+                                            <p class="help-block"></p>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
 
@@ -620,7 +648,7 @@
 <script src="assets/js/scripts.bundle.js?v=7.0.6"></script>
 
 
-<script src="assets/js/pages/custom/login/login-3.js?v=7.0.6"></script>
+<script src="assets/js/pages/custom/login/login-3.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="{{ asset('dropzone/dropzone.js') }}"></script>
@@ -640,6 +668,7 @@
     //     myDropzone.processQueue();
     // });
     let formData = new FormData();
+
     function submitForm() {
         let signup = document.getElementById('kt_login_signup_form_submit_button');
         signup.innerText = "Submitting ..."
