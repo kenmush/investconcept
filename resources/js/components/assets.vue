@@ -3,12 +3,13 @@
     <section class="pt-5 pb-5">
       <div class="row">
         <div class="col-md-4  mb-3">
-          <div class="card">
-            <div class="card-body ">
+          <div class="card shadow-lg">
+            <div class="card-body">
               <div class="row">
                 <div class="col-md-4 ">
                   <img loading="lazy" class="rounded float-left"
                        src="assets/zembo.PNG"
+                       style="width: 100%;object-fit: cover"
                        alt="">
                 </div>
                 <div class="col-md-8" v-if="!showMotorbikeDetails">
@@ -82,87 +83,9 @@
             </div>
           </div>
         </div>
-<!--        <div class="col-md-4  mb-3">-->
-<!--          <div class="card">-->
-<!--            <div class="card-body ">-->
-<!--              <div class="row">-->
-<!--                <div class="col-md-4 ">-->
-<!--                  <img loading="lazy" class="rounded float-left img-thumbnail"-->
-<!--                       src="/assets/asaak.jpg"-->
-<!--                       alt="">-->
-<!--                </div>-->
-<!--                <div class="col-md-8" v-if="!showSmartMeter">-->
-<!--                  <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">-->
-<!--                    Petrol motorbikes-->
-<!--                  </p>-->
-<!--                  <p>Local partner: Asaak</p>-->
-<!--                  <p>Country: Uganda</p>-->
-<!--                </div>-->
-<!--                <div class="col-md-8" v-else>-->
-<!--                  <p>Company: Untapped</p>-->
-<!--                  <p>Country: Kenya</p>-->
-<!--                  <p>Quality water walking distance form home</p>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="row">-->
-<!--                <div class="col-12">-->
-<!--                  <div class="card" v-if="!showSmartMeter">-->
-<!--                    <div class="card-body">-->
-<!--                      <div class="col-12">-->
-<!--                        <div class="row">-->
-<!--                          <div class="col-md-4 border">-->
-<!--                            <p><strong>Minimum Ticket</strong></p>-->
-<!--                            <p>1 500$</p>-->
-<!--                          </div>-->
-<!--                          <div class="col-md-4 border">-->
-<!--                            <p><strong>Impact</strong></p>-->
-<!--                            <p>2 500$</p>-->
-<!--                          </div>-->
-<!--                          <div class="col-md-4 border">-->
-<!--                            <p><strong>Leverage</strong></p>-->
-<!--                            <p>1.7x</p>-->
-<!--                          </div>-->
-<!--                          <div class="col-12 mt-3">-->
-<!--                            <a href="/moto-taxis" class="btn btn-custom btn-block btn-lg">-->
-<!--                              More-->
-<!--                            </a>-->
-<!--                          </div>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div v-else>-->
-<!--                    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">-->
-<!--                      <thead class="thead-default">-->
-<!--                      <tr>-->
-<!--                        <th>For the Entrepreneur</th>-->
-<!--                        <th>$700 <br>Moto</th>-->
-<!--                        <th>$120/Month <br>Avg. Income</th>-->
-<!--                        <th>$45/Month <br>Lease Payments</th>-->
-<!--                      </tr>-->
-<!--                      <tr>-->
-<!--                        <th>For You:</th>-->
-<!--                        <th>$500 <br><strong>Minimum Ticket</strong></th>-->
-<!--                        <th>9% <br>APY</th>-->
-<!--                        <th>18 Month <br>Term</th>-->
-<!--                      </tr>-->
-<!--                      </thead>-->
-
-<!--                    </table>-->
-<!--                    <div class="row mt-3">-->
-<!--                      <a href="/register" class="btn btn-custom btn-block btn-lg"-->
-<!--                      >More</a>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-
         <div class="col-md-4  mb-3">
           <div class="card">
-            <div class="card-body ">
+            <div class="card-body shadow-lg">
               <div class="row">
                 <div class="col-md-4 ">
                   <img loading="lazy" class="rounded float-left img-thumbnail"
@@ -173,7 +96,7 @@
                   <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">
                     ATMs
                   </p>
-                  <p>Local partners: OVIVE, Maji Milele</p>
+                  <p>Local partners: OVIVE, Maji <br>Milele</p>
                   <p>Country: Kenya</p>
                 </div>
                 <div class="col-md-8" v-else>
@@ -237,86 +160,10 @@
             </div>
           </div>
         </div>
-<!--        <div class="col-md-4  mb-3">-->
-<!--          <div class="card">-->
-<!--            <div class="card-body ">-->
-<!--              <div class="row">-->
-<!--                <div class="col-md-4 ">-->
-<!--                  <img loading="lazy" class="rounded float-left img-thumbnail"-->
-<!--                       src="assets/kiosk.jpg"-->
-<!--                       alt="">-->
-<!--                </div>-->
-<!--                <div class="col-md-8" v-if="!majimilele">-->
-<!--                  <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">-->
-<!--                    Automated water kiosk-->
-<!--                  </p>-->
-<!--                  <p>Local partner: Maji Milele </p>-->
-<!--                  <p>Country: Kenya</p>-->
-<!--                </div>-->
-<!--                <div class="col-md-8" v-else>-->
-<!--                  <p>Company: Untapped</p>-->
-<!--                  <p>Country: Kenya</p>-->
-<!--                  <p></p>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="row">-->
-<!--                <div class="col-12">-->
-<!--                  <div class="card" v-if="!majimilele">-->
-<!--                    <div class="card-body">-->
-<!--                      <div class="col-12">-->
-<!--                        <div class="row">-->
-<!--                          <div class="col-md-4 border">-->
-<!--                            <p><strong>Minimum Ticket</strong></p>-->
-<!--                            <p>3 000$</p>-->
-<!--                          </div>-->
-<!--                          <div class="col-md-4 border">-->
-<!--                            <p><strong>Impact</strong></p>-->
-<!--                            <p>4 200$</p>-->
-<!--                          </div>-->
-<!--                          <div class="col-md-4 border">-->
-<!--                            <p><strong>Leverage</strong></p>-->
-<!--                            <p>1.4x</p>-->
-<!--                          </div>-->
-<!--                          <div class="col-12 mt-3">-->
-<!--                            <a href="/water-atms" class="btn btn-custom btn-block btn-lg">-->
-<!--                              More-->
-<!--                            </a>-->
-<!--                          </div>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div v-else>-->
-<!--                    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">-->
-<!--                      <thead class="thead-default">-->
-<!--                      &lt;!&ndash;                          <tr>&ndash;&gt;-->
-<!--                      &lt;!&ndash;                            <th>For the Entrepreneur</th>&ndash;&gt;-->
-<!--                      &lt;!&ndash;                            <th> <br>Moto</th>&ndash;&gt;-->
-<!--                      &lt;!&ndash;                            <th>$120/Month <br>Avg. Income</th>&ndash;&gt;-->
-<!--                      &lt;!&ndash;                            <th>$45/Month <br>Lease Payments</th>&ndash;&gt;-->
-<!--                      &lt;!&ndash;                          </tr>&ndash;&gt;-->
-<!--                      <tr>-->
-<!--                        <th>For You:</th>-->
-<!--                        <th>3 000$ <br><strong>Minimum Ticket</strong></th>-->
-<!--                        <th>7 200 $ <br>Annual Revenue</th>-->
-<!--                        <th>2.4x <br><strong>Leverage</strong></th>-->
-<!--                      </tr>-->
-<!--                      </thead>-->
 
-<!--                    </table>-->
-<!--                    <div class="row mt-3">-->
-<!--                      <a href="/register" class="btn btn-custom btn-block btn-lg"-->
-<!--                      >More</a>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
         <div class="col-md-4  mb-3">
           <div class="card">
-            <div class="card-body ">
+            <div class="card-body shadow-lg">
               <div class="row">
                 <div class="col-md-4 ">
                   <img loading="lazy" class="rounded float-left img-thumbnail"
@@ -327,7 +174,7 @@
                   <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">
                     Mobile irrigation trailer
                   </p>
-                  <p>Local partner: MvuaPap! </p>
+                  <p>Local partner: MvuaPap! <br> &nbsp; </p>
                   <p>Country: Kenya</p>
                 </div>
                 <div class="col-md-8" v-else>
@@ -431,12 +278,12 @@ export default {
 
 .btn-custom {
   color: #fff;
-  background-color: #ED7D31;
-  border-color: #ED7D31;
+  background-color: #B8DAE9;
+  border-color: #B8DAE9;
 }
 
 .btn-custom:hover {
-  background-color: darken(#ED7D31, 30%);
+  background-color: darken(#B8DAE9, 30%);
 }
 
 .img-thumbnail {
