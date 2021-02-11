@@ -154,12 +154,12 @@
         </div>
     </div>
     <div class="container-fluid m-0 p-0">
-        <div style="width: 100%;margin-right: 100px;height:900px !important;">
+        <div style="width: 100%;margin-right: 100px;">
             <googlemap></googlemap>
             {{--            <map-component :categories='@json($assets)'></map-component>--}}
         </div>
     </div>
-    <div class="container m-0 p-0">
+    <div class="container-fluid p-0 m-0" style="background-color: #F2F2F2">
         <showassets></showassets>
     </div>
     <div class="container-fluid m-0 p-0">
@@ -205,14 +205,5 @@
 <script src="{{ mix('js/manifest.js') }}"></script>
 <script src="{{ mix('js/vendor.js') }}"></script>
 <script src="{{ mix('js/app.js') }}"></script>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
-<!-- Holder.js for placeholder images -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
 </body>
 </html>
