@@ -8,9 +8,6 @@ class WelcomePageController extends Controller
 {
     public function __invoke()
     {
-        return view('index', [
-                'assets'          => (new Investor())->getAssetCategories(),
-                'landingPageData' => collect((new Investor())->getLandingPageData()),
-        ]);
+        return view('layouts.invest_new');
     }
 }
