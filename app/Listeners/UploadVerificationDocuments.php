@@ -17,7 +17,6 @@ class UploadVerificationDocuments implements ShouldQueue
 
     public function handle(UploadInvestorDocuments $event)
     {
-        $data = [];
         if ($event->request['documenttype'] === 'passport') {
             $data = [
                     'passport' => storage_path('app/public/'.$event->document),
@@ -30,12 +29,6 @@ class UploadVerificationDocuments implements ShouldQueue
         try {
             return (new Investor())->updateVerificationData($data, $event->investor['id']);
         } catch (\Exception $e) {
-            $this->release(120);
-            info('upload passport', [
-                    $e->getMessage(),
-
-            ]);
-
             return back()->withErrors(
                     ['error' => 'There were errors uploading and verifying your documents.']
             );
