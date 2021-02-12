@@ -28,10 +28,7 @@ class RegisterInvestorController extends Controller
             if ($request->hasFile('passport')) {
                 $document = $request->file('passport')->store('documents', 'public');
             }
-            if ($request->hasFile('w9form')) {
-                $w9Form = $request->file('w9form')->store('w9s', 'public');
-            }
-            UploadInvestorDocuments::dispatch($investor, $request->except('passport', 'w9form'), $document, $w9Form);
+            UploadInvestorDocuments::dispatch($investor, $request->except('passport', 'w9form'), $document, $w9Form=null);
         } catch (ClientException $e) {
             $errors = collect(json_decode($e->getResponse()->getBody()->getContents()));
 
