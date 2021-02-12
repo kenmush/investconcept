@@ -114,7 +114,8 @@
                                     <input type="radio" id="investor_location2" name="investor_location"
                                            class="custom-control-input" value="USA (Tax exempt)">
                                     <label class="custom-control-label" for="investor_location2">USA (Tax
-                                        exempt)</label>
+                                        exempt)
+                                    </label>
                                 </div>
                                 <div class="custom-control custom-radio">
                                     <input type="radio" id="investor_location3" name="investor_location"
@@ -175,22 +176,6 @@
                                 </div>
 
                                 @error('source_of_wealth')
-                                <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <!--Label: Tax Identification Number, Attributes:tax_identification_number -->
-                            <div class="form-group">
-                                <label for="tax_identification_number">Tax Identification Number</label>
-                                <input type="text" id="tax_identification_number"
-                                       aria-describedby="tax_identification_number-help"
-                                       name="tax_identification_number" value="{{ old('tax_identification_number') }}"
-                                       class="form-control @error('tax_identification_number') is-invalid @enderror"
-                                       placeholder="Tax Identification Number" required>
-                                @error('tax_identification_number')
                                 <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>

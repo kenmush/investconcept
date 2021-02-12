@@ -29,7 +29,9 @@
                         <div class="welcome-text"><p>Welcome to Untapped</p></div>
                     </div>
                     <div class="col-xl-6 col-lg-6 d-xl-flex d-lg-flex d-block align-items-center">
-                        <div class="user-panel"><span><a href="#" class="login">Login</a>or</span><a href="#"
+                        <div class="user-panel">
+                            <span>
+                                <a href="#" class="login">Login</a>or</span><a href="#"
                                                                                                      class="btn-hyipox-small">Register</a>
                         </div>
                     </div>

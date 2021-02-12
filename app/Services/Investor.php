@@ -271,7 +271,7 @@ class Investor
                 ],
                 [
                         'name'     => 'w9_form',
-                        'contents' => fopen($data['w9_form'], 'r'),
+                        'contents' => null,
                         'filename' => Str::random(7).'.'.$ext,
                 ],
         ]);

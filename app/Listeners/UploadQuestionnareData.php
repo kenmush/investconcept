@@ -30,17 +30,16 @@ class UploadQuestionnareData implements ShouldQueue
                         'investor_location'         => $event->request['investor_location'],
                         'nationality'               => $event->request['nationality'],
                         'source_of_wealth'          => $event->request['source_of_wealth'],
-                        'tax_identification_number' => $event->request['tax_identification_number'],
+                        'tax_identification_number' => null,
                         'authorization'             => $event->request['authorization'],
                         'address'                   => $fulladdress,
                         'date_of_birth'             => $event->request['date_of_birth'],
-                        'w9_form'                   => storage_path('app/public/'.$event->wnineForm),
+                        'w9_form'                   => null,
 
                 ];
         try {
             return (new Investor())->updateQuestionaireData($data, $event->investor['id']);
         } catch (\Exception $e) {
-            return $this->release(120);
         }
     }
 

@@ -97,39 +97,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="wizard-step" data-wizard-type="step">
-                            <div class="wizard-wrapper">
-                                <div class="wizard-icon">
-                                    <i class="wizard-check ki ki-check"></i>
-                                    <span class="wizard-number">4</span>
-                                </div>
-                                <div class="wizard-label">
-                                    <h3 class="wizard-title">
-                                        W-9 Verification
-                                    </h3>
-                                    <div class="wizard-desc">
-                                        Provide a completed W-9 Verifcation
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
-
                 </div>
-
             </div>
         </div>
-
 
         <div class="login-content flex-column-fluid d-flex flex-column p-10">
 
             <div class="text-right d-flex justify-content-center">
                 <div class="top-signup text-right d-flex justify-content-end pt-5 pb-lg-0 pb-10">
-{{--                    <span class="font-weight-bold text-muted font-size-h4">Having issues?</span>--}}
-{{--                    <a href="javascript:;" class="font-weight-bolder text-primary font-size-h4 ml-2"--}}
-{{--                       id="kt_login_signup">Get Help</a>--}}
+                    {{--                    <span class="font-weight-bold text-muted font-size-h4">Having issues?</span>--}}
+                    {{--                    <a href="javascript:;" class="font-weight-bolder text-primary font-size-h4 ml-2"--}}
+                    {{--                       id="kt_login_signup">Get Help</a>--}}
                 </div>
             </div>
 
@@ -242,7 +221,7 @@
                                 <div class="checkbox-inline">
                                     <label class="checkbox checkbox-outline m-0 font-size-h6 font-weight-bolder text-muted
                                 pt-5">
-                                        <input  type="checkbox" name="agree" id="agree">
+                                        <input type="checkbox" name="agree" id="agree">
                                         <span></span>
                                         I agree to the &nbsp;<a target="_blank" href="/terms">Terms of service </a>&nbsp;and
                                         Privacy
@@ -373,17 +352,16 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <!--Label: Tax Identification Number, Attributes:tax_identification_number -->
+                                    <!--Label: Date of Birth, Attributes:date_of_birth -->
                                     <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark"
-                                               for="tax_identification_number">Tax Identification Number</label>
-                                        <input type="text" id="tax_identification_number"
-                                               aria-describedby="tax_identification_number-help"
-                                               name="tax_identification_number"
-                                               value="{{ old('tax_identification_number') }}"
-                                               class="form-control @error('tax_identification_number') is-invalid @enderror"
-                                               placeholder="Tax Identification Number" required>
-                                        @error('tax_identification_number')
+                                        <label class="font-size-h6 font-weight-bolder text-dark" for="date_of_birth">Date
+                                            of Birth</label>
+                                        <input type="date" id="date_of_birth"
+                                               aria-describedby="date_of_birth-help"
+                                               name="date_of_birth" value="{{ old('date_of_birth') }}"
+                                               class="form-control @error('date_of_birth') is-invalid @enderror"
+                                               placeholder="Date of Birth" required>
+                                        @error('date_of_birth')
                                         <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -429,23 +407,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <!--Label: Date of Birth, Attributes:date_of_birth -->
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="date_of_birth">Date
-                                            of Birth</label>
-                                        <input type="date" id="date_of_birth"
-                                               aria-describedby="date_of_birth-help"
-                                               name="date_of_birth" value="{{ old('date_of_birth') }}"
-                                               class="form-control @error('date_of_birth') is-invalid @enderror"
-                                               placeholder="Date of Birth" required>
-                                        @error('date_of_birth')
-                                        <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
+
                                 <div class="col-md-6">
                                     <!-- address-line1 input-->
                                     <div class="control-group">
@@ -551,25 +513,6 @@
 
                         </div>
 
-
-                        <div class="pb-5" data-wizard-type="step-content">
-
-                            <div class="pt-lg-0 pt-5 pb-15">
-                                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">W-9
-                                    Verification</h3>
-                                <div class="text-muted font-weight-bold font-size-h4">
-                                    <p>Provide a completed W-9 form</p>
-                                    <a href="{{ asset('w9.pdf') }}" download>Download W-9 Form from here</a>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-12 dropzone">
-                                <div class="dz-message" id="uploadw9form">
-                                    Drop files here or click to upload.
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="d-flex justify-content-between pt-3">
                             <div class="mr-2">
