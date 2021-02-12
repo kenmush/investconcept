@@ -23,8 +23,7 @@ class UploadQuestionnareData implements ShouldQueue
                 $event->request['city'] ?? ''.
                 $event->request['postal-code'] ?? '';
 
-
-                $data = [
+        $data = [
                         'investor'                  => $event->investor['id'],
                         'legal_name'                => $event->request['legal_name'],
                         'investor_location'         => $event->request['investor_location'],

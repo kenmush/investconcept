@@ -4,7 +4,7 @@ use App\Services\Investor;
 use Illuminate\Support\Facades\Route;
 
 Route::get('allAssets', function () {
-    return Cache::remember('assets',18500, function () {
+    return Cache::remember('assets', 18500, function () {
         return (new Investor())->getAllAssets();
     });
 });

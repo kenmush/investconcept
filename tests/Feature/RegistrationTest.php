@@ -22,5 +22,4 @@ class RegistrationTest extends TestCase
         ]);
         $response->assertStatus(200);
     }
-
 }
