@@ -68,7 +68,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item engage-btn mr-2  text-center">
-                                            <a href="https://engage.untapped-global.com" class="nav-link">
+                                            <a href="https://untapped-global.com/engage" class="nav-link">
                                                 ENGAGE
                                                 <span class="sr-only">(current)</span>
                                             </a>
@@ -251,7 +251,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="engage-btn">
-                            <a class="text-center" href="https://engage.untapped-global.com">
+                            <a class="text-center" href="https://untapped-global.com/engage">
                                 ENGAGE
                                 <span class="sr-only">(current)</span>
                             </a>
