@@ -16,8 +16,6 @@ jobs:
             sudo git stash
             sudo git pull origin master
             sudo composer install --optimize-autoloader --no-dev
-            sudo npm install
-            sudo npm run production
             sudo php artisan config:cache
             sudo php artisan queue:restart
           host: ${{ secrets.HOST }}
