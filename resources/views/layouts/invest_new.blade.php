@@ -62,49 +62,49 @@
                                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item invest-btn mr-2 text-center">
-                                            <a href="" class="nav-link ">
+                                            <a href="{{ route('register') }}" class="nav-link ">
                                                 INVEST
                                                 <span class="sr-only">(current)</span>
                                             </a>
                                         </li>
                                         <li class="nav-item engage-btn mr-2  text-center">
-                                            <a href="#assets" class="nav-link">
+                                            <a href="https://engage.untapped-global.com" class="nav-link">
                                                 ENGAGE
                                                 <span class="sr-only">(current)</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="#simulateimpact" class="nav-link ">Home
+                                            <a href="#" class="nav-link ">Home
                                                 <span class="sr-only">(current)</span>
 {{--                                                <span style="color: #B8DAE9" class="ml-2">|</span>--}}
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/login" class="nav-link">
+                                            <a href="https://untapped-global.com" class="nav-link">
                                                 About
 {{--                                                <span style="color: #B8DAE9" class="ml-2">|</span>--}}
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/login" class="nav-link">
+                                            <a href="https://untapped-global.com" class="nav-link">
                                                 How it Works
 {{--                                                <span style="color: #B8DAE9" class="ml-2">|</span>--}}
                                             </a>
                                         </li>
                                         <li class="nav-item join-now-btn">
-                                            <a href="#" class="nav-link">
+                                            <a href="https://untapped-global.com" class="nav-link">
                                                 Blog
 {{--                                                <span style="color: #B8DAE9" class="ml-2">|</span>--}}
                                             </a>
                                         </li>
                                         <li class="nav-item ">
-                                            <a href="#" class="nav-link">Contact</a>
+                                            <a href="https://untapped-global.com" class="nav-link">Contact</a>
                                         </li>
                                         <li class="nav-item ">
-                                            <a href="#" class="nav-link">Log In</a>
+                                            <a href="{{ route('login') }}" class="nav-link">Log In</a>
                                         </li>
                                         <li class="nav-item ">
-                                            <a href="#" class="nav-link">Sign Up</a>
+                                            <a href="{{ route('register') }}" class="nav-link">Sign Up</a>
                                         </li>
                                         <li class="nav-item text-white items-baseline">
                                             <i class="fa fa-twitter mr-1"></i>
@@ -131,7 +131,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="d-flex justify-content-center align-items-center">
-                    <a href="" class="cta-link">
+                    <a href="{{ route('register') }}" class="cta-link">
                         <div class="cta-invest d-flex justify-content-center align-items-end mb-0 pb-0"
                              style="position:relative;">
                             <div style="position: absolute;top: -1rem;z-index: 99">
@@ -188,62 +188,62 @@
     <div class="container-fluid bg-cta-section">
         <div class="row">
             <div class="col-md-3">
-                <div style="background-color: #0bab64">
-                    <svg height="32" class="text-untapped" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.08 29
-                    .33">
-                        <defs>
-                            <style>
-                                .cls-1 {
-                                    fill: #B8DAE9;
-                                }</style>
-                        </defs>
-                        <g id="Layer_2" data-name="Layer 2">
-                            <g id="Layer_1-2" data-name="Layer 1">
-                                <path id="Twitter" class="cls-1"
-                                      d="M36.08,3.47a14.7,14.7,0,0,1-4.25,1.17A7.43,7.43,0,0,0,35.09.54a14.79,14.79,0,0,1-4.7,1.8A7.41,7.41,0,0,0,17.58,7.4a7.81,7.81,0,0,0,.19,1.69A21,21,0,0,1,2.51,1.35,7.43,7.43,0,0,0,4.8,11.24a7.33,7.33,0,0,1-3.35-.93v.1a7.41,7.41,0,0,0,5.94,7.26,7.84,7.84,0,0,1-1.95.26A7.23,7.23,0,0,1,4,17.79,7.42,7.42,0,0,0,11,22.93,14.83,14.83,0,0,1,1.77,26.1,14.76,14.76,0,0,1,0,26a21,21,0,0,0,11.35,3.33C25,29.33,32.41,18,32.41,8.26c0-.32,0-.64,0-1A14.77,14.77,0,0,0,36.08,3.47Z"/>
-                            </g>
-                        </g>
-                    </svg>
-                    <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.08 36.02">
-                        <defs>
-                            <style>.cls-1 {
-                                    fill: #b8dae9;
-                                }</style>
-                        </defs>
-                        <g id="Layer_2" data-name="Layer 2">
-                            <g id="Layer_1-2" data-name="Layer 1">
-                                <g id="Linkedin">
-                                    <path class="cls-1"
-                                          d="M.59,12H8.08V36H.59ZM4.34,0A4.34,4.34,0,1,1,0,4.34,4.33,4.33,0,0,1,4.34,0"/>
-                                    <path class="cls-1"
-                                          d="M12.77,12h7.17v3.29H20a7.87,7.87,0,0,1,7.07-3.89c7.58,0,9,5,9,11.46V36H28.61V24.32c0-2.79-.05-6.38-3.89-6.38s-4.48,3-4.48,6.18V36H12.77Z"/>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                    <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.29 31.74">
-                        <defs>
-                            <style>
-                                .cls-1 {
-                                    fill: #b8dae9;
-                                }</style>
-                        </defs>
-                        <g id="Layer_2" data-name="Layer 2">
-                            <g id="Layer_1-2" data-name="Layer 1">
-                                <g id="YouTube">
-                                    <path id="youtube-2" data-name="youtube" class="cls-1"
-                                          d="M46.29,25.13a6.64,6.64,0,0,1-6.62,6.61H6.61A6.64,6.64,0,0,1,0,25.13V6.61A6.64,6.64,0,0,1,6.61,0H39.67a6.64,6.64,0,0,1,6.62,6.61ZM18.36,21.55l12.51-6.48L18.36,8.54Z"/>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
+{{--                <div style="background-color: #0bab64">--}}
+{{--                    <svg height="32" class="text-untapped" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.08 29--}}
+{{--                    .33">--}}
+{{--                        <defs>--}}
+{{--                            <style>--}}
+{{--                                .cls-1 {--}}
+{{--                                    fill: #B8DAE9;--}}
+{{--                                }</style>--}}
+{{--                        </defs>--}}
+{{--                        <g id="Layer_2" data-name="Layer 2">--}}
+{{--                            <g id="Layer_1-2" data-name="Layer 1">--}}
+{{--                                <path id="Twitter" class="cls-1"--}}
+{{--                                      d="M36.08,3.47a14.7,14.7,0,0,1-4.25,1.17A7.43,7.43,0,0,0,35.09.54a14.79,14.79,0,0,1-4.7,1.8A7.41,7.41,0,0,0,17.58,7.4a7.81,7.81,0,0,0,.19,1.69A21,21,0,0,1,2.51,1.35,7.43,7.43,0,0,0,4.8,11.24a7.33,7.33,0,0,1-3.35-.93v.1a7.41,7.41,0,0,0,5.94,7.26,7.84,7.84,0,0,1-1.95.26A7.23,7.23,0,0,1,4,17.79,7.42,7.42,0,0,0,11,22.93,14.83,14.83,0,0,1,1.77,26.1,14.76,14.76,0,0,1,0,26a21,21,0,0,0,11.35,3.33C25,29.33,32.41,18,32.41,8.26c0-.32,0-.64,0-1A14.77,14.77,0,0,0,36.08,3.47Z"/>--}}
+{{--                            </g>--}}
+{{--                        </g>--}}
+{{--                    </svg>--}}
+{{--                    <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.08 36.02">--}}
+{{--                        <defs>--}}
+{{--                            <style>.cls-1 {--}}
+{{--                                    fill: #b8dae9;--}}
+{{--                                }</style>--}}
+{{--                        </defs>--}}
+{{--                        <g id="Layer_2" data-name="Layer 2">--}}
+{{--                            <g id="Layer_1-2" data-name="Layer 1">--}}
+{{--                                <g id="Linkedin">--}}
+{{--                                    <path class="cls-1"--}}
+{{--                                          d="M.59,12H8.08V36H.59ZM4.34,0A4.34,4.34,0,1,1,0,4.34,4.33,4.33,0,0,1,4.34,0"/>--}}
+{{--                                    <path class="cls-1"--}}
+{{--                                          d="M12.77,12h7.17v3.29H20a7.87,7.87,0,0,1,7.07-3.89c7.58,0,9,5,9,11.46V36H28.61V24.32c0-2.79-.05-6.38-3.89-6.38s-4.48,3-4.48,6.18V36H12.77Z"/>--}}
+{{--                                </g>--}}
+{{--                            </g>--}}
+{{--                        </g>--}}
+{{--                    </svg>--}}
+{{--                    <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.29 31.74">--}}
+{{--                        <defs>--}}
+{{--                            <style>--}}
+{{--                                .cls-1 {--}}
+{{--                                    fill: #b8dae9;--}}
+{{--                                }</style>--}}
+{{--                        </defs>--}}
+{{--                        <g id="Layer_2" data-name="Layer 2">--}}
+{{--                            <g id="Layer_1-2" data-name="Layer 1">--}}
+{{--                                <g id="YouTube">--}}
+{{--                                    <path id="youtube-2" data-name="youtube" class="cls-1"--}}
+{{--                                          d="M46.29,25.13a6.64,6.64,0,0,1-6.62,6.61H6.61A6.64,6.64,0,0,1,0,25.13V6.61A6.64,6.64,0,0,1,6.61,0H39.67a6.64,6.64,0,0,1,6.62,6.61ZM18.36,21.55l12.51-6.48L18.36,8.54Z"/>--}}
+{{--                                </g>--}}
+{{--                            </g>--}}
+{{--                        </g>--}}
+{{--                    </svg>--}}
+{{--                </div>--}}
             </div>
             <div class="col-md-4">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="invest-btn">
-                            <a class="text-center">
+                            <a class="text-center" href="{{ route('register') }}">
                                 INVEST
                                 <span class="sr-only">(current)</span>
                             </a>
@@ -251,7 +251,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="engage-btn">
-                            <a class="text-center">
+                            <a class="text-center" href="https://engage.untapped-global.com">
                                 ENGAGE
                                 <span class="sr-only">(current)</span>
                             </a>
