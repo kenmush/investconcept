@@ -626,7 +626,6 @@
         formData.append('investor_location', document.querySelector('input[name="investor_location"]:checked').value)
         formData.append('nationality', document.getElementById('nationality').value)
         formData.append('source_of_wealth', document.querySelector('input[name="source_of_wealth"]:checked').value)
-        formData.append('tax_identification_number', document.getElementById('tax_identification_number').value)
         formData.append('authorization', document.querySelector('input[name="authorization"]:checked').value)
         formData.append('address-line1', document.getElementById('address-line1').value)
         formData.append('address-line2', document.getElementById('address-line2').value)
