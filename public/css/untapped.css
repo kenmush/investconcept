@@ -14,7 +14,7 @@ p {
     z-index: 3;
     width: 100%;
     position: absolute;
-    border-bottom: 1px solid #fff3;
+    /*border-bottom: 1px solid #fff3;*/
 }
 
 .header .top {
@@ -85,13 +85,13 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 122px;
-    min-height: 35px;
+    /*min-width: 122px;*/
+    /*min-height: 35px;*/
 }
 
 .engage-btn {
-    min-width: 122px;
-    min-height: 35px;
+    /*min-width: 122px;*/
+    /*min-height: 35px;*/
 
     display: flex;
     flex-direction: column;
@@ -163,7 +163,19 @@ p {
     border-right: 1px solid #B8DAE9;
     height: 50%;
 }
+.text-untapped {
+    color: #B8DAE9;
+}
 
 .login-button {
 
+}
+
+.bg-cta-section{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(../assets/img/header.jpeg) center center no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    position: relative;
+    color: white;
+    z-index: 2;
 }

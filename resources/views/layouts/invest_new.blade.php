@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/untapped.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b7fb0b123e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -38,64 +39,77 @@
         <div class="bottom">
             <div class="container-fluid">
                 <div class="row justify-content-between">
-                    <div class="col-xl-4 col-lg-2 d-xl-flex d-lg-flex d-block align-items-center">
+                    <div class="col-xl-2 col-lg-1 d-xl-flex d-lg-flex d-block align-items-center">
                         <div class="row">
                             <div class="col-6 d-xl-none d-lg-none d-block">
                                 <button type="button" class="navbar-toggler"><span class="dag"></span> <span
                                             class="dag2"></span> <span class="dag3"></span></button>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-6 d-xl-block d-lg-block d-flex align-items-center justify-content-end">
-                                <div class="logo"><a href="/"><img
-                                                src="https://untapped-global.com/wp-content/themes/yootheme/cache/untapped-logo-website1-623de87f.png"
-                                                alt=""></a></div>
+                                <div class="logo">
+                                    <a href="/">
+                                        <img src="https://untapped-global.com/wp-content/themes/yootheme/cache/untapped-logo-website1-623de87f.png"
+                                                alt="">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-8 col-lg-10">
+                    <div class="col-xl-10 col-lg-10">
                         <div class="mainmenu">
                             <div class="d-xl-none d-lg-none d-block"></div>
                             <nav class="navbar navbar-expand-lg">
                                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                                     <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item invest-btn text-center">
+                                        <li class="nav-item invest-btn mr-2 text-center">
                                             <a href="" class="nav-link ">
                                                 INVEST
                                                 <span class="sr-only">(current)</span>
                                             </a>
                                         </li>
-                                        <li class="nav-item engage-btn ml-2 text-center">
+                                        <li class="nav-item engage-btn mr-2  text-center">
                                             <a href="#assets" class="nav-link">
                                                 ENGAGE
                                                 <span class="sr-only">(current)</span>
                                             </a>
                                         </li>
-                                        <li class="nav-item untapped-nav-divider">
+                                        <li class="nav-item">
                                             <a href="#simulateimpact" class="nav-link ">Home
                                                 <span class="sr-only">(current)</span>
+{{--                                                <span style="color: #B8DAE9" class="ml-2">|</span>--}}
                                             </a>
                                         </li>
-                                        <li class="nav-item untapped-nav-divider">
+                                        <li class="nav-item">
                                             <a href="/login" class="nav-link">
                                                 About
+{{--                                                <span style="color: #B8DAE9" class="ml-2">|</span>--}}
                                             </a>
                                         </li>
-                                        <li class="nav-item untapped-nav-divider">
+                                        <li class="nav-item">
                                             <a href="/login" class="nav-link">
-                                                <i class="fa fa-lock"></i>
                                                 How it Works
+{{--                                                <span style="color: #B8DAE9" class="ml-2">|</span>--}}
                                             </a>
                                         </li>
-                                        <li class="nav-item join-now-btn untapped-nav-divider">
-                                            <a href="/register" class="nav-link">Blog</a>
+                                        <li class="nav-item join-now-btn">
+                                            <a href="#" class="nav-link">
+                                                Blog
+{{--                                                <span style="color: #B8DAE9" class="ml-2">|</span>--}}
+                                            </a>
                                         </li>
-                                        <li class="nav-item join-now-btn untapped-nav-divider">
-                                            <a href="/register" class="nav-link">Contact</a>
+                                        <li class="nav-item ">
+                                            <a href="#" class="nav-link">Contact</a>
                                         </li>
-                                        <li class="nav-item btn login-button">
-                                            <a href="/register" class="nav-link">Log In</a>
+                                        <li class="nav-item ">
+                                            <a href="#" class="nav-link">Log In</a>
                                         </li>
-                                        <li class="nav-item signup-button">
-                                            <a href="/register" class="nav-link">Sign Up</a>
+                                        <li class="nav-item ">
+                                            <a href="#" class="nav-link">Sign Up</a>
+                                        </li>
+                                        <li class="nav-item text-white items-baseline">
+                                            <i class="fa fa-twitter mr-1"></i>
+                                            <i class="fa fa-linkedin mr-1"></i>
+                                            <i class="fa fa-youtube"></i>
                                         </li>
                                     </ul>
                                 </div>
@@ -139,9 +153,9 @@
                     </a>
                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-12 pt-5 pb-5">
                 <div class="d-flex justify-content-center align-items-center">
-                    <h3 class="untapped-title">Your Impact in real time</h3>
+                    <h3 class="untapped-title pt-5">Your Impact in real time</h3>
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
 
@@ -160,18 +174,121 @@
         </div>
     </div>
     <div class="container-fluid p-0 m-0" style="background-color: #F2F2F2">
+
+        <div class="d-flex justify-content-center align-items-center pt-5">
+            <div>
+                <h3 class="untapped-title">Assets</h3>
+                <div style="border-bottom: 6px solid #B8DAE9;width: 100%">
+
+                </div>
+            </div>
+        </div>
         <showassets></showassets>
     </div>
-    <div class="container-fluid m-0 p-0">
+    <div class="container-fluid bg-cta-section">
+        <div class="row">
+            <div class="col-md-3">
+                <div style="background-color: #0bab64">
+                    <svg height="32" class="text-untapped" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.08 29
+                    .33">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #B8DAE9;
+                                }</style>
+                        </defs>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path id="Twitter" class="cls-1"
+                                      d="M36.08,3.47a14.7,14.7,0,0,1-4.25,1.17A7.43,7.43,0,0,0,35.09.54a14.79,14.79,0,0,1-4.7,1.8A7.41,7.41,0,0,0,17.58,7.4a7.81,7.81,0,0,0,.19,1.69A21,21,0,0,1,2.51,1.35,7.43,7.43,0,0,0,4.8,11.24a7.33,7.33,0,0,1-3.35-.93v.1a7.41,7.41,0,0,0,5.94,7.26,7.84,7.84,0,0,1-1.95.26A7.23,7.23,0,0,1,4,17.79,7.42,7.42,0,0,0,11,22.93,14.83,14.83,0,0,1,1.77,26.1,14.76,14.76,0,0,1,0,26a21,21,0,0,0,11.35,3.33C25,29.33,32.41,18,32.41,8.26c0-.32,0-.64,0-1A14.77,14.77,0,0,0,36.08,3.47Z"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.08 36.02">
+                        <defs>
+                            <style>.cls-1 {
+                                    fill: #b8dae9;
+                                }</style>
+                        </defs>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <g id="Linkedin">
+                                    <path class="cls-1"
+                                          d="M.59,12H8.08V36H.59ZM4.34,0A4.34,4.34,0,1,1,0,4.34,4.33,4.33,0,0,1,4.34,0"/>
+                                    <path class="cls-1"
+                                          d="M12.77,12h7.17v3.29H20a7.87,7.87,0,0,1,7.07-3.89c7.58,0,9,5,9,11.46V36H28.61V24.32c0-2.79-.05-6.38-3.89-6.38s-4.48,3-4.48,6.18V36H12.77Z"/>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.29 31.74">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #b8dae9;
+                                }</style>
+                        </defs>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <g id="YouTube">
+                                    <path id="youtube-2" data-name="youtube" class="cls-1"
+                                          d="M46.29,25.13a6.64,6.64,0,0,1-6.62,6.61H6.61A6.64,6.64,0,0,1,0,25.13V6.61A6.64,6.64,0,0,1,6.61,0H39.67a6.64,6.64,0,0,1,6.62,6.61ZM18.36,21.55l12.51-6.48L18.36,8.54Z"/>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="invest-btn">
+                            <a class="text-center">
+                                INVEST
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="engage-btn">
+                            <a class="text-center">
+                                ENGAGE
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="row ml-5">
+                    <span class="mr-4">
+                        <div>
+                            <span class="mr-2">ABOUT</span> <span style="color: #B8DAE9">|</span>
+                        </div>
+                    </span>
+                    <span class="mr-4">
+                        <div>
+                            <span class="mr-2">HOW IT WORKS</span> <span style="color: #B8DAE9">|</span>
+                        </div>
+                    </span>
+                    <span class="mr-4">
+                        <div>CONTACT</div>
+                    </span>
+                </div>
+            </div>
+        </div>
+
         <div class="abovefooter"></div>
 
     </div>
-    <div class="container-fluid" style="background-color: #CCCCCC;color: black">
+    <div class="container-fluid pt-5" style="background-color: #CCCCCC;color: black">
 
         <footer>
             <div class="row">
-                <div class="col-md-4 d-flex justify-center">
-                    <img src="./assets/img/footericon.png" alt="">
+                <div class="col-md-4">
+                    <div class="d-flex justify-center align-middle justify-content-center">
+                        <img src="./assets/img/footericon.png" alt="">
+                    </div>
                 </div>
                 <div class="col-md-2">
                     <p>USA</p>

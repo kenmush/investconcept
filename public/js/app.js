@@ -1610,7 +1610,7 @@ __webpack_require__.r(__webpack_exports__);
         "investor_id": this.invesotorid,
         'investments': this.holdingData
       };
-      axios.post("".concat("https://investorapis.untapped-inc.com/v1/", "portal/investor/investments/").concat(this.invesotorid, "/"), data).then(function (data) {
+      axios.post("".concat("https://investorapis.untapped-global.com/v1/", "portal/investor/investments/").concat(this.invesotorid, "/"), data).then(function (data) {
         _this2.holdingData = [];
         _this2.currentCategory = [];
         sweetalert__WEBPACK_IMPORTED_MODULE_0___default()("Data Uploaded Successfully", "You are good to go.");
@@ -1699,7 +1699,7 @@ var locations = [{
               coordinates = [];
               _context.next = 3;
               return axios.get("/api/allAssets").then(function (resp) {
-                var iconBase = "https://invest.untapped-inc.com/";
+                var iconBase = "https://invest.untapped-global.com/";
                 var icons = {
                   community: {
                     icon: iconBase + "untapped/community.png"
@@ -1866,7 +1866,7 @@ var map = '';
       var _this = this;
 
       this.loading = true;
-      var url = "https://invest.untapped-inc.com/";
+      var url = "https://invest.untapped-global.com/";
       var points = [];
       var Self = this;
       axios.get("/api/allAssets").then(function (resp) {
@@ -2103,7 +2103,7 @@ var map = '';
 
       this.loading = true; // let url = 'http://localhost:3000';
 
-      var url = "https://invest.untapped-inc.com/";
+      var url = "https://invest.untapped-global.com/";
       var points = [];
       var Self = this;
 
@@ -2259,159 +2259,6 @@ var map = '';
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -23960,7 +23807,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@media (max-width: 768px) {\n.carousel-inner .carousel-item > div[data-v-f8aa67e4] {\n    display: none;\n}\n.carousel-inner .carousel-item > div[data-v-f8aa67e4]:first-child {\n    display: block;\n}\n}\n.carousel-inner .carousel-item.active[data-v-f8aa67e4],\n.carousel-inner .carousel-item-next[data-v-f8aa67e4],\n.carousel-inner .carousel-item-prev[data-v-f8aa67e4] {\n  display: flex;\n}\n\n/* display 3 */\n@media (min-width: 768px) {\n.carousel-inner .carousel-item-right.active[data-v-f8aa67e4],\n.carousel-inner .carousel-item-next[data-v-f8aa67e4] {\n    transform: translateX(33.333%);\n}\n.carousel-inner .carousel-item-left.active[data-v-f8aa67e4],\n.carousel-inner .carousel-item-prev[data-v-f8aa67e4] {\n    transform: translateX(-33.333%);\n}\n}\n.carousel-inner .carousel-item-right[data-v-f8aa67e4],\n.carousel-inner .carousel-item-left[data-v-f8aa67e4] {\n  transform: translateX(0);\n}\n.btn-custom[data-v-f8aa67e4] {\n  color: #fff;\n  background-color: #ED7D31;\n  border-color: #ED7D31;\n}\n.btn-custom[data-v-f8aa67e4]:hover {\n  background-color: #7a380b;\n}\n.img-thumbnail[data-v-f8aa67e4] {\n  height: 100px;\n}", ""]);
+exports.push([module.i, "@media (max-width: 768px) {\n.carousel-inner .carousel-item > div[data-v-f8aa67e4] {\n    display: none;\n}\n.carousel-inner .carousel-item > div[data-v-f8aa67e4]:first-child {\n    display: block;\n}\n}\n.carousel-inner .carousel-item.active[data-v-f8aa67e4],\n.carousel-inner .carousel-item-next[data-v-f8aa67e4],\n.carousel-inner .carousel-item-prev[data-v-f8aa67e4] {\n  display: flex;\n}\n\n/* display 3 */\n@media (min-width: 768px) {\n.carousel-inner .carousel-item-right.active[data-v-f8aa67e4],\n.carousel-inner .carousel-item-next[data-v-f8aa67e4] {\n    transform: translateX(33.333%);\n}\n.carousel-inner .carousel-item-left.active[data-v-f8aa67e4],\n.carousel-inner .carousel-item-prev[data-v-f8aa67e4] {\n    transform: translateX(-33.333%);\n}\n}\n.carousel-inner .carousel-item-right[data-v-f8aa67e4],\n.carousel-inner .carousel-item-left[data-v-f8aa67e4] {\n  transform: translateX(0);\n}\n.btn-custom[data-v-f8aa67e4] {\n  color: #fff;\n  background-color: #B8DAE9;\n  border-color: #B8DAE9;\n}\n.btn-custom[data-v-f8aa67e4]:hover {\n  background-color: #439dc5;\n}\n.img-thumbnail[data-v-f8aa67e4] {\n  height: 100px;\n}", ""]);
 
 // exports
 
@@ -24037,7 +23884,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap);", ""]);
 
 // module
-exports.push([module.i, "\n*[data-v-09bdc76e] {\n  -webkit-font-smoothing: antialiased !important;\n  font-family: 'Montserrat', sans-serif;\n  font-weight: 500;\n  -moz-osx-font-smoothing: grayscale;\n  text-rendering: optimizeLegibility !important;\n}\n*[data-v-09bdc76e]:focus {\n  outline: none;\n}\n.background[data-v-09bdc76e] {\n  background-image: url(" + escape(__webpack_require__(/*! ./assets/bg.png */ "./resources/js/components/assets/bg.png")) + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  background-blend-mode: multiply;\n  border-radius: 38px;\n  padding: 10px;\n  width:100%\n}\nP[data-v-09bdc76e] {\n  color: white;\n  text-align: center;\n  font-weight: bold;\n  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);\n}\nh3[data-v-09bdc76e],\nh5[data-v-09bdc76e] {\n  color: #fff;\n  text-align: center;\n}\n.card[data-v-09bdc76e] {\n  /* background-color: black;\n  opacity: 0.4; */\n  border-radius: 0.8rem;\n  margin-left: 0.3rem;\n}\n.card-body[data-v-09bdc76e] {\n  color: rgba(255, 255, 255, 0.911);\n  opacity: 1;\n  font-weight: bold;\n}\ninput[data-v-09bdc76e] {\n  /*background-color: transparent;*/\n  color: #fff;\n  text-align: center;\n  padding: 5px;\n  border-radius: 9px;\n  border: solid #B8DAE9 1px;\n  width: 10rem;\n  font-size: larger;\n  letter-spacing: 0.1em;\n  background: rgba(0, 0, 0, .18);\n  /*opacity: 0.18;*/\n  background-blend-mode: difference;\n  /* margin-left: 1.5rem; */\n}\ninput.input[data-v-09bdc76e] {\n  /*margin-left: 1.1rem;*/\n  font-weight: 500;\n  width: 100%;\n  font-size: 170%;\n}\n[data-v-09bdc76e]::-webkit-input-placeholder {\n  /* Chrome/Opera/Safari */\n  color: #fff;\n}\ni[data-v-09bdc76e] {\n  display: inline-block;\n  background-color: skyblue;\n  border-radius: 80px;\n  border: 1px solid grey;\n  padding: 10px;\n}\n.column[data-v-09bdc76e] {\n  text-align: center;\n}\n.row[data-v-09bdc76e] {\n  display: flex;\n  align-items: center;\n}\ninput[data-v-09bdc76e]::-webkit-input-placeholder {\n  text-overflow: inherit;\n  line-height: initial;\n  white-space: pre;\n  overflow-wrap: normal;\n  -webkit-user-modify: read-only !important;\n  overflow: hidden;\n  color: white;\n  z-index: 90;\n}\n@media (max-width: 768px) {\n#card[data-v-09bdc76e] {\n    flex-direction: column;\n    position: relative;\n    max-width: 100%;\n    width: 100%;\n}\n}\n.top-input[data-v-09bdc76e] {\n  border: solid white 1px;\n  font-weight: 500;\n  font-size: 150%;\n}\n@media (max-width: 768px) {\n.top-input[data-v-09bdc76e] {\n    margin-top: 1rem;\n}\n.in[data-v-09bdc76e] {\n}\n}\n", ""]);
+exports.push([module.i, "\n*[data-v-09bdc76e] {\r\n  -webkit-font-smoothing: antialiased !important;\r\n  font-family: 'Montserrat', sans-serif;\r\n  font-weight: 500;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  text-rendering: optimizeLegibility !important;\n}\n*[data-v-09bdc76e]:focus {\r\n  outline: none;\n}\n.background[data-v-09bdc76e] {\r\n  background-image: url(" + escape(__webpack_require__(/*! ./assets/bg.png */ "./resources/js/components/assets/bg.png")) + ");\r\n  background-repeat: no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  background-blend-mode: multiply;\r\n  border-radius: 38px;\r\n  padding: 10px;\r\n  width:100%\n}\nP[data-v-09bdc76e] {\r\n  color: white;\r\n  text-align: center;\r\n  font-weight: bold;\r\n  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);\n}\nh3[data-v-09bdc76e],\r\nh5[data-v-09bdc76e] {\r\n  color: #fff;\r\n  text-align: center;\n}\n.card[data-v-09bdc76e] {\r\n  /* background-color: black;\r\n  opacity: 0.4; */\r\n  border-radius: 0.8rem;\r\n  margin-left: 0.3rem;\n}\n.card-body[data-v-09bdc76e] {\r\n  color: rgba(255, 255, 255, 0.911);\r\n  opacity: 1;\r\n  font-weight: bold;\n}\ninput[data-v-09bdc76e] {\r\n  /*background-color: transparent;*/\r\n  color: #fff;\r\n  text-align: center;\r\n  padding: 5px;\r\n  border-radius: 9px;\r\n  border: solid #B8DAE9 1px;\r\n  width: 10rem;\r\n  font-size: larger;\r\n  letter-spacing: 0.1em;\r\n  background: rgba(0, 0, 0, .18);\r\n  /*opacity: 0.18;*/\r\n  background-blend-mode: difference;\r\n  /* margin-left: 1.5rem; */\n}\ninput.input[data-v-09bdc76e] {\r\n  /*margin-left: 1.1rem;*/\r\n  font-weight: 500;\r\n  width: 100%;\r\n  font-size: 170%;\n}\n[data-v-09bdc76e]::-webkit-input-placeholder {\r\n  /* Chrome/Opera/Safari */\r\n  color: #fff;\n}\ni[data-v-09bdc76e] {\r\n  display: inline-block;\r\n  background-color: skyblue;\r\n  border-radius: 80px;\r\n  border: 1px solid grey;\r\n  padding: 10px;\n}\n.column[data-v-09bdc76e] {\r\n  text-align: center;\n}\n.row[data-v-09bdc76e] {\r\n  display: flex;\r\n  align-items: center;\n}\ninput[data-v-09bdc76e]::-webkit-input-placeholder {\r\n  text-overflow: inherit;\r\n  line-height: initial;\r\n  white-space: pre;\r\n  overflow-wrap: normal;\r\n  -webkit-user-modify: read-only !important;\r\n  overflow: hidden;\r\n  color: white;\r\n  z-index: 90;\n}\n@media (max-width: 768px) {\n#card[data-v-09bdc76e] {\r\n    flex-direction: column;\r\n    position: relative;\r\n    max-width: 100%;\r\n    width: 100%;\n}\n}\n.top-input[data-v-09bdc76e] {\r\n  border: solid white 1px;\r\n  font-weight: 500;\r\n  font-size: 150%;\n}\n@media (max-width: 768px) {\n.top-input[data-v-09bdc76e] {\r\n    margin-top: 1rem;\n}\n.in[data-v-09bdc76e] {\n}\n}\r\n", ""]);
 
 // exports
 
@@ -78338,8 +78185,8 @@ var render = function() {
     _c("section", { staticClass: "pt-5 pb-5" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-4  mb-3" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-body " }, [
+          _c("div", { staticClass: "card shadow-lg" }, [
+            _c("div", { staticClass: "card-body" }, [
               _c("div", { staticClass: "row" }, [
                 _vm._m(0),
                 _vm._v(" "),
@@ -78369,7 +78216,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("p", [
                         _vm._v(
-                          "Zembo provides affordable electric motorcycles for motorcycle taxi drivers in Africa,\n                    the\n                    Company\n                    has already 100 motorbikes on site in Kampala, Uganda. The Company leases its motorbikes\n                    to taxi\n                    drivers in a lease-to-own contract over 24 months for 60000 UGX per week."
+                          "Zembo provides affordable electric motorcycles for motorcycle taxi drivers in Africa,\n                  the\n                  Company\n                  has already 100 motorbikes on site in Kampala, Uganda. The Company leases its motorbikes\n                  to taxi\n                  drivers in a lease-to-own contract over 24 months for 60000 UGX per week."
                         )
                       ])
                     ])
@@ -78388,7 +78235,7 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "col-md-4  mb-3" }, [
           _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-body " }, [
+            _c("div", { staticClass: "card-body shadow-lg" }, [
               _c("div", { staticClass: "row" }, [
                 _vm._m(4),
                 _vm._v(" "),
@@ -78402,14 +78249,10 @@ var render = function() {
                             "text-transform": "uppercase"
                           }
                         },
-                        [
-                          _vm._v(
-                            "\n                    ATMs\n                  "
-                          )
-                        ]
+                        [_vm._v("\n                  ATMs\n                ")]
                       ),
                       _vm._v(" "),
-                      _c("p", [_vm._v("Local partners: OVIVE, Maji Milele")]),
+                      _vm._m(5),
                       _vm._v(" "),
                       _c("p", [_vm._v("Country: Kenya")])
                     ])
@@ -78425,8 +78268,8 @@ var render = function() {
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-12" }, [
                   !_vm.ovive
-                    ? _c("div", { staticClass: "card" }, [_vm._m(5)])
-                    : _c("div", [_vm._m(6), _vm._v(" "), _vm._m(7)])
+                    ? _c("div", { staticClass: "card" }, [_vm._m(6)])
+                    : _c("div", [_vm._m(7), _vm._v(" "), _vm._m(8)])
                 ])
               ])
             ])
@@ -78435,9 +78278,9 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "col-md-4  mb-3" }, [
           _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-body " }, [
+            _c("div", { staticClass: "card-body shadow-lg" }, [
               _c("div", { staticClass: "row" }, [
-                _vm._m(8),
+                _vm._m(9),
                 _vm._v(" "),
                 !_vm.mvuapap
                   ? _c("div", { staticClass: "col-md-8" }, [
@@ -78451,12 +78294,12 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Mobile irrigation trailer\n                  "
+                            "\n                  Mobile irrigation trailer\n                "
                           )
                         ]
                       ),
                       _vm._v(" "),
-                      _c("p", [_vm._v("Local partner: MvuaPap! ")]),
+                      _vm._m(10),
                       _vm._v(" "),
                       _c("p", [_vm._v("Country: Kenya")])
                     ])
@@ -78472,7 +78315,7 @@ var render = function() {
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-12" }, [
                   !_vm.mvuapap
-                    ? _c("div", { staticClass: "card" }, [_vm._m(9)])
+                    ? _c("div", { staticClass: "card" }, [_vm._m(11)])
                     : _vm._e()
                 ])
               ])
@@ -78491,6 +78334,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-md-4 " }, [
       _c("img", {
         staticClass: "rounded float-left",
+        staticStyle: { width: "100%", "object-fit": "cover" },
         attrs: { loading: "lazy", src: "assets/zembo.PNG", alt: "" }
       })
     ])
@@ -78529,7 +78373,7 @@ var staticRenderFns = [
               },
               [
                 _vm._v(
-                  "\n                              More\n                            "
+                  "\n                            More\n                          "
                 )
               ]
             )
@@ -78607,6 +78451,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Local partners: OVIVE, Maji "),
+      _c("br"),
+      _vm._v("Milele")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-body" }, [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
@@ -78637,7 +78491,7 @@ var staticRenderFns = [
               },
               [
                 _vm._v(
-                  "\n                              More\n                            "
+                  "\n                            More\n                          "
                 )
               ]
             )
@@ -78709,6 +78563,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Local partner: MvuaPap! "),
+      _c("br"),
+      _vm._v("   ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-body" }, [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
@@ -78739,7 +78603,7 @@ var staticRenderFns = [
               },
               [
                 _vm._v(
-                  "\n                              More\n                            "
+                  "\n                            More\n                          "
                 )
               ]
             )
