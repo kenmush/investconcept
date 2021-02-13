@@ -38,6 +38,8 @@
         "item": "https://invest.untapped-inc.com/login"
       }]
     }
+
+
     </script>
 </head>
 <!--end::Head-->
@@ -52,25 +54,18 @@
             <!--begin: Aside Container-->
             <div class="d-flex flex-column-fluid flex-column justify-content-between py-9 px-7 py-lg-13 px-lg-35">
                 <!--begin::Logo-->
-                <a href="#" class="text-center pt-2">
-                    <img src="https://www.untapped-inc.com/uploads/1/3/1/9/13198181/new-untapped-logo-trans.png"
-                         class="max-h-75px" alt=""/>
-                </a>
+
                 <!--end::Logo-->
                 <!--begin::Aside body-->
                 <div class="d-flex flex-column-fluid flex-column flex-center">
                     <!--begin::Signin-->
-                    <div class="login-form login-signin py-11">
+                    <div class="login-form login-signin">
                         <!--begin::Form-->
                         <form class="form" novalidate="novalidate" method="post" action="{{ route('login') }}">
                         @csrf
                         <!--begin::Title-->
-                            <div class="text-center pb-8">
-                                <h2 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">Sign In</h2>
-                                <span class="text-muted font-weight-bold font-size-h4">Or
-										<a href="{{ route('register') }}" style="color: rgb(237,127,51)"
-                                           class="font-weight-bolder"
-                                           id="kt_login_signup">Sign Up</a></span>
+                            <div class="text-center pb-8" style="margin-bottom: 3rem">
+                                <img src="{{ asset('untappedlogo.png') }}" alt="Untapped Logo">
                             </div>
                             <!--end::Title-->
                             <!--begin::Form group-->
@@ -105,10 +100,12 @@
                             <!--end::Form group-->
                             <!--begin::Action-->
                             <div class="text-center pt-2">
-                                <button id="kt_login_signin_submit" style="color:white;background-color: rgb(237,127,
-                                51);
-                                border-color:rgb(237,127,51)"
-                                        class="btn font-weight-bolder font-size-h6 px-8 py-4 my-3">Sign In
+                                <button id="kt_login_signin_submit" style="color:white;background-color: #98A3A9;
+                                 border-color:#98A3A9;border-radius: 4rem;
+" class="btn font-weight-bolder font-size-h6 px-8 py-4 my-3 shadow">
+                                    <span style="padding-right: 50px;padding-left: 50px;">
+                                    SIGN IN
+                                    </span>
                                 </button>
                             </div>
                             <!--end::Action-->
@@ -222,20 +219,20 @@
         </div>
         <!--begin::Aside-->
         <!--begin::Content-->
-        <div class="content order-1 order-lg-2 d-flex flex-column w-100 pb-0" style="background-color: #B1DCED;">
-            <!--begin::Title-->
-            <div class="d-flex flex-column justify-content-center text-center pt-lg-40 pt-md-5 pt-sm-5 px-lg-0 pt-5 px-7">
-                <h3 class="display4 font-weight-bolder my-7 text-dark" style="color: #986923;">Start investing
-                    today</h3>
-                <p class="font-weight-bolder font-size-h2-md font-size-lg text-dark opacity-70">
-                    For impact at scale
-                </p>
+        <div class="order-lg-2 w-100 pb-0" style="background-image: url('{{ asset('1x/login.png') }}')">
+            <div class="d-flex flex-row justify-content-end" style="margin-top: 5rem;margin-right: 5rem;">
+                <img src="{{ asset('1x/Asset 4.png') }}" alt="">
             </div>
-            <!--end::Title-->
-            <!--begin::Image-->
-            <div class="content-img d-flex flex-row-fluid bgi-no-repeat bgi-position-y-bottom bgi-position-x-center"
-                 style="background-image: url('{{ asset('analysis.svg') }}');"></div>
-            <!--end::Image-->
+            <div class="d-flex align-items-center justify-content-center" style="margin-top: 10rem">
+                <h3 style="color: #ffffff;font-size: 42px">
+                    START INVESTING TODAY!
+                    <p style="color: #ffffff;font-size: 30px">
+                        for impact at scale
+                    <div class="d-flex" style="border-top: 4px solid #EE852D;width: 30%"></div>
+                    </p>
+                </h3>
+
+            </div>
         </div>
         <!--end::Content-->
     </div>
