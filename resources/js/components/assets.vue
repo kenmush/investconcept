@@ -34,15 +34,15 @@
                     <div class="card-body">
                       <div class="col-12">
                         <div class="row">
-                          <div class="col-md-4 border ">
+                          <div class="col-xl-4 col-lg-12 border ">
                             <p><strong>Minimum Ticket</strong></p>
                             <p>1 100$</p>
                           </div>
-                          <div class="col-md-4 border">
+                          <div class="col-xl-4 col-lg-12 border">
                             <p><strong>Impact</strong></p>
                             <p>2 500$</p>
                           </div>
-                          <div class="col-md-4 border">
+                          <div class="col-xl-4 col-lg-12 border">
                             <p><strong>Leverage</strong></p>
                             <p>2.4x</p>
                           </div>
@@ -111,19 +111,19 @@
                     <div class="card-body">
                       <div class="col-12">
                         <div class="row">
-                          <div class="col-md-4 border">
+                          <div class="col-xl-4 border">
                             <p><strong>Minimum Ticket</strong></p>
                             <p>10 000$</p>
                           </div>
-                          <div class="col-md-4 border">
+                          <div class="col-xl-4 border">
                             <p><strong>Impact</strong></p>
                             <p>30 000$</p>
                           </div>
-                          <div class="col-md-4 border">
+                          <div class="col-xl-4 border">
                             <p><strong>Leverage</strong></p>
                             <p>3.0x</p>
                           </div>
-                          <div class="col-12 mt-3">
+                          <div class="col-xl-4  mt-3">
                             <a href="/water-atms" class="btn btn-custom btn-block btn-lg">
                               More
                             </a>
@@ -189,15 +189,15 @@
                     <div class="card-body">
                       <div class="col-12">
                         <div class="row">
-                          <div class="col-md-4 border">
+                          <div class="col-xl-4 border">
                             <p><strong>Minimum Ticket</strong></p>
                             <p>1 100$</p>
                           </div>
-                          <div class="col-md-4 border">
+                          <div class="col-xl-4 border">
                             <p><strong>Impact</strong></p>
                             <p>9 750$</p>
                           </div>
-                          <div class="col-md-4 border">
+                          <div class="col-xl-4 border">
                             <p><strong>Leverage</strong></p>
                             <p>9.0x</p>
                           </div>
