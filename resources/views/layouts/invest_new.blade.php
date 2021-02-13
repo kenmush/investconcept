@@ -394,9 +394,10 @@
     <div class="uk-section-default" style="margin-bottom: 2rem">
         <div>
             <div class="uk-container uk-container-expand">
-                <h1 class="uk-h3 uk-text-center" style="margin-top: 1rem;margin-bottom: 3rem">
-                    <span style="font-weight: 600; font-size: 25px; color: #606060;border-bottom: 6px solid #B8DAE9;">IMPACT IN REALTIME</span>
+                <h1 class="uk-h3 uk-text-center" style="margin-top: 3rem;margin-bottom: 2rem">
+                    <span style="font-weight: 600; font-size: 25px; color:#606060;">SEE IMPACT IN REAL TIME</span>
                 </h1>
+
                 <googlemap></googlemap>
             </div>
         </div>
@@ -404,10 +405,8 @@
     <div class="uk-section-default" style="margin-bottom: 2rem">
         <div>
             <div class="uk-container uk-container-expand">
-                <h1 class="uk-h3 uk-text-center" style="margin-top: 1rem;margin-bottom: 3rem">
-                    <span style="font-weight: 600; font-size: 25px; color: #606060;border-bottom: 6px solid #B8DAE9;">
-                        Our Asset Classes
-                    </span>
+                <h1 class="uk-h3 uk-text-center" style="margin-top: 3rem;margin-bottom: 2rem">
+                    <span style="font-weight: 600; font-size: 25px; color:#606060;">OUR ASSET CLASSES</span>
                 </h1>
                 <showassets></showassets>
             </div>
