@@ -173,7 +173,7 @@
                     </a>
                 </div>
                 <div class="uk-navbar-center">
-                    <a href="https://untapped-global.com" class="uk-navbar-item uk-logo">
+                    <a href="/" class="uk-navbar-item uk-logo">
                         <img alt="Untapped" src="./assets/images/untapped-logo-website1-623de87f.png"
                              srcset="./assets/images/untapped-logo-website1-623de87f.png 289w, ./assets/images/untapped-logo-website1-a21c4263.png 571w, ./assets/js/admin-ajax.php?p=theme%2Fimage&amp;action=kernel&amp;src=WyJ3cC1jb250ZW50XC91cGxvYWRzXC8yMDIxXC8wMlwvdW50YXBwZWQtbG9nby13ZWJzaXRlMS5wbmciLFtbImRvUmVzaXplIixbNTczLDEwNyw1NzMsMTA3XV0sWyJkb0Nyb3AiLFs1NzIsMTA3LDAsMF1dXV0%3D&amp;hash=0cf9bc7a70266629d9edceaa94d11473 572w, ./assets/images/untapped-logo-website1-6437fc9c.png 573w"
                              sizes="(min-width: 289px) 289px" data-width="289" data-height="54"></a>
@@ -188,7 +188,7 @@
                         <div>
                             <div class="uk-panel">
                                 <ul class="uk-nav uk-nav-primary uk-nav-center">
-                                    <li class="uk-active"><a href="https://untapped-global.com/"
+                                    <li class="uk-active"><a href="https://invest.untapped-global.com/"
                                                              class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1 current_page_item">Home</a>
                                     </li>
                                     <li class="uk-parent">
@@ -258,14 +258,14 @@
                     <nav class="uk-navbar"
                          uk-navbar="{&quot;align&quot;:&quot;center&quot;,&quot;boundary&quot;:&quot;!.uk-navbar-container&quot;}">
                         <div class="uk-navbar-left">
-                            <a href="https://untapped-global.com" class="uk-navbar-item uk-logo">
+                            <a href="https://invest.untapped-global.com" class="uk-navbar-item uk-logo">
                                 <img alt="Untapped" src="./assets/images/untapped-logo-website1-623de87f.png"
                                      srcset="./assets/images/untapped-logo-website1-623de87f.png 289w, ./assets/images/untapped-logo-website1-a21c4263.png 571w, ./assets/js/admin-ajax.php?p=theme%2Fimage&amp;action=kernel&amp;src=WyJ3cC1jb250ZW50XC91cGxvYWRzXC8yMDIxXC8wMlwvdW50YXBwZWQtbG9nby13ZWJzaXRlMS5wbmciLFtbImRvUmVzaXplIixbNTczLDEwNyw1NzMsMTA3XV0sWyJkb0Nyb3AiLFs1NzIsMTA3LDAsMF1dXV0%3D&amp;hash=0cf9bc7a70266629d9edceaa94d11473 572w, ./assets/images/untapped-logo-website1-6437fc9c.png 573w"
                                      sizes="(min-width: 289px) 289px" data-width="289" data-height="54"></a>
                         </div>
                         <div class="uk-navbar-right">
                             <ul class="uk-navbar-nav">
-                                <li class="uk-active"><a href="https://untapped-global.com/"
+                                <li class="uk-active"><a href="https://invest.untapped-global.com/"
                                                          class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1 current_page_item">Home</a>
                                 </li>
                                 <li class="uk-parent">

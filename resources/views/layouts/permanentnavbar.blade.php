@@ -148,7 +148,7 @@
                                         <ul class="navbar-nav ml-auto">
 
                                             <li class="nav-item">
-                                                <a class="nav-link" href="https://untapped-global.com">Home <span
+                                                <a class="nav-link" href="https://invest.untapped-global.com">Home <span
                                                             class="sr-only">
                                                         (current)
                                                 </span></a>

@@ -173,7 +173,7 @@
                     </a>
                 </div>
                 <div class="uk-navbar-center">
-                    <a href="https://untapped-global.com" class="uk-navbar-item uk-logo">
+                    <a href="/" class="uk-navbar-item uk-logo">
                         <img alt="Untapped" src="./assets/images/untapped-logo-website1-623de87f.png"
                              srcset="./assets/images/untapped-logo-website1-623de87f.png 289w, ./assets/images/untapped-logo-website1-a21c4263.png 571w, ./assets/js/admin-ajax.php?p=theme%2Fimage&amp;action=kernel&amp;src=WyJ3cC1jb250ZW50XC91cGxvYWRzXC8yMDIxXC8wMlwvdW50YXBwZWQtbG9nby13ZWJzaXRlMS5wbmciLFtbImRvUmVzaXplIixbNTczLDEwNyw1NzMsMTA3XV0sWyJkb0Nyb3AiLFs1NzIsMTA3LDAsMF1dXV0%3D&amp;hash=0cf9bc7a70266629d9edceaa94d11473 572w, ./assets/images/untapped-logo-website1-6437fc9c.png 573w"
                              sizes="(min-width: 289px) 289px" data-width="289" data-height="54"></a>
@@ -188,7 +188,7 @@
                         <div>
                             <div class="uk-panel">
                                 <ul class="uk-nav uk-nav-primary uk-nav-center">
-                                    <li class="uk-active"><a href="https://untapped-global.com/"
+                                    <li class="uk-active"><a href="//"
                                                              class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1 current_page_item">Home</a>
                                     </li>
                                     <li class="uk-parent">
@@ -258,14 +258,14 @@
                     <nav class="uk-navbar"
                          uk-navbar="{&quot;align&quot;:&quot;center&quot;,&quot;boundary&quot;:&quot;!.uk-navbar-container&quot;}">
                         <div class="uk-navbar-left">
-                            <a href="https://untapped-global.com" class="uk-navbar-item uk-logo">
+                            <a href="/" class="uk-navbar-item uk-logo">
                                 <img alt="Untapped" src="./assets/images/untapped-logo-website1-623de87f.png"
                                      srcset="./assets/images/untapped-logo-website1-623de87f.png 289w, ./assets/images/untapped-logo-website1-a21c4263.png 571w, ./assets/js/admin-ajax.php?p=theme%2Fimage&amp;action=kernel&amp;src=WyJ3cC1jb250ZW50XC91cGxvYWRzXC8yMDIxXC8wMlwvdW50YXBwZWQtbG9nby13ZWJzaXRlMS5wbmciLFtbImRvUmVzaXplIixbNTczLDEwNyw1NzMsMTA3XV0sWyJkb0Nyb3AiLFs1NzIsMTA3LDAsMF1dXV0%3D&amp;hash=0cf9bc7a70266629d9edceaa94d11473 572w, ./assets/images/untapped-logo-website1-6437fc9c.png 573w"
                                      sizes="(min-width: 289px) 289px" data-width="289" data-height="54"></a>
                         </div>
                         <div class="uk-navbar-right">
                             <ul class="uk-navbar-nav">
-                                <li class="uk-active"><a href="https://untapped-global.com/"
+                                <li class="uk-active"><a href="/"
                                                          class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1 current_page_item">Home</a>
                                 </li>
                                 <li class="uk-parent">
@@ -689,182 +689,6 @@
 
 
     <!-- The Main Body Ends Here -->
-
-
-    <!-- Builder #builderwidget-9 -->
-    <div class="uk-section-default"
-         uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-scale-up; delay: 200;">
-        <div data-src="https://untapped-global.com/wp-content/themes/yootheme/cache/newbg-1-4b44c9ee.jpeg"
-             data-srcset="https://untapped-global.com/wp-content/themes/yootheme/cache/newbg-1-84537162.jpeg 768w, https://untapped-global.com/wp-content/themes/yootheme/cache/newbg-1-f9bbb0e8.jpeg 1024w, https://untapped-global.com/wp-content/themes/yootheme/cache/newbg-1-9903c946.jpeg 1366w, https://untapped-global.com/wp-content/themes/yootheme/cache/newbg-1-2a334778.jpeg 1600w, https://untapped-global.com/wp-content/themes/yootheme/cache/newbg-1-6c931a27.jpeg 1920w, https://untapped-global.com/wp-content/themes/yootheme/cache/newbg-1-4b44c9ee.jpeg 2000w"
-             data-sizes="(min-width: 2000px) 2000px" uk-img
-             class="uk-background-norepeat uk-background-top-center uk-background-fixed uk-section">
-            <div class="uk-container uk-container-expand">
-                <div class="tm-grid-expand uk-grid-column-small uk-grid-margin" uk-grid>
-                    <div class="uk-width-1-2@s uk-width-1-4@m uk-visible@s">
-                        <div id="builderwidget-9#0-0-0-0" class="uk-visible@s uk-margin" uk-scrollspy-class>
-                            <div class="uk-child-width-auto uk-grid-small" uk-grid>
-                                <div>
-                                    <a class="el-link uk-icon-link" target="_blank" rel="noreferrer"
-                                       href="https://www.twitter.com/@FindTheNest"
-                                       uk-icon="icon: twitter; width: 30; height: 30;"></a>
-                                </div>
-                                <div>
-                                    <a class="el-link uk-icon-link" target="_blank" rel="noreferrer"
-                                       href="https://www.linkedin.com/company/untapped-global/"
-                                       uk-icon="icon: linkedin; width: 30; height: 30;"></a>
-                                </div>
-                                <div>
-                                    <a class="el-link uk-icon-link" target="_blank" rel="noreferrer"
-                                       href="https://www.facebook.com/DloHaiti"
-                                       uk-icon="icon: facebook; width: 30; height: 30;"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-2@s uk-width-1-4@m uk-visible@s">
-                        <div class="uk-visible@s uk-position-relative uk-margin uk-width-large uk-text-center"
-                             style="left: -120px;" uk-scrollspy-class>
-                            <div class="uk-flex-middle uk-grid-small uk-child-width-auto uk-flex-center" uk-grid>
-                                <div class="el-item">
-                                    <a class="el-content uk-button uk-button-primary uk-button-large"
-                                       href="https://invest.untapped-global.com" target="_blank">
-                                        INVEST
-                                    </a>
-                                </div>
-                                <div class="el-item">
-                                    <a class="el-content uk-button uk-button-secondary uk-button-large"
-                                       href="http://untapped-global.com/engage/" target="_blank">
-                                        ENGAGE
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-2@s uk-width-1-4@m uk-visible@s">
-                        <div id="builderwidget-9#0-0-2-0"
-                             class="uk-visible@s uk-position-relative uk-text-center@s uk-text-left"
-                             style="left: -50px;" uk-scrollspy-class>
-                            <ul class="uk-margin-remove-bottom uk-subnav  uk-subnav-divider uk-flex-center@s uk-flex-left"
-                                uk-margin>
-                                <li class="el-item">
-                                    <a class="el-link" href="/mission/">ABOUT</a>
-                                </li>
-                                <li class="el-item">
-                                    <a class="el-link" href="/process/">HOW IT WORKS</a>
-                                </li>
-                                <li class="el-item">
-                                    <a class="el-link" href="/contact-2/">CONTACT</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-2@s uk-width-1-4@m">
-                        <div uk-scrollspy-class>
-                            <div class="uk-visible@s">
-                                <a class="uk-button uk-button-primary" href="https://invest.untapped-global.com/login"
-                                   style="background-color: rgba(0,0,0,0);
-                                 color: #ee852d;
-                                 border: none;
-                                 font-size: 14px;
-                                 box-shadow: none;
-                                 color: #ee852d;
-                                 " target="_blank">LOGIN</a>
-                                <a class="uk-button uk-button-secondary"
-                                   href="https://invest.untapped-global.com/register" style="background-color: rgba(0,0,0,0);
-                                 color: #99cadf;
-                                 border: none;
-                                 font-size: 14px;
-                                 box-shadow: none;
-                                 " target="_blank">SIGN UP</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tm-grid-expand uk-grid-column-small uk-grid-margin" uk-grid>
-                    <div class="uk-width-1-2@s uk-width-1-4@m uk-hidden@l">
-                        <div id="builderwidget-9#0-1-0-0" class="uk-hidden@l uk-margin uk-text-center"
-                             uk-scrollspy-class>
-                            <div class="uk-child-width-auto uk-grid-small uk-flex-center" uk-grid>
-                                <div>
-                                    <a class="el-link uk-icon-link" target="_blank" rel="noreferrer"
-                                       href="https://www.twitter.com/@FindTheNest"
-                                       uk-icon="icon: twitter; width: 30; height: 30;"></a>
-                                </div>
-                                <div>
-                                    <a class="el-link uk-icon-link" target="_blank" rel="noreferrer"
-                                       href="https://www.linkedin.com/company/untapped-global/"
-                                       uk-icon="icon: linkedin; width: 30; height: 30;"></a>
-                                </div>
-                                <div>
-                                    <a class="el-link uk-icon-link" target="_blank" rel="noreferrer"
-                                       href="https://www.facebook.com/DloHaiti"
-                                       uk-icon="icon: facebook; width: 30; height: 30;"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-2@s uk-width-1-4@m uk-hidden@l">
-                        <div class="uk-hidden@l uk-margin uk-width-large uk-margin-auto uk-text-center"
-                             uk-scrollspy-class>
-                            <div class="uk-flex-middle uk-grid-small uk-child-width-auto uk-flex-center" uk-grid>
-                                <div class="el-item">
-                                    <a class="el-content uk-button uk-button-primary uk-button-large"
-                                       href="https://invest.untapped-global.com" target="_blank">
-                                        INVEST
-                                    </a>
-                                </div>
-                                <div class="el-item">
-                                    <a class="el-content uk-button uk-button-secondary uk-button-large"
-                                       href="http://untapped-global.com/engage/" target="_blank">
-                                        ENGAGE
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-2@s uk-width-1-4@m uk-hidden@l">
-                        <div id="builderwidget-9#0-1-2-0" class="uk-hidden@l uk-text-center@s uk-text-center"
-                             uk-scrollspy-class>
-                            <ul class="uk-margin-remove-bottom uk-subnav  uk-subnav-divider uk-flex-center@s uk-flex-center"
-                                uk-margin>
-                                <li class="el-item">
-                                    <a class="el-link" href="/mission/">ABOUT</a>
-                                </li>
-                                <li class="el-item">
-                                    <a class="el-link" href="/process/">HOW IT WORKS</a>
-                                </li>
-                                <li class="el-item">
-                                    <a class="el-link" href="/contact-2/">CONTACT</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-2@s uk-width-1-4@m">
-                        <div uk-scrollspy-class>
-                            <div class="uk-hidden@s" style="text-align:center">
-                                <a class="uk-button uk-button-primary" href="https://invest.untapped-global.com/login"
-                                   style="background-color: rgba(0,0,0,0);
-                                 color: #ee852d;
-                                 border: none;
-                                 font-size: 14px;
-                                 box-shadow: none;
-                                 color: #ee852d;
-                                 " target="_blank">LOGIN</a>
-                                <a class="uk-button uk-button-secondary"
-                                   href="https://invest.untapped-global.com/register" style="background-color: rgba(0,0,0,0);
-                                 color: #99cadf;
-                                 border: none;
-                                 font-size: 14px;
-                                 box-shadow: none;
-                                 " target="_blank">SIGN UP</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Builder #builderwidget-1 -->
     <div id="builderwidget-1#0" class="uk-section-default uk-section">
