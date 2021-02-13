@@ -123,7 +123,7 @@
                             <p><strong>Leverage</strong></p>
                             <p>3.0x</p>
                           </div>
-                          <div class="col-xl-4  mt-3">
+                          <div class="col-12  mt-3">
                             <a href="/water-atms" class="btn btn-custom btn-block btn-lg">
                               More
                             </a>
@@ -133,7 +133,7 @@
                     </div>
                   </div>
                   <div v-else>
-                    <table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse">
+                    <table class="table  table-inverse">
                       <thead class="thead-default">
                       <!--                          <tr>-->
                       <!--                            <th>For the Entrepreneur</th>-->
@@ -148,12 +148,13 @@
                         <th>4.0x <br><strong>Leverage</strong></th>
                       </tr>
                       </thead>
-
                     </table>
-                    <div class="row mt-3">
-                      <a href="/register" class="btn btn-custom btn-block btn-lg"
-                      >More</a>
+                    <div class="row">
+                      <div class="col-12 mt-3">
+                        <a href="/register" class="btn btn-custom btn-block btn-lg">More</a>
+                      </div>
                     </div>
+
                   </div>
                 </div>
               </div>

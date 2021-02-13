@@ -2482,6 +2482,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "assets",
   data: function data() {
@@ -40243,7 +40244,7 @@ var staticRenderFns = [
             _c("p", [_vm._v("3.0x")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-xl-4  mt-3" }, [
+          _c("div", { staticClass: "col-12  mt-3" }, [
             _c(
               "a",
               {
@@ -40265,48 +40266,43 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "table",
-      {
-        staticClass:
-          "table table-{1:striped|sm|bordered|hover|inverse} table-inverse"
-      },
-      [
-        _c("thead", { staticClass: "thead-default" }, [
-          _c("tr", [
-            _c("th", [_vm._v("For You:")]),
-            _vm._v(" "),
-            _c("th", [
-              _vm._v("9 000$ "),
-              _c("br"),
-              _c("strong", [_vm._v("Minimum Ticket")])
-            ]),
-            _vm._v(" "),
-            _c("th", [_vm._v("36 000 $ "), _c("br"), _vm._v("Annual Revenue")]),
-            _vm._v(" "),
-            _c("th", [
-              _vm._v("4.0x "),
-              _c("br"),
-              _c("strong", [_vm._v("Leverage")])
-            ])
+    return _c("table", { staticClass: "table  table-inverse" }, [
+      _c("thead", { staticClass: "thead-default" }, [
+        _c("tr", [
+          _c("th", [_vm._v("For You:")]),
+          _vm._v(" "),
+          _c("th", [
+            _vm._v("9 000$ "),
+            _c("br"),
+            _c("strong", [_vm._v("Minimum Ticket")])
+          ]),
+          _vm._v(" "),
+          _c("th", [_vm._v("36 000 $ "), _c("br"), _vm._v("Annual Revenue")]),
+          _vm._v(" "),
+          _c("th", [
+            _vm._v("4.0x "),
+            _c("br"),
+            _c("strong", [_vm._v("Leverage")])
           ])
         ])
-      ]
-    )
+      ])
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-3" }, [
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-custom btn-block btn-lg",
-          attrs: { href: "/register" }
-        },
-        [_vm._v("More")]
-      )
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-12 mt-3" }, [
+        _c(
+          "a",
+          {
+            staticClass: "btn btn-custom btn-block btn-lg",
+            attrs: { href: "/register" }
+          },
+          [_vm._v("More")]
+        )
+      ])
     ])
   },
   function() {
