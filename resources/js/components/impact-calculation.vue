@@ -1,275 +1,361 @@
 <template>
-  <div>
-    <div>
-      <form action="">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <div class="col-6 ml-4">
-                <div class="part-amount mt-5">
-                  <h4 class="title">Enter Amount</h4>
-                  <form><span id="basic-addon1" class="currency-symbol">$</span>
-                    <input type="text" v-model.number="amount"
-                           :class="[errors.amount ? 'is-invalid': '',!errors.amount && Object.keys(errors).length > 1 ? 'is-valid': '']"
-                           class="inputted-amount">
-                    <button type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false" class="dropdown-toggle displayed-selected-currency">
-                      USD
-                    </button>
-                    <div aria-labelledby="dropdownMenuButton" class="dropdown-menu currency-select-list">
-                      <a href="#" data-currency="usd"
-                         class="dropdown-item single-currency-select selected-currency active">USD</a>
-                      <!--                      <a href="#" data-currency="eur" class="dropdown-item single-currency-select">EUR</a>-->
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="d-inline-block cursor-not-allowed ml-5">
-                <button class="calculate-all text-center">
-                  <span>Calculate</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </form>
-      <div class="row">
-        <div class="col-12">
-          <div class="table-responsive">
-            <table class="table table-borderless part-result" style="background-color: transparent">
-              <thead class="thead-light">
-              <tr>
-                <th></th>
-                <th>Asset</th>
-                <th>Amount ($)</th>
-                <th>Number</th>
-                <th>Return</th>
-                <th>Social Impact</th>
-                <th>Leverage</th>
-              </tr>
-              </thead>
-              <tbody style="background-color: white">
-              <tr style="background-color: white">
-                <td scope="row">
-                  <img src="/untapped/twowheeler.svg" alt="">
-                </td>
-                <td>Motorcycle</td>
-                <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
-                <td>{{ Math.round((amount / 3) / 1000).toLocaleString() }}</td>
-                <td>{{ Math.round(((amount / 3) / 1000) * 80).toLocaleString() }}</td>
-                <td>{{ Math.round(((amount / 3) / 1000) * 3600).toLocaleString() }}</td>
-                <td>3.6</td>
-              </tr>
-              <tr style="background-color: white">
-                <td scope="row">
-                  <img src="/untapped/rawmeter.svg" height="32px" width="32px" alt="">
-                </td>
-                <td>Water ATM's</td>
-                <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
-                <td>{{ Math.round((amount / 3) / 1000).toLocaleString() }}</td>
-                <td>{{ Math.round(((amount / 3) / 1000) * 80).toLocaleString() }}</td>
-                <td>{{ Math.round(((amount / 3) / 1000) * 12000).toLocaleString() }}</td>
-                <td>12</td>
-              </tr>
-              <tr style="background-color: white">
-                <td scope="row">
-                  <img src="/untapped/irrigation.svg"  height="32px" width="32px" alt="">
-                </td>
-                <td>Trailer</td>
-                <td>{{ Math.round(amount / 3).toLocaleString() }}</td>
-                <td>{{ Math.round((amount / 3) / 500).toLocaleString() }}</td>
-                <td>{{ Math.round(((amount / 3) / 500) * 40).toLocaleString() }}</td>
-                <td>{{ Math.round(((amount / 3) / 500) * 1800).toLocaleString() }}</td>
-                <td>3.6</td>
-              </tr>
-              <tr style="border-top: 3px solid gray">
-                <td></td>
-                <td>Totals</td>
-                <td>{{ Math.round(amount).toLocaleString() }}</td>
-                <td>{{ totalUnits }}</td>
-                <td>{{ totalNumbers }}</td>
-                <td>{{ socialImpact }}</td>
-                <td>{{ totalLeverage }}</td>
-              </tr>
-              </tbody>
-            </table>
+  <div class="container" id="app">
+    <div class="background">
+      <div class="column mt-3 ">
+        <h3>CALCULATE THE IMPACT</h3>
+        <h5 class="mb-4">OF YOUR INVESTMENT</h5>
+      </div>
+      <div class="row d-flex justify-content-center text-center">
+        <div class="card" id="card" style="width: 49rem;background-color:rgba(255, 255, 255, 0.26);">
+          <div class="card-body ">
+            <span class="pr-2">If I invest</span>
+            <input type="text"  v-model="amount" class="top-input">
+            <span class="pr-1 pl-1 in">in</span>
+            <input type="text" class="top-input" placeholder="5 yrs" v-model.lazy="years">
+            <button class="btn btn-untapped shadow ml-3" @click="calculateUntappedResults">=</button>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <line-chart :chart-data="datacollection" :options="chartoption"></line-chart>
-          <!--        <chartist-->
-          <!--            ratio="ct-square"-->
-          <!--            type="Line"-->
-          <!--            :data="chartData"-->
-          <!--            :options="chartOptions">-->
-          <!--        </chartist>-->
+      <br/>
+      <div class="container">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="card mb-4" style="width: 24rem; height:36rem; background-color:rgba(255, 255, 255, 0.26);">
+            <div class="card-body text-center">
+              <img src="assets/1x/rocket.png" alt="" height="100px">
+              <!--                        <i class="fa fa-rocket fa-3x" style="color: rgba(0, 0, 0, 0.664);" ;></i>-->
+              <P class="card-title ">I WILL HELP CREATE</P>
+              <input type="text " placeholder="$1.33 M " v-model="revenue" class="input" disabled>
+              <!-- <input type="text " name="display " id="display " disabled> -->
+              <br/>
+              <br/>
+              <p>in REVENUE for</p>
+              <input type="text " placeholder="310 " class="input " v-model="numberofEntreprenuarsImpacted" disabled>
+              <br>
+              <img class="mt-3" src="assets/1x/people.png" alt="" height="50px">
+              <!--                        <i class="mt-3 fa fa-users fa-3x" style="color:rgba(0, 0, 0, 0.664);" ;></i>-->
+              <p class="mt-3">ENTREPRENEURS <br>which is</p>
+              <input type="text " placeholder="26.6 X " class="input " v-model="socialReturn.toLocaleString()" disabled>
+              <p class="mt-2">(times) MY INVESTMENT</p>
+            </div>
+          </div>
+          <div class="card mb-4 " style="width: 24rem; height:36rem;background-color:rgba(255, 255, 255, 0.26);">
+            <div class="card-body ">
+              <img src="assets/1x/dollarhand.png" alt="" height="100px">
+              <P class="card-title ">MY RETURN</P>
+              <input type="text " placeholder="$76,931 " v-model="returns" class="input " disabled>
+              <!-- <input type="text " name="display " id="display " disabled> -->
+              <br/>
+              <br/>
+              <p>PROFIT which is</p>
+
+              <input type="text " placeholder="8% " class="input" disabled>
+              <p class="mt-2">ANNUAL RETURN</p>
+              <a target="_blank" href="https://invest.untapped-inc.com" class="btn btn-cta">Invest</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
-import ctAxisTitle from 'chartist-plugin-axistitle'
-import LineChart from './LineChart.js'
 
 export default {
-  props: {
-    chartdata: {
-      type: Object,
-      default: null
-    },
-    options: {
-      type: Object,
-      default: null,
-
-    }
-  },
   name: "impact-calculation",
   data() {
     return {
-      datacollection: null,
-      errors: '',
-      amount: 250000,
-      chartoption: {
-        responsive: true,
-        low: 0,
-        showArea: true,
-        maintainAspectRatio: false,
-        scales: {
-          xAxes: [{
-            ticks: {
-              maxRotation: 90,
-              minRotation: 80
-            }
-          }],
-          yAxes: [{
-            ticks: {
-              min: 0,
-              max: 3000000,
-              stepSize: 50000,
-            }
-          }]
-        }
-      },
+      amount: '$50,000',
+      years: "15 yrs",
+      timeToRepay: 1.5,
+      batch: "",
+      annualReturnForInvestors: 8,
+      motorbikePrice: 1000,
+      motorBikeAnnualRevenue: 3600,
+      waterATMPrice: 10000,
+      atmAnnualRevenue: 12000,
+      trailerAnnualRevenue: 1800,
+      trailerPrice: 500,
+      numberofAssets: 3,
+      revenue: 'loading ...',
+      numberofEntreprenuarsImpacted: 'loading ...',
+      socialReturn: 'loading ...',
+      returns: 'loading ...'
     }
   },
-  components: {
-    LineChart
+  methods: {
+    calculateUntappedResults() {
+
+      let amount = this.parseAmount();
+      if (isNaN(amount)) {
+        this.amount = "$50,000";
+      } else {
+        this.amount = `$${new Intl.NumberFormat().format(amount)}`;
+      }
+
+      let numberOfYears = parseInt(this.parseYears());
+      if (isNaN(numberOfYears) || numberOfYears === 0) {
+        this.years = "1 yr";
+      } else {
+        this.years = `${numberOfYears} yrs`;
+      }
+
+      let batchYears = Math.round(numberOfYears / this.timeToRepay);
+      let numberOfMotorbikes = this.calculateNumberofMotorbikes(amount, batchYears);
+      let numberOfATms = this.calculateNumberofAtms(amount, batchYears);
+      let numberOfTrailers = this.calculateNumberofTrailers(amount, batchYears);
+
+      let numberOfMotorbikesPeryear = Math.round(((amount / this.numberofAssets) / this.motorbikePrice));
+      let numberOfAtmsPeryear = Math.round(((amount / this.numberofAssets) / this.waterATMPrice));
+      let numberOfTrailersPeryear = Math.round(((amount / this.numberofAssets) / this.trailerPrice));
+      let totalRevenueMotorbike = numberOfMotorbikesPeryear * this.motorBikeAnnualRevenue * numberOfYears + numberOfMotorbikesPeryear
+          * this.motorBikeAnnualRevenue * 3 + numberOfMotorbikesPeryear * this.motorBikeAnnualRevenue * this.timeToRepay;
+
+      let totalATMRevenue = numberOfAtmsPeryear * this.atmAnnualRevenue * numberOfYears + numberOfAtmsPeryear
+          * this.atmAnnualRevenue * 3 + numberOfAtmsPeryear * this.atmAnnualRevenue * this.timeToRepay;
+      let trailerATMRevenue = numberOfTrailersPeryear * this.trailerAnnualRevenue * numberOfYears + numberOfTrailersPeryear
+          * this.trailerAnnualRevenue * 3 + numberOfTrailersPeryear * this.trailerAnnualRevenue * this.timeToRepay;
+
+      this.numberofEntreprenuarsImpacted = Math.round(numberOfMotorbikes + numberOfATms + numberOfTrailers).toLocaleString();
+      this.revenue = "$"+this.nFormatter(Math.round(totalRevenueMotorbike + totalATMRevenue + trailerATMRevenue));
+      this.socialReturn = `${(Math.round((totalRevenueMotorbike + totalATMRevenue + trailerATMRevenue) / amount))}x`;
+      let amountEarned = Math.round(amount * (this.annualReturnForInvestors / 100) * numberOfYears);
+      this.returns = `$${amountEarned.toLocaleString()}`;
+    },
+    calculateNumberofMotorbikes(amount, batchYears) {
+      return Math.round(((amount / this.numberofAssets) / this.motorbikePrice) * batchYears);
+    },
+    calculateNumberofAtms(amount, batchYears) {
+      return Math.round(((amount / this.numberofAssets) / this.waterATMPrice) * batchYears);
+    }, calculateNumberofTrailers(amount, batchYears) {
+      return Math.round(((amount / this.numberofAssets) / this.trailerPrice) * batchYears);
+    },
+    parseAmount() {
+      let r = this.amount.replace(/\D/g, "")
+      return r;
+    },
+    parseYears() {
+      return this.years.replace('yrs', '');
+    },
+    nFormatter(num, digits) {
+      var si = [
+        {value: 1, symbol: ""},
+        {value: 1E3, symbol: "K"},
+        {value: 1E6, symbol: "M"},
+        {value: 1E9, symbol: "G"},
+        {value: 1E12, symbol: "T"},
+        {value: 1E15, symbol: "P"},
+        {value: 1E18, symbol: "E"}
+      ];
+      var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+      var i;
+      for (i = si.length - 1; i > 0; i--) {
+        if (num >= si[i].value) {
+          break;
+        }
+      }
+      return (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
+    }
   },
-  computed: {
-    totalNumbers() {
-      let i = (((this.amount / 3) / 1000) * 80) + (((this.amount / 3) / 1000) * 80) + (((this.amount / 3) / 500) * 40);
-      return Math.round(i).toLocaleString();
+  watch: {
+    amount() {
+      let amount = this.parseAmount();
+      if (isNaN(amount)) {
+        this.amount = "$50,000";
+      } else {
+        this.amount = `$${new Intl.NumberFormat().format(amount)}`;
+      }
+      // this.calculateUntappedResults()
     },
-    totalUnits() {
-      let i = ((this.amount / 3) / 1000) + ((this.amount / 3) / 500) + ((this.amount / 3) / 1000);
-      return Math.round(i).toLocaleString();
-    },
-    socialImpact() {
-      let i = (((this.amount / 3) / 500) * 1800) + (((this.amount / 3) / 1000) * 12000) + (((this.amount / 3) / 1000) *
-          3600)
-      return Math.round(i).toLocaleString();
-    },
-    totalLeverage() {
-      this.fillData()
-      let amountToUse = this.amount;
-      let i = (((this.amount / 3) / 500) * 1800) + (((this.amount / 3) / 1000) * 12000) + (((this.amount / 3) / 1000) *
-          3600)
-      let socialImpact = (((this.amount / 3) / 500) * 1800) + (((this.amount / 3) / 1000) * 12000) +
-          (((this.amount / 3) / 1000) *
-              3600)
-      let personalreturn = Math.round(((amountToUse / 3) / 1000) + ((amountToUse / 3) / 500) + ((amountToUse / 3) / 1000));
-      return Math.round(i / this.amount).toLocaleString();
+    years() {
+      // this.calculateUntappedResults()
     }
   },
   mounted() {
-    this.fillData()
-  },
-  methods: {
-    fillData() {
-      let amountToUse = this.amount;
-      let i = (((this.amount / 3) / 500) * 1800) + (((this.amount / 3) / 1000) * 12000) + (((this.amount / 3) / 1000) *
-          3600)
-      let socialImpact = (((this.amount / 3) / 500) * 1800) + (((this.amount / 3) / 1000) * 12000) +
-          (((this.amount / 3) / 1000) *
-              3600)
-      let personalreturn = Math.round(((amountToUse / 3) / 1000) + ((amountToUse / 3) / 500) + ((amountToUse / 3) / 1000));
-      this.datacollection = {
-        labels: ["18 Months", "2 Years", "3 Years", "5 Years", "10 Years"],
-        datasets: [
-          {
-            label: 'Social Impact',
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1,
-            data:
-                [socialImpact, socialImpact * 2, socialImpact * 3, socialImpact * 4, socialImpact * 10]
-          },
-          {
-            label: 'Personal Return',
-            backgroundColor: '#7995f8',
-            data:
-                [
-                  personalreturn * 1000, personalreturn * 2 * 1000, personalreturn * 3 * 1000, personalreturn * 4 * 1000, personalreturn * 10 * 1000
-                ]
-          }]
-      }
-      let stepSize = 100000
-      if (socialImpact * 10 > 1000000) {
-        stepSize = 1000000;
-      }
-      if (socialImpact * 10 < 100000) {
-        stepSize = 5000;
-      }
-      this.chartoption = {
-        // low: 0,
-        showArea: false,
-        fullWidth: true,
-        maintainAspectRatio: false,
-        scales: {
-          xAxes: [{
-            ticks: {
-              // maxRotation: 90,
-              // minRotation: 80
-            }
-          }],
-          yAxes: [{
-            ticks: {
-              min: 0,
-              max: (socialImpact * 10) + socialImpact,
-              stepSize: stepSize,
-            }
-          }]
-        }
-      };
-    },
-
-  },
+    this.calculateUntappedResults();
+  }
 }
 </script>
 
 <style scoped>
 
-.small {
-  max-width: 600px;
-  margin: 150px auto;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+html, html a {
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
 }
+
+* {
+  -webkit-font-smoothing: antialiased !important;
+  /*font-family: 'M/ontserrat', sans-serif;*/
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility !important;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 500;
+}
+
+.background {
+  /*background-image: url("assets/bg.png");*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
+  /*background-size: cover;*/
+  /*background-blend-mode: multiply;*/
+  border-radius: 38px;
+  padding: 10px;
+}
+
+P {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+h3,
+h5 {
+  color: #fff;
+  text-align: center;
+}
+
+.card {
+  /* background-color: black;
+  opacity: 0.4; */
+  border-radius: 0.8rem;
+  margin-left: 0.3rem;
+}
+
+.card-body {
+  color: rgba(255, 255, 255, 0.911);
+  opacity: 1;
+  font-weight: bold;
+}
+
+input {
+  /*background-color: transparent;*/
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 9px;
+  border: solid #B8DAE9 1px;
+  width: 10rem;
+  font-size: larger;
+  letter-spacing: 0.1em;
+  background: rgba(0, 0, 0, .18);
+  /*opacity: 0.18;*/
+  background-blend-mode: difference;
+  /* margin-left: 1.5rem; */
+}
+
+input.input {
+  /*margin-left: 1.1rem;*/
+  font-weight: 500;
+  width: 100%;
+  font-size: 170%;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff;
+}
+
+i {
+  display: inline-block;
+  background-color: skyblue;
+  border-radius: 80px;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.column {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+input::-webkit-input-placeholder {
+  text-overflow: inherit;
+  line-height: initial;
+  white-space: pre;
+  overflow-wrap: normal;
+  -webkit-user-modify: read-only !important;
+  overflow: hidden;
+  color: white;
+  z-index: 90;
+}
+
+@media (max-width: 768px) {
+  #card {
+    flex-direction: column;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.top-input {
+  border: solid white 1px;
+  font-weight: 500;
+  font-size: 150%;
+}
+
+@media (max-width: 768px) {
+  .top-input {
+    margin-top: 1rem;
+  }
+
+  .in {
+
+  }
+}
+
+.btn-untapped {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 40px;
+  padding-left: 40px;
+  color: #fff;
+  font-weight: bolder;
+  background-color: #B8DAE9;
+  border-color: #b3c6d0;
+}
+
+.cta-btn {
+  background: #ED7D31;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 40px;
+  margin-top: 16px;
+  display: inline-flex;
+}
+
+.btn-cta {
+  height: 50px;
+  color: #fff;
+  background-color: #ED7D31;
+  border-color: #ED7D31;
+  line-height: 50px;
+  border-radius: 50px;
+  position: relative;
+  z-index: 2;
+  padding: 0 40px;
+  overflow: hidden;
+  margin-top: 6rem;
+}
+
+
 </style>

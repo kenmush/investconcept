@@ -94,7 +94,7 @@ export default {
           {lat: 3.159339, lng: 36.875658}
       );
       const map = new google.maps.Map(this.$el, {
-        zoom: 5,
+        zoom: 3,
       });
       map.setCenter({
         lat: 3.159339,
@@ -159,6 +159,6 @@ body {
 
 .App {
   width: 100%;
-  height: 100vh;
+  height: 550px;
 }
 </style>

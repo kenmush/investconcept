@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div >
     <div class="column mt-3 ">
       <h3>CALCULATE THE IMPACT</h3>
       <h5 class="mb-4">OF YOUR INVESTMENT</h5>

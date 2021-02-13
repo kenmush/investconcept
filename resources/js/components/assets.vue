@@ -241,6 +241,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "~bootstrap/scss/bootstrap";
 @media (max-width: 768px) {
   .carousel-inner .carousel-item > div {
     display: none;
