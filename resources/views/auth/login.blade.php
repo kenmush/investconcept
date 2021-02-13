@@ -43,24 +43,14 @@
     </script>
 </head>
 <!--end::Head-->
-<!--begin::Body-->
 <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled page-loading">
-<!--begin::Main-->
 <div class="d-flex flex-column flex-root">
-    <!--begin::Login-->
     <div class="login login-2 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
-        <!--begin::Aside-->
         <div class="login-aside order-2 order-lg-1 d-flex flex-row-auto position-relative overflow-hidden">
             <!--begin: Aside Container-->
             <div class="d-flex flex-column-fluid flex-column justify-content-between py-9 px-7 py-lg-13 px-lg-35">
-                <!--begin::Logo-->
-
-                <!--end::Logo-->
-                <!--begin::Aside body-->
                 <div class="d-flex flex-column-fluid flex-column flex-center">
-                    <!--begin::Signin-->
                     <div class="login-form login-signin">
-                        <!--begin::Form-->
                         <form class="form" novalidate="novalidate" method="post" action="{{ route('login') }}">
                         @csrf
                         <!--begin::Title-->
@@ -110,115 +100,17 @@
                             </div>
                             <!--end::Action-->
                         </form>
-                        <!--end::Form-->
                     </div>
-                    <!--end::Signin-->
-                    <!--begin::Signup-->
-                    <div class="login-form login-signup pt-11">
-                        <!--begin::Form-->
-                        <form class="form" novalidate="novalidate" action="{{ route('login') }}" method="post">
-                            <!--begin::Title-->
-                            <div class="text-center pb-8">
-                                <h2 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">Sign Up</h2>
-                                <p class="text-muted font-weight-bold font-size-h4">Enter your details to create your
-                                    account</p>
-                            </div>
-                            <!--end::Title-->
-                            <!--begin::Form group-->
-                            <div class="form-group">
-                                <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg font-size-h6"
-                                       type="text" placeholder="Fullname" name="fullname" autocomplete="off"/>
-                            </div>
-                            <!--end::Form group-->
-                            <!--begin::Form group-->
-                            <div class="form-group">
-                                <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg font-size-h6"
-                                       type="email" placeholder="Email" name="email" autocomplete="off"/>
-                            </div>
-                            <!--end::Form group-->
-                            <!--begin::Form group-->
-                            <div class="form-group">
-                                <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg font-size-h6"
-                                       type="password" placeholder="Password" name="password" autocomplete="off"/>
-                            </div>
-                            <!--end::Form group-->
-                            <!--begin::Form group-->
-                            <div class="form-group">
-                                <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg font-size-h6"
-                                       type="password" placeholder="Confirm password" name="cpassword"
-                                       autocomplete="off"/>
-                            </div>
-                            <!--end::Form group-->
-                            <!--begin::Form group-->
-                            <div class="form-group">
-                                <label class="checkbox mb-0">
-                                    <input type="checkbox" name="agree"/>I Agree the
-                                    <a href="#">terms and conditions</a>.
-                                    <span></span></label>
-                            </div>
-                            <!--end::Form group-->
-                            <!--begin::Form group-->
-                            <div class="form-group d-flex flex-wrap flex-center pb-lg-0 pb-3">
-                                <button type="button" id="kt_login_signup_submit"
-                                        class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mx-4">
-                                    Submit
-                                </button>
-                                <button type="button" id="kt_login_signup_cancel"
-                                        class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mx-4">
-                                    Cancel
-                                </button>
-                            </div>
-                            <!--end::Form group-->
-                        </form>
-                        <!--end::Form-->
-                    </div>
-                    <!--end::Signup-->
-                    <!--begin::Forgot-->
-                    <div class="login-form login-forgot pt-11">
-                        <!--begin::Form-->
-                        <form class="form" novalidate="novalidate" action="{{ route('login') }}" method="post">
-                            <!--begin::Title-->
-                            <div class="text-center pb-8">
-                                <h2 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">Forgotten Password
-                                    ?</h2>
-                                <p class="text-muted font-weight-bold font-size-h4">Enter your email to reset your
-                                    password</p>
-                            </div>
-                            <!--end::Title-->
-                            <!--begin::Form group-->
-                            <div class="form-group">
-                                <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg font-size-h6"
-                                       type="email" placeholder="Email" name="email" autocomplete="off"/>
-                            </div>
-                            <!--end::Form group-->
-                            <!--begin::Form group-->
-                            <div class="form-group d-flex flex-wrap flex-center pb-lg-0 pb-3">
-                                <button type="button" id="kt_login_forgot_submit"
-                                        class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mx-4">
-                                    Submit
-                                </button>
-                                <button type="button" id="kt_login_forgot_cancel"
-                                        class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mx-4">
-                                    Cancel
-                                </button>
-                            </div>
-                            <!--end::Form group-->
-                        </form>
-                        <!--end::Form-->
-                    </div>
-                    <!--end::Forgot-->
-                </div>
-                <!--end::Aside body-->
-                <!--begin: Aside footer for desktop-->
-                <div class="text-center">
 
                 </div>
-                <!--end: Aside footer for desktop-->
+                <div>
+                    <a href="/" class="text-muted">
+                        <i class="fa fa-arrow-left"></i>
+                        BACK
+                    </a>
+                </div>
             </div>
-            <!--end: Aside Container-->
         </div>
-        <!--begin::Aside-->
-        <!--begin::Content-->
         <div class="order-lg-2 w-100 pb-0" style="background-image: url('{{ asset('1x/login.png') }}')">
             <div class="d-flex flex-row justify-content-end" style="margin-top: 5rem;margin-right: 5rem;">
                 <img src="{{ asset('1x/Asset 4.png') }}" alt="">
@@ -234,13 +126,8 @@
 
             </div>
         </div>
-        <!--end::Content-->
     </div>
-    <!--end::Login-->
 </div>
-<!--end::Main-->
-
-<!--begin::Global Config(global config for global JS scripts)-->
 <script>var KTAppSettings = {
         "breakpoints": {"sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200},
         "colors": {
