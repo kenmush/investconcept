@@ -53,7 +53,7 @@
 
               <input type="text " placeholder="8% " class="input" disabled>
               <p class="mt-2">ANNUAL RETURN</p>
-              <a target="_blank" href="/register" class="btn btn-cta">Register  your Interest</a>
+              <a target="_blank" href="/register" class="btn btn-cta">Register  Your Interest</a>
             </div>
           </div>
         </div>
