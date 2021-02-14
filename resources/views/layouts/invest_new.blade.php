@@ -443,13 +443,13 @@
                             <ul class="uk-margin-remove-bottom uk-subnav  uk-subnav-divider uk-flex-center@s uk-flex-left"
                                 uk-margin>
                                 <li class="el-item">
-                                    <a class="el-link" href="/mission/">ABOUT</a>
+                                    <a class="el-link" href="https://untapped-global.com/mission/">ABOUT</a>
                                 </li>
                                 <li class="el-item">
-                                    <a class="el-link" href="/process/">HOW IT WORKS</a>
+                                    <a class="el-link" href="https://untapped-global.com/process/">HOW IT WORKS</a>
                                 </li>
                                 <li class="el-item">
-                                    <a class="el-link" href="/contact-2/">CONTACT</a>
+                                    <a class="el-link" href="https://untapped-global.com/contact-2/">CONTACT</a>
                                 </li>
                             </ul>
                         </div>
