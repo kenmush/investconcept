@@ -11,7 +11,7 @@
 
             <span class="pr-2">If I invest</span>
             <input type="text"  v-model="amount" class="top-input">
-            <span class="pr-1 pl-1 in">in</span>
+            <span class="pr-1 pl-1 in">over</span>
             <input type="text" class="top-input" placeholder="5 yrs" v-model.lazy="years">
             <button class="btn btn-untapped shadow ml-3" style="margin-bottom: 0.7em"
                     @click="calculateUntappedResults">=
