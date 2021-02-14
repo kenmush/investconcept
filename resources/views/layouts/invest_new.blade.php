@@ -591,13 +591,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="uk-width-1-3@s uk-width-1-5@m">
+                <div class="uk-grid-item-match uk-flex-middle uk-width-1-3@s uk-width-1-5@m">
                     <div class="uk-panel uk-margin uk-text-center@s uk-text-left" id="builderwidget-1#0-0-3-0">
                         <p style="font-size:20px;">MALI<br/><span style="font-size:17px;">Hamdallay AC200<br/>Immeuble ABK2 |# 102<br/>Bamako</span>
                         </p>
                     </div>
                 </div>
-                <div class="uk-width-1-3@s uk-width-1-5@m">
+                <div class="uk-grid-item-match uk-flex-middle uk-width-1-3@s uk-width-1-5@m">
                     <div class="uk-panel uk-margin uk-text-center@s uk-text-left" id="builderwidget-1#0-0-4-0">
                         <p style="font-size:20px;">SOUTH AFRICA<br/><span style="font-size:17px;">Workshop 17<br/>32 Kloof Street<br/>Cape Town | 8001</span>
                         </p>
