@@ -40438,7 +40438,7 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _c("span", { staticClass: "pr-1 pl-1 in" }, [_vm._v("in")]),
+                _c("span", { staticClass: "pr-1 pl-1 in" }, [_vm._v("over")]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -40463,7 +40463,8 @@ var render = function() {
                 _c(
                   "button",
                   {
-                    staticClass: "btn btn-untapped shadow ml-3 mb-3",
+                    staticClass: "btn btn-untapped shadow ml-3",
+                    staticStyle: { "margin-bottom": "0.7em" },
                     on: { click: _vm.calculateUntappedResults }
                   },
                   [_vm._v("=\n          ")]
@@ -40691,7 +40692,7 @@ var render = function() {
                         staticClass: "btn btn-cta",
                         attrs: { target: "_blank", href: "/register" }
                       },
-                      [_vm._v("Register  your Interest")]
+                      [_vm._v("Register  Your Interest")]
                     )
                   ],
                   1
