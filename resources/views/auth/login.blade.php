@@ -30,12 +30,12 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Untapped Invest",
-        "item": "https://invest.untapped-inc.com"
+        "item": "https://invest.untapped-global.com"
       },{
         "@type": "ListItem",
         "position": 2,
         "name": "Untapped Invest - Login",
-        "item": "https://invest.untapped-inc.com/login"
+        "item": "https://invest.untapped-global.com/login"
       }]
     }
 

@@ -26,12 +26,12 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Untapped Invest",
-        "item": "https://invest.untapped-inc.com"
+        "item": "https://invest.untapped-global.com"
       },{
         "@type": "ListItem",
         "position": 2,
         "name": "Untapped Invest - Sign Up",
-        "item": "https://invest.untapped-inc.com/register"
+        "item": "https://invest.untapped-global.com/register"
       }]
     }
     </script>
