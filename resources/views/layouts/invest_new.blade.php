@@ -6,16 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./assets/images/Asset-19.png">
     <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
-    <link rel="pingback" href="./assets/js/xmlrpc.php">
     <title>Untapped &#8211; Unlock the potential of the next billion</title>
-    <link rel='dns-prefetch' href='//s.w.org'/>
-    <link rel="alternate" type="application/rss+xml" title="Untapped &raquo; Feed"
-          href="https://untapped-global.com/feed/"/>
-    <link rel="alternate" type="application/rss+xml" title="Untapped &raquo; Comments Feed"
-          href="https://untapped-global.com/comments/feed/"/>
-    <link rel="alternate" type="application/rss+xml" title="Untapped &raquo; Home Comments Feed"
-          href="https://untapped-global.com/home/feed/"/>
-
 
     <link rel='stylesheet' id='sby_styles-css' href='./assets/css/sb-youtube.min.css?ver=1.3.1' type='text/css'
           media='all'/>
@@ -26,28 +17,8 @@
     <link rel='stylesheet' id='widget-for-eventbrite-api-css' href='./assets/css/frontend.css?ver=2.9.23'
           type='text/css' media='all'/>
     <link href="./assets/css/theme.1.css?ver=1613031507" rel="stylesheet">
-    <script type='text/javascript' src='./assets/js/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
-    <script type='text/javascript' src='./assets/js/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
-    <script type='text/javascript' src='./assets/js/frontend.js?ver=2.9.23' id='widget-for-eventbrite-api-js'></script>
-    <link rel="https://api.w.org/" href="./assets/js/wp-json/"/>
-
-    <link rel="alternate" type="application/json" href="./assets/js/1"/>
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="./assets/js/xmlrpc.php"/>
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="./assets/js/wlwmanifest.xml"/>
-    <meta name="generator" content="WordPress 5.6.1"/>
     <link rel="canonical" href="https://invest.untapped-global.com/"/>
     <link rel='shortlink' href='https://invest.untapped-global.com/'/>
-    <link rel="alternate" type="application/json+oembed" href="./assets/js/embed"/>
-    <link rel="alternate" type="text/xml+oembed" href="./assets/js/oembed?format=xml"/>
-    <!-- Custom Twitter Feeds CSS -->
-    <style type='text/css'>
-        font-size:
-
-        12
-        px
-
-        ;
-    </style>
     <script src="./assets/js/uikit.min.js?ver=2.3.25"></script>
     <script src="./assets/js/uikit-icons-vision.min.js?ver=2.3.25"></script>
     <script src="./assets/js/theme.js?ver=2.3.25"></script>
@@ -370,7 +341,7 @@
     cls: uk-animation-scale-up; delay: false;">
         <div data-src="./assets/images/header12-scaled-f58c53a3.jpeg"
              data-srcset="./assets/images/header12-scaled-23fd9ca5.jpeg 768w, ./assets/images/header12-scaled-b7e533c4.jpeg 1024w, ./assets/images/header12-scaled-71987daa.jpeg 1366w, ./assets/images/header12-scaled-f58c53a3.jpeg 1500w, ./assets/images/header12-scaled-646dc454.jpeg 1600w, ./assets/images/header12-scaled-c1b91296.jpeg 1920w, ./assets/images/header12-scaled-6c748861.jpeg 2559w"
-             data-sizes="(max-aspect-ratio: 1500/844) 178vh" uk-img
+              uk-img
              class="uk-background-norepeat uk-background-cover uk-background-center-center uk-background-image@s uk-background-fixed uk-section uk-section-large uk-flex uk-flex-middle"
              uk-height-viewport="offset-top: true;">
             <div class="uk-width-1-1">

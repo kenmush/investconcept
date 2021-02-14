@@ -7,21 +7,24 @@
       </div>
       <div class="row d-flex justify-content-center text-center">
         <div class="card" id="card" style="width: 49rem;background-color:rgba(255, 255, 255, 0.26);">
-          <div class="card-body ">
+          <div class="card-body">
+
             <span class="pr-2">If I invest</span>
             <input type="text"  v-model="amount" class="top-input">
             <span class="pr-1 pl-1 in">in</span>
             <input type="text" class="top-input" placeholder="5 yrs" v-model.lazy="years">
-            <button class="btn btn-untapped shadow ml-3" @click="calculateUntappedResults">=</button>
+            <button class="btn btn-untapped shadow ml-3 mb-3"
+                    @click="calculateUntappedResults">=
+            </button>
           </div>
         </div>
       </div>
       <br/>
       <div class="container">
         <div class="row d-flex justify-content-center text-center">
-          <div class="card mb-4" style="width: 24rem; height:36rem; background-color:rgba(255, 255, 255, 0.26);">
+          <div class="card mb-4" style="width: 24rem; height:42rem; background-color:rgba(255, 255, 255, 0.26);">
             <div class="card-body text-center">
-              <img src="assets/1x/rocket.png" alt="" height="100px">
+              <img src="assets/1x/rocket.png" alt="" height="20px">
               <!--                        <i class="fa fa-rocket fa-3x" style="color: rgba(0, 0, 0, 0.664);" ;></i>-->
               <P class="card-title ">I WILL HELP CREATE</P>
               <input type="text " placeholder="$1.33 M " v-model="revenue" class="input" disabled>
@@ -31,16 +34,16 @@
               <p>in REVENUE for</p>
               <input type="text " placeholder="310 " class="input " v-model="numberofEntreprenuarsImpacted" disabled>
               <br>
-              <img class="mt-3" src="assets/1x/people.png" alt="" height="50px">
+              <img class="mt-3" src="assets/1x/people.png" alt="" height="20px">
               <!--                        <i class="mt-3 fa fa-users fa-3x" style="color:rgba(0, 0, 0, 0.664);" ;></i>-->
               <p class="mt-3">ENTREPRENEURS <br>which is</p>
               <input type="text " placeholder="26.6 X " class="input " v-model="socialReturn.toLocaleString()" disabled>
               <p class="mt-2">(times) MY INVESTMENT</p>
             </div>
           </div>
-          <div class="card mb-4 " style="width: 24rem; height:36rem;background-color:rgba(255, 255, 255, 0.26);">
+          <div class="card mb-4 " style="width: 24rem; height:42rem;background-color:rgba(255, 255, 255, 0.26);">
             <div class="card-body ">
-              <img src="assets/1x/dollarhand.png" alt="" height="100px">
+              <img src="assets/1x/dollarhand.png" alt="" height="50px">
               <P class="card-title ">MY RETURN</P>
               <input type="text " placeholder="$76,931 " v-model="returns" class="input " disabled>
               <!-- <input type="text " name="display " id="display " disabled> -->
@@ -50,7 +53,7 @@
 
               <input type="text " placeholder="8% " class="input" disabled>
               <p class="mt-2">ANNUAL RETURN</p>
-              <a target="_blank" href="https://invest.untapped-inc.com" class="btn btn-cta">Invest</a>
+              <a target="_blank" href="/register" class="btn btn-cta">Register  your Interest</a>
             </div>
           </div>
         </div>
@@ -178,7 +181,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
@@ -329,7 +332,8 @@ input::-webkit-input-placeholder {
   padding-left: 40px;
   color: #fff;
   font-weight: bolder;
-  background-color: #B8DAE9;
+  //background-color: #b8dae9;
+  background-color: rgba(184,218,233,0.3);
   border-color: #b3c6d0;
 }
 

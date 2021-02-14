@@ -2571,6 +2571,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "impact-calculation",
   data: function data() {
@@ -7428,6 +7431,25 @@ exports.push([module.i, "@charset \"UTF-8\";\n/*!\n * Bootstrap v4.5.0 (https://
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap);", ""]);
+
+// module
+exports.push([module.i, "html[data-v-2594814d], html a[data-v-2594814d] {\n  -webkit-font-smoothing: antialiased !important;\n  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);\n}\n*[data-v-2594814d] {\n  -webkit-font-smoothing: antialiased !important;\n  /*font-family: 'M/ontserrat', sans-serif;*/\n  -moz-osx-font-smoothing: grayscale;\n  text-rendering: optimizeLegibility !important;\n}\n*[data-v-2594814d]:focus {\n  outline: none;\n}\nbody[data-v-2594814d] {\n  font-family: \"Montserrat\", sans-serif;\n  font-weight: 500;\n}\n.background[data-v-2594814d] {\n  /*background-image: url(\"assets/bg.png\");*/\n  /*background-repeat: no-repeat;*/\n  /*background-position: center;*/\n  /*background-size: cover;*/\n  /*background-blend-mode: multiply;*/\n  border-radius: 38px;\n  padding: 10px;\n}\nP[data-v-2594814d] {\n  color: white;\n  text-align: center;\n  font-weight: bold;\n  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);\n}\nh3[data-v-2594814d],\nh5[data-v-2594814d] {\n  color: #fff;\n  text-align: center;\n}\n.card[data-v-2594814d] {\n  /* background-color: black;\n  opacity: 0.4; */\n  border-radius: 0.8rem;\n  margin-left: 0.3rem;\n}\n.card-body[data-v-2594814d] {\n  color: rgba(255, 255, 255, 0.911);\n  opacity: 1;\n  font-weight: bold;\n}\ninput[data-v-2594814d] {\n  /*background-color: transparent;*/\n  color: #fff;\n  text-align: center;\n  padding: 5px;\n  border-radius: 9px;\n  border: solid #B8DAE9 1px;\n  width: 10rem;\n  font-size: larger;\n  letter-spacing: 0.1em;\n  background: rgba(0, 0, 0, 0.18);\n  /*opacity: 0.18;*/\n  background-blend-mode: difference;\n  /* margin-left: 1.5rem; */\n}\ninput.input[data-v-2594814d] {\n  /*margin-left: 1.1rem;*/\n  font-weight: 500;\n  width: 100%;\n  font-size: 170%;\n}\n[data-v-2594814d]::-webkit-input-placeholder {\n  /* Chrome/Opera/Safari */\n  color: #fff;\n}\ni[data-v-2594814d] {\n  display: inline-block;\n  background-color: skyblue;\n  border-radius: 80px;\n  border: 1px solid grey;\n  padding: 10px;\n}\n.column[data-v-2594814d] {\n  text-align: center;\n}\n.row[data-v-2594814d] {\n  display: flex;\n  align-items: center;\n}\ninput[data-v-2594814d]::-webkit-input-placeholder {\n  text-overflow: inherit;\n  line-height: initial;\n  white-space: pre;\n  overflow-wrap: normal;\n  -webkit-user-modify: read-only !important;\n  overflow: hidden;\n  color: white;\n  z-index: 90;\n}\n@media (max-width: 768px) {\n#card[data-v-2594814d] {\n    flex-direction: column;\n    position: relative;\n    max-width: 100%;\n    width: 100%;\n}\n}\n.top-input[data-v-2594814d] {\n  border: solid white 1px;\n  font-weight: 500;\n  font-size: 150%;\n}\n@media (max-width: 768px) {\n.top-input[data-v-2594814d] {\n    margin-top: 1rem;\n}\n}\n.btn-untapped[data-v-2594814d] {\n  padding-top: 8px;\n  padding-bottom: 8px;\n  padding-right: 40px;\n  padding-left: 40px;\n  color: #fff;\n  font-weight: bolder;\n  background-color: rgba(184, 218, 233, 0.3);\n  border-color: #b3c6d0;\n}\n.cta-btn[data-v-2594814d] {\n  background: #ED7D31;\n  color: #fff;\n  font-weight: 600;\n  font-size: 18px;\n  padding: 0 40px;\n  margin-top: 16px;\n  display: inline-flex;\n}\n.btn-cta[data-v-2594814d] {\n  height: 50px;\n  color: #fff;\n  background-color: #ED7D31;\n  border-color: #ED7D31;\n  line-height: 50px;\n  border-radius: 50px;\n  position: relative;\n  z-index: 2;\n  padding: 0 40px;\n  overflow: hidden;\n  margin-top: 6rem;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/mapbox-gl/src/css/mapbox-gl.css":
 /*!**************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/mapbox-gl/src/css/mapbox-gl.css ***!
@@ -7460,25 +7482,6 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, "\nhtml[data-v-5fe67085],\r\nbody[data-v-5fe67085] {\r\n  margin: 0;\r\n  padding: 0;\n}\n.App[data-v-5fe67085] {\r\n  width: 100%;\r\n  height: 550px;\n}\r\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css&":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css& ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap);", ""]);
-
-// module
-exports.push([module.i, "\nhtml[data-v-2594814d], html a[data-v-2594814d] {\r\n  -webkit-font-smoothing: antialiased !important;\r\n  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);\n}\n*[data-v-2594814d] {\r\n  -webkit-font-smoothing: antialiased !important;\r\n  /*font-family: 'M/ontserrat', sans-serif;*/\r\n  -moz-osx-font-smoothing: grayscale;\r\n  text-rendering: optimizeLegibility !important;\n}\n*[data-v-2594814d]:focus {\r\n  outline: none;\n}\nbody[data-v-2594814d] {\r\n  font-family: 'Montserrat', sans-serif;\r\n\r\n  font-weight: 500;\n}\n.background[data-v-2594814d] {\r\n  /*background-image: url(\"assets/bg.png\");*/\r\n  /*background-repeat: no-repeat;*/\r\n  /*background-position: center;*/\r\n  /*background-size: cover;*/\r\n  /*background-blend-mode: multiply;*/\r\n  border-radius: 38px;\r\n  padding: 10px;\n}\nP[data-v-2594814d] {\r\n  color: white;\r\n  text-align: center;\r\n  font-weight: bold;\r\n  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);\n}\nh3[data-v-2594814d],\r\nh5[data-v-2594814d] {\r\n  color: #fff;\r\n  text-align: center;\n}\n.card[data-v-2594814d] {\r\n  /* background-color: black;\r\n  opacity: 0.4; */\r\n  border-radius: 0.8rem;\r\n  margin-left: 0.3rem;\n}\n.card-body[data-v-2594814d] {\r\n  color: rgba(255, 255, 255, 0.911);\r\n  opacity: 1;\r\n  font-weight: bold;\n}\ninput[data-v-2594814d] {\r\n  /*background-color: transparent;*/\r\n  color: #fff;\r\n  text-align: center;\r\n  padding: 5px;\r\n  border-radius: 9px;\r\n  border: solid #B8DAE9 1px;\r\n  width: 10rem;\r\n  font-size: larger;\r\n  letter-spacing: 0.1em;\r\n  background: rgba(0, 0, 0, .18);\r\n  /*opacity: 0.18;*/\r\n  background-blend-mode: difference;\r\n  /* margin-left: 1.5rem; */\n}\ninput.input[data-v-2594814d] {\r\n  /*margin-left: 1.1rem;*/\r\n  font-weight: 500;\r\n  width: 100%;\r\n  font-size: 170%;\n}\n[data-v-2594814d]::-webkit-input-placeholder {\r\n  /* Chrome/Opera/Safari */\r\n  color: #fff;\n}\ni[data-v-2594814d] {\r\n  display: inline-block;\r\n  background-color: skyblue;\r\n  border-radius: 80px;\r\n  border: 1px solid grey;\r\n  padding: 10px;\n}\n.column[data-v-2594814d] {\r\n  text-align: center;\n}\n.row[data-v-2594814d] {\r\n  display: flex;\r\n  align-items: center;\n}\ninput[data-v-2594814d]::-webkit-input-placeholder {\r\n  text-overflow: inherit;\r\n  line-height: initial;\r\n  white-space: pre;\r\n  overflow-wrap: normal;\r\n  -webkit-user-modify: read-only !important;\r\n  overflow: hidden;\r\n  color: white;\r\n  z-index: 90;\n}\n@media (max-width: 768px) {\n#card[data-v-2594814d] {\r\n    flex-direction: column;\r\n    position: relative;\r\n    max-width: 100%;\r\n    width: 100%;\n}\n}\n.top-input[data-v-2594814d] {\r\n  border: solid white 1px;\r\n  font-weight: 500;\r\n  font-size: 150%;\n}\n@media (max-width: 768px) {\n.top-input[data-v-2594814d] {\r\n    margin-top: 1rem;\n}\n.in[data-v-2594814d] {\n}\n}\n.btn-untapped[data-v-2594814d] {\r\n  padding-top: 8px;\r\n  padding-bottom: 8px;\r\n  padding-right: 40px;\r\n  padding-left: 40px;\r\n  color: #fff;\r\n  font-weight: bolder;\r\n  background-color: #B8DAE9;\r\n  border-color: #b3c6d0;\n}\n.cta-btn[data-v-2594814d] {\r\n  background: #ED7D31;\r\n  color: #fff;\r\n  font-weight: 600;\r\n  font-size: 18px;\r\n  padding: 0 40px;\r\n  margin-top: 16px;\r\n  display: inline-flex;\n}\n.btn-cta[data-v-2594814d] {\r\n  height: 50px;\r\n  color: #fff;\r\n  background-color: #ED7D31;\r\n  border-color: #ED7D31;\r\n  line-height: 50px;\r\n  border-radius: 50px;\r\n  position: relative;\r\n  z-index: 2;\r\n  padding: 0 40px;\r\n  overflow: hidden;\r\n  margin-top: 6rem;\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -28005,15 +28008,15 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GoogleMapComponent.vue?vue&type=style&index=0&id=5fe67085&scoped=true&lang=css&":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GoogleMapComponent.vue?vue&type=style&index=0&id=5fe67085&scoped=true&lang=css& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--7-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/vue-loader/lib??vue-loader-options!./GoogleMapComponent.vue?vue&type=style&index=0&id=5fe67085&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GoogleMapComponent.vue?vue&type=style&index=0&id=5fe67085&scoped=true&lang=css&");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--8-2!../../../node_modules/sass-loader/dist/cjs.js??ref--8-3!../../../node_modules/vue-loader/lib??vue-loader-options!./impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -28035,15 +28038,15 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css&":
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GoogleMapComponent.vue?vue&type=style&index=0&id=5fe67085&scoped=true&lang=css&":
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css& ***!
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GoogleMapComponent.vue?vue&type=style&index=0&id=5fe67085&scoped=true&lang=css& ***!
   \****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--7-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/vue-loader/lib??vue-loader-options!./impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css&");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--7-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/vue-loader/lib??vue-loader-options!./GoogleMapComponent.vue?vue&type=style&index=0&id=5fe67085&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GoogleMapComponent.vue?vue&type=style&index=0&id=5fe67085&scoped=true&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -40410,7 +40413,7 @@ var render = function() {
               attrs: { id: "card" }
             },
             [
-              _c("div", { staticClass: "card-body " }, [
+              _c("div", { staticClass: "card-body" }, [
                 _c("span", { staticClass: "pr-2" }, [_vm._v("If I invest")]),
                 _vm._v(" "),
                 _c("input", {
@@ -40460,10 +40463,10 @@ var render = function() {
                 _c(
                   "button",
                   {
-                    staticClass: "btn btn-untapped shadow ml-3",
+                    staticClass: "btn btn-untapped shadow ml-3 mb-3",
                     on: { click: _vm.calculateUntappedResults }
                   },
-                  [_vm._v("=")]
+                  [_vm._v("=\n          ")]
                 )
               ])
             ]
@@ -40484,7 +40487,7 @@ var render = function() {
                 staticClass: "card mb-4",
                 staticStyle: {
                   width: "24rem",
-                  height: "36rem",
+                  height: "42rem",
                   "background-color": "rgba(255, 255, 255, 0.26)"
                 }
               },
@@ -40497,7 +40500,7 @@ var render = function() {
                       attrs: {
                         src: "assets/1x/rocket.png",
                         alt: "",
-                        height: "100px"
+                        height: "20px"
                       }
                     }),
                     _vm._v(" "),
@@ -40571,7 +40574,7 @@ var render = function() {
                       attrs: {
                         src: "assets/1x/people.png",
                         alt: "",
-                        height: "50px"
+                        height: "20px"
                       }
                     }),
                     _vm._v(" "),
@@ -40622,7 +40625,7 @@ var render = function() {
                 staticClass: "card mb-4 ",
                 staticStyle: {
                   width: "24rem",
-                  height: "36rem",
+                  height: "42rem",
                   "background-color": "rgba(255, 255, 255, 0.26)"
                 }
               },
@@ -40635,7 +40638,7 @@ var render = function() {
                       attrs: {
                         src: "assets/1x/dollarhand.png",
                         alt: "",
-                        height: "100px"
+                        height: "50px"
                       }
                     }),
                     _vm._v(" "),
@@ -40686,12 +40689,9 @@ var render = function() {
                       "a",
                       {
                         staticClass: "btn btn-cta",
-                        attrs: {
-                          target: "_blank",
-                          href: "https://invest.untapped-inc.com"
-                        }
+                        attrs: { target: "_blank", href: "/register" }
                       },
-                      [_vm._v("Invest")]
+                      [_vm._v("Register  your Interest")]
                     )
                   ],
                   1
@@ -41790,7 +41790,7 @@ module.exports = "/images/bg.png?a347b6e8ef552cdbeb1ebab7a012aebe";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _impact_calculation_vue_vue_type_template_id_2594814d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./impact-calculation.vue?vue&type=template&id=2594814d&scoped=true& */ "./resources/js/components/impact-calculation.vue?vue&type=template&id=2594814d&scoped=true&");
 /* harmony import */ var _impact_calculation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./impact-calculation.vue?vue&type=script&lang=js& */ "./resources/js/components/impact-calculation.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css& */ "./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css&");
+/* empty/unused harmony star reexport *//* harmony import */ var _impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss& */ "./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -41832,19 +41832,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css&":
-/*!*****************************************************************************************************************!*\
-  !*** ./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css& ***!
-  \*****************************************************************************************************************/
+/***/ "./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss&":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss& ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--7-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/vue-loader/lib??vue-loader-options!./impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_sass_loader_dist_cjs_js_ref_8_3_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--8-2!../../../node_modules/sass-loader/dist/cjs.js??ref--8-3!../../../node_modules/vue-loader/lib??vue-loader-options!./impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/impact-calculation.vue?vue&type=style&index=0&id=2594814d&scoped=true&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_sass_loader_dist_cjs_js_ref_8_3_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_sass_loader_dist_cjs_js_ref_8_3_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_sass_loader_dist_cjs_js_ref_8_3_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_sass_loader_dist_cjs_js_ref_8_3_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_2_node_modules_sass_loader_dist_cjs_js_ref_8_3_node_modules_vue_loader_lib_index_js_vue_loader_options_impact_calculation_vue_vue_type_style_index_0_id_2594814d_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
