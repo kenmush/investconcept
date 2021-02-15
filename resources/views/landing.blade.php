@@ -318,7 +318,7 @@
                                 <img src="{{ asset('untapped/linkedin.png') }}" style="padding-left: 1rem" alt="">
                             </div>
                             <div class="col-12 pt-6 float-right" style="margin-top: 2rem">
-                                <p style="font: Bold 16px/18px Roboto;color: #FFFFFF;">info@untapped-inc.com</p>
+                                <p style="font: Bold 16px/18px Roboto;color: #FFFFFF;">info@untapped-global.com.com</p>
                             </div>
 
                         </div>

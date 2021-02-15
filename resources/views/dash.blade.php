@@ -374,7 +374,7 @@
 ***********************************-->
 <div class="footer">
     <div class="copyright">
-        <p>Copyright © All rights reserved by <a href="https://untapped-inc.com" target="_blank">Untapped Inc</a>
+        <p>Copyright © All rights reserved by <a href="https://untapped-global.com.com" target="_blank">Untapped Inc</a>
             {{ date('Y') }}</p>
     </div>
 </div>

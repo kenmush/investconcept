@@ -66,7 +66,7 @@
                                         form-control-solid h-auto py-7 px-6 rounded-lg" type="text"
                                        name="email" id="email"
                                        value="{{ old('email') }}"
-                                       placeholder="Example@untapped-inc.com"
+                                       placeholder="Example@untapped-global.com.com"
                                        autocomplete="off"/>
 
                             </div>

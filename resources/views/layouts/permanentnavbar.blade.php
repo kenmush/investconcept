@@ -8,7 +8,7 @@
     <meta property="og:site_name" content="Untapped: Unlock the Potential of the Next Billion"/>
     <meta property="og:title" content="A Better Future through Entrepreneurship"/>
     <meta property="og:description" content="UNTAPPED:  Access to Safe Water for the Next Billion"/>
-    <meta property="og:url" content="https://www.untapped-inc.com/"/>
+    <meta property="og:url" content="https://www.untapped-global.com.com/"/>
 
     <meta name="description" content="UNTAPPED:  Access to Safe Water for the Next Billion"/>
     <meta name="keywords" content="entrepreneurs, africa, paygo"/>
@@ -255,7 +255,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-8 col-lg-8">
-                            <p>Copyright © <a href="https://untapped-inc.com">Untapped Inc</a> - 2020. All Rights
+                            <p>Copyright © <a href="https://untapped-global.com.com">Untapped Inc</a> - 2020. All Rights
                                 Reserved</p>
                         </div>
                     </div>

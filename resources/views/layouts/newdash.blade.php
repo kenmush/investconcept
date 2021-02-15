@@ -45,7 +45,7 @@
             <img class="logo-abbr" src="{{ asset('favicon.ico') }}" alt="">
             <img class="logo-compact" src="{{ asset('favicon.ico') }}" alt="">
             <img class="brand-title"
-                 src="https://www.untapped-inc.com/uploads/1/3/1/9/13198181/new-untapped-logo-trans.png" alt="">
+                 src="{{ asset('untappedlogo.png') }}" alt="">
         </a>
 
         <div class="nav-control">
@@ -117,7 +117,7 @@
                                     </span>
                                 </div>
                                 @if(!is_null(auth()->user()->avatar))
-                                    <img src="{{ "https://investorapis.untapped-inc.com/".auth()->user()->avatar }}"
+                                    <img src="{{ "https://investorapis.untapped-global.com/".auth()->user()->avatar }}"
                                          width="20" alt=""/>
                                 @else
                                     <img src="https://icon-library.com/images/generic-user-icon/generic-user-icon-13.jpg"
@@ -224,7 +224,7 @@
 ***********************************-->
 <div class="footer">
     <div class="copyright">
-        <p>Copyright © All rights reserved by <a href="https://untapped-inc.com" target="_blank">Untapped Inc</a>
+        <p>Copyright © All rights reserved by <a href="https://untapped-global.com" target="_blank">Untapped Inc</a>
             {{ date('Y') }}</p>
     </div>
 </div>
