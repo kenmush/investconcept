@@ -19,7 +19,7 @@
     <link href="assets/css/style.bundle.css?v=7.0.6" rel="stylesheet" type="text/css"/>
 
     <link rel="stylesheet" href="{{ asset('dropzone/basic.css') }}">
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('Pyramid-new.png') }}" type="image/x-icon">
 
 </head>
 <!--end::Head-->

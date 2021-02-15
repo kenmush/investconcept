@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./assets/images/Asset-19.png">
-    <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{{ asset('Pyramid-new.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('Pyramid-new.png') }}">
     <title>Untapped &#8211; Unlock the potential of the next billion</title>
 
     <link rel='stylesheet' id='sby_styles-css' href='./assets/css/sb-youtube.min.css?ver=1.3.1' type='text/css'

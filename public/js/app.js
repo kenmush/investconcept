@@ -40112,15 +40112,15 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-xl-4 col-lg-12 border " }, [
-            _c("p", [_c("strong", [_vm._v("Minimum Ticket")])]),
+            _c("p", [_c("strong", [_vm._v("Ticket")])]),
             _vm._v(" "),
-            _c("p", [_vm._v("1 100$")])
+            _c("p", [_vm._v("$1 100")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xl-4 col-lg-12 border" }, [
             _c("p", [_c("strong", [_vm._v("Impact")])]),
             _vm._v(" "),
-            _c("p", [_vm._v("2 500$")])
+            _c("p", [_vm._v("$2 500")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xl-4 col-lg-12 border" }, [
@@ -40175,7 +40175,7 @@ var staticRenderFns = [
             _c("th", [
               _vm._v("$500 "),
               _c("br"),
-              _c("strong", [_vm._v("Minimum Ticket")])
+              _c("strong", [_vm._v("Ticket")])
             ]),
             _vm._v(" "),
             _c("th", [_vm._v("9% "), _c("br"), _vm._v("APY")]),
@@ -40230,15 +40230,15 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-xl-4 border" }, [
-            _c("p", [_c("strong", [_vm._v("Minimum Ticket")])]),
+            _c("p", [_c("strong", [_vm._v("Ticket")])]),
             _vm._v(" "),
-            _c("p", [_vm._v("10 000$")])
+            _c("p", [_vm._v("$10 000")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xl-4 border" }, [
             _c("p", [_c("strong", [_vm._v("Impact")])]),
             _vm._v(" "),
-            _c("p", [_vm._v("30 000$")])
+            _c("p", [_vm._v("$30 000")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xl-4 border" }, [
@@ -40277,7 +40277,7 @@ var staticRenderFns = [
           _c("th", [
             _vm._v("9 000$ "),
             _c("br"),
-            _c("strong", [_vm._v("Minimum Ticket")])
+            _c("strong", [_vm._v("Ticket")])
           ]),
           _vm._v(" "),
           _c("th", [_vm._v("36 000 $ "), _c("br"), _vm._v("Annual Revenue")]),
@@ -40337,15 +40337,15 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-12" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-xl-4 border" }, [
-            _c("p", [_c("strong", [_vm._v("Minimum Ticket")])]),
+            _c("p", [_c("strong", [_vm._v("Ticket")])]),
             _vm._v(" "),
-            _c("p", [_vm._v("1 100$")])
+            _c("p", [_vm._v("$1 100")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xl-4 border" }, [
             _c("p", [_c("strong", [_vm._v("Impact")])]),
             _vm._v(" "),
-            _c("p", [_vm._v("9 750$")])
+            _c("p", [_vm._v("$9 750")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-xl-4 border" }, [

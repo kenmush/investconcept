@@ -35,12 +35,12 @@
                       <div class="col-12">
                         <div class="row">
                           <div class="col-xl-4 col-lg-12 border ">
-                            <p><strong>Minimum Ticket</strong></p>
-                            <p>1 100$</p>
+                            <p><strong>Ticket</strong></p>
+                            <p>$1 100</p>
                           </div>
                           <div class="col-xl-4 col-lg-12 border">
                             <p><strong>Impact</strong></p>
-                            <p>2 500$</p>
+                            <p>$2 500</p>
                           </div>
                           <div class="col-xl-4 col-lg-12 border">
                             <p><strong>Leverage</strong></p>
@@ -66,7 +66,7 @@
                       </tr>
                       <tr>
                         <th>For You:</th>
-                        <th>$500 <br><strong>Minimum Ticket</strong></th>
+                        <th>$500 <br><strong>Ticket</strong></th>
                         <th>9% <br>APY</th>
                         <th>18 Month <br>Term</th>
                       </tr>
@@ -112,12 +112,12 @@
                       <div class="col-12">
                         <div class="row">
                           <div class="col-xl-4 border">
-                            <p><strong>Minimum Ticket</strong></p>
-                            <p>10 000$</p>
+                            <p><strong>Ticket</strong></p>
+                            <p>$10 000</p>
                           </div>
                           <div class="col-xl-4 border">
                             <p><strong>Impact</strong></p>
-                            <p>30 000$</p>
+                            <p>$30 000</p>
                           </div>
                           <div class="col-xl-4 border">
                             <p><strong>Leverage</strong></p>
@@ -143,7 +143,7 @@
                       <!--                          </tr>-->
                       <tr>
                         <th>For You:</th>
-                        <th>9 000$ <br><strong>Minimum Ticket</strong></th>
+                        <th>9 000$ <br><strong>Ticket</strong></th>
                         <th>36 000 $ <br>Annual Revenue</th>
                         <th>4.0x <br><strong>Leverage</strong></th>
                       </tr>
@@ -191,12 +191,12 @@
                       <div class="col-12">
                         <div class="row">
                           <div class="col-xl-4 border">
-                            <p><strong>Minimum Ticket</strong></p>
-                            <p>1 100$</p>
+                            <p><strong>Ticket</strong></p>
+                            <p>$1 100</p>
                           </div>
                           <div class="col-xl-4 border">
                             <p><strong>Impact</strong></p>
-                            <p>9 750$</p>
+                            <p>$9 750</p>
                           </div>
                           <div class="col-xl-4 border">
                             <p><strong>Leverage</strong></p>
