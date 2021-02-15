@@ -36,7 +36,7 @@ Route::group(['prefix' => 'administrate', 'middleware' => ['auth']], function ()
 
     Route::resource('manageassets', 'AllassetController');
     Route::resource('beneficiary', 'BeneficiaryController');
-})->middleware('cache.headers:public;max_age=43200;etag');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 
