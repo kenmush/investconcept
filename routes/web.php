@@ -58,7 +58,7 @@ Auth::routes();
 
 Route::get('moto-taxis', 'MotoTaxisController')->middleware('cache.headers:public;max_age=43200;etag');
 Route::get('water-atms', 'WaterAtms');
-Route::get('irrigation-pumps', 'IrrigationPumps')->middleware('cache.headers:public;max_age=43200;etag');
+Route::get('irrigation-pumps', 'IrrigationPumps');
 Route::get('questionnaire', 'QuestinnareController')->name('questionarre')->middleware('cache.headers:public;max_age=43200;etag');
 Route::post('questionnaire', 'UploadQuestionaire')->name('uploadquestionaire');
 
