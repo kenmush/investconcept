@@ -35,7 +35,6 @@ class WaterAtms extends Controller
 
         if (Str::contains($assets['categoryName'], 'ATM') || Str::contains($assets['categoryName'], 'Maji milele')) {
             $assets['category'] = 'ATMs';
-            $assets['use_case'] = "Most governments in Africa are still grappling with the sharp population growth of recent decades. Nowhere is the shortfall in infrastructure more acute than in provision of water. Private efforts have rapidly filled the vacuum, allowing vendors to supply their communities with water where the local authorities cannot. The revolution in digital payment and monitoring technologies has not only de-risked this market for local businesspeople, but also improved the quality and safety for end-users.";
             $assets['carousel'] = [
                     'atm/atm1.jpg',
                     'atm/atm2.jpg',
