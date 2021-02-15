@@ -96,7 +96,7 @@
                   <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">
                     Water ATMs
                   </p>
-                  <p>Local partners: OVIVE, Maji <br>Milele</p>
+                  <p>Local partners: OVIVE, Maji Milele</p>
                   <p>Country: Kenya</p>
                 </div>
                 <div class="col-md-8" v-else>
