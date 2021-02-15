@@ -476,7 +476,87 @@
                         </div>
                     </div>
                 </div>
-
+{{--                <div class="tm-grid-expand uk-grid-column-small uk-grid-margin" uk-grid>--}}
+{{--                    <div class="uk-width-1-2@s uk-width-1-4@m uk-hidden@l">--}}
+{{--                        <div id="builderwidget-9#0-1-0-0" class="uk-hidden@l uk-margin uk-text-center"--}}
+{{--                             uk-scrollspy-class>--}}
+{{--                            <div class="uk-child-width-auto uk-grid-small uk-flex-center" uk-grid>--}}
+{{--                                <div>--}}
+{{--                                    <a class="el-link uk-icon-link" target="_blank" rel="noreferrer"--}}
+{{--                                       href="https://www.twitter.com/@FindTheNest"--}}
+{{--                                       uk-icon="icon: twitter; width: 30; height: 30;"></a>--}}
+{{--                                </div>--}}
+{{--                                <div>--}}
+{{--                                    <a class="el-link uk-icon-link" target="_blank" rel="noreferrer"--}}
+{{--                                       href="https://www.linkedin.com/company/untapped-global/"--}}
+{{--                                       uk-icon="icon: linkedin; width: 30; height: 30;"></a>--}}
+{{--                                </div>--}}
+{{--                                <div>--}}
+{{--                                    <a class="el-link uk-icon-link" target="_blank" rel="noreferrer"--}}
+{{--                                       href="https://www.facebook.com/DloHaiti"--}}
+{{--                                       uk-icon="icon: facebook; width: 30; height: 30;"></a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="uk-width-1-2@s uk-width-1-4@m uk-hidden@l">--}}
+{{--                        <div class="uk-hidden@l uk-margin uk-width-large uk-margin-auto uk-text-center"--}}
+{{--                             uk-scrollspy-class>--}}
+{{--                            <div class="uk-flex-middle uk-grid-small uk-child-width-auto uk-flex-center" uk-grid>--}}
+{{--                                <div class="el-item">--}}
+{{--                                    <a class="el-content uk-button uk-button-primary uk-button-large"--}}
+{{--                                       href="https://invest.untapped-global.com" target="_blank">--}}
+{{--                                        INVEST--}}
+{{--                                    </a>--}}
+{{--                                </div>--}}
+{{--                                <div class="el-item">--}}
+{{--                                    <a class="el-content uk-button uk-button-secondary uk-button-large"--}}
+{{--                                       href="http://untapped-global.com/engage/" target="_blank">--}}
+{{--                                        ENGAGE--}}
+{{--                                    </a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="uk-width-1-2@s uk-width-1-4@m uk-hidden@l">--}}
+{{--                        <div id="builderwidget-9#0-1-2-0" class="uk-hidden@l uk-text-center@s uk-text-center"--}}
+{{--                             uk-scrollspy-class>--}}
+{{--                            <ul class="uk-margin-remove-bottom uk-subnav  uk-subnav-divider uk-flex-center@s uk-flex-center"--}}
+{{--                                uk-margin>--}}
+{{--                                <li class="el-item">--}}
+{{--                                    <a class="el-link" href="/mission/">ABOUT</a>--}}
+{{--                                </li>--}}
+{{--                                <li class="el-item">--}}
+{{--                                    <a class="el-link" href="/process/">HOW IT WORKS</a>--}}
+{{--                                </li>--}}
+{{--                                <li class="el-item">--}}
+{{--                                    <a class="el-link" href="/contact-2/">CONTACT</a>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="uk-width-1-2@s uk-width-1-4@m">--}}
+{{--                        <div uk-scrollspy-class>--}}
+{{--                            <div class="uk-hidden@s" style="text-align:center">--}}
+{{--                                <a class="uk-button uk-button-primary" href="https://invest.untapped-global.com/login"--}}
+{{--                                   style="background-color: rgba(0,0,0,0);--}}
+{{--                                 color: #ee852d;--}}
+{{--                                 border: none;--}}
+{{--                                 font-size: 14px;--}}
+{{--                                 box-shadow: none;--}}
+{{--                                 color: #ee852d;--}}
+{{--                                 " target="_blank">LOGIN</a>--}}
+{{--                                <a class="uk-button uk-button-secondary"--}}
+{{--                                   href="https://invest.untapped-global.com/register" style="background-color: rgba(0,0,0,0);--}}
+{{--                                 color: #99cadf;--}}
+{{--                                 border: none;--}}
+{{--                                 font-size: 14px;--}}
+{{--                                 box-shadow: none;--}}
+{{--                                 " target="_blank">SIGN UP</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
