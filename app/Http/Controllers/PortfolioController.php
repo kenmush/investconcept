@@ -93,14 +93,14 @@ class PortfolioController extends Controller
                     $benefiaries['Planned Q1 2021'] = 50;
 
                     $benefiaries['Mission'] =
-                            'To make high quality drinking water available on demand at scale to the Kenyan urban middle class';
+                            'To make high quality solar irrigation equipment available for the first time to rural farming businesses.';
                 }
                 if ($benefiaries['username'] === 'atm') {
                     $benefiaries['founded'] = '2019';
                     $benefiaries['Assets managed'] = 10;
                     $benefiaries['Planned Q1 2021'] = 30;
                     $benefiaries['Mission'] =
-                            'To make high quality drinking water available on demand at scale to the Kenyan urban middle class.';
+                            'To make high quality solar irrigation equipment available for the first time to rural farming businesses..';
                 }
                 if ($benefiaries['firstName'] === 'Maji Milele') {
                     $benefiaries['founded'] = '2008';
