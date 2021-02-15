@@ -111,7 +111,8 @@
                 </div>
             </div>
         </div>
-        <div class="order-lg-2 w-100 pb-0" style="background-image: url('{{ asset('1x/login.png') }}');background-repeat: no-repeat">
+        <div class="order-lg-2 w-100 pb-0" style="background-image: url('{{ asset('1x/login.png') }}');
+                background-repeat: no-repeat;background-size: cover">
             <div class="d-flex flex-row justify-content-end" style="margin-top: 5rem;margin-right: 5rem;">
                 <img src="{{ asset('1x/Asset 4.png') }}" alt="">
             </div>

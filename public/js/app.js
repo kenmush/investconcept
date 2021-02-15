@@ -40059,7 +40059,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                  Mobile irrigation trailer\n                "
+                            "\n                  Mobile irrigation\n                "
                           )
                         ]
                       ),

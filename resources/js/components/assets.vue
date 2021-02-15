@@ -173,7 +173,7 @@
                 </div>
                 <div class="col-md-8" v-if="!mvuapap">
                   <p style="border-bottom: 3px solid #3e4494;text-transform: uppercase">
-                    Mobile irrigation trailer
+                    Mobile irrigation
                   </p>
                   <p>Local partner: MvuaPap! <br> &nbsp; </p>
                   <p>Country: Kenya</p>
