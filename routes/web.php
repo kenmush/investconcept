@@ -3,7 +3,8 @@
 use App\Asset;
 use Symfony\Component\Process\Process;
 
-Route::get('/', 'WelcomePageController');
+Route::get('/', 'WelcomePageController')
+        ->middleware('cache.headers:public;max_age=43200;etag');
 
 Route::group(['prefix' => 'assets', 'middleware' => ['auth', 'changepassword']], function () {
     Route::resource('portfolio', 'PortfolioController');
@@ -35,7 +36,7 @@ Route::group(['prefix' => 'administrate', 'middleware' => ['auth']], function ()
 
     Route::resource('manageassets', 'AllassetController');
     Route::resource('beneficiary', 'BeneficiaryController');
-});
+})->middleware('cache.headers:public;max_age=43200;etag');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -55,10 +56,10 @@ Route::post('updateverification', 'Verification')->name('updateverification');
 
 Auth::routes();
 
-Route::get('moto-taxis', 'MotoTaxisController');
-Route::get('water-atms', 'WaterAtms');
-Route::get('irrigation-pumps', 'IrrigationPumps');
-Route::get('questionnaire', 'QuestinnareController')->name('questionarre');
+Route::get('moto-taxis', 'MotoTaxisController')->middleware('cache.headers:public;max_age=43200;etag');
+Route::get('water-atms', 'WaterAtms')->middleware('cache.headers:public;max_age=43200;etag');
+Route::get('irrigation-pumps', 'IrrigationPumps')->middleware('cache.headers:public;max_age=43200;etag');
+Route::get('questionnaire', 'QuestinnareController')->name('questionarre')->middleware('cache.headers:public;max_age=43200;etag');
 Route::post('questionnaire', 'UploadQuestionaire')->name('uploadquestionaire');
 
 Route::post('registeraninvestor', 'RegisterInvestorController')->name('registeraninvestor');
@@ -69,8 +70,8 @@ Route::get('successfully/unsubscribed', function () {
 
 Route::get('engage', function () {
     return view('engage');
-});
+})->middleware('cache.headers:public;max_age=43200;etag');
 
 Route::get('terms', function () {
     return view('terms');
-});
+})->middleware('cache.headers:public;max_age=43200;etag');
