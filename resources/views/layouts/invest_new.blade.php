@@ -48,7 +48,8 @@
             font-size: 13px;
         }
     </style>
-    <style>#builderwidget-9\#0-0-0-0 .el-link {
+    <style>
+        #builderwidget-9\#0-0-0-0 .el-link {
             color: #ffffff;
         }
 
@@ -67,7 +68,8 @@
             text-decoration: none;
             font-size: 14px;
         } </style>
-    <style>#page\#1-1-0-0 .uk-card {
+    <style>
+        #page\#1-1-0-0 .uk-card {
             border-radius: 20px;
         }
 
@@ -113,7 +115,8 @@
         } </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <style>#builderwidget-1\#0-0-1-0 {
+    <style>
+        #builderwidget-1\#0-0-1-0 {
             color: #000000;
         }
 
@@ -132,6 +135,14 @@
         #builderwidget-1\#0 {
             background-color: #cccccc;
         } </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXH7F49VN2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KXH7F49VN2');
+    </script>
 </head>
 <body class="home page-template-default page page-id-1 ">
 <div class="tm-page" id="app">
