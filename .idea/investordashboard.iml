@@ -161,6 +161,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/php-cs-fixer/diff" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/friendsofphp/php-cs-fixer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/stopwatch" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nyholm/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/psr-http-message-bridge" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -169,5 +171,7 @@
     <orderEntry type="library" name="b7fb0b123e" level="application" />
     <orderEntry type="library" name="Chart" level="application" />
     <orderEntry type="module" module-name="framework" />
+    <orderEntry type="library" name="LineIcons" level="application" />
+    <orderEntry type="library" name="swiper" level="application" />
   </component>
 </module>
