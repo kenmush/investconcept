@@ -8,6 +8,6 @@ class WelcomePageController extends Controller
 {
     public function __invoke()
     {
-        return view('layouts.invest_new');
+        return view('layouts.newinvest');
     }
 }
