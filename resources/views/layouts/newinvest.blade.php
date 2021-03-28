@@ -70,7 +70,7 @@
                         </li>
                     </ul>
                     <div class="side-nav">
-                        <a class="consultant-btn" href="#">
+                        <a class="consultant-btn" href="{{ route('login') }}">
                             Login
                         </a>
                     </div>
