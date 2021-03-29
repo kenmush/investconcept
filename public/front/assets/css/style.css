@@ -380,10 +380,13 @@ ul {
     display: inline-block;
     color: #fff;
     background-color: #ee852d;
-    border-radius: 15px;
+    border-radius: 40px;
     padding: 12px 25px;
     font-weight: 600;
-    vertical-align: middle
+    vertical-align: middle;
+    letter-spacing: 1px;
+    line-height: 15px;
+    opacity: 1;
 }
 
 .side-nav .consultant-btn:hover {

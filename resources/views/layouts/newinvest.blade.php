@@ -113,7 +113,7 @@
         </div>
     </div>
 </div>
-<section class="works-area pt-100 pb-70">
+<section class="works-area pt-100">
     <div class="container">
 
         <div class="section-title">
@@ -122,55 +122,62 @@
         </div>
         <div class="row">
             <div class="col-md-12  text-center">
-                <div class="col-md-6 offset-3">
-                    <p>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="col-md-9 offset-2 text-center">
+                            <p>
                     <span class="font-weight-bold">
                         <strong>We’re a little different.</strong>
                     </span>
-                        When we bring a company into our portfolio, we’re only interested in financing the assets that
-                        drive
-                        their business. It could be an electric motorcycle on the streets of
-                        Kampala, an industrial cooling unit at a Bamako dairy,
+                                When we bring a company into our portfolio, we’re only interested in financing the assets that
+                                drive
+                                their business. It could be an electric motorcycle on the streets of
+                                Kampala, an industrial cooling unit at a Bamako dairy,
 
-                        <span>
+                                <span>
                     or an irrigation pump in Kenya’s Rift Valley.
                     These machines are digitally connected
                 </span>
-                        <span>
+                                <span>
                     – we watch them making money day after day, and so can
                     you!
                 </span>
-                    </p>
-                    <p>Frontier market investing has never been so safe, nor so easy.</p>
+                            </p>
+                            <p>Frontier market investing has never been so safe, nor so easy.</p>
 
-                    <p>Untapped invests exclusively in Small to Medium Enterprises (SMEs) that have been vetted by our
-                        Investment Team and assessed in the field to exacting standards of transparency, social impact,
-                        and
-                        scale-readiness. By selecting the most dynamic, viable, and capital-hungry businesses to work
-                        with,
-                        we ensure that resources are going to the right places and allow you, the investor, to
-                        participate
-                        in a new world of exciting opportunities.
-                    </p>
-                    <p>
-                        We create wealth with the doers and the makers of tomorrow’s world for a more equitable
-                        future.
-                        Entrepreneurs and their businesses are the lifeblood of any economy – even more so in
-                        frontier
-                        markets. We – you – are building new business where it matters most.
-                    </p>
-                    <p class="float-left">
+                            <p>Untapped invests exclusively in Small to Medium Enterprises (SMEs) that have been vetted by our
+                                Investment Team and assessed in the field to exacting standards of transparency, social impact,
+                                and
+                                scale-readiness. By selecting the most dynamic, viable, and capital-hungry businesses to work
+                                with,
+                                we ensure that resources are going to the right places and allow you, the investor, to
+                                participate
+                                in a new world of exciting opportunities.
+                            </p>
+                            <p>
+                                We create wealth with the doers and the makers of tomorrow’s world for a more equitable
+                                future.
+                                Entrepreneurs and their businesses are the lifeblood of any economy – even more so in
+                                frontier
+                                markets. We – you – are building new business where it matters most.
+                            </p>
+                            <p class="float-left">
                     <span class="font-weight-bold">
                         <strong>Be a little different.</strong>
                     </span>
 
-                    </p>
+                            </p>
+                        </div>
                     </div>
+                    <div class="col-md-4 m-0 p-0">
+                        <img src="{{ asset('maneno.png') }}" alt="">
+
+                    </div>
+                </div>
             </div>
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="{{ asset('maneno.png') }}" alt="">
                     </div>
 
                 </div>
