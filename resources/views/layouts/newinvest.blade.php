@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('front/assets/css/ayad.css') }}">
 
     <link rel="stylesheet" href="{{ asset('front/assets/css/bootstrap.min.css') }}">
 
@@ -83,7 +84,7 @@
 
 <div class="banner-area ">
     <div class="banner-shape">
-        <img src="{{ asset('background.png') }}" alt="Shape" style="background: #C33764;">
+        <img src="https://untapped-global.com/wp-content/themes/yootheme/cache/header12-scaled-c1b91296.jpeg" alt="Shape" >
     </div>
     <div class="banner-slider owl-theme owl-carousel">
         <div class="banner-item">
@@ -164,6 +165,205 @@
         </div>
     </div>
 
+</section>
+<section class="works-area pt-100 pb-70">
+    <div class="uk-section-secondary uk-section uk-padding-remove-bottom">
+
+
+
+
+
+        <div class="uk-container">
+
+            <div class="tm-grid-expand uk-child-width-1-1 uk-grid-margin uk-grid uk-grid-stack" uk-grid="">
+                <div class="uk-first-column">
+
+
+
+
+
+                    <div class="uk-margin uk-text-center">
+                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png" data-srcset="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png 356w, /wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-2f043955.png 594w" data-sizes="(min-width: 356px) 356px" data-width="356" data-height="100" uk-img="" sizes="(min-width: 356px) 356px" srcset="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png 356w, /wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-2f043955.png 594w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png">
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="uk-section-secondary uk-section uk-padding-remove-top">
+        <div class="uk-container">
+
+            <div class="tm-grid-expand uk-child-width-1-1 uk-grid-margin uk-grid uk-grid-stack" uk-grid="">
+                <div class="uk-first-column">
+
+
+
+
+
+                    <div class="uk-margin uk-text-center">
+                        <div class="uk-child-width-1-3 uk-child-width-1-3@m uk-child-width-1-4@l uk-grid uk-flex-top uk-flex-wrap-top" uk-grid="masonry: 1; parallax: 390;" style="padding-bottom: 390px; height: 663px;">        <div class="uk-first-column" style="transform: translateY(18.922px);">
+                                <div class="uk-light">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://untappedglobal.medium.com/angel-investor-spotlight-eric-klose-e68daeb4809" target="_blank">
+
+                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png" data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-3-8e5efd98.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png 800w" data-sizes="(min-width: 800px) 800px" data-width="800" data-height="706" uk-img="" sizes="(min-width: 800px) 800px" srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-3-8e5efd98.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png 800w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png">
+                                        <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
+
+                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+
+
+
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #ffffff; text-align: center;font-size:14px">Impact investors like <span style="color: #ee852d;">Eric Klose </span>who, after success at Wayfair, dedicate<br>their second careers to making an impact in Africa</p>
+
+                                                    <span style="font-size:12px; color:#B8DAE9; text-decoration:none;">read more</span></div>
+
+                                            </div></div>
+
+
+                                    </a>
+                                </div></div>        <div style="transform: translateY(151.376px);">
+                                <div class="uk-light">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://www.youtube.com/watch?v=15Xu-lZz6zU&amp;feature=youtu.be" target="_blank">
+
+                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png" data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-01541a2b.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png 800w" data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707" uk-img="" sizes="(min-width: 800px) 800px" srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-01541a2b.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png 800w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png">
+                                        <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
+
+                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+
+
+
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #ffffff; text-align: center;font-size:14px">Smallholder farmers in Kenya like <span style="color: #ee852d;">Nicholas Mutisya</span> afford to grow more through mechanized, solar-powered irrigation paid for as he makes more from his crops</p>
+                                                    <span style="font-size:12px; color:#B8DAE9 text-decoration:none;">read more</span></div>
+
+                                            </div></div>
+
+
+                                    </a>
+                                </div></div>        <div style="transform: translateY(18.922px);">
+                                <div class="uk-light">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://untappedglobal.medium.com/meet-the-entrepreneur-kimberly-mwende-transforming-access-to-purified-water-in-kenya-a50dc672bfa2" target="_blank">
+
+                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png" data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-9a4db539.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png 800w" data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707" uk-img="" sizes="(min-width: 800px) 800px" srcset="/wp-content/themes/yootheme/cache/Artboard-55-9a4db539.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png 800w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png">
+                                        <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
+
+                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+
+
+
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #ffffff; text-align: center;font-size:14px">Local entrepreneurs like <span style="color: #ee852d;">Kimberley Mwende </span>who take the initiative to start a safe drinking water business to serve her community.</p>
+                                                    <span style="font-size:12px; color:#B8DAE9">read more</span></div>
+
+                                            </div></div>
+
+
+                                    </a>
+                                </div></div>        <div class="uk-grid-margin uk-first-column" style="transform: translateY(17.922px);">
+                                <div class="uk-light">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="http://www.teliman.ml" target="_blank">
+
+                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png" data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-4-1cb84701.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png 800w" data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707" uk-img="" sizes="(min-width: 800px) 800px" srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-4-1cb84701.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png 800w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png">
+                                        <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
+
+                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+
+
+
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="text-align: center;font-size:14px;color:#ffffff;"><span style="color: #ee852d;">Adama Kourouma </span>From unpaid security guard to top driver, Adama is now able to supply for his family and well on his way to owning his own bike.</p>
+                                                    <p><span style="font-size: 12px; color: #b8dae9;">read more</span></p></div>
+
+                                            </div></div>
+
+
+                                    </a>
+                                </div></div>        <div class="uk-grid-margin" style="transform: translateY(151.376px);">
+                                <div class="uk-light">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://mecolalu.medium.com/" target="_blank">
+
+                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png" data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-2-a827a5d7.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png 800w" data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707" uk-img="" sizes="(min-width: 800px) 800px" srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-2-a827a5d7.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png 800w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png">
+                                        <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
+
+                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+
+
+
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #fff; text-align: center;font-size:14px">Successful entrepreneurs <span style="color: #ee852d;">Murtaza Hussain</span> who, after three successful startups of his own, give back by investing in frontier markets to create opportunity for all.</p>
+                                                    <span style="font-size:12px; color:#B8DAE9">read more</span></div>
+
+                                            </div></div>
+
+
+                                    </a>
+                                </div></div>        <div class="uk-grid-margin" style="transform: translateY(18.922px);">
+                                <div class="uk-light">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://untappedglobal.medium.com/meet-the-entrepreneur-benson-mbalanya-digitizing-access-to-water-cc9a63fe8d20" target="_blank">
+
+                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Benson-Water-ATM-961d3acc.jpeg" data-srcset="/wp-content/themes/yootheme/cache/Benson-Water-ATM-1eee6306.jpeg 768w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-a6346a59.jpeg 1024w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-961d3acc.jpeg 1280w" data-sizes="(min-width: 1280px) 1280px" data-width="1280" data-height="1086" uk-img="" sizes="(min-width: 1280px) 1280px" srcset="/wp-content/themes/yootheme/cache/Benson-Water-ATM-1eee6306.jpeg 768w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-a6346a59.jpeg 1024w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-961d3acc.jpeg 1280w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Benson-Water-ATM-a6346a59.jpeg">
+                                        <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
+
+                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+
+
+
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #ffffff; text-align: center;font-size:14px">Local entrepreneurs like <br><span style="color: #ee852d;">Benson Mbalanya&nbsp;</span>who are digitizing access to water&nbsp;<br>for his community.</p>
+                                                    <p><span style="font-size: 12px; color: #b8dae9;">read more</span></p></div>
+
+                                            </div></div>
+
+
+                                    </a>
+                                </div></div>        <div class="uk-grid-margin uk-first-column" style="transform: translateY(17.922px);">
+                                <div class="uk-light">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://untappedglobal.medium.com/meet-the-entrepreneur-geoffrey-ndhogezi-ugandan-electric-motorcycle-pioneer-29c3885f7445" target="_blank">
+
+                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg" data-srcset="/wp-content/themes/yootheme/cache/Artboard-56-d16e1468.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg 926w" data-sizes="(min-width: 926px) 926px" data-width="926" data-height="818" uk-img="" sizes="(min-width: 926px) 926px" srcset="/wp-content/themes/yootheme/cache/Artboard-56-d16e1468.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg 926w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg">
+                                        <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
+
+                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+
+
+
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #ffffff; text-align: center;font-size:14px">Local entrepreneurs like <br><span style="color: #ee852d;">Geoffrey Ndhogezi&nbsp;</span>who are pioneering electric motorcycles in Uganda.</p>
+                                                    <p style="color: #ffffff;"><span style="font-size: 12px; color: #b8dae9;">read more</span></p></div>
+
+                                            </div></div>
+
+
+                                    </a>
+                                </div></div>        <div class="uk-grid-margin" style="transform: translateY(151.376px);">
+                                <div class="uk-light">
+                                    <div class="el-item uk-inline-clip uk-transition-toggle" tabindex="0">
+
+                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg" data-srcset="/wp-content/themes/yootheme/cache/Artboard-57-5184468e.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg 926w" data-sizes="(min-width: 926px) 926px" data-width="926" data-height="818" uk-img="" sizes="(min-width: 926px) 926px" srcset="/wp-content/themes/yootheme/cache/Artboard-57-5184468e.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg 926w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg">
+                                        <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
+
+                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+
+
+
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #fff; text-align: center;font-size:14px">“Through the Community water ATM, we’re able to provide clean water for the community and generate additional income for our school”- <span style="color: #ee852d;">Peter </span>( Water entrepreneur &amp; teacher at Emmanuel Primary School in Naivasha, Kenya)<span class="c-message__edited_label" dir="ltr" data-sk="tooltip_parent">&nbsp;</span></p></div>
+
+                                            </div></div>
+
+
+                                    </div>
+                                </div></div>        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
 </section>
 <footer class="footer-area pt-100 pb-70">
     <div class="container">
