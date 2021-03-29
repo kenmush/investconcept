@@ -121,52 +121,66 @@
             <h2 style="font-family: 'Times New Roman'">How It Works</h2>
         </div>
         <div class="row">
-            <div class="col-md-6 text-center">
-                <p>
+            <div class="col-md-12  text-center">
+                <div class="col-md-6 offset-3">
+                    <p>
                     <span class="font-weight-bold">
                         <strong>We’re a little different.</strong>
                     </span>
-                    When we bring a company into our portfolio, we’re only interested in financing the assets that drive
-                    their business. It could be an electric motorcycle on the streets of
-                    Kampala, an industrial cooling unit at a Bamako dairy,
-                </p>
-                <p>
+                        When we bring a company into our portfolio, we’re only interested in financing the assets that
+                        drive
+                        their business. It could be an electric motorcycle on the streets of
+                        Kampala, an industrial cooling unit at a Bamako dairy,
+
+                        <span>
                     or an irrigation pump in Kenya’s Rift Valley.
                     These machines are digitally connected
-                </p>
-                <p>
+                </span>
+                        <span>
                     – we watch them making money day after day, and so can
                     you!
-                </p>
-                <p>Frontier market investing has never been so safe, nor so easy.</p>
+                </span>
+                    </p>
+                    <p>Frontier market investing has never been so safe, nor so easy.</p>
 
-                <p>Untapped invests exclusively in Small to Medium Enterprises (SMEs) that have been vetted by our
-                    Investment Team and assessed in the field to exacting standards of transparency, social impact, and
-                    scale-readiness. By selecting the most dynamic, viable, and capital-hungry businesses to work with,
-                    we ensure that resources are going to the right places and allow you, the investor, to participate
-                    in a new world of exciting opportunities.
-                </p>
-                <p>
-                    We create wealth with the doers and the makers of tomorrow’s world for a more equitable future.
-                    Entrepreneurs and their businesses are the lifeblood of any economy – even more so in frontier
-                    markets. We – you – are building new business where it matters most.
-                </p>
-                <p class="float-left">
+                    <p>Untapped invests exclusively in Small to Medium Enterprises (SMEs) that have been vetted by our
+                        Investment Team and assessed in the field to exacting standards of transparency, social impact,
+                        and
+                        scale-readiness. By selecting the most dynamic, viable, and capital-hungry businesses to work
+                        with,
+                        we ensure that resources are going to the right places and allow you, the investor, to
+                        participate
+                        in a new world of exciting opportunities.
+                    </p>
+                    <p>
+                        We create wealth with the doers and the makers of tomorrow’s world for a more equitable
+                        future.
+                        Entrepreneurs and their businesses are the lifeblood of any economy – even more so in
+                        frontier
+                        markets. We – you – are building new business where it matters most.
+                    </p>
+                    <p class="float-left">
                     <span class="font-weight-bold">
                         <strong>Be a little different.</strong>
                     </span>
 
-                </p>
+                    </p>
+                    </div>
             </div>
-            <div class="col-md-6">
-                <img src="{{ asset('maneno.png') }}" alt="">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ asset('maneno.png') }}" alt="">
+                    </div>
 
+                </div>
             </div>
+
         </div>
     </div>
 
 </section>
-<section class="works-area pt-100 pb-70">
+<section class="works-area pt-100 ">
     <div class="uk-section-secondary uk-section uk-padding-remove-bottom">
 
 
@@ -183,7 +197,7 @@
 
 
                     <div class="uk-margin uk-text-center">
-                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png" data-srcset="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png 356w, /wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-2f043955.png 594w" data-sizes="(min-width: 356px) 356px" data-width="356" data-height="100" uk-img="" sizes="(min-width: 356px) 356px" srcset="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png 356w, /wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-2f043955.png 594w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png">
+                        <img class="el-image" alt="" data-src="https://untapped-global.com/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png" data-srcset="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png 356w, /wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-2f043955.png 594w" data-sizes="(min-width: 356px) 356px" data-width="356" data-height="100" uk-img="" sizes="(min-width: 356px) 356px" srcset="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png 356w, /wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-2f043955.png 594w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png">
 
                     </div>
 
@@ -457,8 +471,6 @@
         </div>
     </div>
 </footer>
-
-
 <div class="copyright-area">
     <div class="container">
         <div class="copyright-item">
