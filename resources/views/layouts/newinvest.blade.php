@@ -112,8 +112,7 @@
                     <div class="container">
                         <div class="banner-content">
                             <h1 style="font-family: Arial, Baskerville, monospace" class="pt-10">Start building where
-                                it counts
-                                .</h1>
+                                it counts.</h1>
                             <p style="font-size: 24px" class="mt-5">
                                 Over $1M invested, all trackable in real time and
                                 100% transparent.
@@ -121,7 +120,7 @@
                             <p style="font-size: 22px" class="mt-3">Join the world’s most sophisticated community of
                                 investors
                                 supporting frontier market entrepreneurs.</p>
-                            <div class="banner-btn-area mt-3">
+                            <div class="banner-btn-area mt-5">
                                 <a class="banner-btn common-btn" href="#">
                                     Get Started
                                     <span></span>
@@ -152,7 +151,7 @@
                                 When we bring a company into our portfolio, we are only interested in financing the
                                 assets that drive their business. It could be an electric motorcycle delivering goods on
                                 the streets of Kampala, an industrial cooling unit at a Bamako dairy, or an irrigation
-                                pump in Kenya’s Rift Valley. With our Smart Asset Financing technology(™) , we track
+                                pump in Kenya’s Rift Valley. With our Smart Asset Financing technology(&trade;) , we track
                                 these assets and only make returns as their operators do. For you, the investor, this
                                 means unparalleled insight into how your money is working on the ground as you access
                                 our curated private offering. Frontier market investing has never been so safe, nor so
@@ -183,14 +182,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-6">
-                    </div>
-
-                </div>
-            </div>
-
         </div>
     </div>
 
