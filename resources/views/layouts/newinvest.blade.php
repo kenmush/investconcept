@@ -69,16 +69,16 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav pull-right hidemenu" id="togglemenuitems">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">About Us</a>
+                            <a href="https://untapped-global.com/mission/#mission" class="nav-link">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">How It Works</a>
+                            <a href="https://untapped-global.com/process/" class="nav-link">How It Works</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Engage</a>
+                            <a href="https://untapped-global.com/engage/" class="nav-link">Engage</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Blog</a>
+                            <a href="https://untapped-global.com/the-5-2-trillion-vc-blindspot/" class="nav-link">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">Contact Us</a>
