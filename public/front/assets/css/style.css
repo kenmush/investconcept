@@ -100,7 +100,7 @@ ul {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background-color: #011a41;
+    background-color: #F2F2F2;
     -webkit-transition: width .5s ease-in-out, height .5s ease-in-out;
     transition: width .5s ease-in-out, height .5s ease-in-out;
     -webkit-transform: translate(-50%, -50%);
@@ -111,7 +111,7 @@ ul {
 }
 
 .common-btn:hover {
-    color: #fff !important
+    color: black !important;
 }
 
 .common-btn:hover span {
