@@ -578,7 +578,7 @@
     </div>
 
 </section>
-<footer class="footer-area pt-100 pb-70">
+<footer class="footer-area pt-100 pb-70" style="    background-color: #696969">
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-lg-4">
