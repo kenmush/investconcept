@@ -89,7 +89,7 @@
                             Login
                         </a>
                         <div style="width: 35px;height: 30px;margin-top: 10px;margin-left: 10px" onclick="toggleMenu()">
-                            <a onclick="toggleMenu()" class="pl-2 newmenu" id="toggleMenu">
+                            <a  class="pl-2 newmenu" id="toggleMenu">
                                 <span><span><span></span></span></span>
                             </a>
                         </div>
