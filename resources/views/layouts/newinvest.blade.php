@@ -34,17 +34,13 @@
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 </head>
 <body>
-
-
 <div class="navbar-area sticky-top">
-
     <div class="mobile-nav">
         <a href="#" class="logo">
             <img src="https://untapped-global.com/wp-content/themes/yootheme/cache/untapped-logo-website1-623de87f.png"
                  alt="Logo">
         </a>
     </div>
-
     <div class="main-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
@@ -106,9 +102,6 @@
 
                             </div>
                         </div>
-                        {{--                        <div class="banner-slider-img">--}}
-                        {{--                            <img src="assets/img/banner/banner-main1.png" alt="Banner">--}}
-                        {{--                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -119,7 +112,6 @@
     <div class="container">
 
         <div class="section-title">
-            {{--            <span class="sub-title"></span>--}}
             <h2 style="font-family: 'Times New Roman'">How It Works</h2>
         </div>
         <div class="row">
@@ -511,17 +503,17 @@
                                 <span>Our Addresses:</span>
                             </li>
                             <li>
-{{--                                <i class='bx bx-current-location'></i>--}}
+                                {{--                                <i class='bx bx-current-location'></i>--}}
                                 <span>Kenya:</span>
                                 <a href="#">iHub, Senteu Plaza, Kilimani, Nairobi.</a>
                             </li>
                             <li>
-{{--                                <i class='bx bx-current-location'></i>--}}
+                                {{--                                <i class='bx bx-current-location'></i>--}}
                                 <span>USA:</span>
                                 <a href="#">353 Sacramento St., San Francisco.</a>
                             </li>
                             <li>
-{{--                                <i class='bx bx-current-location'></i>--}}
+                                {{--                                <i class='bx bx-current-location'></i>--}}
                                 <span>Mali:</span>
                                 <a href="#">Hamdallay,Bamako.</a>
                             </li>
@@ -605,7 +597,6 @@
 </div>
 
 
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="{{asset('front/assets/js/jquery-3.5.1.min.js')}}"></script>
 <script src="{{ asset('front/assets/js/popper.min.js') }}"></script>
 <script src="{{ asset('front/assets/js/bootstrap.min.js') }}"></script>
@@ -649,5 +640,4 @@
     })();
 </script>
 </body>
-
 </html>
