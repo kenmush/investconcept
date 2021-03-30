@@ -68,7 +68,7 @@
     <div class="main-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img src="https://untapped-global.com/wp-content/themes/yootheme/cache/untapped-logo-website1-623de87f.png"
                          alt="Logo">
                 </a>
@@ -597,17 +597,17 @@
                             <li>
                                 {{--                                <i class='bx bx-current-location'></i>--}}
                                 <span>Kenya:</span>
-                                <a href="#">iHub, Senteu Plaza, Kilimani, Nairobi.</a>
+                                <a href="https://untapped-global.com/contact-2/">iHub, Senteu Plaza, Kilimani, Nairobi.</a>
                             </li>
                             <li>
                                 {{--                                <i class='bx bx-current-location'></i>--}}
                                 <span>USA:</span>
-                                <a href="#">353 Sacramento St., San Francisco.</a>
+                                <a href="https://untapped-global.com/contact-2/">353 Sacramento St., San Francisco.</a>
                             </li>
                             <li>
                                 {{--                                <i class='bx bx-current-location'></i>--}}
                                 <span>Mali:</span>
-                                <a href="#">Hamdallay,Bamako.</a>
+                                <a href="https://untapped-global.com/contact-2/">Hamdallay,Bamako.</a>
                             </li>
                         </ul>
                     </div>
@@ -619,19 +619,17 @@
                         <h3>Quick Links</h3>
                         <ul>
                             <li>
-                                <a href="#">Untapped Global</a>
+                                <a href="https://untapped-global.com">Untapped Global</a>
                             </li>
                             <li>
-                                <a href="#">Untapped Engage</a>
+                                <a href="https://untapped-global.com/engage/">Untapped Engage</a>
                             </li>
                             <li>
-                                <a href="#">The Nest</a>
+                                <a href="https://www.findthenest.org/">The Nest</a>
                             </li>
+
                             <li>
-                                <a href="#">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog</a>
+                                <a href="https://untapped-global.com/the-5-2-trillion-vc-blindspot/">Blog</a>
                             </li>
 
                         </ul>
@@ -661,10 +659,10 @@
                         <h3>What We Do</h3>
                         <ul>
                             <li>
-                                <a href="#">The Nest</a>
+                                <a href="https://www.findthenest.org/">The Nest</a>
                             </li>
                             <li>
-                                <a href="#">Smart Asset Financing</a>
+                                <a href="https://untapped-global.com/the-5-2-trillion-vc-blindspot/">Smart Asset Financing</a>
                             </li>
 
                         </ul>
