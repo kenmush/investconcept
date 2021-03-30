@@ -54,7 +54,7 @@
 <body>
 <div class="navbar-area sticky-top">
     <div class="mobile-nav">
-        <a href="#" class="logo">
+        <a href="/" class="logo">
             <img src="https://untapped-global.com/wp-content/themes/yootheme/cache/untapped-logo-website1-623de87f.png"
                  alt="Logo">
         </a>
@@ -121,7 +121,7 @@
                                 investors
                                 supporting frontier market entrepreneurs.</p>
                             <div class="banner-btn-area mt-5">
-                                <a class="banner-btn common-btn" href="#">
+                                <a class="banner-btn common-btn" href="{{ route('register') }}">
                                     Get Started
                                     <span></span>
                                 </a>
