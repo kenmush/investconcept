@@ -147,7 +147,7 @@ ul {
 
 .section-title h2 {
     margin-bottom: 0;
-    font-size: 38px
+    font-size: 50px;
 }
 
 .section-title.two {
@@ -390,7 +390,8 @@ ul {
 }
 
 .side-nav .consultant-btn:hover {
-    background-color: #011a41
+    background-color: #2f2f2f;
+    color: white;
 }
 
 .banner-bg-one {

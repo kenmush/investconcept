@@ -578,7 +578,7 @@
     </div>
 
 </section>
-<footer class="footer-area pt-100 pb-70" style="    background-color: #696969">
+<footer class="footer-area pt-100 pb-70" style="background-color: #2F2F2F">
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-lg-4">
@@ -674,7 +674,7 @@
         </div>
     </div>
 </footer>
-<div class="copyright-area">
+<div class="copyright-area" style="background-color: #2F2F2F">
     <div class="container">
         <div class="copyright-item">
             <p>Copyright ©{{ date('Y') }} Untapped.</p>
