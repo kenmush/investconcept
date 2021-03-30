@@ -84,7 +84,8 @@
 
 <div class="banner-area ">
     <div class="banner-shape">
-        <img src="https://untapped-global.com/wp-content/themes/yootheme/cache/header12-scaled-c1b91296.jpeg" alt="Shape" >
+        <img src="https://untapped-global.com/wp-content/themes/yootheme/cache/header12-scaled-c1b91296.jpeg"
+             alt="Shape">
     </div>
     <div class="banner-slider owl-theme owl-carousel">
         <div class="banner-item">
@@ -93,9 +94,10 @@
                     <div class="container">
                         <div class="banner-content">
                             <h1 style="font-family: Arial, Baskerville, monospace">Start building where it counts.</h1>
-                            <p style="font-size: 24px">Over $1m deployed, trackable in real time, 100% transparent.</p>
-                            <p style="font-size: 22px">The world’s most sophisticated community of frontier market
-                                investors.</p>
+                            <p style="font-size: 24px">Over $1M invested, all trackable in real time and 100%
+                                transparent.</p>
+                            <p style="font-size: 22px">Join the world’s most sophisticated community of investors
+                                supporting frontier market entrepreneurs.</p>
                             <div class="banner-btn-area">
                                 <a class="banner-btn common-btn" href="#">
                                     Get Started
@@ -121,46 +123,34 @@
             <h2 style="font-family: 'Times New Roman'">How It Works</h2>
         </div>
         <div class="row">
-            <div class="col-md-12  text-center">
+            <div class="col-md-12  ">
                 <div class="row">
                     <div class="col-md-8">
-                        <div class="col-md-9 offset-2 text-center">
+                        <div class="col-md-9 offset-2 ">
                             <p>
                     <span class="font-weight-bold">
                         <strong>We’re a little different.</strong>
                     </span>
-                                When we bring a company into our portfolio, we’re only interested in financing the assets that
-                                drive
-                                their business. It could be an electric motorcycle on the streets of
-                                Kampala, an industrial cooling unit at a Bamako dairy,
-
-                                <span>
-                    or an irrigation pump in Kenya’s Rift Valley.
-                    These machines are digitally connected
-                </span>
-                                <span>
-                    – we watch them making money day after day, and so can
-                    you!
-                </span>
-                            </p>
-                            <p>Frontier market investing has never been so safe, nor so easy.</p>
-
-                            <p>Untapped invests exclusively in Small to Medium Enterprises (SMEs) that have been vetted by our
-                                Investment Team and assessed in the field to exacting standards of transparency, social impact,
-                                and
-                                scale-readiness. By selecting the most dynamic, viable, and capital-hungry businesses to work
-                                with,
-                                we ensure that resources are going to the right places and allow you, the investor, to
-                                participate
-                                in a new world of exciting opportunities.
+                                When we bring a company into our portfolio, we are only interested in financing the
+                                assets that drive their business. It could be an electric motorcycle delivering goods on
+                                the streets of Kampala, an industrial cooling unit at a Bamako dairy, or an irrigation
+                                pump in Kenya’s Rift Valley. With our Smart Asset Financing technology(™) , we track
+                                these assets and only make returns as their operators do. For you, the investor, this
+                                means unparalleled insight into how your money is working on the ground as you access
+                                our curated private offering. Frontier market investing has never been so safe, nor so
+                                easy.
                             </p>
                             <p>
-                                We create wealth with the doers and the makers of tomorrow’s world for a more equitable
-                                future.
-                                Entrepreneurs and their businesses are the lifeblood of any economy – even more so in
-                                frontier
-                                markets. We – you – are building new business where it matters most.
+                                By selecting the most dynamic, viable, and capital-hungry businesses across Africa, the
+                                Caribbean, and Southeast Asia, we ensure that resources are reaching those with the
+                                local knowledge to drive real change. Untapped invests exclusively in Small to Medium
+                                Enterprises (SMEs) that show real, substantive innovation. Our team assesses prospects
+                                quantitatively and in the field to exacting standards of transparency, social impact,
+                                and scale-readiness. Creating wealth with the makers and the do-ers of tomorrow’s world,
+                                each new dollar counts towards a more equitable future for all. Untapped Global helps
+                                you make it count - in real time.
                             </p>
+
                             <p class="float-left">
                     <span class="font-weight-bold">
                         <strong>Be a little different.</strong>
@@ -191,24 +181,22 @@
     <div class="uk-section-secondary uk-section uk-padding-remove-bottom">
 
 
-
-
-
         <div class="uk-container">
 
             <div class="tm-grid-expand uk-child-width-1-1 uk-grid-margin uk-grid uk-grid-stack" uk-grid="">
                 <div class="uk-first-column">
 
 
-
-
-
                     <div class="uk-margin uk-text-center">
-                        <img class="el-image" alt="" data-src="https://untapped-global.com/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png" data-srcset="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png 356w, /wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-2f043955.png 594w" data-sizes="(min-width: 356px) 356px" data-width="356" data-height="100" uk-img="" sizes="(min-width: 356px) 356px" srcset="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png 356w, /wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-2f043955.png 594w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png">
+                        <img class="el-image" alt=""
+                             data-src="https://untapped-global.com/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png"
+                             data-srcset="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png 356w, /wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-2f043955.png 594w"
+                             data-sizes="(min-width: 356px) 356px" data-width="356" data-height="100" uk-img=""
+                             sizes="(min-width: 356px) 356px"
+                             srcset="/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png 356w, /wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-2f043955.png 594w"
+                             src="https://untapped-global.com/wp-content/themes/yootheme/cache/UNTAPPED-INVESTERS-LOGO-21b594eb.png">
 
                     </div>
-
-
 
 
                 </div>
@@ -222,166 +210,286 @@
                 <div class="uk-first-column">
 
 
-
-
-
                     <div class="uk-margin uk-text-center">
-                        <div class="uk-child-width-1-3 uk-child-width-1-3@m uk-child-width-1-4@l uk-grid uk-flex-top uk-flex-wrap-top" uk-grid="masonry: 1; parallax: 390;" style="padding-bottom: 390px; height: 663px;">        <div class="uk-first-column" style="transform: translateY(18.922px);">
+                        <div class="uk-child-width-1-3 uk-child-width-1-3@m uk-child-width-1-4@l uk-grid uk-flex-top uk-flex-wrap-top"
+                             uk-grid="masonry: 1; parallax: 390;" style="padding-bottom: 390px; height: 663px;">
+                            <div class="uk-first-column" style="transform: translateY(18.922px);">
                                 <div class="uk-light">
-                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://untappedglobal.medium.com/angel-investor-spotlight-eric-klose-e68daeb4809" target="_blank">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0"
+                                       href="https://untappedglobal.medium.com/angel-investor-spotlight-eric-klose-e68daeb4809"
+                                       target="_blank">
 
-                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png" data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-3-8e5efd98.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png 800w" data-sizes="(min-width: 800px) 800px" data-width="800" data-height="706" uk-img="" sizes="(min-width: 800px) 800px" srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-3-8e5efd98.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png 800w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png">
+                                        <img class="el-image" alt=""
+                                             data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png"
+                                             data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-3-8e5efd98.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png 800w"
+                                             data-sizes="(min-width: 800px) 800px" data-width="800" data-height="706"
+                                             uk-img="" sizes="(min-width: 800px) 800px"
+                                             srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-3-8e5efd98.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png 800w"
+                                             src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-3-9acb97a3.png">
                                         <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
 
-                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+                                        <div class="uk-position-center">
+                                            <div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
 
 
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
+                                                            style="color: #ffffff; text-align: center;font-size:14px">
+                                                        Impact investors like <span
+                                                                style="color: #ee852d;">Eric Klose </span>who, after
+                                                        success at Wayfair, dedicate<br>their second careers to making
+                                                        an impact in Africa</p>
 
-                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #ffffff; text-align: center;font-size:14px">Impact investors like <span style="color: #ee852d;">Eric Klose </span>who, after success at Wayfair, dedicate<br>their second careers to making an impact in Africa</p>
+                                                    <span style="font-size:12px; color:#B8DAE9; text-decoration:none;">read more</span>
+                                                </div>
 
-                                                    <span style="font-size:12px; color:#B8DAE9; text-decoration:none;">read more</span></div>
-
-                                            </div></div>
+                                            </div>
+                                        </div>
 
 
                                     </a>
-                                </div></div>        <div style="transform: translateY(151.376px);">
+                                </div>
+                            </div>
+                            <div style="transform: translateY(151.376px);">
                                 <div class="uk-light">
-                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://www.youtube.com/watch?v=15Xu-lZz6zU&amp;feature=youtu.be" target="_blank">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0"
+                                       href="https://www.youtube.com/watch?v=15Xu-lZz6zU&amp;feature=youtu.be"
+                                       target="_blank">
 
-                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png" data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-01541a2b.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png 800w" data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707" uk-img="" sizes="(min-width: 800px) 800px" srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-01541a2b.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png 800w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png">
+                                        <img class="el-image" alt=""
+                                             data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png"
+                                             data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-01541a2b.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png 800w"
+                                             data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707"
+                                             uk-img="" sizes="(min-width: 800px) 800px"
+                                             srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-01541a2b.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png 800w"
+                                             src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-04a64ae9.png">
                                         <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
 
-                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+                                        <div class="uk-position-center">
+                                            <div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
 
 
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
+                                                            style="color: #ffffff; text-align: center;font-size:14px">
+                                                        Smallholder farmers in Kenya like <span style="color: #ee852d;">Nicholas Mutisya</span>
+                                                        afford to grow more through mechanized, solar-powered irrigation
+                                                        paid for as he makes more from his crops</p>
+                                                    <span style="font-size:12px; color:#B8DAE9 text-decoration:none;">read more</span>
+                                                </div>
 
-                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #ffffff; text-align: center;font-size:14px">Smallholder farmers in Kenya like <span style="color: #ee852d;">Nicholas Mutisya</span> afford to grow more through mechanized, solar-powered irrigation paid for as he makes more from his crops</p>
-                                                    <span style="font-size:12px; color:#B8DAE9 text-decoration:none;">read more</span></div>
-
-                                            </div></div>
+                                            </div>
+                                        </div>
 
 
                                     </a>
-                                </div></div>        <div style="transform: translateY(18.922px);">
+                                </div>
+                            </div>
+                            <div style="transform: translateY(18.922px);">
                                 <div class="uk-light">
-                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://untappedglobal.medium.com/meet-the-entrepreneur-kimberly-mwende-transforming-access-to-purified-water-in-kenya-a50dc672bfa2" target="_blank">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0"
+                                       href="https://untappedglobal.medium.com/meet-the-entrepreneur-kimberly-mwende-transforming-access-to-purified-water-in-kenya-a50dc672bfa2"
+                                       target="_blank">
 
-                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png" data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-9a4db539.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png 800w" data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707" uk-img="" sizes="(min-width: 800px) 800px" srcset="/wp-content/themes/yootheme/cache/Artboard-55-9a4db539.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png 800w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png">
+                                        <img class="el-image" alt=""
+                                             data-src="/wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png"
+                                             data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-9a4db539.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png 800w"
+                                             data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707"
+                                             uk-img="" sizes="(min-width: 800px) 800px"
+                                             srcset="/wp-content/themes/yootheme/cache/Artboard-55-9a4db539.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png 800w"
+                                             src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-a59a4a2c.png">
                                         <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
 
-                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+                                        <div class="uk-position-center">
+                                            <div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
 
 
-
-                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #ffffff; text-align: center;font-size:14px">Local entrepreneurs like <span style="color: #ee852d;">Kimberley Mwende </span>who take the initiative to start a safe drinking water business to serve her community.</p>
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
+                                                            style="color: #ffffff; text-align: center;font-size:14px">
+                                                        Local entrepreneurs like <span style="color: #ee852d;">Kimberley Mwende </span>who
+                                                        take the initiative to start a safe drinking water business to
+                                                        serve her community.</p>
                                                     <span style="font-size:12px; color:#B8DAE9">read more</span></div>
 
-                                            </div></div>
+                                            </div>
+                                        </div>
 
 
                                     </a>
-                                </div></div>        <div class="uk-grid-margin uk-first-column" style="transform: translateY(17.922px);">
+                                </div>
+                            </div>
+                            <div class="uk-grid-margin uk-first-column" style="transform: translateY(17.922px);">
                                 <div class="uk-light">
-                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="http://www.teliman.ml" target="_blank">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0"
+                                       href="http://www.teliman.ml" target="_blank">
 
-                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png" data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-4-1cb84701.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png 800w" data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707" uk-img="" sizes="(min-width: 800px) 800px" srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-4-1cb84701.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png 800w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png">
+                                        <img class="el-image" alt=""
+                                             data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png"
+                                             data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-4-1cb84701.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png 800w"
+                                             data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707"
+                                             uk-img="" sizes="(min-width: 800px) 800px"
+                                             srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-4-1cb84701.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png 800w"
+                                             src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-4-800094c1.png">
                                         <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
 
-                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+                                        <div class="uk-position-center">
+                                            <div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
 
 
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
+                                                            style="text-align: center;font-size:14px;color:#ffffff;">
+                                                        <span style="color: #ee852d;">Adama Kourouma </span>From unpaid
+                                                        security guard to top driver, Adama is now able to supply for
+                                                        his family and well on his way to owning his own bike.</p>
+                                                    <p><span style="font-size: 12px; color: #b8dae9;">read more</span>
+                                                    </p></div>
 
-                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="text-align: center;font-size:14px;color:#ffffff;"><span style="color: #ee852d;">Adama Kourouma </span>From unpaid security guard to top driver, Adama is now able to supply for his family and well on his way to owning his own bike.</p>
-                                                    <p><span style="font-size: 12px; color: #b8dae9;">read more</span></p></div>
-
-                                            </div></div>
+                                            </div>
+                                        </div>
 
 
                                     </a>
-                                </div></div>        <div class="uk-grid-margin" style="transform: translateY(151.376px);">
+                                </div>
+                            </div>
+                            <div class="uk-grid-margin" style="transform: translateY(151.376px);">
                                 <div class="uk-light">
-                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://mecolalu.medium.com/" target="_blank">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0"
+                                       href="https://mecolalu.medium.com/" target="_blank">
 
-                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png" data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-2-a827a5d7.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png 800w" data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707" uk-img="" sizes="(min-width: 800px) 800px" srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-2-a827a5d7.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png 800w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png">
+                                        <img class="el-image" alt=""
+                                             data-src="/wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png"
+                                             data-srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-2-a827a5d7.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png 800w"
+                                             data-sizes="(min-width: 800px) 800px" data-width="800" data-height="707"
+                                             uk-img="" sizes="(min-width: 800px) 800px"
+                                             srcset="/wp-content/themes/yootheme/cache/Artboard-55-copy-2-a827a5d7.png 768w, /wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png 800w"
+                                             src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-55-copy-2-d579f5d1.png">
                                         <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
 
-                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+                                        <div class="uk-position-center">
+                                            <div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
 
 
-
-                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #fff; text-align: center;font-size:14px">Successful entrepreneurs <span style="color: #ee852d;">Murtaza Hussain</span> who, after three successful startups of his own, give back by investing in frontier markets to create opportunity for all.</p>
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
+                                                            style="color: #fff; text-align: center;font-size:14px">
+                                                        Successful entrepreneurs <span style="color: #ee852d;">Murtaza Hussain</span>
+                                                        who, after three successful startups of his own, give back by
+                                                        investing in frontier markets to create opportunity for all.</p>
                                                     <span style="font-size:12px; color:#B8DAE9">read more</span></div>
 
-                                            </div></div>
+                                            </div>
+                                        </div>
 
 
                                     </a>
-                                </div></div>        <div class="uk-grid-margin" style="transform: translateY(18.922px);">
+                                </div>
+                            </div>
+                            <div class="uk-grid-margin" style="transform: translateY(18.922px);">
                                 <div class="uk-light">
-                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://untappedglobal.medium.com/meet-the-entrepreneur-benson-mbalanya-digitizing-access-to-water-cc9a63fe8d20" target="_blank">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0"
+                                       href="https://untappedglobal.medium.com/meet-the-entrepreneur-benson-mbalanya-digitizing-access-to-water-cc9a63fe8d20"
+                                       target="_blank">
 
-                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Benson-Water-ATM-961d3acc.jpeg" data-srcset="/wp-content/themes/yootheme/cache/Benson-Water-ATM-1eee6306.jpeg 768w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-a6346a59.jpeg 1024w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-961d3acc.jpeg 1280w" data-sizes="(min-width: 1280px) 1280px" data-width="1280" data-height="1086" uk-img="" sizes="(min-width: 1280px) 1280px" srcset="/wp-content/themes/yootheme/cache/Benson-Water-ATM-1eee6306.jpeg 768w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-a6346a59.jpeg 1024w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-961d3acc.jpeg 1280w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Benson-Water-ATM-a6346a59.jpeg">
+                                        <img class="el-image" alt=""
+                                             data-src="/wp-content/themes/yootheme/cache/Benson-Water-ATM-961d3acc.jpeg"
+                                             data-srcset="/wp-content/themes/yootheme/cache/Benson-Water-ATM-1eee6306.jpeg 768w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-a6346a59.jpeg 1024w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-961d3acc.jpeg 1280w"
+                                             data-sizes="(min-width: 1280px) 1280px" data-width="1280"
+                                             data-height="1086" uk-img="" sizes="(min-width: 1280px) 1280px"
+                                             srcset="/wp-content/themes/yootheme/cache/Benson-Water-ATM-1eee6306.jpeg 768w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-a6346a59.jpeg 1024w, /wp-content/themes/yootheme/cache/Benson-Water-ATM-961d3acc.jpeg 1280w"
+                                             src="https://untapped-global.com/wp-content/themes/yootheme/cache/Benson-Water-ATM-a6346a59.jpeg">
                                         <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
 
-                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+                                        <div class="uk-position-center">
+                                            <div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
 
 
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
+                                                            style="color: #ffffff; text-align: center;font-size:14px">
+                                                        Local entrepreneurs like <br><span style="color: #ee852d;">Benson Mbalanya&nbsp;</span>who
+                                                        are digitizing access to water&nbsp;<br>for his community.</p>
+                                                    <p><span style="font-size: 12px; color: #b8dae9;">read more</span>
+                                                    </p></div>
 
-                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #ffffff; text-align: center;font-size:14px">Local entrepreneurs like <br><span style="color: #ee852d;">Benson Mbalanya&nbsp;</span>who are digitizing access to water&nbsp;<br>for his community.</p>
-                                                    <p><span style="font-size: 12px; color: #b8dae9;">read more</span></p></div>
-
-                                            </div></div>
+                                            </div>
+                                        </div>
 
 
                                     </a>
-                                </div></div>        <div class="uk-grid-margin uk-first-column" style="transform: translateY(17.922px);">
+                                </div>
+                            </div>
+                            <div class="uk-grid-margin uk-first-column" style="transform: translateY(17.922px);">
                                 <div class="uk-light">
-                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0" href="https://untappedglobal.medium.com/meet-the-entrepreneur-geoffrey-ndhogezi-ugandan-electric-motorcycle-pioneer-29c3885f7445" target="_blank">
+                                    <a class="el-item uk-inline-clip uk-transition-toggle uk-link-toggle" tabindex="0"
+                                       href="https://untappedglobal.medium.com/meet-the-entrepreneur-geoffrey-ndhogezi-ugandan-electric-motorcycle-pioneer-29c3885f7445"
+                                       target="_blank">
 
-                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg" data-srcset="/wp-content/themes/yootheme/cache/Artboard-56-d16e1468.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg 926w" data-sizes="(min-width: 926px) 926px" data-width="926" data-height="818" uk-img="" sizes="(min-width: 926px) 926px" srcset="/wp-content/themes/yootheme/cache/Artboard-56-d16e1468.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg 926w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg">
+                                        <img class="el-image" alt=""
+                                             data-src="/wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg"
+                                             data-srcset="/wp-content/themes/yootheme/cache/Artboard-56-d16e1468.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg 926w"
+                                             data-sizes="(min-width: 926px) 926px" data-width="926" data-height="818"
+                                             uk-img="" sizes="(min-width: 926px) 926px"
+                                             srcset="/wp-content/themes/yootheme/cache/Artboard-56-d16e1468.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg 926w"
+                                             src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-56-abc5d87f.jpeg">
                                         <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
 
-                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+                                        <div class="uk-position-center">
+                                            <div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
 
 
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
+                                                            style="color: #ffffff; text-align: center;font-size:14px">
+                                                        Local entrepreneurs like <br><span style="color: #ee852d;">Geoffrey Ndhogezi&nbsp;</span>who
+                                                        are pioneering electric motorcycles in Uganda.</p>
+                                                    <p style="color: #ffffff;"><span
+                                                                style="font-size: 12px; color: #b8dae9;">read more</span>
+                                                    </p></div>
 
-                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #ffffff; text-align: center;font-size:14px">Local entrepreneurs like <br><span style="color: #ee852d;">Geoffrey Ndhogezi&nbsp;</span>who are pioneering electric motorcycles in Uganda.</p>
-                                                    <p style="color: #ffffff;"><span style="font-size: 12px; color: #b8dae9;">read more</span></p></div>
-
-                                            </div></div>
+                                            </div>
+                                        </div>
 
 
                                     </a>
-                                </div></div>        <div class="uk-grid-margin" style="transform: translateY(151.376px);">
+                                </div>
+                            </div>
+                            <div class="uk-grid-margin" style="transform: translateY(151.376px);">
                                 <div class="uk-light">
                                     <div class="el-item uk-inline-clip uk-transition-toggle" tabindex="0">
 
-                                        <img class="el-image" alt="" data-src="/wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg" data-srcset="/wp-content/themes/yootheme/cache/Artboard-57-5184468e.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg 926w" data-sizes="(min-width: 926px) 926px" data-width="926" data-height="818" uk-img="" sizes="(min-width: 926px) 926px" srcset="/wp-content/themes/yootheme/cache/Artboard-57-5184468e.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg 926w" src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg">
+                                        <img class="el-image" alt=""
+                                             data-src="/wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg"
+                                             data-srcset="/wp-content/themes/yootheme/cache/Artboard-57-5184468e.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg 926w"
+                                             data-sizes="(min-width: 926px) 926px" data-width="926" data-height="818"
+                                             uk-img="" sizes="(min-width: 926px) 926px"
+                                             srcset="/wp-content/themes/yootheme/cache/Artboard-57-5184468e.jpeg 768w, /wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg 926w"
+                                             src="https://untapped-global.com/wp-content/themes/yootheme/cache/Artboard-57-04814a38.jpeg">
                                         <div class="uk-overlay-primary uk-transition-fade uk-position-cover"></div>
 
-                                        <div class="uk-position-center"><div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
+                                        <div class="uk-position-center">
+                                            <div class="uk-overlay uk-transition-fade uk-margin-remove-first-child">
 
 
+                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
+                                                            style="color: #fff; text-align: center;font-size:14px">
+                                                        “Through the Community water ATM, we’re able to provide clean
+                                                        water for the community and generate additional income for our
+                                                        school”- <span style="color: #ee852d;">Peter </span>( Water
+                                                        entrepreneur &amp; teacher at Emmanuel Primary School in
+                                                        Naivasha, Kenya)<span class="c-message__edited_label" dir="ltr"
+                                                                              data-sk="tooltip_parent">&nbsp;</span></p>
+                                                </div>
 
-                                                <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p style="color: #fff; text-align: center;font-size:14px">“Through the Community water ATM, we’re able to provide clean water for the community and generate additional income for our school”- <span style="color: #ee852d;">Peter </span>( Water entrepreneur &amp; teacher at Emmanuel Primary School in Naivasha, Kenya)<span class="c-message__edited_label" dir="ltr" data-sk="tooltip_parent">&nbsp;</span></p></div>
-
-                                            </div></div>
+                                            </div>
+                                        </div>
 
 
                                     </div>
-                                </div></div>        </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
-
-
 
 
                 </div>
             </div>
         </div>
-
-
 
 
     </div>
@@ -400,17 +508,21 @@
                         <ul>
                             <li>
                                 <i class='bx bx-current-location'></i>
-                                <span>Address:</span>
+                                <span>Our Addresses:</span>
+                            </li>
+                            <li>
+{{--                                <i class='bx bx-current-location'></i>--}}
+                                <span>Kenya:</span>
                                 <a href="#">iHub, Senteu Plaza, Kilimani, Nairobi.</a>
                             </li>
                             <li>
-                                <i class='bx bx-current-location'></i>
-                                <span>Address:</span>
+{{--                                <i class='bx bx-current-location'></i>--}}
+                                <span>USA:</span>
                                 <a href="#">353 Sacramento St., San Francisco.</a>
                             </li>
                             <li>
-                                <i class='bx bx-current-location'></i>
-                                <span>Address:</span>
+{{--                                <i class='bx bx-current-location'></i>--}}
+                                <span>Mali:</span>
                                 <a href="#">Hamdallay,Bamako.</a>
                             </li>
                         </ul>

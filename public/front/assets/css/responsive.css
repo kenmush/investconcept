@@ -1755,7 +1755,9 @@
 
 @media only screen and (max-width: 991px) {
     .mean-container .mean-bar {
-        background-color: #011a41
+        /*background-color: #011a41*/
+        background: #444;
+        opacity: 0.6;
     }
 
     .mobile-nav .logo {
