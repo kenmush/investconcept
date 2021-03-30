@@ -142,16 +142,25 @@
 </div>
 <section class="works-area pt-100">
     <div class="container">
-        <div class="section-title text-center">
-            <h2
-                    style="font-family: 'Libre Baskerville', serif;font-weight: bold;margin-left: 10px;margin-bottom: 98px">
-                How It Works
-            </h2>
-        </div>
+
         <div class="row">
-            <div class="col-md-12  ">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <div class="row text-center">
+                        <div class="col-md-9 offset-2">
+                            <h2
+                                    style="font-family: 'Libre Baskerville', serif;font-weight: bold;margin-left: 10px;
+                                margin-bottom: 40px">
+                                How It Works
+                            </h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center ">
                 <div class="row">
-                    <div class="col-md-12 text-center">
+                    <div class="col-md-12 ">
                         <div class="col-md-9 offset-2 ">
                             <p style="font-family: 'Lato', sans-serif;font-size: 24px">
                                 <span class="font-weight-bold ">
@@ -176,7 +185,7 @@
                                 </div>
 
                                 <p class="mb-0">
-                                    With our Smart Asset Financing technology(&trade;) , we track these assets and
+                                    With our Smart Asset Financing technology&trade;, we track these assets and
                                     only
                                 </p>
                                 <p class="mb-0">
@@ -203,13 +212,13 @@
                                 <p class="mb-0">quantitatively and in the field to exacting standards of
                                     transparency,
                                 </p>
-                                <p>social impact, and scale-readiness.</p>
+                                <p style="margin-bottom: 41px">social impact, and scale-readiness.</p>
 
                                 <p class="mb-0">Creating wealth with the makers and the do-ers of
                                     tomorrow’s
                                     world,
                                     each</p>
-                                <p>new dollar counts towards a more equitable future for all.</p>
+                                <p style="margin-bottom: 41px">new dollar counts towards a more equitable future for all.</p>
                             </div>
 
                             <p class="float-left">
@@ -219,8 +228,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4 m-0 p-0">
-                        <img src="{{ asset('maneno.png') }}" alt="">
+                    <div class="col-md-12 m-0 p-0 d-flex justify-content-center">
+                        <img src="{{ asset('mockup.png') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -277,7 +286,8 @@
                                                     <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
                                                                 style="color: #ffffff; text-align: center;font-size:14px">
                                                             Impact investors like <span
-                                                                    style="color: #ee852d;">Eric Klose </span>who, after
+                                                                    style="color: #ee852d;">Eric Klose </span>who has
+                                                            dedicated his second career, after
                                                             success at Wayfair, dedicate<br>their second careers to
                                                             making
                                                             an impact in Africa</p>
@@ -315,11 +325,10 @@
 
                                                     <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
                                                                 style="color: #ffffff; text-align: center;font-size:14px">
-                                                            Smallholder farmers in Kenya like <span
+                                                            Farmers like <span
                                                                     style="color: #ee852d;">Nicholas Mutisya</span>
-                                                            afford to grow more through mechanized, solar-powered
-                                                            irrigation
-                                                            paid for as he makes more from his crops</p>
+                                                            are growing more and better through access to good quality solar irrigation assets
+                                                            </p>
                                                         <span style="font-size:12px; color:#B8DAE9; text-decoration:none;">
                                                         read more
                                                     </span>
@@ -356,7 +365,7 @@
                                                     <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
                                                                 style="color: #ffffff; text-align: center;font-size:14px">
                                                             Local entrepreneurs like <span style="color: #ee852d;">Kimberley Mwende </span>who
-                                                            take the initiative to start a safe drinking water business
+                                                            took the initiative to start a safe drinking water business
                                                             to
                                                             serve her community.</p>
                                                         <span style="font-size:12px; color:#B8DAE9">read more</span>
@@ -393,9 +402,9 @@
                                                                 style="text-align: center;font-size:14px;color:#ffffff;">
                                                             <span style="color: #ee852d;">Adama Kourouma </span>From
                                                             unpaid
-                                                            security guard to top driver, Adama is now able to supply
-                                                            for
-                                                            his family and well on his way to owning his own bike.</p>
+                                                            security guard to top driver, Adama is  able to
+                                                            provide for his family and is well on his way to owning his
+                                                            own bike.</p>
                                                         <p>
                                                             <span style="font-size: 12px; color: #b8dae9;">read more</span>
                                                         </p></div>
@@ -430,7 +439,7 @@
                                                     <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
                                                                 style="color: #fff; text-align: center;font-size:14px">
                                                             Successful entrepreneurs <span style="color: #ee852d;">Murtaza Hussain</span>
-                                                            who, after three successful startups of his own, give back
+                                                            who, after three successful startups of his own, gives back
                                                             by
                                                             investing in frontier markets to create opportunity for all.
                                                         </p>
@@ -467,7 +476,7 @@
                                                     <div class="el-content uk-panel uk-transition-fade uk-margin-top"><p
                                                                 style="color: #ffffff; text-align: center;font-size:14px">
                                                             Local entrepreneurs like <br><span style="color: #ee852d;">Benson Mbalanya&nbsp;</span>who
-                                                            are digitizing access to water&nbsp;<br>for his community.
+                                                            is digitizing access to water&nbsp;<br>for his community.
                                                         </p>
                                                         <p>
                                                             <span style="font-size: 12px; color: #b8dae9;">read more</span>
