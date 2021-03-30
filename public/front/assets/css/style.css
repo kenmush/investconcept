@@ -100,14 +100,14 @@ ul {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background-color: #F2F2F2;
+    background-color: #3D3D3C;
     -webkit-transition: width .5s ease-in-out, height .5s ease-in-out;
     transition: width .5s ease-in-out, height .5s ease-in-out;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: -1;
     border-radius: 5px;
-    opacity: 1
+    opacity: .3
 }
 
 .common-btn:hover {
