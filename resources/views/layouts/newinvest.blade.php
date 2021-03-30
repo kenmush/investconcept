@@ -32,6 +32,24 @@
     <script src="https://unpkg.com/d3@6/dist/d3.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/d3-sunburst@5/sunburst.js" type="text/javascript"></script>
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+    <style>
+        .newmenu span {
+            display: block;
+            background: #fff;
+            height: 4px;
+            margin-top: 30px;
+            position: relative;
+            top: -10px;
+            border-radius: 3px;
+        }
+
+        .hidemenu {
+            visibility: hidden
+        }
+        .showmenu{
+            visibility: visible;
+        }
+    </style>
 </head>
 <body>
 <div class="navbar-area sticky-top">
@@ -49,7 +67,7 @@
                          alt="Logo">
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                    <ul class="navbar-nav pull-right">
+                    <ul class="navbar-nav pull-right hidemenu" id="togglemenuitems">
                         <li class="nav-item">
                             <a href="#" class="nav-link">About Us</a>
                         </li>
@@ -66,18 +84,22 @@
                             <a href="#" class="nav-link">Contact Us</a>
                         </li>
                     </ul>
-                    <div class="side-nav">
+                    <div class="side-nav" style="display:flex">
                         <a class="consultant-btn" href="{{ route('login') }}">
                             Login
                         </a>
+                        <div style="width: 35px;height: 30px;margin-top: 10px;margin-left: 10px" onclick="toggleMenu()">
+                            <a onclick="toggleMenu()" class="pl-2 newmenu" id="toggleMenu">
+                                <span><span><span></span></span></span>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </nav>
         </div>
     </div>
 </div>
-
-
 <div class="banner-area ">
     <div class="banner-shape">
         <img src="https://untapped-global.com/wp-content/themes/yootheme/cache/header12-scaled-c1b91296.jpeg"
@@ -265,7 +287,9 @@
                                                         Smallholder farmers in Kenya like <span style="color: #ee852d;">Nicholas Mutisya</span>
                                                         afford to grow more through mechanized, solar-powered irrigation
                                                         paid for as he makes more from his crops</p>
-                                                    <span style="font-size:12px; color:#B8DAE9 text-decoration:none;">read more</span>
+                                                    <span style="font-size:12px; color:#B8DAE9; text-decoration:none;">
+                                                        read more
+                                                    </span>
                                                 </div>
 
                                             </div>
@@ -638,6 +662,18 @@
             ["account-account-end", 31],
         ]);
     })();
+</script>
+<script type="text/javascript">
+    function toggleMenu(){
+        let toggle = document.getElementById("togglemenuitems");
+        if (toggle.classList.contains("hidemenu")) {
+            toggle.classList.remove("hidemenu");
+        }else {
+            toggle.classList.add("hidemenu");
+        }
+    }
+
+    // toggle.classList.add("showmenu");
 </script>
 </body>
 </html>

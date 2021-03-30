@@ -173,5 +173,6 @@
     <orderEntry type="module" module-name="framework" />
     <orderEntry type="library" name="LineIcons" level="application" />
     <orderEntry type="library" name="swiper" level="application" />
+    <orderEntry type="library" name="d3" level="application" />
   </component>
 </module>
