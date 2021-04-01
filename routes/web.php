@@ -1,7 +1,6 @@
 <?php
 
 use App\Asset;
-use Symfony\Component\Process\Process;
 
 Route::get('/', 'WelcomePageController')
         ->middleware('cache.headers:public;max_age=43200;etag');
