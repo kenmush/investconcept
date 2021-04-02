@@ -31,10 +31,26 @@ class Investor
 
         return json_decode((string) $response->getBody(), true);
     }
+    protected function requestopapis($method, $path, array $parameters = [])
+    {
+        $response = (new Client)->{$method}($this->opapipath().ltrim($path, '/'), [
+                'headers' => [
+                        'Authorization' => 'Bearer '.'X-Mutisya',
+                        'Content-Type'  => 'application/json',
+                ],
+                'json'    => $parameters,
+        ]);
+
+        return json_decode((string) $response->getBody(), true);
+    }
 
     public function path()
     {
         return config('investordashboard.root_path');
+    }
+    public function opapipath()
+    {
+        return config('investordashboard.op_path');
     }
 
     public function checkFirstTimeLogin($api_id)
@@ -318,6 +334,10 @@ class Investor
     public function getInvestorAssets($investorID)
     {
         return $this->request('GET', 'portal/investor/portfolio/'.$investorID.'/');
+    }
+    public function getInvestorAssetsfromOPAPI($investorID)
+    {
+        return $this->requestopapis('GET', 'investor/portfolio/'.$investorID);
     }
 
     public function investorByID($investorId)

@@ -8,6 +8,42 @@
                 <p class="mb-0">Welcome, {{ auth()->user()->name }}!</p>
             </div>
         </div>
+        {{--        <div class="row justify-content-center">--}}
+        {{--            <div id="container" style="width: 600px; height: 600px;"></div>--}}
+        {{--        </div>--}}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="widget-stat card">
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-md-4 d-sm-none d-xs-none d-md-block d-lg-block">
+                                <img src="{{ asset('settings.jpg') }}" alt="">
+                            </div>
+                            <div class="col-md-8 d-flex flex-col justify-content-center align-items-center">
+                                <div>
+                                    <h3 style="font-size: 40px; font-weight: 600; margin: 0; line-height: 1.2;">
+                                        {{ $stats['total_invested'] }}
+                                    </h3>
+                                    <p class="mt-4">Entrepreneurs Created</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{{--            <div class="col-md-6">--}}
+{{--                <div class="widget-stat card">--}}
+{{--                    <div class="card-body p-4">--}}
+{{--                        <div class="d-flex align-items-center">--}}
+{{--                            <h3 style="font-size: 40px; font-weight: 600; margin: 0; line-height: 1.2;">--}}
+{{--                                {{ $stats['total_invested'] }}--}}
+{{--                            </h3>--}}
+{{--                            <p class="mt-4">Entrepreneurs Created</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+        </div>
         <div class="row justify-content-center">
             <div class="col-xl-6 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="widget-stat card">
@@ -222,8 +258,8 @@
                     <div class="card-body">
                         <div id="app">
                             <googlemap></googlemap>
-{{--                            <map-component-with-details :investorid='@json(auth()->user()->id)'--}}
-{{--                                                        :categories='@json($assets)'></map-component-with-details>--}}
+                            {{--                            <map-component-with-details :investorid='@json(auth()->user()->id)'--}}
+                            {{--                                                        :categories='@json($assets)'></map-component-with-details>--}}
 
                         </div>
                     </div>

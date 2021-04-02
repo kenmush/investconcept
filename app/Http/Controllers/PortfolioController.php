@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Asset;
 use App\Services\Investor;
+use Exception;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
+use function auth;
+use function dd;
 
 class PortfolioController extends Controller
 {
@@ -15,10 +19,11 @@ class PortfolioController extends Controller
      */
     public function index()
     {
+        View::share('balance', (new Investor())->getInvestorAssetsfromOPAPI(auth()->user()->api_id)['portfolio_balance'] ?? 0);
         return view('portfolio', [
                 'assets'      => (new Investor())->getAssetCategories() ?? [],
                 'tableAssets' => (new Investor())->getInvestorAssets(auth()->user()->api_id)['investments'] ?? [],
-                'stats'       => (new Investor())->getInvestorAssets(auth()->user()->api_id) ?? [],
+                'stats'       => (new Investor())->getInvestorAssetsfromOPAPI(auth()->user()->api_id) ?? [],
         ]);
     }
 

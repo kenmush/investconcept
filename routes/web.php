@@ -74,3 +74,7 @@ Route::get('engage', function () {
 Route::get('terms', function () {
     return view('terms');
 })->middleware('cache.headers:public;max_age=43200;etag');
+
+Route::get('landing', function () {
+    return view('tailwind');
+})->middleware('cache.headers:public;max_age=43200;etag');

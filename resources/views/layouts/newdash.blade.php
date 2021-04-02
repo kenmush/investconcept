@@ -15,26 +15,42 @@
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-sunburst.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXH7F49VN2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'G-KXH7F49VN2');
     </script>
     <!-- Hotjar Tracking Code for www.invest.untapped-global.com -->
     <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:2308593,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {hjid: 2308593, hjsv: 6};
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
             a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-
+    <style>
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -97,17 +113,7 @@
                     <ul class="navbar-nav header-right">
                         <li class="nav-item dropdown notification_dropdown">
                             <a class="nav-link dz-fullscreen primary" href="#">
-                                <svg id="Capa_1" enable-background="new 0 0 482.239 482.239" height="22"
-                                     viewBox="0 0 482.239 482.239" width="22" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="m0 17.223v120.56h34.446v-103.337h103.337v-34.446h-120.56c-9.52 0-17.223 7.703-17.223 17.223z"
-                                          fill=""/>
-                                    <path d="m465.016 0h-120.56v34.446h103.337v103.337h34.446v-120.56c0-9.52-7.703-17.223-17.223-17.223z"
-                                          fill=""/>
-                                    <path d="m447.793 447.793h-103.337v34.446h120.56c9.52 0 17.223-7.703 17.223-17.223v-120.56h-34.446z"
-                                          fill=""/>
-                                    <path d="m34.446 344.456h-34.446v120.56c0 9.52 7.703 17.223 17.223 17.223h120.56v-34.446h-103.337z"
-                                          fill=""/>
-                                </svg>
+                                ${{ $balance ?? 0 }}
                             </a>
                         </li>
                         <li class="nav-item dropdown header-profile">
@@ -303,6 +309,50 @@
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
+</script>
+<script>
+    anychart.onDocumentReady(function () {
+
+        // create data
+        var data = [
+            {
+                name: "MotorBikes", children: [
+                    {name: "Asaak"},
+                    {name: "Zembo"},
+                ]
+            },
+            {
+                name: "Water ATMS", children: [
+                    {name: "Susteq"},
+                    {name: "AquaBlu"}
+                ]
+            },
+            {name: "Irigation Pumps",children: [
+                    {name: "MvuaPap!"},
+                ]
+            },
+        ];
+
+        // create a chart and set the data
+        var chart = anychart.sunburst(data, "as-tree");
+
+        // set the inner radius
+        chart.innerRadius(100);
+
+        // create and configure a label
+        var label = anychart.standalones.label();
+        label.text("$130,000 ");
+        label.width("100%");
+        label.height("100%");
+        label.fontColor("#064d77");
+        label.fontSize(12);
+        label.fontWeight(600);
+        label.hAlign("center");
+        label.vAlign("middle");
+        chart.center().content(label);
+        chart.container("container");
+        chart.draw();
+    });
 </script>
 </body>
 </html>

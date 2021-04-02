@@ -75,20 +75,20 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav pull-right hidemenu" id="togglemenuitems">
                         <li class="nav-item">
-                            <a href="{{ route('register') }}" class="nav-link">About Us</a>
+                            <a href="https://untapped-global.com/mission/#mission" class="nav-link">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('register') }}" class="nav-link">How It Works</a>
+                            <a href="https://untapped-global.com/process/" class="nav-link">How It Works</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('register') }}" class="nav-link">Engage</a>
+                            <a href="https://untapped-global.com/engage/" class="nav-link">Engage</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('register') }}"
+                            <a href="https://untapped-global.com/the-5-2-trillion-vc-blindspot/"
                                class="nav-link">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('register') }}" class="nav-link">Contact Us</a>
+                            <a href="https://untapped-global.com/contact-2/" class="nav-link">Contact Us</a>
                         </li>
                     </ul>
                     <div class="side-nav" style="display:flex">
@@ -328,7 +328,7 @@
                                                             Farmers like <span
                                                                     style="color: #ee852d;">Nicholas Mutisya</span>
                                                             are growing more and better through access to good quality solar irrigation assets
-                                                            </p>
+                                                        </p>
                                                         <span style="font-size:12px; color:#B8DAE9; text-decoration:none;">
                                                         read more
                                                     </span>
@@ -584,7 +584,7 @@
             <div class="col-sm-6 col-lg-4">
                 <div class="footer-item">
                     <div class="footer-logo">
-                        <a class="logo" href="/">
+                        <a class="logo" href="#">
                             <img src="https://untapped-global.com/wp-content/themes/yootheme/cache/untapped-logo-website1-623de87f.png"
                                  alt="Logo">
                         </a>
@@ -597,17 +597,17 @@
                             <li>
                                 {{--                                <i class='bx bx-current-location'></i>--}}
                                 <span>Kenya:</span>
-                                <a href="{{ route('register') }}">iHub, Senteu Plaza, Kilimani, Nairobi.</a>
+                                <a href="https://untapped-global.com/contact-2/">iHub, Senteu Plaza, Kilimani, Nairobi.</a>
                             </li>
                             <li>
                                 {{--                                <i class='bx bx-current-location'></i>--}}
                                 <span>USA:</span>
-                                <a href="{{ route('register') }}">353 Sacramento St., San Francisco.</a>
+                                <a href="https://untapped-global.com/contact-2/">353 Sacramento St., San Francisco.</a>
                             </li>
                             <li>
                                 {{--                                <i class='bx bx-current-location'></i>--}}
                                 <span>Mali:</span>
-                                <a href="{{ route('register') }}">Hamdallay,Bamako.</a>
+                                <a href="https://untapped-global.com/contact-2/">Hamdallay,Bamako.</a>
                             </li>
                         </ul>
                     </div>
@@ -619,17 +619,17 @@
                         <h3>Quick Links</h3>
                         <ul>
                             <li>
-                                <a href="{{ route('register') }}">Untapped Global</a>
+                                <a href="https://untapped-global.com">Untapped Global</a>
                             </li>
                             <li>
-                                <a href="{{ route('register') }}">Untapped Engage</a>
+                                <a href="https://untapped-global.com/engage/">Untapped Engage</a>
                             </li>
                             <li>
-                                <a href="{{ route('register') }}">The Nest</a>
+                                <a href="https://www.findthenest.org/">The Nest</a>
                             </li>
 
                             <li>
-                                <a href="{{ route('register') }}">Blog</a>
+                                <a href="https://untapped-global.com/the-5-2-trillion-vc-blindspot/">Blog</a>
                             </li>
 
                         </ul>
@@ -659,10 +659,10 @@
                         <h3>What We Do</h3>
                         <ul>
                             <li>
-                                <a href="{{ route('register') }}">The Nest</a>
+                                <a href="https://www.findthenest.org/">The Nest</a>
                             </li>
                             <li>
-                                <a href="{{ route('register') }}">Smart Asset Financing</a>
+                                <a href="https://untapped-global.com/the-5-2-trillion-vc-blindspot/">Smart Asset Financing</a>
                             </li>
 
                         </ul>
