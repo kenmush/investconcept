@@ -11,7 +11,7 @@
         {{--        <div class="row justify-content-center">--}}
         {{--            <div id="container" style="width: 600px; height: 600px;"></div>--}}
         {{--        </div>--}}
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="widget-stat card">
                     <div class="card-body p-4">
@@ -22,7 +22,7 @@
                             <div class="col-md-8 d-flex flex-col justify-content-center align-items-center">
                                 <div>
                                     <h3 style="font-size: 40px; font-weight: 600; margin: 0; line-height: 1.2;">
-                                        {{ $stats['total_invested'] }}
+                                        {{ $stats['number_of_entrepreneurs'] }}
                                     </h3>
                                     <p class="mt-4">Entrepreneurs Created</p>
                                 </div>
@@ -31,37 +31,43 @@
                     </div>
                 </div>
             </div>
-{{--            <div class="col-md-6">--}}
-{{--                <div class="widget-stat card">--}}
-{{--                    <div class="card-body p-4">--}}
-{{--                        <div class="d-flex align-items-center">--}}
-{{--                            <h3 style="font-size: 40px; font-weight: 600; margin: 0; line-height: 1.2;">--}}
-{{--                                {{ $stats['total_invested'] }}--}}
-{{--                            </h3>--}}
-{{--                            <p class="mt-4">Entrepreneurs Created</p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
-                <div class="widget-stat card">
-                    <div class="card-body p-4">
-                        <div class="media ai-icon">
-									<span class="mr-3 bgl-primary text-primary">
-                                        <i style="    color: #FF8377;" class="fa fa-dollar"></i>
-									</span>
-                            <div class="media-body">
-                                <p class="mb-0">Amount Invested</p>
-                                <h3 class="mb-0 text-black"><span class="counter ml-0">
-                                        {{ $stats['total_invested'] }}</span></h3>
-                                {{--                                <small>24 MONTHS LEFT</small>--}}
+            <div class="col-md-3">
+                <div class="widget-stat card ">
+                    <div class="card-body  d-flex">
+                        <div class=" offeset-md-1 d-flex flex-col justify-content-center
+                            align-items-center">
+                            <div class="">
+                                <h3 style="font-size: 40px; font-weight: 600; margin: 0; line-height: 1.2;">
+                                    {{ $stats['social_impact'] }}
+                                    <sub class="text-success" style="font-size: small">
+                                        <i data-toggle="tooltip"
+                                           class="fa fa-caret-up text-success"
+                                           style="rgba(37, 99, 235, 1)"
+                                           data-placement="top"
+                                           title="Local value creation from your investment"> </i>
+                                        + 2.6%
+                                    </sub>
+                                </h3>
+
+                                <p class="mt-4">
+                                    Social Impact
+                                    <sup>
+                                        <i data-toggle="tooltip"
+                                           class="fa fa-info-circle text-blue-300"
+                                           style="rgba(37, 99, 235, 1)"
+                                           data-placement="top"
+                                           title="Local value creation from your investment"> </i>
+                                    </sup>
+
+
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row justify-content-center">
             <div class="col-xl-6 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
                 <div class="widget-stat card">
                     <div class="card-body p-4">
@@ -73,7 +79,7 @@
 
 									</span>
                             <div class="media-body">
-                                <p class="mb-0">Portfolio Balance</p>
+                                <p class="mb-0">Account Balance</p>
                                 <h3 class="mb-0 text-black"><span class="counter ml-0">
                                         {{ $stats['portfolio_balance'] }}</span></h3>
                                 {{--                                <small>24 MONTHS LEFT</small>--}}
@@ -90,7 +96,7 @@
 								<i style="    color: #FF8377;" class="fa fa-dollar"></i>
 									</span>
                             <div class="media-body">
-                                <p class="mb-0">Interest Earned</p>
+                                <p class="mb-0">Interest Accrued</p>
                                 <h3 class="mb-0 text-black">+<span
                                             class="counter ml-0">{{ $stats['total_interest'] }}</span></h3>
                                 <small>9% ANNUALIZED RETURN</small>
@@ -110,81 +116,10 @@
 
 									</span>
                             <div class="media-body">
-                                <p class="mb-0">Balance available to withdraw</p>
+                                <p class="mb-0">Currently Withdrawable</p>
                                 <h3 class="mb-0 text-black"><span
                                             class="counter ml-0">{{ $stats['total_balance'] }}</span></h3>
                                 <small>16 MONTHS TO MATURITY</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
-                <div class="widget-stat card">
-                    <div class="card-body p-4">
-                        <div class="media ai-icon">
-                                <span class="mr-3 bgl-primary text-primary">
-                                    <!-- <i class="ti-user"></i> -->
-                                    <i style="    color: #FF8377;" class="fa fa-bar-chart"></i>
-                                    </span>
-                            <div class="media-body">
-                                <p class="mb-0">Entrepreneurs Created</p>
-
-                                <h3 class="mb-0 text-black"><span
-                                            class="counter ml-0">
-                                        {{ $stats['number_of_entrepreneurs'] ?? '' }}
-                                    </span>
-                                </h3>
-                                {{--                                <small>CREATED PER DOLLAR INVESTED</small>--}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
-                <div class="widget-stat card">
-                    <div class="card-body p-4">
-                        <div class="media ai-icon">
-									<span class="mr-3 bgl-primary text-primary">
-										 <i style="    color: #FF8377;" class="fa fa-dollar"></i>
-									</span>
-                            <div class="media-body">
-                                <p class="mb-0">Impact
-
-                                    <i data-toggle="tooltip"
-                                       class="fa fa-info-circle text-blue-300"
-                                       style="rgba(37, 99, 235, 1)"
-                                       data-placement="top"
-                                       title="Local value creation from your investment">
-                                    </i>
-                                </p>
-                                <h3 class="mb-0 text-black"><span
-                                            class="counter ml-0">{{ $stats['total_revenue'] }}</span></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-xxl-3 col-lg-6 col-md-6 col-sm-6">
-                <div class="widget-stat card">
-                    <div class="card-body p-4">
-                        <div class="media ai-icon">
-                                <span class="mr-3 bgl-primary text-primary">
-                                    <!-- <i class="ti-user"></i> -->
-                                    <i style="    color: #FF8377;" class="fa fa-bar-chart"></i>
-                                    </span>
-                            <div class="media-body">
-                                <p class="mb-0">Leverage
-                                    <i data-toggle="tooltip"
-                                       class="fa fa-info-circle text-blue-300"
-                                       style="rgba(37, 99, 235, 1)"
-                                       data-placement="top"
-                                       title="Local value creation per dollar invested since 1 October 2020.">
-                                    </i>
-                                </p>
-
-                                <h3 class="mb-0 text-black"><span
-                                            class="counter ml-0">{{ $stats['total_leverage'] }}</span>x</h3>
                             </div>
                         </div>
                     </div>
