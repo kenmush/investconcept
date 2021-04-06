@@ -1,6 +1,7 @@
 <?php
 
 use App\Asset;
+use App\Services\Investor;
 
 Route::get('/', 'WelcomePageController')
         ->middleware('cache.headers:public;max_age=43200;etag');
@@ -58,7 +59,8 @@ Auth::routes();
 Route::get('moto-taxis', 'MotoTaxisController')->middleware('cache.headers:public;max_age=43200;etag');
 Route::get('water-atms', 'WaterAtms');
 Route::get('irrigation-pumps', 'IrrigationPumps');
-Route::get('questionnaire', 'QuestinnareController')->name('questionarre')->middleware('cache.headers:public;max_age=43200;etag');
+Route::get('questionnaire',
+        'QuestinnareController')->name('questionarre')->middleware('cache.headers:public;max_age=43200;etag');
 Route::post('questionnaire', 'UploadQuestionaire')->name('uploadquestionaire');
 
 Route::post('registeraninvestor', 'RegisterInvestorController')->name('registeraninvestor');
@@ -78,3 +80,17 @@ Route::get('terms', function () {
 Route::get('landing', function () {
     return view('tailwind');
 })->middleware('cache.headers:public;max_age=43200;etag');
+
+Route::post('passwordreset', function (\Illuminate\Http\Request $request) {
+    try {
+        $response = (new Investor())->resetPassword($request->email);
+        return back()->with([
+                'data' => $response['detail']
+        ]);
+    } catch (Exception $exception) {
+        return back()->with([
+                'data' => "We couldn't reset your password. Kindly check if your email is correct."
+        ]);
+    }
+
+})->name('reset.password');

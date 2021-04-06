@@ -38,6 +38,9 @@
 
 
 
+
+
+
     </script>
 </head>
 <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled page-loading">
@@ -47,45 +50,56 @@
             <!--begin: Aside Container-->
             <div class="d-flex flex-column-fluid flex-column justify-content-between py-9 px-7 py-lg-13 px-lg-35">
                 <div class="d-flex flex-column-fluid flex-column flex-center">
+
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
                     <div class="login-form login-signin">
-                        <form class="form" novalidate="novalidate" method="post" action="{{ route('password.email') }}">
+                        <form class="form" novalidate="novalidate" method="post" action="{{ route('reset.password') }}">
                         @csrf
                         <!--begin::Title-->
                             <div class="text-center pb-8" style="margin-bottom: 3rem">
                                 <img src="{{ asset('untappedlogo.png') }}" alt="Untapped Logo">
                             </div>
-
-                            <div class="form-group">
-                                <label class="font-size-h6 font-weight-bolder text-dark">{{ __('E-Mail Address') }}</label>
-                                <input class="form-control
+                            @if(session('data'))
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="alert alert-success" role="alert">
+                                            <strong>{{ session('data') }}</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            @else
+                                <div class="form-group">
+                                    <label class="font-size-h6 font-weight-bolder text-dark">{{ __('E-Mail Address') }}</label>
+                                    <input class="form-control
                                 @error('email') is-invalid @enderror
-                                        form-control-solid h-auto py-7 px-6 rounded-lg" type="text"
-                                       name="email" id="email"
-                                       value="{{ old('email') }}"
-                                       placeholder="Example@untapped-global.com"
-                                       autocomplete="off"/>
-                                @error('email')
-                                <span class="invalid-feedback" role="alert">
+                                            form-control-solid h-auto py-7 px-6 rounded-lg" type="text"
+                                           name="email" id="email"
+                                           value="{{ old('email') }}"
+                                           placeholder="Example@untapped-global.com"
+                                           autocomplete="off"/>
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                            </div>
+                                    @enderror
+                                </div>
 
-                            <div class="text-center pt-2">
-                                <button id="kt_login_signin_submit" style="color:white;background-color: #98A3A9;
+                                <div class="text-center pt-2">
+                                    <button id="kt_login_signin_submit" style="color:white;background-color: #98A3A9;
                                  border-color:#98A3A9;border-radius: 4rem;
 " class="btn font-weight-bolder font-size-h6 px-8 py-4 my-3 shadow">
                                     <span style="padding-right: 50px;padding-left: 50px;">
                                     {{ __('Send Password Reset Link') }}
                                     </span>
-                                </button>
-                            </div>
-                            <!--end::Action-->
+                                    </button>
+                                </div>
+                                <!--end::Action-->
+                            @endif
+
                         </form>
                     </div>
 
