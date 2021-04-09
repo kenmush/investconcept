@@ -167,20 +167,8 @@
                                         <span></span>6 month maturity with 5-6% annual interest</label>
 
                                     <label class="checkbox">
-                                        <input type="checkbox" checked="checked" name="Checkboxes1">
+                                        <input type="checkbox" name="Checkboxes1">
                                         <span></span>12 month maturity with 7-9% annual interest, paid quarterly</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="checkbox-inline">
-                                    <label class="checkbox checkbox-outline m-0 font-size-h6 font-weight-bolder text-muted
-                                pt-5">
-                                        <input type="checkbox" name="agree" id="agree">
-                                        <span></span>
-                                        I agree to the &nbsp;<a target="_blank" href="/terms">Terms of service </a>&nbsp;and
-                                        Privacy
-                                        Policy
-                                    </label>
                                 </div>
                             </div>
 
@@ -189,24 +177,37 @@
 
 
                         <div class="pb-5" data-wizard-type="step-content">
-
-                            <div class="pt-lg-0 pt-5 pb-15">
-                                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">
-                                    Questionnaire
-                                </h3>
-                            </div>
                             <div class="row">
                                 <input type="hidden" name="investor" value="">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <!--Label: Legal Name of Individual, Attributes:legal_name -->
                                     <div class="form-group">
-                                        <label for="legal_name" class="font-size-h6 font-weight-bolder text-dark">Legal
-                                            Name of Individual</label>
-                                        <input type="text" id="legal_name"
-                                               aria-describedby="legal_name-help"
-                                               name="legal_name" value="{{ old('legal_name') }}"
-                                               class="form-control @error('legal_name') is-invalid @enderror"
-                                               placeholder="Legal Name of Individual" required>
+                                        <label for="legal_name" class="font-size-h6 font-weight-bolder text-dark">Which
+                                            of assets financed by Untapped interest you most?</label>
+                                        <div class="checkbox-list">
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>Off grid refrigeration</label>
+
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>MedTech </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>AgTech </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>AgTech </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>Mobility </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>Electric Mobility </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>Water infrastructure </label>
+                                        </div>
                                         @error('legal_name')
                                         <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -214,211 +215,32 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <!--Label: Where are you considered an accredited investor?, Attributes:investor_location -->
+                                <div class="col-md-12">
+                                    <!--Label: Legal Name of Individual, Attributes:legal_name -->
                                     <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark"
-                                               for="investor_location">Where are you considered an accredited
-                                            investor?</label>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location" name="investor_location"
-                                                   class="custom-control-input" value="Employment">
-                                            <label class="custom-control-label" for="investor_location">Europe</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location1" name="investor_location"
-                                                   class="custom-control-input" value="USA Taxable">
-                                            <label class="custom-control-label" for="investor_location1">USA
-                                                (Taxable)</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location2" name="investor_location"
-                                                   class="custom-control-input" value="USA (Tax exempt)">
-                                            <label class="custom-control-label" for="investor_location2">USA (Tax
-                                                exempt)</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location3" name="investor_location"
-                                                   class="custom-control-input" value="USA Taxable">
-                                            <label class="custom-control-label" for="investor_location3">Other</label>
-                                        </div>
+                                        <label for="legal_name" class="font-size-h6 font-weight-bolder text-dark">
+                                            What geographies are interesting to you?
+                                        </label>
+                                        <div class="checkbox-list">
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>East Africa</label>
 
-                                        @error('investor_location')
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>West Africa </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>Southern Africa </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>North Africa </label>
+                                        </div>
+                                        @error('legal_name')
                                         <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                                         @enderror
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!--Label: Nationality, Attributes:nationality -->
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="nationality">Nationality</label>
-
-                                        <select name="nationality" id="nationality" class="form-control select
-@error('nationality') is-invalid @enderror">
-                                            @foreach($countries as $country=>$key)
-                                                <option value="{{ $key['name']['common'] ?? '' }}"> {{ $key['name']['common'] ?? '' }}</option>
-                                            @endforeach
-                                        </select>
-
-                                        @error('nationality')
-                                        <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!--Label: Confirm your source of wealth, Attributes:source_of_wealth -->
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="source_of_wealth">Confirm
-                                            your source of wealth</label>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth1" name="source_of_wealth"
-                                                   class="custom-control-input" value="Employment">
-                                            <label class="custom-control-label"
-                                                   for="source_of_wealth1">Employment</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth2" name="source_of_wealth"
-                                                   class="custom-control-input" value="Investments">
-                                            <label class="custom-control-label"
-                                                   for="source_of_wealth2">Investments</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth3" name="source_of_wealth"
-                                                   class="custom-control-input" value="Sales of Business">
-                                            <label class="custom-control-label" for="source_of_wealth3">Sales of
-                                                Business</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth4" name="source_of_wealth"
-                                                   class="custom-control-input" value="other">
-                                            <label class="custom-control-label" for="source_of_wealth4">Other</label>
-                                        </div>
-
-                                        @error('source_of_wealth')
-                                        <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!--Label: Date of Birth, Attributes:date_of_birth -->
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="date_of_birth">Date
-                                            of Birth</label>
-                                        <input type="date" id="date_of_birth"
-                                               aria-describedby="date_of_birth-help"
-                                               name="date_of_birth" value="{{ old('date_of_birth') }}"
-                                               class="form-control @error('date_of_birth') is-invalid @enderror"
-                                               placeholder="Date of Birth" required>
-                                        @error('date_of_birth')
-                                        <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!--Label: Authorizing, Attributes:authorization -->
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="authorization">Authorization</label>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio1" name="authorization"
-                                                   class="custom-control-input" value="10% or more shareholder">
-                                            <label class="custom-control-label" for="customRadio1">10% or more
-                                                shareholder</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio2" name="authorization"
-                                                   class="custom-control-input"
-                                                   value="Controlling person">
-                                            <label class="custom-control-label" for="customRadio2">Controlling
-                                                person</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio3" name="authorization"
-                                                   class="custom-control-input"
-                                                   value="Authorized Signatory">
-                                            <label class="custom-control-label" for="customRadio3">Authorized
-                                                Signatory</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio4" name="authorization"
-                                                   class="custom-control-input"
-                                                   value="Director or Officer">
-                                            <label class="custom-control-label" for="customRadio4">Director or
-                                                Officer</label>
-                                        </div>
-
-                                        @error('authorization')
-                                        <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <!-- address-line1 input-->
-                                    <div class="control-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark">Address Line 1</label>
-                                        <div class="controls">
-                                            <input id="address-line1" name="address-line1" type="text"
-                                                   placeholder="address line 1"
-                                                   class="form-control @error('address-line1') is-invalid @enderror">
-                                            <p class="help-block">Street address, P.O. box, company name, c/o</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!-- address-line2 input-->
-                                    <div class="control-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark">Address Line 2</label>
-                                        <div class="controls">
-                                            <input id="address-line2" name="address-line2" type="text"
-                                                   placeholder="address line 2"
-                                                   class="form-control @error('address-line2') is-invalid @enderror">
-                                            <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!-- city input-->
-                                    <div class="control-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark">City / Town</label>
-                                        <div class="controls">
-                                            <input id="city" name="city" type="text" placeholder="city"
-                                                   class="form-control @error('city') is-invalid @enderror">
-                                            <p class="help-block"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="control-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark">State / Province /
-                                            Region</label>
-                                        <div class="controls">
-                                            <input id="region" name="region" type="text"
-                                                   placeholder="state / province / region"
-                                                   class="form-control @error('region') is-invalid @enderror">
-                                            <p class="help-block"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="control-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark">Zip / Postal
-                                            Code</label>
-                                        <div class="controls">
-                                            <input id="postal-code" name="postal-code" type="text"
-                                                   placeholder="zip or postal code"
-                                                   class=" form-control @error('postal-code') is-invalid @enderror">
-                                            <p class="help-block"></p>
-                                        </div>
                                     </div>
                                 </div>
 
