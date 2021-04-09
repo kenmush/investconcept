@@ -2,6 +2,7 @@
 
 use App\Asset;
 use App\Services\Investor;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'WelcomePageController')
         ->middleware('cache.headers:public;max_age=43200;etag');

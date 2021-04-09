@@ -38,7 +38,7 @@
                             align-items-center">
                             <div class="">
                                 <h3 style="font-size: 40px; font-weight: 600; margin: 0; line-height: 1.2;">
-                                    {{ $stats['social_impact'] }}
+                                    ${{ $stats['social_impact'] }}
                                     <sub class="text-success" style="font-size: small">
                                         <i data-toggle="tooltip"
                                            class="fa fa-caret-up text-success"
