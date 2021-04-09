@@ -116,71 +116,28 @@
             <div class="d-flex flex-row-fluid flex-center">
 
                 <div class="login-form login-form-signup">
-
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="pb-10 pb-lg-15">
+                                <h3 class="font-weight-bolder text-dark display5">Welcome to Untapped</h3>
+                                <div class="text-muted font-weight-bold font-size-h4">Join a sophisticated community of
+                                    investors engaged in frontier markets. We’re excited to have you on board.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <form action="{{ route('registeraninvestor') }}" class="form" novalidate="novalidate"
                           id="kt_login_signup_form"
                           enctype="multipart/form-data" method="POST">
                         @csrf
                         <div class="pb-5" data-wizard-type="step-content" data-wizard-state="current">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark">First Name</label>
-                                        <input type="text"
-                                               class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
-                                               name="fname" id="fname" placeholder="First Name"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark">Last Name</label>
-                                        <input type="text"
-                                               class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
-                                               id="lname"
-                                               name="lname" placeholder="Last Name"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark">Email</label>
-                                        <input type="text"
-                                               id="email"
-                                               autocomplete="off"
-                                               class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
-                                               name="email" placeholder="Your email"/>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark">Password</label>
-                                        <input type="password"
-                                               id="password"
-                                               autocomplete="off"
-                                               class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
-                                               name="password" placeholder="Your password"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark">Confirm
-                                            Password</label>
-                                        <input type="password"
-                                               id="passwordconfirm"
-                                               autocomplete="off"
-                                               class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
-                                               name="passwordconfirm" placeholder="Confirm Password"/>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <div class="d-flex justify-content-between mt-n5">
-                                    <label class="font-size-h6 font-weight-bolder text-dark pt-5">Are you an
-                                        accredited investor?</label>
+                                    <label class="font-size-h6 font-weight-bolder text-dark pt-5">
+                                        Have you invested in frontier markets before?
+                                        <br>
+                                        Are you interested in earning fixed income for your investment?
+                                    </label>
                                 </div>
                                 <div class="radio-inline mt-2">
                                     <label class="radio">
@@ -197,24 +154,21 @@
 
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <div class="d-flex justify-content-between mt-n5">
                                     <label class="font-size-h6 font-weight-bolder text-dark pt-5">
-                                        What type of an investor will you be investing as?
+                                        Which investment instruments interest you?
                                     </label>
                                 </div>
-                                <div class="radio-inline mt-2">
-                                    <label class="radio">
-                                        <input type="radio" value="Individual" name="accredited_type" checked>
-                                        <span></span>
-                                        Individual
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" value="Institution" name="accredited_type">
-                                        <span></span>
-                                        Institution
-                                    </label>
+                                <div class="checkbox-list">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="Checkboxes1">
+                                        <span></span>6 month maturity with 5-6% annual interest</label>
 
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked="checked" name="Checkboxes1">
+                                        <span></span>12 month maturity with 7-9% annual interest, paid quarterly</label>
                                 </div>
                             </div>
                             <div class="form-group">
