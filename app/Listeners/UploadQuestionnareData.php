@@ -6,6 +6,7 @@ use App\Events\UploadInvestorDocuments;
 use App\Services\Investor;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
+use function info;
 
 class UploadQuestionnareData implements ShouldQueue
 {
@@ -37,8 +38,18 @@ class UploadQuestionnareData implements ShouldQueue
 
                 ];
         try {
-            return (new Investor())->updateQuestionaireData($data, $event->investor['id']);
+            info("HERE",[
+                    'Uploading data'
+            ]);
+            $data = (new Investor())->updateQuestionaireData($data, $event->investor['id']);
+            info("Questionnare data", [
+                    $data
+            ]);
+            return $data;
         } catch (\Exception $e) {
+            info("Questionnare data", [
+                    $e->getMessage()
+            ]);
             return;
         }
     }

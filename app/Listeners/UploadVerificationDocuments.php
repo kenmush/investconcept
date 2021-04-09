@@ -6,6 +6,7 @@ use App\Events\UploadInvestorDocuments;
 use App\Services\Investor;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Storage;
+use function info;
 
 class UploadVerificationDocuments implements ShouldQueue
 {
@@ -27,8 +28,15 @@ class UploadVerificationDocuments implements ShouldQueue
             ];
         }
         try {
-            return (new Investor())->updateVerificationData($data, $event->investor['id']);
+            $data = (new Investor())->updateVerificationData($data, $event->investor['id']);
+            info("Upload", [
+                    $data
+            ]);
+            return $data;
         } catch (\Exception $e) {
+            info("Questionnare data", [
+                    $e->getMessage()
+            ]);
             return back()->withErrors(
                     ['error' => 'There were errors uploading and verifying your documents.']
             );

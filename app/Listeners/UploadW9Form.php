@@ -8,6 +8,7 @@ use App\Services\Investor;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use function info;
 
 class UploadW9Form implements ShouldQueue
 {
@@ -23,7 +24,11 @@ class UploadW9Form implements ShouldQueue
         ];
 
         try {
-            return (new Investor())->updateW9Form($data, $event->investor['id']);
+            $data = (new Investor())->updateW9Form($data, $event->investor['id']);
+            info("Questionnare data", [
+                    $data
+            ]);
+            return $data;
         } catch (\Exception $e) {
             info('error in W9', [
                     $e->getMessage(),
