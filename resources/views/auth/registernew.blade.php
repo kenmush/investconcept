@@ -19,7 +19,7 @@
     <link href="assets/css/style.bundle.css?v=7.0.6" rel="stylesheet" type="text/css"/>
 
     <link rel="stylesheet" href="{{ asset('dropzone/basic.css') }}">
-    <link rel="shortcut icon" href="{{ asset('Pyramid-new.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
 </head>
 <!--end::Head-->
@@ -36,12 +36,70 @@
         <div class="login-aside d-flex flex-column flex-row-auto" style="background-image: url({{ asset('1x/login.png') }});
                 background-repeat: no-repeat;background-size: cover">
 
-            <div class="d-flex flex-column-auto flex-column pt-15 px-30 align-items-center justify-content-center">
+            <div class="d-flex flex-column-auto flex-column pt-15 px-30">
 
                 <a href="#" class="login-logo py-6">
                     <img src="{{ asset('untappedlogo.png') }}" width="90%" class="max-h-70px" alt=""/>
                 </a>
 
+
+                <div class="wizard-nav pt-5 pt-lg-30">
+
+                    <div class="wizard-steps">
+
+                        <div class="wizard-step" data-wizard-type="step" data-wizard-state="current">
+                            <div class="wizard-wrapper">
+{{--                                <div class="wizard-icon">--}}
+{{--                                    <i class="wizard-check ki ki-check"></i>--}}
+{{--                                    <span class="wizard-number"></span>--}}
+{{--                                </div>--}}
+                                <div class="wizard-label">
+                                    <h3 class="wizard-title">
+
+                                    </h3>
+                                    <div class="wizard-desc">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="wizard-step" data-wizard-type="step">
+                            <div class="wizard-wrapper">
+{{--                                <div class="wizard-icon">--}}
+{{--                                    <i class="wizard-check ki ki-check"></i>--}}
+{{--                                    <span class="wizard-number"></span>--}}
+{{--                                </div>--}}
+                                <div class="wizard-label">
+                                    <h3 class="wizard-title">
+
+                                    </h3>
+                                    <div class="wizard-desc">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wizard-step" data-wizard-type="step">
+                            <div class="wizard-wrapper">
+{{--                                <div class="wizard-icon">--}}
+{{--                                    <i class="wizard-check ki ki-check"></i>--}}
+{{--                                    <span class="wizard-number"></span>--}}
+{{--                                </div>--}}
+                                <div class="wizard-label">
+                                    <h3 class="wizard-title">
+
+                                    </h3>
+                                    <div class="wizard-desc">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -59,58 +117,54 @@
             <div class="d-flex flex-row-fluid flex-center">
 
                 <div class="login-form login-form-signup">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="pb-10 pb-lg-15">
-                                <h3 class="font-weight-bolder text-dark display5">Welcome to Untapped</h3>
-                                <div class="text-muted font-weight-bold font-size-h4">Join a sophisticated community of
-                                    investors engaged in frontier markets. We’re excited to have you on board.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <form action="{{ route('registeraninvestor') }}" class="form" novalidate="novalidate"
                           id="kt_login_signup_form"
                           enctype="multipart/form-data" method="POST">
                         @csrf
                         <div class="pb-5" data-wizard-type="step-content" data-wizard-state="current">
-                            <div class="form-group">
-                                <div class="d-flex justify-content-between mt-n5">
-                                    <label class="font-size-h6 font-weight-bolder text-dark pt-5">
-                                        Have you invested in frontier markets before?
-                                        <br>
-                                        Are you interested in earning fixed income for your investment?
-                                    </label>
-                                </div>
-                                <div class="radio-inline mt-2">
-                                    <label class="radio">
-                                        <input type="radio" name="accredited_investor" value="Yes" checked>
-                                        <span></span>
-                                        Yes
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="accredited_investor" value="No">
-                                        <span></span>
-                                        No
-                                    </label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="d-flex justify-content-between mt-n5">
+                                            <label class="font-size-h6 font-weight-bolder text-dark pt-5">
+                                                Have you invested in frontier markets before?
+                                                <br>
+                                                Are you interested in earning fixed income for your investment?
+                                            </label>
+                                        </div>
+                                        <div class="radio-inline mt-2">
+                                            <label class="radio">
+                                                <input type="radio" name="accredited_investor" value="Yes" checked="">
+                                                <span></span>
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="accredited_investor" value="No">
+                                                <span></span>
+                                                No
+                                            </label>
 
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="d-flex justify-content-between mt-n5">
+                                            <label class="font-size-h6 font-weight-bolder text-dark pt-5">
+                                                Which investment instruments interest you?
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-list">
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>6 month maturity with 5-6% annual interest</label>
 
-                            <div class="form-group">
-                                <div class="d-flex justify-content-between mt-n5">
-                                    <label class="font-size-h6 font-weight-bolder text-dark pt-5">
-                                        Which investment instruments interest you?
-                                    </label>
-                                </div>
-                                <div class="checkbox-list">
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="Checkboxes1">
-                                        <span></span>6 month maturity with 5-6% annual interest</label>
-
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="Checkboxes1">
-                                        <span></span>12 month maturity with 7-9% annual interest, paid quarterly</label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>12 month maturity with 7-9% annual interest, paid quarterly</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -119,10 +173,14 @@
 
 
                         <div class="pb-5" data-wizard-type="step-content">
+
+                            <div class="pt-lg-0 pt-5 pb-15">
+                                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">
+
+                                </h3>
+                            </div>
                             <div class="row">
-                                <input type="hidden" name="investor" value="">
                                 <div class="col-md-12">
-                                    <!--Label: Legal Name of Individual, Attributes:legal_name -->
                                     <div class="form-group">
                                         <label for="legal_name" class="font-size-h6 font-weight-bolder text-dark">Which
                                             of assets financed by Untapped interest you most?</label>
@@ -134,9 +192,7 @@
                                             <label class="checkbox">
                                                 <input type="checkbox" name="Checkboxes1">
                                                 <span></span>MedTech </label>
-                                            <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
-                                                <span></span>AgTech </label>
+
                                             <label class="checkbox">
                                                 <input type="checkbox" name="Checkboxes1">
                                                 <span></span>AgTech </label>
@@ -150,15 +206,9 @@
                                                 <input type="checkbox" name="Checkboxes1">
                                                 <span></span>Water infrastructure </label>
                                         </div>
-                                        @error('legal_name')
-                                        <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <!--Label: Legal Name of Individual, Attributes:legal_name -->
                                     <div class="form-group">
                                         <label for="legal_name" class="font-size-h6 font-weight-bolder text-dark">
                                             What geographies are interesting to you?
@@ -178,46 +228,73 @@
                                                 <input type="checkbox" name="Checkboxes1">
                                                 <span></span>North Africa </label>
                                         </div>
-                                        @error('legal_name')
-                                        <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                                        @enderror
                                     </div>
                                 </div>
+
 
                             </div>
 
 
                         </div>
                         <div class="pb-5" data-wizard-type="step-content">
-                            <div class="form-group">
-                                <div class="d-flex justify-content-between mt-n5">
-                                    <label class="font-size-h6 font-weight-bolder text-dark pt-5">
-                                        Are you an accredited investor?
-                                    </label>
-                                </div>
-                                <div class="radio-inline mt-2">
-                                    <label class="radio">
-                                        <input type="radio" name="accredited_investor" value="Yes" checked="">
-                                        <span></span>
-                                        Yes
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="accredited_investor" value="No">
-                                        <span></span>
-                                        No
-                                    </label>
 
-                                </div>
+                            <div class="pt-lg-0 pt-5 pb-15">
+                                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">
+
+                                </h3>
+
                             </div>
 
 
-                            <div class="form-group fv-plugins-icon-container">
-                                <input type="text"
-                                       class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
-                                       name="fname" placeholder="What amounts would you consider placing in these types of 6-18 month maturity instruments earning 5-9% annual return?" value="">
-                                <div class="fv-plugins-message-container"></div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="d-flex justify-content-between mt-n5">
+                                        <label class="font-size-h6 font-weight-bolder text-dark pt-5">
+                                            Are you an accredited investor?
+                                        </label>
+                                    </div>
+                                    <div class="radio-inline mt-2">
+                                        <label class="radio">
+                                            <input type="radio" name="accredited_investor" value="Yes" checked="">
+                                            <span></span>
+                                            Yes
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="accredited_investor" value="No">
+                                            <span></span>
+                                            No
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="d-flex justify-content-between mt-n5">
+                                        <label class="font-size-h6 font-weight-bolder text-dark pt-5">
+                                            Are you a qualified purchaser?
+                                        </label>
+                                    </div>
+                                    <div class="radio-inline mt-2">
+                                        <label class="radio">
+                                            <input type="radio" name="accredited_investor" value="Yes" checked="">
+                                            <span></span>
+                                            Yes
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="accredited_investor" value="No">
+                                            <span></span>
+                                            No
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group fv-plugins-icon-container">
+                                    <input type="text" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" name="fname" placeholder="What amounts would you consider placing in these types of 6-18 month maturity instruments earning 5-9% annual return?" value="">
+                                    <div class="fv-plugins-message-container"></div>
+                                </div>
                             </div>
 
                         </div>

@@ -174,7 +174,27 @@ var KTLogin = function () {
             form,
             {
                 fields: {
-
+                    delivery: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Delivery type is required'
+                            }
+                        }
+                    },
+                    packaging: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Packaging type is required'
+                            }
+                        }
+                    },
+                    preferreddelivery: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Preferred delivery window is required'
+                            }
+                        }
+                    }
                 },
                 plugins: {
                     trigger: new FormValidation.plugins.Trigger(),
@@ -188,7 +208,47 @@ var KTLogin = function () {
             form,
             {
                 fields: {
-
+                    ccname: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Credit card name is required'
+                            }
+                        }
+                    },
+                    ccnumber: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Credit card number is required'
+                            },
+                            creditCard: {
+                                message: 'The credit card number is not valid'
+                            }
+                        }
+                    },
+                    ccmonth: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Credit card month is required'
+                            }
+                        }
+                    },
+                    ccyear: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Credit card year is required'
+                            }
+                        }
+                    },
+                    cccvv: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Credit card CVV is required'
+                            },
+                            digits: {
+                                message: 'The CVV value is not valid. Only numbers is allowed'
+                            }
+                        }
+                    }
                 },
                 plugins: {
                     trigger: new FormValidation.plugins.Trigger(),
