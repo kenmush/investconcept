@@ -33,7 +33,7 @@
 
     <div class="login login-3 wizard d-flex flex-column flex-lg-row flex-column-fluid wizard" id="kt_login">
 
-        <div class="login-aside d-flex flex-column flex-row-auto"
+        <div class="d-flex flex-column flex-row-auto justify-content-center login-aside"
              style="background-image: url({{ asset('1x/login.png') }});
                      background-repeat: no-repeat;background-size: cover">
 
