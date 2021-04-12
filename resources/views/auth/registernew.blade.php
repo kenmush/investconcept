@@ -124,6 +124,14 @@
                         @csrf
                         <div class="pb-5" data-wizard-type="step-content" data-wizard-state="current">
                             <div class="row">
+                                <div class="pb-10 pb-lg-15">
+                                    <h3 class="font-weight-bolder text-dark display5">Welcome to Untapped</h3>
+                                    <div class="text-muted font-weight-bold font-size-h4">
+                                        Join a sophisticated community of investors engaged in frontier markets.  We’re excited to have you on board.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <div class="d-flex justify-content-between mt-n5">
