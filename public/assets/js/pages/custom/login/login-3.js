@@ -53,47 +53,6 @@ var KTLogin = function () {
                 setTimeout(function () {
                     KTUtil.btnRelease(formSubmitButton);
                 }, 2000);
-
-                // Form Validation & Ajax Submission: https://formvalidation.io/guide/examples/using-ajax-to-submit-the-form
-                /**
-                 FormValidation.utils.fetch(formSubmitUrl, {
-		            method: 'POST',
-					dataType: 'json',
-		            params: {
-		                name: form.querySelector('[name="username"]').value,
-		                email: form.querySelector('[name="password"]').value,
-		            },
-		        }).then(function(response) { // Return valid JSON
-					// Release button
-					KTUtil.btnRelease(formSubmitButton);
-
-					if (response && typeof response === 'object' && response.status && response.status == 'success') {
-						Swal.fire({
-			                text: "All is cool! Now you submit this form",
-			                icon: "success",
-			                buttonsStyling: false,
-							confirmButtonText: "Ok, got it!",
-							customClass: {
-								confirmButton: "btn font-weight-bold btn-light-primary"
-							}
-			            }).then(function() {
-							KTUtil.scrollTop();
-						});
-					} else {
-						Swal.fire({
-			                text: "Sorry, something went wrong, please try again.",
-			                icon: "error",
-			                buttonsStyling: false,
-							confirmButtonText: "Ok, got it!",
-							customClass: {
-								confirmButton: "btn font-weight-bold btn-light-primary"
-							}
-			            }).then(function() {
-							KTUtil.scrollTop();
-						});
-					}
-		        });
-                 **/
             })
             .on('core.form.invalid', function () {
                 Swal.fire({
@@ -187,61 +146,7 @@ var KTLogin = function () {
             form,
             {
                 fields: {
-                    fname: {
-                        validators: {
-                            notEmpty: {
-                                message: 'First name is required'
-                            }
-                        }
-                    },
-                    lname: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Last Name is required'
-                            }
-                        }
-                    },
-                    phone: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Phone is required'
-                            }
-                        }
-                    },
-                    password: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Password is required'
-                            }
-                        }
-                    },
-                    passwordconfirm: {
-                        validators: {
-                            identical: {
-                                compare: function () {
-                                    return form.querySelector('[name="password"]').value;
-                                },
-                                message: 'The password and its confirm are not the same'
-                            }
-                        }
-                    },
-                    email: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Email is required'
-                            },
-                            emailAddress: {
-                                message: 'The value is not a valid email address'
-                            }
-                        }
-                    },
-                    'agree': {
-                        validators: {
-                            notEmpty: {
-                                message: 'You must agree to our terms and conditions to Signup.'
-                            },
-                        }
-                    },
+
                 },
                 plugins: {
                     trigger: new FormValidation.plugins.Trigger(),
@@ -255,55 +160,7 @@ var KTLogin = function () {
             form,
             {
                 fields: {
-                    legal_name: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Your Legal Name is required'
-                            }
-                        }
-                    },
-                    nationality: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Your Nationality is required'
-                            }
-                        }
-                    },
-                    tax_identification_number: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Provide your Tax Identification Number'
-                            }
-                        }
-                    },
-                    date_of_birth: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Your date of birth is required'
-                            }
-                        }
-                    },
-                    investor_location: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Please provide where you are an accredited investor'
-                            }
-                        }
-                    },
-                    source_of_wealth: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Please confirm your source of wealth'
-                            }
-                        }
-                    },
-                    authorization: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Please provide the authorization structure'
-                            }
-                        }
-                    }
+
                 },
                 plugins: {
                     trigger: new FormValidation.plugins.Trigger(),
@@ -317,27 +174,7 @@ var KTLogin = function () {
             form,
             {
                 fields: {
-                    delivery: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Delivery type is required'
-                            }
-                        }
-                    },
-                    packaging: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Packaging type is required'
-                            }
-                        }
-                    },
-                    preferreddelivery: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Preferred delivery window is required'
-                            }
-                        }
-                    }
+
                 },
                 plugins: {
                     trigger: new FormValidation.plugins.Trigger(),
@@ -351,47 +188,7 @@ var KTLogin = function () {
             form,
             {
                 fields: {
-                    ccname: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Credit card name is required'
-                            }
-                        }
-                    },
-                    ccnumber: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Credit card number is required'
-                            },
-                            creditCard: {
-                                message: 'The credit card number is not valid'
-                            }
-                        }
-                    },
-                    ccmonth: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Credit card month is required'
-                            }
-                        }
-                    },
-                    ccyear: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Credit card year is required'
-                            }
-                        }
-                    },
-                    cccvv: {
-                        validators: {
-                            notEmpty: {
-                                message: 'Credit card CVV is required'
-                            },
-                            digits: {
-                                message: 'The CVV value is not valid. Only numbers is allowed'
-                            }
-                        }
-                    }
+
                 },
                 plugins: {
                     trigger: new FormValidation.plugins.Trigger(),

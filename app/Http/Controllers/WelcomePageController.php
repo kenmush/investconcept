@@ -10,6 +10,5 @@ class WelcomePageController extends Controller
     public function __invoke()
     {
         return redirect()->to('register');
-        return view('layouts.newinvest');
     }
 }
