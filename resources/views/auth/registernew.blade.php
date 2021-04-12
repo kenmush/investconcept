@@ -33,72 +33,15 @@
 
     <div class="login login-3 wizard d-flex flex-column flex-lg-row flex-column-fluid wizard" id="kt_login">
 
-        <div class="login-aside d-flex flex-column flex-row-auto">
+        <div class="login-aside d-flex flex-column flex-row-auto" style="background-image: url({{ asset('1x/login.png') }});
+                background-repeat: no-repeat;background-size: cover">
 
-            <div class="d-flex flex-column-auto flex-column pt-15 px-30">
+            <div class="d-flex flex-column-auto flex-column pt-15 px-30 align-items-center justify-content-center">
 
                 <a href="#" class="login-logo py-6">
                     <img src="{{ asset('untappedlogo.png') }}" width="90%" class="max-h-70px" alt=""/>
                 </a>
 
-
-                <div class="wizard-nav pt-5 pt-lg-30">
-
-                    <div class="wizard-steps">
-
-                        <div class="wizard-step" data-wizard-type="step" data-wizard-state="current">
-                            <div class="wizard-wrapper">
-                                <div class="wizard-icon">
-                                    <i class="wizard-check ki ki-check"></i>
-                                    <span class="wizard-number">1</span>
-                                </div>
-                                <div class="wizard-label">
-                                    <h3 class="wizard-title">
-                                        About You
-                                    </h3>
-                                    <div class="wizard-desc">
-                                        Tell us about you
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="wizard-step" data-wizard-type="step">
-                            <div class="wizard-wrapper">
-                                <div class="wizard-icon">
-                                    <i class="wizard-check ki ki-check"></i>
-                                    <span class="wizard-number">2</span>
-                                </div>
-                                <div class="wizard-label">
-                                    <h3 class="wizard-title">
-                                        Questionnaire
-                                    </h3>
-                                    <div class="wizard-desc">
-                                        Answer a few questions for us
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="wizard-step" data-wizard-type="step">
-                            <div class="wizard-wrapper">
-                                <div class="wizard-icon">
-                                    <i class="wizard-check ki ki-check"></i>
-                                    <span class="wizard-number">3</span>
-                                </div>
-                                <div class="wizard-label">
-                                    <h3 class="wizard-title">
-                                        Upload your documents
-                                    </h3>
-                                    <div class="wizard-desc">
-                                        Upload your drivers licence or passport
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -146,8 +89,7 @@
                                         Yes
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="accredited_investor" value="No"
-                                               onkeydown="changeEvent(this,event)" onclick="changeEvent(this, event)">
+                                        <input type="radio" name="accredited_investor" value="No">
                                         <span></span>
                                         No
                                     </label>
@@ -249,42 +191,33 @@
 
                         </div>
                         <div class="pb-5" data-wizard-type="step-content">
-
-                            <div class="pt-lg-0 pt-5 pb-15">
-                                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">
-                                    Upload your documents
-                                </h3>
-
-                            </div>
-
-
                             <div class="form-group">
-                                <label class="font-size-h6 font-weight-bolder text-dark">Verification
-                                    Document</label>
-                                <select class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
-                                        type="text"
-                                        name="documenttype" id="documenttype" placeholder="Your old password"
-                                        autocomplete="off">
-                                    <option value="passport">Passport</option>
-                                    <option value="driverslicence">Drivers Licence</option>
-                                </select>
-                                @error('updatepassword')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('updatepassword') }}</strong>
-                                    </span>
-                                @enderror
+                                <div class="d-flex justify-content-between mt-n5">
+                                    <label class="font-size-h6 font-weight-bolder text-dark pt-5">
+                                        Are you an accredited investor?
+                                    </label>
+                                </div>
+                                <div class="radio-inline mt-2">
+                                    <label class="radio">
+                                        <input type="radio" name="accredited_investor" value="Yes" checked="">
+                                        <span></span>
+                                        Yes
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="accredited_investor" value="No">
+                                        <span></span>
+                                        No
+                                    </label>
 
+                                </div>
                             </div>
 
 
-                            <div class="row">
-                                <div class="col-xl-12 dropzone">
-                                    <div class="dz-message" id="uploadpassport">
-                                        Drop files here or click to upload.
-                                        <br>
-                                    </div>
-                                </div>
-
+                            <div class="form-group fv-plugins-icon-container">
+                                <input type="text"
+                                       class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
+                                       name="fname" placeholder="What amounts would you consider placing in these types of 6-18 month maturity instruments earning 5-9% annual return?" value="">
+                                <div class="fv-plugins-message-container"></div>
                             </div>
 
                         </div>
