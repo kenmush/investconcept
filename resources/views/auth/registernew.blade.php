@@ -33,12 +33,13 @@
 
     <div class="login login-3 wizard d-flex flex-column flex-lg-row flex-column-fluid wizard" id="kt_login">
 
-        <div class="login-aside d-flex flex-column flex-row-auto" style="background-image: url({{ asset('1x/login.png') }});
-                background-repeat: no-repeat;background-size: cover">
+        <div class="login-aside d-flex flex-column flex-row-auto"
+             style="background-image: url({{ asset('1x/login.png') }});
+                     background-repeat: no-repeat;background-size: cover">
 
-            <div class="d-flex flex-column-auto flex-column pt-15 px-30">
+            <div class="d-flex flex-column-auto flex-column pt-15 px-30 justify-content-center">
 
-                <a href="#" class="login-logo py-6">
+                <a href="/" class="login-logo py-6">
                     <img src="{{ asset('untappedlogo.png') }}" width="90%" class="max-h-70px" alt=""/>
                 </a>
 
@@ -49,10 +50,10 @@
 
                         <div class="wizard-step" data-wizard-type="step" data-wizard-state="current">
                             <div class="wizard-wrapper">
-{{--                                <div class="wizard-icon">--}}
-{{--                                    <i class="wizard-check ki ki-check"></i>--}}
-{{--                                    <span class="wizard-number"></span>--}}
-{{--                                </div>--}}
+                                {{--                                <div class="wizard-icon">--}}
+                                {{--                                    <i class="wizard-check ki ki-check"></i>--}}
+                                {{--                                    <span class="wizard-number"></span>--}}
+                                {{--                                </div>--}}
                                 <div class="wizard-label">
                                     <h3 class="wizard-title">
 
@@ -67,10 +68,10 @@
 
                         <div class="wizard-step" data-wizard-type="step">
                             <div class="wizard-wrapper">
-{{--                                <div class="wizard-icon">--}}
-{{--                                    <i class="wizard-check ki ki-check"></i>--}}
-{{--                                    <span class="wizard-number"></span>--}}
-{{--                                </div>--}}
+                                {{--                                <div class="wizard-icon">--}}
+                                {{--                                    <i class="wizard-check ki ki-check"></i>--}}
+                                {{--                                    <span class="wizard-number"></span>--}}
+                                {{--                                </div>--}}
                                 <div class="wizard-label">
                                     <h3 class="wizard-title">
 
@@ -84,10 +85,10 @@
 
                         <div class="wizard-step" data-wizard-type="step">
                             <div class="wizard-wrapper">
-{{--                                <div class="wizard-icon">--}}
-{{--                                    <i class="wizard-check ki ki-check"></i>--}}
-{{--                                    <span class="wizard-number"></span>--}}
-{{--                                </div>--}}
+                                {{--                                <div class="wizard-icon">--}}
+                                {{--                                    <i class="wizard-check ki ki-check"></i>--}}
+                                {{--                                    <span class="wizard-number"></span>--}}
+                                {{--                                </div>--}}
                                 <div class="wizard-label">
                                     <h3 class="wizard-title">
 
@@ -127,7 +128,8 @@
                                 <div class="pb-10 pb-lg-15">
                                     <h3 class="font-weight-bolder text-dark display5">Welcome to Untapped</h3>
                                     <div class="text-muted font-weight-bold font-size-h4">
-                                        Join a sophisticated community of investors engaged in frontier markets.  We’re excited to have you on board.
+                                        Join a sophisticated community of investors engaged in frontier markets. We’re
+                                        excited to have you on board.
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +139,28 @@
                                         <div class="d-flex justify-content-between mt-n5">
                                             <label class="font-size-h6 font-weight-bolder text-dark pt-5">
                                                 Have you invested in frontier markets before?
-                                                <br>
+                                            </label>
+                                        </div>
+                                        <div class="radio-inline mt-2">
+                                            <label class="radio">
+                                                <input type="radio" name="invested_in_frontier" value="Yes" checked="">
+                                                <span></span>
+                                                Yes
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="invested_in_frontier" value="No">
+                                                <span></span>
+                                                No
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="d-flex justify-content-between mt-n5">
+                                            <label class="font-size-h6 font-weight-bolder text-dark pt-5">
+
                                                 Are you interested in earning fixed income for your investment?
                                             </label>
                                         </div>
@@ -191,12 +214,16 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="legal_name" class="font-size-h6 font-weight-bolder text-dark">Which
-                                            of assets financed by Untapped interest you most?</label>
+                                            of the asset classes that are financed by Untapped interest you
+                                            most?</label>
                                         <div class="checkbox-list">
                                             <label class="checkbox">
                                                 <input type="checkbox" name="Checkboxes1">
-                                                <span></span>Off grid refrigeration</label>
+                                                <span></span>Off grid with Refrigeration</label>
 
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>Capital Infractructure </label>
                                             <label class="checkbox">
                                                 <input type="checkbox" name="Checkboxes1">
                                                 <span></span>MedTech </label>
@@ -219,7 +246,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="legal_name" class="font-size-h6 font-weight-bolder text-dark">
-                                            What geographies are interesting to you?
+                                            Which geographies are particulary interesting to you?
                                         </label>
                                         <div class="checkbox-list">
                                             <label class="checkbox">
@@ -235,6 +262,12 @@
                                             <label class="checkbox">
                                                 <input type="checkbox" name="Checkboxes1">
                                                 <span></span>North Africa </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>Latin America </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="Checkboxes1">
+                                                <span></span>South East Asia </label>
                                         </div>
                                     </div>
                                 </div>
@@ -285,12 +318,12 @@
                                     </div>
                                     <div class="radio-inline mt-2">
                                         <label class="radio">
-                                            <input type="radio" name="accredited_investor" value="Yes" checked="">
+                                            <input type="radio" name="qualified_investor" value="Yes" checked="">
                                             <span></span>
                                             Yes
                                         </label>
                                         <label class="radio">
-                                            <input type="radio" name="accredited_investor" value="No">
+                                            <input type="radio" name="qualified_investor" value="No">
                                             <span></span>
                                             No
                                         </label>
@@ -299,15 +332,43 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <div class="form-group fv-plugins-icon-container">
-                                    <input type="text" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" name="fname" placeholder="What amounts would you consider placing in these types of 6-18 month maturity instruments earning 5-9% annual return?" value="">
-                                    <div class="fv-plugins-message-container"></div>
+                                <div class="form-group">
+                                    <div class="d-flex justify-content-between mt-n5">
+                                        <label class="font-size-h6 font-weight-bolder text-dark pt-5">
+                                            What amounts would you consider placing in these types of 6-18 month maturity instruments earning 5-9% annual return?
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes1">
+                                            <span></span>
+                                            $2,000 &mdash; 10,000
+                                        </label>
+
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes1">
+                                            <span></span>
+                                            $10,000 &mdash; 50,000
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes1">
+                                            <span></span>
+                                            $50,000 &mdash; 100,000
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes1">
+                                            <span></span>
+                                            $100,000 &mdash; 250,000
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes1">
+                                            <span></span>
+                                             $250,000+
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
-
-
                         <div class="d-flex justify-content-between pt-3">
                             <div class="mr-2">
                                 <button type="button"
