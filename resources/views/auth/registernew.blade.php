@@ -362,6 +362,12 @@
                                     <div class="d-flex justify-content-between mt-n5">
                                         <label class="font-size-h6 font-weight-bolder text-dark pt-5">
                                             Are you a qualified purchaser?
+                                            <i class="fa fa-info-circle" data-toggle="tooltip" title="For individuals and family-owned businesses, $5 million in investments normally confers Qualified Purchaser status.
+
+Other entities must manage at least $25 million in investments for other qualified purchasers or be exclusively owned by qualified purchasers.
+
+Other provisions, conditions, and exception may apply to your particular situation. Always seek qualified financial advice."
+                                               id='example'></i>
                                         </label>
                                     </div>
                                     <div class="radio-inline mt-2">
