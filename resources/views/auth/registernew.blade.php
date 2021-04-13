@@ -98,6 +98,21 @@
                                     </div>
                                 </div>
                             </div>
+                        </div><div class="wizard-step" data-wizard-type="step">
+                            <div class="wizard-wrapper">
+                                {{--                                <div class="wizard-icon">--}}
+                                {{--                                    <i class="wizard-check ki ki-check"></i>--}}
+                                {{--                                    <span class="wizard-number"></span>--}}
+                                {{--                                </div>--}}
+                                <div class="wizard-label">
+                                    <h3 class="wizard-title">
+
+                                    </h3>
+                                    <div class="wizard-desc">
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -368,6 +383,81 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="pb-5" data-wizard-type="step-content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark">First Name</label>
+                                        <input type="text" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" name="fname" id="fname" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark">Last Name</label>
+                                        <input type="text" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" id="lname" name="lname" placeholder="Last Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark">Email</label>
+                                        <input type="text" id="email" autocomplete="off" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" name="email" placeholder="Your email">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark">Password</label>
+                                        <input type="password" id="password" autocomplete="off" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" name="password" placeholder="Your password">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-size-h6 font-weight-bolder text-dark">Confirm
+                                            Password</label>
+                                        <input type="password" id="passwordconfirm" autocomplete="off" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" name="passwordconfirm" placeholder="Confirm Password">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between mt-n5">
+                                    <label class="font-size-h6 font-weight-bolder text-dark pt-5">
+                                        What type of an investor will you be investing as?
+                                    </label>
+                                </div>
+                                <div class="radio-inline mt-2">
+                                    <label class="radio">
+                                        <input type="radio" value="Individual" name="accredited_type" checked="">
+                                        <span></span>
+                                        Individual
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" value="Institution" name="accredited_type">
+                                        <span></span>
+                                        Institution
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-inline">
+                                    <label class="checkbox checkbox-outline m-0 font-size-h6 font-weight-bolder text-muted
+                                pt-5">
+                                        <input type="checkbox" name="agree" id="agree">
+                                        <span></span>
+                                        I agree to the &nbsp;<a target="_blank" href="/terms">Terms of service </a>&nbsp;and
+                                        Privacy
+                                        Policy
+                                    </label>
+                                </div>
+                            </div>
+
+
                         </div>
                         <div class="d-flex justify-content-between pt-3">
                             <div class="mr-2">
