@@ -131,6 +131,22 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="wizard-step" data-wizard-type="step">
+                            <div class="wizard-wrapper">
+                                {{--                                <div class="wizard-icon">--}}
+                                {{--                                    <i class="wizard-check ki ki-check"></i>--}}
+                                {{--                                    <span class="wizard-number"></span>--}}
+                                {{--                                </div>--}}
+                                <div class="wizard-label">
+                                    <h3 class="wizard-title">
+
+                                    </h3>
+                                    <div class="wizard-desc">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -476,7 +492,7 @@
 
 
                         </div>
-                        <div class="pb-5" data-wizard-type="step-content" data-wizard-state="current">
+                        <div class="pb-5" data-wizard-type="step-content" >
 
                             <div class="pt-lg-0 pt-5 pb-15">
                                 <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">
@@ -913,7 +929,38 @@
 
 
                         </div>
+                        <div class="pb-5" data-wizard-type="step-content" >
 
+                            <div class="pt-lg-0 pt-5 pb-15">
+                                <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">
+                                    Upload your documents
+                                </h3>
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="font-size-h6 font-weight-bolder text-dark">Verification
+                                    Document</label>
+                                <select class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" type="text" name="documenttype" id="documenttype" placeholder="Your old password" autocomplete="off">
+                                    <option value="passport">Passport</option>
+                                    <option value="driverslicence">Drivers Licence</option>
+                                </select>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-xl-12 dropzone">
+                                    <div class="dz-message dz-clickable" id="uploadpassport">
+                                        Drop files here or click to upload.
+                                        <br>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
                         <div class="d-flex justify-content-between pt-3">
                             <div class="mr-2">
                                 <button type="button"
