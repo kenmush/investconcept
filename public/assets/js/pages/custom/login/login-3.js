@@ -160,7 +160,7 @@ var KTLogin = function () {
                             },
                         }
                     },
-                    investment_instruments: {
+                    "investment_instruments[]": {
                         validators: {
                             notEmpty: {
                                 message: 'Choose an option to the question: Which investment instruments interest you?'
@@ -180,14 +180,14 @@ var KTLogin = function () {
             form,
             {
                 fields: {
-                    asset_classes: {
+                    "asset_classes[]": {
                         validators: {
                             notEmpty: {
                                 message: 'Choose an asset class that interests you.'
                             },
                         }
                     },
-                    geographies_interested: {
+                    "geographies_interested[]": {
                         validators: {
                             notEmpty: {
                                 message: 'Which geography are you interested in?'
