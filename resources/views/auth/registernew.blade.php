@@ -208,7 +208,7 @@
                                     <div class="form-group">
                                         <div class="d-flex justify-content-between mt-n5">
                                             <label class="font-size-h6 font-weight-bolder text-dark pt-5">
-                                                Are you interested in earning fixed income for your investment?
+                                                Are you interested in earning fixed income on your investment?
                                             </label>
                                         </div>
                                         <div class="radio-inline mt-2">
@@ -542,37 +542,7 @@ Other provisions, conditions, and exception may apply to your particular situati
                                                placeholder="Legal Name of Individual" required="">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <!--Label: Where are you considered an accredited investor?, Attributes:investor_location -->
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark"
-                                               for="investor_location">Where are you considered an accredited
-                                            investor?</label>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location" name="investor_location"
-                                                   class="custom-control-input" value="Employment">
-                                            <label class="custom-control-label" for="investor_location">Europe</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location1" name="investor_location"
-                                                   class="custom-control-input" value="USA Taxable">
-                                            <label class="custom-control-label" for="investor_location1">USA
-                                                (Taxable)</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location2" name="investor_location"
-                                                   class="custom-control-input" value="USA (Tax exempt)">
-                                            <label class="custom-control-label" for="investor_location2">USA (Tax
-                                                exempt)</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location3" name="investor_location"
-                                                   class="custom-control-input" value="USA Taxable">
-                                            <label class="custom-control-label" for="investor_location3">Other</label>
-                                        </div>
 
-                                    </div>
-                                </div>
                                 <div class="col-md-6">
                                     <!--Label: Nationality, Attributes:nationality -->
                                     <div class="form-group">
@@ -866,37 +836,6 @@ Other provisions, conditions, and exception may apply to your particular situati
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <!--Label: Confirm your source of wealth, Attributes:source_of_wealth -->
-                                    <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="source_of_wealth">Confirm
-                                            your source of wealth</label>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth1" name="source_of_wealth"
-                                                   class="custom-control-input" value="Employment">
-                                            <label class="custom-control-label"
-                                                   for="source_of_wealth1">Employment</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth2" name="source_of_wealth"
-                                                   class="custom-control-input" value="Investments">
-                                            <label class="custom-control-label"
-                                                   for="source_of_wealth2">Investments</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth3" name="source_of_wealth"
-                                                   class="custom-control-input" value="Sales of Business">
-                                            <label class="custom-control-label" for="source_of_wealth3">Sales of
-                                                Business</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth4" name="source_of_wealth"
-                                                   class="custom-control-input" value="other">
-                                            <label class="custom-control-label" for="source_of_wealth4">Other</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
                                     <!--Label: Date of Birth, Attributes:date_of_birth -->
                                     <div class="form-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark" for="date_of_birth">Date
@@ -1002,7 +941,7 @@ Other provisions, conditions, and exception may apply to your particular situati
 
                             <div class="pt-lg-0 pt-5 pb-15">
                                 <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">
-                                    Upload your documents
+                                    Upload a Verification Document
                                 </h3>
 
                             </div>
