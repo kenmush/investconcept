@@ -149,7 +149,8 @@ var KTLogin = function () {
                     invested_in_markerts: {
                         validators: {
                             notEmpty: {
-                                message: 'Choose an option to the question: Have you invested in frontier markets before'
+                                message: 'Choose an option to the question: Have you invested in frontier markets' +
+                                    ' before?'
                             },
                         }
                     },
