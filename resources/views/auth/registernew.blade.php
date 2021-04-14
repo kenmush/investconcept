@@ -386,7 +386,7 @@
                                     </div>
                                     <div class="radio-inline mt-2">
                                         <label class="radio">
-                                            <input type="radio" name="qualified_investor" value="Yes" checked="">
+                                            <input type="radio" name="qualified_investor" value="Yes" >
                                             <span></span>
                                             Yes
                                         </label>
