@@ -1058,10 +1058,24 @@
 <script src="{{ asset('dropzone/dropzone.js') }}"></script>
 <script>
     tippy('#myButton', {
-        content: "For individuals and family-owned businesses, $5 million in investments normally confers Qualified Purchaser status. Other entities must manage at least $25 million in investments for other qualified purchasers or be exclusively owned by qualified purchasers. Other provisions, conditions, and exception may apply to your particular situation. Always seek qualified financial advice.",
+        allowHTML: true,
+        content: "For individuals and family-owned businesses, $5 million in investments normally confers Qualified " +
+            "Purchaser status. <br>Other entities must manage at least $25 million in investments for other qualified" +
+            " purchasers  or be exclusively owned by qualified purchasers.<br> Other provisions, conditions, and " +
+            "exception may apply to your particular situation. Always seek qualified financial advice.",
     });
     tippy('#accredited_investor', {
-        content: "Accredited Investor must have an annual income that exceeds $200,000 ($300,000 for joint incomes) for the last two years. The individual must also expect the same or higher revenue in the current financial year. A person must have a net worth of $1 million or higher, either as an individual or jointly (if married), at the time of purchase. The net worth calculation excludes the value of the individual’s primary residence. A general partner, director, or executive officer for the issuer of the unregistered securities may also be an accredited investor.",
+        allowHTML: true,
+        content: "There are three main criteria for being an Accredited Investor. An individual must have an annual " +
+            "income that exceeds $200,000 ($300,000 for joint incomes) for the last two years. The individual must " +
+            "also expect the same or higher revenue in the current financial year.<br>"+"Alternatively, a person " +
+            "must " +
+            "have a net worth of $1 million or higher, either as an individual or jointly (if married), at the time " +
+            "of purchase. The net worth calculation excludes the value of the individual’s primary residence. <br>" +
+            "Thirdly, an entity may be accredited if it is an organization with assets valued at $5 million or higher" +
+            ". The entity may also be considered an accredited investor if its owners are accredited investors" +
+            ".<br>"+"" +
+            "Other provisions, conditions, and exceptions may apply to your particular situation. Always seek qualified financial advice.",
     });
 </script>
 <script>
