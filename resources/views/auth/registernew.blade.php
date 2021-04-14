@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link href="assets/css/pages/login/login-3.css?v=7.0.6" rel="stylesheet" type="text/css"/>
 
@@ -354,6 +355,9 @@
                                     <div class="d-flex justify-content-between mt-n5">
                                         <label class="font-size-h6 font-weight-bolder text-dark pt-5">
                                             Are you an accredited investor?
+                                            <i id="accredited_investor" class="fa fa-info-circle" data-toggle="tooltip"
+                                               data-theme="dark"></i>
+
                                         </label>
                                     </div>
                                     <div class="radio-inline mt-2">
@@ -376,12 +380,8 @@
                                     <div class="d-flex justify-content-between mt-n5">
                                         <label class="font-size-h6 font-weight-bolder text-dark pt-5">
                                             Are you a qualified purchaser?
-                                            <i class="fa fa-info-circle" data-toggle="tooltip" title="For individuals and family-owned businesses, $5 million in investments normally confers Qualified Purchaser status.
 
-Other entities must manage at least $25 million in investments for other qualified purchasers or be exclusively owned by qualified purchasers.
-
-Other provisions, conditions, and exception may apply to your particular situation. Always seek qualified financial advice."
-                                               id='example'></i>
+                                            <i id="myButton" class="fa fa-info-circle" data-toggle="tooltip" data-theme="dark"></i>
                                         </label>
                                     </div>
                                     <div class="radio-inline mt-2">
@@ -1045,6 +1045,8 @@ Other provisions, conditions, and exception may apply to your particular situati
     </div>
 
 </div>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
 <script src="assets/plugins/global/plugins.bundle.js?v=7.0.6"></script>
 <script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.6"></script>
 <script src="assets/js/scripts.bundle.js?v=7.0.6"></script>
@@ -1054,6 +1056,14 @@ Other provisions, conditions, and exception may apply to your particular situati
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="{{ asset('dropzone/dropzone.js') }}"></script>
+<script>
+    tippy('#myButton', {
+        content: "For individuals and family-owned businesses, $5 million in investments normally confers Qualified Purchaser status. Other entities must manage at least $25 million in investments for other qualified purchasers or be exclusively owned by qualified purchasers. Other provisions, conditions, and exception may apply to your particular situation. Always seek qualified financial advice.",
+    });
+    tippy('#accredited_investor', {
+        content: "Accredited Investor must have an annual income that exceeds $200,000 ($300,000 for joint incomes) for the last two years. The individual must also expect the same or higher revenue in the current financial year. A person must have a net worth of $1 million or higher, either as an individual or jointly (if married), at the time of purchase. The net worth calculation excludes the value of the individual’s primary residence. A general partner, director, or executive officer for the issuer of the unregistered securities may also be an accredited investor.",
+    });
+</script>
 <script>
     let formData = new FormData();
 
