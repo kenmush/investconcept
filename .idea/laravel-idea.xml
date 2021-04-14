@@ -3,6 +3,6 @@
   <component name="LaravelIdeaMainSettings">
     <option name="frameworkFound" value="true" />
     <option name="helperCodeCreateHighOrderCollectionProxies" value="true" />
-    <option name="helperCodeModelsStyle" value="dynamic" />
+    <option name="helperCodeModelsPlace" value="file_with_mixin" />
   </component>
 </project>

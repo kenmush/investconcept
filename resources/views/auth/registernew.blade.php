@@ -11,7 +11,8 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link href="assets/css/pages/login/login-3.css?v=7.0.6" rel="stylesheet" type="text/css"/>
 
@@ -240,11 +241,13 @@
                                         <div class="checkbox-list">
                                             <label class="checkbox">
                                                 <input type="checkbox" name="investment_instruments[]"
-                                                       id="investment_instruments" value="6 month maturity with 5-6% annual interest">
+                                                       id="investment_instruments"
+                                                       value="6 month maturity with 5-6% annual interest">
                                                 <span></span>6 month maturity with 5-6% annual interest</label>
 
                                             <label class="checkbox">
-                                                <input type="checkbox" name="investment_instruments[]" value="12 month maturity with 7-9% annual interest, paid quarterly">
+                                                <input type="checkbox" name="investment_instruments[]"
+                                                       value="12 month maturity with 7-9% annual interest, paid quarterly">
                                                 <span></span>12 month maturity with 7-9% annual interest, paid quarterly</label>
                                         </div>
                                     </div>
@@ -277,9 +280,8 @@
 
                                             <label class="checkbox">
                                                 <input class="assetclasses" type="checkbox" name="asset_classes[]"
-                                                       value="Capital
-                                                Infractructure">
-                                                <span></span>Capital Infractructure </label>
+                                                       value="Capital Infrastructure">
+                                                <span></span>Capital Infrastructure </label>
                                             <label class="checkbox">
                                                 <input class="assetclasses" type="checkbox" name="asset_classes[]"
                                                        value="MedTech">
@@ -313,23 +315,29 @@
                                         </label>
                                         <div class="checkbox-list">
                                             <label class="checkbox">
-                                                <input type="checkbox" name="geographies_interested[]" value="East Africa">
+                                                <input type="checkbox" name="geographies_interested[]"
+                                                       value="East Africa">
                                                 <span></span>East Africa</label>
 
                                             <label class="checkbox">
-                                                <input type="checkbox" name="geographies_interested[]" value="West Africa">
+                                                <input type="checkbox" name="geographies_interested[]"
+                                                       value="West Africa">
                                                 <span></span>West Africa </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="geographies_interested[]" value="Southern Africa">
+                                                <input type="checkbox" name="geographies_interested[]"
+                                                       value="Southern Africa">
                                                 <span></span>Southern Africa </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="geographies_interested[]" value="North Africa">
+                                                <input type="checkbox" name="geographies_interested[]"
+                                                       value="North Africa">
                                                 <span></span>North Africa </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="geographies_interested[]" value="Latin America">
+                                                <input type="checkbox" name="geographies_interested[]"
+                                                       value="Latin America">
                                                 <span></span>Latin America </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="geographies_interested[]" value="South East Asia">
+                                                <input type="checkbox" name="geographies_interested[]"
+                                                       value="South East Asia">
                                                 <span></span>South East Asia </label>
                                         </div>
                                     </div>
@@ -381,12 +389,13 @@
                                         <label class="font-size-h6 font-weight-bolder text-dark pt-5">
                                             Are you a qualified purchaser?
 
-                                            <i id="myButton" class="fa fa-info-circle" data-toggle="tooltip" data-theme="dark"></i>
+                                            <i id="myButton" class="fa fa-info-circle" data-toggle="tooltip"
+                                               data-theme="dark"></i>
                                         </label>
                                     </div>
                                     <div class="radio-inline mt-2">
                                         <label class="radio">
-                                            <input type="radio" name="qualified_investor" value="Yes" >
+                                            <input type="radio" name="qualified_investor" value="Yes">
                                             <span></span>
                                             Yes
                                         </label>
@@ -1068,13 +1077,13 @@
         allowHTML: true,
         content: "There are three main criteria for being an Accredited Investor. An individual must have an annual " +
             "income that exceeds $200,000 ($300,000 for joint incomes) for the last two years. The individual must " +
-            "also expect the same or higher revenue in the current financial year.<br>"+"Alternatively, a person " +
+            "also expect the same or higher revenue in the current financial year.<br>" + "Alternatively, a person " +
             "must " +
             "have a net worth of $1 million or higher, either as an individual or jointly (if married), at the time " +
             "of purchase. The net worth calculation excludes the value of the individual’s primary residence. <br>" +
             "Thirdly, an entity may be accredited if it is an organization with assets valued at $5 million or higher" +
             ". The entity may also be considered an accredited investor if its owners are accredited investors" +
-            ".<br>"+"" +
+            ".<br>" + "" +
             "Other provisions, conditions, and exceptions may apply to your particular situation. Always seek qualified financial advice.",
     });
 </script>
@@ -1118,15 +1127,15 @@
         formData.append('investorpassword', document.getElementById('password').value)
         formData.append('investorpassword-confirm', document.getElementById('passwordconfirm').value)
         formData.append('legal_name', document.getElementById('legal_name').value)
-        formData.append('investor_location', document.querySelector('input[name="investor_location"]:checked').value)
+        // formData.append('investor_location', document.querySelector('input[name="investor_location"]:checked').value)
         formData.append('nationality', document.getElementById('nationality').value)
-        formData.append('source_of_wealth', document.querySelector('input[name="source_of_wealth"]:checked').value)
+        // formData.append('source_of_wealth', document.querySelector('input[name="source_of_wealth"]:checked').value)
         formData.append('authorization', document.querySelector('input[name="authorization"]:checked').value)
-        formData.append('address-line1', document.getElementById('address-line1').value)
-        formData.append('address-line2', document.getElementById('address-line2').value)
+        formData.append('address_line1', document.getElementById('address-line1').value)
+        formData.append('address_line2', document.getElementById('address-line2').value)
         formData.append('city', document.getElementById('city').value)
         formData.append('region', document.getElementById('region').value)
-        formData.append('postal-code', document.getElementById('postal-code').value)
+        formData.append('postal_code', document.getElementById('postal-code').value)
         formData.append('date_of_birth', document.getElementById('date_of_birth').value)
         formData.append('documenttype', document.getElementById('documenttype').value)
         axios.post('/registeraninvestor',

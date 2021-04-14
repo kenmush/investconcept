@@ -11,6 +11,7 @@
         "php": "^7.3|^8.0",
         "ext-json": "*",
         "fideloper/proxy": "^4.4",
+        "laravel/nova": "~3.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
@@ -49,6 +50,20 @@
             "Database\\Seeders\\": "database/seeders/"
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        },
+        {
+            "type": "composer",
+            "url": "https://spark.laravel.com"
+        },
+        {
+            "type": "composer",
+            "url": "https://satis.spatie.be"
+        }
+    ],
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"

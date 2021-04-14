@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @mixin IdeHelperLandingpage
+ * @mixin IdeHelperApplicants
  */
-class Landingpage extends Model
+class Applicants extends Model
 {
     use HasFactory;
 }
