@@ -6,11 +6,17 @@ use App\Events\UploadInvestorDocuments;
 use App\Services\Investor;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Http\Request;
+use function dd;
+use function info;
 
 class RegisterInvestorController extends Controller
 {
     public function __invoke(Request $request)
     {
+        info("Investor",[
+                $request->all()
+        ]);
+        dd($request->all());
         try {
             $investor = (new Investor())->registerInvestor([
                     'phoneNumber'  => 'NA',

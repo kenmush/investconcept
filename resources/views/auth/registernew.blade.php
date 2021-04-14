@@ -191,16 +191,16 @@
                                         </div>
                                         <div class="radio-inline mt-2">
                                             <label class="radio">
-                                                <input type="radio" name="invested_in_frontier" value="Yes" checked="">
+                                                <input type="radio" name="invested_in_markerts" value="Yes"
+                                                       id="invested_in_markerts">
                                                 <span></span>
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="invested_in_frontier" value="No">
+                                                <input type="radio" name="invested_in_markerts" value="No">
                                                 <span></span>
                                                 No
                                             </label>
-
                                         </div>
                                     </div>
                                 </div>
@@ -208,18 +208,20 @@
                                     <div class="form-group">
                                         <div class="d-flex justify-content-between mt-n5">
                                             <label class="font-size-h6 font-weight-bolder text-dark pt-5">
-
                                                 Are you interested in earning fixed income for your investment?
                                             </label>
                                         </div>
                                         <div class="radio-inline mt-2">
                                             <label class="radio">
-                                                <input type="radio" name="accredited_investor" value="Yes" checked="">
+                                                <input type="radio" name="interested_in_earning_fixed_income"
+                                                       id="interested_in_earning_fixed_income"
+                                                       value="Yes">
                                                 <span></span>
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="accredited_investor" value="No">
+                                                <input type="radio" name="interested_in_earning_fixed_income"
+                                                       value="No">
                                                 <span></span>
                                                 No
                                             </label>
@@ -236,11 +238,12 @@
                                         </div>
                                         <div class="checkbox-list">
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input type="checkbox" name="investment_instruments[]"
+                                                       id="investment_instruments" value="6 month maturity with 5-6% annual interest">
                                                 <span></span>6 month maturity with 5-6% annual interest</label>
 
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input type="checkbox" name="investment_instruments[]" value="12 month maturity with 7-9% annual interest, paid quarterly">
                                                 <span></span>12 month maturity with 7-9% annual interest, paid quarterly</label>
                                         </div>
                                     </div>
@@ -266,27 +269,38 @@
                                             most?</label>
                                         <div class="checkbox-list">
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input class="assetclasses" type="checkbox" name="asset_classes[]"
+                                                       id="asset_classes"
+                                                       value="Off grid with Refrigeration">
                                                 <span></span>Off grid with Refrigeration</label>
 
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input class="assetclasses" type="checkbox" name="asset_classes[]"
+                                                       value="Capital
+                                                Infractructure">
                                                 <span></span>Capital Infractructure </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input class="assetclasses" type="checkbox" name="asset_classes[]"
+                                                       value="MedTech">
                                                 <span></span>MedTech </label>
 
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input class="assetclasses" type="checkbox" name="asset_classes[]"
+                                                       value="AgTech">
                                                 <span></span>AgTech </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input class="assetclasses" type="checkbox" name="asset_classes[]"
+                                                       value="Mobility">
                                                 <span></span>Mobility </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input class="assetclasses" type="checkbox" name="asset_classes[]"
+                                                       value="Electric
+                                                Mobility">
                                                 <span></span>Electric Mobility </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input class="assetclasses" type="checkbox" name="asset_classes[]"
+                                                       value="Water
+                                                infrastructure">
                                                 <span></span>Water infrastructure </label>
                                         </div>
                                     </div>
@@ -298,23 +312,23 @@
                                         </label>
                                         <div class="checkbox-list">
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input type="checkbox" name="geographies_interested[]" value="East Africa">
                                                 <span></span>East Africa</label>
 
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input type="checkbox" name="geographies_interested[]" value="West Africa">
                                                 <span></span>West Africa </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input type="checkbox" name="geographies_interested[]" value="Southern Africa">
                                                 <span></span>Southern Africa </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input type="checkbox" name="geographies_interested[]" value="North Africa">
                                                 <span></span>North Africa </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input type="checkbox" name="geographies_interested[]" value="Latin America">
                                                 <span></span>Latin America </label>
                                             <label class="checkbox">
-                                                <input type="checkbox" name="Checkboxes1">
+                                                <input type="checkbox" name="geographies_interested[]" value="South East Asia">
                                                 <span></span>South East Asia </label>
                                         </div>
                                     </div>
@@ -344,7 +358,7 @@
                                     </div>
                                     <div class="radio-inline mt-2">
                                         <label class="radio">
-                                            <input type="radio" name="accredited_investor" value="Yes" checked="">
+                                            <input type="radio" name="accredited_investor" value="Yes">
                                             <span></span>
                                             Yes
                                         </label>
@@ -389,35 +403,36 @@ Other provisions, conditions, and exception may apply to your particular situati
                                 <div class="form-group">
                                     <div class="d-flex justify-content-between mt-n5">
                                         <label class="font-size-h6 font-weight-bolder text-dark pt-5">
-                                            What amounts would you consider placing in these types of 6-18 month maturity instruments earning 5-9% annual return?
+                                            What amounts would you consider placing in these types of 6-18 month
+                                            maturity instruments earning 5-9% annual return?
                                         </label>
                                     </div>
                                     <div class="checkbox-list">
                                         <label class="checkbox">
-                                            <input type="checkbox" name="Checkboxes1">
+                                            <input type="checkbox" name="amounts_placed">
                                             <span></span>
                                             $2,000 &mdash; 10,000
                                         </label>
 
                                         <label class="checkbox">
-                                            <input type="checkbox" name="Checkboxes1">
+                                            <input type="checkbox" name="amounts_placed">
                                             <span></span>
                                             $10,000 &mdash; 50,000
                                         </label>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="Checkboxes1">
+                                            <input type="checkbox" name="amounts_placed">
                                             <span></span>
                                             $50,000 &mdash; 100,000
                                         </label>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="Checkboxes1">
+                                            <input type="checkbox" name="amounts_placed">
                                             <span></span>
                                             $100,000 &mdash; 250,000
                                         </label>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="Checkboxes1">
+                                            <input type="checkbox" name="amounts_placed">
                                             <span></span>
-                                             $250,000+
+                                            $250,000+
                                         </label>
                                     </div>
                                 </div>
@@ -428,13 +443,17 @@ Other provisions, conditions, and exception may apply to your particular situati
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark">First Name</label>
-                                        <input type="text" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" name="fname" id="fname" placeholder="First Name">
+                                        <input type="text"
+                                               class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
+                                               name="fname" id="fname" placeholder="First Name">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark">Last Name</label>
-                                        <input type="text" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" id="lname" name="lname" placeholder="Last Name">
+                                        <input type="text"
+                                               class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
+                                               id="lname" name="lname" placeholder="Last Name">
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +461,9 @@ Other provisions, conditions, and exception may apply to your particular situati
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark">Email</label>
-                                        <input type="text" id="email" autocomplete="off" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" name="email" placeholder="Your email">
+                                        <input type="text" id="email" autocomplete="off"
+                                               class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
+                                               name="email" placeholder="Your email">
                                     </div>
                                 </div>
 
@@ -451,14 +472,18 @@ Other provisions, conditions, and exception may apply to your particular situati
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark">Password</label>
-                                        <input type="password" id="password" autocomplete="off" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" name="password" placeholder="Your password">
+                                        <input type="password" id="password" autocomplete="off"
+                                               class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
+                                               name="password" placeholder="Your password">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark">Confirm
                                             Password</label>
-                                        <input type="password" id="passwordconfirm" autocomplete="off" class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" name="passwordconfirm" placeholder="Confirm Password">
+                                        <input type="password" id="passwordconfirm" autocomplete="off"
+                                               class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
+                                               name="passwordconfirm" placeholder="Confirm Password">
                                     </div>
                                 </div>
                             </div>
@@ -498,7 +523,7 @@ Other provisions, conditions, and exception may apply to your particular situati
 
 
                         </div>
-                        <div class="pb-5" data-wizard-type="step-content" >
+                        <div class="pb-5" data-wizard-type="step-content">
 
                             <div class="pt-lg-0 pt-5 pb-15">
                                 <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">
@@ -512,30 +537,37 @@ Other provisions, conditions, and exception may apply to your particular situati
                                     <div class="form-group">
                                         <label for="legal_name" class="font-size-h6 font-weight-bolder text-dark">Legal
                                             Name of Individual</label>
-                                        <input type="text" id="legal_name" aria-describedby="legal_name-help" name="legal_name" value="" class="form-control " placeholder="Legal Name of Individual" required="">
+                                        <input type="text" id="legal_name" aria-describedby="legal_name-help"
+                                               name="legal_name" value="" class="form-control "
+                                               placeholder="Legal Name of Individual" required="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <!--Label: Where are you considered an accredited investor?, Attributes:investor_location -->
                                     <div class="form-group">
-                                        <label class="font-size-h6 font-weight-bolder text-dark" for="investor_location">Where are you considered an accredited
+                                        <label class="font-size-h6 font-weight-bolder text-dark"
+                                               for="investor_location">Where are you considered an accredited
                                             investor?</label>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location" name="investor_location" class="custom-control-input" value="Employment">
+                                            <input type="radio" id="investor_location" name="investor_location"
+                                                   class="custom-control-input" value="Employment">
                                             <label class="custom-control-label" for="investor_location">Europe</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location1" name="investor_location" class="custom-control-input" value="USA Taxable">
+                                            <input type="radio" id="investor_location1" name="investor_location"
+                                                   class="custom-control-input" value="USA Taxable">
                                             <label class="custom-control-label" for="investor_location1">USA
                                                 (Taxable)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location2" name="investor_location" class="custom-control-input" value="USA (Tax exempt)">
+                                            <input type="radio" id="investor_location2" name="investor_location"
+                                                   class="custom-control-input" value="USA (Tax exempt)">
                                             <label class="custom-control-label" for="investor_location2">USA (Tax
                                                 exempt)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="investor_location3" name="investor_location" class="custom-control-input" value="USA Taxable">
+                                            <input type="radio" id="investor_location3" name="investor_location"
+                                                   class="custom-control-input" value="USA Taxable">
                                             <label class="custom-control-label" for="investor_location3">Other</label>
                                         </div>
 
@@ -560,7 +592,9 @@ Other provisions, conditions, and exception may apply to your particular situati
                                             <option value="Armenia"> Armenia</option>
                                             <option value="American Samoa"> American Samoa</option>
                                             <option value="Antarctica"> Antarctica</option>
-                                            <option value="French Southern and Antarctic Lands"> French Southern and Antarctic Lands</option>
+                                            <option value="French Southern and Antarctic Lands"> French Southern and
+                                                Antarctic Lands
+                                            </option>
                                             <option value="Antigua and Barbuda"> Antigua and Barbuda</option>
                                             <option value="Australia"> Australia</option>
                                             <option value="Austria"> Austria</option>
@@ -575,7 +609,9 @@ Other provisions, conditions, and exception may apply to your particular situati
                                             <option value="Bahamas"> Bahamas</option>
                                             <option value="Bosnia and Herzegovina"> Bosnia and Herzegovina</option>
                                             <option value="Saint Barthélemy"> Saint Barthélemy</option>
-                                            <option value="Saint Helena, Ascension and Tristan da Cunha"> Saint Helena, Ascension and Tristan da Cunha</option>
+                                            <option value="Saint Helena, Ascension and Tristan da Cunha"> Saint Helena,
+                                                Ascension and Tristan da Cunha
+                                            </option>
                                             <option value="Belarus"> Belarus</option>
                                             <option value="Belize"> Belize</option>
                                             <option value="Bermuda"> Bermuda</option>
@@ -646,7 +682,9 @@ Other provisions, conditions, and exception may apply to your particular situati
                                             <option value="Guam"> Guam</option>
                                             <option value="Guyana"> Guyana</option>
                                             <option value="Hong Kong"> Hong Kong</option>
-                                            <option value="Heard Island and McDonald Islands"> Heard Island and McDonald Islands</option>
+                                            <option value="Heard Island and McDonald Islands"> Heard Island and McDonald
+                                                Islands
+                                            </option>
                                             <option value="Honduras"> Honduras</option>
                                             <option value="Croatia"> Croatia</option>
                                             <option value="Haiti"> Haiti</option>
@@ -654,7 +692,9 @@ Other provisions, conditions, and exception may apply to your particular situati
                                             <option value="Indonesia"> Indonesia</option>
                                             <option value="Isle of Man"> Isle of Man</option>
                                             <option value="India"> India</option>
-                                            <option value="British Indian Ocean Territory"> British Indian Ocean Territory</option>
+                                            <option value="British Indian Ocean Territory"> British Indian Ocean
+                                                Territory
+                                            </option>
                                             <option value="Ireland"> Ireland</option>
                                             <option value="Iran"> Iran</option>
                                             <option value="Iraq"> Iraq</option>
@@ -752,7 +792,8 @@ Other provisions, conditions, and exception may apply to your particular situati
                                             <option value="El Salvador"> El Salvador</option>
                                             <option value="San Marino"> San Marino</option>
                                             <option value="Somalia"> Somalia</option>
-                                            <option value="Saint Pierre and Miquelon"> Saint Pierre and Miquelon</option>
+                                            <option value="Saint Pierre and Miquelon"> Saint Pierre and Miquelon
+                                            </option>
                                             <option value="Serbia"> Serbia</option>
                                             <option value="South Sudan"> South Sudan</option>
                                             <option value="São Tomé and Príncipe"> São Tomé and Príncipe</option>
@@ -781,15 +822,20 @@ Other provisions, conditions, and exception may apply to your particular situati
                                             <option value="Tanzania"> Tanzania</option>
                                             <option value="Uganda"> Uganda</option>
                                             <option value="Ukraine"> Ukraine</option>
-                                            <option value="United States Minor Outlying Islands"> United States Minor Outlying Islands</option>
+                                            <option value="United States Minor Outlying Islands"> United States Minor
+                                                Outlying Islands
+                                            </option>
                                             <option value="Uruguay"> Uruguay</option>
                                             <option value="United States"> United States</option>
                                             <option value="Uzbekistan"> Uzbekistan</option>
                                             <option value="Vatican City"> Vatican City</option>
-                                            <option value="Saint Vincent and the Grenadines"> Saint Vincent and the Grenadines</option>
+                                            <option value="Saint Vincent and the Grenadines"> Saint Vincent and the
+                                                Grenadines
+                                            </option>
                                             <option value="Venezuela"> Venezuela</option>
                                             <option value="British Virgin Islands"> British Virgin Islands</option>
-                                            <option value="United States Virgin Islands"> United States Virgin Islands</option>
+                                            <option value="United States Virgin Islands"> United States Virgin Islands
+                                            </option>
                                             <option value="Vietnam"> Vietnam</option>
                                             <option value="Vanuatu"> Vanuatu</option>
                                             <option value="Wallis and Futuna"> Wallis and Futuna</option>
@@ -825,20 +871,26 @@ Other provisions, conditions, and exception may apply to your particular situati
                                         <label class="font-size-h6 font-weight-bolder text-dark" for="source_of_wealth">Confirm
                                             your source of wealth</label>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth1" name="source_of_wealth" class="custom-control-input" value="Employment">
-                                            <label class="custom-control-label" for="source_of_wealth1">Employment</label>
+                                            <input type="radio" id="source_of_wealth1" name="source_of_wealth"
+                                                   class="custom-control-input" value="Employment">
+                                            <label class="custom-control-label"
+                                                   for="source_of_wealth1">Employment</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth2" name="source_of_wealth" class="custom-control-input" value="Investments">
-                                            <label class="custom-control-label" for="source_of_wealth2">Investments</label>
+                                            <input type="radio" id="source_of_wealth2" name="source_of_wealth"
+                                                   class="custom-control-input" value="Investments">
+                                            <label class="custom-control-label"
+                                                   for="source_of_wealth2">Investments</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth3" name="source_of_wealth" class="custom-control-input" value="Sales of Business">
+                                            <input type="radio" id="source_of_wealth3" name="source_of_wealth"
+                                                   class="custom-control-input" value="Sales of Business">
                                             <label class="custom-control-label" for="source_of_wealth3">Sales of
                                                 Business</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="source_of_wealth4" name="source_of_wealth" class="custom-control-input" value="other">
+                                            <input type="radio" id="source_of_wealth4" name="source_of_wealth"
+                                                   class="custom-control-input" value="other">
                                             <label class="custom-control-label" for="source_of_wealth4">Other</label>
                                         </div>
 
@@ -849,7 +901,9 @@ Other provisions, conditions, and exception may apply to your particular situati
                                     <div class="form-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark" for="date_of_birth">Date
                                             of Birth</label>
-                                        <input type="date" id="date_of_birth" aria-describedby="date_of_birth-help" name="date_of_birth" value="" class="form-control " placeholder="Date of Birth" required="">
+                                        <input type="date" id="date_of_birth" aria-describedby="date_of_birth-help"
+                                               name="date_of_birth" value="" class="form-control "
+                                               placeholder="Date of Birth" required="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -857,22 +911,26 @@ Other provisions, conditions, and exception may apply to your particular situati
                                     <div class="form-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark" for="authorization">Authorization</label>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio1" name="authorization" class="custom-control-input" value="10% or more shareholder">
+                                            <input type="radio" id="customRadio1" name="authorization"
+                                                   class="custom-control-input" value="10% or more shareholder">
                                             <label class="custom-control-label" for="customRadio1">10% or more
                                                 shareholder</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio2" name="authorization" class="custom-control-input" value="Controlling person">
+                                            <input type="radio" id="customRadio2" name="authorization"
+                                                   class="custom-control-input" value="Controlling person">
                                             <label class="custom-control-label" for="customRadio2">Controlling
                                                 person</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio3" name="authorization" class="custom-control-input" value="Authorized Signatory">
+                                            <input type="radio" id="customRadio3" name="authorization"
+                                                   class="custom-control-input" value="Authorized Signatory">
                                             <label class="custom-control-label" for="customRadio3">Authorized
                                                 Signatory</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio4" name="authorization" class="custom-control-input" value="Director or Officer">
+                                            <input type="radio" id="customRadio4" name="authorization"
+                                                   class="custom-control-input" value="Director or Officer">
                                             <label class="custom-control-label" for="customRadio4">Director or
                                                 Officer</label>
                                         </div>
@@ -885,7 +943,8 @@ Other provisions, conditions, and exception may apply to your particular situati
                                     <div class="control-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark">Address Line 1</label>
                                         <div class="controls">
-                                            <input id="address-line1" name="address-line1" type="text" placeholder="address line 1" class="form-control ">
+                                            <input id="address-line1" name="address-line1" type="text"
+                                                   placeholder="address line 1" class="form-control ">
                                             <p class="help-block">Street address, P.O. box, company name, c/o</p>
                                         </div>
                                     </div>
@@ -895,7 +954,8 @@ Other provisions, conditions, and exception may apply to your particular situati
                                     <div class="control-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark">Address Line 2</label>
                                         <div class="controls">
-                                            <input id="address-line2" name="address-line2" type="text" placeholder="address line 2" class="form-control ">
+                                            <input id="address-line2" name="address-line2" type="text"
+                                                   placeholder="address line 2" class="form-control ">
                                             <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
                                         </div>
                                     </div>
@@ -905,7 +965,8 @@ Other provisions, conditions, and exception may apply to your particular situati
                                     <div class="control-group">
                                         <label class="font-size-h6 font-weight-bolder text-dark">City / Town</label>
                                         <div class="controls">
-                                            <input id="city" name="city" type="text" placeholder="city" class="form-control ">
+                                            <input id="city" name="city" type="text" placeholder="city"
+                                                   class="form-control ">
                                             <p class="help-block"></p>
                                         </div>
                                     </div>
@@ -915,7 +976,8 @@ Other provisions, conditions, and exception may apply to your particular situati
                                         <label class="font-size-h6 font-weight-bolder text-dark">State / Province /
                                             Region</label>
                                         <div class="controls">
-                                            <input id="region" name="region" type="text" placeholder="state / province / region" class="form-control ">
+                                            <input id="region" name="region" type="text"
+                                                   placeholder="state / province / region" class="form-control ">
                                             <p class="help-block"></p>
                                         </div>
                                     </div>
@@ -925,7 +987,8 @@ Other provisions, conditions, and exception may apply to your particular situati
                                         <label class="font-size-h6 font-weight-bolder text-dark">Zip / Postal
                                             Code</label>
                                         <div class="controls">
-                                            <input id="postal-code" name="postal-code" type="text" placeholder="zip or postal code" class=" form-control ">
+                                            <input id="postal-code" name="postal-code" type="text"
+                                                   placeholder="zip or postal code" class=" form-control ">
                                             <p class="help-block"></p>
                                         </div>
                                     </div>
@@ -935,7 +998,7 @@ Other provisions, conditions, and exception may apply to your particular situati
 
 
                         </div>
-                        <div class="pb-5" data-wizard-type="step-content" >
+                        <div class="pb-5" data-wizard-type="step-content">
 
                             <div class="pt-lg-0 pt-5 pb-15">
                                 <h3 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">
@@ -948,7 +1011,9 @@ Other provisions, conditions, and exception may apply to your particular situati
                             <div class="form-group">
                                 <label class="font-size-h6 font-weight-bolder text-dark">Verification
                                     Document</label>
-                                <select class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6" type="text" name="documenttype" id="documenttype" placeholder="Your old password" autocomplete="off">
+                                <select class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6"
+                                        type="text" name="documenttype" id="documenttype"
+                                        placeholder="Your old password" autocomplete="off">
                                     <option value="passport">Passport</option>
                                     <option value="driverslicence">Drivers Licence</option>
                                 </select>
@@ -1051,25 +1116,39 @@ Other provisions, conditions, and exception may apply to your particular situati
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="{{ asset('dropzone/dropzone.js') }}"></script>
 <script>
-    // Dropzone.autoDiscover = false;
-
-    // var myDropzone = new Dropzone("div#uploadpassport", {
-    //     autoProcessQueue: false,
-    //     parallelUploads: 10 // Number of files process at a time (default 2)
-    // });
-    // var uploadw9 = new Dropzone("div#uploadw9form", {
-    //     autoProcessQueue: false,
-    //     parallelUploads: 10 // Number of files process at a time (default 2)
-    // });
-    //
-    // $('#uploadfiles').click(function(){
-    //     myDropzone.processQueue();
-    // });
     let formData = new FormData();
 
     function submitForm() {
         let signup = document.getElementById('kt_login_signup_form_submit_button');
         signup.innerText = "Submitting ..."
+        var investmentinstrument = document.getElementsByName('investment_instruments[]');
+        var invesmentlength = investmentinstrument.length;
+        let investments = [];
+        for (var q = 0; q < invesmentlength; q++) {
+            investments[q] = investmentinstrument[q].value
+        }
+
+        var assetclasses = document.getElementsByName('asset_classes[]');
+        var len = assetclasses.length;
+        let assets = [];
+        for (var i = 0; i < len; i++) {
+            assets[i] = assetclasses[i].value
+        }
+
+        var geographies = document.getElementsByName('geographies_interested[]');
+        var geo = geographies.length;
+        let geography = [];
+        for (var g = 0; g < geo; g++) {
+            geography[g] = geographies[g].value
+        }
+        formData.append('invested_in_markerts', document.querySelector('input[name="invested_in_markerts"]:checked').value)
+        formData.append('interested_in_earning_fixed_income', document.querySelector('input[name="interested_in_earning_fixed_income"]:checked').value)
+        formData.append('investment_instruments', investments)
+        formData.append('asset_classes', assets)
+        formData.append('geographies_interested', geography)
+        formData.append('accredited_investor', document.querySelector('input[name="accredited_investor"]:checked').value)
+        formData.append('qualified_investor', document.querySelector('input[name="qualified_investor"]:checked').value)
+        formData.append('amounts_placed', document.querySelector('input[name="amounts_placed"]:checked').value)
         formData.append('firstname', document.getElementById('fname').value)
         formData.append('lastname', document.getElementById('lname').value)
         formData.append('investoremail', document.getElementById('email').value)
@@ -1109,7 +1188,7 @@ Other provisions, conditions, and exception may apply to your particular situati
                 }
             });
             setTimeout(function () {
-                window.location.href = '/login'
+                // window.location.href = '/login'
             }, 11000);
         })
             .catch(err => {
