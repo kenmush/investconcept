@@ -170,6 +170,7 @@
       <path value="$PROJECT_DIR$/vendor/moontoast/math" />
       <path value="$PROJECT_DIR$/vendor/cakephp/chronos" />
       <path value="$PROJECT_DIR$/vendor/phpseclib/bcmath_compat" />
+      <path value="$PROJECT_DIR$/vendor/sentry/sentry-laravel" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
