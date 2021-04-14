@@ -193,13 +193,13 @@
                                         </div>
                                         <div class="radio-inline mt-2">
                                             <label class="radio">
-                                                <input type="radio" name="invested_in_markerts" value="Yes"
+                                                <input type="radio" name="invested_in_markerts" value="true"
                                                        id="invested_in_markerts">
                                                 <span></span>
                                                 Yes
                                             </label>
                                             <label class="radio">
-                                                <input type="radio" name="invested_in_markerts" value="No">
+                                                <input type="radio" name="invested_in_markerts" value="false">
                                                 <span></span>
                                                 No
                                             </label>
@@ -217,13 +217,13 @@
                                             <label class="radio">
                                                 <input type="radio" name="interested_in_earning_fixed_income"
                                                        id="interested_in_earning_fixed_income"
-                                                       value="Yes">
+                                                       value="true">
                                                 <span></span>
                                                 Yes
                                             </label>
                                             <label class="radio">
                                                 <input type="radio" name="interested_in_earning_fixed_income"
-                                                       value="No">
+                                                       value="false">
                                                 <span></span>
                                                 No
                                             </label>
@@ -297,13 +297,11 @@
                                                 <span></span>Mobility </label>
                                             <label class="checkbox">
                                                 <input class="assetclasses" type="checkbox" name="asset_classes[]"
-                                                       value="Electric
-                                                Mobility">
+                                                       value="Electric Mobility">
                                                 <span></span>Electric Mobility </label>
                                             <label class="checkbox">
                                                 <input class="assetclasses" type="checkbox" name="asset_classes[]"
-                                                       value="Water
-                                                infrastructure">
+                                                       value="Water infrastructure">
                                                 <span></span>Water infrastructure </label>
                                         </div>
                                     </div>
@@ -370,12 +368,12 @@
                                     </div>
                                     <div class="radio-inline mt-2">
                                         <label class="radio">
-                                            <input type="radio" name="accredited_investor" value="Yes">
+                                            <input type="radio" name="accredited_investor" value="true">
                                             <span></span>
                                             Yes
                                         </label>
                                         <label class="radio">
-                                            <input type="radio" name="accredited_investor" value="No">
+                                            <input type="radio" name="accredited_investor" value="false">
                                             <span></span>
                                             No
                                         </label>
@@ -395,12 +393,12 @@
                                     </div>
                                     <div class="radio-inline mt-2">
                                         <label class="radio">
-                                            <input type="radio" name="qualified_investor" value="Yes">
+                                            <input type="radio" name="qualified_investor" value="true">
                                             <span></span>
                                             Yes
                                         </label>
                                         <label class="radio">
-                                            <input type="radio" name="qualified_investor" value="No">
+                                            <input type="radio" name="qualified_investor" value="false">
                                             <span></span>
                                             No
                                         </label>
@@ -418,28 +416,28 @@
                                     </div>
                                     <div class="checkbox-list">
                                         <label class="checkbox">
-                                            <input type="checkbox" name="amounts_placed">
+                                            <input type="checkbox" name="amounts_placed" value="$2,000 &mdash; 10,000">
                                             <span></span>
                                             $2,000 &mdash; 10,000
                                         </label>
 
                                         <label class="checkbox">
-                                            <input type="checkbox" name="amounts_placed">
+                                            <input type="checkbox" name="amounts_placed" value="$10,000 &mdash; 50,000">
                                             <span></span>
                                             $10,000 &mdash; 50,000
                                         </label>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="amounts_placed">
+                                            <input type="checkbox" name="amounts_placed" value="$50,000 &mdash; 100,000">
                                             <span></span>
                                             $50,000 &mdash; 100,000
                                         </label>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="amounts_placed">
+                                            <input type="checkbox" name="amounts_placed" value="$100,000 &mdash; 250,000">
                                             <span></span>
                                             $100,000 &mdash; 250,000
                                         </label>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="amounts_placed">
+                                            <input type="checkbox" name="amounts_placed" value="$250,000+">
                                             <span></span>
                                             $250,000+
                                         </label>

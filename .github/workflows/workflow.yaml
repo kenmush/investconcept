@@ -13,13 +13,14 @@ jobs:
         with:
           command: |
             cd /var/www/html/investordashboard
-#            sudo git stash
-#            sudo git pull origin master
-#            sudo composer install --optimize-autoloader --no-dev
-#            sudo php artisan config:cache
-#            sudo php artisan route:cache
-#            sudo php artisan view:cache
-#            sudo php artisan queue:restart
+            sudo git stash
+            sudo git pull origin master
+            sudo composer install --optimize-autoloader --no-dev
+            sudo php artisan config:cache
+            sudo php artisan route:cache
+            sudo php artisan view:cache
+            sudo php artisan migrate
+            sudo php artisan queue:restart
           host: ${{ secrets.HOST }}
           user: ubuntu
           key: ${{ secrets.PRIVATE_KEY}}

@@ -4,6 +4,9 @@ namespace App\Services;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Str;
+use function fopen;
+use function info;
+use function public_path;
 
 class Investor
 {
@@ -224,8 +227,7 @@ class Investor
                     'filename' => Str::random(7).'.'.$ext,
             ];
         }
-
-        return $this->requestFiles('PUT', 'portal/investor/profile/upload/'.$investor.'/', [
+        info("Payload to API", [
                 $verificationDocument,
                 [
                         'name'     => 'avatar',
@@ -233,6 +235,10 @@ class Investor
                         'filename' => Str::random(7).'.'.'png',
 
                 ],
+        ]);
+
+        return $this->requestFiles('PUT', 'portal/investor/profile/upload/'.$investor.'/', [
+                $verificationDocument
         ]);
     }
 
@@ -407,7 +413,31 @@ class Investor
                         'contents' => $data['password'],
                 ],
                 $avatar,
-
+                [
+                        'name'     => 'invested_in_markets',
+                        'contents' => $data['invested_in_markets'],
+                ], [
+                        'name'     => 'interested_in_earning_fixed_income',
+                        'contents' => $data['interested_in_earning_fixed_income'],
+                ], [
+                        'name'     => 'investment_instruments',
+                        'contents' => $data['investment_instruments'],
+                ], [
+                        'name'     => 'asset_classes',
+                        'contents' => $data['asset_classes'],
+                ], [
+                        'name'     => 'geographies_interested',
+                        'contents' => $data['geographies_interested'],
+                ], [
+                        'name'     => 'accredited',
+                        'contents' => $data['accredited_investor'],
+                ], [
+                        'name'     => 'qualified_investor',
+                        'contents' => $data['qualified_investor'],
+                ], [
+                        'name'     => 'amounts_placed',
+                        'contents' => $data['amounts_placed'],
+                ],
         ]);
     }
 }

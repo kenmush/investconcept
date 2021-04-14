@@ -16,7 +16,7 @@ class RegisterInvestorController extends Controller
     public function __invoke(Request $request, Applicants $applicants)
     {
         if ($request->file('passport')) {
-            $path = $request->file('passport')->store('files');
+            $path = $request->file('passport')->store('files','public');
         }
 
         $applicants->file = $path;
@@ -45,6 +45,29 @@ class RegisterInvestorController extends Controller
         $applicants->documenttype = $request->documenttype;
         $applicants->save();
 
+
+        $investor = (new Investor())->registerInvestor([
+                'phoneNumber'                        => 'NA',
+                'firstName'                          => $applicants->firstname,
+                'middleName'                         => $applicants->firstname,
+                'lastName'                           => $applicants->lastname,
+                'username'                           => $applicants->investoremail,
+                'language'                           => 'English',
+                'email'                              => $applicants->investoremail,
+                'organization'                       => 'NA',
+                'password'                           => $applicants->investorpassword,
+                'avatar'                             => null,
+                'invested_in_markets'                => $applicants->invested_in_markerts,
+                'interested_in_earning_fixed_income' => $applicants->interested_in_earning_fixed_income,
+                'investment_instruments'             => $applicants->investment_instruments,
+                'asset_classes'                      => $applicants->asset_classes,
+                'geographies_interested'             => $applicants->geographies_interested,
+                'accredited_investor'                => $applicants->accredited_investor,
+                'qualified_investor'                 => $applicants->qualified_investor,
+                'amounts_placed'                     => $applicants->amounts_placed,
+        ]);
+        info("investor", [$investor]);
+        UploadInvestorDocuments::dispatch($investor, $request->except('passport', 'w9form'), $path, $w9Form = null);
         return response()->noContent(200);
     }
 }

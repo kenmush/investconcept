@@ -19,17 +19,17 @@ class UploadQuestionnareData implements ShouldQueue
 
     public function handle(UploadInvestorDocuments $event)
     {
-        $fulladdress = $event->request['address-line1'] ?? ''.
-                $event->request['address-line2'] ?? ''.
+        $fulladdress = $event->request['address_line1'] ?? ''.
+                $event->request['address_line2'] ?? ''.
                 $event->request['city'] ?? ''.
-                $event->request['postal-code'] ?? '';
+                $event->request['postal_code'] ?? '';
 
         $data = [
                         'investor'                  => $event->investor['id'],
                         'legal_name'                => $event->request['legal_name'],
-                        'investor_location'         => $event->request['investor_location'],
+                        'investor_location'         => "",
                         'nationality'               => $event->request['nationality'],
-                        'source_of_wealth'          => $event->request['source_of_wealth'],
+                        'source_of_wealth'          => "",
                         'tax_identification_number' => null,
                         'authorization'             => $event->request['authorization'],
                         'address'                   => $fulladdress,
@@ -38,9 +38,6 @@ class UploadQuestionnareData implements ShouldQueue
 
                 ];
         try {
-            info("HERE",[
-                    'Uploading data'
-            ]);
             $data = (new Investor())->updateQuestionaireData($data, $event->investor['id']);
             info("Questionnare data", [
                     $data

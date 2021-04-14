@@ -29,12 +29,12 @@ class UploadVerificationDocuments implements ShouldQueue
         }
         try {
             $data = (new Investor())->updateVerificationData($data, $event->investor['id']);
-            info("Upload", [
+            info("Verification Data", [
                     $data
             ]);
             return $data;
         } catch (\Exception $e) {
-            info("Questionnare data", [
+            info("Verification Data Issues", [
                     $e->getMessage()
             ]);
             return back()->withErrors(

@@ -23,8 +23,8 @@ class EventServiceProvider extends ServiceProvider
                     SendEmailVerificationNotification::class,
             ],
             UploadInvestorDocuments::class => [
-                    UploadVerificationDocuments::class,
                     UploadQuestionnareData::class,
+                    UploadVerificationDocuments::class,
             ],
     ];
 
